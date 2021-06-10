@@ -1,10 +1,4 @@
-/*
- * @Description:
- * @Author: zhoulong.yang
- * @Date: 2021-06-07 11:33:14
- * @LastEditors: zhoulong.yang
- * @LastEditTime: 2021-06-07 16:12:33
- */
+
 const { resolve } = require('path')
 const Package = require('../package.json')
 import RollupResolve from '@rollup/plugin-node-resolve'
@@ -47,9 +41,7 @@ export default {
       }
     }),
     RollupCommonjs(),
-    RollupTypescript({
-      tsconfig: resolveApp('tsconfig.json')
-    }),
+    RollupTypescript({ tsconfig: resolveApp('tsconfig.json') }),
     RollupCopy({
       targets: [
         {

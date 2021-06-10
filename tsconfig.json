@@ -18,11 +18,20 @@
     "module": "es6",
     "downlevelIteration": true,
     "baseUrl": ".",
-    "types": ["node"]
+    "declaration": true,
+    "declarationDir": "./types",
+    "types": ["node"],
   },
+  "onlyCompileBundledFiles": true,
   "compileOnSave": false,
   "exclude": [
     "node_modules/*",
-    "packages/dist/*"
+    "dist/*",
+    "example/*",
+    "example-react/*",
+    "dist-h5/*",
+  ],
+  "include": [
+    "src/**/*"
   ]
 }

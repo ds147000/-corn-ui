@@ -243,6 +243,13 @@
     "@nodelib/fs.scandir" "2.1.5"
     fastq "^1.6.0"
 
+"@rollup/plugin-alias@^3.1.2":
+  version "3.1.2"
+  resolved "https://nexus3.xrkmm.com/repository/npm-group/@rollup/plugin-alias/-/plugin-alias-3.1.2.tgz#c585b05be4a7782d269c69d13def56f44e417772"
+  integrity sha1-xYWwW+SneC0mnGnRPe9W9E5Bd3I=
+  dependencies:
+    slash "^3.0.0"
+
 "@rollup/plugin-commonjs@^19.0.0":
   version "19.0.0"
   resolved "https://nexus3.xrkmm.com/repository/npm-group/@rollup/plugin-commonjs/-/plugin-commonjs-19.0.0.tgz#8c3e71f9a66908e60d70cc1be205834ef3e45f71"

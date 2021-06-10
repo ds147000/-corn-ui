@@ -19,7 +19,9 @@
     "lint:style": "stylelint \"**/*.{scss, css, less}\"",
     "lint:style:fix": "stylelint --fix \"**/*.{css,less,scss}\"",
     "scan": "npm run lint && npm run test",
-    "test": "jest"
+    "test": "jest",
+    "demo:mp": "cd example && npm run dev:weapp",
+    "demo:h5": "cd example-react && npm run start"
   },
   "keywords": [
     "向日葵妈妈，UI库，小程序，taro"
@@ -27,6 +29,7 @@
   "author": "zhoulong.yang@xrkmm.com",
   "license": "ISC",
   "devDependencies": {
+    "@rollup/plugin-alias": "^3.1.2",
     "@rollup/plugin-commonjs": "^19.0.0",
     "@rollup/plugin-image": "^2.0.6",
     "@rollup/plugin-node-resolve": "^13.0.0",
@@ -61,6 +64,7 @@
     "typescript": "^4.3.2"
   },
   "peerDependencies": {
+    "@tarojs/components-react": ">=3",
     "@tarojs/components": ">=3",
     "@tarojs/react": ">=3",
     "react": ">=16.13.0",
