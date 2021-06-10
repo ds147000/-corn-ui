@@ -55,6 +55,12 @@ const App = () => (
 import '@xrkmm/ui/dist/styles/index.scss';
 ```
 
+按需引入scss样式：
+
+```jsx
+import '@xrkmm/ui/dist/styles/components/card.scss';
+```
+
 引入css样式（编译后样式文件）：
 
 ```jsx
@@ -70,23 +76,7 @@ import '@xrkmm/ui/dist/xrkmm.mini.css';
 ## 🔗 链接
 
 
-## ⌨️ 本地开发
-
-1.clone 项目
-
-2.开发模式
- ``` yarn dev ```
-
-3.启动小程序预览例子
-```yarn demo:weapp```
-
-4.启动h5例子
-```yarn demo:h5```
-
-5.编译结果
-```yarn buidl:all```
-
 
 ## 🤝 参与共建 [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat-square)](http://makeapullrequest.com)
 
-请参考[贡献指南](/publish.md).
+请参考[贡献指南](/PUBLISH.md).
