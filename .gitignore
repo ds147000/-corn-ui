@@ -4,3 +4,4 @@ yarn-error.log
 dist/
 dist-h5/
 dist-css/
+coverage/

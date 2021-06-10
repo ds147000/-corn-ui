@@ -3,14 +3,16 @@
  * @Author: zhoulong.yang
  * @Date: 2021-06-07 11:36:33
  * @LastEditors: zhoulong.yang
- * @LastEditTime: 2021-06-10 15:57:15
+ * @LastEditTime: 2021-06-10 18:15:11
  */
 const { resolve } = require('path')
 const Package = require('../package.json')
+import babel from 'rollup-plugin-babel'
 import RollupResolve from '@rollup/plugin-node-resolve'
 import RollupCommonjs from '@rollup/plugin-commonjs'
 import RollupTypescript from 'rollup-plugin-typescript2'
 import alias from '@rollup/plugin-alias'
+import { DEFAULT_EXTENSIONS } from '@babel/core'
 
 const resolveApp = path => resolve(__dirname, '..', path)
 
@@ -39,10 +41,19 @@ export default {
     }),
     RollupResolve({
       customResolveOptions: {
-        moduleDirectories: [ 'node_modules' ]
+        moduleDirectories: ['node_modules']
       }
     }),
     RollupCommonjs(),
-    RollupTypescript({ tsconfig: resolveApp('tsconfig.json') })
+    RollupTypescript({ tsconfig: resolveApp('tsconfig.json') }),
+    babel({
+      exclude: ['node_modules/**', 'example/**', 'example-react/**'],
+      extensions: [ // 扩展文件名
+        ...DEFAULT_EXTENSIONS,
+        '.ts',
+        '.tsx'
+      ],
+      runtimeHelpers: true
+    })
   ]
 }

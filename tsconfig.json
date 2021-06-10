@@ -19,8 +19,9 @@
     "downlevelIteration": true,
     "baseUrl": ".",
     "declaration": true,
-    "declarationDir": "./types",
-    "types": ["node"],
+    "typeRoots": [
+      "node_modules/@types"
+    ],
   },
   "onlyCompileBundledFiles": true,
   "compileOnSave": false,

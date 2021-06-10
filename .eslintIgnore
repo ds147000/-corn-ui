@@ -2,3 +2,7 @@ dist/
 node_modules
 *.js
 *.test.ts
+dist-h5/
+dist-css/
+example/
+example-react/

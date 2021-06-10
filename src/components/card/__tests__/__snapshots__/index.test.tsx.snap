@@ -1,0 +1,44 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`components/card 子节点快照 1`] = `
+<div>
+  <div
+    class="xrkmm-card"
+  >
+    <span
+      class="taro-text"
+    />
+    <span
+      class="taro-text"
+    >
+      内容
+    </span>
+  </div>
+</div>
+`;
+
+exports[`components/card 标题快照 1`] = `
+<div>
+  <div
+    class="xrkmm-card"
+  >
+    <span
+      class="taro-text"
+    >
+      我是卡片
+    </span>
+  </div>
+</div>
+`;
+
+exports[`components/card 正常快照 1`] = `
+<div>
+  <div
+    class="xrkmm-card"
+  >
+    <span
+      class="taro-text"
+    />
+  </div>
+</div>
+`;
