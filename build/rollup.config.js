@@ -1,3 +1,10 @@
+/*
+ * @Description:
+ * @Author: zhoulong.yang
+ * @Date: 2021-06-07 11:33:14
+ * @LastEditors: zhoulong.yang
+ * @LastEditTime: 2021-06-10 15:10:17
+ */
 
 const { resolve } = require('path')
 const Package = require('../package.json')
@@ -45,8 +52,9 @@ export default {
     RollupCopy({
       targets: [
         {
-          src: resolveApp('src/style'),
-          dest: resolveApp('dist')
+          src: resolveApp('src/styles'),
+          dest: resolveApp('dist'),
+          copyOnce: true
         }
       ]
     })

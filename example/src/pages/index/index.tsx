@@ -3,7 +3,7 @@
  * @Author: zhoulong.yang
  * @Date: 2021-06-07 16:24:31
  * @LastEditors: zhoulong.yang
- * @LastEditTime: 2021-06-09 15:00:12
+ * @LastEditTime: 2021-06-10 15:34:25
  */
 import { Component } from 'react'
 import { View } from '@tarojs/components'
