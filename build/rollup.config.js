@@ -3,7 +3,7 @@
  * @Author: zhoulong.yang
  * @Date: 2021-06-07 11:33:14
  * @LastEditors: zhoulong.yang
- * @LastEditTime: 2021-06-10 15:10:17
+ * @LastEditTime: 2021-06-10 15:56:25
  */
 
 const { resolve } = require('path')
@@ -11,7 +11,6 @@ const Package = require('../package.json')
 import RollupResolve from '@rollup/plugin-node-resolve'
 import RollupCommonjs from '@rollup/plugin-commonjs'
 import RollupTypescript from 'rollup-plugin-typescript2'
-import RollupCopy from 'rollup-plugin-copy'
 
 const resolveApp = path => resolve(__dirname, '..', path)
 
@@ -48,15 +47,6 @@ export default {
       }
     }),
     RollupCommonjs(),
-    RollupTypescript({ tsconfig: resolveApp('tsconfig.json') }),
-    RollupCopy({
-      targets: [
-        {
-          src: resolveApp('src/styles'),
-          dest: resolveApp('dist'),
-          copyOnce: true
-        }
-      ]
-    })
+    RollupTypescript({ tsconfig: resolveApp('tsconfig.json') })
   ]
 }
