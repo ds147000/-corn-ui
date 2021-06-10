@@ -1,3 +1,10 @@
+/*
+ * @Description:
+ * @Author: zhoulong.yang
+ * @Date: 2021-06-07 11:36:33
+ * @LastEditors: zhoulong.yang
+ * @LastEditTime: 2021-06-10 14:35:09
+ */
 const { resolve } = require('path')
 const Package = require('../package.json')
 import RollupResolve from '@rollup/plugin-node-resolve'
@@ -27,7 +34,8 @@ export default {
   plugins: [
     alias({
       entries: {
-        '@tarojs/components': resolveApp('./node_modules/@tarojs/components-react/index.js')
+        '@tarojs/components': resolveApp('./node_modules/@tarojs/components-react/index.js'),
+        '@tarojs/taro': resolveApp('./node_modules/@tarojs/taro-h5')
       }
     }),
     RollupResolve({
