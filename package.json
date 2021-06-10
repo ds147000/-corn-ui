@@ -10,11 +10,11 @@
     "dist-h5"
   ],
   "scripts": {
-    "dev": "concurrently \"npm run dev:weapp\" \"npm run dev:h5\" \"npm run dev:css\"",
+    "dev": "rm -rf dist && concurrently \"npm run dev:weapp\" \"npm run dev:h5\" \"npm run dev:css\"",
     "dev:weapp": "rollup -w --config ./build/rollup.config.js",
     "dev:h5": "rollup -w --config ./build/rollup.config.h5.js",
     "dev:css": "rollup -w --config ./build/rollup.config.css.js",
-    "build:all": "npm run build:weapp && npm run build:h5 && npm run build:css",
+    "build:all": "rm -rf dist && npm run build:weapp && npm run build:h5 && npm run build:css",
     "build:weapp": "rollup --config ./build/rollup.config.js",
     "build:h5": "rollup --config ./build/rollup.config.h5.js",
     "build:css": "rollup --config ./build/rollup.config.css.js",
