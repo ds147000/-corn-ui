@@ -3,7 +3,7 @@
  * @Author: zhoulong.yang
  * @Date: 2021-06-07 11:33:14
  * @LastEditors: zhoulong.yang
- * @LastEditTime: 2021-06-10 18:12:13
+ * @LastEditTime: 2021-06-11 14:46:32
  */
 
 const { resolve } = require('path')
@@ -11,6 +11,7 @@ const Package = require('../package.json')
 import RollupResolve from '@rollup/plugin-node-resolve'
 import RollupCommonjs from '@rollup/plugin-commonjs'
 import RollupTypescript from 'rollup-plugin-typescript2'
+import RollupJscc from 'rollup-plugin-jscc'
 
 const resolveApp = path => resolve(__dirname, '..', path)
 
@@ -41,6 +42,9 @@ export default {
     }
   ],
   plugins: [
+    RollupJscc({
+      values: { _APP: 'weapp' }
+    }),
     RollupResolve({
       customResolveOptions: {
         moduleDirectories: [ 'node_modules' ]

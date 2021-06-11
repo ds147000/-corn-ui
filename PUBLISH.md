@@ -3,7 +3,7 @@
  * @Author: zhoulong.yang
  * @Date: 2021-06-10 19:47:51
  * @LastEditors: zhoulong.yang
- * @LastEditTime: 2021-06-11 10:21:31
+ * @LastEditTime: 2021-06-11 14:56:27
 -->
 # 参与代码贡献说明
 
@@ -54,8 +54,17 @@ xrkmm-cli
 
  - `src/utils` 工具模块
 
+## 🔨 条件编译
+```js
+  // #if _APP === 'weapp'
+  console.log('我是taro环境')
+  // #else
+  console.log('我是纯h5环境')
+  // #endif
+```
+
 ## PR标准
  - 🚗 单元测试覆盖率必须 100%
  - 🕹 必须满足`eslint`，`stylelint`检测
- - 🏍 所有组件必须存在`md使用说明文件`和`props`注释说明
+ - 🏍 所有组件必须存在`md使用说明文件`和`props`注释说明。因为后续我们将生成在线文档站点
 

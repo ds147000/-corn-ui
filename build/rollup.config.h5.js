@@ -3,15 +3,16 @@
  * @Author: zhoulong.yang
  * @Date: 2021-06-07 11:36:33
  * @LastEditors: zhoulong.yang
- * @LastEditTime: 2021-06-11 10:45:17
+ * @LastEditTime: 2021-06-11 14:46:22
  */
 const { resolve } = require('path')
 const Package = require('../package.json')
-import babel from 'rollup-plugin-babel'
+import RollupBabel from '@rollup/plugin-babel'
 import RollupResolve from '@rollup/plugin-node-resolve'
 import RollupCommonjs from '@rollup/plugin-commonjs'
 import RollupTypescript from 'rollup-plugin-typescript2'
 import alias from '@rollup/plugin-alias'
+import RollupJscc from 'rollup-plugin-jscc'
 import { DEFAULT_EXTENSIONS } from '@babel/core'
 
 const resolveApp = path => resolve(__dirname, '..', path)
@@ -20,7 +21,8 @@ const resolveApp = path => resolve(__dirname, '..', path)
 const externalPackages = [
   'react',
   'react-dom',
-  '@tarojs/react'
+  '@tarojs/react',
+  '@babel/runtime'
 ]
 
 export default {
@@ -32,6 +34,9 @@ export default {
     sourcemap: true
   },
   plugins: [
+    RollupJscc({
+      values: { _APP: 'h5' }
+    }),
     alias({
       entries: {
         '@tarojs/components': resolveApp('./node_modules/@tarojs/components-react/index.js'),
@@ -45,14 +50,15 @@ export default {
     }),
     RollupCommonjs(),
     RollupTypescript({ tsconfig: resolveApp('tsconfig.json') }),
-    babel({
+    RollupBabel({
       exclude: ['node_modules/**', 'example/**', 'example-react/**'],
       extensions: [ // 扩展文件名
         ...DEFAULT_EXTENSIONS,
         '.ts',
         '.tsx'
       ],
-      runtimeHelpers: true
+      babelHelpers: 'runtime',
+      configFile: resolveApp('./babel.config.h5.js')
     })
   ]
 }

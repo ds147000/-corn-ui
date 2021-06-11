@@ -3,7 +3,7 @@
  * @Author: zhoulong.yang
  * @Date: 2021-06-10 18:57:24
  * @LastEditors: zhoulong.yang
- * @LastEditTime: 2021-06-11 10:23:20
+ * @LastEditTime: 2021-06-11 14:08:32
 -->
 <p align="center">
   <a href="https://ant.design">
@@ -68,7 +68,7 @@ import '@xrkmm/ui/dist/styles/index.scss';
 import '@xrkmm/ui/dist/styles/components/card.scss';
 ```
 
-## 🔨 单纯React中使用示例
+## 🔨 单纯React项目中使用示例
 
 ```jsx
 import { Card } from '@xrkmm/ui/dist-h5'
