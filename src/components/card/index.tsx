@@ -3,7 +3,7 @@
  * @Author: zhoulong.yang
  * @Date: 2021-06-07 12:03:34
  * @LastEditors: zhoulong.yang
- * @LastEditTime: 2021-06-10 18:49:11
+ * @LastEditTime: 2021-06-11 10:37:04
  */
 import { showToast } from '@tarojs/taro'
 import React from 'react'
@@ -15,13 +15,13 @@ interface CardProps {
 }
 
 const Card: React.FC<CardProps> = ({ children, title, onClick }) => {
-  const _onClick = () => {
+  const _onClick = (): void => {
     showToast({ title: '123' })
     if (onClick) onClick()
   }
 
   return (
-    <View onClick={_onClick} className="xrkmm-card" >
+    <View onClick={_onClick} className='xrkmm-card' >
       <Text>{title}</Text>
       {children}
     </View>

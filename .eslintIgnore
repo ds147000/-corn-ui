@@ -6,3 +6,6 @@ dist-h5/
 dist-css/
 example/
 example-react/
+__steups__
+__mocks__
+coverage/

@@ -3,7 +3,7 @@
  * @Author: zhoulong.yang
  * @Date: 2021-06-07 11:36:33
  * @LastEditors: zhoulong.yang
- * @LastEditTime: 2021-06-10 18:15:11
+ * @LastEditTime: 2021-06-11 10:45:17
  */
 const { resolve } = require('path')
 const Package = require('../package.json')
@@ -20,7 +20,6 @@ const resolveApp = path => resolve(__dirname, '..', path)
 const externalPackages = [
   'react',
   'react-dom',
-  '@tarojs/runtime',
   '@tarojs/react'
 ]
 

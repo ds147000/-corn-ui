@@ -54,6 +54,7 @@
     "babel-preset-taro": "^3.2.10",
     "concurrently": "^6.2.0",
     "eslint": "^7.28.0",
+    "eslint-config-taro": "^3.2.11",
     "eslint-plugin-import": "^2.23.4",
     "eslint-plugin-react": "^7.24.0",
     "eslint-plugin-react-hooks": "^4.2.0",
