@@ -1,3 +1,10 @@
+<!--
+ * @Description:
+ * @Author: zhoulong.yang
+ * @Date: 2021-06-10 18:57:24
+ * @LastEditors: zhoulong.yang
+ * @LastEditTime: 2021-06-11 10:23:20
+-->
 <p align="center">
   <a href="https://ant.design">
     <img width="200" src="https://assets.xrkmm.cn/u/3202028/f7ae6e50-7336-4233-aa44-ee9f2d2e83dc.png">
@@ -39,7 +46,7 @@ npm install @xrkmm/ui
 yarn add @xrkmm/ui
 ```
 
-## 🔨 示例
+## 🔨 Taro使用示例
 
 ```jsx
 import { Card } from '@xrkmm/ui'
@@ -61,7 +68,23 @@ import '@xrkmm/ui/dist/styles/index.scss';
 import '@xrkmm/ui/dist/styles/components/card.scss';
 ```
 
-引入css样式（编译后样式文件）：
+## 🔨 单纯React中使用示例
+
+```jsx
+import { Card } from '@xrkmm/ui/dist-h5'
+
+const App = () => (
+  <Card />
+)
+```
+
+引入scss样式：
+
+```jsx
+import '@xrkmm/ui/dist/styles/index.scss';
+```
+
+或者引入css样式（编译后样式文件）：
 
 ```jsx
 import '@xrkmm/ui/dist/xrkmm.mini.css';
@@ -69,7 +92,7 @@ import '@xrkmm/ui/dist/xrkmm.mini.css';
 
 ### 🌈 定制主题
 
-参考 [定制主题](https://ant.design/docs/react/customize-theme-cn) 文档。
+参考 [定制主题]() 文档。
 
 
 

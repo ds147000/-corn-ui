@@ -3,7 +3,7 @@
  * @Author: zhoulong.yang
  * @Date: 2021-06-10 19:47:51
  * @LastEditors: zhoulong.yang
- * @LastEditTime: 2021-06-10 20:05:18
+ * @LastEditTime: 2021-06-11 10:21:31
 -->
 # 参与代码贡献说明
 
@@ -56,6 +56,6 @@ xrkmm-cli
 
 ## PR标准
  - 🚗 单元测试覆盖率必须 100%
- - 🕹 必须满足eslint，stylelint检测
- - 🏍 所有组件必须存在md使用说明文件和props注释说明
+ - 🕹 必须满足`eslint`，`stylelint`检测
+ - 🏍 所有组件必须存在`md使用说明文件`和`props`注释说明
 
