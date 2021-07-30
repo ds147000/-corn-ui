@@ -12,6 +12,7 @@ import RollupResolve from '@rollup/plugin-node-resolve'
 import RollupCommonjs from '@rollup/plugin-commonjs'
 import RollupTypescript from 'rollup-plugin-typescript2'
 import RollupJscc from 'rollup-plugin-jscc'
+import RollupBabel from '@rollup/plugin-babel'
 
 const resolveApp = path => resolve(__dirname, '..', path)
 
@@ -23,7 +24,8 @@ const externalPackages = [
   '@tarojs/components-react',
   '@tarojs/runtime',
   '@tarojs/taro',
-  '@tarojs/react'
+  '@tarojs/react',
+  '@babel/runtime',
 ]
 
 export default {
@@ -51,6 +53,10 @@ export default {
       }
     }),
     RollupCommonjs(),
-    RollupTypescript({ tsconfig: resolveApp('tsconfig.json') })
+    RollupTypescript({ tsconfig: resolveApp('tsconfig.json') }),
+    RollupBabel({
+      exclude: ['node_modules/**', 'example/**', 'example-react/**'],
+      configFile: resolveApp('./babel.config.taro.js')
+    })
   ]
 }

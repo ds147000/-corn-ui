@@ -1041,7 +1041,7 @@
     resolve "^1.8.1"
     semver "^5.5.1"
 
-"@babel/plugin-transform-runtime@^7.0.0":
+"@babel/plugin-transform-runtime@^7.0.0", "@babel/plugin-transform-runtime@^7.14.5":
   version "7.14.5"
   resolved "https://nexus3.xrkmm.com/repository/npm-group/@babel/plugin-transform-runtime/-/plugin-transform-runtime-7.14.5.tgz#30491dad49c6059f8f8fa5ee8896a0089e987523"
   integrity sha1-MEkdrUnGBZ+Pj6XuiJagCJ6YdSM=

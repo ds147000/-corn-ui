@@ -12,7 +12,7 @@ import '../../dist/xrkmm.mini.css'
 function App() {
   return (
     <div className="App">
-      <Card />
+      <Card onClick={() => alert(1)} />
     </div>
   )
 }

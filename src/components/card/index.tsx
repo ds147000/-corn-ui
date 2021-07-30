@@ -5,7 +5,6 @@
  * @LastEditors: zhoulong.yang
  * @LastEditTime: 2021-06-11 14:50:50
  */
-import { showActionSheet } from '@tarojs/taro'
 import React from 'react'
 import { View, Text } from '@tarojs/components'
 
@@ -16,9 +15,6 @@ interface CardProps {
 
 const Card: React.FC<CardProps> = ({ children, title, onClick }) => {
   const _onClick = (): void => {
-    showActionSheet({
-      itemList: [ '1', '2', '3' ]
-    })
     if (onClick) onClick()
   }
 

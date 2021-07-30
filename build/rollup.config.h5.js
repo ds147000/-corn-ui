@@ -14,6 +14,7 @@ import RollupTypescript from 'rollup-plugin-typescript2'
 import alias from '@rollup/plugin-alias'
 import RollupJscc from 'rollup-plugin-jscc'
 import { DEFAULT_EXTENSIONS } from '@babel/core'
+import ChangeInput from './changInput'
 
 const resolveApp = path => resolve(__dirname, '..', path)
 
@@ -22,7 +23,10 @@ const externalPackages = [
   'react',
   'react-dom',
   '@tarojs/react',
-  '@babel/runtime'
+  '@babel/runtime',
+  '@tarojs/runtime',
+  '@tarojs/taro',
+  '@tarojs/react'
 ]
 
 export default {
@@ -39,8 +43,7 @@ export default {
     }),
     alias({
       entries: {
-        '@tarojs/components': resolveApp('./node_modules/@tarojs/components-react/index.js'),
-        '@tarojs/taro': resolveApp('./node_modules/@tarojs/taro-h5')
+        '@tarojs/components': resolveApp('./build/mock/components')
       }
     }),
     RollupResolve({
@@ -50,6 +53,7 @@ export default {
     }),
     RollupCommonjs(),
     RollupTypescript({ tsconfig: resolveApp('tsconfig.json') }),
+    ChangeInput(),
     RollupBabel({
       exclude: ['node_modules/**', 'example/**', 'example-react/**'],
       extensions: [ // 扩展文件名
@@ -58,7 +62,7 @@ export default {
         '.tsx'
       ],
       babelHelpers: 'runtime',
-      configFile: resolveApp('./babel.config.h5.js')
+      plugins: ['@babel/plugin-transform-runtime']
     })
   ]
 }
