@@ -56,7 +56,7 @@ export default {
     RollupTypescript({ tsconfig: resolveApp('tsconfig.json') }),
     RollupBabel({
       exclude: ['node_modules/**', 'example/**', 'example-react/**'],
-      configFile: resolveApp('./babel.config.taro.js')
+      configFile: resolveApp('./babel.config.js')
     })
   ]
 }

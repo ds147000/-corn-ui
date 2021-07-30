@@ -50,7 +50,7 @@ jest.mock('@tarojs/taro', () => {
   })
 
   return {
-    ...jest.requireActual('@tarojs/taro-h5'),
+    ...jest.requireActual('@tarojs/taro-h5') as any,
     redirectTo: jest.fn(),
     navigateTo: jest.fn(),
     reLaunch: jest.fn(),
