@@ -14,6 +14,7 @@
     "dev:weapp": "rollup -w --config ./build/rollup.config.js",
     "dev:h5": "rollup -w --config ./build/rollup.config.h5.js",
     "dev:css": "rollup -w --config ./build/rollup.config.css.js",
+    "dev:docs": "cd docs && npm run start",
     "build:all": "npm run lint && npm run test:prod &&  rm -rf dist &&  rm -rf dist-h && npm run build:weapp && npm run build:h5 && npm run build:css",
     "build:weapp": "rollup --config ./build/rollup.config.js",
     "build:h5": "rollup --config ./build/rollup.config.h5.js",
@@ -25,8 +26,8 @@
     "scan": "npm run lint && npm run test",
     "test": "jest --config jest.config.js --watch --coverage",
     "test:prod": "jest --config jest.config.js --silent --no-cache --coverage",
-    "demo:weapp": "cd example-weapp && npm run dev:weapp",
-    "demo:h5": "cd example-react && npm run start"
+    "pre:weapp": "cd example-weapp && npm run dev:weapp",
+    "pre:h5": "cd example-react && npm run start"
   },
   "keywords": [
     "向日葵妈妈，UI库，小程序，taro"

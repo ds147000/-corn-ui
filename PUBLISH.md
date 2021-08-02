@@ -15,10 +15,10 @@
  ``` yarn dev ```
 
 3.启动小程序预览例子
-```yarn demo:weapp```
+```yarn pre:weapp```
 
 4.启动h5例子
-```yarn demo:h5```
+```yarn pre:h5```
 
 5.编译结果
 ```yarn buidl:all```
@@ -32,13 +32,14 @@ xrkmm-cli
 └── src
     ├── assets
     ├── components
+    |     └── demo
     ├── config
     ├── styles
     └── utils
 ```
  - `build` 编译配置文件，rollup的编译h5端,小程序端,css端的配置文件
 
- - `exapmple` 小程序demo，用于实时调试自己编写组件效果
+ - `exapmple-weapp` 小程序demo，用于实时调试自己编写组件效果
 
  - `exapmple-react` 浏览器端demo，用于实时调试编写端组件浏览器效果，是否与小程序端保持一致。
 
@@ -47,6 +48,8 @@ xrkmm-cli
  - `src/assets` 静态资源文件夹，组件的媒体组件存放初。注意：组件引用的媒体资源应该尽量使用css引入使用。
 
  - `src/components` 组件源码，注意此处只能存放js源码，scss样式文件应该在`styles`中
+
+ - `src/components/demo` 组件的使用说明文件，markdown语法。用于生成在线文档。
 
  - `src/config` 配置
 

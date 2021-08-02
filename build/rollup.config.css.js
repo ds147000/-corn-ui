@@ -6,8 +6,6 @@
  * @LastEditTime: 2021-06-10 16:11:52
  */
 
-const { resolve } = require('path')
-const Package = require('../package.json')
 import RollupResolve from '@rollup/plugin-node-resolve'
 import RollupCommonjs from '@rollup/plugin-commonjs'
 import RollupCopy from 'rollup-plugin-copy'
@@ -16,8 +14,9 @@ import sass from 'rollup-plugin-sass'
 import autoprefixer from 'autoprefixer'
 import postcss from 'postcss'
 import pxtransform from 'postcss-pxtransform'
+import { resolveApp } from './utils'
 
-const resolveApp = path => resolve(__dirname, '..', path)
+
 const RollupPxtransform = pxtransform({
   platform: 'h5',
   designWidth: 750,

@@ -6,15 +6,13 @@
  * @LastEditTime: 2021-06-11 14:46:32
  */
 
-const { resolve } = require('path')
 const Package = require('../package.json')
 import RollupResolve from '@rollup/plugin-node-resolve'
 import RollupCommonjs from '@rollup/plugin-commonjs'
 import RollupTypescript from 'rollup-plugin-typescript2'
 import RollupJscc from 'rollup-plugin-jscc'
 import RollupBabel from '@rollup/plugin-babel'
-
-const resolveApp = path => resolve(__dirname, '..', path)
+import { resolveApp } from './utils'
 
 // 应被保留在外部的依赖
 const externalPackages = [
