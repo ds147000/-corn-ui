@@ -9,7 +9,9 @@ import React from 'react'
 import { View, Text } from '@tarojs/components'
 
 interface CardProps {
+  /** 卡片标题 */
   title?: string
+  /** 点击事件 */
   onClick?(): void
 }
 

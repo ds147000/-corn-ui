@@ -25,7 +25,7 @@
     "scan": "npm run lint && npm run test",
     "test": "jest --config jest.config.js --watch --coverage",
     "test:prod": "jest --config jest.config.js --silent --no-cache --coverage",
-    "demo:weapp": "cd example && npm run dev:weapp",
+    "demo:weapp": "cd example-weapp && npm run dev:weapp",
     "demo:h5": "cd example-react && npm run start"
   },
   "keywords": [
