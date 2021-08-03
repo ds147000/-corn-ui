@@ -59,7 +59,7 @@ demo
 这是一个普通的卡片，具有标题和点击事件
 </code></pre>
 <h3>生成文档预览</h3>
-<img width="700" src="https://assets.xrkmm.cn/u/4000002499670412/bbbe7e74-8a6d-4348-a742-cf26559999b2.png">
+<img style="width:100%" src="https://assets.xrkmm.cn/u/4000002499670412/bbbe7e74-8a6d-4348-a742-cf26559999b2.png">
 `,
       }}
     />

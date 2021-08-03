@@ -14,12 +14,11 @@
     "dev:weapp": "rollup -w --config ./build/rollup.config.js",
     "dev:h5": "rollup -w --config ./build/rollup.config.h5.js",
     "dev:css": "rollup -w --config ./build/rollup.config.css.js",
-    "dev:doc": "cd docs && npm run start",
     "build:all": "npm run lint && npm run test:prod &&  rm -rf dist &&  rm -rf dist-h && npm run build:weapp && npm run build:h5 && npm run build:css",
     "build:weapp": "rollup --config ./build/rollup.config.js",
     "build:h5": "rollup --config ./build/rollup.config.h5.js",
     "build:css": "rollup --config ./build/rollup.config.css.js",
-    "build:doc": "node ./build/build-docs.js",
+    "build:doc": "node ./build/build-docs.js && cd docs && npm run build",
     "lint": "eslint \"**/*.{js,ts,tsx}\" && npm run lint:style",
     "lint:fix": "eslint --fix \"**/*.{js,ts,tsx}\" && npm run lint:style:fix",
     "lint:style": "stylelint \"**/*.{scss, css, less}\"",
@@ -28,7 +27,8 @@
     "test": "jest --config jest.config.js --watch --coverage",
     "test:prod": "jest --config jest.config.js --silent --no-cache --coverage",
     "pre:weapp": "cd example-weapp && npm run dev:weapp",
-    "pre:h5": "cd example-react && npm run start"
+    "pre:h5": "cd example-react && npm run start",
+    "pre:doc": "cd docs && npm run start"
   },
   "keywords": [
     "向日葵妈妈，UI库，小程序，taro"
