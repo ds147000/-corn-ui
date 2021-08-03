@@ -1,6 +1,3 @@
-## 基本用法
-
-```tsx
 import { useState } from 'react'
 import { Card } from '@xrkmm/ui'
 
@@ -11,11 +8,7 @@ const CardDemo: React.FC = () => {
     setTitle('我是卡片' + Date.now())
   }
 
-  return (
-    <Card title={title} onClick={onClick} />
-  )
+  return <Card title={title} onClick={onClick} />
 }
 
 export default CardDemo
-```
-这是一个普通的卡片，具有标题和点击事件

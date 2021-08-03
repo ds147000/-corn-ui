@@ -1,10 +1,15 @@
 import { RouteProps } from 'react-router-dom'
 
-const Routes: RouteProps[] = [
+interface RoutesProps extends RouteProps {
+  title: string;
+}
+
+const Routes: RoutesProps[] = [
   {
     path: '/Card',
-    component: require('../views/Card').default
-  }
+    component: require('../views/Card').default,
+    title: require('../views/Card/config').default.title,
+  },
 ]
 
 export default Routes
