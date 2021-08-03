@@ -57,6 +57,19 @@ xrkmm-cli
 
  - `src/utils` 工具模块
 
+## 📖 组件开发规范
+ - 每个文件中只能存在一个组件（包括状态和无状态）
+ - 组件目录必须存在`demo`文件夹，存放组件使用说明的`md`文件。[组件md文件编写规范](./COMPONENT.md)
+
+```tsx
+// 组件目录说明
+Card
+├── demo
+      ├── props.md // 组件属性说明文件
+      └── basis.md // 组件演示离职文件
+├── index.tsx
+```
+
 ## 🔨 使用条件编译代码
 ```js
   // #if _APP === 'weapp'
@@ -65,6 +78,8 @@ xrkmm-cli
   console.log('我是纯h5环境')
   // #endif
 ```
+
+
 
 ## PR标准
  - 🚗 单元测试覆盖率必须 100%

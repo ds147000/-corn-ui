@@ -1,6 +1,7 @@
 import { useHistory, useLocation } from "react-router-dom"
 import { Layout, Menu } from 'antd'
-import Routes from '../../router'
+import CompsRoutes from '../../router/components'
+import OtherRoutes from '../../router/other'
 import './style.scss'
 
 const { Header, Content, Footer, Sider } = Layout
@@ -22,14 +23,28 @@ const View: React.FC = ({ children }) => {
       <Layout className="site-layout">
         <Sider theme="light">
           <Menu selectedKeys={[location.pathname]} mode="inline">
-            {Routes.map((item) => (
-              <Menu.Item
-                key={item.path as string}
-                onClick={() => onClick(item.path as string)}
-              >
-                {item.title}
-              </Menu.Item>
-            ))}
+            <Menu.ItemGroup title="组件列表">
+              <Menu.Divider />
+              {CompsRoutes.map((item) => (
+                <Menu.Item
+                  key={item.path as string}
+                  onClick={() => onClick(item.path as string)}
+                >
+                  {item.title}
+                </Menu.Item>
+              ))}
+            </Menu.ItemGroup>
+            <Menu.ItemGroup title="其他">
+              <Menu.Divider />
+              {OtherRoutes.map((item) => (
+                <Menu.Item
+                  key={item.path as string}
+                  onClick={() => onClick(item.path as string)}
+                >
+                  {item.title}
+                </Menu.Item>
+              ))}
+            </Menu.ItemGroup>
           </Menu>
         </Sider>
 

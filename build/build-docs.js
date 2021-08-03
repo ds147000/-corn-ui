@@ -29,7 +29,7 @@ const main = async () => {
 
 
   spinner.start('写入demo的路由配置')
-  await getDemoRoutes([...componentsFiles], resolveApp('docs/src/router/index.tsx'))
+  await getDemoRoutes([...componentsFiles], resolveApp('docs/src/router/components.tsx'))
   spinner.succeed()
 
   spinner.succeed('💥 完成文档生成')

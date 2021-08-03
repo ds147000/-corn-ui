@@ -153,7 +153,9 @@ exports.getMarkDownTemplate = async (paths = [], dirPath) => {
   )
 
   this.writeFile(dirPath + '/config.js', Prettier.format(
-    `export default { title: '${props[0].split('\n')[0].replace('# ', '')}' }`,
+    `
+    const config = { title: '${props[0].split('\n')[0].replace('# ', '')}' }
+    export default config`,
   PerttierConfig))
 }
 
