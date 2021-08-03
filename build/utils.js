@@ -41,7 +41,7 @@ exports.removeDir = async (path) => {
     if (dir.isDirectory()) fs.rmdirSync(path, { recursive: true })
 
   } catch (error) {
-    console.error('❌ 不存在' + path)
+    console.error('❌ 不存在', error)
   }
 }
 
@@ -185,4 +185,22 @@ exports.getDemoRoutes = (paths = [], dirPath) => {
   `
 
   this.writeFile(dirPath,  Prettier.format(data, PerttierConfig))
+}
+
+exports.getMarkDownToTSX = async (suore, path) => {
+  const data = fs.readFileSync(suore).toString()
+  const markTxt = MD.render(data).toString().replace(/`/ig, '\\`')
+
+  const writeData = `
+const Page: React.FC = () => {
+  return (
+    <div className="scope-page" dangerouslySetInnerHTML={{ __html: \`${markTxt}\` }} />
+  )
+}
+
+export default Page
+
+  `
+
+  await this.writeFile(path, Prettier.format(writeData, PerttierConfig))
 }

@@ -1,3 +1,4 @@
+docs/src/views/*
 node_modules/
 package-lock.json
 yarn-error.log
@@ -5,4 +6,4 @@ dist/
 dist-h5/
 dist-css/
 coverage/
-docs/src/views/*
+
