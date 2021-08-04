@@ -3,15 +3,14 @@ const shell = require('shelljs')
 
 const spinner = ora()
 
-const buildCSS = () => {
+const build = () => {
   spinner.start('build css...')
   shell.exec('npm run build:css', { silent: false },  () => {
     spinner.succeed()
+    setTimeout(() => {
+      build()
+    }, 10000)
   })
 }
 
-setInterval(() => {
-  buildCSS()
-}, 10000)
-
-buildCSS()
+build()

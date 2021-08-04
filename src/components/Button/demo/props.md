@@ -17,6 +17,7 @@
 | --- | --- | --- | --- | --- |
 | type | 否 | 按钮风格类型 | `primary` `warn` `error` `link` `pop` | `primary` |
 | size | 否 |  按钮大小 | `max` `big` `large` `middle` `small` `mini` | `middle` |
+| icon | 否 |  按钮的图标 | `React.ReactNode` | `null` |
 | block | 否 |  将按钮宽度调整为其父宽度的选项 | `boolean` | `false` |
 | ghost | 否 |  镂空风格 | `boolean` | `false` |
 | disabled | 否 |  是否禁用 | `boolean` | `false` |

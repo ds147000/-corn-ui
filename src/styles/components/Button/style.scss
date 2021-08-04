@@ -6,9 +6,18 @@ $prefix: xrk-btn;
   justify-content: center;
   box-sizing: border-box;
   transform: opacity 0.1s;
+  margin: 0 $btnMargin;
 
   &:active {
     opacity: 0.7;
+  }
+
+  &:first-child {
+    margin-left: 0;
+  }
+
+  &:last-child {
+    margin-right: 0;
   }
 
   &-mini {

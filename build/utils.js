@@ -68,7 +68,7 @@ exports.getMarkDownTemplate = async (paths = [], dirPath) => {
   // 中奖内容
   const content = paths.map((path) => {
     const last = path.lastIndexOf('/')
-    const fileName = path.slice(last + 1).replace('.md', '').toUpperCase()
+    const fileName = path.slice(last + 1).replace('.md', '').replace(/\d\./, '').toUpperCase()
 
     // 返回内容
     const data = { header: '', body: '', key: fileName }
