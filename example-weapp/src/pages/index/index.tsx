@@ -7,7 +7,7 @@
  */
 import { Component } from 'react'
 import { View } from '@tarojs/components'
-import { Card } from '@xrkmm/ui'
+import { Button } from '@xrkmm/ui'
 import './index.scss'
 
 export default class Index extends Component {
@@ -22,10 +22,37 @@ export default class Index extends Component {
 
   componentDidHide () { }
 
+  onClick() {
+    console.log(1)
+  }
+
   render () {
     return (
       <View className='index'>
-        <Card />
+        <Button size="max">向日葵妈妈UI</Button>
+        <Button size="big">向日葵妈妈UI</Button>
+        <Button size="large">向日葵妈妈UI</Button>
+        <Button size="middle">向日葵妈妈UI</Button>
+        <Button size="small">向日葵妈妈UI</Button>
+        <Button size="mini">向日葵妈妈UI</Button>
+        <Button type="error">向日葵妈妈UI</Button>
+        <Button type="link">向日葵妈妈UI</Button>
+        <Button type="pop">向日葵妈妈UI</Button>
+        <Button type="primary">向日葵妈妈UI</Button>
+        <Button type="warn">向日葵妈妈UI</Button>
+        <Button icon={<div>我是图标</div>}>向日葵妈妈UI</Button>
+        <Button block type="error" >向日葵妈妈UI</Button>
+        <Button block type="link" >向日葵妈妈UI</Button>
+        <Button block type="pop" >向日葵妈妈UI</Button>
+        <Button block type="primary" >向日葵妈妈UI</Button>
+        <Button block type="warn" >向日葵妈妈UI</Button>
+        <Button ghost type="error" >向日葵妈妈UI</Button>
+        <Button ghost type="link" >向日葵妈妈UI</Button>
+        <Button ghost type="pop" >向日葵妈妈UI</Button>
+        <Button ghost type="primary" >向日葵妈妈UI</Button>
+        <Button ghost type="warn" >向日葵妈妈UI</Button>
+        <Button onClick={this.onClick}>向日葵妈妈UI</Button>
+        <Button onClick={this.onClick} disabled >向日葵妈妈UI</Button>
       </View>
     )
   }

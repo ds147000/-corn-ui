@@ -14,6 +14,7 @@
     "dev:weapp": "rollup -w --config ./build/rollup.config.js",
     "dev:h5": "rollup -w --config ./build/rollup.config.h5.js",
     "dev:css": "node ./build/watch.css.js",
+    "dev:doc": "node ./build/watch.md.js",
     "build:all": "npm run lint && npm run test:prod &&  rm -rf dist &&  rm -rf dist-h && npm run build:weapp && npm run build:h5 && npm run build:css",
     "build:weapp": "rollup --config ./build/rollup.config.js",
     "build:h5": "rollup --config ./build/rollup.config.h5.js",

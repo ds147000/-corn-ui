@@ -8,4 +8,5 @@ coverage/
 dist-h5/
 dist-css/
 example-react/
-example/
+example-weapp/
+docs/

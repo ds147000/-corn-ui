@@ -5,8 +5,7 @@ $prefix: xrk-btn;
   align-items: center;
   justify-content: center;
   box-sizing: border-box;
-  transform: opacity .08s;
-  cursor: pointer;
+  transform: opacity 0.1s;
 
   &:active {
     opacity: 0.7;
@@ -16,7 +15,7 @@ $prefix: xrk-btn;
     min-width: 102px;
     height: 42px;
     border-radius: 22px;
-    padding: 0px 16px;
+    padding: 0 16px;
     font-size: 18px;
   }
 
@@ -24,13 +23,13 @@ $prefix: xrk-btn;
     min-width: 114px;
     height: 50px;
     border-radius: 25px;
-    padding: 0px 24px;
+    padding: 0 24px;
     font-size: 22px;
   }
 
   &-middle {
     min-width: 270px;
-    padding: 0px 24px;
+    padding: 0 24px;
     height: 60px;
     border-radius: 35px;
     font-size: 24px;
@@ -40,7 +39,7 @@ $prefix: xrk-btn;
   &-large {
     min-width: 320px;
     height: 70px;
-    padding: 0px 32px;
+    padding: 0 32px;
     border-radius: 35px;
     font-size: 30px;
     font-weight: bolder;
@@ -49,7 +48,7 @@ $prefix: xrk-btn;
   &-big {
     min-width: 370px;
     height: 80px;
-    padding: 0px 32px;
+    padding: 0 32px;
     border-radius: 40px;
     font-weight: bolder;
     font-size: 32px;
@@ -57,7 +56,7 @@ $prefix: xrk-btn;
 
   &-max {
     min-width: 420px;
-    padding: 0px 32px;
+    padding: 0 32px;
     width: 690px;
     height: 98px;
     border-radius: 48px;
@@ -66,7 +65,7 @@ $prefix: xrk-btn;
   }
 
   &-icon {
-    padding: 0px 16px;
+    padding: 0 16px;
   }
 
   &-primary {
@@ -91,7 +90,6 @@ $prefix: xrk-btn;
       border-color: $warn;
       color: $warn;
     }
-
   }
 
   &-error {
@@ -135,9 +133,8 @@ $prefix: xrk-btn;
   }
 
   &-ghost {
-    background-color: rgba($color: #000000, $alpha: 0);
+    background-color: rgba($color: #000 , $alpha: 0);
     border-width: 2px;
     border-style: solid;
   }
-
 }

@@ -4,7 +4,8 @@ node_modules
 *.test.ts
 dist-h5/
 dist-css/
-example/
+example-weapp/
+docs/
 example-react/
 __steups__
 __mocks__

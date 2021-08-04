@@ -29,6 +29,7 @@ const config = {
   },
   alias: {
     '@xrkmm/ui': resolve(__dirname, '../../dist'),
+    'react': resolve(__dirname, '../../node_modules/react')
   },
   framework: 'react',
   mini: {
