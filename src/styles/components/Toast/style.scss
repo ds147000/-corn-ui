@@ -1,0 +1,14 @@
+$prefix: xrk-toast;
+
+.#{$prefix} {
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  z-index: $toastIndex;
+  background-color: rgba($color: #000000, $alpha: 0);
+  pointer-events: none;
+
+  &-active {
+    pointer-events: auto;
+  }
+}
