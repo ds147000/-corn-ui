@@ -60,7 +60,7 @@ exports.getMarkDownTemplate = async (paths = [], dirPath) => {
   const propsIndex = paths.findIndex((item) => /props\.md/.test(item))
   const propsPath = paths[propsIndex]
   paths.splice(propsIndex, 1)
-  const props = fs.readFileSync(propsPath).toString().split('<solt>')
+  const props = fs.readFileSync(propsPath).toString().split('<demo>')
 
   // 切割头部和尾部
   const header = MD.render(props[0])
@@ -98,11 +98,11 @@ exports.getMarkDownTemplate = async (paths = [], dirPath) => {
 
     data.body = `
       <div className="demo-box">
-        ${markHeader.replace(/class=/, 'className=')}
+        ${markHeader.replace(/class=/ig, 'className=')}
         <div className="demo">
           <${fileName} />
           <Divider orientation="left">描述</Divider>
-          ${markFloor.replace(/class=/, 'className=')}
+          ${markFloor.replace(/class=/ig, 'className=')}
           <div className="action-cell">
             <Tooltip title="复制代码">
               <CopyToClipboard text={\`${code}\`}>
@@ -114,7 +114,7 @@ exports.getMarkDownTemplate = async (paths = [], dirPath) => {
             </Tooltip>
           </div>
           {_${data.key} && (
-            <div dangerouslySetInnerHTML={{ __html: \`${markContentCode}\` }} />
+            <div className="code-box" dangerouslySetInnerHTML={{ __html: \`${markContentCode}\` }} />
           )}
         </div>
       </div>
@@ -138,9 +138,9 @@ exports.getMarkDownTemplate = async (paths = [], dirPath) => {
 
       return (
         <div>
-          ${header.replace(/class=/, 'className=')}
+          ${header.replace(/class=/ig, 'className=')}
           ${content.map((item) => item.body).join('')}
-          ${floor.replace(/class=/, 'className=')}
+          ${floor.replace(/class=/ig, 'className=')}
         </div>
       )
     }

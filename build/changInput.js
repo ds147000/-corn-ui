@@ -8,7 +8,6 @@ export default function ChangeInput() {
         const newImportString = imporList.map((item) => `import ${item.trim()} from '@tarojs/components-react/dist/${item.trim()}/index.js'`).join(`
 `)
         const newCode = code.replace(/import.*?\@tarojs\/components'/, newImportString)
-        console.log(newCode, imporList)
         return { code: newCode }
       }
     }

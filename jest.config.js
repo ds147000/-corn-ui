@@ -20,8 +20,9 @@ module.exports = {
   },
   testPathIgnorePatterns: [
     '/node_modules/',
-    '/example/',
+    '/example-weapp/',
     '/example-react/',
+    '/docs/',
     '/dist/',
     '/dist-h5/',
     '/dist-css/'

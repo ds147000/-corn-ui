@@ -1,0 +1,143 @@
+$prefix: xrk-btn;
+
+.#{$prefix} {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+  transform: opacity .08s;
+  cursor: pointer;
+
+  &:active {
+    opacity: 0.7;
+  }
+
+  &-mini {
+    min-width: 102px;
+    height: 42px;
+    border-radius: 22px;
+    padding: 0px 16px;
+    font-size: 18px;
+  }
+
+  &-small {
+    min-width: 114px;
+    height: 50px;
+    border-radius: 25px;
+    padding: 0px 24px;
+    font-size: 22px;
+  }
+
+  &-middle {
+    min-width: 270px;
+    padding: 0px 24px;
+    height: 60px;
+    border-radius: 35px;
+    font-size: 24px;
+    font-weight: bolder;
+  }
+
+  &-large {
+    min-width: 320px;
+    height: 70px;
+    padding: 0px 32px;
+    border-radius: 35px;
+    font-size: 30px;
+    font-weight: bolder;
+  }
+
+  &-big {
+    min-width: 370px;
+    height: 80px;
+    padding: 0px 32px;
+    border-radius: 40px;
+    font-weight: bolder;
+    font-size: 32px;
+  }
+
+  &-max {
+    min-width: 420px;
+    padding: 0px 32px;
+    width: 690px;
+    height: 98px;
+    border-radius: 48px;
+    font-size: 34px;
+    font-weight: bolder;
+  }
+
+  &-icon {
+    padding: 0px 16px;
+  }
+
+  &-primary {
+    background-color: $primary;
+    color: $text1;
+
+    &.#{$prefix}-ghost {
+      border-color: $primary;
+      color: $primary;
+    }
+  }
+
+  &-warn {
+    background-color: $warn;
+    color: $error;
+
+    &.#{prefix}-disabled {
+      color: $text2;
+    }
+
+    &.#{$prefix}-ghost {
+      border-color: $warn;
+      color: $warn;
+    }
+
+  }
+
+  &-error {
+    background-color: $error;
+    color: $white;
+
+    &.#{$prefix}-ghost {
+      border-color: $error;
+      color: $error;
+    }
+  }
+
+  &-link {
+    background-color: $white;
+    color: $link;
+    min-width: auto;
+
+    &.#{$prefix}-ghost {
+      border-color: $link;
+      color: $link;
+    }
+  }
+
+  &-pop {
+    background-color: $pop;
+    color: $white;
+
+    &.#{$prefix}-ghost {
+      border-color: $pop;
+      color: $pop;
+    }
+  }
+
+  &-block {
+    display: flex;
+  }
+
+  &-disabled {
+    background-color: $disable;
+    pointer-events: none;
+  }
+
+  &-ghost {
+    background-color: rgba($color: #000000, $alpha: 0);
+    border-width: 2px;
+    border-style: solid;
+  }
+
+}

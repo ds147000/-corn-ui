@@ -8,7 +8,7 @@ const Page: React.FC = () => {
 <p>必须是英文开头，小驼峰。使用markdown语法</p>
 <h3>系统命名</h3>
 <ul>
-<li><a href="http://props.md">props.md</a> 组件的属性说明文件，如果组件存在演示例子，<a href="http://props.md">props.md</a> 内容中需要使用 <code><span class="hljs-section">&lt;solt&gt;</span></code>插入演示内容。</li>
+<li><a href="http://props.md">props.md</a> 组件的属性说明文件，如果组件存在演示例子，<a href="http://props.md">props.md</a> 内容中需要使用 <code><span class="hljs-section">&lt;demo/&gt;</span></code>插入演示内容。</li>
 </ul>
 <h3>例子</h3>
 <pre><code class="hljs language-tsx"><span class="hljs-comment">// 目录</span>
@@ -20,7 +20,8 @@ demo
 <pre><code class="hljs"><span class="hljs-comment"># 测试卡片组件 Card</span>
 // 注意：props.md 第一个标题将用于文档菜单名称
 
-<span class="hljs-variable">&lt;solt&gt;</span> // 注意：solt用来插入演示组件例子代码
+<span class="hljs-variable">&lt;demo&gt;</span>
+// 注意：<span class="hljs-variable">&lt;demo&gt;</span>用来插入演示组件例子代码
 
 <span class="hljs-comment">## Props</span>
 |<span class="hljs-string"> 属性 </span>|<span class="hljs-string"> 说明 </span>|<span class="hljs-string"> 类型 </span>|<span class="hljs-string"> 默认值

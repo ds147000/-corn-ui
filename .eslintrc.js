@@ -10,8 +10,8 @@ module.exports = {
     project: './tsconfig.json'
   },
   extends: [
-    'plugin:xrkmm/react',
     'taro/react',
+    'plugin:xrkmm/react'
   ],
   plugins: [ 'xrkmm' ]
 }

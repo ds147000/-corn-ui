@@ -12,7 +12,7 @@ import RollupCommonjs from '@rollup/plugin-commonjs'
 import RollupTypescript from 'rollup-plugin-typescript2'
 import RollupJscc from 'rollup-plugin-jscc'
 import RollupBabel from '@rollup/plugin-babel'
-import { resolveApp } from './utils'
+const { resolveApp } = require('./utils')
 
 // 应被保留在外部的依赖
 const externalPackages = [

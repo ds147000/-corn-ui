@@ -3,6 +3,22 @@
 
 @primary-color: #fe8019;
 
+blockquote {
+  background-color: #FFF5E6;
+  position: relative;
+  padding: 2px 10px 2px 20px;
+  color: @primary-color;
+
+  &::after {
+    content: "";
+    width: 5px;
+    height: 100%;
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    background-color: @primary-color;
+  }
+}
 
 .scope-page {
   .hljs {
@@ -10,3 +26,16 @@
   }
 }
 
+.code-box {
+  .hljs-attribute, .hljs-keyword, code {
+    background-color: rgba(0, 0, 0, 0);
+    padding: 0px;
+    border-radius: 0px;
+  }
+}
+
+.hljs-attribute, .hljs-keyword, code {
+  padding: 2px 4px;
+  border-radius: 4px;
+  background-color: #F5F5F5;
+}

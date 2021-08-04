@@ -1,0 +1,130 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Button /> icon 1`] = `
+<div>
+  <div
+    class="xrk-btn xrk-if xrk-ac xrk-jc xrk-btn-middle xrk-btn-primary xrk-btn-icon"
+  >
+    向日葵妈妈UI
+    <div
+      class=""
+    >
+      我是图标
+    </div>
+  </div>
+</div>
+`;
+
+exports[`<Button /> size 1`] = `
+<div>
+  <div
+    class=""
+  >
+    <div
+      class="xrk-btn xrk-if xrk-ac xrk-jc xrk-btn-max xrk-btn-primary"
+    >
+      向日葵妈妈UI
+    </div>
+    <div
+      class="xrk-btn xrk-if xrk-ac xrk-jc xrk-btn-big xrk-btn-primary"
+    >
+      向日葵妈妈UI
+    </div>
+    <div
+      class="xrk-btn xrk-if xrk-ac xrk-jc xrk-btn-large xrk-btn-primary"
+    >
+      向日葵妈妈UI
+    </div>
+    <div
+      class="xrk-btn xrk-if xrk-ac xrk-jc xrk-btn-middle xrk-btn-primary"
+    >
+      向日葵妈妈UI
+    </div>
+    <div
+      class="xrk-btn xrk-if xrk-ac xrk-jc xrk-btn-small xrk-btn-primary"
+    >
+      向日葵妈妈UI
+    </div>
+    <div
+      class="xrk-btn xrk-if xrk-ac xrk-jc xrk-btn-mini xrk-btn-primary"
+    >
+      向日葵妈妈UI
+    </div>
+  </div>
+</div>
+`;
+
+exports[`<Button /> type 1`] = `
+<div>
+  <div
+    class=""
+  >
+    <div
+      class="xrk-btn xrk-if xrk-ac xrk-jc xrk-btn-middle xrk-btn-error"
+    >
+      向日葵妈妈UI
+    </div>
+    <div
+      class="xrk-btn xrk-if xrk-ac xrk-jc xrk-btn-middle xrk-btn-link"
+    >
+      向日葵妈妈UI
+    </div>
+    <div
+      class="xrk-btn xrk-if xrk-ac xrk-jc xrk-btn-middle xrk-btn-pop"
+    >
+      向日葵妈妈UI
+    </div>
+    <div
+      class="xrk-btn xrk-if xrk-ac xrk-jc xrk-btn-middle xrk-btn-primary"
+    >
+      向日葵妈妈UI
+    </div>
+    <div
+      class="xrk-btn xrk-if xrk-ac xrk-jc xrk-btn-middle xrk-btn-warn"
+    >
+      向日葵妈妈UI
+    </div>
+  </div>
+</div>
+`;
+
+exports[`<Button /> 基本使用 1`] = `
+<div>
+  <div
+    class="xrk-btn xrk-if xrk-ac xrk-jc xrk-btn-middle xrk-btn-primary"
+  />
+</div>
+`;
+
+exports[`<Button /> 复杂标题：节点+文字 1`] = `
+<div>
+  <div
+    class="xrk-btn xrk-if xrk-ac xrk-jc xrk-btn-middle xrk-btn-primary"
+  >
+    <div
+      class=""
+    >
+      <span
+        class="taro-text"
+      >
+        我是图标
+      </span>
+    </div>
+    <span
+      class="taro-text"
+    >
+      向日葵妈妈UI
+    </span>
+  </div>
+</div>
+`;
+
+exports[`<Button /> 标题：向日葵妈妈UI 1`] = `
+<div>
+  <div
+    class="xrk-btn xrk-if xrk-ac xrk-jc xrk-btn-middle xrk-btn-primary"
+  >
+    向日葵妈妈UI
+  </div>
+</div>
+`;

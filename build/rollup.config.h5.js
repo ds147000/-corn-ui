@@ -14,7 +14,7 @@ import alias from '@rollup/plugin-alias'
 import RollupJscc from 'rollup-plugin-jscc'
 import { DEFAULT_EXTENSIONS } from '@babel/core'
 import ChangeInput from './changInput'
-import { resolveApp } from './utils'
+const { resolveApp } = require('./utils')
 
 // 应被保留在外部的依赖
 const externalPackages = [

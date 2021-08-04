@@ -14,7 +14,7 @@ import sass from 'rollup-plugin-sass'
 import autoprefixer from 'autoprefixer'
 import postcss from 'postcss'
 import pxtransform from 'postcss-pxtransform'
-import { resolveApp } from './utils'
+const { resolveApp } = require('./utils')
 
 
 const RollupPxtransform = pxtransform({
