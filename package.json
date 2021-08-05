@@ -29,7 +29,8 @@
     "test:prod": "jest --config jest.config.js --silent --no-cache --coverage",
     "pre:weapp": "cd example-weapp && npm run dev:weapp",
     "pre:h5": "cd example-react && npm run start",
-    "pre:doc": "cd docs && npm run start"
+    "pre:doc": "cd docs && npm run start",
+    "prepare": "husky install"
   },
   "keywords": [
     "向日葵妈妈，UI库，小程序，taro"
@@ -67,6 +68,7 @@
     "eslint-plugin-react-hooks": "^4.2.0",
     "eslint-plugin-xrkmm": "^1.0.5",
     "highlightjs-cypher": "^1.1.1",
+    "husky": "^6.0.0",
     "jest": "^27.0.4",
     "markdown-it": "^12.1.0",
     "markdown-it-highlightjs": "^3.5.0",

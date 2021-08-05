@@ -1,7 +1,7 @@
 .xrk-toast {
   position: fixed;
-  top: 0px;
-  left: 0px;
+  top: 0;
+  left: 0;
   width: 100vw;
   height: 100vh;
   pointer-events: none;
@@ -10,7 +10,6 @@
   justify-content: center;
   z-index: $portalIndex;
   flex-direction: column;
-
 
   &-actions {
     pointer-events: auto;
@@ -29,11 +28,11 @@
     align-items: center;
 
     &.show {
-      animation: toastShow .25s;
+      animation: toastShow 0.25s;
     }
 
     &.hide {
-      animation: toastHide .25s;
+      animation: toastHide 0.25s;
     }
   }
 
@@ -47,25 +46,23 @@
 @keyframes toastShow {
   0% {
     opacity: 0;
-    transform: translate(0px, 150px) translateZ(1px);
+    transform: translate(0 , 150px) translateZ(1px);
   }
 
   100% {
     opacity: 1;
-    transform: translate(0px, 0%) translateZ(1px);
+    transform: translate(0 , 0%) translateZ(1px);
   }
 }
-
-
 
 @keyframes toastHide {
   0% {
     opacity: 1;
-    transform: translate(0px, 0%) translateZ(1px);
+    transform: translate(0 , 0%) translateZ(1px);
   }
 
   100% {
     opacity: 0;
-    transform: translate(0px, -150px) translateZ(1px);
+    transform: translate(0 , -150px) translateZ(1px);
   }
 }
