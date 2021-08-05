@@ -137,11 +137,13 @@ exports.getMarkDownTemplate = async (paths = [], dirPath) => {
       ${content.map((item) => `const [_${item.key}, _set${item.key}] = useState(false)`).join('\n')}
 
       return (
-        <div>
+        <>
           ${header.replace(/class=/ig, 'className=')}
-          ${content.map((item) => item.body).join('')}
+          <div className="solt-demos">
+            ${content.map((item) => item.body).join('')}
+          </div>
           ${floor.replace(/class=/ig, 'className=')}
-        </div>
+        </>
       )
     }
 

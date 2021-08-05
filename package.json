@@ -13,8 +13,8 @@
     "dev": " rm -rf dist &&  rm -rf dist-h5 && concurrently \"npm run dev:weapp\" \"npm run dev:h5\" \"npm run dev:css\"",
     "dev:weapp": "rollup -w --config ./build/rollup.config.js",
     "dev:h5": "rollup -w --config ./build/rollup.config.h5.js",
-    "dev:css": "node ./build/watch.css.js",
-    "dev:doc": "node ./build/watch.md.js",
+    "dev:css": "onchange -i \"src/**/*.scss\" -- npm run build:css",
+    "dev:doc": "onchange -i \"src/**/*.md\" -- npm run build:doc",
     "build:all": "npm run lint && npm run test:prod &&  rm -rf dist &&  rm -rf dist-h && npm run build:weapp && npm run build:h5 && npm run build:css",
     "build:weapp": "rollup --config ./build/rollup.config.js",
     "build:h5": "rollup --config ./build/rollup.config.h5.js",
@@ -70,6 +70,7 @@
     "jest": "^27.0.4",
     "markdown-it": "^12.1.0",
     "markdown-it-highlightjs": "^3.5.0",
+    "onchange": "^7.1.0",
     "ora": "^5.4.1",
     "postcss": "^8.3.1",
     "postcss-pxtransform": "^3.2.10",
@@ -91,6 +92,7 @@
     "stylelint-config-standard": "^22.0.0",
     "stylelint-plugin-xrkmm": "^1.0.1",
     "ts-jest": "^27.0.3",
+    "tslib": "^2.3.0",
     "typescript": "^4.3.2"
   },
   "peerDependencies": {

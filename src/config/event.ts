@@ -1,0 +1,5 @@
+export const PROTAL_ADD = 'XRKMM_PROTAL_ADD'
+
+export const PROTAL_REMOVE = 'XRKMM_PROTAL_REMOVE'
+
+export const TOAST_ADD = 'XRKMM_TAOST_ADD'

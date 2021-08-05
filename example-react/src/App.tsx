@@ -5,8 +5,9 @@
  * @LastEditors: zhoulong.yang
  * @LastEditTime: 2021-06-10 16:35:14
  */
-import { Button } from '@xrkmm/ui'
+import { Button, Toast } from '@xrkmm/ui'
 import '../../dist/xrkmm.mini.css'
+import '../../node_modules/@tarojs/components-react/dist/index.css'
 
 function App() {
   const onClick = () => alert(1)
@@ -38,6 +39,7 @@ function App() {
         <Button ghost type="warn" >向日葵妈妈UI</Button>
         <Button onClick={onClick}>向日葵妈妈UI</Button>
         <Button onClick={onClick} disabled >向日葵妈妈UI</Button>
+        <Button onClick={() => Toast.show({ title: '我是toast', icon: 'success'})}>点击出现taost</Button>
       </div>
 
     </div>

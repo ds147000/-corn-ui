@@ -1,69 +1,56 @@
 /* eslint-disable no-magic-numbers */
-import { HideToast, ToastOption } from './interface'
+import React from 'react'
+import { Container } from './container.h5'
+import { DEFAULT_DURATION, ToastOption } from './interface'
+import Protal from '../Portal'
+import Sub from '../../utils/sub'
+import { TOAST_ADD } from '../../config/event'
 
+const SuoreID = { value: -1 }
+const ID = new Proxy(SuoreID, {
+  set(target, prop, value): boolean {
+    if (prop === 'value' && value === -1) {
+      const oldId = target.value
+      Protal.remove(oldId)
+    }
 
-
+    return Reflect.set(target, prop, value)
+  }
+})
 
 class ToastManager {
-  // 消息队列
-  private queue = new Set<ToastOption>()
-  // 隐藏当前taost的方法
-  private hideToast: HideToast | null = null
-  // 根节点
-  private root: HTMLDivElement | null = null
 
-  show(option: ToastOption): void {
-    if (!option.icon) option.icon = 'none'
-    if (!option.duration) option.duration = 1500
+  private async _init(): Promise<void> {
+    if (ID.value !== -1) return Promise.resolve()
 
-    this.addQueue(option)
-    this.run()
+    const id = await Protal.add(<Container key="toast" />)
+
+    // eslint-disable-next-line require-atomic-updates
+    ID.value = id
+    return new Promise((res) => setTimeout(res, 60))
+  }
+
+  async show(option: ToastOption | string): Promise<void> {
+    await this._init()
+
+    const _options: ToastOption = typeof option === 'string' ? { title: option } : option
+
+    if (!_options.icon) _options.icon = 'none'
+    if (!_options.duration) _options.duration = DEFAULT_DURATION
+
+    try {
+      Sub.emit(TOAST_ADD, _options)
+
+    } catch (error) {
+      _options.fail?.()
+    }
   }
 
   /** 隐藏toast并且清除后续所有的taost消息队列 */
   hide(): void {
-    this._hide()
-    this.queue.clear()
+    ID.value = -1
   }
 
-  /** 初始化配置 */
-  private init(): void {
-    if (this.root !== null) return
-    this.root = document.createElement('div')
-    document.body.appendChild(this.root)
-  }
-
-  /** 运行队列 */
-  private run(): void {
-    this.init()
-    if (this.queue.size === 0) return
-    this._show()
-  }
-
-  private _show(): void {
-    const option = this.queue.values()
-  }
-
-  private _hide(): void {
-    this.hideToast?.()
-    this.hideToast = null
-  }
-
-  /**
-   * 添加任务队列
-   * @param option
-   */
-  private addQueue(option: ToastOption): void {
-    this.queue.add(option)
-  }
-
-  /**
-   * 删除任务队列的任务
-   * @param option
-   */
-  private removeQueue(option: ToastOption): void {
-    this.queue.delete(option)
-  }
 }
 
 export default new ToastManager()

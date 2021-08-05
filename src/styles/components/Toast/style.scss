@@ -1,14 +1,71 @@
-$prefix: xrk-toast;
-
-.#{$prefix} {
+.xrk-toast {
   position: fixed;
+  top: 0px;
+  left: 0px;
   width: 100vw;
   height: 100vh;
-  z-index: $toastIndex;
-  background-color: rgba($color: #000000, $alpha: 0);
   pointer-events: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: $portalIndex;
+  flex-direction: column;
 
-  &-active {
+
+  &-actions {
     pointer-events: auto;
+  }
+
+  .xrk-toast-item {
+    display: inline-flex;
+    background-color: $toastBg;
+    color: $white;
+    font-size: 30px;
+    padding: 24px 40px;
+    border-radius: 78px;
+    margin-bottom: 20px;
+    line-height: 30px;
+    pointer-events: none;
+    align-items: center;
+
+    &.show {
+      animation: toastShow .25s;
+    }
+
+    &.hide {
+      animation: toastHide .25s;
+    }
+  }
+
+  .xrk-toast-icon {
+    width: 34px;
+    height: 34px;
+    margin-right: 16px;
+  }
+}
+
+@keyframes toastShow {
+  0% {
+    opacity: 0;
+    transform: translate(0px, 150px) translateZ(1px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translate(0px, 0%) translateZ(1px);
+  }
+}
+
+
+
+@keyframes toastHide {
+  0% {
+    opacity: 1;
+    transform: translate(0px, 0%) translateZ(1px);
+  }
+
+  100% {
+    opacity: 0;
+    transform: translate(0px, -150px) translateZ(1px);
   }
 }

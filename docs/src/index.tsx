@@ -3,6 +3,7 @@ import ReactDOM from 'react-dom'
 import './theme/theme.less'
 import './theme/highlight.css'
 import '../../dist/xrkmm.mini.css'
+import '../../node_modules/@tarojs/components-react/dist/index.css'
 import App from './App'
 import reportWebVitals from './reportWebVitals'
 

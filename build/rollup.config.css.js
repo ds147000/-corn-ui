@@ -14,7 +14,7 @@ import sass from 'rollup-plugin-sass'
 import autoprefixer from 'autoprefixer'
 import postcss from 'postcss'
 import pxtransform from 'postcss-pxtransform'
-const { resolveApp } = require('./utils')
+const { resolveApp, removeDir } = require('./utils')
 
 
 const RollupPxtransform = pxtransform({
@@ -26,6 +26,9 @@ const RollupPxtransform = pxtransform({
     828: 1.81 / 2
   }
 })
+
+removeDir(resolveApp('dist/styles'))
+removeDir(resolveApp('dist/assets'))
 
 // 应被保留在外部的依赖
 const externalPackages = [

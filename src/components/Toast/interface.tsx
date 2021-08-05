@@ -1,5 +1,4 @@
-/** 隐藏toast回调类型 */
-export type HideToast = () => void
+export const DEFAULT_DURATION = 2000
 
 export interface ToastOption {
   /** 提示的内容 */
@@ -16,4 +15,8 @@ export interface ToastOption {
   success?(): void
   /** 接口调用失败的回调函数 */
   fail?(): void
+}
+
+export interface ToastProps extends ToastOption {
+  onClose?(): void
 }
