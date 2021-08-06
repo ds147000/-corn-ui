@@ -7,3 +7,4 @@
  */
 export { default as Button, ButtonProps } from './components/Button'
 export { default as Toast } from './components/Toast'
+export { default as Drawer } from './components/Drawer'

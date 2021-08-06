@@ -5,11 +5,15 @@
  * @LastEditors: zhoulong.yang
  * @LastEditTime: 2021-06-10 16:35:14
  */
-import { Button, Toast } from '@xrkmm/ui'
+import { Button, Toast, Drawer } from '@xrkmm/ui'
+import { useState } from 'react'
 import '../../dist/xrkmm.mini.css'
 import '../../node_modules/@tarojs/components-react/dist/index.css'
+import './App.scss'
 
 function App() {
+  const [show, setShow] = useState(false)
+
   const onClick = () => alert(1)
 
   return (
@@ -40,6 +44,10 @@ function App() {
         <Button onClick={onClick}>向日葵妈妈UI</Button>
         <Button onClick={onClick} disabled >向日葵妈妈UI</Button>
         <Button onClick={() => Toast.show({ title: '我是toast', icon: 'success'})}>点击出现taost</Button>
+        <Button onClick={() => setShow(true)}>抽屉</Button>
+        <Drawer visible={show} onClose={() => setShow(false)}>
+          <div className="si-button"></div>
+        </Drawer>
       </div>
 
     </div>

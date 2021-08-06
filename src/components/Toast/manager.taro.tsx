@@ -7,8 +7,7 @@ class ToastManager {
 
     if (!_options.icon) _options.icon = 'none'
     if (!_options.duration) _options.duration = DEFAULT_DURATION
-
-    Taro.hideToast(_options)
+    Taro.showToast(_options)
   }
 
   hide(): void {

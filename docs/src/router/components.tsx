@@ -11,6 +11,11 @@ const Routes: RoutesProps[] = [
     title: require('../views/Button/config').default.title,
   },
   {
+    path: '/Drawer',
+    component: require('../views/Drawer').default,
+    title: require('../views/Drawer/config').default.title,
+  },
+  {
     path: '/Toast',
     component: require('../views/Toast').default,
     title: require('../views/Toast/config').default.title,

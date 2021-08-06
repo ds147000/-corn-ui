@@ -1,0 +1,151 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Drawer change 1`] = `
+<div>
+  <div
+    class=""
+  >
+    显示
+  </div>
+</div>
+`;
+
+exports[`Drawer hide 1`] = `<div />`;
+
+exports[`Drawer show 1`] = `
+<div>
+  <div
+    class="xrk-drawer-mask show"
+    data-testid="mask"
+  />
+  <div
+    class="xrk-drawer-body show xrk-drawer-bottom"
+    data-testid="body"
+  >
+    <div
+      class=""
+    >
+      <span
+        class="taro-text"
+      >
+        Drawer
+      </span>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Drawer show of Bottom 1`] = `
+<div>
+  <div
+    class="xrk-drawer-mask show"
+    data-testid="mask"
+  />
+  <div
+    class="xrk-drawer-body show xrk-drawer-bottom"
+    data-testid="body"
+  >
+    <div
+      class=""
+    >
+      <span
+        class="taro-text"
+      >
+        Drawer
+      </span>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Drawer show of Center 1`] = `
+<div>
+  <div
+    class="xrk-drawer-mask show"
+    data-testid="mask"
+  />
+  <div
+    class="xrk-drawer-body show xrk-drawer-center"
+    data-testid="body"
+  >
+    <div
+      class=""
+    >
+      <span
+        class="taro-text"
+      >
+        Drawer
+      </span>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Drawer show of Left 1`] = `
+<div>
+  <div
+    class="xrk-drawer-mask show"
+    data-testid="mask"
+  />
+  <div
+    class="xrk-drawer-body show xrk-drawer-left"
+    data-testid="body"
+  >
+    <div
+      class=""
+    >
+      <span
+        class="taro-text"
+      >
+        Drawer
+      </span>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Drawer show of Right 1`] = `
+<div>
+  <div
+    class="xrk-drawer-mask show"
+    data-testid="mask"
+  />
+  <div
+    class="xrk-drawer-body show xrk-drawer-right"
+    data-testid="body"
+  >
+    <div
+      class=""
+    >
+      <span
+        class="taro-text"
+      >
+        Drawer
+      </span>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Drawer show of Top 1`] = `
+<div>
+  <div
+    class="xrk-drawer-mask show"
+    data-testid="mask"
+  />
+  <div
+    class="xrk-drawer-body show xrk-drawer-top"
+    data-testid="body"
+  >
+    <div
+      class=""
+    >
+      <span
+        class="taro-text"
+      >
+        Drawer
+      </span>
+    </div>
+  </div>
+</div>
+`;

@@ -45,8 +45,13 @@ $icon2: #99a3ad;
 // 四级基础控件icon色值，最弱层级
 $icon3: #ccd1d6;
 
-// toast层级
-$portalIndex: 900;
-
 // toast 颜色
 $toastBg: rgba(0 , 0 , 0 , 0.7);
+
+// 遮罩层颜色
+$mask: rgba(0 , 0 , 0 , 0.7);
+
+// 层级
+$portalIndex: 900;
+$maskIndex: 900;
+$SlidInIndex: 901;

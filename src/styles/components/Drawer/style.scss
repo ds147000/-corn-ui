@@ -1,0 +1,227 @@
+.xrk-drawer {
+  &-mask {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: $maskIndex;
+    background-color: $mask;
+    opacity: 0;
+
+    &.show {
+      opacity: 1;
+      animation: XrkDrawerMaskShow 0.25s linear;
+    }
+
+    &.hide {
+      animation: XrkDrawerMaskHide 0.2s linear;
+    }
+  }
+
+  &-body {
+    position: fixed;
+    z-index: $SlidInIndex;
+  }
+
+  &-bottom {
+    width: 100%;
+    bottom: 0;
+    left: 0;
+    transform: translate3d(0 , 100% , 1px);
+
+    &.show {
+      transform: translate3d(0 , 0% , 1px);
+      animation: XrkDrawerBottomShow 0.35s;
+    }
+
+    &.hide {
+      animation: XrkDrawerBottomHide 0.25s;
+    }
+  }
+
+  &-top {
+    width: 100%;
+    top: 0;
+    left: 0;
+
+    &.show {
+      transform: translate3d(0 , 0% , 1px);
+      animation: XrkDrawerTopShow 0.35s;
+    }
+
+    &.hide {
+      transform: translate3d(0 , 0% , 1px);
+      animation: XrkDrawerTopHide 0.25s;
+    }
+  }
+
+  &-left {
+    height: 100%;
+    top: 0;
+    left: 0;
+    transform: translate3d(0 , 0 , 1px);
+
+    &.show {
+      transform: translate3d(0 , 0 , 1px);
+      animation: XrkDrawerLeftShow 0.35s;
+    }
+
+    &.hide {
+      animation: XrkDrawerLeftHide 0.25s;
+    }
+  }
+
+  &-right {
+    height: 100%;
+    top: 0;
+    right: 0;
+    transform: translate3d(100% , 0 , 1px);
+
+    &.show {
+      transform: translate3d(0 , 0 , 1px);
+      animation: XrkDrawerRightShow 0.35s;
+    }
+
+    &.hide {
+      animation: XrkDrawerRightHide 0.25s;
+    }
+  }
+
+  &-center {
+    top: 50%;
+    left: 50%;
+    transform: scale(1 , 1) translate(-50% , -50%) translateZ(1px);
+
+    &.show {
+      transform: scale(1 , 1) translate(-50% , -50%) translateZ(1px);
+      animation: XrkDrawerCenterShow 0.2s;
+    }
+
+    &.hide {
+      animation: XrkDrawerCenterHide 0.25s;
+    }
+  }
+}
+
+@keyframes XrkDrawerMaskShow {
+  0% {
+    opacity: 0;
+    transform: translateZ(0);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateZ(0);
+  }
+}
+
+@keyframes XrkDrawerMaskHide {
+  0% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes XrkDrawerBottomShow {
+  0% {
+    transform: translate3d(0 , 100% , 1px);
+  }
+
+  100% {
+    transform: translate3d(0 , 0% , 1px);
+  }
+}
+
+@keyframes XrkDrawerBottomHide {
+  0% {
+    transform: translate3d(0 , 0% , 1px);
+  }
+
+  100% {
+    transform: translate3d(0 , 100% , 1px);
+  }
+}
+
+@keyframes XrkDrawerTopShow {
+  0% {
+    transform: translate3d(0 , -100% , 1px);
+  }
+
+  100% {
+    transform: translate3d(0 , 0% , 1px);
+  }
+}
+
+@keyframes XrkDrawerTopHide {
+  0% {
+    transform: translate3d(0 , 0% , 1px);
+  }
+
+  100% {
+    transform: translate3d(0 , -100% , 1px);
+  }
+}
+
+@keyframes XrkDrawerLeftShow {
+  0% {
+    transform: translate3d(-100% , 0 , 1px);
+  }
+
+  100% {
+    transform: translate3d(0 , 0 , 1px);
+  }
+}
+
+@keyframes XrkDrawerLeftHide {
+  0% {
+    transform: translate3d(0 , 0 , 1px);
+  }
+
+  100% {
+    transform: translate3d(-100% , 0 , 1px);
+  }
+}
+
+@keyframes XrkDrawerRightShow {
+  0% {
+    transform: translate3d(100% , 0 , 1px);
+  }
+
+  100% {
+    transform: translate3d(0 , 0 , 1px);
+  }
+}
+
+@keyframes XrkDrawerRightHide {
+  0% {
+    transform: translate3d(0 , 0 , 1px);
+  }
+
+  100% {
+    transform: translate3d(100% , 0 , 1px);
+  }
+}
+
+@keyframes XrkDrawerCenterShow {
+  0% {
+    transform: translate(-50% , -50%) translateZ(1px)  scale(1.7 , 1.7);
+  }
+
+  100% {
+    transform: translate(-50% , -50%) translateZ(1px) scale(1 , 1);
+  }
+}
+
+@keyframes XrkDrawerCenterHide {
+  0% {
+    transform: translate(-50% , -50%) translateZ(1px)  scale(1 , 1);
+  }
+
+  100% {
+    transform: translate(-50% , -50%) translateZ(1px) scale(0.3 , 0.3);
+  }
+}

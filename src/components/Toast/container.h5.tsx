@@ -5,19 +5,25 @@ import Sub from '../../utils/sub'
 import { ToastOption } from './interface'
 import { Toast } from './toast.h5'
 
-export const Container: React.FC = () => {
+interface ContainerProps {
+  onShow?(): void
+  onClose?(): void
+}
+
+export const Container: React.FC<ContainerProps> = ({ onClose, onShow }) => {
   const [ toastList, setToastList ] = useState<ToastOption[]>([])
   // eslint-disable-next-line no-magic-numbers
   const hide = useRef<number>(0)
 
   const isMask = toastList.find((item) => item.mask)
 
-  const onClose = useCallback((): void => {
+  const onItemClose = useCallback((): void => {
     hide.current += 1
 
     if (hide.current === toastList.length) {
       hide.current = 0
       setToastList([])
+      onClose?.()
     }
   }, [ toastList.length, hide ])
 
@@ -25,6 +31,7 @@ export const Container: React.FC = () => {
     const remove = Sub.add(TOAST_ADD, (toast: ToastOption) => {
       setToastList((s) => [ ...s, toast ])
     })
+    onShow?.()
 
     return remove
   }, [])
@@ -32,7 +39,7 @@ export const Container: React.FC = () => {
   return (
     <View className={`xrk-toast ${isMask && 'xrk-toast-actions'}`}>
       {toastList.map((item, key) => (
-        <Toast {...item} onClose={onClose} key={String(key)} />
+        <Toast {...item} onClose={onItemClose} key={String(key)} />
       ))}
     </View>
   )

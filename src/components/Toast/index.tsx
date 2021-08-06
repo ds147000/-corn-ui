@@ -6,9 +6,9 @@ import Toast from './manager.taro'
 
 export default Toast
 // #else
-import Toast from './mannager.h5'
+import ToastH5 from './mannager.h5'
 
-export default Toast
+export default ToastH5
 // #endif
 
 

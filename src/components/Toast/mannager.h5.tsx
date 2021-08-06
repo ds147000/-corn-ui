@@ -23,11 +23,11 @@ class ToastManager {
   private async _init(): Promise<void> {
     if (ID.value !== -1) return Promise.resolve()
 
-    const id = await Protal.add(<Container key="toast" />)
-
-    // eslint-disable-next-line require-atomic-updates
-    ID.value = id
-    return new Promise((res) => setTimeout(res, 60))
+    // 因为是桢调用，所有需要延迟
+    return new Promise((res) => {
+      Protal.add(<Container key="toast" onShow={res} onClose={(): void => this.hide()} />)
+        .then((id) => ID.value = id)
+    })
   }
 
   async show(option: ToastOption | string): Promise<void> {

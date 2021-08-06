@@ -7,10 +7,14 @@
  */
 import { Component } from 'react'
 import { View } from '@tarojs/components'
-import { Button } from '@xrkmm/ui'
+import { Button, Toast, Drawer } from '@xrkmm/ui'
 import './index.scss'
 
 export default class Index extends Component {
+
+  state = {
+    show: true
+  }
 
   componentWillMount () { }
 
@@ -23,7 +27,11 @@ export default class Index extends Component {
   componentDidHide () { }
 
   onClick() {
-    console.log(1)
+    Toast.show('taost')
+  }
+
+  onClose = () => {
+    this.setState({ show: false })
   }
 
   render () {
@@ -53,6 +61,9 @@ export default class Index extends Component {
         <Button ghost type="warn" >向日葵妈妈UI</Button>
         <Button onClick={this.onClick}>向日葵妈妈UI</Button>
         <Button onClick={this.onClick} disabled >向日葵妈妈UI</Button>
+        <Drawer visible={this.state.show} onClose={this.onClose}>
+          <View className="si-button"></View>
+        </Drawer>
       </View>
     )
   }
