@@ -30,11 +30,18 @@ const externalPackages = [
 export default {
   input: resolveApp('src/index.ts'),
   external: externalPackages,
-  output: {
-    file: resolveApp(Package['main:h5']),
-    format: 'cjs',
-    sourcemap: true
-  },
+  output: [
+    {
+      file: resolveApp(Package['main:h5']),
+      format: 'cjs',
+      sourcemap: true
+    },
+    {
+      file: resolveApp(Package['module:h5']),
+      format: 'esm',
+      sourcemap: true
+    }
+  ],
   plugins: [
     RollupJscc({
       values: { _APP: 'h5' }

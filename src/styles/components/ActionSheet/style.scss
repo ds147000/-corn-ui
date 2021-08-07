@@ -1,0 +1,95 @@
+$XrkPaddingTop: 40px;
+$XrkPaddingLeft: 30px;
+
+.xrk-actionsheet {
+  background-color: $bg;
+  border-radius: $radius $radius 0 0;
+  overflow: hidden;
+  width: 100%;
+  max-height: 64vh;
+  min-height: 30px;
+
+  &-header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: $XrkPaddingTop $XrkPaddingLeft;
+    background-color: $white;
+
+    &-center {
+      flex: 1;
+
+      .title {
+        font-size: 32px;
+        font-weight: bolder;
+        color: $text1;
+        line-height: 32px;
+      }
+
+      .sub-title {
+        font-size: 22px;
+        font-weight: 400;
+        color: $text3;
+        line-height: 22px;
+        padding-top: 20px;
+      }
+    }
+  }
+
+  &-left {
+    text-align: left;
+  }
+
+  &-center {
+    text-align: center;
+  }
+
+  &-right {
+    text-align: right;
+  }
+
+  &-close {
+    width: 32px;
+    height: 32px;
+    background: #f6f7fb;
+    border-radius: 50%;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  &-floor {
+    margin-top: 10px;
+    background-color: $white;
+  }
+
+  &-item {
+    width: 100%;
+    background: $white;
+    margin-bottom: 1px;
+    padding: $XrkPaddingLeft;
+    display: flex;
+    align-items: center;
+    min-height: 92px;
+    box-sizing: border-box;
+    border-bottom: 1px solid $bg;
+    transition: opacity 0.15s;
+
+    &:active {
+      opacity: 0.7;
+    }
+
+    &:last-child {
+      border-bottom: 1px solid $white;
+    }
+
+    .xrk-as-text {
+      font-size: 32px;
+      font-weight: 400;
+      color: $text1;
+      line-height: 32px;
+      flex: 1;
+    }
+  }
+}

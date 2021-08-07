@@ -1,0 +1,57 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ActionSheetItem basis 1`] = `
+<div>
+  <div
+    class="xrk-actionsheet-item"
+  >
+    <div
+      class="xrk-as-text xrk-actionsheet-undefined"
+    />
+  </div>
+</div>
+`;
+
+exports[`ActionSheetItem click 1`] = `
+<div>
+  <div
+    class="xrk-actionsheet-item"
+  >
+    <div
+      class="xrk-as-text xrk-actionsheet-undefined"
+    >
+      123
+    </div>
+    455
+  </div>
+</div>
+`;
+
+exports[`ActionSheetItem suffix 1`] = `
+<div>
+  <div
+    class="xrk-actionsheet-item"
+  >
+    <div
+      class="xrk-as-text xrk-actionsheet-undefined"
+    >
+      123
+    </div>
+    455
+  </div>
+</div>
+`;
+
+exports[`ActionSheetItem text 1`] = `
+<div>
+  <div
+    class="xrk-actionsheet-item"
+  >
+    <div
+      class="xrk-as-text xrk-actionsheet-undefined"
+    >
+      123
+    </div>
+  </div>
+</div>
+`;

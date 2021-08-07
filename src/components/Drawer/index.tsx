@@ -15,6 +15,8 @@ export interface DrawerProps {
   maskClosable?: boolean
   /** 关闭回调 */
   onClose?(): void
+  /** 完全隐藏回调 */
+  onHide?(): void
 }
 
 const Drawer: React.FC<DrawerProps> = ({
@@ -23,6 +25,7 @@ const Drawer: React.FC<DrawerProps> = ({
   mask = true,
   maskClosable = true,
   onClose,
+  onHide,
   children
 }) => {
   const [ status, setStatus ] = useState<AnimateStatus>('over')
@@ -52,7 +55,10 @@ const Drawer: React.FC<DrawerProps> = ({
 
   }, [ visible, status ])
 
-  if (visible === false && status === 'over') return null
+  if (visible === false && status === 'over') {
+    onHide?.()
+    return null
+  }
 
   return (
     <>

@@ -1,0 +1,342 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ActionSheet showButton 1`] = `
+<div>
+  <div
+    class="xrk-drawer-mask show"
+    data-testid="mask"
+  />
+  <div
+    class="xrk-drawer-body show xrk-drawer-bottom"
+    data-testid="body"
+  >
+    <div
+      class="xrk-actionsheet"
+    >
+      <div
+        class="xrk-actionsheet-header"
+      >
+        <div
+          class="xrk-actionsheet-header-center xrk-actionsheet-left"
+        >
+          <div
+            class="title"
+          >
+            我是大标题
+          </div>
+          <div
+            class="sub-title"
+          >
+            我是副标题
+          </div>
+        </div>
+      </div>
+      <div
+        class="xrk-actionsheet-floor"
+      >
+        <div
+          class="xrk-actionsheet-item"
+        >
+          <div
+            class="xrk-as-text xrk-actionsheet-left"
+          >
+            关闭
+          </div>
+        </div>
+        <div
+          class="xrk-actionsheet-item"
+        >
+          <div
+            class="xrk-as-text xrk-actionsheet-left"
+          >
+            确定
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`ActionSheet showHead: false 1`] = `
+<div>
+  <div
+    class="xrk-drawer-mask show"
+    data-testid="mask"
+  />
+  <div
+    class="xrk-drawer-body show xrk-drawer-bottom"
+    data-testid="body"
+  >
+    <div
+      class="xrk-actionsheet"
+    />
+  </div>
+</div>
+`;
+
+exports[`ActionSheet subTitle 1`] = `
+<div>
+  <div
+    class="xrk-drawer-mask show"
+    data-testid="mask"
+  />
+  <div
+    class="xrk-drawer-body show xrk-drawer-bottom"
+    data-testid="body"
+  >
+    <div
+      class="xrk-actionsheet"
+    >
+      <div
+        class="xrk-actionsheet-header"
+      >
+        <div
+          class="xrk-actionsheet-header-center xrk-actionsheet-left"
+        >
+          <div
+            class="title"
+          >
+            大标题居中
+          </div>
+          <div
+            class="sub-title"
+          >
+            辅助文字居中
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`ActionSheet subTitle of hide 1`] = `<div />`;
+
+exports[`ActionSheet title 1`] = `
+<div>
+  <div
+    class="xrk-drawer-mask show"
+    data-testid="mask"
+  />
+  <div
+    class="xrk-drawer-body show xrk-drawer-bottom"
+    data-testid="body"
+  >
+    <div
+      class="xrk-actionsheet"
+    >
+      <div
+        class="xrk-actionsheet-header"
+      >
+        <div
+          class="xrk-actionsheet-header-center xrk-actionsheet-left"
+        >
+          <div
+            class="title"
+          >
+            大标题居中
+          </div>
+          <div
+            class="sub-title"
+          />
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`ActionSheet titleAlign: center 1`] = `
+<div>
+  <div
+    class="xrk-drawer-mask show"
+    data-testid="mask"
+  />
+  <div
+    class="xrk-drawer-body show xrk-drawer-bottom"
+    data-testid="body"
+  >
+    <div
+      class="xrk-actionsheet"
+    >
+      <div
+        class="xrk-actionsheet-header"
+      >
+        <div
+          class="xrk-actionsheet-header-center xrk-actionsheet-center"
+        >
+          <div
+            class="title"
+          >
+            大标题居中
+          </div>
+          <div
+            class="sub-title"
+          />
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`ActionSheet titleAlign: left 1`] = `
+<div>
+  <div
+    class="xrk-drawer-mask show"
+    data-testid="mask"
+  />
+  <div
+    class="xrk-drawer-body show xrk-drawer-bottom"
+    data-testid="body"
+  >
+    <div
+      class="xrk-actionsheet"
+    >
+      <div
+        class="xrk-actionsheet-header"
+      >
+        <div
+          class="xrk-actionsheet-header-center xrk-actionsheet-left"
+        >
+          <div
+            class="title"
+          >
+            大标题居左
+          </div>
+          <div
+            class="sub-title"
+          />
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`ActionSheet titleAlign: right 1`] = `
+<div>
+  <div
+    class="xrk-drawer-mask show"
+    data-testid="mask"
+  />
+  <div
+    class="xrk-drawer-body show xrk-drawer-bottom"
+    data-testid="body"
+  >
+    <div
+      class="xrk-actionsheet"
+    >
+      <div
+        class="xrk-actionsheet-header"
+      >
+        <div
+          class="xrk-actionsheet-header-center xrk-actionsheet-right"
+        >
+          <div
+            class="title"
+          >
+            大标题居右
+          </div>
+          <div
+            class="sub-title"
+          />
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`ActionSheet 显示 1`] = `
+<div>
+  <div
+    class="xrk-drawer-mask show"
+    data-testid="mask"
+  />
+  <div
+    class="xrk-drawer-body show xrk-drawer-bottom"
+    data-testid="body"
+  >
+    <div
+      class="xrk-actionsheet"
+    >
+      <div
+        class="xrk-actionsheet-header"
+      >
+        <div
+          class="xrk-actionsheet-header-center xrk-actionsheet-left"
+        >
+          <div
+            class="title"
+          />
+          <div
+            class="sub-title"
+          />
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`ActionSheet 自定义文字 1`] = `
+<div>
+  <div
+    class="xrk-drawer-mask show"
+    data-testid="mask"
+  />
+  <div
+    class="xrk-drawer-body show xrk-drawer-bottom"
+    data-testid="body"
+  >
+    <div
+      class="xrk-actionsheet"
+    >
+      <div
+        class="xrk-actionsheet-header"
+      >
+        <div
+          class="xrk-actionsheet-header-center xrk-actionsheet-left"
+        >
+          <div
+            class="title"
+          >
+            我是大标题
+          </div>
+          <div
+            class="sub-title"
+          >
+            我是副标题
+          </div>
+        </div>
+      </div>
+      <div
+        class="xrk-actionsheet-floor"
+      >
+        <div
+          class="xrk-actionsheet-item"
+        >
+          <div
+            class="xrk-as-text xrk-actionsheet-left"
+          >
+            cancel
+          </div>
+        </div>
+        <div
+          class="xrk-actionsheet-item"
+        >
+          <div
+            class="xrk-as-text xrk-actionsheet-left"
+          >
+            ok
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`ActionSheet 隐藏 1`] = `<div />`;

@@ -1,7 +1,6 @@
 /* eslint-disable import/export */
-// #if _APP === 'weapp'
-export { default as showActionSheet } from './api.taro'
 
-// #else
-export { default as showActionSheet } from './api.h5'
-// #endif
+import ActionSheet  from './actionSheet'
+
+export { ActionSheetItem } from './item'
+export default ActionSheet

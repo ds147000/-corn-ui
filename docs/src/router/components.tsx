@@ -6,6 +6,11 @@ interface RoutesProps extends RouteProps {
 
 const Routes: RoutesProps[] = [
   {
+    path: '/ActionSheet',
+    component: require('../views/ActionSheet').default,
+    title: require('../views/ActionSheet/config').default.title,
+  },
+  {
     path: '/Button',
     component: require('../views/Button').default,
     title: require('../views/Button/config').default.title,

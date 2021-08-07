@@ -165,13 +165,15 @@ describe('Drawer', () => {
   })
 
   test('change', async () => {
+    const onHide = jest.fn()
+
     const App: React.FC = () => {
       const [ show, setShow ] = useState(false)
 
       return (
         <>
           <View onClick={(): void => setShow(true)}>显示</View>
-          <Drawer visible={show} onClose={(): void => setShow(false)} >
+          <Drawer visible={show} onClose={(): void => setShow(false)} onHide={onHide} >
             <View>抽屉</View>
           </Drawer>
         </>
@@ -197,6 +199,8 @@ describe('Drawer', () => {
     await new Promise((res) => setTimeout(res, 1000))
 
     await waitFor(() => expect(screen.container).toMatchSnapshot())
+
+    await waitFor(() => expect(onHide).toHaveBeenCalledTimes(2))
   })
 
   test('onAnimatedDnd', () => {

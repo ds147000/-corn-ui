@@ -5,14 +5,21 @@
  * @LastEditors: zhoulong.yang
  * @LastEditTime: 2021-06-10 16:35:14
  */
-import { Button, Toast, Drawer } from '@xrkmm/ui'
+import { Button, Toast, Drawer, ActionSheet, showActionSheet } from '@xrkmm/ui'
 import { useState } from 'react'
 import '../../dist/xrkmm.mini.css'
 import '../../node_modules/@tarojs/components-react/dist/index.css'
 import './App.scss'
 
+const asList = [
+  '广州',
+  '深圳'
+]
+
 function App() {
   const [show, setShow] = useState(false)
+  const [ aShow, setAshow ] = useState(false)
+  const [ cShow, setCshow ] = useState(false)
 
   const onClick = () => alert(1)
 
@@ -45,11 +52,35 @@ function App() {
         <Button onClick={onClick} disabled >向日葵妈妈UI</Button>
         <Button onClick={() => Toast.show({ title: '我是toast', icon: 'success'})}>点击出现taost</Button>
         <Button onClick={() => setShow(true)}>抽屉</Button>
+        <Button onClick={() => setAshow(true)}>ActionSheet</Button>
+        <Button onClick={() => setCshow(true)}>自定义ActionSheet</Button>
+        <Button onClick={() => {
+          showActionSheet({ list: asList })
+            .then(console.log)
+            .catch(console.error)
+        }}>API 唤起</Button>
+
         <Drawer visible={show} onClose={() => setShow(false)}>
           <div className="si-button"></div>
         </Drawer>
       </div>
+      <ActionSheet
+        visible={aShow}
+        title="我是大标题"
+        subTitle="我是副标题"
+        onClose={() => setAshow(false)}
+        showCancel={true}
+        showOk={true}
+        titleAlign="right"
+      />
 
+      <ActionSheet
+        visible={cShow}
+        title="我是大标题"
+        onClose={() => setCshow(false)}
+      >
+        <Button onClick={() => setCshow(false)}>我是按钮</Button>
+      </ActionSheet>
     </div>
   )
 }

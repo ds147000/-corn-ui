@@ -69,12 +69,10 @@ describe('ActionSheet', () => {
 
   test('closable', async () => {
     const onClose = jest.fn()
-    const screen = render(<ActionSheet visible title="大标题居右" onClose={onClose} />)
-    const closeButton = screen.container.querySelector('xrk-actionsheet-close') as HTMLDivElement
+    const screen = render(<ActionSheet visible closable title="大标题居右" onClose={onClose} />)
     screen.getByText('大标题居右')
-    fireEvent.click(closeButton)
+    fireEvent.click(screen.getByTestId('close'))
     await waitFor(() => expect(onClose).toHaveBeenCalledTimes(1))
-    await waitFor(() => expect(screen.queryByText('大标题居右')).toBe(null))
   })
 
   test('closable: false', async () => {
@@ -84,23 +82,34 @@ describe('ActionSheet', () => {
     expect(closeButton).toBe(null)
   })
 
-  test('maskClosable', async () => {
-    const onClose = jest.fn()
-    const screen = render(<ActionSheet visible maskClosable title="大标题居右" onClose={onClose} />)
-    const mask = screen.container.querySelector('xrk-actionsheet-mask') as HTMLDivElement
-    screen.getByText('大标题居右')
-    fireEvent.click(mask)
-    await waitFor(() => expect(onClose).toHaveBeenCalledTimes(1))
-    await waitFor(() => expect(screen.queryByText('大标题居右')).toBe(null))
+  test('showButton', async () => {
+    const screen = render(
+      <ActionSheet
+        visible
+        title="我是大标题"
+        subTitle="我是副标题"
+        showCancel
+        showOk
+      />
+    )
+    await waitFor(() => expect(screen.container).toMatchSnapshot())
   })
 
-  test('maskClosable: false', async () => {
-    const onClose = jest.fn()
-    const screen = render(<ActionSheet visible title="大标题居右" onClose={onClose} />)
-    const mask = screen.container.querySelector('xrk-actionsheet-mask') as HTMLDivElement
-    screen.getByText('大标题居右')
-    fireEvent.click(mask)
-    await waitFor(() => expect(onClose).toHaveBeenCalledTimes(0))
-    screen.getByText('大标题居右')
+  test('自定义文字', async () => {
+    const screen = render(
+      <ActionSheet
+        visible
+        title="我是大标题"
+        subTitle="我是副标题"
+        showCancel
+        showOk
+        cancelText="cancel"
+        okText="ok"
+      />
+    )
+
+    screen.getByText('cancel')
+    screen.getByText('ok')
+    await waitFor(() => expect(screen.container).toMatchSnapshot())
   })
 })
