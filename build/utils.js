@@ -22,12 +22,24 @@ const MD = new Markdown({
   }
 })
 
+exports.checkFiles = (path) => {
+  try {
+    const file = fs.statSync(path)
+    return file
+  } catch (error) {
+    return {
+      isFile: () => false,
+      isDirectory: () => false
+    }
+  }
+}
+
 
 exports.resolveApp = (path) => resolve(__dirname, '..', path)
 
 exports.writeFile = (path, data) => {
   try {
-    if (fs.statSync(path).isFile()) fs.rmSync(path)
+    if (this.checkFiles(path).isFile()) fs.rmSync(path)
   } catch (error) {
 
   }
@@ -37,7 +49,7 @@ exports.writeFile = (path, data) => {
 
 exports.removeDir = async (path) => {
   try {
-    const dir = fs.statSync(path)
+    const dir = this.checkFiles(path)
     if (dir.isDirectory()) fs.rmdirSync(path, { recursive: true })
 
   } catch (error) {
@@ -84,7 +96,7 @@ exports.getMarkDownTemplate = async (paths = [], dirPath) => {
 
     const compDis = dirPath + '/demo'
     try {
-      if (!fs.statSync(compDis).isDirectory()) this.makeDir(compDis)
+      if (!this.checkFiles(compDis).isDirectory()) this.makeDir(compDis)
     } catch (error) {
       this.makeDir(compDis)
     }

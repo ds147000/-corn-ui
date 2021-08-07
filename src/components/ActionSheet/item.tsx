@@ -1,6 +1,12 @@
 import React from 'react'
 import { View } from '@tarojs/components'
-import { ActionSheetItemProps } from './interface'
+
+export interface ActionSheetItemProps {
+  align?: 'left' | 'center' | 'right'
+  text?: string
+  suffix?: React.ReactNode | string
+  onClick?(): void
+}
 
 export const ActionSheetItem: React.FC<ActionSheetItemProps> = ({ text, align, onClick, suffix }) => {
   return (

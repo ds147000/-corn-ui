@@ -6,7 +6,6 @@
     "jsxFactory": "React.createElement",
     "jsxFragmentFactory": "React.Fragment",
     "moduleResolution": "node",
-    "noImplicitAny": true,
     "noUnusedLocals": true,
     "noUnusedParameters": true,
     "preserveConstEnums": true,
@@ -22,6 +21,8 @@
     "typeRoots": [
       "node_modules/@types"
     ],
+    "allowJs": true,
+    "noImplicitAny": false
   },
   "onlyCompileBundledFiles": true,
   "compileOnSave": false,
@@ -33,6 +34,7 @@
     "dist-h5/*",
   ],
   "include": [
-    "src/**/*"
+    "src/**/*",
+    "global.d.ts"
   ]
 }

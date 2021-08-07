@@ -6,7 +6,7 @@ export default showActionSheet
 
 // #else
 // eslint-disable-next-line import/first
-import showActionSheetH5 from './api.h5'
+import showActionSheet from './api.h5'
 
-export default showActionSheetH5
+export default showActionSheet
 // #endif

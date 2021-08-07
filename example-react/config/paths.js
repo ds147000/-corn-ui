@@ -69,7 +69,7 @@ module.exports = {
   appNodeModules: resolveApp('node_modules'),
   swSrc: resolveModule(resolveApp, 'src/service-worker'),
   publicUrlOrPath,
-  ui: resolveApp('../dist-h5/index.esm.js')
+  ui: resolveApp('../package-h5/index.esm.js')
 };
 
 

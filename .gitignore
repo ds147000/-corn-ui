@@ -2,8 +2,7 @@ docs/src/views/*
 node_modules/
 package-lock.json
 yarn-error.log
-dist/
-dist-h5/
-dist-css/
+package-h5/
+package-taro/
 coverage/
 

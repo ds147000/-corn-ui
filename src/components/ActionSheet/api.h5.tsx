@@ -1,8 +1,20 @@
 import React, { useState } from 'react'
-import { ShowActionSheet, ShowActionSheetOption } from './interface'
 import ActionSheet from './actionSheet'
 import { ActionSheetItem } from './item'
 import Protal from '../Portal'
+
+export interface SuccessCallbackResult {
+  tapIndex: number
+  errMsg: string
+}
+
+export interface ShowActionSheetOption {
+  /** 选项数组，Taro端数组长度最大为 6，H5端不限制 */
+  list: string[]
+}
+
+export type ShowActionSheet = (option: ShowActionSheetOption) => Promise<SuccessCallbackResult>
+
 
 interface DomProps {
   onClose(): void

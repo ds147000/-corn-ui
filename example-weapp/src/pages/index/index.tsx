@@ -7,9 +7,13 @@
  */
 import { Component } from 'react'
 import { View } from '@tarojs/components'
-import { Button, Toast, Drawer } from '@xrkmm/ui'
+import { Button, Toast, Drawer, showActionSheet } from '@xrkmm/ui'
 import './index.scss'
 
+const asList = [
+  '广州',
+  '深圳'
+]
 export default class Index extends Component {
 
   state = {
@@ -64,6 +68,13 @@ export default class Index extends Component {
         <Drawer visible={this.state.show} onClose={this.onClose}>
           <View className="si-button"></View>
         </Drawer>
+        <Button onClick={() => {
+          showActionSheet({ list: asList })
+            .then(console.log)
+            .catch(console.error)
+        }}>
+          API 唤起
+        </Button>
       </View>
     )
   }

@@ -1,5 +1,12 @@
 import Taro from '@tarojs/taro'
-import { ShowActionSheet } from './interface'
+
+export interface ShowActionSheetOption {
+  /** 选项数组，Taro端数组长度最大为 6，H5端不限制 */
+  list: string[]
+}
+
+export type ShowActionSheet = (option: ShowActionSheetOption) => Promise<Taro.showActionSheet.SuccessCallbackResult>
+
 
 const showActionSheet: ShowActionSheet = async (option) => {
   const _option: Taro.showActionSheet.Option = {

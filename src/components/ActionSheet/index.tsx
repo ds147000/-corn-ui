@@ -2,5 +2,5 @@
 
 import ActionSheet  from './actionSheet'
 
-export { ActionSheetItem } from './item'
+export { ActionSheetItem, ActionSheetItemProps } from './item'
 export default ActionSheet

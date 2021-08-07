@@ -36,59 +36,41 @@
 | --- | --- | --- | --- | --- |
 | IE11, Edge | last 2 versions | last 2 versions | last 2 versions | last 2 versions |
 
-## 📦 安装
-
-```bash
-npm install @xrkmm/ui
-```
-
-```bash
-yarn add @xrkmm/ui
-```
 
 ## 🔨 Taro使用示例
 
+```bash
+yarn add @xrkmm/ui-taro
+```
+
 ```jsx
-import { Card } from '@xrkmm/ui'
+import { Button } from '@xrkmm/ui-taro'
+import '@xrkmm/ui-taro/dist/styles/index.scss';
+// 或者按需引入样式
+import '@xrkmm/ui-taro/dist/styles/components/Button/style.scss';
+
 
 const App = () => (
-  <Card />
+  <Button />
 )
 ```
 
-引入scss样式：
-
-```jsx
-import '@xrkmm/ui/dist/styles/index.scss';
-```
-
-按需引入scss样式：
-
-```jsx
-import '@xrkmm/ui/dist/styles/components/card.scss';
-```
+<br />
 
 ## 🔨 单纯React项目中使用示例
 
 ```jsx
-import { Card } from '@xrkmm/ui/dist-h5'
+import { Button } from '@xrkmm/ui-h5'
+import '@xrkmm/ui-h5/dist/styles/index.scss';
+// 或者按需引入样式
+import '@xrkmm/ui-h5/dist/styles/components/Button/style.scss';
+
 
 const App = () => (
-  <Card />
+  <Button />
 )
 ```
 
-引入scss样式：
-
-```jsx
-import '@xrkmm/ui/dist/styles/index.scss';
-```
-
-或者引入css样式（编译后样式文件）：
-
-```jsx
-import '@xrkmm/ui/dist/xrkmm.mini.css';
-```
 
 ### 🌈 定制主题
 

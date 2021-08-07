@@ -10,11 +10,15 @@ import RollupBabel from '@rollup/plugin-babel'
 import RollupResolve from '@rollup/plugin-node-resolve'
 import RollupCommonjs from '@rollup/plugin-commonjs'
 import RollupTypescript from 'rollup-plugin-typescript2'
-import alias from '@rollup/plugin-alias'
 import RollupJscc from 'rollup-plugin-jscc'
+import RollupPostcss from 'rollup-plugin-postcss'
+import RollupCopy from 'rollup-plugin-copy'
+import { eslint } from 'rollup-plugin-eslint'
 import { DEFAULT_EXTENSIONS } from '@babel/core'
-import ChangeInput from './changInput'
-const { resolveApp } = require('./utils')
+const { resolveApp, removeDir } = require('./utils')
+
+
+if (process.env.NODE_ENV === 'production') removeDir('dist-h5')
 
 // 应被保留在外部的依赖
 const externalPackages = [
@@ -43,13 +47,13 @@ export default {
     }
   ],
   plugins: [
+    eslint({ throwOnError: true }),
+    RollupPostcss({
+      inject: { insertAt: 'top' },
+      extract: true
+    }),
     RollupJscc({
       values: { _APP: 'h5' }
-    }),
-    alias({
-      entries: {
-        '@tarojs/components': resolveApp('./build/mock/components')
-      }
     }),
     RollupResolve({
       customResolveOptions: {
@@ -58,7 +62,6 @@ export default {
     }),
     RollupCommonjs(),
     RollupTypescript({ tsconfig: resolveApp('tsconfig.json') }),
-    ChangeInput(),
     RollupBabel({
       exclude: ['node_modules/**', 'example/**', 'example-react/**'],
       extensions: [ // 扩展文件名
@@ -67,7 +70,32 @@ export default {
         '.tsx'
       ],
       babelHelpers: 'runtime',
-      plugins: ['@babel/plugin-transform-runtime']
+      plugins: [
+        '@babel/plugin-transform-runtime',
+        [
+          'transform-imports', {
+            '@tarojs/components': {
+              transform: "@tarojs/components-react/src/components/${member}",
+              preventFullImport: true
+            }
+          }
+        ]
+      ]
+    }),
+    RollupCopy({
+      targets: [
+        {
+          src: resolveApp('src/styles'),
+          dest: resolveApp('package-h5/dist'),
+          rename: () => 'styles/px',
+          copyOnce: true
+        },
+        {
+          src: resolveApp('src/assets'),
+          dest: resolveApp('package-h5/dist'),
+          copyOnce: true
+        }
+      ]
     })
   ]
 }
