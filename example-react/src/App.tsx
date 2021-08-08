@@ -5,10 +5,10 @@
  * @LastEditors: zhoulong.yang
  * @LastEditTime: 2021-06-10 16:35:14
  */
-import { Button, Toast, Drawer, ActionSheet, showActionSheet } from '@xrkmm/ui'
+import { Button, Toast, Drawer, ActionSheet, showActionSheet } from '@xrkmm/ui-h5'
 import { useState } from 'react'
-import '../../dist/xrkmm.mini.css'
-import '../../node_modules/@tarojs/components-react/dist/index.css'
+import '../../package-h5/dist/index.css'
+import '../../package-h5/dist/styles/index.css'
 import './App.scss'
 
 const asList = [

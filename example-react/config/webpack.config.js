@@ -334,7 +334,7 @@ module.exports = function (webpackEnv) {
           'scheduler/tracing': 'scheduler/tracing-profiling',
         }),
         ...(modules.webpackAliases || {}),
-        '@xrkmm/ui': paths.ui,
+        '@xrkmm/ui-h5': paths.ui,
         'react': paths.reactApp
       },
       plugins: [

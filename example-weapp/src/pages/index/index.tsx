@@ -7,7 +7,7 @@
  */
 import { Component } from 'react'
 import { View } from '@tarojs/components'
-import { Button, Toast, Drawer, showActionSheet } from '@xrkmm/ui'
+import { Button, Toast, Drawer, showActionSheet } from '@xrkmm/ui-taro'
 import './index.scss'
 
 const asList = [

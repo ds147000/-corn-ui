@@ -28,7 +28,7 @@ const config = {
     }
   },
   alias: {
-    '@xrkmm/ui': resolve(__dirname, '../../package-taro'),
+    '@xrkmm/ui-taro': resolve(__dirname, '../../package-taro/dist'),
     'react': resolve(__dirname, '../../node_modules/react')
   },
   framework: 'react',

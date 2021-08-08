@@ -68,7 +68,7 @@ module.exports = {
   appNodeModules: resolveApp('node_modules'),
   swSrc: resolveModule(resolveApp, 'src/service-worker'),
   publicUrlOrPath,
-  ui: resolveApp('../package-h5'),
+  ui: resolveApp('../package-h5/dist'),
   reactApp: resolveApp('../node_modules/react')
 };
 

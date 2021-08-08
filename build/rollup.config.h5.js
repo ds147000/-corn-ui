@@ -18,7 +18,7 @@ import { DEFAULT_EXTENSIONS } from '@babel/core'
 const { resolveApp, removeDir } = require('./utils')
 
 
-if (process.env.NODE_ENV === 'production') removeDir('dist-h5')
+if (process.env.NODE_ENV === 'production') removeDir('package-h5')
 
 // 应被保留在外部的依赖
 const externalPackages = [
@@ -50,7 +50,8 @@ export default {
     eslint({ throwOnError: true }),
     RollupPostcss({
       inject: { insertAt: 'top' },
-      extract: true
+      extract: true,
+      sourceMap: false
     }),
     RollupJscc({
       values: { _APP: 'h5' }
@@ -87,7 +88,6 @@ export default {
         {
           src: resolveApp('src/styles'),
           dest: resolveApp('package-h5/dist'),
-          rename: () => 'styles/px',
           copyOnce: true
         },
         {

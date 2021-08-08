@@ -1,57 +1,38 @@
-### 📦 安装
-因为UI库是基于 `tarojs/components` 的演示开发的，所有也需要安装 `@tarojs/components-react`。但是只是简单引入其css表。不会使用其他组件代码。
-
-```bash
-npm install @xrkmm/ui  @tarojs/components-react
-```
-
-```bash
-yarn add @xrkmm/ui @tarojs/components-react
-```
-
-## 引入固定样式文档
-```tsx
-import '@tarojs/components-react/dist/index.css'
-```
 
 ## 🔨 Taro使用示例
 
-```jsx
-import { Card } from '@xrkmm/ui'
-
-const App = () => (<Card />)
+```bash
+yarn add @xrkmm/ui-taro
 ```
 
-引入scss样式：
-
 ```jsx
-import '@xrkmm/ui/dist/styles/index.scss'
-```
-
-按需引入scss样式：
-
-```jsx
-import '@xrkmm/ui/dist/styles/components/card.scss'
-```
-
-## 🔨 单纯React项目中使用示例
-
-```jsx
-import { Card } from '@xrkmm/ui/dist-h5'
+import { Button } from '@xrkmm/ui-taro'
+import '@xrkmm/ui-taro/dist/styles/index.css'
 
 const App = () => (
-  <Card />
+  <Button />
 )
 ```
 
-引入scss样式：
+<br />
 
-```jsx
-import '@xrkmm/ui/dist/styles/index.scss'
+## 🔨 单纯React项目中使用示例
+
+```bash
+yarn add @xrkmm/ui-h5
 ```
 
-或者引入css样式（编译后样式文件）：
-
 ```jsx
-import '@xrkmm/ui/dist/xrkmm.mini.css'
+import { Button } from '@xrkmm/ui-h5'
+import '@xrkmm/ui-h5/dist/index.css'
+import '@xrkmm/ui-h5/dist/styles/index.css'
+
+const App = () => (
+  <Button />
+)
 ```
+
+
+### 🌈 定制主题和按需加载样式
+
+参考 [定制主题](/customize) 文档。

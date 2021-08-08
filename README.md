@@ -45,10 +45,7 @@ yarn add @xrkmm/ui-taro
 
 ```jsx
 import { Button } from '@xrkmm/ui-taro'
-import '@xrkmm/ui-taro/dist/styles/index.scss';
-// 或者按需引入样式
-import '@xrkmm/ui-taro/dist/styles/components/Button/style.scss';
-
+import '@xrkmm/ui-taro/dist/styles/index.css';
 
 const App = () => (
   <Button />
@@ -59,12 +56,14 @@ const App = () => (
 
 ## 🔨 单纯React项目中使用示例
 
+```bash
+yarn add @xrkmm/ui-h5
+```
+
 ```jsx
 import { Button } from '@xrkmm/ui-h5'
-import '@xrkmm/ui-h5/dist/styles/index.scss';
-// 或者按需引入样式
-import '@xrkmm/ui-h5/dist/styles/components/Button/style.scss';
-
+import '@xrkmm/ui-h5/dist/index.css'
+import '@xrkmm/ui-h5/dist/styles/index.css'
 
 const App = () => (
   <Button />
@@ -72,9 +71,9 @@ const App = () => (
 ```
 
 
-### 🌈 定制主题
+### 🌈 定制主题和按需加载样式
 
-参考 [定制主题]() 文档。
+参考 [定制主题](/customize) 文档。
 
 
 
@@ -84,4 +83,4 @@ const App = () => (
 
 ## 🤝 参与共建 [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat-square)](http://makeapullrequest.com)
 
-请参考[贡献指南](/PUBLISH.md).
+请参考[贡献指南](/Publish.md).

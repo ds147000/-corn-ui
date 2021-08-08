@@ -15,6 +15,11 @@ const Routes: RoutesProps[] = [
     component: require('../components/start').default,
     title: '快速开始'
   },
+  {
+    path: '/Customize',
+    component: require('../components/customize').default,
+    title: '自定义主题和按需引入样式'
+  },
 ]
 
 export default Routes

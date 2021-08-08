@@ -16,7 +16,7 @@ import RollupCopy from 'rollup-plugin-copy'
 import { eslint } from 'rollup-plugin-eslint'
 const { resolveApp, removeDir } = require('./utils')
 
-if (process.env.NODE_ENV === 'production') removeDir('dist')
+if (process.env.NODE_ENV === 'production') removeDir('package-taro')
 
 // 应被保留在外部的依赖
 const externalPackages = [
@@ -41,7 +41,7 @@ export default {
     },
     {
       file: resolveApp(Package.module),
-      format: 'es',
+      format: 'esm',
       sourcemap: true
     }
   ],
@@ -65,9 +65,8 @@ export default {
     RollupCopy({
       targets: [
         {
-          src: resolveApp('src/styles/*'),
-          dest: resolveApp('package-taro/dist'),
-          rename: () => 'styles/px',
+          src: resolveApp('src/styles'),
+          dest: resolveApp('package-taro/dist/'),
           copyOnce: true
         },
         {

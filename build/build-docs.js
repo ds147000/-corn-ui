@@ -39,6 +39,7 @@ const main = async () => {
   spinner.start('生成其他说明文档')
   await getMarkDownToTSX(resolveApp('src/md/introduce.md'), resolveApp('docs/src/components/introduce/index.tsx'))
   await getMarkDownToTSX(resolveApp('src/md/start.md'), resolveApp('docs/src/components/start/index.tsx'))
+  await getMarkDownToTSX(resolveApp('src/md/customize.md'), resolveApp('docs/src/components/customize/index.tsx'))
   await getMarkDownToTSX(resolveApp('./PUBLISH.md'), resolveApp('docs/src/components/Publish/index.tsx'))
   await getMarkDownToTSX(resolveApp('./COMPONENT.md'), resolveApp('docs/src/components/Md/index.tsx'))
   await getMarkDownToTSX(resolveApp('./CHANGELOG.md'), resolveApp('docs/src/components/history/index.tsx'))
