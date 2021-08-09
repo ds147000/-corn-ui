@@ -5,7 +5,7 @@
  * @LastEditors: zhoulong.yang
  * @LastEditTime: 2021-06-10 16:35:14
  */
-import { Button, Toast, Drawer, ActionSheet, showActionSheet } from '@xrkmm/ui-h5'
+import { Button, Toast, Drawer, ActionSheet, showActionSheet, Modal, showModal } from '@xrkmm/ui-h5'
 import { useState } from 'react'
 import '../../package-h5/dist/index.css'
 import '../../package-h5/dist/styles/index.css'
@@ -18,8 +18,9 @@ const asList = [
 
 function App() {
   const [show, setShow] = useState(false)
-  const [ aShow, setAshow ] = useState(false)
-  const [ cShow, setCshow ] = useState(false)
+  const [aShow, setAshow] = useState(false)
+  const [cShow, setCshow] = useState(false)
+  const [mShow, setMshow ] = useState(false)
 
   const onClick = () => alert(1)
 
@@ -58,7 +59,17 @@ function App() {
           showActionSheet({ list: asList })
             .then(console.log)
             .catch(console.error)
-        }}>API 唤起</Button>
+        }}>
+          API 唤起 Actionsheet
+        </Button>
+        <Button onClick={() => setMshow(true)} type="pop">自定义Modal</Button>
+        <Button onClick={() => {
+          showModal({ title: 'API 唤起 Modal' })
+            .then(console.log)
+            .catch(console.error)
+        }}>
+          API 唤起 Modal
+        </Button>
 
         <Drawer visible={show} onClose={() => setShow(false)}>
           <div className="si-button"></div>
@@ -81,6 +92,18 @@ function App() {
       >
         <Button onClick={() => setCshow(false)}>我是按钮</Button>
       </ActionSheet>
+
+      <Modal
+        visible={mShow}
+        title="这是标题"
+        content="这是文案这是文案这是文案这是文案"
+        button={[
+          { text: '取消', style: 'cancel' },
+          { text: '继续看' },
+          { text: '确定' }
+        ]}
+        onButtonClick={() => setMshow(false)}
+      />
     </div>
   )
 }

@@ -1,0 +1,240 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Modal basis 1`] = `
+<div>
+  <div
+    class="xrk-drawer-mask show"
+    data-testid="mask"
+  />
+  <div
+    class="xrk-drawer-body show xrk-drawer-center"
+    data-testid="body"
+  >
+    <div
+      class="xrk-modal"
+      data-testid="modal"
+    >
+      <div
+        class="xrk-modal-top"
+      >
+        <div
+          class="xrk-modal-title"
+        >
+          弹窗
+        </div>
+      </div>
+      <div
+        class="xrk-modal-floor-line"
+      >
+        <div
+          class="xrk-modal-button cancel"
+        >
+          取消
+        </div>
+        <div
+          class="xrk-modal-button undefined"
+        >
+          确定
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Modal button 1`] = `
+<div>
+  <div
+    class="xrk-drawer-mask show"
+    data-testid="mask"
+  />
+  <div
+    class="xrk-drawer-body show xrk-drawer-center"
+    data-testid="body"
+  >
+    <div
+      class="xrk-modal"
+      data-testid="modal"
+    >
+      <div
+        class="xrk-modal-top"
+      >
+        <div
+          class="xrk-modal-title"
+        >
+          弹窗
+        </div>
+        <div
+          class="xrk-modal-content"
+        >
+          我是弹窗
+        </div>
+      </div>
+      <div
+        class="xrk-modal-floor-line"
+      >
+        <div
+          class="xrk-modal-button cancel"
+        >
+          取消
+        </div>
+        <div
+          class="xrk-modal-button undefined"
+        >
+          确定
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Modal button multi 1`] = `
+<div>
+  <div
+    class="xrk-drawer-mask show"
+    data-testid="mask"
+  />
+  <div
+    class="xrk-drawer-body show xrk-drawer-center"
+    data-testid="body"
+  >
+    <div
+      class="xrk-modal"
+      data-testid="modal"
+    >
+      <div
+        class="xrk-modal-top"
+      >
+        <div
+          class="xrk-modal-title"
+        >
+          弹窗
+        </div>
+        <div
+          class="xrk-modal-content"
+        >
+          我是弹窗
+        </div>
+      </div>
+      <div
+        class="xrk-modal-floor-multi"
+      >
+        <div
+          class="xrk-modal-button cancel"
+        >
+          取消
+        </div>
+        <div
+          class="xrk-modal-button undefined"
+        >
+          自定义样式
+        </div>
+        <div
+          class="xrk-modal-button undefined"
+        >
+          确定
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Modal children 1`] = `
+<div>
+  <div
+    class="xrk-drawer-mask show"
+    data-testid="mask"
+  />
+  <div
+    class="xrk-drawer-body show xrk-drawer-center"
+    data-testid="body"
+  >
+    <div
+      class="xrk-modal"
+      data-testid="modal"
+    >
+      <div
+        class="xrk-modal-top"
+      >
+        <div
+          class="xrk-modal-title"
+        >
+          弹窗
+        </div>
+        <div
+          class="xrk-modal-content"
+        >
+          <div
+            class=""
+          >
+            我是弹窗的爸爸
+          </div>
+        </div>
+      </div>
+      <div
+        class="xrk-modal-floor-line"
+      >
+        <div
+          class="xrk-modal-button cancel"
+        >
+          取消
+        </div>
+        <div
+          class="xrk-modal-button undefined"
+        >
+          确定
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Modal content 1`] = `
+<div>
+  <div
+    class="xrk-drawer-mask show"
+    data-testid="mask"
+  />
+  <div
+    class="xrk-drawer-body show xrk-drawer-center"
+    data-testid="body"
+  >
+    <div
+      class="xrk-modal"
+      data-testid="modal"
+    >
+      <div
+        class="xrk-modal-top"
+      >
+        <div
+          class="xrk-modal-title"
+        >
+          弹窗
+        </div>
+        <div
+          class="xrk-modal-content"
+        >
+          我是弹窗
+        </div>
+      </div>
+      <div
+        class="xrk-modal-floor-line"
+      >
+        <div
+          class="xrk-modal-button cancel"
+        >
+          取消
+        </div>
+        <div
+          class="xrk-modal-button undefined"
+        >
+          确定
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;

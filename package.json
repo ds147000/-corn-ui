@@ -21,7 +21,7 @@
     "build:css": "node ./build/build-style.js",
     "build:doc": "node ./build/build-docs.js",
     "build:doc:watch": "onchange -i \"src/**/*.md\" -- npm run build:doc",
-    "build:css:watch": "onchange -i \"src/styles/**.scss\" -- npm run build:css",
+    "build:css:watch": "onchange -i \"src/**/*.scss\" -- npm run build:css",
     "lint": "eslint \"**/*.{js,ts,tsx}\" && npm run lint:style",
     "lint:fix": "eslint --fix \"**/*.{js,ts,tsx}\" && npm run lint:style:fix",
     "lint:style": "stylelint \"**/*.{scss, css, less}\"",
