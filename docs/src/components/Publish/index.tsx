@@ -6,14 +6,21 @@ const Page: React.FC = () => {
         __html: `<h1>参与代码贡献说明</h1>
 <h2>⌨️ 本地开发</h2>
 <p>1.clone 项目</p>
-<p>2.开发模式
-<code><span class="hljs-attribute">yarn dev</span></code></p>
-<p>3.启动小程序预览例子
-<code><span class="hljs-attribute">yarn</span> pre:weapp</code></p>
-<p>4.启动h5例子
-<code><span class="hljs-attribute">yarn</span> pre:h<span class="hljs-number">5</span></code></p>
-<p>5.编译结果
-<code>yarn buidl:<span class="hljs-keyword">all</span></code></p>
+<p>开发模式</p>
+<pre><code class="hljs language-bash"> yarn dev
+</code></pre>
+<p>纯h5开发模式</p>
+<pre><code class="hljs language-bash">yarn dev:h5
+</code></pre>
+<p>纯Taro开发模式</p>
+<pre><code class="hljs language-bash">yarn dev:taro
+</code></pre>
+<p>文档开发模式</p>
+<pre><code class="hljs language-bash">yarn dev:doc
+</code></pre>
+<p>编译结果</p>
+<pre><code class="hljs language-bash">yarn buidl:all
+</code></pre>
 <h2>📁 项目结构说明</h2>
 <pre><code class="hljs">xrkmm-cli
 ├── build

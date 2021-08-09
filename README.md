@@ -84,3 +84,15 @@ const App = () => (
 ## 🤝 参与共建 [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat-square)](http://makeapullrequest.com)
 
 请参考[贡献指南](/Publish.md).
+
+## 在线文档CI部署
+
+构建文档
+```bash
+yarn pub:doc
+```
+
+文档站点构建结果
+```tsx
+docs/build
+```
