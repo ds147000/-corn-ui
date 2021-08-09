@@ -32,7 +32,8 @@
     "pre:h5": "cd example-react && npm run start",
     "pre:doc": "cd docs && npm run start",
     "prepare": "husky install",
-    "pub": "npm run build:all && node ./build/publish.js"
+    "pub": "npm run build:all && node ./build/publish.js",
+    "pub:doc": "npm run build:doc && cd docs && npm run build"
   },
   "keywords": [
     "向日葵妈妈，UI库，小程序，taro"

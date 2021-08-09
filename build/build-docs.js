@@ -22,15 +22,14 @@ const main = async () => {
   spinner.succeed('解析组件列表成功')
 
   componentsFiles.forEach(async (item) => {
-    spinner.start(`生成${item}组件的文档`)
+    console.log(`📖 生成${item}组件的文档`)
     const dir = resolveApp('docs/src/views/' + item)
     await makeDir(dir)
     const demoFiles = demoFileList.filter((file) => new RegExp(`src/components/${item}/demo/.*`).test(file))
 
     await getMarkDownTemplate(demoFiles, dir)
-    spinner.succeed()
   })
-
+  spinner.succeed()
 
   spinner.start('写入demo的路由配置')
   await getDemoRoutes([...componentsFiles], resolveApp('docs/src/router/components.tsx'))
