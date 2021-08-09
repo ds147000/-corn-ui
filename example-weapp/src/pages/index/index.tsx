@@ -7,7 +7,7 @@
  */
 import { Component } from 'react'
 import { View } from '@tarojs/components'
-import { Button, Toast, Drawer, showActionSheet } from '@xrkmm/ui-taro'
+import { Button, Toast, Drawer, showActionSheet, showModal, Modal } from '@xrkmm/ui-taro'
 import './index.scss'
 
 const asList = [
@@ -17,7 +17,8 @@ const asList = [
 export default class Index extends Component {
 
   state = {
-    show: true
+    show: false,
+    mShow: true
   }
 
   componentWillMount () { }
@@ -75,6 +76,27 @@ export default class Index extends Component {
         }}>
           API 唤起
         </Button>
+
+        <Button onClick={() => {
+          showModal({ title: 'API 唤起 Modal' })
+            .then(console.log)
+            .catch(console.error)
+        }}>
+          API 唤起 Modal
+        </Button>
+
+
+        <Modal
+        visible={this.state.mShow}
+        title="这是标题"
+        content="这是文案这是文案这是文案这是文案"
+        button={[
+          { text: '取消', style: 'cancel' },
+          { text: '继续看' },
+          { text: '确定' }
+        ]}
+        onButtonClick={() => this.setState({ mShow: false })}
+        />
       </View>
     )
   }

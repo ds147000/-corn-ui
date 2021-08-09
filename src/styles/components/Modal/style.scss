@@ -1,0 +1,82 @@
+$modalBorderColor: #f3f5fa;
+
+.xrk-modal {
+  background-color: $white;
+  border-radius: $radius;
+  overflow: hidden;
+  width: 530px;
+
+  &-top {
+    width: 100%;
+    padding: 40px;
+    box-sizing: border-box;
+  }
+
+  &-title {
+    font-size: 32px;
+    font-weight: bolder;
+    color: $text1;
+    padding-bottom: 20px;
+    line-height: 48px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+  }
+
+  &-content {
+    font-size: 28px;
+    font-weight: 400;
+    color: $text2;
+    line-height: 42px;
+  }
+
+  &-button {
+    font-size: 32px;
+    font-weight: 400;
+    color: $link;
+    line-height: 32px;
+    height: 90px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-sizing: border-box;
+
+    &:active {
+      opacity: 0.7;
+      background-color: rgba($color: #e6e6e6 , $alpha: 0.2);
+    }
+
+    &.cancel {
+      font-weight: 400;
+      color: $text2;
+    }
+
+    &:last-child {
+      border-bottom: 0;
+      border-right: 0;
+    }
+  }
+
+  &-floor-multi {
+    width: 100%;
+    box-sizing: border-box;
+    border-top: 1px solid $modalBorderColor;
+
+    .xrk-modal-button {
+      border-bottom: 1px solid $modalBorderColor;
+    }
+  }
+
+  &-floor-line {
+    width: 100%;
+    box-sizing: border-box;
+    border-top: 1px solid $modalBorderColor;
+    display: flex;
+
+    .xrk-modal-button {
+      flex: 1;
+      border-right: 1px solid $modalBorderColor;
+    }
+  }
+}
