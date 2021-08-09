@@ -4,17 +4,31 @@
 
 1.clone 项目
 
-2.开发模式
- ``` yarn dev ```
+开发模式
+```bash
+ yarn dev
+```
 
-3.启动小程序预览例子
-```yarn pre:weapp```
+纯h5开发模式
+```bash
+yarn dev:h5
+```
 
-4.启动h5例子
-```yarn pre:h5```
+纯Taro开发模式
+```bash
+yarn dev:taro
+```
 
-5.编译结果
-```yarn buidl:all```
+文档开发模式
+```bash
+yarn dev:doc
+```
+
+
+编译结果
+```bash
+yarn buidl:all
+```
 
 ## 📁 项目结构说明
 ```
