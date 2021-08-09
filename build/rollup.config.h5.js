@@ -13,6 +13,7 @@ import RollupTypescript from 'rollup-plugin-typescript2'
 import RollupJscc from 'rollup-plugin-jscc'
 import RollupPostcss from 'rollup-plugin-postcss'
 import RollupCopy from 'rollup-plugin-copy'
+import RollupAlias from '@rollup/plugin-alias'
 import { eslint } from 'rollup-plugin-eslint'
 import { DEFAULT_EXTENSIONS } from '@babel/core'
 const { resolveApp, removeDir } = require('./utils')
@@ -27,7 +28,6 @@ const externalPackages = [
   '@tarojs/react',
   '@babel/runtime',
   '@tarojs/runtime',
-  '@tarojs/taro',
   '@tarojs/react'
 ]
 
@@ -47,6 +47,9 @@ export default {
     }
   ],
   plugins: [
+    RollupAlias({
+      '@tarojs/taro': '@tarojs/taro-h5/src/index.js'
+    }),
     eslint({ throwOnError: true }),
     RollupPostcss({
       inject: { insertAt: 'top' },
@@ -76,7 +79,18 @@ export default {
         [
           'transform-imports', {
             '@tarojs/components': {
-              transform: "@tarojs/components-react/src/components/${member}",
+              transform: (importName) => {
+                switch (importName) {
+                  case 'Swiper':
+                    return `@tarojs/components-react/src/components/${importName.toLocaleLowerCase()}/hepler`
+
+                  case 'SwiperItem':
+                    return `@tarojs/components-react/src/components/${importName.toLocaleLowerCase()}/hepler/item`
+
+                  default:
+                    return `@tarojs/components-react/src/components/${importName.toLocaleLowerCase()}`
+                }
+              },
               preventFullImport: true
             }
           }
