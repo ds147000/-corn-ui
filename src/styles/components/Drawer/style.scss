@@ -91,10 +91,10 @@
   &-center {
     top: 50%;
     left: 50%;
-    transform: scale(1 , 1) translate(-50% , -50%) translateZ(1px);
+    transform: translate(-50% , -50%) translateZ(1px) scale(0.3 , 0.3);
 
     &.show {
-      transform: scale(1 , 1) translate(-50% , -50%) translateZ(1px);
+      transform: translate(-50% , -50%) translateZ(1px) scale(1 , 1);
       animation: XrkDrawerCenterShow 0.2s;
     }
 

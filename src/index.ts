@@ -12,3 +12,4 @@ export { default as ActionSheet, ActionSheetItem } from './components/ActionShee
 export { default as showActionSheet } from './components/ActionSheet/api'
 export { default as Modal } from './components/Modal'
 export { default as showModal } from './components/Modal/api'
+export { default as Icon } from './components/Icon'

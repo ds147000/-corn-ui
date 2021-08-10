@@ -24,6 +24,15 @@ postcss([
 ])
 .process(result.css, { from: resolveApp('src/styles/index.scss') })
 .then(res => {
-  writeFile(resolveApp('package-h5/dist/styles/index.css'), res.css)
-  writeFile(resolveApp('package-taro/dist/styles/index.css'), res.css)
+  try {
+    writeFile(resolveApp('package-h5/dist/styles/index.css'), res.css)
+
+  } catch (error) {
+
+  }
+  try {
+    writeFile(resolveApp('package-taro/dist/styles/index.css'), res.css)
+  } catch (error) {
+
+  }
 })

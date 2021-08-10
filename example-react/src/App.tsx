@@ -9,6 +9,7 @@ import { Button, Toast, Drawer, ActionSheet, showActionSheet, Modal, showModal }
 import { useState } from 'react'
 import '../../package-h5/dist/index.css'
 import '../../package-h5/dist/styles/index.css'
+import '../../package-h5/icons/style.scss'
 import './App.scss'
 
 const asList = [
@@ -28,7 +29,7 @@ function App() {
     <div className="App">
       <div>
         <Button size="max">向日葵妈妈UI</Button>
-        <Button size="big">向日葵妈妈UI</Button>
+        <Button size="big" icon={<i className="x-icon-gantanhao" />}>向日葵妈妈UI</Button>
         <Button size="large">向日葵妈妈UI</Button>
         <Button size="middle">向日葵妈妈UI</Button>
         <Button size="small">向日葵妈妈UI</Button>

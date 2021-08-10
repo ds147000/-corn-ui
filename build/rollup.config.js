@@ -13,6 +13,7 @@ import RollupTypescript from 'rollup-plugin-typescript2'
 import RollupJscc from 'rollup-plugin-jscc'
 import RollupBabel from '@rollup/plugin-babel'
 import RollupCopy from 'rollup-plugin-copy'
+import BuidlIcon from './build-icons'
 import { eslint } from 'rollup-plugin-eslint'
 const { resolveApp, removeDir } = require('./utils')
 
@@ -75,6 +76,7 @@ export default {
           copyOnce: true
         }
       ]
-    })
+    }),
+    BuidlIcon('package-taro')
   ]
 }

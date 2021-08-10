@@ -13,6 +13,7 @@ import RollupTypescript from 'rollup-plugin-typescript2'
 import RollupJscc from 'rollup-plugin-jscc'
 import RollupPostcss from 'rollup-plugin-postcss'
 import RollupCopy from 'rollup-plugin-copy'
+import BuidlIcon from './build-icons'
 import { eslint } from 'rollup-plugin-eslint'
 import { DEFAULT_EXTENSIONS } from '@babel/core'
 const { resolveApp, removeDir } = require('./utils')
@@ -47,7 +48,7 @@ export default {
     }
   ],
   plugins: [
-    eslint({ throwOnError: true }),
+    eslint({ throwOnError: true, configFile: resolveApp('.eslintrc.js') }),
     RollupPostcss({
       inject: { insertAt: 'top' },
       extract: true,
@@ -107,6 +108,7 @@ export default {
           copyOnce: true
         }
       ]
-    })
+    }),
+    BuidlIcon('package-h5')
   ]
 }

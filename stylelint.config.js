@@ -8,6 +8,7 @@
 module.exports = {
   extends: [ 'stylelint-plugin-xrkmm' ],
   rules: {
-    'scss/at-import-partial-extension-blacklist': ['css']
+    'scss/at-import-partial-extension-blacklist': ['css'],
+    'font-family-no-missing-generic-family-keyword': [true, { ignoreFontFamilies: ['xrkIcon'] }]
   }
 }

@@ -42,7 +42,7 @@ export default class Index extends Component {
   render () {
     return (
       <View className='index'>
-        <Button size="max">向日葵妈妈UI</Button>
+        <Button size="max" icon={<View className="x-icon-gantanhao" />}>向日葵妈妈UI</Button>
         <Button size="big">向日葵妈妈UI</Button>
         <Button size="large">向日葵妈妈UI</Button>
         <Button size="middle">向日葵妈妈UI</Button>
