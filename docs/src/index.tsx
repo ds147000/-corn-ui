@@ -1,11 +1,12 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
+import App from './App'
+import reportWebVitals from './reportWebVitals'
 import './theme/theme.less'
 import './theme/highlight.css'
 import '../../package-h5/dist/index.css'
 import '../../package-h5/dist/styles/index.css'
-import App from './App'
-import reportWebVitals from './reportWebVitals'
+import '../../package-h5/icons/style.scss'
 
 ReactDOM.render(
   <React.StrictMode>

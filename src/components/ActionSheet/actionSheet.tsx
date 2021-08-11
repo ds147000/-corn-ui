@@ -2,7 +2,9 @@ import { View } from '@tarojs/components'
 import classNames from 'classnames'
 import React, { useMemo } from 'react'
 import Drawer from '../Drawer'
+import Icon from '../Icon'
 import { ActionSheetItem } from './item'
+
 
 export interface ActionSheetProps {
   /** 是否显示 */
@@ -76,7 +78,9 @@ const ActionSheet: React.FC<ActionSheetProps> = ({
                 className="xrk-actionsheet-close"
                 data-testid="close"
                 onClick={onClose}
-              />
+              >
+                <Icon name="delete" />
+              </View>
             )}
           </View>
         )}

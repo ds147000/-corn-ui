@@ -21,6 +21,11 @@ const Routes: RoutesProps[] = [
     title: require('../views/Drawer/config').default.title,
   },
   {
+    path: '/Icon',
+    component: require('../views/Icon').default,
+    title: require('../views/Icon/config').default.title,
+  },
+  {
     path: '/Modal',
     component: require('../views/Modal').default,
     title: require('../views/Modal/config').default.title,

@@ -3,7 +3,7 @@
 exports[`<Button /> icon 1`] = `
 <div>
   <div
-    class="xrk-btn xrk-if xrk-ac xrk-jc xrk-btn-middle xrk-btn-primary xrk-btn-icon"
+    class="xrk-btn xrk-if xrk-ac xrk-jc xrk-btn-middle xrk-btn-primary xrk-btn-child-icon"
   >
     向日葵妈妈UI
     <div

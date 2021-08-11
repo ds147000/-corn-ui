@@ -5,8 +5,8 @@ logs/
 client/
 output/
 coverage/
-dist-h5/
-dist-css/
+package-h5/
+package-taro/
 example-react/
 example-weapp/
 docs/

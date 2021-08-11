@@ -1,12 +1,10 @@
-$classPrefix: {{baseSelector}};
-
 @font-face {
 	font-family: "{{fontName}}";
 	src: {{{src}}};
 }
 
 
-[class|=#{$classPrefix}] {
+[class*=xrk-i-] {
 	font-family: "{{fontName}}";
 		-webkit-font-smoothing: antialiased;
 		-moz-osx-font-smoothing: grayscale;
@@ -19,7 +17,7 @@ $classPrefix: {{baseSelector}};
 }
 
 {{#each codepoints}}
-	.#{$classPrefix}-{{@key}}::before {
+	.xrk-i-{{@key}}::before {
     content: "\\{{this}}";
   }
 {{/each}}

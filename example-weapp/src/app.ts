@@ -7,6 +7,7 @@
  */
 import { Component } from 'react'
 import '@xrkmm/ui-taro/styles/index.scss'
+import '../../package-taro/icons/style.scss'
 import './app.scss'
 
 class App extends Component {

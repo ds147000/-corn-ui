@@ -7,7 +7,7 @@
  */
 import { Component } from 'react'
 import { View } from '@tarojs/components'
-import { Button, Toast, Drawer, showActionSheet, showModal, Modal } from '@xrkmm/ui-taro'
+import { Button, Toast, Drawer, showActionSheet, showModal, Modal, Icon } from '@xrkmm/ui-taro'
 import './index.scss'
 
 const asList = [
@@ -42,7 +42,7 @@ export default class Index extends Component {
   render () {
     return (
       <View className='index'>
-        <Button size="max" icon={<View className="x-icon-gantanhao" />}>向日葵妈妈UI</Button>
+        <Button size="max" icon={<Icon name="service" />}>向日葵妈妈UI</Button>
         <Button size="big">向日葵妈妈UI</Button>
         <Button size="large">向日葵妈妈UI</Button>
         <Button size="middle">向日葵妈妈UI</Button>

@@ -77,13 +77,14 @@ function App() {
         </Drawer>
       </div>
       <ActionSheet
+        closable
         visible={aShow}
         title="我是大标题"
         subTitle="我是副标题"
         onClose={() => setAshow(false)}
         showCancel={true}
         showOk={true}
-        titleAlign="right"
+        titleAlign="center"
       />
 
       <ActionSheet

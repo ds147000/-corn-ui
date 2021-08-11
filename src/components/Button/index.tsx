@@ -32,6 +32,7 @@ const Button: React.FC<ButtonProps> = ({
   children
 }) => {
   const isIcon = icon !== undefined
+  const isChildren = children !== undefined
 
   const _class = useMemo(() => {
     return ClassNames(
@@ -42,11 +43,12 @@ const Button: React.FC<ButtonProps> = ({
       {
         'xrk-btn-block': block,
         'xrk-btn-ghost': ghost,
-        'xrk-btn-icon': isIcon,
+        'xrk-btn-icon': isIcon && !isChildren,
+        'xrk-btn-child-icon': isIcon && isChildren,
         'xrk-btn-disabled':disabled
       }
     )
-  }, [ size, type, block, ghost, disabled, isIcon ])
+  }, [ size, type, block, ghost, disabled, isIcon, isChildren ])
 
   const _onClick = (): void => {
     if (disabled) return

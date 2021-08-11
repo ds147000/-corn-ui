@@ -89,7 +89,10 @@ exports.getMarkDownTemplate = async (paths = [], dirPath) => {
     // 获取演示代码部分
     const startIndex = fileContent.indexOf('```tsx')
     const lastIndex = fileContent.lastIndexOf('```')
-    const code = fileContent.slice(startIndex + 6, lastIndex)
+    const code = fileContent.slice(startIndex + 6, lastIndex).split('```css')
+    const jsCode = code.length > 1 ? code[0].slice(0, code.indexOf('```css') - 6) : code[0]
+    const cssCode = code.length > 1 ? code[1] : null
+
 
     // 生成对应code文件
     data.header = `import ${fileName} from './demo/${fileName}'`
@@ -101,7 +104,20 @@ exports.getMarkDownTemplate = async (paths = [], dirPath) => {
       this.makeDir(compDis)
     }
 
-    this.writeFile(compDis + `/${fileName}.tsx`, Prettier.format(code, PerttierConfig))
+    if (cssCode) {
+
+      this.writeFile(compDis + `/${fileName}.tsx`, Prettier.format(
+        `
+        import './style.scss'
+        ${jsCode}
+        `
+      , PerttierConfig))
+
+      this.writeFile(compDis + `/style.scss`, Prettier.format(cssCode, { parser: 'css' }))
+
+    } else {
+      this.writeFile(compDis + `/${fileName}.tsx`, Prettier.format(jsCode, PerttierConfig))
+    }
 
     // 修改代码存放方式
     const markHeader = MD.render(fileContent.slice(0, startIndex))
@@ -117,7 +133,7 @@ exports.getMarkDownTemplate = async (paths = [], dirPath) => {
           ${markFloor.replace(/class=/ig, 'className=')}
           <div className="action-cell">
             <Tooltip title="复制代码">
-              <CopyToClipboard text={\`${code}\`}>
+              <CopyToClipboard text={\`${jsCode}\`}>
                 <Button shape="circle" icon={<CopyOutlined />} size="small" />
               </CopyToClipboard>
             </Tooltip>
