@@ -52,6 +52,7 @@ const View: React.FC = ({ children }) => {
                 </Menu.Item>
               ))}
             </Menu.ItemGroup>
+            <Menu.Divider />
             {Object.keys(ShowCompsRoutes).map((key) => (
               <Menu.ItemGroup title={key + '组件'} key={key}>
                 {ShowCompsRoutes[key].map((item) => (
