@@ -121,22 +121,27 @@
       width: 45%;
       margin-right: 30px;
       margin-top: 40px;
+    }
 
-      .demo {
-        padding: 15px;
-        border: 1px solid rgba($color: #eeeded, $alpha: 1.0);
-      }
+    .demo-box-block {
+      width: 100%;
+      margin-top: 40px;
+    }
 
-      .action-cell {
-        display: flex;
-        align-items: center;
-        padding: 6px 10px;
-        border-top: 1px solid rgba(0, 0, 0, 0.06);
-        color: #00000073;
+    .demo {
+      padding: 15px;
+      border: 1px solid rgba($color: #eeeded, $alpha: 1.0);
+    }
 
-        >button {
-          margin: 0px 7px;
-        }
+    .action-cell {
+      display: flex;
+      align-items: center;
+      padding: 6px 10px;
+      border-top: 1px solid rgba(0, 0, 0, 0.06);
+      color: #00000073;
+
+      >button {
+        margin: 0px 7px;
       }
     }
   }

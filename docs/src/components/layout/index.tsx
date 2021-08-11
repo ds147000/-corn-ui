@@ -1,12 +1,29 @@
 import { useHistory, useLocation } from "react-router-dom"
 import { Layout, Menu } from 'antd'
+import { RouteProps } from 'react-router-dom'
 import CompsRoutes from '../../router/components'
 import OtherRoutes from '../../router/other'
 import StartRoutes from '../../router/start'
 import './style.scss'
 
+interface RoutesProps extends RouteProps {
+  title: string;
+  type: string;
+  sort: number;
+}
+
 const { Header, Content, Footer, Sider } = Layout
 
+const ShowCompsRoutes: Record<string, RoutesProps[]> = {}
+
+CompsRoutes.map((item) => {
+  if (ShowCompsRoutes[item.type])
+    ShowCompsRoutes[item.type].push(item)
+  else
+    ShowCompsRoutes[item.type] = [item]
+})
+
+Object.keys(ShowCompsRoutes).map((key) => ShowCompsRoutes[key] = ShowCompsRoutes[key].sort((item, item2) => item.sort - item2.sort))
 
 const View: React.FC = ({ children }) => {
   const location = useLocation()
@@ -35,17 +52,18 @@ const View: React.FC = ({ children }) => {
                 </Menu.Item>
               ))}
             </Menu.ItemGroup>
-            <Menu.ItemGroup title="组件列表">
-              <Menu.Divider />
-              {CompsRoutes.map((item) => (
-                <Menu.Item
-                  key={item.path as string}
-                  onClick={() => onClick(item.path as string)}
-                >
-                  {item.title}
-                </Menu.Item>
-              ))}
-            </Menu.ItemGroup>
+            {Object.keys(ShowCompsRoutes).map((key) => (
+              <Menu.ItemGroup title={key + '组件'} key={key}>
+                {ShowCompsRoutes[key].map((item) => (
+                  <Menu.Item
+                    key={item.path as string}
+                    onClick={() => onClick(item.path as string)}
+                  >
+                    {item.title}
+                  </Menu.Item>
+                ))}
+              </Menu.ItemGroup>
+            ))}
             <Menu.ItemGroup title="其他">
               <Menu.Divider />
               {OtherRoutes.map((item) => (

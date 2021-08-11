@@ -67,29 +67,64 @@ exports.makeDir = async (path) => {
   })
 }
 
+const getMarkDownContent = (path) => {
+  const fileHeader = new Map()
+
+  let content = fs.readFileSync(path).toString()
+
+  // 是否存在文件头配置
+  if (content.indexOf('---header') !== -1) {
+    content = content.replace('---header')
+    const lastIndex = content.indexOf('---')
+
+    // 获取头部说明
+    content.slice(0, lastIndex)
+      .split('\n')
+      .filter(Boolean)
+      .map((item) => item.split(':').map((item) => item.trim()))
+      .map((item) => fileHeader.set(item[0], item[1]))
+    // 删除头部说明
+    content = content.slice(lastIndex + 3)
+
+  }
+
+  return {
+    content,
+    sort: fileHeader.get('sort'),
+    style: fileHeader.get('style'),
+    type: fileHeader.get('type'),
+    title: content.match(/#.*\n/)[0].replace('#', '').trim()
+  }
+}
+
 exports.getMarkDownTemplate = async (paths = [], dirPath) => {
   // 取出props索引
   const propsIndex = paths.findIndex((item) => /props\.md/.test(item))
   const propsPath = paths[propsIndex]
+  // 去除props文件地址
   paths.splice(propsIndex, 1)
-  const props = fs.readFileSync(propsPath).toString().split('<demo>')
+
+  // 处理属性说明文档
+  const propsMarkDownContent = getMarkDownContent(propsPath)
+  const props = propsMarkDownContent.content.split('<demo>')
 
   // 切割头部和尾部
   const header = MD.render(props[0])
-  const floor = MD.render(props[1])
-  // 中奖内容
+  const floor = MD.render(props[1] || '')
+
+  // 处理代码演示内容
   const content = paths.map((path) => {
     const last = path.lastIndexOf('/')
     const fileName = path.slice(last + 1).replace('.md', '').replace(/\d\./, '').toUpperCase()
 
     // 返回内容
-    const data = { header: '', body: '', key: fileName }
+    const MarkdownContent = getMarkDownContent(path)
+    const data = { header: '', body: '', key: fileName, sort: MarkdownContent.sort }
 
-    const fileContent = fs.readFileSync(path).toString()
     // 获取演示代码部分
-    const startIndex = fileContent.indexOf('```tsx')
-    const lastIndex = fileContent.lastIndexOf('```')
-    const code = fileContent.slice(startIndex + 6, lastIndex).split('```css')
+    const startIndex = MarkdownContent.content.indexOf('```tsx')
+    const lastIndex = MarkdownContent.content.lastIndexOf('```')
+    const code = MarkdownContent.content.slice(startIndex + 6, lastIndex).split('```css')
     const jsCode = code.length > 1 ? code[0].slice(0, code.indexOf('```css') - 6) : code[0]
     const cssCode = code.length > 1 ? code[1] : null
 
@@ -120,12 +155,12 @@ exports.getMarkDownTemplate = async (paths = [], dirPath) => {
     }
 
     // 修改代码存放方式
-    const markHeader = MD.render(fileContent.slice(0, startIndex))
-    const markContentCode = MD.render(fileContent.slice(startIndex, lastIndex + 3))
-    const markFloor = MD.render(fileContent.slice(lastIndex + 3))
+    const markHeader = MD.render(MarkdownContent.content.slice(0, startIndex))
+    const markContentCode = MD.render(MarkdownContent.content.slice(startIndex, lastIndex + 3))
+    const markFloor = MD.render(MarkdownContent.content.slice(lastIndex + 3))
 
     data.body = `
-      <div className="demo-box">
+      <div className="${MarkdownContent.style === 'block' ? 'demo-box-block' : 'demo-box'}">
         ${markHeader.replace(/class=/ig, 'className=')}
         <div className="demo">
           <${fileName} />
@@ -150,8 +185,7 @@ exports.getMarkDownTemplate = async (paths = [], dirPath) => {
     `
 
     return data
-  })
-
+  }).sort((item, item2) => item.sort - item2.sort)
 
   const result = `/* eslint-disabled */\n//
     import { useState } from 'react'
@@ -181,29 +215,29 @@ exports.getMarkDownTemplate = async (paths = [], dirPath) => {
     dirPath + '/index.tsx',
     Prettier.format(result, PerttierConfig)
   )
-
-  this.writeFile(dirPath + '/config.js', Prettier.format(
-    `
-    const config = { title: '${props[0].split('\n')[0].replace('# ', '')}' }
-    export default config`,
-  PerttierConfig))
 }
 
 exports.getDemoRoutes = (paths = [], dirPath) => {
-  const routerConfig = paths.map((item) => {
+  const routerConfig = paths
+    .map((item) => {
+      const { sort, type, title } = getMarkDownContent(this.resolveApp(`src/components/${item}/demo/props.md`))
 
-    return `{
-      path: '/${item}',
-      component: require('../views/${item}').default,
-      title: require('../views/${item}/config').default.title
-    }`
-  })
+      return `{
+        path: '/${item}',
+        component: require('../views/${item}').default,
+        title: '${title}',
+        type: '${type}',
+        sort: ${sort}
+      }`
+    })
 
   const data = `
   import { RouteProps } from 'react-router-dom'
 
   interface RoutesProps extends RouteProps {
-    title: string
+    title: string;
+    type: string;
+    sort: number;
   }
 
   const Routes: RoutesProps[] = [

@@ -31,6 +31,10 @@ export default (packageName) => ({
 
         // 写入Md文件
         const MarkContext = `
+---header
+sort: 1
+style: block
+---
 ### 代码演示
 
 \`\`\`tsx
@@ -55,7 +59,6 @@ const Demo: React.FC = () => {
 export default Demo
 \`\`\`
 
-\`\`\`css
   .icon-box {
     display: inline-flex;
     align-items: center;
@@ -77,7 +80,7 @@ export default Demo
 \`name\`属性传入图标名称使用图标
 `
 
-        writeFile(resolveApp('src/components/Icon/demo/1.basis.md'), Prettier.format(MarkContext, { parser: 'markdown' }))
+        writeFile(resolveApp('src/components/Icon/demo/basis.md'), Prettier.format(MarkContext, { parser: 'markdown' }))
         res()
       }, 100)
     })
