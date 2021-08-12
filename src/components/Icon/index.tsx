@@ -1,10 +1,11 @@
 import React from 'react'
+import type { TextProps } from '@tarojs/components/types/Text'
 
 // #if _APP === 'weapp'
 import { Text } from '@tarojs/components'
 // #endif
 
-export interface IconProps {
+export interface IconProps extends TextProps {
   name: string
 }
 

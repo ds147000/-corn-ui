@@ -23,9 +23,8 @@ module.exports = {
     '/example-weapp/',
     '/example-react/',
     '/docs/',
-    '/dist/',
-    '/dist-h5/',
-    '/dist-css/'
+    '/package-taro/',
+    '/package-h5/'
   ],
   globals: {
     'process.env.TARO_ENV': 'h5',

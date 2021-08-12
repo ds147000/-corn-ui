@@ -29,6 +29,13 @@ const Routes: RoutesProps[] = [
     sort: 3,
   },
   {
+    path: '/Empty',
+    component: require('../views/Empty').default,
+    title: '空状态 Empty',
+    type: '状态展示',
+    sort: 10,
+  },
+  {
     path: '/Icon',
     component: require('../views/Icon').default,
     title: '图标 Icon',

@@ -59,6 +59,8 @@ const Demo: React.FC = () => {
 export default Demo
 \`\`\`
 
+\`\`\`css
+
   .icon-box {
     display: inline-flex;
     align-items: center;

@@ -5,7 +5,7 @@
  * @LastEditors: zhoulong.yang
  * @LastEditTime: 2021-06-10 16:35:14
  */
-import { Button, Toast, Drawer, ActionSheet, showActionSheet, Modal, showModal } from '@xrkmm/ui-h5'
+import { Button, Toast, Drawer, ActionSheet, showActionSheet, Modal, showModal, Icon, Empty } from '@xrkmm/ui-h5'
 import { useState } from 'react'
 import '../../package-h5/dist/index.css'
 import '../../package-h5/dist/styles/index.css'
@@ -29,7 +29,7 @@ function App() {
     <div className="App">
       <div>
         <Button size="max">向日葵妈妈UI</Button>
-        <Button size="big" icon={<i className="x-icon-gantanhao" />}>向日葵妈妈UI</Button>
+        <Button size="big" icon={<Icon name="service" />}>向日葵妈妈UI</Button>
         <Button size="large">向日葵妈妈UI</Button>
         <Button size="middle">向日葵妈妈UI</Button>
         <Button size="small">向日葵妈妈UI</Button>
@@ -106,6 +106,12 @@ function App() {
         ]}
         onButtonClick={() => setMshow(false)}
       />
+      <Empty text="暂无内容哦" size="large" />
+      <Empty text="暂无内容哦" >
+        <Button>返回首页</Button>
+      </Empty>
+
+      <Empty text="暂无内容哦" size="small" />
     </div>
   )
 }

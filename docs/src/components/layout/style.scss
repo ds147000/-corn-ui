@@ -54,18 +54,22 @@
 
     h1 {
       font-size: 30px;
+      padding-top: 40px;
     }
 
     h2 {
       font-size: 25px;
+      padding-top: 30px;
     }
 
     h3 {
       font-size: 20px;
+      padding-top: 20px;
     }
 
     h4 {
       font-size: 15px;
+      padding-top: 10px;
     }
 
     h5 {
@@ -120,7 +124,7 @@
       min-width: 500px;
       width: 45%;
       margin-right: 30px;
-      margin-top: 40px;
+      margin-top: 10px;
     }
 
     .demo-box-block {
@@ -145,4 +149,9 @@
       }
     }
   }
+}
+
+.img-box {
+  width: 200px;
+  display: block;
 }
