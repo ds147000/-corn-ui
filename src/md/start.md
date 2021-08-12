@@ -24,7 +24,7 @@ yarn add @xrkmm/ui-h5
 
 ```jsx
 import { Button } from '@xrkmm/ui-h5'
-import '@xrkmm/ui-h5/dist/index.css'
+import '@xrkmm/ui-h5/dist/styles/base.css'
 import '@xrkmm/ui-h5/dist/styles/index.css'
 
 const App = () => (

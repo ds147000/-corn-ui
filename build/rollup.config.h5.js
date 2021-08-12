@@ -8,6 +8,7 @@
 const Package = require('../package.json')
 import RollupBabel from '@rollup/plugin-babel'
 import RollupResolve from '@rollup/plugin-node-resolve'
+import RollupAlias from '@rollup/plugin-alias'
 import RollupCommonjs from '@rollup/plugin-commonjs'
 import RollupTypescript from 'rollup-plugin-typescript2'
 import RollupJscc from 'rollup-plugin-jscc'
@@ -49,6 +50,11 @@ export default {
   ],
   plugins: [
     eslint({ throwOnError: true, configFile: resolveApp('.eslintrc.js') }),
+    RollupAlias({
+      entries: {
+        'weui': resolveApp('build/mock/weui')
+      }
+    }),
     RollupPostcss({
       inject: { insertAt: 'top' },
       extract: true,
