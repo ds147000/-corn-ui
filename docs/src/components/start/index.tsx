@@ -18,7 +18,7 @@ const Page: React.FC = () => {
 <pre><code class="hljs language-bash">yarn add @xrkmm/ui-h5
 </code></pre>
 <pre><code class="hljs language-jsx"><span class="hljs-keyword">import</span> { Button } <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@xrkmm/ui-h5&#x27;</span>
-<span class="hljs-keyword">import</span> <span class="hljs-string">&#x27;@xrkmm/ui-h5/dist/index.css&#x27;</span>
+<span class="hljs-keyword">import</span> <span class="hljs-string">&#x27;@xrkmm/ui-h5/dist/styles/base.css&#x27;</span>
 <span class="hljs-keyword">import</span> <span class="hljs-string">&#x27;@xrkmm/ui-h5/dist/styles/index.css&#x27;</span>
 
 <span class="hljs-keyword">const</span> App = <span class="hljs-function">() =&gt;</span> (
