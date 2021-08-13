@@ -11,18 +11,17 @@
     "dist",
     "icons"
   ],
+  "sideEffects": [],
   "scripts": {
     "dev": "concurrently \"npm run dev:weapp\" \"npm run dev:h5\"",
-    "dev:weapp": "concurrently \" onchange -i \"src/**/*.tsx\" -- rollup --config ./build/rollup.config.js \" \" npm run pre:weapp \" \"npm run build:css:watch\"",
-    "dev:h5": "concurrently \" onchange -i \"src/**/*.tsx\" -- rollup --config ./build/rollup.config.h5.js \" \" npm run pre:h5 \" \"npm run build:css:watch\"",
+    "dev:weapp": "concurrently \" onchange -i \"src/**/*.tsx\" -- rollup --config ./build/rollup.config.js \" \" npm run pre:weapp \" ",
+    "dev:h5": "concurrently \" onchange -i 'src/**/*.tsx' 'src/**/*.scss' -- rollup --config ./build/rollup.config.h5.js \" \" npm run pre:h5 \" ",
     "dev:doc": "concurrently \" npm run build:doc:watch \" \" npm run pre:doc \"",
-    "build:all": "npm run lint && npm run test:prod && npm run build:weapp && npm run build:h5 && npm run build:css",
+    "build:all": "npm run lint && npm run test:prod && npm run build:weapp && npm run build:h5",
     "build:weapp": "cross-env NODE_ENV=production rollup --config ./build/rollup.config.js",
     "build:h5": "cross-env NODE_ENV=production rollup --config ./build/rollup.config.h5.js",
-    "build:css": "node ./build/build-style.js",
     "build:doc": "node ./build/build-docs.js",
     "build:doc:watch": "onchange -i \"src/**/*.md\" -- npm run build:doc",
-    "build:css:watch": "onchange -i \"src/**/*.scss\" -- npm run build:css",
     "lint": "eslint \"**/*.{js,ts,tsx}\" && npm run lint:style",
     "lint:fix": "eslint --fix \"**/*.{js,ts,tsx}\" && npm run lint:style:fix",
     "lint:style": "stylelint \"**/*.{scss, css, less}\"",
@@ -52,7 +51,7 @@
     "@rollup/plugin-replace": "^2.4.2",
     "@rollup/plugin-url": "^6.1.0",
     "@tarojs/components": "^3.2.10",
-    "@tarojs/components-react": "^10.2.23",
+    "@tarojs/components-react": "^10.2.24",
     "@tarojs/taro": "^3.2.10",
     "@testing-library/dom": "^8.1.0",
     "@testing-library/react": "^11.2.7",
@@ -60,6 +59,7 @@
     "@testing-library/user-event": "^13.2.1",
     "@types/jest": "^26.0.23",
     "@types/node": "^15.12.1",
+    "@types/qs": "^6.9.7",
     "@types/react": "^17.0.9",
     "@types/react-copy-to-clipboard": "^5.0.1",
     "@types/react-dom": "^17.0.6",
@@ -77,6 +77,7 @@
     "eslint-plugin-react": "^7.24.0",
     "eslint-plugin-react-hooks": "^4.2.0",
     "eslint-plugin-xrkmm": "^1.0.5",
+    "fs-extra": "^10.0.0",
     "highlightjs-cypher": "^1.1.1",
     "husky": "^6.0.0",
     "jest": "^27.0.4",
@@ -91,8 +92,6 @@
     "react-dom": "^17.0.2",
     "rollup": "^2.50.6",
     "rollup-plugin-babel": "^4.4.0",
-    "rollup-plugin-copy": "^3.4.0",
-    "rollup-plugin-eslint": "^7.0.0",
     "rollup-plugin-jscc": "^2.0.0",
     "rollup-plugin-node-resolve": "^5.2.0",
     "rollup-plugin-postcss": "^4.0.0",
@@ -114,10 +113,12 @@
     "@tarojs/components": ">=3",
     "@tarojs/components-react": ">=3",
     "@tarojs/react": ">=3",
+    "qs": ">=6.8",
     "react": ">=16.13.0",
     "react-dom": ">=16.13.0"
   },
   "dependencies": {
-    "classnames": "^2.3.1"
+    "classnames": "^2.3.1",
+    "qs": "6.8"
   }
 }

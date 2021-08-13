@@ -5,9 +5,9 @@
  * @LastEditors: zhoulong.yang
  * @LastEditTime: 2021-06-10 16:35:14
  */
-import { Button, Toast, Drawer, ActionSheet, showActionSheet, Modal, showModal, Icon, Empty } from '@xrkmm/ui-h5'
+import { Button, Toast, Drawer, ActionSheet, showActionSheet, Modal, showModal, Icon, Empty, Image } from '@xrkmm/ui-h5'
 import { useState } from 'react'
-import '../../package-h5/dist/index.css'
+import '../../package-h5/dist/styles/base.css'
 import '../../package-h5/dist/styles/index.css'
 import '../../package-h5/icons/style.scss'
 import './App.scss'
@@ -112,6 +112,8 @@ function App() {
       </Empty>
 
       <Empty text="暂无内容哦" size="small" />
+      <Image src="https://t7.baidu.com/it/u=1951548898,3927145&fm=193&f=GIF" />
+      <Image src="https://t7.baidu.com/it/u=1595072465,3644073269&fm=193&f=GIF" lazyLoad />
     </div>
   )
 }

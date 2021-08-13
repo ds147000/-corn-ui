@@ -21,7 +21,7 @@
     "typeRoots": [
       "node_modules/@types"
     ],
-    "allowJs": true,
+    "allowJs": false,
     "noImplicitAny": false
   },
   "onlyCompileBundledFiles": true,

@@ -5,9 +5,8 @@ const fs = require('fs')
 const { resolveApp, writeFile } = require('./utils')
 
 
-export default (packageName) => ({
+module.exports = async (packageName) => {
 
-  writeBundle: async () => {
     const IconsFiles = global.sync(resolveApp('src/assets/icons/*.svg'))
 
     webfontsGenerator({
@@ -84,8 +83,6 @@ export default Demo
 
         writeFile(resolveApp('src/components/Icon/demo/basis.md'), Prettier.format(MarkContext, { parser: 'markdown' }))
         res()
-
       }, 100)
     })
-  }
-})
+}

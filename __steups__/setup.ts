@@ -77,3 +77,33 @@ jest.mock('@tarojs/taro', () => {
     usePageScroll: jest.fn()
   }
 })
+
+class MockIntersectionObserver {
+  private els = new Set<HTMLDivElement>()
+  private num = -1
+
+  constructor(public cb) {
+    this.run()
+  }
+
+  run() {
+    this.num += 1
+    const list = []
+    this.els.forEach((item) => list.push({
+      target: item,
+      isIntersecting: this.num % 2 === 0,
+    }))
+    this.cb(list, this)
+    setTimeout(() => this.run(), 100)
+  }
+
+  observe(el: HTMLDivElement) {
+    this.els.add(el)
+  }
+
+  unobserve(el: HTMLDivElement) {
+    this.els.delete(el)
+  }
+}
+
+window.IntersectionObserver = MockIntersectionObserver as any

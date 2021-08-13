@@ -23,7 +23,7 @@
       "global.d.ts"
     ],
     "paths": {
-      "@xrkmm/ui-tari/*": [ "../package-taro/dist/*" ],
+      "@xrkmm/ui-taro/*": [ "../package-taro/dist/*" ],
       "@xrkmm/ui-taro": [ "../package-taro/dist", ]
     }
   },

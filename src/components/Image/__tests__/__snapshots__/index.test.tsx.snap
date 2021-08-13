@@ -1,0 +1,14 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Image basis 1`] = `
+<div>
+  <div
+    class="taro-img xrk-img"
+  >
+    <img
+      class="taro-img__mode-scaletofill"
+      src="https://t7.baidu.com/it/u=1440354408,1578911780&fm=193&f=GIF"
+    />
+  </div>
+</div>
+`;

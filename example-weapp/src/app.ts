@@ -6,7 +6,6 @@
  * @LastEditTime: 2021-06-10 15:32:29
  */
 import { Component } from 'react'
-import '@xrkmm/ui-taro/styles/index.scss'
 import '../../package-taro/icons/style.scss'
 import './app.scss'
 

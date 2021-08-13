@@ -13,9 +13,7 @@ import RollupCommonjs from '@rollup/plugin-commonjs'
 import RollupTypescript from 'rollup-plugin-typescript2'
 import RollupJscc from 'rollup-plugin-jscc'
 import RollupPostcss from 'rollup-plugin-postcss'
-import RollupCopy from 'rollup-plugin-copy'
-import BuidlIcon from './build-icons'
-import { eslint } from 'rollup-plugin-eslint'
+import BuildCss from './rollup.config.css'
 import { DEFAULT_EXTENSIONS } from '@babel/core'
 const { resolveApp, removeDir } = require('./utils')
 
@@ -30,7 +28,8 @@ const externalPackages = [
   '@babel/runtime',
   '@tarojs/runtime',
   '@tarojs/taro',
-  '@atrojs/api'
+  '@atrojs/api',
+  'qs'
 ]
 
 export default {
@@ -49,7 +48,6 @@ export default {
     }
   ],
   plugins: [
-    eslint({ throwOnError: true, configFile: resolveApp('.eslintrc.js') }),
     RollupAlias({
       entries: {
         'weui': resolveApp('build/mock/weui')
@@ -101,20 +99,6 @@ export default {
         ]
       ]
     }),
-    RollupCopy({
-      targets: [
-        {
-          src: resolveApp('src/styles'),
-          dest: resolveApp('package-h5/dist'),
-          copyOnce: true
-        },
-        {
-          src: resolveApp('src/assets'),
-          dest: resolveApp('package-h5/dist'),
-          copyOnce: true
-        }
-      ]
-    }),
-    BuidlIcon('package-h5')
+    BuildCss('package-h5')
   ]
 }

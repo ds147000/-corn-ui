@@ -7,7 +7,7 @@
  */
 import { Component } from 'react'
 import { View } from '@tarojs/components'
-import { Button, Toast, Drawer, showActionSheet, showModal, Modal, Icon } from '@xrkmm/ui-taro'
+import { Button, Toast, Drawer, showActionSheet, showModal, Modal, Icon, Image } from '@xrkmm/ui-taro'
 import './index.scss'
 
 const asList = [
@@ -97,6 +97,8 @@ export default class Index extends Component {
         ]}
         onButtonClick={() => this.setState({ mShow: false })}
         />
+        <Image src="https://t7.baidu.com/it/u=1951548898,3927145&fm=193&f=GIF"  />
+        <Image src="https://t7.baidu.com/it/u=1595072465,3644073269&fm=193&f=GIF" lazyLoad />
       </View>
     )
   }

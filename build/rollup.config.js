@@ -12,9 +12,7 @@ import RollupCommonjs from '@rollup/plugin-commonjs'
 import RollupTypescript from 'rollup-plugin-typescript2'
 import RollupJscc from 'rollup-plugin-jscc'
 import RollupBabel from '@rollup/plugin-babel'
-import RollupCopy from 'rollup-plugin-copy'
-import BuidlIcon from './build-icons'
-import { eslint } from 'rollup-plugin-eslint'
+import BuildCss from './rollup.config.css'
 const { resolveApp, removeDir } = require('./utils')
 
 if (process.env.NODE_ENV === 'production') removeDir('package-taro')
@@ -29,6 +27,7 @@ const externalPackages = [
   '@tarojs/taro',
   '@tarojs/react',
   '@babel/runtime',
+  'qs'
 ]
 
 export default {
@@ -47,7 +46,6 @@ export default {
     }
   ],
   plugins: [
-    eslint({ throwOnError: true }),
     RollupJscc({
       values: { _APP: 'weapp' }
     }),
@@ -63,20 +61,6 @@ export default {
       exclude: ['node_modules/**', 'example/**', 'example-react/**'],
       configFile: resolveApp('./babel.config.js')
     }),
-    RollupCopy({
-      targets: [
-        {
-          src: resolveApp('src/styles'),
-          dest: resolveApp('package-taro/dist/'),
-          copyOnce: true
-        },
-        {
-          src: resolveApp('src/assets'),
-          dest: resolveApp('package-taro/dist/'),
-          copyOnce: true
-        }
-      ]
-    }),
-    BuidlIcon('package-taro')
+    BuildCss('package-taro')
   ]
 }

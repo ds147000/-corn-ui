@@ -2,8 +2,7 @@ const sass = require('sass')
 const autoprefixer = require('autoprefixer')
 const postcss = require('postcss')
 const pxtransform = require('postcss-pxtransform')
-const fs = require('fs')
-const { resolveApp, writeFile, checkFiles } = require('./utils')
+const { resolveApp, writeFile } = require('./utils')
 
 const RollupPxtransform = pxtransform({
   platform: 'h5',
@@ -15,34 +14,13 @@ const RollupPxtransform = pxtransform({
   }
 })
 
-const result = sass.renderSync({
-  file: resolveApp('src/styles/index.scss')
-})
+module.exports = () => {
+  const result = sass.renderSync({ file: resolveApp('src/styles/index.scss') })
 
-postcss([
-  autoprefixer,
-  RollupPxtransform
-])
-.process(result.css, { from: resolveApp('src/styles/index.scss') })
-.then(res => {
-  try {
-    writeFile(resolveApp('package-h5/dist/styles/index.css'), res.css)
-
-  } catch (error) {
-
-  }
-  try {
-    writeFile(resolveApp('package-taro/dist/styles/index.css'), res.css)
-  } catch (error) {
-
-  }
-
-  if (checkFiles(resolveApp('package-h5/dist/index.esm.css')).isFile())
-    fs.rmSync(resolveApp('package-h5/dist/index.esm.css'))
-
-  if (checkFiles(resolveApp('package-h5/dist/index.css')).isFile()) {
-    const baseCss = fs.readFileSync(resolveApp('package-h5/dist/index.css'))
-    fs.rmSync(resolveApp('package-h5/dist/index.css'))
-    writeFile(resolveApp('package-h5/dist/styles/base.css'), baseCss)
-  }
-})
+  return postcss([
+    autoprefixer,
+    RollupPxtransform
+  ])
+  .process(result.css, { from: resolveApp('src/styles/index.scss') })
+  .then(res => res.css)
+}
