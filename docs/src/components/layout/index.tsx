@@ -39,7 +39,7 @@ const View: React.FC = ({ children }) => {
       </Header>
 
       <Layout className="site-layout">
-        <Sider theme="light">
+        <Sider theme="light" className="menu">
           <Menu selectedKeys={[location.pathname]} mode="inline">
           <Menu.ItemGroup title="入门">
               <Menu.Divider />
