@@ -112,7 +112,7 @@ function App() {
       </Empty>
 
       <Empty text="暂无内容哦" size="small" />
-      <Image src="https://t7.baidu.com/it/u=1951548898,3927145&fm=193&f=GIF" />
+      <Image src="https://t7.baidu.com/it/u=124476473,2583135375&fm=193&f=GIFF" previewImage />
       <Image src="https://t7.baidu.com/it/u=1595072465,3644073269&fm=193&f=GIF" lazyLoad />
     </div>
   )

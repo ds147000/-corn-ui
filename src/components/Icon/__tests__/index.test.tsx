@@ -1,6 +1,6 @@
 import React from 'react'
 import { render } from '@testing-library/react'
-import Icon from '../index'
+import Icon from '../index.h5'
 
 describe('Icon', () => {
   test('basis', () => {

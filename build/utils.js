@@ -125,7 +125,14 @@ exports.getMarkDownTemplate = async (paths = [], dirPath) => {
     const startIndex = MarkdownContent.content.indexOf('```tsx')
     const lastIndex = MarkdownContent.content.lastIndexOf('```')
     const code = MarkdownContent.content.slice(startIndex + 6, lastIndex).split('```css')
-    const jsCode = code.length > 1 ? code[0].slice(0, code.indexOf('```css') - 6) : code[0]
+    let jsCode = ''
+
+    if (code.length > 1) {
+      jsCode = code[0].slice(0, code.indexOf('```css'))
+      jsCode = jsCode.slice(0, jsCode.lastIndexOf('```'))
+    } else {
+      jsCode = code[0]
+    }
     const cssCode = code.length > 1 ? code[1] : null
 
 
@@ -143,12 +150,12 @@ exports.getMarkDownTemplate = async (paths = [], dirPath) => {
 
       this.writeFile(compDis + `/${fileName}.tsx`, Prettier.format(
         `
-        import './style.scss'
+        import './${fileName}-style.scss'
         ${jsCode}
         `
       , PerttierConfig))
 
-      this.writeFile(compDis + `/style.scss`, Prettier.format(cssCode, { parser: 'css' }))
+      this.writeFile(compDis + `/${fileName}-style.scss`, Prettier.format(cssCode, { parser: 'css' }))
 
     } else {
       this.writeFile(compDis + `/${fileName}.tsx`, Prettier.format(jsCode, PerttierConfig))

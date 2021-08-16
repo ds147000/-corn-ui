@@ -8,7 +8,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  z-index: $portalIndex;
+  z-index: $ToastIndex;
   flex-direction: column;
 
   &-actions {

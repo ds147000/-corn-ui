@@ -5,14 +5,14 @@ Object {
   "asFragment": [Function],
   "baseElement": <body>
     <div>
-      <span
-        class="taro-text xrk-icon xrk-i-banji"
+      <i
+        class="xrk-icon xrk-i-banji"
       />
     </div>
   </body>,
   "container": <div>
-    <span
-      class="taro-text xrk-icon xrk-i-banji"
+    <i
+      class="xrk-icon xrk-i-banji"
     />
   </div>,
   "debug": [Function],

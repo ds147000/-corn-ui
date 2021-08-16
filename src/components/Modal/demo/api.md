@@ -4,7 +4,6 @@ sort: 1
 ### API 方式调用
 
 ```tsx
-import { useState } from "react";
 import { showModal, Button } from "@xrkmm/ui-h5";
 
 const Demo: React.FC = () => {

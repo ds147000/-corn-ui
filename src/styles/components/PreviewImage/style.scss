@@ -1,0 +1,21 @@
+.xrk-preview-image {
+  width: 100vw;
+  height: 100vh;
+  background-color: #000;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: $portalIndex;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  .swiper-container-wrapper {
+    height: unset;
+  }
+
+  &-img {
+    width: 100vw;
+    height: unset;
+  }
+}

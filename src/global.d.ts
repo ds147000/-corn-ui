@@ -8,3 +8,9 @@ declare module '*.less';
 declare module '*.scss';
 declare module '*.sass';
 declare module '*.styl';
+
+interface Window {
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  wx: any
+}
+

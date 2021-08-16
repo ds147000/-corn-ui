@@ -1,20 +1,14 @@
-import React from 'react'
-import type { TextProps } from '@tarojs/components/types/Text'
+/* eslint-disable import/export */
+/* eslint-disable import/first */
 
 // #if _APP === 'weapp'
-import { Text } from '@tarojs/components'
-// #endif
-
-export interface IconProps extends TextProps {
-  name: string
-}
-
-const Icon: React.FC<IconProps> = ({ name }) => {
-  // #if _APP === 'weapp'
-  return <Text className={`xrk-icon xrk-i-${name}`} />
-  // #else
-  return <i className={`xrk-icon xrk-i-${name}`} /> // eslint-disable-line no-unreachable, react/forbid-elements
-  // #endif
-}
+import Icon from './index.h5'
 
 export default Icon
+
+// #else
+import Icon from './index.taro'
+
+
+export default Icon
+// #endif

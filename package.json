@@ -1,6 +1,6 @@
 {
   "name": "@xrkmm/ui",
-  "version": "0.0.9",
+  "version": "0.0.10",
   "description": "向日葵妈妈移动UI库，支持H5、小程序端使用。具有自适应屏幕，主题变量化等特性",
   "main": "package-taro/dist/index.js",
   "module": "package-taro/dist/index.esm.js",
@@ -51,7 +51,7 @@
     "@rollup/plugin-replace": "^2.4.2",
     "@rollup/plugin-url": "^6.1.0",
     "@tarojs/components": "^3.2.10",
-    "@tarojs/components-react": "^10.2.24",
+    "@tarojs/components-react": "10.2.25",
     "@tarojs/taro": "^3.2.10",
     "@testing-library/dom": "^8.1.0",
     "@testing-library/react": "^11.2.7",

@@ -2,7 +2,7 @@ import { View } from '@tarojs/components'
 import classNames from 'classnames'
 import React, { useMemo } from 'react'
 import Drawer from '../Drawer'
-import Icon from '../Icon'
+import Icon from '../Icon/index.h5'
 import { ActionSheetItem } from './item'
 
 

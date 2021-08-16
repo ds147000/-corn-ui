@@ -84,10 +84,10 @@ export default {
               transform: (importName) => {
                 switch (importName) {
                   case 'Swiper':
-                    return `@tarojs/components-react/src/components/${importName.toLocaleLowerCase()}/hepler`
+                    return `@tarojs/components-react/src/components/swiper/hepler`
 
                   case 'SwiperItem':
-                    return `@tarojs/components-react/src/components/${importName.toLocaleLowerCase()}/hepler/item`
+                    return `@tarojs/components-react/src/components/swiper/hepler/item`
 
                   default:
                     return `@tarojs/components-react/src/components/${importName.toLocaleLowerCase()}`

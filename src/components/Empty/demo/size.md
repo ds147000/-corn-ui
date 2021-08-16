@@ -5,7 +5,6 @@ sort: 10
 ### 三种大小
 
 ```tsx
-import { useState } from 'react'
 import { Empty } from '@xrkmm/ui-h5'
 
 const Demo: React.FC = () => {

@@ -43,11 +43,32 @@ const Routes: RoutesProps[] = [
     sort: 1,
   },
   {
+    path: '/Image',
+    component: require('../views/Image').default,
+    title: 'Image 图片',
+    type: '通用',
+    sort: 3,
+  },
+  {
     path: '/Modal',
     component: require('../views/Modal').default,
     title: 'Modal 模态对话框',
     type: '反馈',
     sort: 1,
+  },
+  {
+    path: '/PreviewImage',
+    component: require('../views/PreviewImage').default,
+    title: 'previewImage 预览图片',
+    type: '反馈',
+    sort: 6,
+  },
+  {
+    path: '/Swiper',
+    component: require('../views/Swiper').default,
+    title: 'Swiper 轮播图',
+    type: '状态展示',
+    sort: 2,
   },
   {
     path: '/Toast',

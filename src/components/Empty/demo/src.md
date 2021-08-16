@@ -5,7 +5,6 @@ sort: 5
 ### 使用其他的缺省图
 
 ```tsx
-import { useState } from 'react'
 import { Empty } from '@xrkmm/ui-h5'
 
 const Demo: React.FC = () => {

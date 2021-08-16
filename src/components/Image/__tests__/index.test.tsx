@@ -1,5 +1,5 @@
 import React from 'react'
-import { render } from '@testing-library/react'
+import { fireEvent, render, waitFor } from '@testing-library/react'
 import Image from '../index.h5'
 
 describe('Image', () => {
@@ -36,5 +36,19 @@ describe('Image', () => {
     // eslint-disable-next-line no-magic-numbers
     await new Promise((res) => setTimeout(res, 1000))
     expect(screen.container.querySelector('img')).toBe(null)
+  })
+
+  test('preview', async () => {
+    const screen = render(<Image src={url} previewImage />)
+    fireEvent.click(screen.container.querySelector('img') as HTMLImageElement)
+    await waitFor(() => expect(screen).toMatchSnapshot())
+  })
+
+  test('click', async () => {
+    const click = jest.fn()
+    const screen = render(<Image src={url} onClick={click} />)
+    fireEvent.click(screen.container.querySelector('img') as HTMLImageElement)
+    // eslint-disable-next-line no-magic-numbers
+    expect(click).toHaveBeenCalledTimes(1)
   })
 })
