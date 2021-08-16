@@ -57,6 +57,13 @@ const Routes: RoutesProps[] = [
     sort: 1,
   },
   {
+    path: '/Money',
+    component: require('../views/Money').default,
+    title: 'Money 金额展示器',
+    type: '状态展示',
+    sort: 2,
+  },
+  {
     path: '/PreviewImage',
     component: require('../views/PreviewImage').default,
     title: 'previewImage 预览图片',

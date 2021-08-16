@@ -1,0 +1,408 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`正常测试 <Money value={1} type={} /> 期望结果 => 类型： ￥ 金额：0.01 ; 1`] = `
+<div>
+  <span
+    class="taro-text xrk-money xrk-money-middle"
+  >
+    <span
+      class="taro-text money-mark"
+      data-testid="money-mark"
+    >
+      ￥
+    </span>
+    <span
+      class="taro-text"
+      data-testid="money"
+    >
+      0.01
+    </span>
+  </span>
+</div>
+`;
+
+exports[`正常测试 <Money value={1} type={coin} /> 期望结果 => 类型： K 金额：1 ; 1`] = `
+<div>
+  <span
+    class="taro-text xrk-money xrk-money-middle"
+  >
+    <span
+      class="taro-text money-mark"
+      data-testid="money-mark"
+    >
+      K
+    </span>
+    <span
+      class="taro-text"
+      data-testid="money"
+    >
+      1
+    </span>
+  </span>
+</div>
+`;
+
+exports[`正常测试 <Money value={50} type={} /> 期望结果 => 类型： ￥ 金额：0.5 ; 1`] = `
+<div>
+  <span
+    class="taro-text xrk-money xrk-money-middle"
+  >
+    <span
+      class="taro-text money-mark"
+      data-testid="money-mark"
+    >
+      ￥
+    </span>
+    <span
+      class="taro-text"
+      data-testid="money"
+    >
+      0.5
+    </span>
+  </span>
+</div>
+`;
+
+exports[`正常测试 <Money value={100} type={} /> 期望结果 => 类型： ￥ 金额：1 ; 1`] = `
+<div>
+  <span
+    class="taro-text xrk-money xrk-money-middle"
+  >
+    <span
+      class="taro-text money-mark"
+      data-testid="money-mark"
+    >
+      ￥
+    </span>
+    <span
+      class="taro-text"
+      data-testid="money"
+    >
+      1
+    </span>
+  </span>
+</div>
+`;
+
+exports[`正常测试 <Money value={100} type={coin} /> 期望结果 => 类型： K 金额：100 ; 1`] = `
+<div>
+  <span
+    class="taro-text xrk-money xrk-money-middle"
+  >
+    <span
+      class="taro-text money-mark"
+      data-testid="money-mark"
+    >
+      K
+    </span>
+    <span
+      class="taro-text"
+      data-testid="money"
+    >
+      100
+    </span>
+  </span>
+</div>
+`;
+
+exports[`正常测试 <Money value={1234} type={gold} /> 期望结果 => 类型： null 金额：12.34葵币 ; 1`] = `
+<div>
+  <span
+    class="taro-text xrk-money xrk-money-middle"
+  >
+    <span
+      class="taro-text"
+      data-testid="money"
+    >
+      12.34葵币
+    </span>
+  </span>
+</div>
+`;
+
+exports[`正常测试 <Money value={4000} type={} /> 期望结果 => 类型： ￥ 金额：40 ; 1`] = `
+<div>
+  <span
+    class="taro-text xrk-money xrk-money-middle"
+  >
+    <span
+      class="taro-text money-mark"
+      data-testid="money-mark"
+    >
+      ￥
+    </span>
+    <span
+      class="taro-text"
+      data-testid="money"
+    >
+      40
+    </span>
+  </span>
+</div>
+`;
+
+exports[`正常测试 <Money value={29104321012} type={gold} /> 期望结果 => 类型： null 金额：291043210.12葵币 ; 1`] = `
+<div>
+  <span
+    class="taro-text xrk-money xrk-money-middle"
+  >
+    <span
+      class="taro-text"
+      data-testid="money"
+    >
+      291043210.12葵币
+    </span>
+  </span>
+</div>
+`;
+
+exports[`正常测试 <Money value={212321213121} type={} /> 期望结果 => 类型： ￥ 金额：2123212131.21 ; 1`] = `
+<div>
+  <span
+    class="taro-text xrk-money xrk-money-middle"
+  >
+    <span
+      class="taro-text money-mark"
+      data-testid="money-mark"
+    >
+      ￥
+    </span>
+    <span
+      class="taro-text"
+      data-testid="money"
+    >
+      2123212131.21
+    </span>
+  </span>
+</div>
+`;
+
+exports[`边界测试 <Money value={-99.2} type={} /> 期望结果 => 类型： ￥ 金额：-0.99 ; 1`] = `
+<div>
+  <span
+    class="taro-text xrk-money xrk-money-middle"
+  >
+    <span
+      class="taro-text money-mark"
+      data-testid="money-mark"
+    >
+      ￥
+    </span>
+    <span
+      class="taro-text"
+      data-testid="money"
+    >
+      -0.99
+    </span>
+  </span>
+</div>
+`;
+
+exports[`边界测试 <Money value={-9999} type={} /> 期望结果 => 类型： ￥ 金额：-99.99 ; 1`] = `
+<div>
+  <span
+    class="taro-text xrk-money xrk-money-middle"
+  >
+    <span
+      class="taro-text money-mark"
+      data-testid="money-mark"
+    >
+      ￥
+    </span>
+    <span
+      class="taro-text"
+      data-testid="money"
+    >
+      -99.99
+    </span>
+  </span>
+</div>
+`;
+
+exports[`边界测试 <Money value={100} type={} /> 期望结果 => 类型： ￥ 金额：1 ; 1`] = `
+<div>
+  <span
+    class="taro-text xrk-money xrk-money-middle"
+  >
+    <span
+      class="taro-text money-mark"
+      data-testid="money-mark"
+    >
+      ￥
+    </span>
+    <span
+      class="taro-text"
+      data-testid="money"
+    >
+      1
+    </span>
+  </span>
+</div>
+`;
+
+exports[`边界测试 <Money value={null} type={} /> 期望结果 => 类型： ￥ 金额：0 ; 1`] = `
+<div>
+  <span
+    class="taro-text xrk-money xrk-money-middle"
+  >
+    <span
+      class="taro-text money-mark"
+      data-testid="money-mark"
+    >
+      ￥
+    </span>
+    <span
+      class="taro-text"
+      data-testid="money"
+    >
+      0
+    </span>
+  </span>
+</div>
+`;
+
+exports[`边界测试 <Money value={null} type={coin} /> 期望结果 => 类型： K 金额： ; 1`] = `
+<div>
+  <span
+    class="taro-text xrk-money xrk-money-middle"
+  >
+    <span
+      class="taro-text money-mark"
+      data-testid="money-mark"
+    >
+      K
+    </span>
+    <span
+      class="taro-text"
+      data-testid="money"
+    />
+  </span>
+</div>
+`;
+
+exports[`边界测试 <Money value={null} type={gold} /> 期望结果 => 类型： null 金额：0葵币 ; 1`] = `
+<div>
+  <span
+    class="taro-text xrk-money xrk-money-middle"
+  >
+    <span
+      class="taro-text"
+      data-testid="money"
+    >
+      0葵币
+    </span>
+  </span>
+</div>
+`;
+
+exports[`边界测试 <Money value={undefined} type={} /> 期望结果 => 类型： ￥ 金额：0 ; 1`] = `
+<div>
+  <span
+    class="taro-text xrk-money xrk-money-middle"
+  >
+    <span
+      class="taro-text money-mark"
+      data-testid="money-mark"
+    >
+      ￥
+    </span>
+    <span
+      class="taro-text"
+      data-testid="money"
+    >
+      0
+    </span>
+  </span>
+</div>
+`;
+
+exports[`边界测试 <Money value={undefined} type={coin} /> 期望结果 => 类型： K 金额： ; 1`] = `
+<div>
+  <span
+    class="taro-text xrk-money xrk-money-middle"
+  >
+    <span
+      class="taro-text money-mark"
+      data-testid="money-mark"
+    >
+      K
+    </span>
+    <span
+      class="taro-text"
+      data-testid="money"
+    />
+  </span>
+</div>
+`;
+
+exports[`边界测试 <Money value={undefined} type={gold} /> 期望结果 => 类型： null 金额：0葵币 ; 1`] = `
+<div>
+  <span
+    class="taro-text xrk-money xrk-money-middle"
+  >
+    <span
+      class="taro-text"
+      data-testid="money"
+    >
+      0葵币
+    </span>
+  </span>
+</div>
+`;
+
+exports[`金额 <Money value={1} type={coin} /> 金额 <Money value=1 type=coin lineThrough /> 1`] = `
+<div>
+  <span
+    class="taro-text xrk-money xrk-money-middle"
+  >
+    <span
+      class="taro-text money-mark"
+      data-testid="money-mark"
+    >
+      K
+    </span>
+    <span
+      class="taro-text line-through"
+      data-testid="money"
+    >
+      1
+    </span>
+  </span>
+</div>
+`;
+
+exports[`金额 <Money value={1234} type={gold} /> 金额 <Money value=1234 type=gold lineThrough /> 1`] = `
+<div>
+  <span
+    class="taro-text xrk-money xrk-money-middle"
+  >
+    <span
+      class="taro-text line-through"
+      data-testid="money"
+    >
+      12.34葵币
+    </span>
+  </span>
+</div>
+`;
+
+exports[`金额 <Money value={212321213121} type={} /> 金额 <Money value=212321213121 type= lineThrough /> 1`] = `
+<div>
+  <span
+    class="taro-text xrk-money xrk-money-middle"
+  >
+    <span
+      class="taro-text money-mark"
+      data-testid="money-mark"
+    >
+      ￥
+    </span>
+    <span
+      class="taro-text line-through"
+      data-testid="money"
+    >
+      2123212131.21
+    </span>
+  </span>
+</div>
+`;

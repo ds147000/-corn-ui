@@ -1,0 +1,22 @@
+.xrk-money {
+  &-middle {
+    font-size: 40px;
+  }
+
+  &-large {
+    font-size: 60px;
+
+    .money-mark {
+      font-size: 30px;
+    }
+  }
+
+  &-small {
+    font-size: 30px;
+  }
+
+  &-mark {
+    font-style: normal;
+    font-size: 18px;
+  }
+}

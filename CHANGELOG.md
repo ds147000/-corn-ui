@@ -15,3 +15,8 @@
 
  # 0.0.9
  - 添加 `Empty`
+
+ # 0.0.11
+ - 添加 `Money`
+ - 添加 `Image`
+ - 添加 `previewImage`

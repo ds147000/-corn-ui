@@ -13,3 +13,19 @@ export function transformRem(val = 0): string {
 
   return parseFloat((val / designWidth).toFixed(remLen)) + 'rem'
 }
+
+/**
+ * 格式化金额
+ * @param value
+ * @param isReverse 是否获取原数
+ * @returns
+ */
+export function formatMoney(value: string | number, isReverse = false): number {
+  value = Number(value) || 0
+
+  if (isReverse) {
+    return Math.round(value * 100)
+  } else {
+    return Number((value / 100).toFixed(2))
+  }
+}

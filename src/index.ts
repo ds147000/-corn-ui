@@ -5,6 +5,9 @@
  * @LastEditors: zhoulong.yang
  * @LastEditTime: 2021-06-07 16:08:34
  */
+import { transformRem } from './utils'
+import { parseUrl, deckUrl, formatImg } from './utils/url'
+
 export { default as Button, ButtonProps } from './components/Button'
 export { default as Toast } from './components/Toast'
 export { default as Drawer } from './components/Drawer'
@@ -17,4 +20,11 @@ export { default as Empty } from './components/Empty'
 export { Swiper, SwiperItem } from './components/Swiper'
 export { default as Image } from './components/Image'
 export { default as previewImage } from './components/PreviewImage'
-export { transformRem } from './utils'
+export { default as Money } from './components/Money'
+
+export const UTILS = {
+  transformRem,
+  parseUrl,
+  deckUrl,
+  formatImg
+}
