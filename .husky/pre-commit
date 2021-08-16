@@ -3,4 +3,4 @@
 
 npm run lint
 npm run test:prod
-npm run build:doc
+npm run pub:doc
