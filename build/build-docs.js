@@ -7,6 +7,7 @@ const main = async () => {
 
   spinner.start('获取demo文件')
   const demoFileList = global.sync(resolveApp('src/components/**/demo/*.md'));
+  demoFileList.push(...global.sync(resolveApp('src/utils/**/*.md')))
   spinner.succeed('获取demo文件成功')
 
   spinner.start('创建md视图文件目录')

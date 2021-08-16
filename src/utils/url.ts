@@ -47,7 +47,7 @@ export function parseUrl(url: string): ParseResult {
 }
 
 /**
- * 修改url参数
+ * 合并url参数
  * @param {string} url
  * @param {object} searchParams ?后面的参数
  * @param {object} hashParams #后面的参数
