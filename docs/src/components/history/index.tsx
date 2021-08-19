@@ -29,6 +29,10 @@ const Page: React.FC = () => {
 <li>添加 <code><span class="hljs-attribute">Image</span></code></li>
 <li>添加 <code><span class="hljs-attribute">previewImage</span></code></li>
 </ul>
+<h1>0.0.12</h1>
+<ul>
+<li>添加 <code><span class="hljs-literal">Tab</span></code></li>
+</ul>
 `,
       }}
     />
