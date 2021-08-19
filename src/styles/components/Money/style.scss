@@ -13,10 +13,18 @@
 
   &-small {
     font-size: 30px;
+
+    .money-mark {
+      font-size: 20px;
+    }
   }
 
   &-mark {
     font-style: normal;
     font-size: 18px;
+
+    .money-mark {
+      font-size: 10px;
+    }
   }
 }
