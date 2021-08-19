@@ -15,8 +15,6 @@ export interface ButtonProps {
   ghost?: boolean
   /** 是否禁用 */
   disabled?: boolean
-  /** 点击跳转的地址，指定此属性 button 的行为和 Link 链接一致, 后期补充	 */
-  // href?: string
   /** 点击跳转事件 */
   onClick?(): void
 }

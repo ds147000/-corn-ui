@@ -21,6 +21,7 @@ export { Swiper, SwiperItem } from './components/Swiper'
 export { default as Image } from './components/Image'
 export { default as previewImage } from './components/PreviewImage'
 export { default as Money } from './components/Money'
+export { default as Tab } from './components/Tab'
 
 export const UTILS = {
   transformRem,

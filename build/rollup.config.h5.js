@@ -56,7 +56,7 @@ export default {
     RollupPostcss({
       inject: { insertAt: 'top' },
       extract: true,
-      sourceMap: false
+      sourceMap: false,
     }),
     RollupJscc({
       values: { _APP: 'h5' }

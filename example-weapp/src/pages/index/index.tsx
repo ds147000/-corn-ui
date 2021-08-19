@@ -7,18 +7,27 @@
  */
 import { Component } from 'react'
 import { View } from '@tarojs/components'
-import { Button, Toast, Drawer, showActionSheet, showModal, Modal, Icon, Image } from '@xrkmm/ui-taro'
+import { Button, Toast, Drawer, showActionSheet, showModal, Modal, Icon, Image, Tab } from '@xrkmm/ui-taro'
 import './index.scss'
+import { TabItemPorps } from '@xrkmm/ui-taro/components/Tab'
 
 const asList = [
   '广州',
   '深圳'
 ]
+const TabOption: TabItemPorps[] = [
+  { title: '我是选项1' },
+  { title: '我是选项2' },
+  { title: '我是选项3' },
+  { title: '我是选项4' },
+  { title: '我是选项5' }
+]
 export default class Index extends Component {
 
   state = {
     show: false,
-    mShow: true
+    mShow: true,
+    current: 0
   }
 
   componentWillMount () { }
@@ -42,6 +51,11 @@ export default class Index extends Component {
   render () {
     return (
       <View className='index'>
+         <Tab
+          options={TabOption}
+          currenIndex={this.state.current}
+          onChange={(index) => this.setState({ current: index })}
+        />
         <Button size="max" icon={<Icon name="service" />}>向日葵妈妈UI</Button>
         <Button size="big">向日葵妈妈UI</Button>
         <Button size="large">向日葵妈妈UI</Button>

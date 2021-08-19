@@ -78,6 +78,13 @@ const Routes: RoutesProps[] = [
     sort: 2,
   },
   {
+    path: '/Tab',
+    component: require('../views/Tab').default,
+    title: 'Tab 切换栏',
+    type: '状态展示',
+    sort: 1,
+  },
+  {
     path: '/Toast',
     component: require('../views/Toast').default,
     title: 'Toast 轻提示',

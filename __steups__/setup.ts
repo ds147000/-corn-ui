@@ -107,3 +107,6 @@ class MockIntersectionObserver {
 }
 
 window.IntersectionObserver = MockIntersectionObserver as any
+window.requestAnimationFrame = (cb: Function) => cb()
+
+jest.mock('../src/components/Image')

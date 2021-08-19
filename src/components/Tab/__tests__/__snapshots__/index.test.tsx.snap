@@ -1,0 +1,135 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`icon 1`] = `
+<div>
+  <div
+    class="xrk-tab xrk-f"
+    data-testid="tab"
+  >
+    <div
+      class="xrk-tab-item __x-st-exp __x-st-click"
+      data-testid="tab-item"
+    >
+      <span
+        class="taro-text"
+      >
+        item1
+      </span>
+    </div>
+    <div
+      class="xrk-tab-item __x-st-exp __x-st-click xrk-tab-item-active"
+      data-testid="tab-item"
+    >
+      <span
+        class="taro-text"
+      >
+        item2
+      </span>
+    </div>
+    <div
+      class="xrk-tab-item __x-st-exp __x-st-click"
+      data-testid="tab-item"
+    >
+      <span
+        class="taro-text"
+      >
+        <div
+          class="taro-img xrk-img xrk-tab-item-icon"
+        >
+          <img
+            class="taro-img__mode-scaletofill"
+            src="2121.png"
+          />
+        </div>
+      </span>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`not currenIndex 1`] = `
+<div>
+  <div
+    class="xrk-tab xrk-f"
+    data-testid="tab"
+  >
+    <div
+      class="xrk-tab-item __x-st-exp __x-st-click"
+      data-testid="tab-item"
+    >
+      <span
+        class="taro-text"
+      >
+        item1
+      </span>
+    </div>
+    <div
+      class="xrk-tab-item __x-st-exp __x-st-click"
+      data-testid="tab-item"
+    >
+      <span
+        class="taro-text"
+      >
+        item2
+      </span>
+    </div>
+    <div
+      class="xrk-tab-item __x-st-exp __x-st-click"
+      data-testid="tab-item"
+    >
+      <span
+        class="taro-text"
+      >
+        <div
+          class="taro-img xrk-img xrk-tab-item-icon"
+        >
+          <img
+            class="taro-img__mode-scaletofill"
+            src="2121.png"
+          />
+        </div>
+      </span>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`option 1`] = `
+<div>
+  <div
+    class="xrk-tab xrk-f"
+    data-testid="tab"
+  >
+    <div
+      class="xrk-tab-item __x-st-exp __x-st-click"
+      data-testid="tab-item"
+    >
+      <span
+        class="taro-text"
+      >
+        item1
+      </span>
+    </div>
+    <div
+      class="xrk-tab-item __x-st-exp __x-st-click xrk-tab-item-active"
+      data-testid="tab-item"
+    >
+      <span
+        class="taro-text"
+      >
+        item2
+      </span>
+    </div>
+    <div
+      class="xrk-tab-item __x-st-exp __x-st-click"
+      data-testid="tab-item"
+    >
+      <span
+        class="taro-text"
+      >
+        item4
+      </span>
+    </div>
+  </div>
+</div>
+`;

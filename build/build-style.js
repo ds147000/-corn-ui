@@ -22,5 +22,5 @@ module.exports = () => {
     RollupPxtransform
   ])
   .process(result.css, { from: resolveApp('src/styles/index.scss') })
-  .then(res => res.css)
+  .then(res => res.css.toString().replace('../../', ''))
 }

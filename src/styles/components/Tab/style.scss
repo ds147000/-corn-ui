@@ -1,0 +1,73 @@
+.xrk-tab {
+  overflow-y: hidden;
+  overflow-x: auto;
+  height: 90px;
+  margin-top: 14px;
+
+  &::-webkit-scrollbar {
+    height: 0;
+  }
+
+  &-item {
+    height: 90px;
+    white-space: nowrap;
+    line-height: 90px;
+    font-size: 32px;
+    font-weight: 400;
+    color: #818894;
+    position: relative;
+    flex: 1;
+    text-align: center;
+    padding: 0 20px;
+
+    &:first-child.active::before {
+      transform: translate(calc(-50% - 10px) , 0);
+    }
+
+    &:last-child.active::before {
+      transform: translate(calc(-50% + 10px) , 0);
+    }
+
+    &-active {
+      font-size: 38px;
+      font-weight: bold;
+      color: #242629;
+      position: relative;
+      z-index: 1;
+
+      &::before {
+        content: '';
+        background-image: url('../../../assets/img/tab-active.png');
+        background-repeat: no-repeat;
+        background-size: 100% 100%;
+        width: 100px;
+        height: 30px;
+        position: absolute;
+        z-index: -1;
+        top: 52px;
+        left: 50%;
+        transform: translate(-50% , 0);
+        contain: layout;
+      }
+    }
+
+    &-icon {
+      height: 90px;
+    }
+
+    &-message {
+      position: relative;
+
+      &::after {
+        content: '';
+        width: 8px;
+        height: 8px;
+        background: #ff4f4f;
+        border-radius: 8px;
+        position: absolute;
+        right: -20px;
+        top: 0;
+      }
+    }
+  }
+}
