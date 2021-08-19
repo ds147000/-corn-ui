@@ -17,7 +17,7 @@ const main = async () => {
 
   spinner.start('解析组件列表')
   const _componentsFiles = demoFileList.map((item) => {
-    return item.replace(/.*?src\/components\//, '').replace(/\/demo.*/, '')
+    return item.replace(/(.*?src\/components\/)|(.*?src\/)/, '').replace(/\/demo.*/, '')
   })
   const componentsFiles = new Set(_componentsFiles)
   spinner.succeed('解析组件列表成功')
@@ -26,14 +26,17 @@ const main = async () => {
     console.log(`📖 生成${item}组件的文档`)
     const dir = resolveApp('docs/src/views/' + item)
     await makeDir(dir)
-    const demoFiles = demoFileList.filter((file) => new RegExp(`src/components/${item}/demo/.*`).test(file))
+    const demoFiles = demoFileList.filter((file) => new RegExp(`(src/components/${item}/demo/.*)|(src/${item}/demo/.*)`).test(file))
 
     await getMarkDownTemplate(demoFiles, dir)
   })
   spinner.succeed()
 
   spinner.start('写入demo的路由配置')
-  await getDemoRoutes([...componentsFiles], resolveApp('docs/src/router/components.tsx'))
+  await getDemoRoutes(
+    demoFileList.filter((file) => new RegExp(`props.md`).test(file)),
+    resolveApp('docs/src/router/components.tsx')
+  )
   spinner.succeed()
 
   spinner.start('生成其他说明文档')

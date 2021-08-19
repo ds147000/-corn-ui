@@ -17,5 +17,5 @@ type: 状态展示
 | --- | --- | --- | --- | --- |
 | type | 否 | 金额类型，`glod` 葵花籽，`coin` 积分, `rmb` 人民币 | | `rmb`  |
 | size | 否 | 风格大小 | `large``middle``small` | `middle` |
-| amountString | 否 | 已经自处理过的金额，可以使用[formatMoney](/Utils)方法自处理数值 | `rmb` |  |
+| amountString | 否 | 已经自处理过的金额，可以使用[formatMoney](/utils)方法自处理数值 | `rmb` |  |
 | lineThrough | 否 | 是否高亮 | `boolean` | `false` |

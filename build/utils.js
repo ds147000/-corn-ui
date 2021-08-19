@@ -227,11 +227,11 @@ exports.getMarkDownTemplate = async (paths = [], dirPath) => {
 exports.getDemoRoutes = (paths = [], dirPath) => {
   const routerConfig = paths
     .map((item) => {
-      const { sort, type, title } = getMarkDownContent(this.resolveApp(`src/components/${item}/demo/props.md`))
+      const { sort, type, title } = getMarkDownContent(item)
 
       return `{
-        path: '/${item}',
-        component: require('../views/${item}').default,
+        path: '/${item.replace(/\/demo\/props\.md/, '').replace(/.*\//, '')}',
+        component: require('../views/${item.replace(/\/demo\/props\.md/, '').replace(/.*\//, '')}').default,
         title: '${title}',
         type: '${type}',
         sort: ${sort}

@@ -5,7 +5,7 @@
  * @LastEditors: zhoulong.yang
  * @LastEditTime: 2021-06-07 16:08:34
  */
-import { transformRem } from './utils'
+import { transformRem, formatMoney } from './utils'
 import { parseUrl, deckUrl, formatImg } from './utils/url'
 
 export { default as Button, ButtonProps } from './components/Button'
@@ -27,5 +27,6 @@ export const UTILS = {
   transformRem,
   parseUrl,
   deckUrl,
-  formatImg
+  formatImg,
+  formatMoney
 }

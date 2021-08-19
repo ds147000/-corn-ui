@@ -91,6 +91,13 @@ const Routes: RoutesProps[] = [
     type: '反馈',
     sort: 4,
   },
+  {
+    path: '/utils',
+    component: require('../views/utils').default,
+    title: 'UITIS 工具集合',
+    type: '工具',
+    sort: 4,
+  },
 ]
 
 export default Routes
