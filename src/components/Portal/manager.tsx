@@ -6,7 +6,6 @@ import ProtalSub from '../../utils/sub'
 import { PROTAL_ADD, PROTAL_REMOVE } from '../../config/event'
 
 class HostManager {
-  private initTime = 60
   private id = 1
   status = false
 
@@ -18,17 +17,17 @@ class HostManager {
 
     return new Promise((res) => {
       this.status = true
-      ReactDOM.render(<Host />, root)
-      setInterval(res, this.initTime)
+      ReactDOM.render(<Host onReady={res} />, root)
     })
   }
 
-  async add(children: React.ReactNode): Promise<number> {
+  async add(Comps: React.FC<{ onDestory?(): void }>, props: Record<string, unknown> = {}): Promise<void> {
     await this._init()
     const id = this.id + 1
-    ProtalSub.emit(PROTAL_ADD, id, children)
-
-    return id
+    const onDestory = (): void => {
+      this.remove(id)
+    }
+    ProtalSub.emit(PROTAL_ADD, id, <Comps {...props} onDestory={onDestory} key={id} />)
   }
 
   remove(id: number): void {

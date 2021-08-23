@@ -4,6 +4,41 @@ import { previewImageOption } from './interface'
 import { Swiper, SwiperItem } from '../Swiper'
 import Portal from '../Portal'
 
+interface ContainerProps extends previewImageOption {
+  onDestory(): void
+  activeIndex: number
+}
+
+const Container: React.FC<ContainerProps> = ({ onDestory, urls, activeIndex }) => {
+  return (
+    <View
+      data-testid="previewImage"
+      className="xrk-preview-image"
+      onClick={onDestory}
+      key="previewImage"
+    >
+      <Swiper
+        indicatorDots
+        loop={false}
+        current={activeIndex}
+        indicatorActiveColor="#fff"
+        className="xrk-preview-image-swiper"
+      >
+        {urls.map((item, key) => (
+          <SwiperItem key={item} >
+            <Image
+              data-testid={key === activeIndex ? 'previewImage-current' : ''}
+              lazyLoad={false}
+              src={item}
+              className="xrk-preview-image-img"
+            />
+          </SwiperItem>
+        ))}
+      </Swiper>
+    </View>
+  )
+}
+
 const previewImage = async (option: previewImageOption): Promise<{ errMsg: string }> => {
   if (window?.wx?.previewImage) return callWxPreview(option)
 
@@ -22,39 +57,11 @@ const callWxPreview = async (option: previewImageOption): Promise<{ errMsg: stri
 
 /** 使用jsx预览 */
 const callProtalPreview = async (option: previewImageOption): Promise<{ errMsg: string }> => {
-  let id = -1
   try {
-    const remove = (): void => Portal.remove(id)
 
     const activeIndex = option.urls.findIndex((item) => item === option.current)
 
-    id = await Portal.add(
-      <View
-        data-testid="previewImage"
-        className="xrk-preview-image"
-        onClick={remove}
-        key="previewImage"
-      >
-        <Swiper
-          indicatorDots
-          loop={false}
-          current={activeIndex}
-          indicatorActiveColor="#fff"
-          className="xrk-preview-image-swiper"
-        >
-          {option.urls.map((item, key) => (
-            <SwiperItem key={item} >
-              <Image
-                data-testid={key === activeIndex ? 'previewImage-current' : ''}
-                lazyLoad={false}
-                src={item}
-                className="xrk-preview-image-img"
-              />
-            </SwiperItem>
-          ))}
-        </Swiper>
-      </View>
-    )
+    await Portal.add(Container, { urls: option.urls, activeIndex })
 
     return Promise.resolve({ errMsg: 'ok' })
   } catch (error) {

@@ -1,32 +1,20 @@
 /* eslint-disable no-magic-numbers */
-import React from 'react'
 import { Container } from './container.h5'
 import { DEFAULT_DURATION, ToastOption } from './interface'
 import Protal from '../Portal'
 import Sub from '../../utils/sub'
 import { TOAST_ADD } from '../../config/event'
 
-const SuoreID = { value: -1 }
-const ID = new Proxy(SuoreID, {
-  set(target, prop, value): boolean {
-    if (prop === 'value' && value === -1) {
-      const oldId = target.value
-      Protal.remove(oldId)
-    }
-
-    return Reflect.set(target, prop, value)
-  }
-})
-
 class ToastManager {
+  private status = false
 
   private async _init(): Promise<void> {
-    if (ID.value !== -1) return Promise.resolve()
+    if (this.status) return Promise.resolve()
+    this.status = true
 
     // 因为是桢调用，所有需要延迟
     return new Promise((res) => {
-      Protal.add(<Container key="toast" onShow={res} onClose={(): void => this.hide()} />)
-        .then((id) => ID.value = id)
+      Protal.add(Container, { onShow: res, onHide: () => this.status = false })
     })
   }
 
@@ -44,11 +32,6 @@ class ToastManager {
     } catch (error) {
       _options.fail?.()
     }
-  }
-
-  /** 隐藏toast并且清除后续所有的taost消息队列 */
-  hide(): void {
-    ID.value = -1
   }
 
 }

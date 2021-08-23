@@ -1,5 +1,5 @@
 /* eslint-disable no-magic-numbers */
-import  React, { useState } from 'react'
+import React, { useState } from 'react'
 import Modal, { ModalButton } from './modal'
 import Protal from '../Portal'
 
@@ -25,60 +25,50 @@ export interface SuccessCallbackResult {
   errMsg: string
 }
 
-interface DomProps extends ModalOption {
-  onClick(SuccessCallbackResult): void
-  onHide(): void
-}
-
-const Dom: React.FC<DomProps> = ({
-  title,
-  cancelText = '取消',
-  confirmText = '确定',
-  showCancel,
-  content,
-  onClick,
-  onHide
-}) => {
-  const [ show, setShow ] = useState(true)
-  const button: ModalButton[] = [
-    { text: confirmText, style: 'success' },
-  ]
-
-  if (showCancel) button.push({ text: cancelText, style: 'cancel' })
-
-  const onButtonClick = (index: number): void => {
-    setShow(false)
-    onClick?.({
-      confirm: index === 0,
-      cancel: index === 1,
-      errMsg: 'ok'
-    })
-  }
-
-
-  return (
-    <Modal
-      title={title}
-      content={content}
-      visible={show}
-      onButtonClick={onButtonClick}
-      button={button}
-      onHide={onHide}
-    />
-  )
-}
 
 const showModal = async (option: ModalOption): Promise<SuccessCallbackResult> => {
   // eslint-disable-next-line no-async-promise-executor
   return new Promise(async (res, rej) => {
-    let id: number
-
-    const remove = (): void => {
-      Protal.remove(id)
-    }
 
     try {
-      id = await Protal.add(<Dom {...option} onHide={remove} onClick={res} />)
+
+      const Warp: React.FC<{ onDestory(): void }> = ({ onDestory }) => {
+        const [ show, setShow ] = useState(true)
+
+        const button: ModalButton[] = [
+          { text: option.confirmText || '确定', style: 'success' },
+        ]
+
+        if (option.showCancel) {
+          button.push({
+            text: option.cancelText || '取消',
+            style: 'cancel'
+          })
+        }
+
+        const onButtonClick = (index: number): void => {
+          setShow(false)
+          res({
+            confirm: index === 0,
+            cancel: index === 1,
+            errMsg: 'ok'
+          })
+        }
+
+
+        return (
+          <Modal
+            title={option.title}
+            content={option.content}
+            visible={show}
+            onButtonClick={onButtonClick}
+            button={button}
+            onHide={onDestory}
+          />
+        )
+      }
+
+      await Protal.add(Warp)
     } catch (error) {
       rej({ errMsg: error.message } as SuccessCallbackResult)
     }

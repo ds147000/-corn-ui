@@ -1,5 +1,5 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
-import React from 'react'
+import React, { useEffect } from 'react'
 import { render, act, waitFor } from '@testing-library/react'
 import { View } from '@tarojs/components'
 import HostManager from '../manager'
@@ -10,24 +10,27 @@ describe('HostManager', () => {
 
   test('add', async () => {
     const screen = render(<Host />)
-    let id = 0
 
     HostManager.status = true
     await act(async () => {
-      id = await HostManager.add(<View key="toast">toast</View>)
+      const Comps: React.FC<{ onDestory(): void }> = ({ onDestory }) => {
+
+        useEffect(() => {
+          // eslint-disable-next-line no-magic-numbers
+          setTimeout(onDestory, 100)
+        }, [ onDestory ])
+
+        return (<View key="toast">toast</View>)
+      }
+      await HostManager.add(Comps)
     })
     await waitFor(() => screen.getByText('toast'))
 
     await act(async () => new Promise((res) => {
-      HostManager.remove(id)
-
-      setTimeout(() => {
-        res()
-
-        // eslint-disable-next-line no-magic-numbers
-      }, 1000)
+      // eslint-disable-next-line no-magic-numbers
+      setTimeout(res, 200)
     }))
-
+    await waitFor(() => expect(screen.queryByText('toast')).toBeNull())
     await waitFor(() => screen.unmount())
   })
 

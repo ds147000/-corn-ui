@@ -7,10 +7,11 @@ import { Toast } from './toast.h5'
 
 interface ContainerProps {
   onShow?(): void
-  onClose?(): void
+  onHide?(): void
+  onDestory?(): void
 }
 
-export const Container: React.FC<ContainerProps> = ({ onClose, onShow }) => {
+export const Container: React.FC<ContainerProps> = ({ onDestory, onShow, onHide }) => {
   const [ toastList, setToastList ] = useState<ToastOption[]>([])
   // eslint-disable-next-line no-magic-numbers
   const hide = useRef<number>(0)
@@ -23,9 +24,10 @@ export const Container: React.FC<ContainerProps> = ({ onClose, onShow }) => {
     if (hide.current === toastList.length) {
       hide.current = 0
       setToastList([])
-      onClose?.()
+      onHide?.()
+      onDestory?.()
     }
-  }, [ toastList.length, hide ])
+  }, [ toastList.length, hide, onDestory, onHide ])
 
   useEffect(() => {
     const remove = Sub.add(TOAST_ADD, (toast: ToastOption) => {
@@ -34,7 +36,7 @@ export const Container: React.FC<ContainerProps> = ({ onClose, onShow }) => {
     onShow?.()
 
     return remove
-  }, [])
+  }, [ onShow ])
 
   return (
     <View className={`xrk-toast ${isMask && 'xrk-toast-actions'}`}>

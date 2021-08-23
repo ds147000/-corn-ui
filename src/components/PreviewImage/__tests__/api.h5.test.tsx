@@ -1,5 +1,5 @@
 import React from 'react'
-import { fireEvent, render, waitFor } from '@testing-library/react'
+import { act, fireEvent, render, waitFor } from '@testing-library/react'
 import previewImage from '../api.h5'
 import Protal from '../../Portal'
 import Host from '../../Portal/host'
@@ -15,9 +15,8 @@ test('preview img one', async () => {
 
   const currentUrl = 'https://t7.baidu.com/it/u=1819248061,230866778&fm=193&f=GIF'
 
-  await previewImage({
-    current: currentUrl,
-    urls: [ currentUrl ]
+  await act(async () => {
+    await previewImage({ current: currentUrl, urls: [ currentUrl ] })
   })
 
   await waitFor(() => screen.getByTestId('previewImage'))
@@ -32,9 +31,8 @@ test('preview on Close', async () => {
 
   const currentUrl = 'https://t7.baidu.com/it/u=1819248061,230866778&fm=193&f=GIF'
 
-  await previewImage({
-    current: currentUrl,
-    urls: [ currentUrl ]
+  await act(async () => {
+    await previewImage({ current: currentUrl, urls: [ currentUrl ] })
   })
 
   const previewEl = await waitFor(() => screen.getByTestId('previewImage'))
@@ -53,9 +51,8 @@ test('多张图片预览', async () => {
     'https://t7.baidu.com/it/u=1575628574,1150213623&fm=193&f=GIF'
   ]
 
-  await previewImage({
-    current: currentUrl,
-    urls
+  await act(async () => {
+    await previewImage({ current: currentUrl, urls })
   })
 
   await waitFor(() => screen.getByTestId('previewImage'))
@@ -69,7 +66,7 @@ test('多张图片预览', async () => {
 
   const imgsUrls: string[] = []
 
-  for(let i = 0; i < imgs.length; i++ ) imgsUrls.push(imgs[i].src)
+  for (let i = 0; i < imgs.length; i++) imgsUrls.push(imgs[i].src)
   expect(imgsUrls).toEqual(urls)
 })
 
@@ -83,9 +80,9 @@ test('多张图片预览2', async () => {
     currentUrl,
     'https://t7.baidu.com/it/u=1575628574,1150213623&fm=193&f=GIF'
   ]
-  await previewImage({
-    current: currentUrl,
-    urls: urls
+
+  await act(async () => {
+    await previewImage({ current: currentUrl, urls: urls })
   })
 
   await waitFor(() => screen.getByTestId('previewImage'))
@@ -95,7 +92,7 @@ test('多张图片预览2', async () => {
   const imgs = await waitFor(() => screen.container.querySelectorAll('img')) as unknown as HTMLImageElement[]
 
   const imgsUrls: string[] = []
-  for(let i = 0; i < imgs.length; i++ ) imgsUrls.push(imgs[i].src)
+  for (let i = 0; i < imgs.length; i++) imgsUrls.push(imgs[i].src)
   expect(imgsUrls).toEqual(urls)
 })
 
@@ -110,10 +107,10 @@ test('多张图片预览3', async () => {
     currentUrl
   ]
 
-  await previewImage({
-    current: currentUrl,
-    urls
+  await act(async () => {
+    await previewImage({ current: currentUrl, urls: urls })
   })
+
 
   await waitFor(() => screen.getByTestId('previewImage'))
   await waitFor(() => expect(
@@ -121,7 +118,7 @@ test('多张图片预览3', async () => {
   )
   const imgs = await waitFor(() => screen.container.querySelectorAll('img')) as unknown as HTMLImageElement[]
   const imgsUrls: string[] = []
-  for(let i = 0; i < imgs.length; i++ ) imgsUrls.push(imgs[i].src)
+  for (let i = 0; i < imgs.length; i++) imgsUrls.push(imgs[i].src)
   expect(imgsUrls).toEqual(urls)
 })
 
@@ -129,9 +126,12 @@ test('on WxSDK', async () => {
   window.wx = {
     previewImage: jest.fn()
   }
-  await previewImage({
-    current: 'https://t7.baidu.com/it/u=1819248061,230866778&fm=193&f=GIF',
-    urls: [ 'https://t7.baidu.com/it/u=1819248061,230866778&fm=193&f=GIF' ]
+
+  await act(async () => {
+    await previewImage({
+      current: 'https://t7.baidu.com/it/u=1819248061,230866778&fm=193&f=GIF',
+      urls: [ 'https://t7.baidu.com/it/u=1819248061,230866778&fm=193&f=GIF' ]
+    })
   })
   // eslint-disable-next-line no-magic-numbers
   expect(window.wx.previewImage).toHaveBeenCalledTimes(1)
@@ -144,9 +144,11 @@ test('on WxSDK Error', async () => {
     }
   }
   try {
-    await previewImage({
-      current: 'https://t7.baidu.com/it/u=1819248061,230866778&fm=193&f=GIF',
-      urls: [ 'https://t7.baidu.com/it/u=1819248061,230866778&fm=193&f=GIF' ]
+    await act(async () => {
+      await previewImage({
+        current: 'https://t7.baidu.com/it/u=1819248061,230866778&fm=193&f=GIF',
+        urls: [ 'https://t7.baidu.com/it/u=1819248061,230866778&fm=193&f=GIF' ]
+      })
     })
   } catch (error) {
     expect(error).toEqual({ errMsg: 'error' })
@@ -155,9 +157,11 @@ test('on WxSDK Error', async () => {
 
 test('on Error Data ', async () => {
   try {
-    await previewImage({
-      current: 'https://t7.baidu.com/it/u=1819248061,230866778&fm=193&f=GIF',
-      urls: ({} as unknown as string[])
+    await act(async () => {
+      await previewImage({
+        current: 'https://t7.baidu.com/it/u=1819248061,230866778&fm=193&f=GIF',
+        urls: ({} as unknown as string[])
+      })
     })
   } catch (error) {
     expect(error).toEqual({ errMsg: 'option.urls.findIndex is not a function' })

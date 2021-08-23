@@ -2,10 +2,16 @@ import React, { useEffect, useState } from 'react'
 import ProtalSub from '../../utils/sub'
 import { PROTAL_ADD, PROTAL_REMOVE } from '../../config/event'
 
-const Host: React.FC = () => {
+interface HostProps {
+  onReady?(): void
+}
+
+const Host: React.FC<HostProps> = ({ onReady }) => {
   const [ list, setList ] = useState<React.ReactNode[]>([])
 
   useEffect(() => {
+    onReady?.()
+
     const ids = new Map<number, React.ReactNode>()
 
     const setChildren = (): void => {
@@ -27,7 +33,7 @@ const Host: React.FC = () => {
       removeRemove?.()
       ids.clear()
     }
-  }, [])
+  }, [ onReady ])
 
   return (
     <>
