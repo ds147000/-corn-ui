@@ -4,30 +4,20 @@ sort: 6
 ### 通过API关闭taost
 
 ```tsx
-import { useState } from 'react'
 import { Button, Toast } from '@xrkmm/ui-h5'
 
 const Demo: React.FC = () => {
-  const [show, setShow] = useState(false)
 
   const onClick = () => {
     Toast.show({
       title: '10秒的taost',
       duration: 10000,
-      success: () => setShow(true)
+      success: () => console.log('ok~')
     })
   }
 
-  const onHide = () => {
-    Toast.hide()
-    setShow(false)
-  }
-
   return (
-    <>
-      <Button onClick={onClick}>10秒的taost</Button>
-      <Button onClick={onHide} disabled={!show}>隐藏toast</Button>
-    </>
+    <Button onClick={onClick}>10秒的taost</Button>
   )
 }
 

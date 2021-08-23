@@ -61,7 +61,7 @@ const Routes: RoutesProps[] = [
     component: require('../views/Money').default,
     title: 'Money 金额展示器',
     type: '状态展示',
-    sort: 2,
+    sort: 3,
   },
   {
     path: '/PreviewImage',
@@ -83,6 +83,13 @@ const Routes: RoutesProps[] = [
     title: 'Tab 切换栏',
     type: '状态展示',
     sort: 1,
+  },
+  {
+    path: '/Tag',
+    component: require('../views/Tag').default,
+    title: 'Tag 标签',
+    type: '状态展示',
+    sort: 4,
   },
   {
     path: '/Toast',

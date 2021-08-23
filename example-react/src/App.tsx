@@ -5,7 +5,7 @@
  * @LastEditors: zhoulong.yang
  * @LastEditTime: 2021-06-10 16:35:14
  */
-import { Button, Toast, Drawer, ActionSheet, showActionSheet, Modal, showModal, Icon, Empty, Image, Tab } from '@xrkmm/ui-h5'
+import { Button, Toast, Drawer, ActionSheet, showActionSheet, Modal, showModal, Icon, Empty, Image, Tab, Tag } from '@xrkmm/ui-h5'
 import { useState } from 'react'
 import { TabItemPorps } from '../../package-h5/dist/components/Tab'
 import '../../package-h5/dist/styles/base.css'
@@ -42,7 +42,19 @@ function App() {
         currenIndex={current}
         onChange={(index) => setCurrent(index)}
       />
+      <Tag size="middle">3-9岁</Tag>
+      <Tag size="small">3-9岁</Tag>
+      <Tag type="error">3-9岁</Tag>
+      <Tag type="link">3-9岁</Tag>
+      <Tag type="pop">3-9岁</Tag>
+      <Tag type="primary">3-9岁</Tag>
+      <Tag type="warn">3-9岁</Tag>
 
+      <Tag type="error" ghost>3-9岁</Tag>
+      <Tag type="link" ghost>3-9岁</Tag>
+      <Tag type="pop" ghost>3-9岁</Tag>
+      <Tag type="primary" ghost>3-9岁</Tag>
+      <Tag type="warn" ghost>3-9岁</Tag>
       <Button size="max">向日葵妈妈UI</Button>
       <Button size="big" icon={<Icon name="service" />}>向日葵妈妈UI</Button>
       <Button size="large">向日葵妈妈UI</Button>

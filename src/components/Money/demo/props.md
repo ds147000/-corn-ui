@@ -1,5 +1,5 @@
 ---header
-sort: 2
+sort: 3
 type: 状态展示
 ---
 # Money 金额展示器
