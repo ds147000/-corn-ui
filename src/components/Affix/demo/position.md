@@ -10,11 +10,9 @@ import { Affix, Button } from '@xrkmm/ui-h5'
 const Demo: React.FC = () => {
 
   return (
-    <>
-      <Affix position="buttom">
+      <Affix position="bottom">
         <Button>漂浮的按钮</Button>
       </Affix>
-    </>
   )
 }
 
