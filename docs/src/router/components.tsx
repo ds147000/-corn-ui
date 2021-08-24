@@ -15,6 +15,13 @@ const Routes: RoutesProps[] = [
     sort: 2,
   },
   {
+    path: '/Affix',
+    component: require('../views/Affix').default,
+    title: 'Affix 固钉',
+    type: '导航',
+    sort: 1,
+  },
+  {
     path: '/Button',
     component: require('../views/Button').default,
     title: 'Button 按钮',

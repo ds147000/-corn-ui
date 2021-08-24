@@ -1,7 +1,7 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
 /* eslint-disable no-magic-numbers */
 
-import { transformRem, formatMoney } from '../index'
+import { transformRem, formatMoney, getRanDomId } from '../index'
 
 describe.each([
   [ 100, '1.33rem' ],
@@ -40,4 +40,13 @@ describe.each([
   test(`${value} => ${expected}`, () => {
     expect(formatMoney(value, isReverse)).toBe(expected)
   })
+})
+
+test('getRanDomId', () => {
+  const ids: string[] = []
+  for(let i = 1000; i > 0; i--) {
+    const id = getRanDomId()
+    expect(ids.includes(id)).toBe(false)
+    ids.push(id)
+  }
 })

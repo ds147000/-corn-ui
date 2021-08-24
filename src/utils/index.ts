@@ -29,3 +29,16 @@ export function formatMoney(value: string | number, isReverse = false): number {
     return Number((value / 100).toFixed(2))
   }
 }
+
+const ID_MAP = 'qwertyuiopasdfghjklzxcvbnm'
+
+export function getRanDomId(): string {
+  let str = ''
+
+  for(let i = 0; i < 8; i++) {
+    const index = Math.floor(Math.random() * ID_MAP.length)
+    str += ID_MAP[index]
+  }
+
+  return str
+}

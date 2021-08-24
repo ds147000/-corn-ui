@@ -23,6 +23,7 @@ export { default as previewImage } from './components/PreviewImage'
 export { default as Money } from './components/Money'
 export { default as Tab } from './components/Tab'
 export { default as Tag } from './components/Tag'
+export { default as Affix } from './components/Affix'
 
 export const UTILS = {
   transformRem,

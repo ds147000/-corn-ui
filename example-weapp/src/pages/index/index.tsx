@@ -7,7 +7,7 @@
  */
 import { Component } from 'react'
 import { View } from '@tarojs/components'
-import { Button, Toast, Drawer, showActionSheet, showModal, Modal, Icon, Image, Tab } from '@xrkmm/ui-taro'
+import { Button, Toast, Drawer, showActionSheet, showModal, Modal, Icon, Image, Tab, Affix } from '@xrkmm/ui-taro'
 import './index.scss'
 import { TabItemPorps } from '@xrkmm/ui-taro/components/Tab'
 
@@ -26,7 +26,7 @@ export default class Index extends Component {
 
   state = {
     show: false,
-    mShow: true,
+    mShow: false,
     current: 0
   }
 
@@ -51,11 +51,18 @@ export default class Index extends Component {
   render () {
     return (
       <View className='index'>
-         <Tab
-          options={TabOption}
-          currenIndex={this.state.current}
-          onChange={(index) => this.setState({ current: index })}
-        />
+        <Affix>
+          <Tab
+            options={TabOption}
+            currenIndex={this.state.current}
+            onChange={(index) => this.setState({ current: index })}
+          />
+        </Affix>
+
+        <Affix>
+        <Button size="max" icon={<Icon name="service" />}>向日葵妈妈UI</Button>
+        </Affix>
+
         <Button size="max" icon={<Icon name="service" />}>向日葵妈妈UI</Button>
         <Button size="big">向日葵妈妈UI</Button>
         <Button size="large">向日葵妈妈UI</Button>

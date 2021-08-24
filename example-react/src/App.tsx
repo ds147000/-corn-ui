@@ -5,7 +5,7 @@
  * @LastEditors: zhoulong.yang
  * @LastEditTime: 2021-06-10 16:35:14
  */
-import { Button, Toast, Drawer, ActionSheet, showActionSheet, Modal, showModal, Icon, Empty, Image, Tab, Tag } from '@xrkmm/ui-h5'
+import { Button, Toast, Drawer, ActionSheet, showActionSheet, Modal, showModal, Icon, Empty, Image, Tab, Tag, Affix } from '@xrkmm/ui-h5'
 import { useState } from 'react'
 import { TabItemPorps } from '../../package-h5/dist/components/Tab'
 import '../../package-h5/dist/styles/base.css'
@@ -35,13 +35,19 @@ function App() {
 
   const onClick = () => alert(1)
 
+  const onChange = (fixed: boolean) => {
+    console.log(fixed)
+  }
+
   return (
     <div className="App">
-      <Tab
-        options={TabOption}
-        currenIndex={current}
-        onChange={(index) => setCurrent(index)}
-      />
+      <Affix>
+        <Tab
+          options={TabOption}
+          currenIndex={current}
+          onChange={(index) => setCurrent(index)}
+        />
+      </Affix>
       <Tag size="middle">3-9岁</Tag>
       <Tag size="small">3-9岁</Tag>
       <Tag type="error">3-9岁</Tag>
@@ -55,7 +61,9 @@ function App() {
       <Tag type="pop" ghost>3-9岁</Tag>
       <Tag type="primary" ghost>3-9岁</Tag>
       <Tag type="warn" ghost>3-9岁</Tag>
-      <Button size="max">向日葵妈妈UI</Button>
+      <Affix onChange={onChange}>
+        <Button size="max">向日葵妈妈UI</Button>
+      </Affix>
       <Button size="big" icon={<Icon name="service" />}>向日葵妈妈UI</Button>
       <Button size="large">向日葵妈妈UI</Button>
       <Button size="middle">向日葵妈妈UI</Button>
