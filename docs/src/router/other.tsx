@@ -6,17 +6,17 @@ interface RoutesProps extends RouteProps {
 
 const Routes: RoutesProps[] = [
   {
-    path: '/Publish',
+    path: '/basis/Publish',
     component: require('../components/Publish').default,
     title: '贡献指南'
   },
   {
-    path: '/md',
+    path: '/basis/md',
     component: require('../components/Md').default,
     title: '组件md文件编写规范'
   },
   {
-    path: '/history',
+    path: '/basis/history',
     component: require('../components/history').default,
     title: '更新历史'
   },

@@ -1,19 +1,22 @@
-const HIDE_VALUE = 0
-
-export const judge = (rect: DOMRect, position: string, offset: number): boolean => {
+export const judge = (
+  rect: DOMRect,
+  rootRect: DOMRectReadOnly,
+  position: string,
+  offset: number
+): boolean => {
   if (!rect) return false
 
   switch(position) {
     case 'top':
-      return (rect.top - offset) < HIDE_VALUE
+      return (rect.top - offset) < rootRect.top
 
     case 'bottom':
-      return (rect.bottom - offset) < HIDE_VALUE
+      return (rect.bottom + offset) > rootRect.bottom
 
     case 'left':
-      return (rect.left - offset) < HIDE_VALUE
+      return (rect.left - offset) < rootRect.left
 
     default:
-      return (rect.right - offset) < HIDE_VALUE
+      return (rect.right + offset) > rootRect.right
   }
 }

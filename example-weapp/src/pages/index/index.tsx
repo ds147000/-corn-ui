@@ -51,18 +51,13 @@ export default class Index extends Component {
   render () {
     return (
       <View className='index'>
-        <Affix>
+        {/* <Affix> */}
           <Tab
             options={TabOption}
             currenIndex={this.state.current}
             onChange={(index) => this.setState({ current: index })}
           />
-        </Affix>
-
-        <Affix>
-        <Button size="max" icon={<Icon name="service" />}>向日葵妈妈UI</Button>
-        </Affix>
-
+        {/* </Affix> */}
         <Button size="max" icon={<Icon name="service" />}>向日葵妈妈UI</Button>
         <Button size="big">向日葵妈妈UI</Button>
         <Button size="large">向日葵妈妈UI</Button>
@@ -105,8 +100,6 @@ export default class Index extends Component {
         }}>
           API 唤起 Modal
         </Button>
-
-
         <Modal
         visible={this.state.mShow}
         title="这是标题"
@@ -120,6 +113,9 @@ export default class Index extends Component {
         />
         <Image src="https://t7.baidu.com/it/u=1951548898,3927145&fm=193&f=GIF"  />
         <Image src="https://t7.baidu.com/it/u=1595072465,3644073269&fm=193&f=GIF" lazyLoad />
+        <Affix position="bottom">
+          <Button size="max" icon={<Icon name="service" />}>向日葵妈妈UI</Button>
+        </Affix>
       </View>
     )
   }

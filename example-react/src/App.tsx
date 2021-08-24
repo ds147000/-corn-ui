@@ -41,13 +41,13 @@ function App() {
 
   return (
     <div className="App">
-      <Affix>
+      {/* <Affix> */}
         <Tab
           options={TabOption}
           currenIndex={current}
           onChange={(index) => setCurrent(index)}
         />
-      </Affix>
+      {/* </Affix> */}
       <Tag size="middle">3-9岁</Tag>
       <Tag size="small">3-9岁</Tag>
       <Tag type="error">3-9岁</Tag>
@@ -61,9 +61,6 @@ function App() {
       <Tag type="pop" ghost>3-9岁</Tag>
       <Tag type="primary" ghost>3-9岁</Tag>
       <Tag type="warn" ghost>3-9岁</Tag>
-      <Affix onChange={onChange}>
-        <Button size="max">向日葵妈妈UI</Button>
-      </Affix>
       <Button size="big" icon={<Icon name="service" />}>向日葵妈妈UI</Button>
       <Button size="large">向日葵妈妈UI</Button>
       <Button size="middle">向日葵妈妈UI</Button>
@@ -148,6 +145,9 @@ function App() {
       <Empty text="暂无内容哦" size="small" />
       <Image src="https://t7.baidu.com/it/u=124476473,2583135375&fm=193&f=GIFF" previewImage />
       <Image src="https://t7.baidu.com/it/u=1595072465,3644073269&fm=193&f=GIF" lazyLoad />
+      <Affix onChange={onChange} position="bottom">
+        <Button size="max">向日葵妈妈UI</Button>
+      </Affix>
     </div>
   )
 }

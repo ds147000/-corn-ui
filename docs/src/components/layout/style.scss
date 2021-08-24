@@ -34,6 +34,52 @@
     overflow-y: auto;
     max-height: calc(100vh - 80px);
 
+    .iphone {
+      width: 425px;
+      height: 857px;
+      position: fixed;
+      top: 150px;
+      margin: auto;
+      right: 100px;
+      box-shadow: 0px 4px 30px 0px rgba($color: #999, $alpha: .3);
+      border-radius: 60px;
+
+      .preview-title {
+        position: absolute;
+        top: -40px;
+        width: 100%;
+        text-align: center;
+        z-index: 5;
+        font-weight: 600;
+        font-size: 25px;
+
+      }
+
+      .iframe {
+        border: none;
+        outline: none;
+        width: 426px;
+        height: 857px;
+        box-sizing: border-box;
+        padding: 31px 27px 20px 24px;
+        display: block;
+      }
+
+      &::after {
+        content: "";
+        display: block;
+        width: 425px;
+        height: 857px;
+        position: absolute;
+        top: 0px;
+        left: 0px;
+        z-index: 1;
+        pointer-events: none;
+        background-size: 100% 100%;
+        background-image: url('../../assets/iframe_iphonex.png');
+      }
+    }
+
     li {
       list-style: none;
       padding-left: 20px;
@@ -55,6 +101,7 @@
 
     >.solt {
       padding: 20px 0px;
+      padding-right: 500px;
     }
 
     h1 {
@@ -118,12 +165,9 @@
 
   .solt-demos {
     display: flex;
-    flex-wrap: wrap;
+    flex-direction: column;
 
     .demo-box {
-      max-width: 1100px;
-      min-width: 500px;
-      width: 45%;
       margin-right: 30px;
       margin-top: 10px;
     }
@@ -136,6 +180,11 @@
     .demo {
       padding: 15px;
       border: 1px solid rgba($color: #eeeded, $alpha: 1.0);
+
+      &.demo-active {
+        border: 1px solid rgba($color: #fe8019, $alpha: 1.0);
+        box-shadow: 0px 0px 10px 0px #fe8019;
+      }
     }
 
     .action-cell {

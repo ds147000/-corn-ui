@@ -65,11 +65,15 @@ export default Demo
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    width: 100px;
-    height: 100px;
+    width: 80px;
+    height: 80px;
     border-radius: 8px;
     transition: all 0.5s;
     font-size: 30px;
+
+    h5 {
+      font-size: 12px;
+    }
 
     &:hover {
       transform: scale(1.1);

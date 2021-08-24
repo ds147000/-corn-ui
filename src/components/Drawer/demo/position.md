@@ -40,17 +40,17 @@ const Demo: React.FC = () => {
         </div>
       </Drawer>
       <Drawer visible={leftShow} onClose={onLeftChange} position="left" >
-        <div style={{ width: 300, height: '100%', backgroundColor: '#fff', fontSize: 40, textAlign: 'center' }}>
+        <div style={{ width: 200, height: '100%', backgroundColor: '#fff', fontSize: 40, textAlign: 'center' }}>
           左边弹出的
         </div>
       </Drawer>
       <Drawer visible={rightShow} onClose={onRightChange} position="right" >
-        <div style={{ width: 300, height: '100%', backgroundColor: '#fff', fontSize: 40, textAlign: 'center' }}>
+        <div style={{ width: 200, height: '100%', backgroundColor: '#fff', fontSize: 40, textAlign: 'center' }}>
           右边弹出的
         </div>
       </Drawer>
       <Drawer visible={centerShow} onClose={onCenterChange} position="center" >
-        <div style={{ width: 300, height: 300, backgroundColor: '#fff', fontSize: 40, textAlign: 'center' }}>
+        <div style={{ width: 200, height: 200, backgroundColor: '#fff', fontSize: 40, textAlign: 'center' }}>
           中间弹出的
         </div>
       </Drawer>

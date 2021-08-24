@@ -10,9 +10,13 @@ import { Affix, Button } from '@xrkmm/ui-h5'
 const Demo: React.FC = () => {
 
   return (
-    <Affix>
-      <Button>漂浮的按钮</Button>
-    </Affix>
+    <>
+      <div style={{ height: 500 }} />
+      <Affix>
+        <Button>漂浮的按钮</Button>
+      </Affix>
+      <div style={{ height: 1500 }} />
+    </>
   )
 }
 

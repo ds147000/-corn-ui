@@ -5,7 +5,8 @@ import CompsRoutes from '../../router/components'
 import OtherRoutes from '../../router/other'
 import StartRoutes from '../../router/start'
 import './style.scss'
-
+import { Iphone, IphoneContext } from "./ipohone"
+import { useState } from "react"
 interface RoutesProps extends RouteProps {
   title: string;
   type: string;
@@ -26,6 +27,7 @@ CompsRoutes.map((item) => {
 Object.keys(ShowCompsRoutes).map((key) => ShowCompsRoutes[key] = ShowCompsRoutes[key].sort((item, item2) => item.sort - item2.sort))
 
 const View: React.FC = ({ children }) => {
+  const [ url, setUrl ] = useState('/')
   const location = useLocation()
   const history = useHistory()
 
@@ -80,9 +82,12 @@ const View: React.FC = ({ children }) => {
         </Sider>
 
         <Content className="content site-layout-background">
-          <div className="solt">
-            {children}
-          </div>
+          <IphoneContext.Provider value={{ url, changeUrl: (value) => setUrl(value) }}>
+            <div className="solt">
+              {children}
+            </div>
+            {location.pathname.indexOf('/doc/') !== -1 && (<Iphone />)}
+          </IphoneContext.Provider>
           <Footer className="floor" >XRKMM-UI ©2021 Created by 向日葵妈妈</Footer>
         </Content>
       </Layout>

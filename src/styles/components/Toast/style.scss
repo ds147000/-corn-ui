@@ -26,6 +26,7 @@
     line-height: 30px;
     pointer-events: none;
     align-items: center;
+    max-width: 590px;
 
     &.show {
       animation: toastShow 0.25s;

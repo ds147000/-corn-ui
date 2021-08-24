@@ -15,12 +15,12 @@ const MD = new Markdown({
   html: true,
   typographer: true
 })
-.use(require('markdown-it-highlightjs'), {
-  inline: true,
-  register: {
-    cypher: require('highlightjs-cypher')
-  }
-})
+  .use(require('markdown-it-highlightjs'), {
+    inline: true,
+    register: {
+      cypher: require('highlightjs-cypher')
+    }
+  })
 
 exports.checkFiles = (path) => {
   try {
@@ -93,7 +93,7 @@ const getMarkDownContent = (path) => {
     sort: fileHeader.get('sort'),
     style: fileHeader.get('style'),
     type: fileHeader.get('type'),
-    title: content.match(/#.*\n/)[0].replace('#', '').trim()
+    title: content.match(/#.*\n/)[0].replace(/#*/, '').trim()
   }
 }
 
@@ -115,11 +115,11 @@ exports.getMarkDownTemplate = async (paths = [], dirPath) => {
   // 处理代码演示内容
   const content = paths.map((path) => {
     const last = path.lastIndexOf('/')
-    const fileName = path.slice(last + 1).replace('.md', '').replace(/\d\./, '').toUpperCase()
+    const fileName = path.slice(last + 1).replace('.md', '').replace(/\d\./, '')
 
     // 返回内容
     const MarkdownContent = getMarkDownContent(path)
-    const data = { header: '', body: '', key: fileName, sort: MarkdownContent.sort }
+    const data = { body: '', key: fileName, sort: MarkdownContent.sort, path: `/phone/${dirPath.replace(/.*\/views\//, '')}/demo/${fileName}` }
 
     // 获取演示代码部分
     const startIndex = MarkdownContent.content.indexOf('```tsx')
@@ -137,14 +137,10 @@ exports.getMarkDownTemplate = async (paths = [], dirPath) => {
 
 
     // 生成对应code文件
-    data.header = `import ${fileName} from './demo/${fileName}'`
+    // data.header = `import ${fileName} from './demo/${fileName}'`
 
     const compDis = dirPath + '/demo'
-    try {
-      if (!this.checkFiles(compDis).isDirectory()) this.makeDir(compDis)
-    } catch (error) {
-      this.makeDir(compDis)
-    }
+    if (!this.checkFiles(compDis).isDirectory()) this.makeDir(compDis)
 
     if (cssCode) {
 
@@ -153,7 +149,7 @@ exports.getMarkDownTemplate = async (paths = [], dirPath) => {
         import './${fileName}-style.scss'
         ${jsCode}
         `
-      , PerttierConfig))
+        , PerttierConfig))
 
       this.writeFile(compDis + `/${fileName}-style.scss`, Prettier.format(cssCode, { parser: 'css' }))
 
@@ -169,18 +165,26 @@ exports.getMarkDownTemplate = async (paths = [], dirPath) => {
     data.body = `
       <div className="${MarkdownContent.style === 'block' ? 'demo-box-block' : 'demo-box'}">
         ${markHeader.replace(/class=/ig, 'className=')}
-        <div className="demo">
-          <${fileName} />
+        <div className={\`demo \$\{ url === '${data.path}' ? 'demo-active' : '' \}\`}>
+              <Button
+                type="primary"
+                icon={<PlayCircleOutlined />}
+                onClick={() => {
+                  changeUrl('${data.path}')
+                }}
+              >
+                预览效果
+              </Button>
           <Divider orientation="left">描述</Divider>
           ${markFloor.replace(/class=/ig, 'className=')}
           <div className="action-cell">
             <Tooltip title="复制代码">
               <CopyToClipboard text={\`${jsCode}\`}>
-                <Button shape="circle" icon={<CopyOutlined />} size="small" />
+                <Button shape="circle" icon={<CopyOutlined />} />
               </CopyToClipboard>
             </Tooltip>
             <Tooltip title="查看代码">
-              <Button shape="circle" icon={<CodeSandboxOutlined />} size="small" onClick={() => _set${data.key}(!_${data.key})} />
+              <Button shape="circle" icon={<CodeSandboxOutlined />} onClick={() => _set${data.key}(!_${data.key})} />
             </Tooltip>
           </div>
           {_${data.key} && (
@@ -195,15 +199,20 @@ exports.getMarkDownTemplate = async (paths = [], dirPath) => {
   }).sort((item, item2) => item.sort - item2.sort)
 
   const result = `/* eslint-disabled */\n//
-    import { useState } from 'react'
+    import { useState, useEffect, useContext } from 'react'
     import { Divider, Tooltip, Button } from 'antd'
-    import { CodeSandboxOutlined, CopyOutlined } from '@ant-design/icons'
+    import { CodeSandboxOutlined, CopyOutlined, PlayCircleOutlined } from '@ant-design/icons'
     import { CopyToClipboard } from 'react-copy-to-clipboard'
-
-    ${content.map((item) => item.header).join('\n')}
+    import { IphoneContext } from '../../components/layout/ipohone'
 
     const Pgae: React.FC = () => {
       ${content.map((item) => `const [_${item.key}, _set${item.key}] = useState(false)`).join('\n')}
+      const { changeUrl, url } = useContext(IphoneContext)
+
+      useEffect(() => {
+        changeUrl('${content[0].path}')
+        _set${content[0].key}(true)
+      }, [])
 
       return (
         <>
@@ -229,13 +238,34 @@ exports.getDemoRoutes = (paths = [], dirPath) => {
     .map((item) => {
       const { sort, type, title } = getMarkDownContent(item)
 
+      if (item.indexOf('props.md') !== -1) {
+        return `{
+          path: '/doc/${item.replace(/\/demo\/props\.md/, '').replace(/.*\//, '')}',
+          component: require('../views/${item.replace(/\/demo\/props\.md/, '').replace(/.*\//, '')}').default,
+          title: '${title}',
+          type: '${type}',
+          sort: ${sort}
+        }`
+      }
+
+      if (item.indexOf('/components/') !== -1) {
+        return `{
+          path: '/phone/${item.replace(/\.md/, '').replace(/.*\/components\//, '')}',
+          component: require('../views${item.replace(/\.md/, '').replace(/.*\/components/, '')}').default,
+          title: '${title}',
+          type: '${type}',
+          sort: ${sort}
+        }`
+      }
+
       return `{
-        path: '/${item.replace(/\/demo\/props\.md/, '').replace(/.*\//, '')}',
-        component: require('../views/${item.replace(/\/demo\/props\.md/, '').replace(/.*\//, '')}').default,
+        path: '/phone/${item.replace(/\.md/, '').replace(/.*\/utils/, 'utils')}',
+        component: require('../views${item.replace(/\.md/, '').replace(/.*\/utils/, '/utils')}').default,
         title: '${title}',
         type: '${type}',
         sort: ${sort}
       }`
+
     })
 
   const data = `
@@ -255,7 +285,7 @@ exports.getDemoRoutes = (paths = [], dirPath) => {
 
   `
 
-  this.writeFile(dirPath,  Prettier.format(data, PerttierConfig))
+  this.writeFile(dirPath, Prettier.format(data, PerttierConfig))
 }
 
 exports.getMarkDownToTSX = async (suore, path) => {

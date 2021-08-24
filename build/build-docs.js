@@ -37,6 +37,10 @@ const main = async () => {
     demoFileList.filter((file) => new RegExp(`props.md`).test(file)),
     resolveApp('docs/src/router/components.tsx')
   )
+  await getDemoRoutes(
+    demoFileList.filter((file) => new RegExp(`props.md`).test(file) === false),
+    resolveApp('docs/src/router/demo.tsx')
+  )
   spinner.succeed()
 
   spinner.start('生成其他说明文档')
