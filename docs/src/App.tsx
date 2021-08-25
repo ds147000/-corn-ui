@@ -45,7 +45,7 @@ function App() {
           <Route path="/basis" component={Basis} />
           <Route path="/doc" component={Docs} />
           <Route path="/phone" component={Phone} />
-          <Redirect to="/doc/Introduce" path="/" />
+          <Redirect to="/basis/Introduce" path="/" />
         </Switch>
     </BrowserRouter>
   )
