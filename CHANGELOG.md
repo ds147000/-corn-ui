@@ -1,3 +1,7 @@
+ # 0.0.16
+ - 增加 `Timer` 组件
+ - 增加工具方法 `fixNumber` `DateToTimestamp`
+
  # 0.0.15
  - 修复 `Affix` 小程序端bug
  # 0.0.14

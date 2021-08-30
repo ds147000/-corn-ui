@@ -3,7 +3,12 @@ const Page: React.FC = () => {
     <div
       className="scope-page"
       dangerouslySetInnerHTML={{
-        __html: `<h1>0.0.15</h1>
+        __html: `<h1>0.0.16</h1>
+<ul>
+<li>增加 <code><span class="hljs-attribute">Timer</span></code> 组件</li>
+<li>增加工具方法 <code><span class="hljs-attribute">fixNumber</span></code> <code><span class="hljs-attribute">DateToTimestamp</span></code></li>
+</ul>
+<h1>0.0.15</h1>
 <ul>
 <li>修复 <code><span class="hljs-attribute">Affix</span></code> 小程序端bug</li>
 </ul>
