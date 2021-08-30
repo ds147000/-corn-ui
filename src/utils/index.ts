@@ -30,6 +30,40 @@ export function formatMoney(value: string | number, isReverse = false): number {
   }
 }
 
+/**
+ * 时间字符串转时间戳
+ * @param date
+ */
+export function DateToTimestamp(date: Date | string | number): number {
+
+  if (typeof date === 'number')
+    return date
+
+  else if (typeof date === 'string')
+    return new Date(date.replace(/-/, '/')).getTime()
+
+  else if (date instanceof Date)
+    return date.getTime()
+
+  else
+    return 0
+}
+
+
+/**
+ * 补全数字长度
+ * @param {*} val
+ */
+export function fixNumber(val: number | string, len = 2): string {
+  let valString = String(val)
+  if (valString.length >= len) return valString
+
+  const diffLen = len - valString.length
+
+  for(let i = 0; i < diffLen; i++) valString = '0' + valString
+  return valString
+}
+
 const ID_MAP = 'qwertyuiopasdfghjklzxcvbnm'
 
 export function getRanDomId(): string {

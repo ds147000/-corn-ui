@@ -7,7 +7,7 @@
  */
 import { Component } from 'react'
 import { View } from '@tarojs/components'
-import { Button, Toast, Drawer, showActionSheet, showModal, Modal, Icon, Image, Tab, Affix } from '@xrkmm/ui-taro'
+import { Button, Toast, Drawer, showActionSheet, showModal, Modal, Icon, Image, Tab, Affix, Timer } from '@xrkmm/ui-taro'
 import './index.scss'
 import { TabItemPorps } from '@xrkmm/ui-taro/components/Tab'
 
@@ -22,6 +22,24 @@ const TabOption: TabItemPorps[] = [
   { title: '我是选项4' },
   { title: '我是选项5' }
 ]
+
+
+const renderItem = (type: string, number: string): JSX.Element => {
+  switch(type) {
+    case 'day':
+      return <View>{number}天:</View>
+
+    case 'hous':
+      return <View>{number}小时:</View>
+
+    case 'min':
+      return <View>{number}分钟:</View>
+
+    default:
+      return <View>{number}秒</View>
+  }
+}
+
 export default class Index extends Component {
 
   state = {
@@ -58,6 +76,15 @@ export default class Index extends Component {
             onChange={(index) => this.setState({ current: index })}
           />
         {/* </Affix> */}
+        <Button>
+          <Timer startTime={1500000000} endTime={1500000000 + 240000} />
+        </Button>
+        <Button>
+          <Timer startTime={1500000000} endTime={1500000000 + 240000000} />
+        </Button>
+        <Timer startTime={1500000000} endTime={1500000000 + 240000} fill />
+        <Timer startTime={1500000000} endTime={1500000000 + 240000000} fill />
+        <Timer startTime={1500000000} endTime={1500000000 + 240000000} renderItem={renderItem} />
         <Button size="max" icon={<Icon name="service" />}>向日葵妈妈UI</Button>
         <Button size="big">向日葵妈妈UI</Button>
         <Button size="large">向日葵妈妈UI</Button>

@@ -344,6 +344,34 @@ const Routes: RoutesProps[] = [
     sort: 1,
   },
   {
+    path: '/phone/Timer/demo/basis',
+    component: require('../views/Timer/demo/basis').default,
+    title: '代码演示',
+    type: 'undefined',
+    sort: 1,
+  },
+  {
+    path: '/phone/Timer/demo/fill',
+    component: require('../views/Timer/demo/fill').default,
+    title: '填充风格样式',
+    type: 'undefined',
+    sort: 3,
+  },
+  {
+    path: '/phone/Timer/demo/renderitem',
+    component: require('../views/Timer/demo/renderitem').default,
+    title: '自定义渲染项',
+    type: 'undefined',
+    sort: 4,
+  },
+  {
+    path: '/phone/Timer/demo/string',
+    component: require('../views/Timer/demo/string').default,
+    title: '使用日期字符串',
+    type: 'undefined',
+    sort: 2,
+  },
+  {
     path: '/phone/Toast/demo/basis',
     component: require('../views/Toast/demo/basis').default,
     title: '代码演示',
@@ -386,6 +414,14 @@ const Routes: RoutesProps[] = [
     sort: 6,
   },
   {
+    path: '/phone/utils/demo/dateToTimestamp',
+    component: require('../views/utils/demo/dateToTimestamp').default,
+    title:
+      '`DateToTimestamp(value: Date | number | string ): number` 日期字符串转时间戳',
+    type: 'undefined',
+    sort: 6,
+  },
+  {
     path: '/phone/utils/demo/deckUrl',
     component: require('../views/utils/demo/deckUrl').default,
     title:
@@ -400,6 +436,13 @@ const Routes: RoutesProps[] = [
       '`formatMoney(value: number | string, isReverse: boolean): number` 元转分',
     type: 'undefined',
     sort: 3,
+  },
+  {
+    path: '/phone/utils/demo/fixNumber',
+    component: require('../views/utils/demo/fixNumber').default,
+    title: '`fixNumber(val: number | string, len = 2): string` 补全数字长度',
+    type: 'undefined',
+    sort: 7,
   },
   {
     path: '/phone/utils/demo/money',

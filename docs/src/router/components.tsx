@@ -99,6 +99,13 @@ const Routes: RoutesProps[] = [
     sort: 4,
   },
   {
+    path: '/doc/Timer',
+    component: require('../views/Timer').default,
+    title: 'Timer 倒计时',
+    type: '状态展示',
+    sort: 3,
+  },
+  {
     path: '/doc/Toast',
     component: require('../views/Toast').default,
     title: 'Toast 轻提示',

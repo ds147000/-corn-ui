@@ -5,7 +5,7 @@
  * @LastEditors: zhoulong.yang
  * @LastEditTime: 2021-06-07 16:08:34
  */
-import { transformRem, formatMoney } from './utils'
+import { transformRem, formatMoney, DateToTimestamp, fixNumber } from './utils'
 import { parseUrl, deckUrl, formatImg } from './utils/url'
 
 export { default as Button, ButtonProps } from './components/Button'
@@ -24,11 +24,15 @@ export { default as Money } from './components/Money'
 export { default as Tab } from './components/Tab'
 export { default as Tag } from './components/Tag'
 export { default as Affix } from './components/Affix'
+export { default as Timer  } from './components/Timer'
+export { MinuteSchedulerApp, SecondSchedulerApp, SecondScheduler  } from './components/Timer/SecondScheduler'
 
 export const UTILS = {
   transformRem,
   parseUrl,
   deckUrl,
   formatImg,
-  formatMoney
+  formatMoney,
+  DateToTimestamp,
+  fixNumber
 }

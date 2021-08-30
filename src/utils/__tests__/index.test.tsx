@@ -1,7 +1,7 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
 /* eslint-disable no-magic-numbers */
 
-import { transformRem, formatMoney, getRanDomId } from '../index'
+import { transformRem, formatMoney, getRanDomId, DateToTimestamp, fixNumber } from '../index'
 
 describe.each([
   [ 100, '1.33rem' ],
@@ -49,4 +49,34 @@ test('getRanDomId', () => {
     expect(ids.includes(id)).toBe(false)
     ids.push(id)
   }
+})
+
+
+describe.each([
+  [ 0, 0 ],
+  [ 1000, 1000 ],
+  [ new Date('2021'), new Date('2021').getTime() ],
+  [ '2121', new Date('2121').getTime() ],
+  [ null, 0 ],
+  [ false, 0 ]
+])('DateToTimestamp', (value: any, expected) => {
+  test(`${value} => ${expected}`, () => {
+    expect(DateToTimestamp(value)).toBe(expected)
+  })
+})
+
+describe.each([
+  [ 0, 2, '00' ],
+  [ 1, 2, '01' ],
+  [ 101, 2, '101' ],
+  [ 101, 5, '00101' ],
+  [ '101', 5, '00101' ],
+  [ '999', 4, '0999' ],
+  [ '3', 2, '03' ],
+  [ 1, undefined, '01' ]
+
+])('fixNumber', (value, len, expected) => {
+  test(`${value} => ${expected}`, () => {
+    expect(fixNumber(value, len)).toBe(expected)
+  })
 })

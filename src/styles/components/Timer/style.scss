@@ -1,0 +1,27 @@
+.xrk-timer {
+  font-size: 22px;
+  line-height: 22px;
+  color: $text2;
+  font-weight: bolder;
+
+  &-item {
+    width: 30px;
+    height: 22px;
+  }
+
+  &-fill {
+    color: $timeBg;
+
+    .xrk-timer-item {
+      height: 32px;
+      width: 32px;
+      border-radius: 8px;
+      background-color: $timeBg;
+      color: $white;
+    }
+
+    .xrk-timer-symbol {
+      padding: 0 4px;
+    }
+  }
+}

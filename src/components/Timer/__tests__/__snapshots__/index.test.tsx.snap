@@ -1,0 +1,360 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`comps/Timer 1秒后过期 1`] = `
+<div>
+  <div
+    class="xrk-timer xrk-if xrk-ac xrk-jc"
+  >
+    <div
+      class="xrk-timer-item xrk-f xrk-ac xrk-jc"
+      data-testid="hous"
+    >
+      00
+    </div>
+    <div
+      class="xrk-timer-symbol"
+    >
+      :
+    </div>
+    <div
+      class="xrk-timer-item xrk-f xrk-ac xrk-jc"
+      data-testid="min"
+    >
+      00
+    </div>
+    <div
+      class="xrk-timer-symbol"
+    >
+      :
+    </div>
+    <div
+      class="xrk-timer-item xrk-f xrk-ac xrk-jc"
+      data-testid="sec"
+    >
+      00
+    </div>
+  </div>
+</div>
+`;
+
+exports[`comps/Timer Date对象 1`] = `
+<div>
+  <div
+    class="xrk-timer xrk-if xrk-ac xrk-jc"
+  >
+    <div
+      class="xrk-timer-item xrk-f xrk-ac xrk-jc"
+      data-testid="hous"
+    >
+      00
+    </div>
+    <div
+      class="xrk-timer-symbol"
+    >
+      :
+    </div>
+    <div
+      class="xrk-timer-item xrk-f xrk-ac xrk-jc"
+      data-testid="min"
+    >
+      01
+    </div>
+    <div
+      class="xrk-timer-symbol"
+    >
+      :
+    </div>
+    <div
+      class="xrk-timer-item xrk-f xrk-ac xrk-jc"
+      data-testid="sec"
+    >
+      00
+    </div>
+  </div>
+</div>
+`;
+
+exports[`comps/Timer 基本使用 => fill 1`] = `
+<div>
+  <div
+    class="xrk-timer xrk-if xrk-ac xrk-jc xrk-timer-fill"
+  >
+    <div
+      class="xrk-timer-item xrk-f xrk-ac xrk-jc"
+      data-testid="hous"
+    >
+      00
+    </div>
+    <div
+      class="xrk-timer-symbol"
+    >
+      :
+    </div>
+    <div
+      class="xrk-timer-item xrk-f xrk-ac xrk-jc"
+      data-testid="min"
+    >
+      01
+    </div>
+    <div
+      class="xrk-timer-symbol"
+    >
+      :
+    </div>
+    <div
+      class="xrk-timer-item xrk-f xrk-ac xrk-jc"
+      data-testid="sec"
+    >
+      00
+    </div>
+  </div>
+</div>
+`;
+
+exports[`comps/Timer 基本使用 1`] = `
+<div>
+  <div
+    class="xrk-timer xrk-if xrk-ac xrk-jc"
+  >
+    <div
+      class="xrk-timer-item xrk-f xrk-ac xrk-jc"
+      data-testid="hous"
+    >
+      00
+    </div>
+    <div
+      class="xrk-timer-symbol"
+    >
+      :
+    </div>
+    <div
+      class="xrk-timer-item xrk-f xrk-ac xrk-jc"
+      data-testid="min"
+    >
+      01
+    </div>
+    <div
+      class="xrk-timer-symbol"
+    >
+      :
+    </div>
+    <div
+      class="xrk-timer-item xrk-f xrk-ac xrk-jc"
+      data-testid="sec"
+    >
+      00
+    </div>
+  </div>
+</div>
+`;
+
+exports[`comps/Timer 基本使用 天 1`] = `
+<div>
+  <div
+    class="xrk-timer xrk-if xrk-ac xrk-jc"
+  >
+    <div
+      class="xrk-f xrk-ac xrk-jc"
+      data-testid="day"
+    >
+      1
+      天
+    </div>
+    <div
+      class="xrk-timer-item xrk-f xrk-ac xrk-jc"
+      data-testid="hous"
+    >
+      00
+    </div>
+    <div
+      class="xrk-timer-symbol"
+    >
+      :
+    </div>
+    <div
+      class="xrk-timer-item xrk-f xrk-ac xrk-jc"
+      data-testid="min"
+    >
+      00
+    </div>
+  </div>
+</div>
+`;
+
+exports[`comps/Timer 基本使用 小时 1`] = `
+<div>
+  <div
+    class="xrk-timer xrk-if xrk-ac xrk-jc"
+  >
+    <div
+      class="xrk-timer-item xrk-f xrk-ac xrk-jc"
+      data-testid="hous"
+    >
+      01
+    </div>
+    <div
+      class="xrk-timer-symbol"
+    >
+      :
+    </div>
+    <div
+      class="xrk-timer-item xrk-f xrk-ac xrk-jc"
+      data-testid="min"
+    >
+      00
+    </div>
+    <div
+      class="xrk-timer-symbol"
+    >
+      :
+    </div>
+    <div
+      class="xrk-timer-item xrk-f xrk-ac xrk-jc"
+      data-testid="sec"
+    >
+      00
+    </div>
+  </div>
+</div>
+`;
+
+exports[`comps/Timer 基本使用 秒 1`] = `
+<div>
+  <div
+    class="xrk-timer xrk-if xrk-ac xrk-jc"
+  >
+    <div
+      class="xrk-timer-item xrk-f xrk-ac xrk-jc"
+      data-testid="hous"
+    >
+      00
+    </div>
+    <div
+      class="xrk-timer-symbol"
+    >
+      :
+    </div>
+    <div
+      class="xrk-timer-item xrk-f xrk-ac xrk-jc"
+      data-testid="min"
+    >
+      00
+    </div>
+    <div
+      class="xrk-timer-symbol"
+    >
+      :
+    </div>
+    <div
+      class="xrk-timer-item xrk-f xrk-ac xrk-jc"
+      data-testid="sec"
+    >
+      03
+    </div>
+  </div>
+</div>
+`;
+
+exports[`comps/Timer 日期字符串 1`] = `
+<div>
+  <div
+    class="xrk-timer xrk-if xrk-ac xrk-jc"
+  >
+    <div
+      class="xrk-timer-item xrk-f xrk-ac xrk-jc"
+      data-testid="hous"
+    >
+      00
+    </div>
+    <div
+      class="xrk-timer-symbol"
+    >
+      :
+    </div>
+    <div
+      class="xrk-timer-item xrk-f xrk-ac xrk-jc"
+      data-testid="min"
+    >
+      01
+    </div>
+    <div
+      class="xrk-timer-symbol"
+    >
+      :
+    </div>
+    <div
+      class="xrk-timer-item xrk-f xrk-ac xrk-jc"
+      data-testid="sec"
+    >
+      00
+    </div>
+  </div>
+</div>
+`;
+
+exports[`comps/Timer 自定义渲染像 1`] = `
+<div>
+  <div
+    class="xrk-timer xrk-if xrk-ac xrk-jc"
+  >
+    <div
+      class=""
+    >
+      hous
+      =
+      00
+    </div>
+    <div
+      class=""
+    >
+      min
+      =
+      00
+    </div>
+    <div
+      class=""
+    >
+      sec
+      =
+      01
+    </div>
+  </div>
+</div>
+`;
+
+exports[`comps/Timer 过期 1`] = `
+<div>
+  <div
+    class="xrk-timer xrk-if xrk-ac xrk-jc"
+  >
+    <div
+      class="xrk-timer-item xrk-f xrk-ac xrk-jc"
+      data-testid="hous"
+    >
+      0
+    </div>
+    <div
+      class="xrk-timer-symbol"
+    >
+      :
+    </div>
+    <div
+      class="xrk-timer-item xrk-f xrk-ac xrk-jc"
+      data-testid="min"
+    >
+      0
+    </div>
+    <div
+      class="xrk-timer-symbol"
+    >
+      :
+    </div>
+    <div
+      class="xrk-timer-item xrk-f xrk-ac xrk-jc"
+      data-testid="sec"
+    >
+      0
+    </div>
+  </div>
+</div>
+`;

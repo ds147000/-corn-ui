@@ -5,7 +5,10 @@
  * @LastEditors: zhoulong.yang
  * @LastEditTime: 2021-06-10 16:35:14
  */
-import { Button, Toast, Drawer, ActionSheet, showActionSheet, Modal, showModal, Icon, Empty, Image, Tab, Tag, Affix } from '@xrkmm/ui-h5'
+import {
+  Button, Toast, Drawer, ActionSheet, showActionSheet,
+  Modal, showModal, Icon, Empty, Image, Tab, Tag, Affix, Timer
+} from '@xrkmm/ui-h5'
 import { useState } from 'react'
 import { TabItemPorps } from '../../package-h5/dist/components/Tab'
 import '../../package-h5/dist/styles/base.css'
@@ -25,6 +28,22 @@ const TabOption: TabItemPorps[] = [
   { title: '我是选项4' },
   { title: '我是选项5' }
 ]
+
+const renderItem = (type: string, number: string): JSX.Element => {
+  switch(type) {
+    case 'day':
+      return <div>{number}天:</div>
+
+    case 'hous':
+      return <div>{number}小时:</div>
+
+    case 'min':
+      return <div>{number}分钟:</div>
+
+    default:
+      return <div>{number}秒</div>
+  }
+}
 
 function App() {
   const [current, setCurrent] = useState(-1)
@@ -48,6 +67,15 @@ function App() {
           onChange={(index) => setCurrent(index)}
         />
       {/* </Affix> */}
+      <Button>
+        <Timer startTime={1500000000} endTime={1500000000 + 240000} />
+      </Button>
+      <Button>
+        <Timer startTime={1500000000} endTime={1500000000 + 240000000} />
+      </Button>
+      <Timer startTime={1500000000} endTime={1500000000 + 240000} fill />
+      <Timer startTime={1500000000} endTime={1500000000 + 240000000} fill />
+      <Timer startTime={1500000000} endTime={1500000000 + 240000000} renderItem={renderItem} />
       <Tag size="middle">3-9岁</Tag>
       <Tag size="small">3-9岁</Tag>
       <Tag type="error">3-9岁</Tag>
