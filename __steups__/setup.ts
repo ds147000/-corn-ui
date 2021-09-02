@@ -114,11 +114,17 @@ delete window.location
 class CutromLocation extends URL {
   constructor(url) {
     super(url)
+    this.href = url
   }
 
-  replace = jest.fn((url) => console.log(url))
+  replace = jest.fn((url) => {
+    this.href = url
+  })
   reload = jest.fn()
-  assign = jest.fn()
+  assign = jest.fn((url) => {
+    this.href = url
+  })
+  href = ''
   ancestorOrigins = '' as unknown as any
 
 }

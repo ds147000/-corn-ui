@@ -39,4 +39,14 @@ describe('comps/Tab/item', () => {
     // eslint-disable-next-line no-magic-numbers
     expect(click).toHaveBeenCalledTimes(1)
   })
+
+  test('url and click', () => {
+    const click = jest.fn()
+    const screen = render(<Item title="item" onClick={click} url="/home" />)
+    expect(screen.container.querySelector('a').href).toBe('http://localhost/home')
+    fireEvent.click(screen.getByText('item'))
+
+    // eslint-disable-next-line no-magic-numbers
+    expect(click).toHaveBeenCalledTimes(1)
+  })
 })

@@ -29,8 +29,16 @@ const TabOption: TabItemPorps[] = [
   { title: '我是选项5' }
 ]
 
+const TabUrlOption: TabItemPorps[] = [
+  { title: '我是选项1', url: '/home' },
+  { title: '我是选项2', url: '/' },
+  { title: '我是选项3', url: '/home' },
+  { title: '我是选项4', url: '/' },
+  { title: '我是选项5', url: '/home' }
+]
+
 const renderItem = (type: string, number: string): JSX.Element => {
-  switch(type) {
+  switch (type) {
     case 'day':
       return <div>{number}天:</div>
 
@@ -46,7 +54,7 @@ const renderItem = (type: string, number: string): JSX.Element => {
 }
 
 function App() {
-  const [current, setCurrent] = useState(-1)
+  const [current, setCurrent] = useState(1)
   const [show, setShow] = useState(false)
   const [aShow, setAshow] = useState(false)
   const [cShow, setCshow] = useState(false)
@@ -60,13 +68,16 @@ function App() {
 
   return (
     <div className="App">
-      {/* <Affix> */}
-        <Tab
-          options={TabOption}
-          currenIndex={current}
-          onChange={(index) => setCurrent(index)}
-        />
-      {/* </Affix> */}
+      <Tab
+        options={TabOption}
+        currenIndex={current}
+        onChange={(index) => setCurrent(index)}
+      />
+      <Tab
+        options={TabUrlOption}
+        currenIndex={current}
+        onChange={(index) => setCurrent(index)}
+      />
       <Link to='/pages/link/index'>【Link跳转】</Link>
       <Link to='/pages/link/index' replace >【Link原地跳转】</Link>
       <Link to='/pages/link/index' replace >【替换跳转】</Link>
@@ -107,6 +118,7 @@ function App() {
       <Button type="link">向日葵妈妈UI</Button>
       <Button type="pop">向日葵妈妈UI</Button>
       <Button type="primary">向日葵妈妈UI</Button>
+      <Button type="primary" href="/home">跳转首页</Button>
       <Button type="warn">向日葵妈妈UI</Button>
       <Button icon={<div>我是图标</div>}>向日葵妈妈UI</Button>
       <Button block type="error" >向日葵妈妈UI</Button>

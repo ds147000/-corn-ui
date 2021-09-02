@@ -1,6 +1,6 @@
-import React from 'react'
+import React, { useMemo } from 'react'
 import ClassName from 'classnames'
-import { View, Text, ITouchEvent } from '@tarojs/components'
+import { ITouchEvent } from '@tarojs/components'
 import { OpenMpLink } from './openmp'
 import type { LINK } from './index'
 import { checkOpenMp, OpenHostSuffix } from './utils'
@@ -17,8 +17,10 @@ const Link: LINK = ({
   className,
   ...props
 }) => {
-  const _class = ClassName(className, 'xrk-link', `xrk-link-${type}`)
-  const children = target === 'View' ? <View {...props} className={_class} /> : <Text {...props} className={_class} />
+
+  const _class = useMemo(() => {
+    return ClassName('xrk-link', `xrk-link-${type}`, target === 'View' && 'xrk-link-view', className)
+  }, [ className, type, target ])
 
   const onNavigate = (event: React.MouseEvent<HTMLAnchorElement, MouseEvent> | ITouchEvent): void => {
     if (onBefor?.(to) === true || disable) {
@@ -44,18 +46,15 @@ const Link: LINK = ({
         onClick={onNavigate}
         appId={appId || Link.appId}
         path={to.slice(OpenHostSuffix.length)}
-      >
-        {children}
-      </OpenMpLink>
+      />
     )
   }
 
   return (
-    // eslint-disable-next-line react/forbid-elements
-    <a href={to} onClick={onNavigate}>
-      {children}
-    </a>
+    // eslint-disable-next-line react/forbid-elements, @typescript-eslint/no-explicit-any
+    <a {...props as any} href={to} onClick={onNavigate} className={_class} />
   )
+
 }
 
 Link.appId = ''

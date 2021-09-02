@@ -1,6 +1,7 @@
 import React, { useMemo } from 'react'
 import ClassNames from 'classnames'
 import { View } from '@tarojs/components'
+import Link from '../Link'
 
 export interface ButtonProps {
   /** 按钮大小，max: 最大， big: 超大，large：大，middle：中，small：小，mini */
@@ -15,6 +16,8 @@ export interface ButtonProps {
   ghost?: boolean
   /** 是否禁用 */
   disabled?: boolean
+  /** 跳转链接，填写启用A链接行为 */
+  href?: string
   /** 点击事件 */
   onClick?(): void
 }
@@ -25,6 +28,7 @@ const Button: React.FC<ButtonProps> = ({
   block,
   ghost,
   disabled,
+  href,
   onClick,
   icon,
   children
@@ -52,6 +56,17 @@ const Button: React.FC<ButtonProps> = ({
     if (disabled) return
 
     onClick?.()
+  }
+
+
+
+  if (href) {
+    return (
+      <Link target="Text" to={href} className={_class} onClick={_onClick} disable={disabled} type="normal" >
+        {children}
+        {icon}
+      </Link>
+    )
   }
 
   return (

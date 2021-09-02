@@ -9,6 +9,7 @@ export interface TabItemPorps {
   icon?: string
   active?: boolean
   message?: boolean
+  url?: string
 }
 
 export interface TabProps {

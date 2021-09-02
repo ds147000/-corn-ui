@@ -1,7 +1,7 @@
 import React, { useEffect, useRef } from 'react'
 import { View, Text } from '@tarojs/components'
 import { ViewProps } from '@tarojs/components/types/View'
-import { LinkTarget } from './type'
+import { LinkTarget } from './index'
 import { getRanDomId } from '../../utils'
 
 interface OpenMpLinkProps extends ViewProps {
@@ -10,7 +10,7 @@ interface OpenMpLinkProps extends ViewProps {
   path: string
 }
 
-export const OpenMpLink: React.FC<OpenMpLinkProps> = ({ target, appId, path, onClick, children }) => {
+export const OpenMpLink: React.FC<OpenMpLinkProps> = ({ target, appId, path, onClick, children, ...props }) => {
   const el = useRef<HTMLDivElement>()
 
   useEffect(() => {
@@ -47,9 +47,9 @@ export const OpenMpLink: React.FC<OpenMpLinkProps> = ({ target, appId, path, onC
   )
 
   if (target === 'View')
-    return <View className="xrk-link-mp" data-testid="openmp">{content}</View>
+    return <View {...props} className="xrk-link-mp" data-testid="openmp" >{content}</View>
 
-  return <Text className="xrk-link-mp" data-testid="openmp">{content}</Text>
+  return <Text {...props} className="xrk-link-mp" data-testid="openmp">{content}</Text>
 }
 
 /** 获取模板字符串 */

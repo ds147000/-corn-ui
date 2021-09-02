@@ -1,6 +1,6 @@
 /* eslint-disable no-magic-numbers */
 import React from 'react'
-import { fireEvent, render } from '@testing-library/react'
+import { fireEvent, render, waitFor } from '@testing-library/react'
 import { View, Text } from '@tarojs/components'
 import Button from '../index'
 
@@ -89,6 +89,12 @@ describe('<Button />', () => {
     const DefualtScreen = render(<Button ghost={false} >向日葵妈妈UI</Button>).container.innerHTML.toString()
 
     expect(BlockScreen).not.toBe(DefualtScreen)
+  })
+
+  test('href', async () => {
+    const screen = render(<Button href="http://baidu.com" >向日葵妈妈UI</Button>)
+    await waitFor(() => expect(screen.container.querySelector('a').href).toBe('http://baidu.com/'))
+    expect(screen).toMatchSnapshot()
   })
 
 })
