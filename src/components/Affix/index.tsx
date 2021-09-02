@@ -66,7 +66,6 @@ const Affix: React.FC<AffixProps> = ({ children, position = 'top', onChange }) =
         .observe('#' + node.uid, (res): void => {
           const result = judge( res.boundingClientRect as DOMRect, rootRect, position, isInit ? 1 : 0)
           isInit = false
-          console.log(result)
           changeFixed(result)
         })
     })
@@ -77,7 +76,7 @@ const Affix: React.FC<AffixProps> = ({ children, position = 'top', onChange }) =
 
     // #else
     // eslint-disable-next-line no-unreachable
-    const el: HTMLDivElement = ref.current._reactInternals.child.stateNode
+    const el: HTMLDivElement = ref.current
     setBoxStyle({ height: el.offsetHeight, width: el.offsetWidth })
 
     const Intersection = new IntersectionObserver(

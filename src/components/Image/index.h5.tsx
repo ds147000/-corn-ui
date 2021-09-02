@@ -5,7 +5,7 @@ import ClassNames from 'classnames'
 import getObserverService from './utils/observer'
 import previewImageApi from '../PreviewImage/api.h5'
 import { formatImg } from '../../utils/url'
-import { DEFAULT_LAZY_IMG, DEFAULT_LIGHT_LAZY_IMG, XImageProps } from './interface'
+import { DEFAULT_LAZY_IMG, DEFAULT_LIGHT_LAZY_IMG, XImageProps } from './typing'
 
 
 const XImage: React.FC<XImageProps> = ({

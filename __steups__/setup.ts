@@ -55,6 +55,7 @@ jest.mock('@tarojs/taro', () => {
     navigateTo: jest.fn(),
     reLaunch: jest.fn(),
     switchTab: jest.fn(),
+    navigateToMiniProgram: jest.fn(),
     login,
     getSystemInfo,
     useDidShow: jest.requireActual('react').useLayoutEffect,
@@ -109,4 +110,19 @@ class MockIntersectionObserver {
 window.IntersectionObserver = MockIntersectionObserver as any
 window.requestAnimationFrame = (cb: Function) => cb()
 
+delete window.location
+class CutromLocation extends URL {
+  constructor(url) {
+    super(url)
+  }
+
+  replace = jest.fn((url) => console.log(url))
+  reload = jest.fn()
+  assign = jest.fn()
+  ancestorOrigins = '' as unknown as any
+
+}
+window.location = new CutromLocation('http://localhost:3000/')
+
 jest.mock('../src/components/Image')
+jest.mock('../src/components/Link')

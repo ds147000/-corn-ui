@@ -1,6 +1,6 @@
 import React from 'react'
 import { Text } from '@tarojs/components'
-import { IconProps } from './interface'
+import { IconProps } from './typing'
 
 
 

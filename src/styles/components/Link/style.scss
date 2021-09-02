@@ -1,0 +1,76 @@
+.xrk-link {
+  text-decoration: none;
+
+  &-primary {
+    color: $primary;
+
+    &::before {
+      background-color: $primary;
+    }
+  }
+
+  &-warn {
+    color: $warn;
+
+    &::before {
+      background-color: $warn;
+    }
+  }
+
+  &-error {
+    color: $error;
+
+    &::before {
+      background-color: $error;
+    }
+  }
+
+  &-link {
+    color: $link;
+
+    &::before {
+      background-color: $link;
+    }
+  }
+
+  &-pop {
+    color: $pop;
+
+    &::before {
+      background-color: $pop;
+    }
+  }
+
+  &-mp {
+    position: relative;
+
+    &-mask {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+    }
+  }
+}
+
+.xrk-link-primary,
+.xrk-link-warn,
+.xrk-link-error,
+.xrk-link-link,
+.xrk-link-pop {
+  margin-left: 24px;
+  position: relative;
+
+  &::before {
+    content: '';
+    display: inline-block;
+    width: 9px;
+    height: 9px;
+    border-radius: 50%;
+    position: absolute;
+    top: 50%;
+    left: -12px;
+    transform: translate(-50% , -50%);
+  }
+}

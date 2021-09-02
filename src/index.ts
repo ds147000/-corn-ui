@@ -26,6 +26,7 @@ export { default as Tag } from './components/Tag'
 export { default as Affix } from './components/Affix'
 export { default as Timer  } from './components/Timer'
 export { MinuteSchedulerApp, SecondSchedulerApp, SecondScheduler  } from './components/Timer/SecondScheduler'
+export { default as Link } from './components/Link'
 
 export const UTILS = {
   transformRem,

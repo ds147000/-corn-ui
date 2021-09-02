@@ -11,7 +11,7 @@ export default (packageName) => {
       if (/index\.esm\.js/.test(file) === false) return
 
       // 复制css资源文档
-      await removeDir(resolveApp(packageName + '/dist/styles'))
+      // await removeDir(resolveApp(packageName + '/dist/styles'))
       await removeDir(resolveApp(packageName + '/dist/assets'))
       await fsExtra.copy(resolveApp('src/styles'), resolveApp(packageName + '/dist/styles'))
       await fsExtra.copy(resolveApp('src/assets'), resolveApp(packageName + '/dist/assets'))

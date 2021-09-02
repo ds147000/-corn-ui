@@ -2,7 +2,7 @@
 import React, { useMemo } from 'react'
 import { Image } from '@tarojs/components'
 import { formatImg } from '../../utils/url'
-import { XImageProps } from './interface'
+import { XImageProps } from './typing'
 import previewImageApi from '../PreviewImage'
 
 const XImage: React.FC<XImageProps> = ({

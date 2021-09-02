@@ -15,7 +15,7 @@ export interface ButtonProps {
   ghost?: boolean
   /** 是否禁用 */
   disabled?: boolean
-  /** 点击跳转事件 */
+  /** 点击事件 */
   onClick?(): void
 }
 

@@ -58,7 +58,7 @@ export default {
     RollupTypescript({ tsconfig: resolveApp('tsconfig.json') }),
     RollupBabel({
       babelHelpers: 'bundled',
-      exclude: ['node_modules/**', 'example/**', 'example-react/**'],
+      exclude: ['node_modules/**', 'example-weapp/**', 'example-react/**'],
       configFile: resolveApp('./babel.config.js')
     }),
     BuildCss('package-taro')

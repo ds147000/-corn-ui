@@ -9,4 +9,5 @@ docs/
 example-react/
 __steups__
 __mocks__
+__tests__
 coverage/

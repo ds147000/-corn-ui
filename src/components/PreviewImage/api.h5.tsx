@@ -1,6 +1,6 @@
 import React from 'react'
 import { View, Image } from '@tarojs/components'
-import { previewImageOption } from './interface'
+import { previewImageOption } from './typeing'
 import { Swiper, SwiperItem } from '../Swiper'
 import Portal from '../Portal'
 

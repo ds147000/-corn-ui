@@ -1,6 +1,6 @@
 /* eslint-disable no-magic-numbers */
 import { Container } from './container.h5'
-import { DEFAULT_DURATION, ToastOption } from './interface'
+import { DEFAULT_DURATION, ToastOption } from './typing'
 import Protal from '../Portal'
 import Sub from '../../utils/sub'
 import { TOAST_ADD } from '../../config/event'

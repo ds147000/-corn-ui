@@ -12,8 +12,8 @@ import RollupAlias from '@rollup/plugin-alias'
 import RollupCommonjs from '@rollup/plugin-commonjs'
 import RollupTypescript from 'rollup-plugin-typescript2'
 import RollupJscc from 'rollup-plugin-jscc'
-import RollupPostcss from 'rollup-plugin-postcss'
 import BuildCss from './rollup.config.css'
+import RollupStyles from 'rollup-plugin-styles'
 import { DEFAULT_EXTENSIONS } from '@babel/core'
 const { resolveApp, removeDir } = require('./utils')
 
@@ -29,6 +29,7 @@ const externalPackages = [
   '@tarojs/runtime',
   '@tarojs/taro',
   '@atrojs/api',
+  'react-dom/server',
   'qs'
 ]
 
@@ -43,23 +44,29 @@ export default {
     },
     {
       file: resolveApp(Package['module:h5']),
+
+      assetFileNames: ({ name }) => {
+        if (name.indexOf('.css') !== -1) return name
+        return '[name]-[hash][extname]'
+      },
+
       format: 'esm',
       sourcemap: true
     }
   ],
   plugins: [
+    RollupJscc({
+      values: { _APP: 'h5' }
+    }),
+    RollupStyles({
+      mode: ['extract', 'index.css'],
+      sourceMap: false,
+      dts: false
+    }),
     RollupAlias({
       entries: {
         'weui': resolveApp('build/mock/weui')
       }
-    }),
-    RollupPostcss({
-      inject: { insertAt: 'top' },
-      extract: true,
-      sourceMap: false,
-    }),
-    RollupJscc({
-      values: { _APP: 'h5' }
     }),
     RollupResolve({
       customResolveOptions: {
@@ -69,7 +76,7 @@ export default {
     RollupCommonjs(),
     RollupTypescript({ tsconfig: resolveApp('tsconfig.json') }),
     RollupBabel({
-      exclude: ['node_modules/**', 'example/**', 'example-react/**'],
+      exclude: ['node_modules/**', 'example-weapp/**', 'example-react/**'],
       extensions: [ // 扩展文件名
         ...DEFAULT_EXTENSIONS,
         '.ts',

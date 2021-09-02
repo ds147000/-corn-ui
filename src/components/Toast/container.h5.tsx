@@ -2,8 +2,8 @@ import React, { useCallback, useEffect, useRef, useState } from 'react'
 import { View } from '@tarojs/components'
 import { TOAST_ADD } from '../../config/event'
 import Sub from '../../utils/sub'
-import { ToastOption } from './interface'
-import { Toast } from './toast.h5'
+import { ToastOption } from './typing'
+import { ToastView } from './toast.h5'
 
 interface ContainerProps {
   onShow?(): void
@@ -41,7 +41,7 @@ export const Container: React.FC<ContainerProps> = ({ onDestory, onShow, onHide 
   return (
     <View className={`xrk-toast ${isMask && 'xrk-toast-actions'}`}>
       {toastList.map((item, key) => (
-        <Toast {...item} onClose={onItemClose} key={String(key)} />
+        <ToastView {...item} onClose={onItemClose} key={String(key)} />
       ))}
     </View>
   )

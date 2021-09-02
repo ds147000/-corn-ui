@@ -1,5 +1,5 @@
 import Taro from '@tarojs/taro'
-import { DEFAULT_DURATION, ToastOption } from './interface'
+import { DEFAULT_DURATION, ToastOption } from './typing'
 
 class ToastManager {
   show(option: ToastOption | string): void {

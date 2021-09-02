@@ -27,14 +27,17 @@
   "onlyCompileBundledFiles": true,
   "compileOnSave": false,
   "exclude": [
-    "node_modules/*",
-    "package-h5/*",
-    "example-taro/*",
-    "example-react/*",
-    "package-taro/*",
+    "node_modules",
+    "package-h5",
+    "package-taro",
+    "example-react",
+    "example-weapp",
+    "**/__tests__",
+    "**/__mocks__",
+    "@tarojs"
   ],
   "include": [
-    "src/**/*",
+    "src/index.ts",
     "src/global.d.ts"
   ]
 }

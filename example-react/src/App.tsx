@@ -7,7 +7,7 @@
  */
 import {
   Button, Toast, Drawer, ActionSheet, showActionSheet,
-  Modal, showModal, Icon, Empty, Image, Tab, Tag, Affix, Timer
+  Modal, showModal, Icon, Empty, Image, Tab, Tag, Affix, Timer, Link
 } from '@xrkmm/ui-h5'
 import { useState } from 'react'
 import { TabItemPorps } from '../../package-h5/dist/components/Tab'
@@ -67,6 +67,15 @@ function App() {
           onChange={(index) => setCurrent(index)}
         />
       {/* </Affix> */}
+      <Link to='/pages/link/index'>【Link跳转】</Link>
+      <Link to='/pages/link/index' replace >【Link原地跳转】</Link>
+      <Link to='/pages/link/index' replace >【替换跳转】</Link>
+      <Link to='openmp:///pages/link/index'  >【打开小程序】</Link>
+      <Link to='/pages/link/index' type="primary" >primary</Link>
+      <Link to='/pages/link/index' type="warn" >warn</Link>
+      <Link to='/pages/link/index' type="error" >error</Link>
+      <Link to='/pages/link/index' type="link" >link</Link>
+      <Link to='/pages/link/index' type="pop" >pop</Link>
       <Button>
         <Timer startTime={1500000000} endTime={1500000000 + 240000} />
       </Button>

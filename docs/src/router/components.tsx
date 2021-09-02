@@ -57,6 +57,13 @@ const Routes: RoutesProps[] = [
     sort: 3,
   },
   {
+    path: '/doc/Link',
+    component: require('../views/Link').default,
+    title: 'Link 链接',
+    type: '导航',
+    sort: 2,
+  },
+  {
     path: '/doc/Modal',
     component: require('../views/Modal').default,
     title: 'Modal 模态对话框',

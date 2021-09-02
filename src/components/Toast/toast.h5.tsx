@@ -1,10 +1,10 @@
 /* eslint-disable no-magic-numbers */
 import React, { useEffect, useMemo, useState } from 'react'
 import { Text, View, Image } from '@tarojs/components'
-import { ToastProps } from './interface'
+import { ToastProps } from './typing'
 
 
-export const Toast: React.FC<ToastProps> = ({ title, onClose, success, icon, image, duration }) => {
+export const ToastView: React.FC<ToastProps> = ({ title, onClose, success, icon, image, duration }) => {
   const [ isHideAnimated, setIsHideAnimated ] = useState<0 | 1 | 2>(0)
 
   const iconEl = useMemo((): JSX.Element | null => {
