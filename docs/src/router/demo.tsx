@@ -106,6 +106,13 @@ const Routes: RoutesProps[] = [
     sort: 4,
   },
   {
+    path: '/phone/Button/demo/href',
+    component: require('../views/Button/demo/href').default,
+    title: '配置跳转链接',
+    type: 'undefined',
+    sort: 6,
+  },
+  {
     path: '/phone/Button/demo/icon',
     component: require('../views/Button/demo/icon').default,
     title: 'icon',
@@ -349,6 +356,13 @@ const Routes: RoutesProps[] = [
     title: '开启消息红点',
     type: 'undefined',
     sort: 3,
+  },
+  {
+    path: '/phone/Tab/demo/url',
+    component: require('../views/Tab/demo/url').default,
+    title: '使用url属性直接跳转',
+    type: 'undefined',
+    sort: 4,
   },
   {
     path: '/phone/Tag/demo/ghost',
