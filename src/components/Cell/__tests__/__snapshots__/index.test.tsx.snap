@@ -1,0 +1,314 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Cell basis 1`] = `
+<div>
+  <div
+    class="xrk-cell xrk-f xrk-ac"
+  >
+    <div
+      class="xrk-cell-label"
+    >
+      限时奖励
+    </div>
+    <div
+      class="xrk-cell-value"
+    >
+      六月阶梯奖励活动
+    </div>
+    <div
+      class="xrk-cell-suffix xrk-f xrk-ac"
+    >
+      <i
+        class="xrk-icon xrk-i-big-right"
+        data-testid="arrow"
+      />
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Cell children 1`] = `
+<div>
+  <div
+    class="xrk-cell xrk-f xrk-ac"
+  >
+    <div
+      class="xrk-cell-label"
+    >
+      限时奖励
+    </div>
+    <div
+      class="xrk-cell-value"
+    >
+      <span
+        class="taro-text"
+      >
+        六月阶梯奖励活动
+      </span>
+    </div>
+    <div
+      class="xrk-cell-suffix xrk-f xrk-ac"
+    >
+      <i
+        class="xrk-icon xrk-i-big-right"
+        data-testid="arrow"
+      />
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Cell hide arrow 1`] = `
+<div>
+  <div
+    class="xrk-cell xrk-f xrk-ac"
+  >
+    <div
+      class="xrk-cell-label"
+    >
+      限时奖励
+    </div>
+    <div
+      class="xrk-cell-value"
+    >
+      <span
+        class="taro-text"
+      >
+        自定义内容
+      </span>
+    </div>
+    <div
+      class="xrk-cell-suffix xrk-f xrk-ac"
+    />
+  </div>
+</div>
+`;
+
+exports[`Cell href 1`] = `
+<div>
+  <a
+    class="xrk-link xrk-link-normal xrk-link-view xrk-cell xrk-f xrk-ac"
+    href="/home"
+  >
+    <div
+      class="xrk-cell-label"
+    >
+      限时奖励
+    </div>
+    <div
+      class="xrk-cell-value"
+    >
+      前往查看
+    </div>
+    <div
+      class="xrk-cell-suffix xrk-f xrk-ac"
+    >
+      <i
+        class="xrk-icon xrk-i-big-right"
+        data-testid="arrow"
+      />
+    </div>
+  </a>
+</div>
+`;
+
+exports[`Cell href and hide arrow 1`] = `
+<div>
+  <a
+    class="xrk-link xrk-link-normal xrk-link-view xrk-cell xrk-f xrk-ac"
+    href="/home"
+  >
+    <div
+      class="xrk-cell-label"
+    >
+      限时奖励
+    </div>
+    <div
+      class="xrk-cell-value"
+    >
+      前往查看
+    </div>
+    <div
+      class="xrk-cell-suffix xrk-f xrk-ac"
+    />
+  </a>
+</div>
+`;
+
+exports[`Cell label = ReactNode 1`] = `
+<div>
+  <div
+    class="xrk-cell xrk-f xrk-ac"
+  >
+    <div
+      class="xrk-cell-label"
+    >
+      <span
+        class="taro-text"
+      >
+        自定义标题
+      </span>
+    </div>
+    <div
+      class="xrk-cell-value"
+    >
+      六月阶梯奖励活动
+    </div>
+    <div
+      class="xrk-cell-suffix xrk-f xrk-ac"
+    >
+      重选
+      <i
+        class="xrk-icon xrk-i-big-right"
+        data-testid="arrow"
+      />
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Cell placeholder 1`] = `
+<div>
+  <div
+    class="xrk-cell xrk-f xrk-ac"
+  >
+    <div
+      class="xrk-cell-label"
+    >
+      限时奖励
+    </div>
+    <div
+      class="xrk-cell-value"
+    >
+      
+      <span
+        class="taro-text xrk-cell-placeholder"
+      >
+        请选择奖励类型
+      </span>
+    </div>
+    <div
+      class="xrk-cell-suffix xrk-f xrk-ac"
+    >
+      <i
+        class="xrk-icon xrk-i-big-right"
+        data-testid="arrow"
+      />
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Cell placeholder And Value 1`] = `
+<div>
+  <div
+    class="xrk-cell xrk-f xrk-ac"
+  >
+    <div
+      class="xrk-cell-label"
+    >
+      限时奖励
+    </div>
+    <div
+      class="xrk-cell-value"
+    >
+      123
+    </div>
+    <div
+      class="xrk-cell-suffix xrk-f xrk-ac"
+    >
+      <i
+        class="xrk-icon xrk-i-big-right"
+        data-testid="arrow"
+      />
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Cell suffix = ReactNode 1`] = `
+<div>
+  <div
+    class="xrk-cell xrk-f xrk-ac"
+  >
+    <div
+      class="xrk-cell-label"
+    >
+      限时奖励
+    </div>
+    <div
+      class="xrk-cell-value"
+    >
+      六月阶梯奖励活动
+    </div>
+    <div
+      class="xrk-cell-suffix xrk-f xrk-ac"
+    >
+      <span
+        class="taro-text"
+      >
+        suffix
+      </span>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Cell suffix 1`] = `
+<div>
+  <div
+    class="xrk-cell xrk-f xrk-ac"
+  >
+    <div
+      class="xrk-cell-label"
+    >
+      限时奖励
+    </div>
+    <div
+      class="xrk-cell-value"
+    >
+      六月阶梯奖励活动
+    </div>
+    <div
+      class="xrk-cell-suffix xrk-f xrk-ac"
+    >
+      重选
+      <i
+        class="xrk-icon xrk-i-big-right"
+        data-testid="arrow"
+      />
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Cell value = ReactNode 1`] = `
+<div>
+  <div
+    class="xrk-cell xrk-f xrk-ac"
+  >
+    <div
+      class="xrk-cell-label"
+    >
+      限时奖励
+    </div>
+    <div
+      class="xrk-cell-value"
+    >
+      <span
+        class="taro-text"
+      >
+        自定义内容
+      </span>
+    </div>
+    <div
+      class="xrk-cell-suffix xrk-f xrk-ac"
+    >
+      <i
+        class="xrk-icon xrk-i-big-right"
+        data-testid="arrow"
+      />
+    </div>
+  </div>
+</div>
+`;

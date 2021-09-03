@@ -1,0 +1,51 @@
+.xrk-cell {
+  width: 100%;
+  height: $cellHeight;
+  background-color: $white;
+  padding: 20px 30px;
+  box-sizing: border-box;
+  font-size: $cellSize;
+  line-height: $cellSize;
+  transition: opacity 0.1s;
+  white-space: nowrap;
+
+  &:active {
+    opacity: 0.7;
+  }
+
+  &.xrk-cell-disable {
+    background-color: $disable;
+    opacity: 0.3;
+
+    &:active {
+      background-color: $disable;
+      opacity: 0.3;
+    }
+  }
+
+  &-label {
+    width: $cellWidth;
+    font-weight: 400;
+    color: $text2;
+  }
+
+  &-value {
+    flex: 1;
+    color: $text1;
+    font-weight: bolder;
+  }
+
+  &-suffix {
+    color: $text2;
+  }
+}
+
+.xrk-cell-list-line {
+  >.xrk-cell {
+    border-bottom: 2px solid $bg;
+
+    &:last-child {
+      border-bottom: none;
+    }
+  }
+}

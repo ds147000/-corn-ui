@@ -29,6 +29,13 @@ const Routes: RoutesProps[] = [
     sort: 2,
   },
   {
+    path: '/doc/Cell',
+    component: require('../views/Cell').default,
+    title: 'Cell 单元格',
+    type: '表单类型',
+    sort: 1,
+  },
+  {
     path: '/doc/Drawer',
     component: require('../views/Drawer').default,
     title: 'Drawer 抽屉',

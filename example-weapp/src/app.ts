@@ -6,7 +6,6 @@
  * @LastEditTime: 2021-06-10 15:32:29
  */
 import { Component } from 'react'
-import '../../package-taro/icons/style.scss'
 import './app.scss'
 
 class App extends Component {

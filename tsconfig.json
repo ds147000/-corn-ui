@@ -37,7 +37,7 @@
     "@tarojs"
   ],
   "include": [
-    "src/index.ts",
+    "src/**/*",
     "src/global.d.ts"
   ]
 }

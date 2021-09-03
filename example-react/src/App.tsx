@@ -7,7 +7,8 @@
  */
 import {
   Button, Toast, Drawer, ActionSheet, showActionSheet,
-  Modal, showModal, Icon, Empty, Image, Tab, Tag, Affix, Timer, Link
+  Modal, showModal, Icon, Empty, Image, Tab, Tag, Affix, Timer, Link,
+  Cell
 } from '@xrkmm/ui-h5'
 import { useState } from 'react'
 import { TabItemPorps } from '../../package-h5/dist/components/Tab'
@@ -103,12 +104,26 @@ function App() {
       <Tag type="pop">3-9岁</Tag>
       <Tag type="primary">3-9岁</Tag>
       <Tag type="warn">3-9岁</Tag>
-
       <Tag type="error" ghost>3-9岁</Tag>
       <Tag type="link" ghost>3-9岁</Tag>
       <Tag type="pop" ghost>3-9岁</Tag>
       <Tag type="primary" ghost>3-9岁</Tag>
       <Tag type="warn" ghost>3-9岁</Tag>
+      <Cell label="限时奖励" />
+      <Cell label="限时奖励" placeholder="请选择奖励类型" />
+      <Cell label="限时奖励" placeholder="请选择奖励类型" value="葵花籽" />
+      <Cell label="限时奖励" placeholder="请选择奖励类型" value="葵花籽" arrow />
+      <Cell label="限时奖励" placeholder="请选择奖励类型" value="葵花籽" suffix="重选" arrow />
+      <Cell label="限时奖励" placeholder="请选择奖励类型" value="前往兑换" href="/home" suffix="重选" arrow />
+      <Cell label="限时奖励" placeholder="请选择奖励类型" value="无效兑换" href="/home" suffix="重选" arrow disable />
+      <Cell label="限时奖励" placeholder="请选择奖励类型" value="前往兑换"suffix="重选" arrow onClick={() => Toast.show('骗你的')} />
+      <br />
+      <Cell.List line>
+        <Cell label="限时奖励" placeholder="请选择奖励类型" value="葵花籽" suffix="重选" arrow />
+        <Cell label="限时奖励" placeholder="请选择奖励类型" value="无效兑换" href="/home" suffix="重选" arrow disable />
+        <Cell label="限时奖励" placeholder="请选择奖励类型" value="立即兑换"suffix="重选" arrow onClick={() => Toast.show('骗你的')} />
+      </Cell.List>
+      <br />
       <Button size="big" icon={<Icon name="service" />}>向日葵妈妈UI</Button>
       <Button size="large">向日葵妈妈UI</Button>
       <Button size="middle">向日葵妈妈UI</Button>

@@ -92,7 +92,7 @@ export default class Index extends Component {
         <Timer startTime={1500000000} endTime={1500000000 + 240000} fill />
         <Timer startTime={1500000000} endTime={1500000000 + 240000000} fill />
         <Timer startTime={1500000000} endTime={1500000000 + 240000000} renderItem={renderItem} />
-        <Button size='max' icon={<Icon name='service' />}>向日葵妈妈UI</Button>
+        <Button size='max' icon={<Icon name='service' />}>图标按钮</Button>
         <Button size='big'>向日葵妈妈UI</Button>
         <Button size='large'>向日葵妈妈UI</Button>
         <Button size='middle'>向日葵妈妈UI</Button>
@@ -151,7 +151,7 @@ export default class Index extends Component {
         <Image src='https://t7.baidu.com/it/u=1951548898,3927145&fm=193&f=GIF'  />
         <Image src='https://t7.baidu.com/it/u=1595072465,3644073269&fm=193&f=GIF' lazyLoad />
         <Affix position='bottom'>
-          <Button size='max' icon={<Icon name='service' />}>向日葵妈妈UI</Button>
+          <Button size='max' icon={<Icon name='service' />}>图标按钮</Button>
         </Affix>
       </View>
     )

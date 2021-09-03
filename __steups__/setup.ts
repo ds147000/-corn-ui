@@ -132,3 +132,4 @@ window.location = new CutromLocation('http://localhost:3000/')
 
 jest.mock('../src/components/Image')
 jest.mock('../src/components/Link')
+jest.mock('../src/components/Icon')

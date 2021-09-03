@@ -65,8 +65,8 @@ export default Demo
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    width: 80px;
-    height: 80px;
+    width: 75px;
+    height: 75px;
     border-radius: 8px;
     transition: all 0.5s;
     font-size: 30px;
