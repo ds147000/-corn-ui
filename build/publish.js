@@ -32,6 +32,7 @@ WeappPackage.name += '-taro'
 WeappPackage.main = 'dist/index.js'
 WeappPackage.module = 'dist/index.esm.js'
 WeappPackage.private = false
+delete WeappPackage.peerDependencies.swiper
 
 // 写入package
 writeFile(WeappPackagePath, Prettier.format(JSON.stringify(WeappPackage), PerttierConfig))
