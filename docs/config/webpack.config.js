@@ -337,7 +337,7 @@ module.exports = function (webpackEnv) {
         }),
         ...(modules.webpackAliases || {}),
         '@xrkmm/ui-h5': paths.ui,
-        'react': paths.reactApp
+        'react': paths.reactApp,
       },
       plugins: [
         // Adds support for installing with Plug'n'Play, leading to faster installs and adding

@@ -28,6 +28,7 @@ export { default as Timer  } from './components/Timer'
 export { MinuteSchedulerApp, SecondSchedulerApp, SecondScheduler  } from './components/Timer/SecondScheduler'
 export { default as Link } from './components/Link'
 export { default as Cell } from './components/Cell'
+export { default as Card } from './components/Card'
 
 export const UTILS = {
   transformRem,

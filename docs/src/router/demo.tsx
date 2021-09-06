@@ -134,6 +134,13 @@ const Routes: RoutesProps[] = [
     sort: 1,
   },
   {
+    path: '/phone/Card/demo/basis',
+    component: require('../views/Card/demo/basis').default,
+    title: '代码演示',
+    type: 'undefined',
+    sort: 1,
+  },
+  {
     path: '/phone/Cell/demo/basis',
     component: require('../views/Cell/demo/basis').default,
     title: '基本使用',

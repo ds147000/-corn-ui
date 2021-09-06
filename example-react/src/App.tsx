@@ -8,7 +8,7 @@
 import {
   Button, Toast, Drawer, ActionSheet, showActionSheet,
   Modal, showModal, Icon, Empty, Image, Tab, Tag, Affix, Timer, Link,
-  Cell
+  Cell, Card, Swiper, SwiperItem
 } from '@xrkmm/ui-h5'
 import { useState } from 'react'
 import { TabItemPorps } from '../../package-h5/dist/components/Tab'
@@ -209,6 +209,18 @@ function App() {
       <Empty text="暂无内容哦" size="small" />
       <Image src="https://t7.baidu.com/it/u=124476473,2583135375&fm=193&f=GIFF" previewImage />
       <Image src="https://t7.baidu.com/it/u=1595072465,3644073269&fm=193&f=GIF" lazyLoad />
+      <Swiper loop >
+        <SwiperItem>
+          <Image src="https://t7.baidu.com/it/u=1595072465,3644073269&fm=193&f=GIF" />
+        </SwiperItem>
+        <SwiperItem>
+          <Image src="https://t7.baidu.com/it/u=1595072465,3644073269&fm=193&f=GIF" />
+        </SwiperItem>
+        <SwiperItem>
+          <Image src="https://t7.baidu.com/it/u=1595072465,3644073269&fm=193&f=GIF" />
+        </SwiperItem>
+      </Swiper>
+      <Card>Card</Card>
       <Affix onChange={onChange} position="bottom">
         <Button size="max">向日葵妈妈UI</Button>
       </Affix>

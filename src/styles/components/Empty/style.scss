@@ -9,7 +9,7 @@
 
   &-text {
     color: $text1;
-    padding-top: 30px;
+    padding-top: $pad;
     display: block;
     text-align: center;
   }
@@ -55,7 +55,7 @@
   }
 
   &-small {
-    padding: 30px 0;
+    padding: $pad 0;
 
     .xrk-empty-text {
       font-size: 22px;
@@ -67,7 +67,7 @@
     }
 
     .xrk-empty-children {
-      padding-top: 30px;
+      padding-top: $pad;
     }
   }
 }

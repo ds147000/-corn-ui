@@ -30,8 +30,6 @@ const externalPackages = [
   '@tarojs/taro',
   '@atrojs/api',
   'react-dom/server',
-  'swiper',
-  'swiper/swiper-bundle.esm.js',
   'qs'
 ]
 
