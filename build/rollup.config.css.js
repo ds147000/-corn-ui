@@ -22,11 +22,11 @@ export default (packageName) => {
 
       // 移动基础css
       if (checkFiles(resolveApp(packageName + '/dist/index.esm.css')).isFile())
-        fs.rmSync(resolveApp(packageName + '/dist/index.esm.css'))
+        fsExtra.rmSync(resolveApp(packageName + '/dist/index.esm.css'))
 
       if (checkFiles(resolveApp(packageName + '/dist/index.css')).isFile()) {
         const baseCss = fs.readFileSync(resolveApp(packageName + '/dist/index.css'))
-        fs.rmSync(resolveApp(packageName + '/dist/index.css'))
+          fsExtra.rmSync(resolveApp(packageName + '/dist/index.css'))
         writeFile(resolveApp(packageName + '/dist/styles/base.css'), baseCss)
       }
 

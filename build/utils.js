@@ -1,4 +1,5 @@
 const fs = require('fs')
+const fsExtra = require('fs-extra')
 const Markdown = require('markdown-it')
 const Prettier = require('prettier')
 const { resolve } = require('path')
@@ -39,7 +40,7 @@ exports.resolveApp = (path) => resolve(__dirname, '..', path)
 
 exports.writeFile = (path, data) => {
   try {
-    if (this.checkFiles(path).isFile()) fs.rmSync(path)
+    if (this.checkFiles(path).isFile()) fsExtra.rmdirSync(path)
   } catch (error) {
 
   }
@@ -50,7 +51,7 @@ exports.writeFile = (path, data) => {
 exports.removeDir = async (path) => {
   try {
     const dir = this.checkFiles(path)
-    if (dir.isDirectory()) fs.rmdirSync(path, { recursive: true })
+    if (dir.isDirectory()) fsExtra.rmdirSync(path, { recursive: true })
 
   } catch (error) {
     console.error('❌ 不存在', error)
