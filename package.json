@@ -14,8 +14,8 @@
   "sideEffects": [],
   "scripts": {
     "dev": "concurrently \"npm run dev:weapp\" \"npm run dev:h5\"",
-    "dev:weapp": "concurrently \" onchange -i \"src/**/*.tsx\" -- rollup --config ./build/rollup.config.js \" \" npm run pre:weapp \" ",
-    "dev:h5": "concurrently \" onchange -i 'src/**/*.tsx' 'src/**/*.scss' -e '**/__tests__/**' -- rollup --config ./build/rollup.config.h5.js \" \" npm run pre:h5 \" ",
+    "dev:weapp": "npm run build:h5 && concurrently \" onchange -i \"src/**/*.tsx\" -- rollup --config ./build/rollup.config.js \" \" npm run pre:weapp \" ",
+    "dev:h5": "npm run build:h5 && concurrently \" onchange -i 'src/**/*.tsx' 'src/**/*.scss' -e '**/__tests__/**' -- rollup --config ./build/rollup.config.h5.js \" \" npm run pre:h5 \" ",
     "dev:doc": "concurrently \" npm run build:doc:watch \" \" npm run pre:doc \"",
     "build:all": "npm run lint && npm run test:prod && npm run build:weapp && npm run build:h5",
     "build:weapp": "cross-env NODE_ENV=production rollup --config ./build/rollup.config.js",
