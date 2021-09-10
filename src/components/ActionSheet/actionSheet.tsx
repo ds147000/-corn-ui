@@ -70,8 +70,8 @@ const ActionSheet: React.FC<ActionSheetProps> = ({
         {showHead && (
           <View className="xrk-actionsheet-header">
             <View className={titleClass}>
-              <View className="title">{title}</View>
-              <View className="sub-title">{subTitle}</View>
+              {Boolean(title) && <View className="title">{title}</View>}
+              {Boolean(subTitle) && <View className="sub-title">{subTitle}</View>}
             </View>
             {closable && (
               <View

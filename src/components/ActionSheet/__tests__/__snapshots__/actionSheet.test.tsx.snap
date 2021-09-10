@@ -137,9 +137,6 @@ exports[`ActionSheet title 1`] = `
           >
             大标题居中
           </div>
-          <div
-            class="sub-title"
-          />
         </div>
       </div>
     </div>
@@ -171,9 +168,6 @@ exports[`ActionSheet titleAlign: center 1`] = `
           >
             大标题居中
           </div>
-          <div
-            class="sub-title"
-          />
         </div>
       </div>
     </div>
@@ -205,9 +199,6 @@ exports[`ActionSheet titleAlign: left 1`] = `
           >
             大标题居左
           </div>
-          <div
-            class="sub-title"
-          />
         </div>
       </div>
     </div>
@@ -239,9 +230,6 @@ exports[`ActionSheet titleAlign: right 1`] = `
           >
             大标题居右
           </div>
-          <div
-            class="sub-title"
-          />
         </div>
       </div>
     </div>
@@ -267,14 +255,7 @@ exports[`ActionSheet 显示 1`] = `
       >
         <div
           class="xrk-actionsheet-header-center xrk-actionsheet-left"
-        >
-          <div
-            class="title"
-          />
-          <div
-            class="sub-title"
-          />
-        </div>
+        />
       </div>
     </div>
   </div>
