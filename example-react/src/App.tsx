@@ -14,7 +14,7 @@ import { useState } from 'react'
 import { TabItemPorps } from '../../package-h5/dist/components/Tab'
 import '../../package-h5/dist/styles/base.css'
 import '../../package-h5/dist/styles/index.css'
-import '../../package-h5/icons/style.scss'
+import '../../package-h5/icons/style.css'
 import './App.scss'
 
 const asList = [

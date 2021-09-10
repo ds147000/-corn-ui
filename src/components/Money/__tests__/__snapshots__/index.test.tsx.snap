@@ -6,7 +6,7 @@ exports[`正常测试 <Money value={1} type={} /> 期望结果 => 类型： ￥ 
     class="taro-text xrk-money xrk-money-middle"
   >
     <span
-      class="taro-text money-mark"
+      class="taro-text xrk-money-mark"
       data-testid="money-mark"
     >
       ￥
@@ -27,7 +27,7 @@ exports[`正常测试 <Money value={1} type={coin} /> 期望结果 => 类型： 
     class="taro-text xrk-money xrk-money-middle"
   >
     <span
-      class="taro-text money-mark"
+      class="taro-text xrk-money-mark"
       data-testid="money-mark"
     >
       K
@@ -48,7 +48,7 @@ exports[`正常测试 <Money value={50} type={} /> 期望结果 => 类型： ￥
     class="taro-text xrk-money xrk-money-middle"
   >
     <span
-      class="taro-text money-mark"
+      class="taro-text xrk-money-mark"
       data-testid="money-mark"
     >
       ￥
@@ -69,7 +69,7 @@ exports[`正常测试 <Money value={100} type={} /> 期望结果 => 类型： �
     class="taro-text xrk-money xrk-money-middle"
   >
     <span
-      class="taro-text money-mark"
+      class="taro-text xrk-money-mark"
       data-testid="money-mark"
     >
       ￥
@@ -90,7 +90,7 @@ exports[`正常测试 <Money value={100} type={coin} /> 期望结果 => 类型�
     class="taro-text xrk-money xrk-money-middle"
   >
     <span
-      class="taro-text money-mark"
+      class="taro-text xrk-money-mark"
       data-testid="money-mark"
     >
       K
@@ -126,7 +126,7 @@ exports[`正常测试 <Money value={4000} type={} /> 期望结果 => 类型： �
     class="taro-text xrk-money xrk-money-middle"
   >
     <span
-      class="taro-text money-mark"
+      class="taro-text xrk-money-mark"
       data-testid="money-mark"
     >
       ￥
@@ -162,7 +162,7 @@ exports[`正常测试 <Money value={212321213121} type={} /> 期望结果 => 类
     class="taro-text xrk-money xrk-money-middle"
   >
     <span
-      class="taro-text money-mark"
+      class="taro-text xrk-money-mark"
       data-testid="money-mark"
     >
       ￥
@@ -183,7 +183,7 @@ exports[`边界测试 <Money value={-99.2} type={} /> 期望结果 => 类型： 
     class="taro-text xrk-money xrk-money-middle"
   >
     <span
-      class="taro-text money-mark"
+      class="taro-text xrk-money-mark"
       data-testid="money-mark"
     >
       ￥
@@ -204,7 +204,7 @@ exports[`边界测试 <Money value={-9999} type={} /> 期望结果 => 类型： 
     class="taro-text xrk-money xrk-money-middle"
   >
     <span
-      class="taro-text money-mark"
+      class="taro-text xrk-money-mark"
       data-testid="money-mark"
     >
       ￥
@@ -225,7 +225,7 @@ exports[`边界测试 <Money value={100} type={} /> 期望结果 => 类型： �
     class="taro-text xrk-money xrk-money-middle"
   >
     <span
-      class="taro-text money-mark"
+      class="taro-text xrk-money-mark"
       data-testid="money-mark"
     >
       ￥
@@ -246,7 +246,7 @@ exports[`边界测试 <Money value={null} type={} /> 期望结果 => 类型： �
     class="taro-text xrk-money xrk-money-middle"
   >
     <span
-      class="taro-text money-mark"
+      class="taro-text xrk-money-mark"
       data-testid="money-mark"
     >
       ￥
@@ -267,7 +267,7 @@ exports[`边界测试 <Money value={null} type={coin} /> 期望结果 => 类型�
     class="taro-text xrk-money xrk-money-middle"
   >
     <span
-      class="taro-text money-mark"
+      class="taro-text xrk-money-mark"
       data-testid="money-mark"
     >
       K
@@ -301,7 +301,7 @@ exports[`边界测试 <Money value={undefined} type={} /> 期望结果 => 类型
     class="taro-text xrk-money xrk-money-middle"
   >
     <span
-      class="taro-text money-mark"
+      class="taro-text xrk-money-mark"
       data-testid="money-mark"
     >
       ￥
@@ -322,7 +322,7 @@ exports[`边界测试 <Money value={undefined} type={coin} /> 期望结果 => �
     class="taro-text xrk-money xrk-money-middle"
   >
     <span
-      class="taro-text money-mark"
+      class="taro-text xrk-money-mark"
       data-testid="money-mark"
     >
       K
@@ -356,7 +356,7 @@ exports[`金额 <Money value={1} type={coin} /> 金额 <Money value=1 type=coin 
     class="taro-text xrk-money xrk-money-middle"
   >
     <span
-      class="taro-text money-mark"
+      class="taro-text xrk-money-mark"
       data-testid="money-mark"
     >
       K
@@ -392,7 +392,7 @@ exports[`金额 <Money value={212321213121} type={} /> 金额 <Money value=21232
     class="taro-text xrk-money xrk-money-middle"
   >
     <span
-      class="taro-text money-mark"
+      class="taro-text xrk-money-mark"
       data-testid="money-mark"
     >
       ￥

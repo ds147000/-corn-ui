@@ -1,4 +1,9 @@
 .xrk-money {
+  &-mark {
+    font-style: normal;
+    font-size: 10px;
+  }
+
   &-middle {
     font-size: 40px;
   }
@@ -6,7 +11,7 @@
   &-large {
     font-size: 60px;
 
-    .money-mark {
+    .xrk-money-mark {
       font-size: 30px;
     }
   }
@@ -14,17 +19,8 @@
   &-small {
     font-size: 30px;
 
-    .money-mark {
+    .xrk-money-mark {
       font-size: 20px;
-    }
-  }
-
-  &-mark {
-    font-style: normal;
-    font-size: 18px;
-
-    .money-mark {
-      font-size: 10px;
     }
   }
 }

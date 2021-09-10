@@ -40,7 +40,7 @@ const Money: React.FC<MoneyProps> = ({
     <Text {...props} className={cln}>
       {type !== 'gold' && (
         <Text
-          className="money-mark"
+          className="xrk-money-mark"
           data-testid="money-mark"
         >
           {type === 'coin' ? 'K' : '￥'}
