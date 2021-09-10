@@ -13,9 +13,9 @@ module.exports = async (packageName) => {
       files: IconsFiles,
       fontName: 'xrkIcon',
       dest: resolveApp(packageName + '/icons/fonts/'),
-      cssDest: resolveApp(packageName + '/icons/style.scss'),
+      cssDest: resolveApp(packageName + '/icons/style.css'),
       cssFontsPath: './fonts/',
-      cssTemplate: resolveApp('build/build-icons-scss.hbs'),
+      cssTemplate: resolveApp('build/build-icons-css.hbs'),
       normalize: true
     })
 
@@ -25,8 +25,8 @@ module.exports = async (packageName) => {
 
     return new Promise((res) => {
       setTimeout(() => {
-        const cssFile = fs.readFileSync(resolveApp(packageName + '/icons/style.scss')).toString()
-        writeFile(resolveApp(packageName + '/icons/style.scss'), Prettier.format(cssFile, { parser: 'scss' }))
+        const cssFile = fs.readFileSync(resolveApp(packageName + '/icons/style.css')).toString()
+        writeFile(resolveApp(packageName + '/icons/style.css'), Prettier.format(cssFile, { parser: 'css' }))
 
         // 写入Md文件
         const MarkContext = `
