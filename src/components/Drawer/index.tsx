@@ -1,4 +1,4 @@
-import React, { useCallback, useEffect, useState } from 'react'
+import React, { useCallback, useEffect, useMemo, useState } from 'react'
 import classNames from 'classnames'
 import { View } from '@tarojs/components'
 
@@ -29,7 +29,13 @@ const Drawer: React.FC<DrawerProps> = ({
   children
 }) => {
   const [ status, setStatus ] = useState<AnimateStatus>('over')
-  const _class = classNames('xrk-drawer-body', status, `xrk-drawer-${position}`)
+  const _class = useMemo(() => {
+    return classNames(
+      'xrk-drawer-body',
+      status !== 'over' && `xrk-drawer-${position}-${status}`,
+      `xrk-drawer-${position}`
+    )
+  }, [ position, status ])
 
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
   const onAnimationEnd = useCallback((event: any) => {
@@ -64,7 +70,7 @@ const Drawer: React.FC<DrawerProps> = ({
     <>
       {mask && (
         <View
-          className={`xrk-drawer-mask ${status}`}
+          className={`xrk-drawer-mask xrk-drawer-mask-${status}`}
           data-testid="mask"
           onClick={onClickMask}
         />

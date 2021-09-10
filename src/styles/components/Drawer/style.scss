@@ -9,12 +9,12 @@
     background-color: $mask;
     opacity: 0;
 
-    &.show {
+    &-show {
       opacity: 1;
       animation: XrkDrawerMaskShow 0.25s linear;
     }
 
-    &.hide {
+    &-hide {
       animation: XrkDrawerMaskHide 0.2s linear;
     }
   }
@@ -30,12 +30,12 @@
     left: 0;
     transform: translate3d(0 , 100% , 1px);
 
-    &.show {
+    &-show {
       transform: translate3d(0 , 0% , 1px);
       animation: XrkDrawerBottomShow 0.35s;
     }
 
-    &.hide {
+    &-hide {
       animation: XrkDrawerBottomHide 0.25s;
     }
   }
@@ -46,12 +46,12 @@
     left: 0;
     transform: translate3d(0 , 0% , 1px);
 
-    &.show {
+    &-show {
       transform: translate3d(0 , 0% , 1px);
       animation: XrkDrawerTopShow 0.35s;
     }
 
-    &.hide {
+    &-hide {
       animation: XrkDrawerTopHide 0.25s;
     }
   }
@@ -62,12 +62,12 @@
     left: 0;
     transform: translate3d(0 , 0 , 1px);
 
-    &.show {
+    &-show {
       transform: translate3d(0 , 0 , 1px);
       animation: XrkDrawerLeftShow 0.35s;
     }
 
-    &.hide {
+    &-hide {
       animation: XrkDrawerLeftHide 0.25s;
     }
   }
@@ -78,12 +78,12 @@
     right: 0;
     transform: translate3d(100% , 0 , 1px);
 
-    &.show {
+    &-show {
       transform: translate3d(0 , 0 , 1px);
       animation: XrkDrawerRightShow 0.35s;
     }
 
-    &.hide {
+    &-hide {
       animation: XrkDrawerRightHide 0.25s;
     }
   }
@@ -93,12 +93,12 @@
     left: 50%;
     transform: translate(-50% , -50%) translateZ(1px) scale(0.3 , 0.3);
 
-    &.show {
+    &-show {
       transform: translate(-50% , -50%) translateZ(1px) scale(1 , 1);
       animation: XrkDrawerCenterShow 0.2s;
     }
 
-    &.hide {
+    &-hide {
       animation: XrkDrawerCenterHide 0.25s;
     }
   }

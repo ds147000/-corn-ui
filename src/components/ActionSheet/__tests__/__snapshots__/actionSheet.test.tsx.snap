@@ -3,11 +3,11 @@
 exports[`ActionSheet showButton 1`] = `
 <div>
   <div
-    class="xrk-drawer-mask show"
+    class="xrk-drawer-mask xrk-drawer-mask-show"
     data-testid="mask"
   />
   <div
-    class="xrk-drawer-body show xrk-drawer-bottom"
+    class="xrk-drawer-body xrk-drawer-bottom-show xrk-drawer-bottom"
     data-testid="body"
   >
     <div
@@ -61,11 +61,11 @@ exports[`ActionSheet showButton 1`] = `
 exports[`ActionSheet showHead: false 1`] = `
 <div>
   <div
-    class="xrk-drawer-mask show"
+    class="xrk-drawer-mask xrk-drawer-mask-show"
     data-testid="mask"
   />
   <div
-    class="xrk-drawer-body show xrk-drawer-bottom"
+    class="xrk-drawer-body xrk-drawer-bottom-show xrk-drawer-bottom"
     data-testid="body"
   >
     <div
@@ -78,11 +78,11 @@ exports[`ActionSheet showHead: false 1`] = `
 exports[`ActionSheet subTitle 1`] = `
 <div>
   <div
-    class="xrk-drawer-mask show"
+    class="xrk-drawer-mask xrk-drawer-mask-show"
     data-testid="mask"
   />
   <div
-    class="xrk-drawer-body show xrk-drawer-bottom"
+    class="xrk-drawer-body xrk-drawer-bottom-show xrk-drawer-bottom"
     data-testid="body"
   >
     <div
@@ -116,11 +116,11 @@ exports[`ActionSheet subTitle of hide 1`] = `<div />`;
 exports[`ActionSheet title 1`] = `
 <div>
   <div
-    class="xrk-drawer-mask show"
+    class="xrk-drawer-mask xrk-drawer-mask-show"
     data-testid="mask"
   />
   <div
-    class="xrk-drawer-body show xrk-drawer-bottom"
+    class="xrk-drawer-body xrk-drawer-bottom-show xrk-drawer-bottom"
     data-testid="body"
   >
     <div
@@ -150,11 +150,11 @@ exports[`ActionSheet title 1`] = `
 exports[`ActionSheet titleAlign: center 1`] = `
 <div>
   <div
-    class="xrk-drawer-mask show"
+    class="xrk-drawer-mask xrk-drawer-mask-show"
     data-testid="mask"
   />
   <div
-    class="xrk-drawer-body show xrk-drawer-bottom"
+    class="xrk-drawer-body xrk-drawer-bottom-show xrk-drawer-bottom"
     data-testid="body"
   >
     <div
@@ -184,11 +184,11 @@ exports[`ActionSheet titleAlign: center 1`] = `
 exports[`ActionSheet titleAlign: left 1`] = `
 <div>
   <div
-    class="xrk-drawer-mask show"
+    class="xrk-drawer-mask xrk-drawer-mask-show"
     data-testid="mask"
   />
   <div
-    class="xrk-drawer-body show xrk-drawer-bottom"
+    class="xrk-drawer-body xrk-drawer-bottom-show xrk-drawer-bottom"
     data-testid="body"
   >
     <div
@@ -218,11 +218,11 @@ exports[`ActionSheet titleAlign: left 1`] = `
 exports[`ActionSheet titleAlign: right 1`] = `
 <div>
   <div
-    class="xrk-drawer-mask show"
+    class="xrk-drawer-mask xrk-drawer-mask-show"
     data-testid="mask"
   />
   <div
-    class="xrk-drawer-body show xrk-drawer-bottom"
+    class="xrk-drawer-body xrk-drawer-bottom-show xrk-drawer-bottom"
     data-testid="body"
   >
     <div
@@ -252,11 +252,11 @@ exports[`ActionSheet titleAlign: right 1`] = `
 exports[`ActionSheet 显示 1`] = `
 <div>
   <div
-    class="xrk-drawer-mask show"
+    class="xrk-drawer-mask xrk-drawer-mask-show"
     data-testid="mask"
   />
   <div
-    class="xrk-drawer-body show xrk-drawer-bottom"
+    class="xrk-drawer-body xrk-drawer-bottom-show xrk-drawer-bottom"
     data-testid="body"
   >
     <div
@@ -284,11 +284,11 @@ exports[`ActionSheet 显示 1`] = `
 exports[`ActionSheet 自定义文字 1`] = `
 <div>
   <div
-    class="xrk-drawer-mask show"
+    class="xrk-drawer-mask xrk-drawer-mask-show"
     data-testid="mask"
   />
   <div
-    class="xrk-drawer-body show xrk-drawer-bottom"
+    class="xrk-drawer-body xrk-drawer-bottom-show xrk-drawer-bottom"
     data-testid="body"
   >
     <div

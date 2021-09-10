@@ -3,11 +3,11 @@
 exports[`Modal basis 1`] = `
 <div>
   <div
-    class="xrk-drawer-mask show"
+    class="xrk-drawer-mask xrk-drawer-mask-show"
     data-testid="mask"
   />
   <div
-    class="xrk-drawer-body show xrk-drawer-center"
+    class="xrk-drawer-body xrk-drawer-center-show xrk-drawer-center"
     data-testid="body"
   >
     <div
@@ -45,11 +45,11 @@ exports[`Modal basis 1`] = `
 exports[`Modal button 1`] = `
 <div>
   <div
-    class="xrk-drawer-mask show"
+    class="xrk-drawer-mask xrk-drawer-mask-show"
     data-testid="mask"
   />
   <div
-    class="xrk-drawer-body show xrk-drawer-center"
+    class="xrk-drawer-body xrk-drawer-center-show xrk-drawer-center"
     data-testid="body"
   >
     <div
@@ -92,11 +92,11 @@ exports[`Modal button 1`] = `
 exports[`Modal button multi 1`] = `
 <div>
   <div
-    class="xrk-drawer-mask show"
+    class="xrk-drawer-mask xrk-drawer-mask-show"
     data-testid="mask"
   />
   <div
-    class="xrk-drawer-body show xrk-drawer-center"
+    class="xrk-drawer-body xrk-drawer-center-show xrk-drawer-center"
     data-testid="body"
   >
     <div
@@ -144,11 +144,11 @@ exports[`Modal button multi 1`] = `
 exports[`Modal children 1`] = `
 <div>
   <div
-    class="xrk-drawer-mask show"
+    class="xrk-drawer-mask xrk-drawer-mask-show"
     data-testid="mask"
   />
   <div
-    class="xrk-drawer-body show xrk-drawer-center"
+    class="xrk-drawer-body xrk-drawer-center-show xrk-drawer-center"
     data-testid="body"
   >
     <div
@@ -195,11 +195,11 @@ exports[`Modal children 1`] = `
 exports[`Modal content 1`] = `
 <div>
   <div
-    class="xrk-drawer-mask show"
+    class="xrk-drawer-mask xrk-drawer-mask-show"
     data-testid="mask"
   />
   <div
-    class="xrk-drawer-body show xrk-drawer-center"
+    class="xrk-drawer-body xrk-drawer-center-show xrk-drawer-center"
     data-testid="body"
   >
     <div
