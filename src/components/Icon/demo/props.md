@@ -4,7 +4,7 @@ type: 通用
 ---
 # Icon 图标
 使用图标组件，你需要在引入一个全局的样式文件：
-`import '@xrkmm/ui-h5/icons/style.scss'`
+`import '@xrkmm/ui-h5/icons/style.css'`
 
 <demo>
 
