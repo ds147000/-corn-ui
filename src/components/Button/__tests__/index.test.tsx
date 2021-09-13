@@ -92,7 +92,7 @@ describe('<Button />', () => {
   })
 
   test('href', async () => {
-    const screen = render(<Button href="http://baidu.com" >向日葵妈妈UI</Button>)
+    const screen = render(<Button to="http://baidu.com" >向日葵妈妈UI</Button>)
     await waitFor(() => expect(screen.container.querySelector('a').href).toBe('http://baidu.com/'))
     expect(screen).toMatchSnapshot()
   })

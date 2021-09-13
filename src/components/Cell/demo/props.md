@@ -17,7 +17,7 @@ type: 表单类型
 | arrow | 否 | 是否显示箭头 | `boolean` | `false` |
 | suffix | 否 | 尾缀内容 | `string ｜ React.ReactNode` | |
 | disable | 否 | 禁用 | `boolean` | `false` |
-| href | 否 | 跳转链接，填写启用A链接行为。同时会显示箭头 | `string` |  |
+| to | 否 | 跳转链接，填写启用A链接行为。同时会显示箭头 | `string` |  |
 
 ## List.Props
 | 属性 | 必填 | 说明 | 类型 | 默认值 |

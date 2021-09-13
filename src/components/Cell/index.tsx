@@ -3,10 +3,10 @@ import ClassNames from 'classnames'
 import { View, Text } from '@tarojs/components'
 import { ViewProps } from '@tarojs/components/types/View'
 import Icon from '../Icon'
-import Link from '../Link'
+import Link, { LinkProps } from '../Link'
 import CellList from './list'
 
-export interface CellProps extends ViewProps {
+export interface CellProps extends ViewProps, LinkProps {
   /** 标题 */
   label?: string | React.ReactNode
   /** 内容 */
@@ -20,7 +20,7 @@ export interface CellProps extends ViewProps {
   /** 禁用 */
   disable?: boolean
   /** 跳转链接，填写启用A链接行为。同时会显示箭头 */
-  href?: string
+  to?: string
 }
 
 type CellView =  { List: typeof CellList }
@@ -29,7 +29,7 @@ type CellView =  { List: typeof CellList }
 
 const Cell: React.FC<CellProps> & CellView = ({
   label, value, arrow, suffix,
-  disable, href, children, onClick,
+  disable, to, children, onClick,
   className, placeholder, ...props
 }) => {
 
@@ -44,7 +44,7 @@ const Cell: React.FC<CellProps> & CellView = ({
     ...props
   }
 
-  const showArrow = (arrow || Boolean(href)) && arrow !== false
+  const showArrow = (arrow || Boolean(to)) && arrow !== false
   const showPlaceholder = Boolean(value) === false && Boolean(children) === false
 
   const content = (
@@ -61,8 +61,8 @@ const Cell: React.FC<CellProps> & CellView = ({
     </>
   )
 
-  if (href)
-    return (<Link {..._props} to={href} disable={disable} target="View" >{content}</Link>)
+  if (to)
+    return (<Link {..._props} to={to} disable={disable} target="View" >{content}</Link>)
 
   return (<View {..._props} >{content}</View>)
 }

@@ -15,6 +15,13 @@ beforeEach(() => {
   redirectTo.mockReset()
 })
 
+test('to default', () => {
+  const screen = render(<Link>首页</Link>)
+  fireEvent.click(screen.getByText('首页'))
+  expect(navigateTo).toHaveBeenCalledTimes(1)
+  expect(navigateTo.mock.calls[0][0]).toEqual({ url: '' })
+})
+
 
 test('to /home', () => {
   const screen = render(<Link to="/home">首页</Link>)

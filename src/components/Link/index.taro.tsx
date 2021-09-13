@@ -7,7 +7,7 @@ import type { LINK } from './index'
 import { checkOpenMp, OpenHostSuffix } from './utils'
 
 const Link: LINK = ({
-  to,
+  to = '',
   type = 'normal',
   target = 'Text',
   replace,
@@ -20,8 +20,10 @@ const Link: LINK = ({
 }) => {
   const _class = ClassName(className, 'xrk-link', `xrk-link-${type}`)
 
+  const _onBefor = onBefor || Link.onBefor
+
   const onNavigate = (event: ITouchEvent): void => {
-    if (onBefor?.(to) === true || disable) return // 终止
+    if (_onBefor?.(to) === true || disable) return // 终止
     onClick?.(event)
 
     if (checkOpenMp(to)) {
@@ -47,5 +49,6 @@ const Link: LINK = ({
 }
 
 Link.appId = ''
+Link.onBefor = (): boolean => false
 
 export default Link

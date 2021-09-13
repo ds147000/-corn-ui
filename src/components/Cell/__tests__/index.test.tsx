@@ -102,7 +102,7 @@ describe('Cell', () => {
 
 
   test('href', async () => {
-    const screen = render(<Cell label="限时奖励" value="前往查看" href="/home" />)
+    const screen = render(<Cell label="限时奖励" value="前往查看" to="/home" />)
     screen.getByText('限时奖励')
     screen.getByText('前往查看')
     screen.getByTestId('arrow')
@@ -111,7 +111,7 @@ describe('Cell', () => {
   })
 
   test('href and hide arrow', async () => {
-    const screen = render(<Cell label="限时奖励" value="前往查看" href="/home" arrow={false} />)
+    const screen = render(<Cell label="限时奖励" value="前往查看" to="/home" arrow={false} />)
     screen.getByText('限时奖励')
     screen.getByText('前往查看')
     expect(screen.queryByTestId('arrow')).toBeNull()
@@ -121,7 +121,7 @@ describe('Cell', () => {
 
   test('href and disable', async () => {
     const click = jest.fn()
-    const screen = render(<Cell label="限时奖励" value="前往查看" href="/home" onClick={click} disable />)
+    const screen = render(<Cell label="限时奖励" value="前往查看" to="/home" onClick={click} disable />)
     fireEvent.click(screen.getByText('限时奖励'))
     expect(click).toHaveBeenCalledTimes(0)
   })

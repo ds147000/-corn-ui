@@ -6,7 +6,7 @@ import type { LINK } from './index'
 import { checkOpenMp, OpenHostSuffix } from './utils'
 
 const Link: LINK = ({
-  to,
+  to = '',
   type = 'normal',
   target = 'Text',
   replace,
@@ -22,8 +22,10 @@ const Link: LINK = ({
     return ClassName('xrk-link', `xrk-link-${type}`, target === 'View' && 'xrk-link-view', className)
   }, [ className, type, target ])
 
+  const _onBefor = onBefor || Link.onBefor
+
   const onNavigate = (event: React.MouseEvent<HTMLAnchorElement, MouseEvent> | ITouchEvent): void => {
-    if (onBefor?.(to) === true || disable) {
+    if (_onBefor?.(to) === true || disable) {
       event.stopPropagation()
       event.preventDefault()
       return // 终止
@@ -58,5 +60,6 @@ const Link: LINK = ({
 }
 
 Link.appId = ''
+Link.onBefor = (): boolean => false
 
 export default Link

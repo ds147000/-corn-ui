@@ -12,7 +12,7 @@ export type LinkType = 'normal' | 'primary' | 'warn' | 'error' | 'link' | 'pop'
 
 export interface LinkProps extends ViewProps {
   /** 跳转链接，openmp:// 协议表示跳转指定小程序 */
-  to: string
+  to?: string
   /** 链接样式, 默认 normal */
   type?: LinkType
   /** 是否使用替换方式跳转 */
@@ -27,7 +27,7 @@ export interface LinkProps extends ViewProps {
   disable?: boolean
 }
 
-export type LINK = React.FC<LinkProps> & { appId: string }
+export type LINK = React.FC<LinkProps> & { appId: string, onBefor: LinkOnBefor }
 
 // #if _APP === 'weapp'
 import Link from './index.taro'

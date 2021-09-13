@@ -11,6 +11,13 @@ beforeEach(() => {
 })
 
 
+test('to default', async () => {
+  const screen = render(<Link>首页</Link>)
+  fireEvent.click(screen.getByText('首页'))
+  expect(screen.container.querySelector('a')?.href).toBe('http://localhost/')
+})
+
+
 test('to /home', async () => {
   const screen = render(<Link to="/home">首页</Link>)
   fireEvent.click(screen.getByText('首页'))
@@ -103,4 +110,12 @@ test('禁用', () => {
   const screen = render(<Link to="/home" disable onClick={onClick} >首页</Link>)
   fireEvent.click(screen.getByText('首页'))
   expect(onClick).toHaveBeenCalledTimes(0)
+})
+
+test('globale onBefor', () => {
+  const onBefor = jest.fn()
+  Link.onBefor = onBefor
+  const screen = render(<Link to="/home" replace >首页</Link>)
+  fireEvent.click(screen.getByText('首页'))
+  expect(onBefor).toHaveBeenCalledTimes(1)
 })

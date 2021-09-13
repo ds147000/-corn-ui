@@ -3,6 +3,12 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
+import { Link } from '@xrkmm/ui-h5';
+
+Link.onBefor = () => {
+  console.log(123456)
+  return true
+}
 
 ReactDOM.render(
   <React.StrictMode>

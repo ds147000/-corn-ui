@@ -114,13 +114,13 @@ function App() {
       <Cell label="限时奖励" placeholder="请选择奖励类型" value="葵花籽" />
       <Cell label="限时奖励" placeholder="请选择奖励类型" value="葵花籽" arrow />
       <Cell label="限时奖励" placeholder="请选择奖励类型" value="葵花籽" suffix="重选" arrow />
-      <Cell label="限时奖励" placeholder="请选择奖励类型" value="前往兑换" href="/home" suffix="重选" arrow />
-      <Cell label="限时奖励" placeholder="请选择奖励类型" value="无效兑换" href="/home" suffix="重选" arrow disable />
+      <Cell label="限时奖励" placeholder="请选择奖励类型" value="前往兑换" to="/home" suffix="重选" arrow />
+      <Cell label="限时奖励" placeholder="请选择奖励类型" value="无效兑换" to="/home" suffix="重选" arrow disable />
       <Cell label="限时奖励" placeholder="请选择奖励类型" value="前往兑换"suffix="重选" arrow onClick={() => Toast.show('骗你的')} />
       <br />
       <Cell.List line>
         <Cell label="限时奖励" placeholder="请选择奖励类型" value="葵花籽" suffix="重选" arrow />
-        <Cell label="限时奖励" placeholder="请选择奖励类型" value="无效兑换" href="/home" suffix="重选" arrow disable />
+        <Cell label="限时奖励" placeholder="请选择奖励类型" value="无效兑换" to="/home" suffix="重选" arrow disable />
         <Cell label="限时奖励" placeholder="请选择奖励类型" value="立即兑换"suffix="重选" arrow onClick={() => Toast.show('骗你的')} />
       </Cell.List>
       <br />
@@ -133,7 +133,7 @@ function App() {
       <Button type="link">向日葵妈妈UI</Button>
       <Button type="pop">向日葵妈妈UI</Button>
       <Button type="primary">向日葵妈妈UI</Button>
-      <Button type="primary" href="/home">跳转首页</Button>
+      <Button type="primary" to="/home">跳转首页</Button>
       <Button type="warn">向日葵妈妈UI</Button>
       <Button icon={<div>我是图标</div>}>向日葵妈妈UI</Button>
       <Button block type="error" >向日葵妈妈UI</Button>
