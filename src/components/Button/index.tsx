@@ -7,7 +7,7 @@ export interface ButtonProps extends LinkProps {
   /** 按钮大小，max: 最大， big: 超大，large：大，middle：中，small：小，mini */
   size?: 'max' | 'big' | 'large' | 'middle' | 'small' | 'mini'
   /** 按钮风格类型 */
-  type?: 'primary' | 'warn' | 'error' | 'link' | 'pop'
+  type?: 'primary' | 'warn' | 'error' | 'link' | 'pop' | 'default'
   /** 图标 */
   icon?: React.ReactNode
   /** 将按钮宽度调整为其父宽度的选项	 */
@@ -63,7 +63,7 @@ const Button: React.FC<ButtonProps> = ({
 
   if (to) {
     return (
-      <Link target="Text" {...props} to={to} className={_class} onClick={_onClick} disable={disabled} type="normal" >
+      <Link target="Text" {...props} to={to} className={_class} onClick={_onClick} disabled={disabled} type="default" >
         {children}
         {icon}
       </Link>

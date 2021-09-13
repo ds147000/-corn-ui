@@ -13,7 +13,7 @@ const Link: LINK = ({
   onBefor,
   onClick,
   appId,
-  disable,
+  disabled,
   className,
   ...props
 }) => {
@@ -25,7 +25,7 @@ const Link: LINK = ({
   const _onBefor = onBefor || Link.onBefor
 
   const onNavigate = (event: React.MouseEvent<HTMLAnchorElement, MouseEvent> | ITouchEvent): void => {
-    if (_onBefor?.(to) === true || disable) {
+    if (_onBefor?.(to) === true || disabled) {
       event.stopPropagation()
       event.preventDefault()
       return // 终止

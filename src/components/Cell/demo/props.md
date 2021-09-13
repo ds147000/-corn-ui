@@ -16,7 +16,7 @@ type: 表单类型
 | placeholder | 否 | 内容为空占位提示 | `string ｜ React.ReactNode` |  |
 | arrow | 否 | 是否显示箭头 | `boolean` | `false` |
 | suffix | 否 | 尾缀内容 | `string ｜ React.ReactNode` | |
-| disable | 否 | 禁用 | `boolean` | `false` |
+| disabled | 否 | 禁用 | `boolean` | `false` |
 | to | 否 | 跳转链接，填写启用A链接行为。同时会显示箭头 | `string` |  |
 
 ## List.Props

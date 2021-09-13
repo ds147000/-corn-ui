@@ -14,7 +14,7 @@ const Link: LINK = ({
   onBefor,
   onClick,
   appId,
-  disable,
+  disabled,
   className,
   ...props
 }) => {
@@ -23,7 +23,7 @@ const Link: LINK = ({
   const _onBefor = onBefor || Link.onBefor
 
   const onNavigate = (event: ITouchEvent): void => {
-    if (_onBefor?.(to) === true || disable) return // 终止
+    if (_onBefor?.(to) === true || disabled) return // 终止
     onClick?.(event)
 
     if (checkOpenMp(to)) {

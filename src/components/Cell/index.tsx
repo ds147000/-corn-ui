@@ -18,7 +18,7 @@ export interface CellProps extends ViewProps, LinkProps {
   /** 尾缀内容 */
   suffix?: React.ReactNode | string
   /** 禁用 */
-  disable?: boolean
+  disabled?: boolean
   /** 跳转链接，填写启用A链接行为。同时会显示箭头 */
   to?: string
 }
@@ -29,17 +29,17 @@ type CellView =  { List: typeof CellList }
 
 const Cell: React.FC<CellProps> & CellView = ({
   label, value, arrow, suffix,
-  disable, to, children, onClick,
+  disabled, to, children, onClick,
   className, placeholder, ...props
 }) => {
 
   const _onClick = useCallback((event): void => {
-    if (disable) return
+    if (disabled) return
     onClick?.(event)
-  }, [ onClick, disable ])
+  }, [ onClick, disabled ])
 
   const _props: ViewProps = {
-    className: ClassNames('xrk-cell xrk-f xrk-ac', disable && 'xrk-cell-disable', className),
+    className: ClassNames('xrk-cell xrk-f xrk-ac', disabled && 'xrk-cell-disable', className),
     onClick: _onClick,
     ...props
   }
@@ -62,7 +62,7 @@ const Cell: React.FC<CellProps> & CellView = ({
   )
 
   if (to)
-    return (<Link {..._props} to={to} disable={disable} target="View" >{content}</Link>)
+    return (<Link {..._props} to={to} disabled={disabled} target="View" >{content}</Link>)
 
   return (<View {..._props} >{content}</View>)
 }

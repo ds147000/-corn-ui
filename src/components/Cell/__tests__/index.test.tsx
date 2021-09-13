@@ -49,7 +49,7 @@ describe('Cell', () => {
 
   test('disable', () => {
     const click = jest.fn()
-    const screen = render(<Cell label="限时奖励" value="六月阶梯奖励活动" arrow disable onClick={click} />)
+    const screen = render(<Cell label="限时奖励" value="六月阶梯奖励活动" arrow disabled onClick={click} />)
     fireEvent.click(screen.getByTestId('arrow'))
     fireEvent.click(screen.getByText('限时奖励'))
     fireEvent.click(screen.getByText('六月阶梯奖励活动'))
@@ -121,7 +121,7 @@ describe('Cell', () => {
 
   test('href and disable', async () => {
     const click = jest.fn()
-    const screen = render(<Cell label="限时奖励" value="前往查看" to="/home" onClick={click} disable />)
+    const screen = render(<Cell label="限时奖励" value="前往查看" to="/home" onClick={click} disabled />)
     fireEvent.click(screen.getByText('限时奖励'))
     expect(click).toHaveBeenCalledTimes(0)
   })

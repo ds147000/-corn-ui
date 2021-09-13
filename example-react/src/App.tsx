@@ -135,6 +135,12 @@ function App() {
       <Button type="primary">向日葵妈妈UI</Button>
       <Button type="primary" to="/home">跳转首页</Button>
       <Button type="warn">向日葵妈妈UI</Button>
+      <Button type="error" disabled>向日葵妈妈UI(disable)</Button>
+      <Button type="link" disabled>向日葵妈妈UI（disable）</Button>
+      <Button type="pop" disabled>向日葵妈妈UI（disable）</Button>
+      <Button type="primary" disabled>向日葵妈妈UI（disable）</Button>
+      <Button type="default" disabled>向日葵妈妈UI（disable）</Button>
+      <Button type="warn" disabled>向日葵妈妈UI(disable)</Button>
       <Button icon={<div>我是图标</div>}>向日葵妈妈UI</Button>
       <Button block type="error" >向日葵妈妈UI</Button>
       <Button block type="link" >向日葵妈妈UI</Button>
@@ -148,6 +154,7 @@ function App() {
       <Button ghost type="warn" >向日葵妈妈UI</Button>
       <Button onClick={onClick}>向日葵妈妈UI</Button>
       <Button onClick={onClick} disabled >向日葵妈妈UI</Button>
+      <Button onClick={onClick} type="default" >向日葵妈妈UI</Button>
       <Button onClick={() => Toast.show({ title: '我是toast', icon: 'success' })}>点击出现taost</Button>
       <Button onClick={() => setShow(true)}>抽屉</Button>
       <Button onClick={() => setAshow(true)}>ActionSheet</Button>

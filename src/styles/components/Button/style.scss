@@ -22,7 +22,6 @@ $prefix: xrk-btn;
   }
 
   &-mini {
-    min-width: 102px;
     height: 42px;
     border-radius: 22px;
     padding: 0 16px;
@@ -35,7 +34,6 @@ $prefix: xrk-btn;
   }
 
   &-small {
-    min-width: 114px;
     height: 50px;
     border-radius: 25px;
     padding: 0 24px;
@@ -48,7 +46,6 @@ $prefix: xrk-btn;
   }
 
   &-middle {
-    min-width: 270px;
     padding: 0 24px;
     height: 60px;
     border-radius: 35px;
@@ -62,7 +59,6 @@ $prefix: xrk-btn;
   }
 
   &-large {
-    min-width: 320px;
     height: 70px;
     padding: 0 32px;
     border-radius: 35px;
@@ -76,7 +72,6 @@ $prefix: xrk-btn;
   }
 
   &-big {
-    min-width: 370px;
     height: 80px;
     padding: 0 32px;
     border-radius: 40px;
@@ -90,7 +85,6 @@ $prefix: xrk-btn;
   }
 
   &-max {
-    min-width: 420px;
     padding: 0 32px;
     width: 690px;
     height: 98px;
@@ -159,12 +153,16 @@ $prefix: xrk-btn;
     }
   }
 
+  &-default {
+    background-color: $defualt;
+  }
+
   &-block {
     display: flex;
   }
 
   &-disabled {
-    background-color: $disable;
+    opacity: 0.6;
     pointer-events: none;
   }
 

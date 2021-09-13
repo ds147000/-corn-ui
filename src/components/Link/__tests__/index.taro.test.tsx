@@ -90,7 +90,7 @@ test('拦截', () => {
 })
 
 test('禁用', () => {
-  const screen = render(<Link to="/home" disable >首页</Link>)
+  const screen = render(<Link to="/home" disabled >首页</Link>)
   fireEvent.click(screen.getByText('首页'))
   expect(navigateTo).toHaveBeenCalledTimes(0)
 })

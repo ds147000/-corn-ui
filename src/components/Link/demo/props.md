@@ -21,8 +21,9 @@ type: 导航
 | to | 是 | 跳转链接，openmp:// 协议表示跳转指定小程序 | `string` |  |
 | replace | 否 | 是否使用替换方式跳转 | `string` |  |
 | target | 否 | 指定容器渲染的标签类型 | `View` `Text` | `Text` |
-| disable | 否 | 禁用 | `Boolean`  | `false` |
+| disabled | 否 | 禁用 | `Boolean`  | `false` |
 | appId | 否 | 指定当前跳转微信小程序id，不传默认取全局`Link.appId`值 | `string`  | |
+| type | 否 | 按钮风格类型 | `primary` `warn` `error` `link` `pop` `default` | `primary` |
 
 ## Event
 | 事件名称 | 说明 | 参数 |

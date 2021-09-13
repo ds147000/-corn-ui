@@ -13,7 +13,7 @@ const Demo: React.FC = () => {
     <>
       <Link to='/home'>首页</Link>
       <br />
-      <Link to='/home' type="normal" >normal</Link>
+      <Link to='/home' type="default" >normal</Link>
       <br />
       <Link to='/home' type="primary" >primary</Link>
       <br />

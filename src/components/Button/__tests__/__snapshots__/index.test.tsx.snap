@@ -6,7 +6,7 @@ Object {
   "baseElement": <body>
     <div>
       <a
-        class="xrk-link xrk-link-normal xrk-btn xrk-if xrk-ac xrk-jc xrk-btn-middle xrk-btn-primary"
+        class="xrk-link xrk-link-default xrk-btn xrk-if xrk-ac xrk-jc xrk-btn-middle xrk-btn-primary"
         href="http://baidu.com"
       >
         向日葵妈妈UI
@@ -15,7 +15,7 @@ Object {
   </body>,
   "container": <div>
     <a
-      class="xrk-link xrk-link-normal xrk-btn xrk-if xrk-ac xrk-jc xrk-btn-middle xrk-btn-primary"
+      class="xrk-link xrk-link-default xrk-btn xrk-if xrk-ac xrk-jc xrk-btn-middle xrk-btn-primary"
       href="http://baidu.com"
     >
       向日葵妈妈UI

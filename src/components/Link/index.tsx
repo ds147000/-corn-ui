@@ -8,7 +8,7 @@ export type LinkTarget = 'View' | 'Text'
 /** 跳转前触发，返回true可以阻止默认跳转行为 */
 export type LinkOnBefor = (to: string) => boolean
 
-export type LinkType = 'normal' | 'primary' | 'warn' | 'error' | 'link' | 'pop'
+export type LinkType = 'default' | 'primary' | 'warn' | 'error' | 'link' | 'pop'
 
 export interface LinkProps extends ViewProps {
   /** 跳转链接，openmp:// 协议表示跳转指定小程序 */
@@ -24,7 +24,7 @@ export interface LinkProps extends ViewProps {
   /** 跳转微信小程序id，不传默认取context的 */
   appId?: string
   /** 禁用跳转 */
-  disable?: boolean
+  disabled?: boolean
 }
 
 export type LINK = React.FC<LinkProps> & { appId: string, onBefor: LinkOnBefor }

@@ -11,7 +11,7 @@ const Demo: React.FC = () => {
   return (
     <>
       <Cell label="限时奖励" placeholder="请选择奖励类型" onClick={() => Toast.show('不能选')} arrow  />
-      <Cell label="限时奖励" placeholder="请选择奖励类型" disable onClick={() => Toast.show('不能选')} arrow  />
+      <Cell label="限时奖励" placeholder="请选择奖励类型" disabled onClick={() => Toast.show('不能选')} arrow  />
     </>
   )
 }

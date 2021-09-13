@@ -107,7 +107,7 @@ test('拦截', () => {
 
 test('禁用', () => {
   const onClick = jest.fn()
-  const screen = render(<Link to="/home" disable onClick={onClick} >首页</Link>)
+  const screen = render(<Link to="/home" disabled onClick={onClick} >首页</Link>)
   fireEvent.click(screen.getByText('首页'))
   expect(onClick).toHaveBeenCalledTimes(0)
 })
