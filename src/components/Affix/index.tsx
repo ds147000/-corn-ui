@@ -5,17 +5,18 @@ import Taro from '@tarojs/taro'
 // #endif
 import React, { useCallback, useEffect, useMemo, useRef, useState } from 'react'
 import { View } from '@tarojs/components'
+import { ViewProps } from '@tarojs/components/types/View'
 import ClassNames from 'classnames'
 import { judge } from './utils/judge'
 
-export interface AffixProps {
+export interface AffixProps extends ViewProps {
   position?: 'top' | 'bottom' | 'right' | 'left'
   onChange?(fixed: boolean): void
 }
 
 const threshold = [ 0.01, 0.1, 0.9, 0.99 ]
 
-const Affix: React.FC<AffixProps> = ({ children, position = 'top', onChange }) => {
+const Affix: React.FC<AffixProps> = ({ children, position = 'top', onChange, className, ...props }) => {
   const [ fixed, setFixed ] = useState(false)
   const [ boxStyle, setBoxStyle ] = useState<React.CSSProperties>({})
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
@@ -23,8 +24,8 @@ const Affix: React.FC<AffixProps> = ({ children, position = 'top', onChange }) =
   const oldFixed = useRef<boolean>(false)
 
   const _class = useMemo(() => {
-    return ClassNames('xrk-affix', fixed && `xrk-affix-${position}`)
-  }, [ fixed, position ])
+    return ClassNames('xrk-affix', fixed && `xrk-affix-${position}`, className)
+  }, [ fixed, position, className ])
 
   const changeFixed = useCallback((value: boolean): void => {
     setFixed((state) => {
@@ -112,7 +113,7 @@ const Affix: React.FC<AffixProps> = ({ children, position = 'top', onChange }) =
 
   return (
     <View style={boxStyle} ref={ref}>
-      <View className={_class} >
+      <View className={_class} {...props} >
         {children}
       </View>
     </View>
