@@ -3,7 +3,11 @@ const Page: React.FC = () => {
     <div
       className="scope-page"
       dangerouslySetInnerHTML={{
-        __html: `<h1>0.0.19</h1>
+        __html: `<h1>0.0.30</h1>
+<ul>
+<li>修复部分bug</li>
+</ul>
+<h1>0.0.19</h1>
 <ul>
 <li>增加 <code><span class="hljs-attribute">Cell</span></code> 组件</li>
 <li>增加 <code><span class="hljs-attribute">Link</span></code> 组件</li>
