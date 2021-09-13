@@ -1,13 +1,13 @@
 {
   "files": {
     "main.css": "/static/css/main.468abf4b.chunk.css",
-    "main.js": "/static/js/main.1e1772ff.chunk.js",
+    "main.js": "/static/js/main.a10f0796.chunk.js",
     "runtime-main.js": "/static/js/runtime-main.39af1e95.js",
     "static/js/2.564befed.chunk.js": "/static/js/2.564befed.chunk.js",
     "static/js/3.09f99748.chunk.js": "/static/js/3.09f99748.chunk.js",
     "index.html": "/index.html",
     "static/js/2.564befed.chunk.js.LICENSE.txt": "/static/js/2.564befed.chunk.js.LICENSE.txt",
-    "static/js/main.1e1772ff.chunk.js.LICENSE.txt": "/static/js/main.1e1772ff.chunk.js.LICENSE.txt",
+    "static/js/main.a10f0796.chunk.js.LICENSE.txt": "/static/js/main.a10f0796.chunk.js.LICENSE.txt",
     "static/media/style.scss": "/static/media/iframe_iphonex.0956441f.png",
     "static/media/style.css": "/static/media/xrkIcon.febdefc1.woff2"
   },
@@ -15,6 +15,6 @@
     "static/js/runtime-main.39af1e95.js",
     "static/js/2.564befed.chunk.js",
     "static/css/main.468abf4b.chunk.css",
-    "static/js/main.1e1772ff.chunk.js"
+    "static/js/main.a10f0796.chunk.js"
   ]
 }

@@ -1,9 +1,10 @@
 import React from 'react'
+import classNames from 'classnames'
 import { IconProps } from './typing'
 
-const Icon: React.FC<IconProps> = ({ name, ...props }) => {
+const Icon: React.FC<IconProps> = ({ name, className, ...props }) => {
   // eslint-disable-next-line react/forbid-elements, @typescript-eslint/no-explicit-any
-  return <i className={`xrk-icon xrk-i-${name}`} {...props as any} />
+  return <i className={classNames(className, `xrk-icon xrk-i-${name}`)} {...props as any} />
 }
 
 export default Icon
