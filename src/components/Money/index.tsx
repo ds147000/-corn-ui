@@ -13,7 +13,7 @@ interface MoneyProps extends TextProps {
   lineThrough?: boolean
   /** 风格大小 */
   size?: 'large' | 'middle' | 'small'
-  children?: string
+  children?: string | number
 }
 
 const Money: React.FC<MoneyProps> = ({
