@@ -9,11 +9,11 @@ import { useRef } from 'react'
 import { Checkbox, Card, CheckboxGroup, Button } from "@xrkmm/ui-h5"
 
 const Demo: React.FC = () => {
-  const checkGroupRef = useRef()
+  const checkGroupRef = useRef<CheckboxGroup>()
 
   return (
     <Card>
-      <CheckboxGroup ref={checkGroupRef as any}>
+      <CheckboxGroup ref={checkGroupRef as React.LegacyRef<CheckboxGroup>}>
         <Checkbox value="1">单选模式1</Checkbox>
         <Checkbox value="2">单选模式2</Checkbox>
         <Checkbox value="3">单选模式3</Checkbox>
