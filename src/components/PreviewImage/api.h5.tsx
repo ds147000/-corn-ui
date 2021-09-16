@@ -3,6 +3,7 @@ import { View, Image } from '@tarojs/components'
 import { previewImageOption } from './typeing'
 import { Swiper, SwiperItem } from '../Swiper'
 import Portal from '../Portal'
+import { isWatch } from '../../utils'
 
 interface ContainerProps extends previewImageOption {
   onDestory(): void
@@ -40,7 +41,8 @@ const Container: React.FC<ContainerProps> = ({ onDestory, urls, activeIndex }) =
 }
 
 const previewImage = async (option: previewImageOption): Promise<{ errMsg: string }> => {
-  if (window?.wx?.previewImage) return callWxPreview(option)
+  if (window?.wx?.previewImage && isWatch())
+    return callWxPreview(option)
 
   return callProtalPreview(option)
 }

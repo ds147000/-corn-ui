@@ -27,7 +27,7 @@ commonPackage.devDependencies = {}
 commonPackage.scripts = {}
 
 // 微信包配置
-const WeappPackage = Object.assign({}, commonPackage)
+const WeappPackage = JSON.parse(JSON.stringify(commonPackage))
 WeappPackage.name += '-taro'
 WeappPackage.main = 'dist/index.js'
 WeappPackage.module = 'dist/index.esm.js'
@@ -39,7 +39,7 @@ writeFile(WeappPackagePath, Prettier.format(JSON.stringify(WeappPackage), Pertti
 
 
 // H5包配置
-const H5Package = Object.assign({}, commonPackage)
+const H5Package = JSON.parse(JSON.stringify(commonPackage))
 H5Package.name += '-h5'
 H5Package.main = 'dist/index.js'
 H5Package.module = 'dist/index.esm.js'

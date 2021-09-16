@@ -76,3 +76,7 @@ export function getRanDomId(): string {
 
   return str
 }
+
+export function isWatch(): boolean {
+  return /MicroMessenger/i.test(window.navigator.userAgent)
+}

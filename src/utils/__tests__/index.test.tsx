@@ -1,7 +1,7 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
 /* eslint-disable no-magic-numbers */
 
-import { transformRem, formatMoney, getRanDomId, DateToTimestamp, fixNumber } from '../index'
+import { transformRem, formatMoney, getRanDomId, DateToTimestamp, fixNumber, isWatch } from '../index'
 
 describe.each([
   [ 100, '1.33rem' ],
@@ -79,4 +79,8 @@ describe.each([
   test(`${value} => ${expected}`, () => {
     expect(fixNumber(value, len)).toBe(expected)
   })
+})
+
+test('weapp', () => {
+  expect(isWatch()).toBe(false)
 })
