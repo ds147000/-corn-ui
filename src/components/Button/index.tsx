@@ -32,6 +32,7 @@ const Button: React.FC<ButtonProps> = ({
   onClick,
   icon,
   children,
+  className,
   ...props
 }) => {
   const isIcon = icon !== undefined
@@ -48,10 +49,11 @@ const Button: React.FC<ButtonProps> = ({
         'xrk-btn-ghost': ghost,
         'xrk-btn-icon': isIcon && !isChildren,
         'xrk-btn-child-icon': isIcon && isChildren,
-        'xrk-btn-disabled':disabled
-      }
+        'xrk-btn-disabled': disabled
+      },
+      className
     )
-  }, [ size, type, block, ghost, disabled, isIcon, isChildren ])
+  }, [ size, type, block, ghost, disabled, isIcon, isChildren, className ])
 
   const _onClick = (): void => {
     if (disabled) return

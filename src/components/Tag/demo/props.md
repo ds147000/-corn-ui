@@ -20,5 +20,5 @@ type: 状态展示
 | 属性 | 必填 | 说明 | 类型 | 默认值 |
 | --- | --- | --- | --- | --- |
 | type | 否 | 风格类型 | `primary` `warn` `error` `link` `pop` | `primary` |
-| size | 否 |  大小 |  `middle` `small`| `middle` |
+| size | 否 |  大小 |  `middle` `small` `mini`| `middle` |
 | ghost | 否 |  镂空风格 | `boolean` | `false` |

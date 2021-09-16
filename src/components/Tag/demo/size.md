@@ -13,12 +13,14 @@ const Demo: React.FC = () => {
     <>
      <Tag size="middle">3-9岁</Tag>
       <Tag size="small">3-9岁</Tag>
+      <Tag size="mini">3-9岁</Tag>
     </>
   )
 }
 
 export default Demo
 ```
-可以通过`size`属性控制按钮风格，可选属性： `middle` `small`  ，默认为`small`。
+可以通过`size`属性控制按钮风格，可选属性： `middle` `small` `mini`  ，默认为`small`。
  - `middle`：打的标签，默认是这个
  - `small`：比较小的标签
+ - `mini`： 很小的标签
