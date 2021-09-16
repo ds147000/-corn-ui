@@ -30,7 +30,8 @@ const externalPackages = [
   '@tarojs/taro',
   '@atrojs/api',
   'react-dom/server',
-  'qs'
+  'qs',
+  'swiper'
 ]
 
 export default {

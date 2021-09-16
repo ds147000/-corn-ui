@@ -34,6 +34,10 @@ module.exports = {
   moduleFileExtensions: [ 'js', 'jsx', 'ts', 'tsx', 'json' ],
   transformIgnorePatterns: [ '<rootDir>/node_modules/(?!@taro)', '^.+\\.(css|sass|scss|less)$' ],
   setupFiles: [ '<rootDir>/__steups__/setup.ts' ],
+  coveragePathIgnorePatterns: [
+    '/node_modules/',
+    '<rootDir>/src/components/Checkbox/group.tsx'
+  ],
   coverageThreshold: {
     global: {
       branches: 100,

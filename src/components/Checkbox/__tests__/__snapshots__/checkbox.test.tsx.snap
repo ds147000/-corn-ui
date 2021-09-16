@@ -1,0 +1,75 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Checkbox 基础 1`] = `
+<div>
+  <div
+    class="xrk-if xrk-ac xrk-checkbox"
+  >
+    <input
+      data-testid="check"
+      readonly=""
+      value="false"
+    />
+    <i
+      class="xrk-icon xrk-i-radio"
+    />
+    商品链接
+  </div>
+</div>
+`;
+
+exports[`Checkbox 基础 按钮类型 1`] = `
+<div>
+  <div
+    class="xrk-if xrk-ac"
+  >
+    <input
+      data-testid="check"
+      readonly=""
+      value="false"
+    />
+    <div
+      class="xrk-btn xrk-if xrk-ac xrk-jc xrk-btn-middle xrk-btn-default"
+    >
+      商品链接
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Checkbox 基础 按钮类型 2`] = `
+<div>
+  <div
+    class="xrk-if xrk-ac"
+  >
+    <input
+      data-testid="check"
+      readonly=""
+      value="true"
+    />
+    <div
+      class="xrk-btn xrk-if xrk-ac xrk-jc xrk-btn-middle xrk-btn-primary"
+    >
+      商品链接
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Checkbox 选中 1`] = `
+<div>
+  <div
+    class="xrk-if xrk-ac xrk-checkbox-active xrk-checkbox"
+  >
+    <input
+      data-testid="check"
+      readonly=""
+      value="true"
+    />
+    <i
+      class="xrk-icon xrk-i-fill-select"
+    />
+    商品链接
+  </div>
+</div>
+`;

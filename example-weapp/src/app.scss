@@ -1,2 +1,6 @@
 @import '@xrkmm/ui-taro/styles/index.scss';
-@import '../../package-taro/icons/style.scss'
+@import '../../package-taro/icons/style.css';
+
+.index, page {
+  background-color: #F9FAFD;
+}

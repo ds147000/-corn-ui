@@ -1,9 +1,9 @@
 import { RouteProps } from 'react-router-dom'
 
 interface RoutesProps extends RouteProps {
-  title: string;
-  type: string;
-  sort: number;
+  title: string
+  type: string
+  sort: number
 }
 
 const Routes: RoutesProps[] = [
@@ -167,6 +167,41 @@ const Routes: RoutesProps[] = [
     title: 'suffix',
     type: 'undefined',
     sort: 2,
+  },
+  {
+    path: '/phone/Checkbox/demo/api',
+    component: require('../views/Checkbox/demo/api').default,
+    title: '使用 API',
+    type: 'undefined',
+    sort: 5,
+  },
+  {
+    path: '/phone/Checkbox/demo/basis',
+    component: require('../views/Checkbox/demo/basis').default,
+    title: '基本使用',
+    type: 'undefined',
+    sort: 1,
+  },
+  {
+    path: '/phone/Checkbox/demo/button',
+    component: require('../views/Checkbox/demo/button').default,
+    title: '默认状态和自控制状态',
+    type: 'undefined',
+    sort: 2,
+  },
+  {
+    path: '/phone/Checkbox/demo/group',
+    component: require('../views/Checkbox/demo/group').default,
+    title: 'checkBox组',
+    type: 'undefined',
+    sort: 3,
+  },
+  {
+    path: '/phone/Checkbox/demo/radio',
+    component: require('../views/Checkbox/demo/radio').default,
+    title: '单选模式',
+    type: 'undefined',
+    sort: 4,
   },
   {
     path: '/phone/Drawer/demo/mask',

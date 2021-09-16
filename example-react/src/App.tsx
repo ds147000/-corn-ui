@@ -8,9 +8,9 @@
 import {
   Button, Toast, Drawer, ActionSheet, showActionSheet,
   Modal, showModal, Icon, Empty, Image, Tab, Tag, Affix, Timer, Link,
-  Cell, Card, Swiper, SwiperItem
+  Cell, Card, Swiper, SwiperItem, Checkbox, CheckboxGroup
 } from '@xrkmm/ui-h5'
-import { useState } from 'react'
+import React, { useRef, useState } from 'react'
 import { TabItemPorps } from '../../package-h5/dist/components/Tab'
 import '../../package-h5/dist/styles/base.css'
 import '../../package-h5/dist/styles/index.css'
@@ -55,6 +55,7 @@ const renderItem = (type: string, number: string): JSX.Element => {
 }
 
 function App() {
+  const checkGroupRef = useRef<CheckboxGroup>()
   const [current, setCurrent] = useState(1)
   const [show, setShow] = useState(false)
   const [aShow, setAshow] = useState(false)
@@ -69,6 +70,11 @@ function App() {
 
   return (
     <div className="App">
+      <Checkbox>商品链接</Checkbox>
+      <Checkbox check >商品链接</Checkbox>
+      <Checkbox check disabled >商品链接</Checkbox>
+      <Checkbox disabled >商品链接</Checkbox>
+      <Checkbox type="button" >商品链接</Checkbox>
       <Tab
         options={TabOption}
         currenIndex={current}
@@ -79,6 +85,40 @@ function App() {
         currenIndex={current}
         onChange={(index) => setCurrent(index)}
       />
+      <Card>
+        <CheckboxGroup>
+          <Checkbox value="1">联合复选框1</Checkbox>
+          <Checkbox value="2">联合复选框4</Checkbox>
+          <Checkbox value="3">联合复选框3</Checkbox>
+          <Checkbox value="4">联合复选框2</Checkbox>
+        </CheckboxGroup>
+      </Card>
+      <Card>
+        <CheckboxGroup radio >
+          <Checkbox value="1" >单选模式1</Checkbox>
+          <Checkbox value="2" >单选模式2</Checkbox>
+          <Checkbox value="3" >单选模式3</Checkbox>
+          <Checkbox value="4" >单选模式4</Checkbox>
+        </CheckboxGroup>
+      </Card>
+      <Card>
+        <CheckboxGroup radio >
+          <Checkbox value="1" type="button" >单选模式1</Checkbox>
+          <Checkbox value="2" type="button" >单选模式2</Checkbox>
+          <Checkbox value="3" type="button" >单选模式3</Checkbox>
+          <Checkbox value="4" type="button" >单选模式4</Checkbox>
+        </CheckboxGroup>
+      </Card>
+      <Card>
+        <CheckboxGroup ref={checkGroupRef as React.LegacyRef<CheckboxGroup>} >
+          <Checkbox value="1">单选模式1</Checkbox>
+          <Checkbox value="2">单选模式2</Checkbox>
+          <Checkbox value="3">单选模式3</Checkbox>
+          <Checkbox value="4">单选模式4</Checkbox>
+        </CheckboxGroup>
+        <Button onClick={() => checkGroupRef.current?.selectAll()} >全选</Button>
+        <Button onClick={() => checkGroupRef.current?.reset()} >取消选中</Button>
+      </Card>
       <Link to='/pages/link/index'>【Link跳转】</Link>
       <Link to='/pages/link/index' replace >【Link原地跳转】</Link>
       <Link to='/pages/link/index' replace >【替换跳转】</Link>

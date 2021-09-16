@@ -1,0 +1,202 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`单选模式 1`] = `
+<div>
+  <div
+    class=""
+  >
+    <div
+      class="xrk-if xrk-ac xrk-checkbox"
+    >
+      <input
+        data-testid="check"
+        readonly=""
+        value="1"
+      />
+      <i
+        class="xrk-icon xrk-i-radio"
+      />
+      选项1
+    </div>
+    <div
+      class="xrk-if xrk-ac xrk-checkbox"
+    >
+      <input
+        data-testid="check"
+        readonly=""
+        value="2"
+      />
+      <i
+        class="xrk-icon xrk-i-radio"
+      />
+      选项2
+    </div>
+    <div
+      class="xrk-if xrk-ac xrk-checkbox"
+    >
+      <input
+        data-testid="check"
+        readonly=""
+        value="3"
+      />
+      <i
+        class="xrk-icon xrk-i-radio"
+      />
+      选项3
+    </div>
+    <div
+      class="xrk-if xrk-ac xrk-checkbox-active xrk-checkbox"
+    >
+      <input
+        data-testid="check"
+        readonly=""
+        value="4"
+      />
+      <i
+        class="xrk-icon xrk-i-fill-select"
+      />
+      选项4
+    </div>
+  </div>
+</div>
+`;
+
+exports[`取消选中 1`] = `
+<div>
+  <div
+    class=""
+  >
+    <div
+      class="xrk-if xrk-ac xrk-checkbox"
+    >
+      <input
+        data-testid="check"
+        readonly=""
+        value="1"
+      />
+      <i
+        class="xrk-icon xrk-i-radio"
+      />
+      选项1
+    </div>
+    <div
+      class="xrk-if xrk-ac xrk-checkbox"
+    >
+      <input
+        data-testid="check"
+        readonly=""
+        value="2"
+      />
+      <i
+        class="xrk-icon xrk-i-radio"
+      />
+      选项2
+    </div>
+  </div>
+</div>
+`;
+
+exports[`取消选中 和默认值 1`] = `
+<div>
+  <div
+    class=""
+  >
+    <div
+      class="xrk-if xrk-ac xrk-checkbox"
+    >
+      <input
+        data-testid="check"
+        readonly=""
+        value="1"
+      />
+      <i
+        class="xrk-icon xrk-i-radio"
+      />
+      选项1
+    </div>
+    <div
+      class="xrk-if xrk-ac xrk-checkbox"
+    >
+      <input
+        data-testid="check"
+        readonly=""
+        value="2"
+      />
+      <i
+        class="xrk-icon xrk-i-radio"
+      />
+      选项2
+    </div>
+  </div>
+</div>
+`;
+
+exports[`基本使用 1`] = `
+<div>
+  <div
+    class=""
+  >
+    <div
+      class="xrk-if xrk-ac xrk-checkbox"
+    >
+      <input
+        data-testid="check"
+        readonly=""
+        value="1"
+      />
+      <i
+        class="xrk-icon xrk-i-radio"
+      />
+      选项1
+    </div>
+    <div
+      class="xrk-if xrk-ac xrk-checkbox"
+    >
+      <input
+        data-testid="check"
+        readonly=""
+        value="2"
+      />
+      <i
+        class="xrk-icon xrk-i-radio"
+      />
+      选项2
+    </div>
+  </div>
+</div>
+`;
+
+exports[`选中 1`] = `
+<div>
+  <div
+    class=""
+  >
+    <div
+      class="xrk-if xrk-ac xrk-checkbox-active xrk-checkbox"
+    >
+      <input
+        data-testid="check"
+        readonly=""
+        value="1"
+      />
+      <i
+        class="xrk-icon xrk-i-fill-select"
+      />
+      选项1
+    </div>
+    <div
+      class="xrk-if xrk-ac xrk-checkbox-active xrk-checkbox"
+    >
+      <input
+        data-testid="check"
+        readonly=""
+        value="2"
+      />
+      <i
+        class="xrk-icon xrk-i-fill-select"
+      />
+      选项2
+    </div>
+  </div>
+</div>
+`;

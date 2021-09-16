@@ -6,7 +6,7 @@ const { resolve } = require('path')
 
 const PerttierConfig = {
   semi: false,
-  parser: 'babel',
+  parser: 'typescript',
   singleQuote: true,
   embeddedLanguageFormatting: 'off'
 }

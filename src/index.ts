@@ -29,6 +29,8 @@ export { MinuteSchedulerApp, SecondSchedulerApp, SecondScheduler  } from './comp
 export { default as Link } from './components/Link'
 export { default as Cell } from './components/Cell'
 export { default as Card } from './components/Card'
+export { default as Checkbox } from './components/Checkbox/checkbox'
+export { default as CheckboxGroup } from './components/Checkbox/group'
 
 export const UTILS = {
   transformRem,

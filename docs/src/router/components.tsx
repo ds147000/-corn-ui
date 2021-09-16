@@ -1,9 +1,9 @@
 import { RouteProps } from 'react-router-dom'
 
 interface RoutesProps extends RouteProps {
-  title: string;
-  type: string;
-  sort: number;
+  title: string
+  type: string
+  sort: number
 }
 
 const Routes: RoutesProps[] = [
@@ -41,6 +41,13 @@ const Routes: RoutesProps[] = [
     title: 'Cell 单元格',
     type: '表单类型',
     sort: 1,
+  },
+  {
+    path: '/doc/Checkbox',
+    component: require('../views/Checkbox').default,
+    title: 'Checkbox 选择框',
+    type: '表单类型',
+    sort: 2,
   },
   {
     path: '/doc/Drawer',

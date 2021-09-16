@@ -5,10 +5,15 @@
  * @LastEditors: zhoulong.yang
  * @LastEditTime: 2021-06-10 15:34:25
  */
-import { Component } from 'react'
+
+import { Component, createRef } from 'react'
 import { View } from '@tarojs/components'
 import { TabItemPorps } from '@xrkmm/ui-taro/components/Tab'
-import { Button, Toast, Drawer, showActionSheet, showModal, Modal, Icon, Image, Tab, Affix, Timer, Link } from '@xrkmm/ui-taro'
+import {
+  Button, Toast, Drawer, showActionSheet,
+  showModal, Modal, Icon, Image, Tab, Affix,
+  Timer, Link, Card, Checkbox, CheckboxGroup
+} from '@xrkmm/ui-taro'
 import './index.scss'
 
 const asList = [
@@ -25,7 +30,7 @@ const TabOption: TabItemPorps[] = [
 
 
 const renderItem = (type: string, number: string): JSX.Element => {
-  switch(type) {
+  switch (type) {
     case 'day':
       return <View>{number}天:</View>
 
@@ -41,6 +46,7 @@ const renderItem = (type: string, number: string): JSX.Element => {
 }
 
 export default class Index extends Component {
+  checkGroupRef = createRef<CheckboxGroup>()
 
   state = {
     show: false,
@@ -48,15 +54,15 @@ export default class Index extends Component {
     current: 0
   }
 
-  componentWillMount () { }
+  componentWillMount() { }
 
-  componentDidMount () { }
+  componentDidMount() { }
 
-  componentWillUnmount () { }
+  componentWillUnmount() { }
 
-  componentDidShow () { }
+  componentDidShow() { }
 
-  componentDidHide () { }
+  componentDidHide() { }
 
   onClick() {
     Toast.show('taost')
@@ -66,16 +72,48 @@ export default class Index extends Component {
     this.setState({ show: false })
   }
 
-  render () {
+  render() {
     return (
       <View className='index'>
-        {/* <Affix> */}
-          <Tab
-            options={TabOption}
-            currenIndex={this.state.current}
-            onChange={(index) => this.setState({ current: index })}
-          />
-        {/* </Affix> */}
+        <Tab
+          options={TabOption}
+          currenIndex={this.state.current}
+          onChange={(index) => this.setState({ current: index })}
+        />
+        <Card>
+        <CheckboxGroup>
+          <Checkbox value="1">联合复选框1</Checkbox>
+          <Checkbox value="2">联合复选框4</Checkbox>
+          <Checkbox value="3">联合复选框3</Checkbox>
+          <Checkbox value="4">联合复选框2</Checkbox>
+        </CheckboxGroup>
+      </Card>
+      <Card>
+        <CheckboxGroup radio >
+          <Checkbox value="1" >单选模式1</Checkbox>
+          <Checkbox value="2" >单选模式2</Checkbox>
+          <Checkbox value="3" >单选模式3</Checkbox>
+          <Checkbox value="4" >单选模式4</Checkbox>
+        </CheckboxGroup>
+      </Card>
+      <Card>
+        <CheckboxGroup radio >
+          <Checkbox value="1" type="button" >单选模式1</Checkbox>
+          <Checkbox value="2" type="button" >单选模式2</Checkbox>
+          <Checkbox value="3" type="button" >单选模式3</Checkbox>
+          <Checkbox value="4" type="button" >单选模式4</Checkbox>
+        </CheckboxGroup>
+      </Card>
+      <Card>
+        <CheckboxGroup ref={this.checkGroupRef} >
+          <Checkbox value="1">单选模式1</Checkbox>
+          <Checkbox value="2">单选模式2</Checkbox>
+          <Checkbox value="3">单选模式3</Checkbox>
+          <Checkbox value="4">单选模式4</Checkbox>
+        </CheckboxGroup>
+        <Button onClick={() => this.checkGroupRef.current?.selectAll()} >全选</Button>
+        <Button onClick={() => this.checkGroupRef.current?.reset()} >取消选中</Button>
+      </Card>
         <Link to='/pages/link/index' >【Link跳转】</Link>
         <Link to='/pages/link/index' replace >【Link原地跳转】</Link>
         <Link to='/pages/link/index' type="primary" >primary</Link>
@@ -148,7 +186,7 @@ export default class Index extends Component {
           ]}
           onButtonClick={() => this.setState({ mShow: false })}
         />
-        <Image src='https://t7.baidu.com/it/u=1951548898,3927145&fm=193&f=GIF'  />
+        <Image src='https://t7.baidu.com/it/u=1951548898,3927145&fm=193&f=GIF' />
         <Image src='https://t7.baidu.com/it/u=1595072465,3644073269&fm=193&f=GIF' lazyLoad />
         <Affix position='bottom'>
           <Button size='max' icon={<Icon name='service' />}>图标按钮</Button>
