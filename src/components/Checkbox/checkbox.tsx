@@ -72,7 +72,7 @@ const CheckBox: React.FC<CheckBoxProps> = ({
   input = <Input className="xrk-checkbox-hide" value={_value} name={name} data-testid="check" />
   // #else
   // eslint-disable-next-line react/forbid-elements
-  input = <input value={_value} name={name} data-testid="check" readOnly  />
+  input = <input className="xrk-checkbox-hide" value={_value} name={name} data-testid="check" readOnly  />
   // #endif
 
   return (

@@ -1,13 +1,13 @@
 {
   "files": {
     "main.css": "/static/css/main.694f54c1.chunk.css",
-    "main.js": "/static/js/main.9bdb7ec3.chunk.js",
+    "main.js": "/static/js/main.1e65cfac.chunk.js",
     "runtime-main.js": "/static/js/runtime-main.704edb67.js",
     "static/js/2.d64d7fa7.chunk.js": "/static/js/2.d64d7fa7.chunk.js",
     "static/js/3.df874c51.chunk.js": "/static/js/3.df874c51.chunk.js",
     "index.html": "/index.html",
     "static/js/2.d64d7fa7.chunk.js.LICENSE.txt": "/static/js/2.d64d7fa7.chunk.js.LICENSE.txt",
-    "static/js/main.9bdb7ec3.chunk.js.LICENSE.txt": "/static/js/main.9bdb7ec3.chunk.js.LICENSE.txt",
+    "static/js/main.1e65cfac.chunk.js.LICENSE.txt": "/static/js/main.1e65cfac.chunk.js.LICENSE.txt",
     "static/media/style.scss": "/static/media/iframe_iphonex.0956441f.png",
     "static/media/style.css": "/static/media/xrkIcon.febdefc1.woff2"
   },
@@ -15,6 +15,6 @@
     "static/js/runtime-main.704edb67.js",
     "static/js/2.d64d7fa7.chunk.js",
     "static/css/main.694f54c1.chunk.css",
-    "static/js/main.9bdb7ec3.chunk.js"
+    "static/js/main.1e65cfac.chunk.js"
   ]
 }

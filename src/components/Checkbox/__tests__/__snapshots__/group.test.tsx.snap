@@ -9,6 +9,7 @@ exports[`单选模式 1`] = `
       class="xrk-if xrk-ac xrk-checkbox"
     >
       <input
+        class="xrk-checkbox-hide"
         data-testid="check"
         readonly=""
         value="1"
@@ -22,6 +23,7 @@ exports[`单选模式 1`] = `
       class="xrk-if xrk-ac xrk-checkbox"
     >
       <input
+        class="xrk-checkbox-hide"
         data-testid="check"
         readonly=""
         value="2"
@@ -35,6 +37,7 @@ exports[`单选模式 1`] = `
       class="xrk-if xrk-ac xrk-checkbox"
     >
       <input
+        class="xrk-checkbox-hide"
         data-testid="check"
         readonly=""
         value="3"
@@ -48,6 +51,7 @@ exports[`单选模式 1`] = `
       class="xrk-if xrk-ac xrk-checkbox-active xrk-checkbox"
     >
       <input
+        class="xrk-checkbox-hide"
         data-testid="check"
         readonly=""
         value="4"
@@ -70,6 +74,7 @@ exports[`取消选中 1`] = `
       class="xrk-if xrk-ac xrk-checkbox"
     >
       <input
+        class="xrk-checkbox-hide"
         data-testid="check"
         readonly=""
         value="1"
@@ -83,6 +88,7 @@ exports[`取消选中 1`] = `
       class="xrk-if xrk-ac xrk-checkbox"
     >
       <input
+        class="xrk-checkbox-hide"
         data-testid="check"
         readonly=""
         value="2"
@@ -105,6 +111,7 @@ exports[`取消选中 和默认值 1`] = `
       class="xrk-if xrk-ac xrk-checkbox"
     >
       <input
+        class="xrk-checkbox-hide"
         data-testid="check"
         readonly=""
         value="1"
@@ -118,6 +125,7 @@ exports[`取消选中 和默认值 1`] = `
       class="xrk-if xrk-ac xrk-checkbox"
     >
       <input
+        class="xrk-checkbox-hide"
         data-testid="check"
         readonly=""
         value="2"
@@ -140,6 +148,7 @@ exports[`基本使用 1`] = `
       class="xrk-if xrk-ac xrk-checkbox"
     >
       <input
+        class="xrk-checkbox-hide"
         data-testid="check"
         readonly=""
         value="1"
@@ -153,6 +162,7 @@ exports[`基本使用 1`] = `
       class="xrk-if xrk-ac xrk-checkbox"
     >
       <input
+        class="xrk-checkbox-hide"
         data-testid="check"
         readonly=""
         value="2"
@@ -175,6 +185,7 @@ exports[`选中 1`] = `
       class="xrk-if xrk-ac xrk-checkbox-active xrk-checkbox"
     >
       <input
+        class="xrk-checkbox-hide"
         data-testid="check"
         readonly=""
         value="1"
@@ -188,6 +199,7 @@ exports[`选中 1`] = `
       class="xrk-if xrk-ac xrk-checkbox-active xrk-checkbox"
     >
       <input
+        class="xrk-checkbox-hide"
         data-testid="check"
         readonly=""
         value="2"
