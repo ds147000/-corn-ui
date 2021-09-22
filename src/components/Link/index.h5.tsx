@@ -2,7 +2,7 @@ import React, { useMemo } from 'react'
 import ClassName from 'classnames'
 import { ITouchEvent } from '@tarojs/components'
 import { OpenMpLink } from './openmp'
-import type { LINK } from './index'
+import type { LINK, LinkHistory } from './index'
 import { checkOpenMp, OpenHostSuffix } from './utils'
 
 const Link: LINK = ({
@@ -34,11 +34,11 @@ const Link: LINK = ({
     onClick?.(event as ITouchEvent)
 
     if (replace && checkOpenMp(to) === false) { // 替换跳转
-      Link.history.replace(to)
+      (Link.history as LinkHistory).replace(to)
       return
     }
 
-    Link.history.push(to)
+    (Link.history as LinkHistory).push(to)
   }
 
   if (checkOpenMp(to)) { // 打开小程序

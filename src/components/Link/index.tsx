@@ -35,7 +35,7 @@ export type LinkHistory = {
 export type LINK = React.FC<LinkProps> & {
   appId: string;
   onBefor: LinkOnBefor;
-  history: LinkHistory;
+  history?: LinkHistory;
 }
 
 // #if _APP === 'weapp'
