@@ -8,7 +8,7 @@
 import {
   Button, Toast, Drawer, ActionSheet, showActionSheet,
   Modal, showModal, Icon, Empty, Image, Tab, Tag, Affix, Timer, Link,
-  Cell, Card, Swiper, SwiperItem, Checkbox, CheckboxGroup
+  Cell, Card, Swiper, SwiperItem, Checkbox, CheckboxGroup, previewImage
 } from '@xrkmm/ui-h5'
 import React, { useRef, useState } from 'react'
 import { TabItemPorps } from '../../package-h5/dist/components/Tab'
@@ -32,7 +32,7 @@ const TabOption: TabItemPorps[] = [
 
 const TabUrlOption: TabItemPorps[] = [
   { title: '我是选项1', url: '/home' },
-  { title: '我是选项2', url: '/' },
+  { title: '我是选项2', url: '/', icon: 'https://assets.xrkmm.cn/u-test/4000000196122028/49b28023-3cbd-4604-b165-9850fd6f99b8.png' },
   { title: '我是选项3', url: '/home' },
   { title: '我是选项4', url: '/' },
   { title: '我是选项5', url: '/home' }
@@ -267,7 +267,10 @@ function App() {
           <Image src="https://t7.baidu.com/it/u=1595072465,3644073269&fm=193&f=GIF" />
         </SwiperItem>
       </Swiper>
-      <Card>Card</Card>
+      <Card onClick={() => previewImage({
+        current: 'https://t7.baidu.com/it/u=2291349828,4144427007&fm=193&f=GIF',
+        urls: ['https://t7.baidu.com/it/u=2291349828,4144427007&fm=193&f=GIF']
+      })} >Card</Card>
       <Affix onChange={onChange} position="bottom">
         <Button size="max">向日葵妈妈UI</Button>
       </Affix>

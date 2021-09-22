@@ -1,6 +1,11 @@
 /* eslint-disable import/export */
 /* eslint-disable import/first */
 
+export interface previewImageOption {
+  urls: string[]
+  current: string
+}
+
 // #if _APP === 'weapp'
 import previewImage from './api.taro'
 

@@ -6,7 +6,7 @@ export const DefualtRenderItem: TimeRenderItem = (type, value, last): JSX.Elemen
   if (type === 'day') {
     return (
       <>
-        <View className="xrk-f xrk-ac xrk-jc" data-testid={type} >
+        <View className="xrk-f xrk-ac xrk-jc xrk-timer-day" data-testid={type} >
           {value}天
         </View>
       </>

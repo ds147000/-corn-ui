@@ -10,28 +10,28 @@ exports[`icon 1`] = `
       class="xrk-tab-item __x-st-exp __x-st-click"
       data-testid="tab-item"
     >
-      <span
-        class="taro-text"
+      <div
+        class=""
       >
         item1
-      </span>
+      </div>
     </div>
     <div
       class="xrk-tab-item __x-st-exp __x-st-click xrk-tab-item-active"
       data-testid="tab-item"
     >
-      <span
-        class="taro-text"
+      <div
+        class=""
       >
         item2
-      </span>
+      </div>
     </div>
     <div
       class="xrk-tab-item __x-st-exp __x-st-click"
       data-testid="tab-item"
     >
-      <span
-        class="taro-text"
+      <div
+        class=""
       >
         <div
           class="taro-img xrk-img xrk-tab-item-icon"
@@ -41,7 +41,7 @@ exports[`icon 1`] = `
             src="2121.png"
           />
         </div>
-      </span>
+      </div>
     </div>
   </div>
 </div>
@@ -57,28 +57,28 @@ exports[`not currenIndex 1`] = `
       class="xrk-tab-item __x-st-exp __x-st-click"
       data-testid="tab-item"
     >
-      <span
-        class="taro-text"
+      <div
+        class=""
       >
         item1
-      </span>
+      </div>
     </div>
     <div
       class="xrk-tab-item __x-st-exp __x-st-click"
       data-testid="tab-item"
     >
-      <span
-        class="taro-text"
+      <div
+        class=""
       >
         item2
-      </span>
+      </div>
     </div>
     <div
       class="xrk-tab-item __x-st-exp __x-st-click"
       data-testid="tab-item"
     >
-      <span
-        class="taro-text"
+      <div
+        class=""
       >
         <div
           class="taro-img xrk-img xrk-tab-item-icon"
@@ -88,7 +88,7 @@ exports[`not currenIndex 1`] = `
             src="2121.png"
           />
         </div>
-      </span>
+      </div>
     </div>
   </div>
 </div>
@@ -104,31 +104,31 @@ exports[`option 1`] = `
       class="xrk-tab-item __x-st-exp __x-st-click"
       data-testid="tab-item"
     >
-      <span
-        class="taro-text"
+      <div
+        class=""
       >
         item1
-      </span>
+      </div>
     </div>
     <div
       class="xrk-tab-item __x-st-exp __x-st-click xrk-tab-item-active"
       data-testid="tab-item"
     >
-      <span
-        class="taro-text"
+      <div
+        class=""
       >
         item2
-      </span>
+      </div>
     </div>
     <div
       class="xrk-tab-item __x-st-exp __x-st-click"
       data-testid="tab-item"
     >
-      <span
-        class="taro-text"
+      <div
+        class=""
       >
         item4
-      </span>
+      </div>
     </div>
   </div>
 </div>

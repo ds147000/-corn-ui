@@ -25,20 +25,20 @@ const Link: LINK = ({
   const _onBefor = onBefor || Link.onBefor
 
   const onNavigate = (event: React.MouseEvent<HTMLAnchorElement, MouseEvent> | ITouchEvent): void => {
+    event.preventDefault()
+
     if (_onBefor?.(to) === true || disabled) {
-      event.stopPropagation()
-      event.preventDefault()
       return // 终止
     }
 
     onClick?.(event as ITouchEvent)
 
     if (replace && checkOpenMp(to) === false) { // 替换跳转
-      window.location.replace(to)
-      event.stopPropagation()
-      event.preventDefault()
+      Link.history.replace(to)
       return
     }
+
+    Link.history.push(to)
   }
 
   if (checkOpenMp(to)) { // 打开小程序
@@ -59,7 +59,16 @@ const Link: LINK = ({
 
 }
 
+
 Link.appId = ''
 Link.onBefor = (): boolean => false
+Link.history = {
+  push(url): void {
+    window.location.href = url
+  },
+  replace(url): void {
+    window.location.replace(url)
+  }
+}
 
 export default Link

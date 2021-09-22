@@ -1,6 +1,6 @@
 import React from 'react'
 import { View, Image } from '@tarojs/components'
-import { previewImageOption } from './typeing'
+import type { previewImageOption } from './index'
 import { Swiper, SwiperItem } from '../Swiper'
 import Portal from '../Portal'
 import { isWatch } from '../../utils'
@@ -25,10 +25,9 @@ const Container: React.FC<ContainerProps> = ({ onDestory, urls, activeIndex }) =
         indicatorActiveColor="#fff"
         className="xrk-preview-image-swiper"
       >
-        {urls.map((item, key) => (
+        {urls.map((item) => (
           <SwiperItem key={item} >
             <Image
-              data-testid={key === activeIndex ? 'previewImage-current' : ''}
               lazyLoad={false}
               src={item}
               className="xrk-preview-image-img"

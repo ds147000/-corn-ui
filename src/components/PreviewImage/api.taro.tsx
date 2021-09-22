@@ -1,5 +1,5 @@
 import { previewImage } from '@tarojs/taro'
-import { previewImageOption } from './typeing'
+import type { previewImageOption } from './index'
 
 const _previewImage = async (option: previewImageOption): Promise<{ errMsg: string }> => {
   return previewImage(option)

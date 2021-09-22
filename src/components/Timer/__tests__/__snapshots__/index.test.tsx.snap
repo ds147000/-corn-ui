@@ -154,7 +154,7 @@ exports[`comps/Timer 基本使用 天 1`] = `
     class="xrk-timer xrk-if xrk-ac xrk-jc"
   >
     <div
-      class="xrk-f xrk-ac xrk-jc"
+      class="xrk-f xrk-ac xrk-jc xrk-timer-day"
       data-testid="day"
     >
       1

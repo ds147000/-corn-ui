@@ -27,7 +27,16 @@ export interface LinkProps extends ViewProps {
   disabled?: boolean
 }
 
-export type LINK = React.FC<LinkProps> & { appId: string, onBefor: LinkOnBefor }
+export type LinkHistory = {
+  push(url: string): void
+  replace(url: string): void
+}
+
+export type LINK = React.FC<LinkProps> & {
+  appId: string;
+  onBefor: LinkOnBefor;
+  history: LinkHistory;
+}
 
 // #if _APP === 'weapp'
 import Link from './index.taro'

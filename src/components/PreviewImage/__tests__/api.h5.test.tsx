@@ -3,7 +3,6 @@ import { act, fireEvent, render, waitFor } from '@testing-library/react'
 import previewImage from '../api.h5'
 import Protal from '../../Portal'
 import Host from '../../Portal/host'
-import { isWatch } from '../../../utils'
 
 jest.mock('../../../utils', () => ({
   isWatch: () => true
@@ -12,8 +11,6 @@ jest.mock('../../../utils', () => ({
 beforeEach(() => {
   window.wx = null
 })
-
-const mockIsWatch = isWatch as jest.Mock
 
 test('preview img one', async () => {
   Protal.status = true
@@ -26,9 +23,6 @@ test('preview img one', async () => {
   })
 
   await waitFor(() => screen.getByTestId('previewImage'))
-  await waitFor(() => expect(
-    (screen.getByTestId('previewImage-current').querySelector('img') as HTMLImageElement).src).toBe(currentUrl)
-  )
 })
 
 test('preview on Close', async () => {
@@ -44,62 +38,6 @@ test('preview on Close', async () => {
   const previewEl = await waitFor(() => screen.getByTestId('previewImage'))
   fireEvent.click(previewEl)
   await waitFor(() => expect(screen.queryByTestId('previewImage')).toBeNull())
-})
-
-test('多张图片预览', async () => {
-  Protal.status = true
-  const screen = render(<Host />)
-
-  const currentUrl = 'https://t7.baidu.com/it/u=1819248061,230866778&fm=193&f=GIF'
-  const urls = [
-    currentUrl,
-    'https://t7.baidu.com/it/u=963301259,1982396977&fm=193&f=GIF',
-    'https://t7.baidu.com/it/u=1575628574,1150213623&fm=193&f=GIF'
-  ]
-
-  await act(async () => {
-    await previewImage({ current: currentUrl, urls })
-  })
-
-  await waitFor(() => screen.getByTestId('previewImage'))
-
-  await waitFor(() => expect(
-    (screen.getByTestId('previewImage-current')
-      .querySelector('img') as HTMLImageElement
-    ).src).toBe(currentUrl))
-
-  const imgs = screen.container.querySelectorAll('img') as unknown as HTMLImageElement[]
-
-  const imgsUrls: string[] = []
-
-  for (let i = 0; i < imgs.length; i++) imgsUrls.push(imgs[i].src)
-  expect(imgsUrls).toEqual(urls)
-})
-
-test('多张图片预览2', async () => {
-  Protal.status = true
-  const screen = render(<Host />)
-
-  const currentUrl = 'https://t7.baidu.com/it/u=1819248061,230866778&fm=193&f=GIF'
-  const urls = [
-    'https://t7.baidu.com/it/u=963301259,1982396977&fm=193&f=GIF',
-    currentUrl,
-    'https://t7.baidu.com/it/u=1575628574,1150213623&fm=193&f=GIF'
-  ]
-
-  await act(async () => {
-    await previewImage({ current: currentUrl, urls: urls })
-  })
-
-  await waitFor(() => screen.getByTestId('previewImage'))
-  await waitFor(() => expect(
-    (screen.getByTestId('previewImage-current').querySelector('img') as HTMLImageElement).src
-  ).toBe(currentUrl))
-  const imgs = await waitFor(() => screen.container.querySelectorAll('img')) as unknown as HTMLImageElement[]
-
-  const imgsUrls: string[] = []
-  for (let i = 0; i < imgs.length; i++) imgsUrls.push(imgs[i].src)
-  expect(imgsUrls).toEqual(urls)
 })
 
 test('多张图片预览3', async () => {
@@ -119,13 +57,15 @@ test('多张图片预览3', async () => {
 
 
   await waitFor(() => screen.getByTestId('previewImage'))
-  await waitFor(() => expect(
-    (screen.getByTestId('previewImage-current').querySelector('img') as HTMLImageElement).src).toBe(currentUrl)
-  )
   const imgs = await waitFor(() => screen.container.querySelectorAll('img')) as unknown as HTMLImageElement[]
   const imgsUrls: string[] = []
   for (let i = 0; i < imgs.length; i++) imgsUrls.push(imgs[i].src)
-  expect(imgsUrls).toEqual(urls)
+  expect(imgsUrls).toEqual([
+    currentUrl,
+    ...urls,
+    'https://t7.baidu.com/it/u=963301259,1982396977&fm=193&f=GIF',
+
+  ])
 })
 
 test('on WxSDK', async () => {

@@ -4,6 +4,10 @@
   color: $text2;
   font-weight: bolder;
 
+  &-day {
+    padding-right: 4px;
+  }
+
   &-item {
     width: 30px;
     height: 22px;

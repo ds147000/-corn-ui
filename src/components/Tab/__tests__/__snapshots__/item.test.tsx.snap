@@ -6,11 +6,11 @@ exports[`comps/Tab/item active 1`] = `
     class="xrk-tab-item __x-st-exp __x-st-click xrk-tab-item-active"
     data-testid="tab-item"
   >
-    <span
-      class="taro-text"
+    <div
+      class=""
     >
       item
-    </span>
+    </div>
   </div>
 </div>
 `;
@@ -21,8 +21,8 @@ exports[`comps/Tab/item icon 1`] = `
     class="xrk-tab-item __x-st-exp __x-st-click"
     data-testid="tab-item"
   >
-    <span
-      class="taro-text"
+    <div
+      class=""
     >
       <div
         class="taro-img xrk-img xrk-tab-item-icon"
@@ -32,7 +32,7 @@ exports[`comps/Tab/item icon 1`] = `
           src="https://t7.baidu.com/it/u=1951548898,3927145&fm=193&f=GIF"
         />
       </div>
-    </span>
+    </div>
   </div>
 </div>
 `;
@@ -43,11 +43,11 @@ exports[`comps/Tab/item message 1`] = `
     class="xrk-tab-item __x-st-exp __x-st-click"
     data-testid="tab-item"
   >
-    <span
-      class="taro-text xrk-tab-item-message"
+    <div
+      class="xrk-tab-item-message"
     >
       item
-    </span>
+    </div>
   </div>
 </div>
 `;
@@ -58,11 +58,11 @@ exports[`comps/Tab/item title 1`] = `
     class="xrk-tab-item __x-st-exp __x-st-click"
     data-testid="tab-item"
   >
-    <span
-      class="taro-text"
+    <div
+      class=""
     >
       item
-    </span>
+    </div>
   </div>
 </div>
 `;
