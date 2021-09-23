@@ -7,7 +7,7 @@ const Page: React.FC = () => {
 <pre><code class="hljs language-bash">yarn add @xrkmm/ui-taro
 </code></pre>
 <pre><code class="hljs language-jsx"><span class="hljs-keyword">import</span> { Button } <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@xrkmm/ui-taro&#x27;</span>
-<span class="hljs-keyword">import</span> <span class="hljs-string">&#x27;@xrkmm/ui-taro/dist/styles/index.css&#x27;</span>
+<span class="hljs-keyword">import</span> <span class="hljs-string">&#x27;@xrkmm/ui-taro/dist/styles/index.scss&#x27;</span>
 
 <span class="hljs-keyword">const</span> App = <span class="hljs-function">() =&gt;</span> (
   <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">Button</span> /&gt;</span></span>
@@ -19,7 +19,7 @@ const Page: React.FC = () => {
 </code></pre>
 <pre><code class="hljs language-jsx"><span class="hljs-keyword">import</span> { Button } <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@xrkmm/ui-h5&#x27;</span>
 <span class="hljs-keyword">import</span> <span class="hljs-string">&#x27;@xrkmm/ui-h5/dist/styles/base.css&#x27;</span>
-<span class="hljs-keyword">import</span> <span class="hljs-string">&#x27;@xrkmm/ui-h5/dist/styles/index.css&#x27;</span>
+<span class="hljs-keyword">import</span> <span class="hljs-string">&#x27;@xrkmm/ui-h5/dist/styles/index.mini.css&#x27;</span>
 
 <span class="hljs-keyword">const</span> App = <span class="hljs-function">() =&gt;</span> (
   <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">Button</span> /&gt;</span></span>

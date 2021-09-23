@@ -7,7 +7,7 @@ yarn add @xrkmm/ui-taro
 
 ```jsx
 import { Button } from '@xrkmm/ui-taro'
-import '@xrkmm/ui-taro/dist/styles/index.css'
+import '@xrkmm/ui-taro/dist/styles/index.scss'
 
 const App = () => (
   <Button />
@@ -25,7 +25,7 @@ yarn add @xrkmm/ui-h5
 ```jsx
 import { Button } from '@xrkmm/ui-h5'
 import '@xrkmm/ui-h5/dist/styles/base.css'
-import '@xrkmm/ui-h5/dist/styles/index.css'
+import '@xrkmm/ui-h5/dist/styles/index.mini.css'
 
 const App = () => (
   <Button />
