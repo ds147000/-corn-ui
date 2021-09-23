@@ -63,12 +63,12 @@
 
       &::after {
         content: '';
-        width: 8px;
-        height: 8px;
+        width: 16px;
+        height: 16px;
         background: #ff4f4f;
-        border-radius: 8px;
+        border-radius: 16px;
         position: absolute;
-        right: -20px;
+        right: -40px;
         top: 0;
       }
     }

@@ -1,9 +1,11 @@
-import React from 'react'
-import { View, Image } from '@tarojs/components'
+import React, { useCallback, useState } from 'react'
+import { View, Image, Text } from '@tarojs/components'
+import { Swiper, SwiperSlide } from 'swiper/react'
 import type { previewImageOption } from './index'
-import { Swiper, SwiperItem } from '../Swiper'
 import Portal from '../Portal'
 import { isWatch } from '../../utils'
+
+const START_INDEX = 1
 
 interface ContainerProps extends previewImageOption {
   onDestory(): void
@@ -11,28 +13,35 @@ interface ContainerProps extends previewImageOption {
 }
 
 const Container: React.FC<ContainerProps> = ({ onDestory, urls, activeIndex }) => {
+  const [ index, setIndex ] = useState(activeIndex)
+
+  const onChange = useCallback((swiper) => {
+    setIndex(swiper.activeIndex)
+  }, [])
+
   return (
     <View
       data-testid="previewImage"
-      className="xrk-preview-image"
+      className="xrk-preview"
       onClick={onDestory}
       key="previewImage"
     >
+      <Text className="xrk-preview-dot">{index + START_INDEX}/{urls.length}</Text>
       <Swiper
-        indicatorDots
         loop={false}
-        current={activeIndex}
-        indicatorActiveColor="#fff"
-        className="xrk-preview-image-swiper"
+        initialSlide={activeIndex}
+        className="xrk-preview-swiper"
+        onChange={onChange}
+        autoHeight
       >
         {urls.map((item) => (
-          <SwiperItem key={item} >
+          <SwiperSlide key={item} >
             <Image
               lazyLoad={false}
               src={item}
-              className="xrk-preview-image-img"
+              className="xrk-preview-img"
             />
-          </SwiperItem>
+          </SwiperSlide>
         ))}
       </Swiper>
     </View>

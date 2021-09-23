@@ -11,3 +11,6 @@ __steups__
 __mocks__
 __tests__
 coverage/
+types/
+package-h5/
+package-taro/

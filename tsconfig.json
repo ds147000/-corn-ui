@@ -22,7 +22,10 @@
       "node_modules/@types"
     ],
     "allowJs": false,
-    "noImplicitAny": false
+    "noImplicitAny": false,
+    "paths": {
+      "@tarojs/components/types/*": ["src/types/*"]
+    }
   },
   "onlyCompileBundledFiles": true,
   "compileOnSave": false,
@@ -33,8 +36,7 @@
     "example-react",
     "example-weapp",
     "**/__tests__",
-    "**/__mocks__",
-    "@tarojs"
+    "**/__mocks__"
   ],
   "include": [
     "src/**/*",

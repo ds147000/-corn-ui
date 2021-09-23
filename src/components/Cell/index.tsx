@@ -1,7 +1,7 @@
 import React, { useCallback } from 'react'
 import ClassNames from 'classnames'
 import { View, Text } from '@tarojs/components'
-import { ViewProps } from '@tarojs/components/types/View'
+import { ViewProps } from '../../types/View'
 import Icon from '../Icon'
 import Link, { LinkProps } from '../Link'
 import CellList from './list'

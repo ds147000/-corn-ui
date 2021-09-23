@@ -36,7 +36,8 @@ module.exports = {
   setupFiles: [ '<rootDir>/__steups__/setup.ts' ],
   coveragePathIgnorePatterns: [
     '/node_modules/',
-    '<rootDir>/src/components/Checkbox/group.tsx'
+    '<rootDir>/src/components/Checkbox/group.tsx',
+    '<rootDir>/src/components/PreviewImage'
   ],
   coverageThreshold: {
     global: {

@@ -1,6 +1,6 @@
 import React, { useEffect, useRef } from 'react'
 import { View, Text } from '@tarojs/components'
-import { ViewProps } from '@tarojs/components/types/View'
+import { ViewProps } from '../../types/View'
 import { LinkTarget } from './index'
 import { getRanDomId } from '../../utils'
 

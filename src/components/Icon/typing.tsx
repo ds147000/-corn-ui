@@ -1,4 +1,4 @@
-import { TextProps } from '@tarojs/components/types/Text'
+import { TextProps } from '../../types/Text'
 
 export interface IconProps extends TextProps {
   name: string

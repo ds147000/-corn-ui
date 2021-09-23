@@ -1,4 +1,4 @@
-.xrk-preview-image {
+.xrk-preview {
   width: 100vw;
   height: 100vh;
   background-color: #000;
@@ -17,5 +17,14 @@
   &-img {
     width: 100vw;
     height: unset;
+  }
+
+  &-dot {
+    position: absolute;
+    top: 20px;
+    left: 50%;
+    transform: translate(-50% , 0);
+    color: #fff;
+    font-size: 30px;
   }
 }

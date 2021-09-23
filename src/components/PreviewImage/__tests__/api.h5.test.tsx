@@ -60,12 +60,7 @@ test('多张图片预览3', async () => {
   const imgs = await waitFor(() => screen.container.querySelectorAll('img')) as unknown as HTMLImageElement[]
   const imgsUrls: string[] = []
   for (let i = 0; i < imgs.length; i++) imgsUrls.push(imgs[i].src)
-  expect(imgsUrls).toEqual([
-    currentUrl,
-    ...urls,
-    'https://t7.baidu.com/it/u=963301259,1982396977&fm=193&f=GIF',
-
-  ])
+  expect(imgsUrls).toEqual(urls)
 })
 
 test('on WxSDK', async () => {

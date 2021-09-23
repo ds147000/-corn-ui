@@ -4,7 +4,7 @@ import React from 'react'
 import Taro from '@tarojs/taro'
 import ClassName from 'classnames'
 import { View, Text, ITouchEvent } from '@tarojs/components'
-import type { ViewProps } from '@tarojs/components/types/View'
+import type { ViewProps } from '../../types/View'
 import type { LINK } from './index'
 import { checkOpenMp, OpenHostSuffix } from './utils'
 

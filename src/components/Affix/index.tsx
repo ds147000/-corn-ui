@@ -5,8 +5,8 @@ import Taro from '@tarojs/taro'
 // #endif
 import React, { useCallback, useEffect, useMemo, useRef, useState } from 'react'
 import { View } from '@tarojs/components'
-import { ViewProps } from '@tarojs/components/types/View'
 import ClassNames from 'classnames'
+import { ViewProps } from '../../types/View'
 import { judge } from './utils/judge'
 
 export interface AffixProps extends ViewProps {

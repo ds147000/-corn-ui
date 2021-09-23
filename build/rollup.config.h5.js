@@ -31,7 +31,8 @@ const externalPackages = [
   '@atrojs/api',
   'react-dom/server',
   'qs',
-  'swiper'
+  'swiper',
+  'swiper/react'
 ]
 
 export default {
@@ -59,16 +60,11 @@ export default {
     RollupJscc({
       values: { _APP: 'h5' }
     }),
-    RollupStyles({
-      mode: ['extract', 'index.css'],
-      sourceMap: false,
-      dts: false
-    }),
-    RollupAlias({
-      entries: {
-        'weui': resolveApp('build/mock/weui')
-      }
-    }),
+    // RollupStyles({
+    //   // mode: ['extract', 'index.css'],
+    //   sourceMap: false,
+    //   dts: false
+    // }),
     RollupResolve({
       customResolveOptions: {
         moduleDirectories: ['node_modules']
@@ -98,7 +94,7 @@ export default {
                     return `@tarojs/components-react/src/components/swiper/hepler/item`
 
                   default:
-                    return `@tarojs/components-react/src/components/${importName.toLocaleLowerCase()}`
+                    return `@tarojs/components-react/dist/${importName.toLocaleLowerCase()}`
                 }
               },
               preventFullImport: true
@@ -107,6 +103,6 @@ export default {
         ]
       ]
     }),
-    BuildCss('package-h5')
+    // BuildCss('package-h5')
   ]
 }

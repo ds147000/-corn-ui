@@ -12,7 +12,6 @@ import RollupCommonjs from '@rollup/plugin-commonjs'
 import RollupTypescript from 'rollup-plugin-typescript2'
 import RollupJscc from 'rollup-plugin-jscc'
 import RollupBabel from '@rollup/plugin-babel'
-import BuildCss from './rollup.config.css'
 const { resolveApp, removeDir } = require('./utils')
 
 if (process.env.NODE_ENV === 'production') removeDir('package-taro')
@@ -55,12 +54,11 @@ export default {
       }
     }),
     RollupCommonjs(),
-    RollupTypescript({ tsconfig: resolveApp('tsconfig.json') }),
+    RollupTypescript({ tsconfig: resolveApp('tsconfig.taro.json') }),
     RollupBabel({
       babelHelpers: 'bundled',
       exclude: ['node_modules/**', 'example-weapp/**', 'example-react/**'],
       configFile: resolveApp('./babel.config.js')
     }),
-    BuildCss('package-taro')
   ]
 }

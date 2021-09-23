@@ -8,7 +8,7 @@
 import {
   Button, Toast, Drawer, ActionSheet, showActionSheet,
   Modal, showModal, Icon, Empty, Image, Tab, Tag, Affix, Timer, Link,
-  Cell, Card, Swiper, SwiperItem, Checkbox, CheckboxGroup, previewImage
+  Cell, Card, Checkbox, CheckboxGroup, previewImage
 } from '@xrkmm/ui-h5'
 import React, { useRef, useState } from 'react'
 import { TabItemPorps } from '../../package-h5/dist/components/Tab'
@@ -256,20 +256,9 @@ function App() {
       <Empty text="暂无内容哦" size="small" />
       <Image src="https://t7.baidu.com/it/u=124476473,2583135375&fm=193&f=GIFF" previewImage />
       <Image src="https://t7.baidu.com/it/u=1595072465,3644073269&fm=193&f=GIF" lazyLoad />
-      <Swiper loop >
-        <SwiperItem>
-          <Image src="https://t7.baidu.com/it/u=1595072465,3644073269&fm=193&f=GIF" />
-        </SwiperItem>
-        <SwiperItem>
-          <Image src="https://t7.baidu.com/it/u=1595072465,3644073269&fm=193&f=GIF" />
-        </SwiperItem>
-        <SwiperItem>
-          <Image src="https://t7.baidu.com/it/u=1595072465,3644073269&fm=193&f=GIF" />
-        </SwiperItem>
-      </Swiper>
       <Card onClick={() => previewImage({
         current: 'https://t7.baidu.com/it/u=2291349828,4144427007&fm=193&f=GIF',
-        urls: ['https://t7.baidu.com/it/u=2291349828,4144427007&fm=193&f=GIF']
+        urls: ['https://t7.baidu.com/it/u=2291349828,4144427007&fm=193&f=GIF', 'https://t7.baidu.com/it/u=124476473,2583135375&fm=193&f=GIFF']
       })} >Card</Card>
       <Affix onChange={onChange} position="bottom">
         <Button size="max">向日葵妈妈UI</Button>

@@ -13,5 +13,8 @@ module.exports = {
     'taro/react',
     'plugin:xrkmm/react'
   ],
-  plugins: [ 'xrkmm' ]
+  plugins: [ 'xrkmm' ],
+  rules: {
+    '@typescript-eslint/no-namespace': 0
+  }
 }

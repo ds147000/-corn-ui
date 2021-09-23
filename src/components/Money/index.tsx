@@ -1,7 +1,7 @@
 import React, { useMemo } from 'react'
 import classNames from 'classnames'
 import { Text } from '@tarojs/components'
-import type { TextProps } from '@tarojs/components/types/Text'
+import type { TextProps } from '../../types/Text'
 import { formatMoney } from '../../utils'
 
 interface MoneyProps extends TextProps {

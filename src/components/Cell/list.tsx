@@ -1,7 +1,7 @@
 import React, { useMemo } from 'react'
 import ClassNames from 'classnames'
 import { View } from '@tarojs/components'
-import { ViewProps } from '@tarojs/components/types/View'
+import { ViewProps } from '../../types/View'
 
 export interface CellListProps extends ViewProps {
   /** 是否显示边框 */

@@ -1,7 +1,7 @@
 import React, { useMemo } from 'react'
 import { View, Text } from '@tarojs/components'
 import ClassNames from 'classnames'
-import type { ViewProps } from '@tarojs/components/types/View'
+import type { ViewProps } from '../../types/View'
 
 export type TagSize = 'middle' | 'small' | 'mini'
 export type TagType =  'primary' | 'warn' | 'error' | 'link' | 'pop'

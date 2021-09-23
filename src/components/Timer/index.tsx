@@ -1,8 +1,8 @@
 /* eslint-disable no-magic-numbers */
 import React, { useCallback, useEffect, useMemo, useState } from 'react'
 import { View } from '@tarojs/components'
-import type { ViewProps } from '@tarojs/components/types/View'
 import ClassNames  from 'classnames'
+import type { ViewProps } from '../../types/View'
 import { DateToTimestamp, fixNumber } from '../../utils'
 import { SecondSchedulerDestotry, MinuteSchedulerApp, SecondSchedulerApp } from './SecondScheduler'
 import { DefualtRenderItem } from './render'

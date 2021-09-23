@@ -1,7 +1,7 @@
 /* eslint-disable import/export */
 /* eslint-disable import/first */
 
-import { ViewProps } from '@tarojs/components/types/View'
+import { ViewProps } from '../../types/View'
 
 export type LinkTarget = 'View' | 'Text'
 
