@@ -11,10 +11,11 @@ import {
   Cell, Card, Checkbox, CheckboxGroup, previewImage
 } from '@xrkmm/ui-h5'
 import React, { useRef, useState } from 'react'
-import { TabItemPorps } from '../../package-h5/dist/components/Tab'
-import '../../package-h5/dist/styles/base.css'
-import '../../package-h5/dist/styles/index.css'
-import '../../package-h5/icons/style.css'
+import 'swiper/swiper.scss'
+import { TabItemPorps } from '../../package-h5/components/Tab'
+import '../../package-h5/styles/base.css'
+import '../../package-h5/styles/index.mini.css'
+import '../../package-icons/style.css'
 import './App.scss'
 
 const asList = [

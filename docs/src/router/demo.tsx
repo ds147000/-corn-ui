@@ -400,13 +400,6 @@ const Routes: RoutesProps[] = [
     sort: 1,
   },
   {
-    path: '/phone/Swiper/demo/basis',
-    component: require('../views/Swiper/demo/basis').default,
-    title: '代码演示',
-    type: 'undefined',
-    sort: 1,
-  },
-  {
     path: '/phone/Tab/demo/basis',
     component: require('../views/Tab/demo/basis').default,
     title: '代码演示',

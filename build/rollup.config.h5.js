@@ -8,12 +8,9 @@
 const Package = require('../package.json')
 import RollupBabel from '@rollup/plugin-babel'
 import RollupResolve from '@rollup/plugin-node-resolve'
-import RollupAlias from '@rollup/plugin-alias'
 import RollupCommonjs from '@rollup/plugin-commonjs'
 import RollupTypescript from 'rollup-plugin-typescript2'
 import RollupJscc from 'rollup-plugin-jscc'
-import BuildCss from './rollup.config.css'
-import RollupStyles from 'rollup-plugin-styles'
 import { DEFAULT_EXTENSIONS } from '@babel/core'
 const { resolveApp, removeDir } = require('./utils')
 
@@ -60,11 +57,6 @@ export default {
     RollupJscc({
       values: { _APP: 'h5' }
     }),
-    // RollupStyles({
-    //   // mode: ['extract', 'index.css'],
-    //   sourceMap: false,
-    //   dts: false
-    // }),
     RollupResolve({
       customResolveOptions: {
         moduleDirectories: ['node_modules']
@@ -103,6 +95,5 @@ export default {
         ]
       ]
     }),
-    // BuildCss('package-h5')
   ]
 }

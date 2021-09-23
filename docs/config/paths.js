@@ -68,7 +68,7 @@ module.exports = {
   appNodeModules: resolveApp('node_modules'),
   swSrc: resolveModule(resolveApp, 'src/service-worker'),
   publicUrlOrPath,
-  ui: resolveApp('../package-h5/dist'),
+  ui: resolveApp('../package-h5'),
   reactApp: resolveApp('../node_modules/react'),
   swiper: resolveApp('node_modules/swiper')
 };

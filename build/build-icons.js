@@ -5,15 +5,15 @@ const fs = require('fs')
 const { resolveApp, writeFile } = require('./utils')
 
 
-module.exports = async (packageName) => {
+async function main() {
 
     const IconsFiles = global.sync(resolveApp('src/assets/icons/*.svg'))
 
     webfontsGenerator({
       files: IconsFiles,
       fontName: 'xrkIcon',
-      dest: resolveApp(packageName + '/icons/fonts/'),
-      cssDest: resolveApp(packageName + '/icons/style.css'),
+      dest: resolveApp('package-icons/fonts/'),
+      cssDest: resolveApp('package-icons/style.css'),
       cssFontsPath: './fonts/',
       cssTemplate: resolveApp('build/build-icons-css.hbs'),
       normalize: true
@@ -25,8 +25,8 @@ module.exports = async (packageName) => {
 
     return new Promise((res) => {
       setTimeout(() => {
-        const cssFile = fs.readFileSync(resolveApp(packageName + '/icons/style.css')).toString()
-        writeFile(resolveApp(packageName + '/icons/style.css'), Prettier.format(cssFile, { parser: 'css' }))
+        const cssFile = fs.readFileSync(resolveApp('package-icons/style.css')).toString()
+        writeFile(resolveApp('package-icons/style.css'), Prettier.format(cssFile, { parser: 'css' }))
 
         // 写入Md文件
         const MarkContext = `
@@ -90,3 +90,5 @@ export default Demo
       }, 100)
     })
 }
+
+main()

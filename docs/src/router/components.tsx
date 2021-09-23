@@ -106,13 +106,6 @@ const Routes: RoutesProps[] = [
     sort: 6,
   },
   {
-    path: '/doc/Swiper',
-    component: require('../views/Swiper').default,
-    title: 'Swiper 轮播图',
-    type: '状态展示',
-    sort: 2,
-  },
-  {
     path: '/doc/Tab',
     component: require('../views/Tab').default,
     title: 'Tab 切换栏',

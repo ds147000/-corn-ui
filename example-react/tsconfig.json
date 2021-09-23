@@ -20,7 +20,7 @@
     "noEmit": true,
     "jsx": "react-jsx",
     "paths": {
-      "@xrkmm/ui-h5": ["../package-h5/dist"]
+      "@xrkmm/ui-h5": ["../package-h5"]
     }
   },
   "include": [

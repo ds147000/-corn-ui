@@ -12,6 +12,8 @@ const PerttierConfig = {
 
 const WeappPackagePath = resolveApp('package-taro/package.json')
 const H5PackagePath = resolveApp('package-h5/package.json')
+const IconsPackagePath = resolveApp('package-icons/package.json')
+
 
 if (checkFiles(WeappPackagePath).isFile()) {
   removeDir(WeappPackagePath)
@@ -53,9 +55,27 @@ delete H5Package.peerDependencies['@tarojs/react']
 // 写入package
 writeFile(H5PackagePath, Prettier.format(JSON.stringify(H5Package), PerttierConfig))
 
+// 图标包配置
+const IconsPackage = JSON.parse(JSON.stringify(commonPackage))
+IconsPackage.name = '@xrkmm/icons'
+IconsPackage.main = 'style.css'
+IconsPackage.private = false
+IconsPackage.files = ['fonts', 'style.css']
+
+
+// 删除peerDependencies 多余配置
+IconsPackage.peerDependencies = {}
+IconsPackage.dependencies = {}
+
+
+// 写入package
+writeFile(IconsPackagePath, Prettier.format(JSON.stringify(IconsPackage), PerttierConfig))
 
 shell.cd(resolveApp('package-taro'))
 shell.exec('npm pub --registry=https://nexus3.xrkmm.com/repository/npm-hosted/')
 
 shell.cd(resolveApp('package-h5'))
+shell.exec('npm pub --registry=https://nexus3.xrkmm.com/repository/npm-hosted/')
+
+shell.cd(resolveApp('package-icons'))
 shell.exec('npm pub --registry=https://nexus3.xrkmm.com/repository/npm-hosted/')

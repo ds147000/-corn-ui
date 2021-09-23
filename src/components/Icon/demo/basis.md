@@ -32,6 +32,11 @@ const Demo: React.FC = () => {
       </div>
 
       <div className="icon-box">
+        <Icon name="big-left" />
+        <h5>big-left</h5>
+      </div>
+
+      <div className="icon-box">
         <Icon name="big-right" />
         <h5>big-right</h5>
       </div>
@@ -129,6 +134,11 @@ const Demo: React.FC = () => {
       <div className="icon-box">
         <Icon name="img" />
         <h5>img</h5>
+      </div>
+
+      <div className="icon-box">
+        <Icon name="left" />
+        <h5>left</h5>
       </div>
 
       <div className="icon-box">

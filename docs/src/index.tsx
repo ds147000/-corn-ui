@@ -4,9 +4,9 @@ import App from './App'
 import reportWebVitals from './reportWebVitals'
 import './theme/theme.less'
 import './theme/highlight.css'
-import '../../package-h5/dist/styles/base.css'
-import '../../package-h5/dist/styles/index.css'
-import '../../package-h5/icons/style.css'
+import '../../package-h5/styles/base.css'
+import '../../package-h5/styles/index.mini.css'
+import '../../package-icons/style.css'
 
 ReactDOM.render(
   <React.StrictMode>
