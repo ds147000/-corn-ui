@@ -18,7 +18,8 @@ type: 表单类型
 | value | 否 | 表单值，仅在 checkGroup 嵌套下生效 | `string` | |
 | disabled | 否 | 禁用 | `boolean` | `false` |
 | size | 否 | 大小，当类型为Button生效 | `'max' | 'big' | 'large' | 'middle' | 'small' | 'mini'` | `middle` |
-
+| ghost | 否 |  是否开启幽灵样式，仅在button有效 | `boolean` | `false` |
+| buttonType | 否 | 按钮风格类型,仅在button有效 | `primary` `warn` `error` `link` `pop` `default` | `primary` |
 ## CheckBoxGroup.Props
 | 属性 | 必填 | 说明 | 类型 | 默认值 |
 | --- | --- | --- | --- | --- |

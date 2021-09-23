@@ -25,8 +25,8 @@ const asList = [
 
 const TabOption: TabItemPorps[] = [
   { title: '我是选项1' },
-  { title: '我是选项2' },
-  { title: '我是选项3' },
+  { title: '我是选项2', message: true },
+  { title: '我是选项3', message: true },
   { title: '我是选项4' },
   { title: '我是选项5' }
 ]
@@ -111,6 +111,14 @@ function App() {
         </CheckboxGroup>
       </Card>
       <Card>
+        <CheckboxGroup radio >
+          <Checkbox value="1" type="button" buttonType="error" ghost >单选模式1</Checkbox>
+          <Checkbox value="2" type="button" ghost >单选模式2</Checkbox>
+          <Checkbox value="3" type="button" ghost >单选模式3</Checkbox>
+          <Checkbox value="4" type="button" ghost >单选模式4</Checkbox>
+        </CheckboxGroup>
+      </Card>
+      <Card>
         <CheckboxGroup ref={checkGroupRef as React.LegacyRef<CheckboxGroup>} >
           <Checkbox value="1">单选模式1</Checkbox>
           <Checkbox value="2">单选模式2</Checkbox>
@@ -164,6 +172,9 @@ function App() {
         <Cell label="限时奖励" placeholder="请选择奖励类型" value="无效兑换" to="/home" suffix="重选" arrow disabled />
         <Cell label="限时奖励" placeholder="请选择奖励类型" value="立即兑换"suffix="重选" arrow onClick={() => Toast.show('骗你的')} />
       </Cell.List>
+      <Cell label="限时奖励" >
+        <Empty />
+      </Cell>
       <br />
       <Button size="big" icon={<Icon name="service" />}>向日葵妈妈UI</Button>
       <Button size="large">向日葵妈妈UI</Button>

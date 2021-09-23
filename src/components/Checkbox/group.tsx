@@ -4,8 +4,9 @@ import { View } from '@tarojs/components'
 import Taro from '@tarojs/taro'
 // #endif
 import { CheckBoxContext, CheckBoxContextValue } from './context'
+import { ViewProps } from '../../types/View'
 
-export interface CheckBoxGroupProps {
+export interface CheckBoxGroupProps extends ViewProps {
   name?: string
   defaultValue?: string[]
   onChange?(value: string[]): void
@@ -119,10 +120,12 @@ class CheckBoxGroup extends React.Component<CheckBoxGroupProps, CheckBoxContextV
       onCheck: this.onChange
     }
 
+    const { children, ...props } = this.props
+
     return (
-      <View ref={(ref): void => this.ref = ref} >
+      <View ref={(ref): void => this.ref = ref} {...props} >
         <CheckBoxContext.Provider value={ProviderValue}>
-          {this.props.children}
+          {children}
         </CheckBoxContext.Provider>
       </View>
     )

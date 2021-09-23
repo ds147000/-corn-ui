@@ -8,6 +8,7 @@ $prefix: xrk-btn;
   transition: opacity 0.1s;
   margin: 0 $btnMargin;
   cursor: pointer;
+  white-space: nowrap;
 
   &:active {
     opacity: 0.7;
@@ -105,6 +106,7 @@ $prefix: xrk-btn;
     &.#{$prefix}-ghost {
       border-color: $primary;
       color: $primary;
+      background-color: rgba($color: $primary , $alpha: 0.08);
     }
   }
 
@@ -117,8 +119,9 @@ $prefix: xrk-btn;
     }
 
     &.#{$prefix}-ghost {
-      border-color: $warn;
-      color: $warn;
+      border-color: $error;
+      color: $error;
+      background-color: $warn;
     }
   }
 
@@ -158,7 +161,9 @@ $prefix: xrk-btn;
   }
 
   &-block {
-    display: flex;
+    display: flex !important;
+    width: 100%;
+    flex: 1;
   }
 
   &-disabled {

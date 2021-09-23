@@ -7,7 +7,7 @@ import {
   // #endif
 } from '@tarojs/components'
 import Icon from '../Icon'
-import Button, { ButtonSize } from '../Button'
+import Button, { ButtonSize, ButtonType } from '../Button'
 import { CheckBoxContext } from './context'
 
 export interface CheckBoxProps {
@@ -24,6 +24,10 @@ export interface CheckBoxProps {
   disabled?: boolean
   /** 大小，当类型为Button生效 */
   size?: ButtonSize
+  /** 是否开启幽灵样式，仅在button有效 */
+  ghost?: boolean
+  /** 按钮风格样式 */
+  buttonType?: ButtonType
   /** 选中发生改变回调 */
   onChange?(check: boolean): void
 }
@@ -37,7 +41,9 @@ const CheckBox: React.FC<CheckBoxProps> = ({
   onChange,
   value = '',
   disabled,
-  name
+  name,
+  ghost,
+  buttonType = 'primary'
 }) => {
   const [ internalCheck, setInternalCheck ] = useState(defaultChecked || false)
   const context = useContext(CheckBoxContext)
@@ -86,8 +92,9 @@ const CheckBox: React.FC<CheckBoxProps> = ({
       ) : (
         <Button
           size={size}
-          type={controllCheck ? 'primary' : 'default'}
+          type={controllCheck ? buttonType : 'default'}
           disabled={disabled}
+          ghost={controllCheck ? ghost : false}
         >
           {children}
         </Button>

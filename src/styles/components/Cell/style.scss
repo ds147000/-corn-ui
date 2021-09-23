@@ -1,6 +1,6 @@
 .xrk-cell {
   width: 100%;
-  height: $cellHeight;
+  min-height: $cellHeight;
   background-color: $white;
   padding: 20px $pad;
   box-sizing: border-box;

@@ -287,6 +287,11 @@ const Demo: React.FC = () => {
       </div>
 
       <div className="icon-box">
+        <Icon name="up" />
+        <h5>up</h5>
+      </div>
+
+      <div className="icon-box">
         <Icon name="video" />
         <h5>video</h5>
       </div>
