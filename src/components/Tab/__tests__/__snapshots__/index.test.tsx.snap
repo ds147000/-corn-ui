@@ -3,7 +3,7 @@
 exports[`icon 1`] = `
 <div>
   <div
-    class="xrk-tab xrk-f"
+    class="xrk-tab xrk-f xrk-tab-default"
     data-testid="tab"
     id="123"
   >
@@ -51,7 +51,7 @@ exports[`icon 1`] = `
 exports[`not currenIndex 1`] = `
 <div>
   <div
-    class="xrk-tab xrk-f"
+    class="xrk-tab xrk-f xrk-tab-default"
     data-testid="tab"
     id="123"
   >
@@ -99,7 +99,7 @@ exports[`not currenIndex 1`] = `
 exports[`option 1`] = `
 <div>
   <div
-    class="xrk-tab xrk-f"
+    class="xrk-tab xrk-f xrk-tab-default"
     data-testid="tab"
     id="123"
   >
@@ -140,7 +140,7 @@ exports[`option 1`] = `
 exports[`option of button 1`] = `
 <div>
   <div
-    class="xrk-tab xrk-f"
+    class="xrk-tab xrk-f xrk-tab-button"
     data-testid="tab"
     id="123"
   >

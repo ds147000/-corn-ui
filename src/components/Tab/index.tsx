@@ -59,7 +59,7 @@ const Tabs: React.FC<TAB.Props> = ({ options, currenIndex, type = 'default', onC
   }, [ type ])
 
   return (
-    <View id={id} className="xrk-tab xrk-f" data-testid="tab" >
+    <View id={id} className={`xrk-tab xrk-f xrk-tab-${type}`} data-testid="tab" >
       {options?.map((item, key) => renderItem(item, currenIndex === key, (): void => onChange?.(key)))}
     </View>
   )

@@ -7,6 +7,11 @@
     height: 0;
   }
 
+  &.xrk-tab-button {
+    height: 60px;
+    justify-content: space-between;
+  }
+
   &-item {
     height: 90px;
     white-space: nowrap;
