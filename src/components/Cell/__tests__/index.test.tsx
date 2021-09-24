@@ -1,5 +1,6 @@
 import React from 'react'
 import { fireEvent, render, waitFor } from '@testing-library/react'
+import { BrowserRouter } from 'react-router-dom'
 import { Text } from '@tarojs/components'
 import Cell from '../index'
 
@@ -102,7 +103,10 @@ describe('Cell', () => {
 
 
   test('href', async () => {
-    const screen = render(<Cell label="限时奖励" value="前往查看" to="/home" />)
+    const screen = render(
+    <BrowserRouter>
+      <Cell label="限时奖励" value="前往查看" to="/home" />
+    </BrowserRouter>)
     screen.getByText('限时奖励')
     screen.getByText('前往查看')
     screen.getByTestId('arrow')
@@ -111,7 +115,11 @@ describe('Cell', () => {
   })
 
   test('href and hide arrow', async () => {
-    const screen = render(<Cell label="限时奖励" value="前往查看" to="/home" arrow={false} />)
+    const screen = render(
+      <BrowserRouter>
+        <Cell label="限时奖励" value="前往查看" to="/home" arrow={false} />
+      </BrowserRouter>
+    )
     screen.getByText('限时奖励')
     screen.getByText('前往查看')
     expect(screen.queryByTestId('arrow')).toBeNull()
@@ -121,7 +129,11 @@ describe('Cell', () => {
 
   test('href and disable', async () => {
     const click = jest.fn()
-    const screen = render(<Cell label="限时奖励" value="前往查看" to="/home" onClick={click} disabled />)
+    const screen = render(
+      <BrowserRouter>
+        <Cell label="限时奖励" value="前往查看" to="/home" onClick={click} disabled />
+      </BrowserRouter>
+    )
     fireEvent.click(screen.getByText('限时奖励'))
     expect(click).toHaveBeenCalledTimes(0)
   })

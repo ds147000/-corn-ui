@@ -35,6 +35,8 @@ WeappPackage.main = 'dist/index.js'
 WeappPackage.module = 'dist/index.esm.js'
 WeappPackage.private = false
 delete WeappPackage.peerDependencies.swiper
+delete WeappPackage.peerDependencies['react-router-dom']
+delete WeappPackage.dependencies['react-router-dom']
 
 // 写入package
 writeFile(WeappPackagePath, Prettier.format(JSON.stringify(WeappPackage), PerttierConfig))

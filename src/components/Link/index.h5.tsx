@@ -1,9 +1,11 @@
 import React, { useMemo } from 'react'
 import ClassName from 'classnames'
 import { ITouchEvent } from '@tarojs/components'
+import { Link as RouterLink } from 'react-router-dom'
 import { OpenMpLink } from './openmp'
-import type { LINK, LinkHistory } from './index'
-import { checkOpenMp, OpenHostSuffix } from './utils'
+import type { LINK } from './index'
+import { checkExtendsDomain, checkOpenMp, OpenHostSuffix } from './utils'
+
 
 const Link: LINK = ({
   to = '',
@@ -25,20 +27,13 @@ const Link: LINK = ({
   const _onBefor = onBefor || Link.onBefor
 
   const onNavigate = (event: React.MouseEvent<HTMLAnchorElement, MouseEvent> | ITouchEvent): void => {
-    event.preventDefault()
-
     if (_onBefor?.(to) === true || disabled) {
+      event.preventDefault()
       return // 终止
     }
 
     onClick?.(event as ITouchEvent)
-
-    if (replace && checkOpenMp(to) === false) { // 替换跳转
-      (Link.history as LinkHistory).replace(to)
-      return
-    }
-
-    (Link.history as LinkHistory).push(to)
+    if (checkExtendsDomain(to)) window.location.href = to
   }
 
   if (checkOpenMp(to)) { // 打开小程序
@@ -53,8 +48,8 @@ const Link: LINK = ({
   }
 
   return (
-    // eslint-disable-next-line react/forbid-elements, @typescript-eslint/no-explicit-any
-    <a {...props as any} href={to} onClick={onNavigate} className={_class} />
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
+    <RouterLink {...props as any} to={to} onClick={onNavigate} className={_class} />
   )
 
 }
@@ -62,13 +57,5 @@ const Link: LINK = ({
 
 Link.appId = ''
 Link.onBefor = (): boolean => false
-Link.history = {
-  push(url): void {
-    window.location.href = url
-  },
-  replace(url): void {
-    window.location.replace(url)
-  }
-}
 
 export default Link

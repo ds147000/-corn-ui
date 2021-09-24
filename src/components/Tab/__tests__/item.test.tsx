@@ -1,5 +1,6 @@
 import { fireEvent, render } from '@testing-library/react'
 import React from 'react'
+import { BrowserRouter, Switch, Route } from 'react-router-dom'
 import { Item } from '../item'
 
 describe('comps/Tab/item', () => {
@@ -42,7 +43,15 @@ describe('comps/Tab/item', () => {
 
   test('url and click', () => {
     const click = jest.fn()
-    const screen = render(<Item title="item" onClick={click} url="/home" />)
+    const screen = render(
+      <BrowserRouter>
+        <Switch>
+          <Route>
+            <Item title="item" onClick={click} url="/home" />
+          </Route>
+        </Switch>
+      </BrowserRouter>
+    )
     expect(screen.container.querySelector('a').href).toBe('http://localhost/home')
     fireEvent.click(screen.getByText('item'))
 

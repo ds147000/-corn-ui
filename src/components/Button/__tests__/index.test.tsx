@@ -2,6 +2,7 @@
 import React from 'react'
 import { fireEvent, render, waitFor } from '@testing-library/react'
 import { View, Text } from '@tarojs/components'
+import { BrowserRouter, Switch, Route } from 'react-router-dom'
 import Button from '../index'
 
 describe('<Button />', () => {
@@ -92,8 +93,16 @@ describe('<Button />', () => {
   })
 
   test('href', async () => {
-    const screen = render(<Button to="http://baidu.com" >向日葵妈妈UI</Button>)
-    await waitFor(() => expect(screen.container.querySelector('a').href).toBe('http://baidu.com/'))
+    const screen = render(
+      <BrowserRouter>
+        <Switch>
+          <Route>
+            <Button to="/home" >向日葵妈妈UI</Button>
+          </Route>
+        </Switch>
+      </BrowserRouter>
+      )
+    await waitFor(() => expect(screen.container.querySelector('a').href).toBe('http://localhost/home'))
     expect(screen).toMatchSnapshot()
   })
 

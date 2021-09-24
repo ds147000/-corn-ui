@@ -29,7 +29,9 @@ const externalPackages = [
   'react-dom/server',
   'qs',
   'swiper',
-  'swiper/react'
+  'swiper/react',
+  'react-router-dom',
+  'react-router'
 ]
 
 export default {

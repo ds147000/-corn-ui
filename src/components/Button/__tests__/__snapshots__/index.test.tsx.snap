@@ -7,7 +7,7 @@ Object {
     <div>
       <a
         class="xrk-link xrk-link-default xrk-btn xrk-if xrk-ac xrk-jc xrk-btn-middle xrk-btn-primary"
-        href="http://baidu.com"
+        href="/home"
       >
         向日葵妈妈UI
       </a>
@@ -16,7 +16,7 @@ Object {
   "container": <div>
     <a
       class="xrk-link xrk-link-default xrk-btn xrk-if xrk-ac xrk-jc xrk-btn-middle xrk-btn-primary"
-      href="http://baidu.com"
+      href="/home"
     >
       向日葵妈妈UI
     </a>
