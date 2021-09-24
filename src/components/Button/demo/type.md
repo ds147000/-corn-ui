@@ -2,7 +2,7 @@
 sort: 1
 ---
 
-### 5种状态基础使用
+### 6种状态基础使用
 
 ```tsx
 import { Button } from '@xrkmm/ui-h5'
@@ -16,6 +16,7 @@ const Demo: React.FC = () => {
       <Button type="error">向日葵妈妈UI</Button>
       <Button type="link">向日葵妈妈UI</Button>
       <Button type="pop">向日葵妈妈UI</Button>
+      <Button type="light">向日葵妈妈UI</Button>
     </>
   )
 }

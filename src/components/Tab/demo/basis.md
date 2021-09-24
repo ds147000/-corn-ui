@@ -20,11 +20,19 @@ const Demo: React.FC = () => {
   const [current, setCurrent] = useState(0)
 
   return (
+    <>
      <Tab
         options={TabOption}
         currenIndex={current}
         onChange={(index) => setCurrent(index)}
       />
+      <Tab
+        options={TabOption}
+        currenIndex={current}
+        onChange={(index) => setCurrent(index)}
+        type="button"
+      />
+    </>
   )
 }
 

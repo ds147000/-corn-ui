@@ -1,20 +1,20 @@
 {
   "files": {
-    "main.css": "/static/css/main.810870f4.chunk.css",
-    "main.js": "/static/js/main.2d6fa8bd.chunk.js",
+    "main.css": "/static/css/main.6ba17b40.chunk.css",
+    "main.js": "/static/js/main.e9db5d45.chunk.js",
     "runtime-main.js": "/static/js/runtime-main.f87964d3.js",
     "static/js/2.13ff418c.chunk.js": "/static/js/2.13ff418c.chunk.js",
     "static/js/3.683392ed.chunk.js": "/static/js/3.683392ed.chunk.js",
     "index.html": "/index.html",
     "static/js/2.13ff418c.chunk.js.LICENSE.txt": "/static/js/2.13ff418c.chunk.js.LICENSE.txt",
-    "static/js/main.2d6fa8bd.chunk.js.LICENSE.txt": "/static/js/main.2d6fa8bd.chunk.js.LICENSE.txt",
+    "static/js/main.e9db5d45.chunk.js.LICENSE.txt": "/static/js/main.e9db5d45.chunk.js.LICENSE.txt",
     "static/media/style.scss": "/static/media/iframe_iphonex.0956441f.png",
     "static/media/style.css": "/static/media/xrkIcon.c2f3ea5f.eot"
   },
   "entrypoints": [
     "static/js/runtime-main.f87964d3.js",
     "static/js/2.13ff418c.chunk.js",
-    "static/css/main.810870f4.chunk.css",
-    "static/js/main.2d6fa8bd.chunk.js"
+    "static/css/main.6ba17b40.chunk.css",
+    "static/js/main.e9db5d45.chunk.js"
   ]
 }

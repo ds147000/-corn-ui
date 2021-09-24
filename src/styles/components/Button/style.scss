@@ -105,8 +105,8 @@ $prefix: xrk-btn;
 
     &.#{$prefix}-ghost {
       border-color: $primary;
-      color: $primary;
-      background-color: rgba($color: $primary , $alpha: 0.08);
+      color: $text1;
+      background-color: $primaryBack;
     }
   }
 
@@ -158,6 +158,10 @@ $prefix: xrk-btn;
 
   &-default {
     background-color: $defualt;
+  }
+
+  &-light {
+    background-color: $white;
   }
 
   &-block {

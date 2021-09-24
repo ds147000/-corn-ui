@@ -3,7 +3,7 @@
 exports[`comps/Tab/item active 1`] = `
 <div>
   <div
-    class="xrk-tab-item __x-st-exp __x-st-click xrk-tab-item-active"
+    class="xrk-tab-item __x-st-exp __x-st-click xrk-tab-item-active __active"
     data-testid="tab-item"
   >
     <div

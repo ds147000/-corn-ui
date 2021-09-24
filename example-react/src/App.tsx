@@ -12,7 +12,7 @@ import {
 } from '@xrkmm/ui-h5'
 import React, { useRef, useState } from 'react'
 import 'swiper/swiper.scss'
-import { TabItemPorps } from '../../package-h5/components/Tab'
+import { TAB } from '../../package-h5/components/Tab'
 import '../../package-h5/styles/base.css'
 import '../../package-h5/styles/index.mini.css'
 import '../../package-icons/style.css'
@@ -23,7 +23,7 @@ const asList = [
   '深圳'
 ]
 
-const TabOption: TabItemPorps[] = [
+const TabOption: TAB.Item[] = [
   { title: '我是选项1' },
   { title: '我是选项2', message: true },
   { title: '我是选项3', message: true },
@@ -31,7 +31,7 @@ const TabOption: TabItemPorps[] = [
   { title: '我是选项5' }
 ]
 
-const TabUrlOption: TabItemPorps[] = [
+const TabUrlOption: TAB.Item[] = [
   { title: '我是选项1', url: '/home' },
   { title: '我是选项2', url: '/', icon: 'https://assets.xrkmm.cn/u-test/4000000196122028/49b28023-3cbd-4604-b165-9850fd6f99b8.png' },
   { title: '我是选项3', url: '/home' },
@@ -85,6 +85,12 @@ function App() {
         options={TabUrlOption}
         currenIndex={current}
         onChange={(index) => setCurrent(index)}
+      />
+      <Tab
+        options={TabOption}
+        currenIndex={current}
+        onChange={(index) => setCurrent(index)}
+        type="button"
       />
       <Card>
         <CheckboxGroup>

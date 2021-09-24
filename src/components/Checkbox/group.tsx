@@ -120,7 +120,7 @@ class CheckBoxGroup extends React.Component<CheckBoxGroupProps, CheckBoxContextV
       onCheck: this.onChange
     }
 
-    const { children, ...props } = this.props
+    const { children, radio, ...props } = this.props
 
     return (
       <View ref={(ref): void => this.ref = ref} {...props} >

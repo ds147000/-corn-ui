@@ -5,6 +5,7 @@ exports[`icon 1`] = `
   <div
     class="xrk-tab xrk-f"
     data-testid="tab"
+    id="123"
   >
     <div
       class="xrk-tab-item __x-st-exp __x-st-click"
@@ -17,7 +18,7 @@ exports[`icon 1`] = `
       </div>
     </div>
     <div
-      class="xrk-tab-item __x-st-exp __x-st-click xrk-tab-item-active"
+      class="xrk-tab-item __x-st-exp __x-st-click xrk-tab-item-active __active"
       data-testid="tab-item"
     >
       <div
@@ -52,6 +53,7 @@ exports[`not currenIndex 1`] = `
   <div
     class="xrk-tab xrk-f"
     data-testid="tab"
+    id="123"
   >
     <div
       class="xrk-tab-item __x-st-exp __x-st-click"
@@ -99,6 +101,7 @@ exports[`option 1`] = `
   <div
     class="xrk-tab xrk-f"
     data-testid="tab"
+    id="123"
   >
     <div
       class="xrk-tab-item __x-st-exp __x-st-click"
@@ -111,7 +114,7 @@ exports[`option 1`] = `
       </div>
     </div>
     <div
-      class="xrk-tab-item __x-st-exp __x-st-click xrk-tab-item-active"
+      class="xrk-tab-item __x-st-exp __x-st-click xrk-tab-item-active __active"
       data-testid="tab-item"
     >
       <div
@@ -129,6 +132,32 @@ exports[`option 1`] = `
       >
         item4
       </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`option of button 1`] = `
+<div>
+  <div
+    class="xrk-tab xrk-f"
+    data-testid="tab"
+    id="123"
+  >
+    <div
+      class="xrk-btn xrk-if xrk-ac xrk-jc xrk-btn-middle xrk-btn-light"
+    >
+      item1
+    </div>
+    <div
+      class="xrk-btn xrk-if xrk-ac xrk-jc xrk-btn-middle xrk-btn-primary __active"
+    >
+      item2
+    </div>
+    <div
+      class="xrk-btn xrk-if xrk-ac xrk-jc xrk-btn-middle xrk-btn-light"
+    >
+      item4
     </div>
   </div>
 </div>

@@ -1,15 +1,19 @@
 /* eslint-disable no-magic-numbers */
 import React, { useState } from 'react'
 import { fireEvent, render, waitFor } from '@testing-library/react'
-import Tab, { TabItemPorps } from '../index'
+import Tab, { TAB } from '../index'
 
 jest.mock('../hook', () => ({
   useTabScroll: jest.requireActual('../hook/mounted.h5.tsx').default
 }))
 
+jest.mock('../../../utils', () => ({
+  getRanDomId: () => '123'
+}))
+
 
 test('option', () => {
-  const options: TabItemPorps[] = [
+  const options: TAB.Item[] = [
     { title: 'item1' },
     { title: 'item2' },
     { title: 'item4' }
@@ -20,8 +24,21 @@ test('option', () => {
   expect(screen.container).toMatchSnapshot()
 })
 
+
+test('option of button', () => {
+  const options: TAB.Item[] = [
+    { title: 'item1' },
+    { title: 'item2' },
+    { title: 'item4' }
+  ]
+
+  const screen = render(<Tab options={options} currenIndex={1} type="button" />)
+  options.map((item) => screen.getByText(item.title as string))
+  expect(screen.container).toMatchSnapshot()
+})
+
 test('active', () => {
-  const options: TabItemPorps[] = [
+  const options: TAB.Item[] = [
     { title: 'item1' },
     { title: 'item2' },
     { title: 'item4' }
@@ -33,7 +50,7 @@ test('active', () => {
 })
 
 test('onChange', async () => {
-  const options: TabItemPorps[] = [
+  const options: TAB.Item[] = [
     { title: 'item1' },
     { title: 'item2' },
     { title: 'item4' }
@@ -55,7 +72,7 @@ test('onChange', async () => {
 })
 
 test('onChange of ios', async () => {
-  const options: TabItemPorps[] = [
+  const options: TAB.Item[] = [
     { title: 'item1' },
     { title: 'item2' },
     { title: 'item4' }
@@ -82,7 +99,7 @@ test('onChange of ios', async () => {
 })
 
 test('onChange of error index', async () => {
-  const options: TabItemPorps[] = [
+  const options: TAB.Item[] = [
     { title: 'item1' },
     { title: 'item2' },
     { title: 'item4' }
@@ -103,7 +120,7 @@ test('onChange of error index', async () => {
 })
 
 test('icon', () => {
-  const options: TabItemPorps[] = [
+  const options: TAB.Item[] = [
     { title: 'item1' },
     { title: 'item2' },
     { icon: '2121.png' }
@@ -114,7 +131,7 @@ test('icon', () => {
 })
 
 test('not currenIndex', () => {
-  const options: TabItemPorps[] = [
+  const options: TAB.Item[] = [
     { title: 'item1' },
     { title: 'item2' },
     { icon: '2121.png' }
