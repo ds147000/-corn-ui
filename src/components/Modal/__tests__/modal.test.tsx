@@ -21,6 +21,13 @@ describe('Modal', () => {
     await waitFor(() => expect(screen.container).toMatchSnapshot())
   })
 
+  test('not button', async () => {
+    const screen = render(
+      <Modal visible />
+    )
+    await waitFor(() => expect(screen.container).toMatchSnapshot())
+  })
+
   test('content', async () => {
     const screen = render(
       <Modal

@@ -238,3 +238,25 @@ exports[`Modal content 1`] = `
   </div>
 </div>
 `;
+
+exports[`Modal not button 1`] = `
+<div>
+  <div
+    class="xrk-drawer-mask xrk-drawer-mask-show"
+    data-testid="mask"
+  />
+  <div
+    class="xrk-drawer-body xrk-drawer-center-show xrk-drawer-center"
+    data-testid="body"
+  >
+    <div
+      class="xrk-modal"
+      data-testid="modal"
+    >
+      <div
+        class="xrk-modal-top"
+      />
+    </div>
+  </div>
+</div>
+`;

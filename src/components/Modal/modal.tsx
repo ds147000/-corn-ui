@@ -19,7 +19,7 @@ export interface ModalProps extends DrawerProps {
   /** 提示的内容 */
   content?: string | React.ReactNode
   /** 弹出按钮列表 */
-  button: Array<ModalButton>
+  button?: ModalButton[]
   /** 点击按钮事件 */
   onButtonClick?(index: number): void
 }
@@ -32,8 +32,11 @@ const Modal: React.FC<ModalProps> = ({
   onButtonClick,
   ...props
 }) => {
+  const isButton = Boolean(button?.length)
   const _centent = children || content
-  const floorClass = button.length >= MULTI_NUM ? 'xrk-modal-floor-multi' : 'xrk-modal-floor-line'
+  const floorClass = (isButton && (button as ModalButton[]).length >= MULTI_NUM) ?
+    'xrk-modal-floor-multi' :
+    'xrk-modal-floor-line'
 
   return (
     <Drawer
@@ -42,9 +45,8 @@ const Modal: React.FC<ModalProps> = ({
     >
       <View className="xrk-modal" data-testid="modal" >
         <View className="xrk-modal-top">
-          <View className="xrk-modal-title">
-            {title}
-          </View>
+          {Boolean(title) && <View className="xrk-modal-title">{title}</View>}
+
           {Boolean(_centent) && (
             <View className="xrk-modal-content">
               {_centent}
@@ -53,20 +55,22 @@ const Modal: React.FC<ModalProps> = ({
 
         </View>
         {/* 按钮 */}
-        <View className={floorClass}>
-          {button.map((item, key) => (
-            <View
-              className={`xrk-modal-button ${item.style}`}
-              key={String(key)}
-              onClick={(): void => {
-                onButtonClick?.(key)
-                item.onClick?.()
-              }}
-            >
-              {item.text}
-            </View>
-          ))}
-        </View>
+        {isButton && (
+          <View className={floorClass}>
+            {(button as ModalButton[]).map((item, key) => (
+              <View
+                className={`xrk-modal-button ${item.style}`}
+                key={String(key)}
+                onClick={(): void => {
+                  onButtonClick?.(key)
+                  item.onClick?.()
+                }}
+              >
+                {item.text}
+              </View>
+            ))}
+          </View>
+        )}
       </View>
     </Drawer>
   )

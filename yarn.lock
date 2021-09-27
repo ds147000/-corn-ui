@@ -1914,10 +1914,10 @@
   dependencies:
     "@tarojs/runtime" "3.2.6"
 
-"@tarojs/components-react@^10.2.31":
-  version "10.2.31"
-  resolved "https://nexus3.xrkmm.com/repository/npm-group/@tarojs/components-react/-/components-react-10.2.31.tgz#6dd1d8b3c2607facaf27a9c9175f40c16af4fa05"
-  integrity sha512-hrSzRF645umrbXEab/cWWztu8ewvhzR11WTcRQke5tHjSrB1FliPqilFmWxKb50qOW1AKr1Amdl6oe6EuQmV5Q==
+"@tarojs/components-react@^10.2.33":
+  version "10.2.33"
+  resolved "https://nexus3.xrkmm.com/repository/npm-group/@tarojs/components-react/-/components-react-10.2.33.tgz#2c4e7c3ca804f24208482fbc92c522807679fb61"
+  integrity sha512-Z3Pdb9dBO87CghM5zNBJYaVFbUAq835lcErsEmsbLDI/gTKPK/j743TiwHunapBls5UO4ApjHbUIwz5+N9b0nw==
   dependencies:
     "@babel/runtime" "^7.13.10"
     "@tarojs/taro" "3.2.6"

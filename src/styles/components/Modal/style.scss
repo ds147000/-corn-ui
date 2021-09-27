@@ -3,7 +3,6 @@ $modalBorderColor: #f3f5fa;
 .xrk-modal {
   background-color: $white;
   border-radius: $radius;
-  overflow: hidden;
   width: 530px;
 
   &-top {
@@ -54,7 +53,7 @@ $modalBorderColor: #f3f5fa;
     }
 
     &:last-child {
-      border-bottom: 0;
+      border-bottom: none !important;
       border-right: 0;
     }
   }
