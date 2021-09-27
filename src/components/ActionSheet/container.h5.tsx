@@ -29,9 +29,10 @@ export const Container: React.FC<DomProps & ShowActionSheetOption> = ({ onDestor
       visible={show}
       onClose={_onClose}
       onHide={onDestory}
+      cancelText="取消"
     >
       {list.map((item, key) => (
-        <ActionSheetItem key={item} text={item} onClick={(): void => _onSuccess(key)} />
+        <ActionSheetItem align="center" key={item} text={item} onClick={(): void => _onSuccess(key)} />
       ))}
     </ActionSheet>
   )

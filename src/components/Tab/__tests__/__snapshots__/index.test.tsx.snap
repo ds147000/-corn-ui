@@ -162,3 +162,54 @@ exports[`option of button 1`] = `
   </div>
 </div>
 `;
+
+exports[`option of id 1`] = `
+<div>
+  <div
+    class="xrk-tab xrk-f xrk-tab-default"
+    data-testid="tab"
+    id="123"
+  >
+    <div
+      class="xrk-tab-item __x-st-exp __x-st-click"
+      data-testid="tab-item"
+    >
+      <div
+        class=""
+      >
+        item1
+      </div>
+    </div>
+    <div
+      class="xrk-tab-item __x-st-exp __x-st-click xrk-tab-item-active __active"
+      data-testid="tab-item"
+    >
+      <div
+        class=""
+      >
+        item1
+      </div>
+    </div>
+    <div
+      class="xrk-tab-item __x-st-exp __x-st-click"
+      data-testid="tab-item"
+    >
+      <div
+        class=""
+      >
+        item1
+      </div>
+    </div>
+    <div
+      class="xrk-tab-item __x-st-exp __x-st-click"
+      data-testid="tab-item"
+    >
+      <div
+        class=""
+      >
+        item22121
+      </div>
+    </div>
+  </div>
+</div>
+`;

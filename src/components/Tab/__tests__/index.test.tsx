@@ -25,6 +25,19 @@ test('option', () => {
 })
 
 
+test('option of id', () => {
+  const options: TAB.Item[] = [
+    { title: 'item1', id: '03' },
+    { title: 'item1', id: '02' },
+    { title: 'item1', id: '01' },
+    { title: 'item22121' }
+  ]
+
+  const screen = render(<Tab options={options} currenIndex={1} />)
+  expect(screen.container).toMatchSnapshot()
+})
+
+
 test('option of button', () => {
   const options: TAB.Item[] = [
     { title: 'item1' },

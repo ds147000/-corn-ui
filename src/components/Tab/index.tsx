@@ -20,6 +20,7 @@ export namespace TAB {
   }
 
   export interface Item {
+    id?: string
     title?: string
     onClick?(): void
     icon?: string
@@ -35,12 +36,14 @@ const Tabs: React.FC<TAB.Props> = ({ options, currenIndex, type = 'default', onC
   useTabScroll(id, currenIndex)
 
   const renderItem = useCallback((item: TAB.Item, active: boolean, _onChange: TAB.Change): JSX.Element => {
+    const key = item.id || item.title || item.icon
+
     if (type === 'button') {
       return (
         <Button
           type={active ? 'primary' : 'light'}
           onClick={_onChange}
-          key={item.title}
+          key={key}
           className={active ? '__active' : ''}
         >
           {item.title}
@@ -52,7 +55,7 @@ const Tabs: React.FC<TAB.Props> = ({ options, currenIndex, type = 'default', onC
       <Item
         {...item}
         active={active}
-        key={item.title || item.icon}
+        key={key}
         onClick={_onChange}
       />
     )
