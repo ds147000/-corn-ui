@@ -144,21 +144,21 @@ exports[`option of button 1`] = `
     data-testid="tab"
     id="123"
   >
-    <div
+    <button
       class="xrk-btn xrk-if xrk-ac xrk-jc xrk-btn-middle xrk-btn-light"
     >
       item1
-    </div>
-    <div
+    </button>
+    <button
       class="xrk-btn xrk-if xrk-ac xrk-jc xrk-btn-middle xrk-btn-primary __active"
     >
       item2
-    </div>
-    <div
+    </button>
+    <button
       class="xrk-btn xrk-if xrk-ac xrk-jc xrk-btn-middle xrk-btn-light"
     >
       item4
-    </div>
+    </button>
   </div>
 </div>
 `;

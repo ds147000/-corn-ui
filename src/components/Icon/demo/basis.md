@@ -117,6 +117,16 @@ const Demo: React.FC = () => {
       </div>
 
       <div className="icon-box">
+        <Icon name="filter-down" />
+        <h5>filter-down</h5>
+      </div>
+
+      <div className="icon-box">
+        <Icon name="filter-up" />
+        <h5>filter-up</h5>
+      </div>
+
+      <div className="icon-box">
         <Icon name="filter" />
         <h5>filter</h5>
       </div>
@@ -129,6 +139,11 @@ const Demo: React.FC = () => {
       <div className="icon-box">
         <Icon name="hide" />
         <h5>hide</h5>
+      </div>
+
+      <div className="icon-box">
+        <Icon name="hot" />
+        <h5>hot</h5>
       </div>
 
       <div className="icon-box">
@@ -207,6 +222,11 @@ const Demo: React.FC = () => {
       </div>
 
       <div className="icon-box">
+        <Icon name="pull-down" />
+        <h5>pull-down</h5>
+      </div>
+
+      <div className="icon-box">
         <Icon name="question" />
         <h5>question</h5>
       </div>
@@ -232,8 +252,28 @@ const Demo: React.FC = () => {
       </div>
 
       <div className="icon-box">
+        <Icon name="redpacket-fill" />
+        <h5>redpacket-fill</h5>
+      </div>
+
+      <div className="icon-box">
+        <Icon name="redpacket" />
+        <h5>redpacket</h5>
+      </div>
+
+      <div className="icon-box">
+        <Icon name="reduce" />
+        <h5>reduce</h5>
+      </div>
+
+      <div className="icon-box">
         <Icon name="refresh" />
         <h5>refresh</h5>
+      </div>
+
+      <div className="icon-box">
+        <Icon name="remind" />
+        <h5>remind</h5>
       </div>
 
       <div className="icon-box">
@@ -244,6 +284,11 @@ const Demo: React.FC = () => {
       <div className="icon-box">
         <Icon name="right" />
         <h5>right</h5>
+      </div>
+
+      <div className="icon-box">
+        <Icon name="safe" />
+        <h5>safe</h5>
       </div>
 
       <div className="icon-box">
@@ -287,8 +332,18 @@ const Demo: React.FC = () => {
       </div>
 
       <div className="icon-box">
+        <Icon name="time" />
+        <h5>time</h5>
+      </div>
+
+      <div className="icon-box">
         <Icon name="up" />
         <h5>up</h5>
+      </div>
+
+      <div className="icon-box">
+        <Icon name="user" />
+        <h5>user</h5>
       </div>
 
       <div className="icon-box">

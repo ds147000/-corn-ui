@@ -182,11 +182,19 @@ function App() {
         <Empty />
       </Cell>
       <br />
-      <Button size="big" icon={<Icon name="service" />}>向日葵妈妈UI</Button>
-      <Button size="large">向日葵妈妈UI</Button>
+      <Button size="max">向日葵妈妈UI</Button>
+      <Button size="big">向日葵妈妈UI</Button>
+      <Button size="large" to="/123" >向日葵妈妈UI</Button>
+      <Button size="large" >向日葵妈妈UI</Button>
       <Button size="middle">向日葵妈妈UI</Button>
       <Button size="small">向日葵妈妈UI</Button>
       <Button size="mini">向日葵妈妈UI</Button>
+      <Button size="max" auto>向日葵妈妈UI</Button>
+      <Button size="big" auto>向日葵妈妈UI</Button>
+      <Button size="large" auto >向日葵妈妈UI</Button>
+      <Button size="middle"auto >向日葵妈妈UI</Button>
+      <Button size="small" auto>向日葵妈妈UI</Button>
+      <Button size="mini" auto>向日葵妈妈UI</Button>
       <Button type="error">向日葵妈妈UI</Button>
       <Button type="link">向日葵妈妈UI</Button>
       <Button type="pop">向日葵妈妈UI</Button>
@@ -279,7 +287,7 @@ function App() {
         urls: ['https://t7.baidu.com/it/u=2291349828,4144427007&fm=193&f=GIF', 'https://t7.baidu.com/it/u=124476473,2583135375&fm=193&f=GIFF']
       })} >Card</Card>
       <Affix onChange={onChange} position="bottom">
-        <Button size="max">向日葵妈妈UI</Button>
+        <Button size="max" auto>向日葵妈妈UI</Button>
       </Affix>
     </div>
   )

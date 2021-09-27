@@ -89,4 +89,15 @@
       color: $pop;
     }
   }
+
+  &-defautl {
+    background-color: $defualt;
+    color: $white;
+
+    &.xrk-tag-ghost {
+      border: 1px solid rgba($color: $defualt , $alpha: 1);
+      background-color: rgba($color: $white , $alpha: 0);
+      color: $defualt;
+    }
+  }
 }

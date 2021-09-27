@@ -24,7 +24,9 @@ type: 通用
 | icon | 否 |  按钮的图标 | `React.ReactNode` | `null` |
 | block | 否 |  将按钮宽度调整为其父宽度的选项 | `boolean` | `false` |
 | ghost | 否 |  镂空风格 | `boolean` | `false` |
+| auto | 否 |  开启固定宽度 | `boolean` | `false` |
 | to | 否 | 跳转链接，openmp:// 协议表示跳转指定小程序 | `string` |  |
+| formType | 否 | 表单点击行为 | `submit` `reset` |  |
 | disabled | 否 |  是否禁用 | `boolean` | `false` |
 
 

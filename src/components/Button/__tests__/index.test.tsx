@@ -106,4 +106,9 @@ describe('<Button />', () => {
     expect(screen).toMatchSnapshot()
   })
 
+  test('固定宽带', () => {
+    const screen = render(<Button auto />)
+    expect(screen.container).toMatchSnapshot()
+  })
+
 })

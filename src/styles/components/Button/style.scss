@@ -8,7 +8,8 @@ $prefix: xrk-btn;
   transition: opacity 0.1s;
   margin: 0 $btnMargin;
   cursor: pointer;
-  white-space: nowrap;
+  border-color: rgba($color: #000 , $alpha: 0);
+  border-width: 2px;
 
   &:active {
     opacity: 0.7;
@@ -32,6 +33,10 @@ $prefix: xrk-btn;
     &.#{$prefix}-icon {
       min-width: 42px;
     }
+
+    &.#{$prefix}-auto {
+      width: 100px;
+    }
   }
 
   &-small {
@@ -43,6 +48,10 @@ $prefix: xrk-btn;
 
     &.#{$prefix}-icon {
       min-width: 50px;
+    }
+
+    &.#{$prefix}-auto {
+      width: 120px;
     }
   }
 
@@ -57,6 +66,10 @@ $prefix: xrk-btn;
     &.#{$prefix}-icon {
       min-width: 60px;
     }
+
+    &.#{$prefix}-auto {
+      width: 270px;
+    }
   }
 
   &-large {
@@ -69,6 +82,10 @@ $prefix: xrk-btn;
 
     &.#{$prefix}-icon {
       min-width: 70px;
+    }
+
+    &.#{$prefix}-auto {
+      width: 418px;
     }
   }
 
@@ -83,11 +100,14 @@ $prefix: xrk-btn;
     &.#{$prefix}-icon {
       min-width: 80px;
     }
+
+    &.#{$prefix}-auto {
+      width: 690px;
+    }
   }
 
   &-max {
     padding: 0 32px;
-    width: 690px;
     height: 98px;
     border-radius: 48px;
     font-size: 34px;
@@ -96,6 +116,10 @@ $prefix: xrk-btn;
 
     &.#{$prefix}-icon {
       min-width: 98px;
+    }
+
+    &.#{$prefix}-auto {
+      width: 690px;
     }
   }
 
@@ -167,6 +191,7 @@ $prefix: xrk-btn;
   &-block {
     display: flex !important;
     flex: 1;
+    width: unset !important;
   }
 
   &-disabled {

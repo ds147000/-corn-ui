@@ -1,6 +1,6 @@
 import React, { useMemo } from 'react'
 import ClassNames from 'classnames'
-import { View } from '@tarojs/components'
+import { Button as TaroButton } from '@tarojs/components'
 import Link, { LinkProps } from '../Link'
 
 /** 按钮大小，max: 最大， big: 超大，large：大，middle：中，small：小，mini */
@@ -22,6 +22,10 @@ export interface ButtonProps extends LinkProps {
   disabled?: boolean
   /** 跳转链接，填写启用A链接行为 */
   to?: string
+  /** 表单点击行为 */
+  formType?: 'submit' | 'reset'
+  /** 开启固定宽度 */
+  auto?: boolean
   /** 点击事件 */
   onClick?(): void
 }
@@ -37,6 +41,8 @@ const Button: React.FC<ButtonProps> = ({
   icon,
   children,
   className,
+  formType,
+  auto,
   ...props
 }) => {
   const isIcon = icon !== undefined
@@ -53,11 +59,12 @@ const Button: React.FC<ButtonProps> = ({
         'xrk-btn-ghost': ghost,
         'xrk-btn-icon': isIcon && !isChildren,
         'xrk-btn-child-icon': isIcon && isChildren,
-        'xrk-btn-disabled': disabled
+        'xrk-btn-disabled': disabled,
+        'xrk-btn-auto': auto
       },
       className
     )
-  }, [ size, type, block, ghost, disabled, isIcon, isChildren, className ])
+  }, [ size, type, block, ghost, disabled, className, auto, isIcon, isChildren ])
 
   const _onClick = (): void => {
     if (disabled) return
@@ -77,10 +84,10 @@ const Button: React.FC<ButtonProps> = ({
   }
 
   return (
-    <View {...props} className={_class} onClick={_onClick} >
+    <TaroButton {...props} formType={formType} className={_class} onClick={_onClick} >
       {children}
       {icon}
-    </View>
+    </TaroButton>
   )
 }
 

@@ -129,7 +129,7 @@ const Routes: RoutesProps[] = [
   {
     path: '/phone/Button/demo/type',
     component: require('../views/Button/demo/type').default,
-    title: '6种状态基础使用',
+    title: '7种状态',
     type: 'undefined',
     sort: 1,
   },

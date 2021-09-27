@@ -77,7 +77,7 @@ Object {
 
 exports[`<Button /> icon 1`] = `
 <div>
-  <div
+  <button
     class="xrk-btn xrk-if xrk-ac xrk-jc xrk-btn-middle xrk-btn-primary xrk-btn-child-icon"
   >
     向日葵妈妈UI
@@ -86,7 +86,7 @@ exports[`<Button /> icon 1`] = `
     >
       我是图标
     </div>
-  </div>
+  </button>
 </div>
 `;
 
@@ -95,36 +95,36 @@ exports[`<Button /> size 1`] = `
   <div
     class=""
   >
-    <div
+    <button
       class="xrk-btn xrk-if xrk-ac xrk-jc xrk-btn-max xrk-btn-primary"
     >
       向日葵妈妈UI
-    </div>
-    <div
+    </button>
+    <button
       class="xrk-btn xrk-if xrk-ac xrk-jc xrk-btn-big xrk-btn-primary"
     >
       向日葵妈妈UI
-    </div>
-    <div
+    </button>
+    <button
       class="xrk-btn xrk-if xrk-ac xrk-jc xrk-btn-large xrk-btn-primary"
     >
       向日葵妈妈UI
-    </div>
-    <div
+    </button>
+    <button
       class="xrk-btn xrk-if xrk-ac xrk-jc xrk-btn-middle xrk-btn-primary"
     >
       向日葵妈妈UI
-    </div>
-    <div
+    </button>
+    <button
       class="xrk-btn xrk-if xrk-ac xrk-jc xrk-btn-small xrk-btn-primary"
     >
       向日葵妈妈UI
-    </div>
-    <div
+    </button>
+    <button
       class="xrk-btn xrk-if xrk-ac xrk-jc xrk-btn-mini xrk-btn-primary"
     >
       向日葵妈妈UI
-    </div>
+    </button>
   </div>
 </div>
 `;
@@ -134,38 +134,46 @@ exports[`<Button /> type 1`] = `
   <div
     class=""
   >
-    <div
+    <button
       class="xrk-btn xrk-if xrk-ac xrk-jc xrk-btn-middle xrk-btn-error"
     >
       向日葵妈妈UI
-    </div>
-    <div
+    </button>
+    <button
       class="xrk-btn xrk-if xrk-ac xrk-jc xrk-btn-middle xrk-btn-link"
     >
       向日葵妈妈UI
-    </div>
-    <div
+    </button>
+    <button
       class="xrk-btn xrk-if xrk-ac xrk-jc xrk-btn-middle xrk-btn-pop"
     >
       向日葵妈妈UI
-    </div>
-    <div
+    </button>
+    <button
       class="xrk-btn xrk-if xrk-ac xrk-jc xrk-btn-middle xrk-btn-primary"
     >
       向日葵妈妈UI
-    </div>
-    <div
+    </button>
+    <button
       class="xrk-btn xrk-if xrk-ac xrk-jc xrk-btn-middle xrk-btn-warn"
     >
       向日葵妈妈UI
-    </div>
+    </button>
   </div>
+</div>
+`;
+
+exports[`<Button /> 固定宽带 1`] = `
+<div>
+  <button
+    class="xrk-btn xrk-if xrk-ac xrk-jc xrk-btn-middle xrk-btn-primary xrk-btn-auto"
+  />
 </div>
 `;
 
 exports[`<Button /> 基本使用 1`] = `
 <div>
-  <div
+  <button
     class="xrk-btn xrk-if xrk-ac xrk-jc xrk-btn-middle xrk-btn-primary"
   />
 </div>
@@ -173,7 +181,7 @@ exports[`<Button /> 基本使用 1`] = `
 
 exports[`<Button /> 复杂标题：节点+文字 1`] = `
 <div>
-  <div
+  <button
     class="xrk-btn xrk-if xrk-ac xrk-jc xrk-btn-middle xrk-btn-primary"
   >
     <div
@@ -190,16 +198,16 @@ exports[`<Button /> 复杂标题：节点+文字 1`] = `
     >
       向日葵妈妈UI
     </span>
-  </div>
+  </button>
 </div>
 `;
 
 exports[`<Button /> 标题：向日葵妈妈UI 1`] = `
 <div>
-  <div
+  <button
     class="xrk-btn xrk-if xrk-ac xrk-jc xrk-btn-middle xrk-btn-primary"
   >
     向日葵妈妈UI
-  </div>
+  </button>
 </div>
 `;

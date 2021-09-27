@@ -4,7 +4,7 @@ import ClassNames from 'classnames'
 import type { ViewProps } from '../../types/View'
 
 export type TagSize = 'middle' | 'small' | 'mini'
-export type TagType =  'primary' | 'warn' | 'error' | 'link' | 'pop'
+export type TagType =  'primary' | 'warn' | 'error' | 'link' | 'pop' | 'defautl'
 
 export interface TagProps extends ViewProps {
   size?: TagSize

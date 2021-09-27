@@ -15,6 +15,8 @@ const Demo: React.FC = () => {
   return (
     <>
       <Button onClick={click}>可点击的</Button>
+      <Button onClick={click} formType="reset" >可点击的</Button>
+      <Button onClick={click} formType="submit" >可点击的</Button>
       <Button onClick={click} disabled>禁用的</Button>
     </>
   )
@@ -22,4 +24,4 @@ const Demo: React.FC = () => {
 
 export default Demo
 ```
-可以通过`onClick`来监听按钮的点击事件，`disabled`为`true`可以将按钮禁用。
+可以通过`onClick`来监听按钮的点击事件，`disabled`为`true`可以将按钮禁用。`formType`可以指定提交行为

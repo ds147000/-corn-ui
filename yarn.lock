@@ -1914,10 +1914,10 @@
   dependencies:
     "@tarojs/runtime" "3.2.6"
 
-"@tarojs/components-react@^10.2.30":
-  version "10.2.30"
-  resolved "https://nexus3.xrkmm.com/repository/npm-group/@tarojs/components-react/-/components-react-10.2.30.tgz#dc902a8dc91fd220e219092057e4bc6da469ef58"
-  integrity sha512-d83NUu7cfzKPZREE0ibYR4r1UoZxgrhcBNlTXcKmyg8g6TVQUzo/ZCg0ayg/ViBkTJgWWKE4CJIDJRMP4RJrcg==
+"@tarojs/components-react@^10.2.31":
+  version "10.2.31"
+  resolved "https://nexus3.xrkmm.com/repository/npm-group/@tarojs/components-react/-/components-react-10.2.31.tgz#6dd1d8b3c2607facaf27a9c9175f40c16af4fa05"
+  integrity sha512-hrSzRF645umrbXEab/cWWztu8ewvhzR11WTcRQke5tHjSrB1FliPqilFmWxKb50qOW1AKr1Amdl6oe6EuQmV5Q==
   dependencies:
     "@babel/runtime" "^7.13.10"
     "@tarojs/taro" "3.2.6"
@@ -9172,7 +9172,7 @@ react-refresh@^0.4.0:
   resolved "https://nexus3.xrkmm.com/repository/npm-group/react-refresh/-/react-refresh-0.4.3.tgz"
   integrity sha1-lm8XUMGRZy524Wwu+laRUMxzq1M=
 
-react-router-dom@^5.3.0:
+react-router-dom@^5:
   version "5.3.0"
   resolved "https://nexus3.xrkmm.com/repository/npm-group/react-router-dom/-/react-router-dom-5.3.0.tgz#da1bfb535a0e89a712a93b97dd76f47ad1f32363"
   integrity sha1-2hv7U1oOiacSqTuX3Xb0etHzI2M=

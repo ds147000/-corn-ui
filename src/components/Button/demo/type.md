@@ -2,7 +2,7 @@
 sort: 1
 ---
 
-### 6种状态基础使用
+### 7种状态
 
 ```tsx
 import { Button } from '@xrkmm/ui-h5'
@@ -17,10 +17,11 @@ const Demo: React.FC = () => {
       <Button type="link">向日葵妈妈UI</Button>
       <Button type="pop">向日葵妈妈UI</Button>
       <Button type="light">向日葵妈妈UI</Button>
+      <Button type="default">向日葵妈妈UI</Button>
     </>
   )
 }
 
 export default Demo
 ```
-可以通过`type`属性控制按钮风格，具有五个可选属性：`primary` `warn` `error` `link` `pop` ，默认为`primary`
+可以通过`type`属性控制按钮风格，具有五个可选属性：`primary` `warn` `error` `link` `pop` `light` `default` ，默认为`primary`
