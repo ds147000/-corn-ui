@@ -32,6 +32,9 @@ exports[`ActionSheet showButton 1`] = `
         </div>
       </div>
       <div
+        class="xrk-actionsheet-body"
+      />
+      <div
         class="xrk-actionsheet-floor"
       >
         <div
@@ -70,7 +73,40 @@ exports[`ActionSheet showHead: false 1`] = `
   >
     <div
       class="xrk-actionsheet"
-    />
+    >
+      <div
+        class="xrk-actionsheet-body"
+      />
+    </div>
+  </div>
+</div>
+`;
+
+exports[`ActionSheet showHead: false and open close 1`] = `
+<div>
+  <div
+    class="xrk-drawer-mask xrk-drawer-mask-show"
+    data-testid="mask"
+  />
+  <div
+    class="xrk-drawer-body xrk-drawer-bottom-show xrk-drawer-bottom"
+    data-testid="body"
+  >
+    <div
+      class="xrk-actionsheet"
+    >
+      <div
+        class="xrk-actionsheet-close"
+        data-testid="close"
+      >
+        <i
+          class="xrk-icon xrk-i-delete"
+        />
+      </div>
+      <div
+        class="xrk-actionsheet-body"
+      />
+    </div>
   </div>
 </div>
 `;
@@ -106,6 +142,9 @@ exports[`ActionSheet subTitle 1`] = `
           </div>
         </div>
       </div>
+      <div
+        class="xrk-actionsheet-body"
+      />
     </div>
   </div>
 </div>
@@ -139,6 +178,9 @@ exports[`ActionSheet title 1`] = `
           </div>
         </div>
       </div>
+      <div
+        class="xrk-actionsheet-body"
+      />
     </div>
   </div>
 </div>
@@ -170,6 +212,9 @@ exports[`ActionSheet titleAlign: center 1`] = `
           </div>
         </div>
       </div>
+      <div
+        class="xrk-actionsheet-body"
+      />
     </div>
   </div>
 </div>
@@ -201,6 +246,9 @@ exports[`ActionSheet titleAlign: left 1`] = `
           </div>
         </div>
       </div>
+      <div
+        class="xrk-actionsheet-body"
+      />
     </div>
   </div>
 </div>
@@ -232,6 +280,9 @@ exports[`ActionSheet titleAlign: right 1`] = `
           </div>
         </div>
       </div>
+      <div
+        class="xrk-actionsheet-body"
+      />
     </div>
   </div>
 </div>
@@ -257,6 +308,9 @@ exports[`ActionSheet 显示 1`] = `
           class="xrk-actionsheet-header-center xrk-actionsheet-left"
         />
       </div>
+      <div
+        class="xrk-actionsheet-body"
+      />
     </div>
   </div>
 </div>
@@ -293,6 +347,9 @@ exports[`ActionSheet 自定义文字 1`] = `
           </div>
         </div>
       </div>
+      <div
+        class="xrk-actionsheet-body"
+      />
       <div
         class="xrk-actionsheet-floor"
       >

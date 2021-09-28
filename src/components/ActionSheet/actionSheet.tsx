@@ -73,18 +73,20 @@ const ActionSheet: React.FC<ActionSheetProps> = ({
               {Boolean(title) && <View className="title">{title}</View>}
               {Boolean(subTitle) && <View className="sub-title">{subTitle}</View>}
             </View>
-            {closable && (
-              <View
-                className="xrk-actionsheet-close"
-                data-testid="close"
-                onClick={onClose}
-              >
-                <Icon name="delete" />
-              </View>
-            )}
           </View>
         )}
-        {children}
+        {closable && (
+          <View
+            className="xrk-actionsheet-close"
+            data-testid="close"
+            onClick={onClose}
+          >
+            <Icon name="delete" />
+          </View>
+        )}
+        <View className="xrk-actionsheet-body">
+          {children}
+        </View>
         {isShowFloor && (
           <View className="xrk-actionsheet-floor">
             {showCancel && (<ActionSheetItem align={titleAlign} text={cancelText} onClick={onClose} />)}

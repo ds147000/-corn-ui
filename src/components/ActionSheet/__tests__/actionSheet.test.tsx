@@ -55,6 +55,14 @@ describe('ActionSheet', () => {
     await waitFor(() => expect(screen.container).toMatchSnapshot())
   })
 
+  test('showHead: false and open close', async () => {
+    const screen = render(<ActionSheet visible title="大标题居中" subTitle="辅助文字居中" showHead={false} closable />)
+    await waitFor(() => expect(screen.queryByText('大标题居中')).toBe(null))
+    await waitFor(() => expect(screen.queryByText('辅助文字居中')).toBe(null))
+    await waitFor(() => expect(screen.container).toMatchSnapshot())
+    await waitFor(() => expect(screen.getByTestId('close')).not.toBeNull())
+  })
+
   test('titleAlign: center', async () => {
     const screen = render(<ActionSheet visible title="大标题居中" titleAlign="center" />)
     screen.getByText('大标题居中')
