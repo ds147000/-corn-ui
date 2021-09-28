@@ -20,10 +20,17 @@ $white: #fff;
 // 背景色
 $bg: #f9fafd;
 
-// 禁用色
+// 默认色
 $defualt: #f6f7fb;
 
+// 禁用色
 $disable: #dde0e4;
+
+// 紧急色
+$urgent: #ff4f4f;
+
+// 紧急背景颜色
+$urgentBack: #ffeff1;
 
 // 占位图图标色值（灰底）
 $placeholder: #ebeef6;
@@ -79,3 +86,6 @@ $cellWidth: 144px;
 
 // cell 的字体大小
 $cellSize: 26px;
+
+// 活动标签颜色
+$activity: linear-gradient(270deg , #fe142a 0% , #fd2f5e 100%);

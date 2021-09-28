@@ -16,6 +16,8 @@ const Demo: React.FC = () => {
       <Tag type="pop">3-9岁</Tag>
       <Tag type="primary">3-9岁</Tag>
       <Tag type="warn">3-9岁</Tag>
+      <Tag type="urgent">3-9岁</Tag>
+      <Tag type="activity">3-9岁</Tag>
     </>
   )
 }

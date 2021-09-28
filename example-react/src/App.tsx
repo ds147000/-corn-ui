@@ -152,6 +152,7 @@ function App() {
       <Timer startTime={1500000000} endTime={1500000000 + 240000} fill />
       <Timer startTime={1500000000} endTime={1500000000 + 240000000} fill />
       <Timer startTime={1500000000} endTime={1500000000 + 240000000} renderItem={renderItem} />
+      <Tag size="large">3-9岁</Tag>
       <Tag size="middle">3-9岁</Tag>
       <Tag size="small">3-9岁</Tag>
       <Tag type="error">3-9岁</Tag>
@@ -159,11 +160,15 @@ function App() {
       <Tag type="pop">3-9岁</Tag>
       <Tag type="primary">3-9岁</Tag>
       <Tag type="warn">3-9岁</Tag>
+      <Tag type="urgent">3-9岁</Tag>
       <Tag type="error" ghost>3-9岁</Tag>
       <Tag type="link" ghost>3-9岁</Tag>
       <Tag type="pop" ghost>3-9岁</Tag>
       <Tag type="primary" ghost>3-9岁</Tag>
       <Tag type="warn" ghost>3-9岁</Tag>
+      <Tag type="warn" ghost>3-9岁</Tag>
+      <Tag type="urgent" ghost >3-9岁</Tag>
+      <Tag type="activity" ghost >3-9岁</Tag>
       <Cell label="限时奖励" />
       <Cell label="限时奖励" placeholder="请选择奖励类型" />
       <Cell label="限时奖励" placeholder="请选择奖励类型" value="葵花籽" />

@@ -11,7 +11,8 @@ const Demo: React.FC = () => {
 
   return (
     <>
-     <Tag size="middle">3-9岁</Tag>
+      <Tag size="large">3-9岁</Tag>
+      <Tag size="middle">3-9岁</Tag>
       <Tag size="small">3-9岁</Tag>
       <Tag size="mini">3-9岁</Tag>
     </>

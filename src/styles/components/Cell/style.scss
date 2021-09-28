@@ -33,6 +33,8 @@
     flex: 1;
     color: $text1;
     font-weight: bolder;
+    overflow: hidden;
+    text-overflow: ellipsis;
   }
 
   &-suffix {

@@ -87,6 +87,15 @@ Object {
   "baseElement": <body>
     <div>
       <div
+        class="xrk-tag xrk-if xrk-ac xrk-tag-large xrk-tag-primary"
+      >
+        <span
+          class="taro-text"
+        >
+          3-9岁
+        </span>
+      </div>
+      <div
         class="xrk-tag xrk-if xrk-ac xrk-tag-middle xrk-tag-primary"
       >
         <span
@@ -104,9 +113,27 @@ Object {
           3-9岁
         </span>
       </div>
+      <div
+        class="xrk-tag xrk-if xrk-ac xrk-tag-mini xrk-tag-primary"
+      >
+        <span
+          class="taro-text"
+        >
+          3-9岁
+        </span>
+      </div>
     </div>
   </body>,
   "container": <div>
+    <div
+      class="xrk-tag xrk-if xrk-ac xrk-tag-large xrk-tag-primary"
+    >
+      <span
+        class="taro-text"
+      >
+        3-9岁
+      </span>
+    </div>
     <div
       class="xrk-tag xrk-if xrk-ac xrk-tag-middle xrk-tag-primary"
     >
@@ -118,6 +145,15 @@ Object {
     </div>
     <div
       class="xrk-tag xrk-if xrk-ac xrk-tag-small xrk-tag-primary"
+    >
+      <span
+        class="taro-text"
+      >
+        3-9岁
+      </span>
+    </div>
+    <div
+      class="xrk-tag xrk-if xrk-ac xrk-tag-mini xrk-tag-primary"
     >
       <span
         class="taro-text"
@@ -230,6 +266,24 @@ Object {
           3-9岁
         </span>
       </div>
+      <div
+        class="xrk-tag xrk-if xrk-ac xrk-tag-small xrk-tag-urgent"
+      >
+        <span
+          class="taro-text"
+        >
+          3-9岁
+        </span>
+      </div>
+      <div
+        class="xrk-tag xrk-if xrk-ac xrk-tag-small xrk-tag-activity"
+      >
+        <span
+          class="taro-text"
+        >
+          3-9岁
+        </span>
+      </div>
     </div>
   </body>,
   "container": <div>
@@ -271,6 +325,24 @@ Object {
     </div>
     <div
       class="xrk-tag xrk-if xrk-ac xrk-tag-small xrk-tag-warn"
+    >
+      <span
+        class="taro-text"
+      >
+        3-9岁
+      </span>
+    </div>
+    <div
+      class="xrk-tag xrk-if xrk-ac xrk-tag-small xrk-tag-urgent"
+    >
+      <span
+        class="taro-text"
+      >
+        3-9岁
+      </span>
+    </div>
+    <div
+      class="xrk-tag xrk-if xrk-ac xrk-tag-small xrk-tag-activity"
     >
       <span
         class="taro-text"
@@ -383,6 +455,15 @@ Object {
           3-9岁
         </span>
       </div>
+      <div
+        class="xrk-tag xrk-if xrk-ac xrk-tag-small xrk-tag-urgent xrk-tag-ghost"
+      >
+        <span
+          class="taro-text"
+        >
+          3-9岁
+        </span>
+      </div>
     </div>
   </body>,
   "container": <div>
@@ -424,6 +505,15 @@ Object {
     </div>
     <div
       class="xrk-tag xrk-if xrk-ac xrk-tag-small xrk-tag-warn xrk-tag-ghost"
+    >
+      <span
+        class="taro-text"
+      >
+        3-9岁
+      </span>
+    </div>
+    <div
+      class="xrk-tag xrk-if xrk-ac xrk-tag-small xrk-tag-urgent xrk-tag-ghost"
     >
       <span
         class="taro-text"

@@ -3,8 +3,8 @@ import { View, Text } from '@tarojs/components'
 import ClassNames from 'classnames'
 import type { ViewProps } from '../../types/View'
 
-export type TagSize = 'middle' | 'small' | 'mini'
-export type TagType =  'primary' | 'warn' | 'error' | 'link' | 'pop' | 'defautl'
+export type TagSize = 'middle' | 'small' | 'mini' | 'large'
+export type TagType =  'primary' | 'warn' | 'error' | 'link' | 'pop' | 'defautl' | 'urgent' | 'activity'
 
 export interface TagProps extends ViewProps {
   size?: TagSize
