@@ -176,12 +176,12 @@ function App() {
       <Cell label="限时奖励" placeholder="请选择奖励类型" value="葵花籽" suffix="重选" arrow />
       <Cell label="限时奖励" placeholder="请选择奖励类型" value="前往兑换" to="/home" suffix="重选" arrow />
       <Cell label="限时奖励" placeholder="请选择奖励类型" value="无效兑换" to="/home" suffix="重选" arrow disabled />
-      <Cell label="限时奖励" placeholder="请选择奖励类型" value="前往兑换"suffix="重选" arrow onClick={() => Toast.show('骗你的')} />
+      <Cell label="限时奖励" placeholder="请选择奖励类型" value="前往兑换" suffix="重选" arrow onClick={() => Toast.show('骗你的')} />
       <br />
       <Cell.List line>
         <Cell label="限时奖励" placeholder="请选择奖励类型" value="葵花籽" suffix="重选" arrow />
         <Cell label="限时奖励" placeholder="请选择奖励类型" value="无效兑换" to="/home" suffix="重选" arrow disabled />
-        <Cell label="限时奖励" placeholder="请选择奖励类型" value="立即兑换"suffix="重选" arrow onClick={() => Toast.show('骗你的')} />
+        <Cell label="限时奖励" placeholder="请选择奖励类型" value="立即兑换" suffix="重选" arrow onClick={() => Toast.show('骗你的')} />
       </Cell.List>
       <Cell label="限时奖励" >
         <Empty />
@@ -197,7 +197,7 @@ function App() {
       <Button size="max" auto>向日葵妈妈UI</Button>
       <Button size="big" auto>向日葵妈妈UI</Button>
       <Button size="large" auto >向日葵妈妈UI</Button>
-      <Button size="middle"auto >向日葵妈妈UI</Button>
+      <Button size="middle" auto >向日葵妈妈UI</Button>
       <Button size="small" auto>向日葵妈妈UI</Button>
       <Button size="mini" auto>向日葵妈妈UI</Button>
       <Button type="error">向日葵妈妈UI</Button>
@@ -265,7 +265,22 @@ function App() {
         title="我是大标题"
         onClose={() => setCshow(false)}
       >
-        <Button onClick={() => setCshow(false)}>我是按钮</Button>
+        <Cell label="限时奖励" />
+        <Cell label="限时奖励" placeholder="请选择奖励类型" />
+        <Cell label="限时奖励" placeholder="请选择奖励类型" value="葵花籽" />
+        <Cell label="限时奖励" placeholder="请选择奖励类型" value="葵花籽" arrow />
+        <Cell label="限时奖励" placeholder="请选择奖励类型" value="葵花籽" suffix="重选" arrow />
+        <Cell label="限时奖励" placeholder="请选择奖励类型" value="前往兑换" to="/home" suffix="重选" arrow />
+        <Cell label="限时奖励" placeholder="请选择奖励类型" value="无效兑换" to="/home" suffix="重选" arrow disabled />
+        <Cell label="限时奖励" placeholder="请选择奖励类型" value="前往兑换" suffix="重选" arrow onClick={() => Toast.show('骗你的')} />
+        <Cell label="限时奖励" />
+        <Cell label="限时奖励" placeholder="请选择奖励类型" />
+        <Cell label="限时奖励" placeholder="请选择奖励类型" value="葵花籽" />
+        <Cell label="限时奖励" placeholder="请选择奖励类型" value="葵花籽" arrow />
+        <Cell label="限时奖励" placeholder="请选择奖励类型" value="葵花籽" suffix="重选" arrow />
+        <Cell label="限时奖励" placeholder="请选择奖励类型" value="前往兑换" to="/home" suffix="重选" arrow />
+        <Cell label="限时奖励" placeholder="请选择奖励类型" value="无效兑换" to="/home" suffix="重选" arrow disabled />
+        <Cell label="限时奖励" placeholder="请选择奖励类型" value="前往兑换" suffix="重选" arrow onClick={() => Toast.show('骗你的')} />
       </ActionSheet>
 
       <Modal

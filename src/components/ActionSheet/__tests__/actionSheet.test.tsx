@@ -1,7 +1,7 @@
 /* eslint-disable no-magic-numbers */
 import React from 'react'
 import { fireEvent, render, waitFor } from '@testing-library/react'
-import ActionSheet from '../actionsheet'
+import ActionSheet, { onTouchMove, onTouchStart } from '../actionsheet'
 
 describe('ActionSheet', () => {
   test('显示', async () => {
@@ -119,5 +119,46 @@ describe('ActionSheet', () => {
     screen.getByText('cancel')
     screen.getByText('ok')
     await waitFor(() => expect(screen.container).toMatchSnapshot())
+  })
+
+  test('toumove down', () => {
+    const preventDefault = jest.fn()
+    const target = { scrollTop: 10, scrollHeight: 200, clientHeight: 190 }
+    onTouchStart({ touches: [{ clientY: 100 }] } as any)
+    onTouchMove({ touches: [{ clientY: 90 }], preventDefault, target } as any)
+
+    expect(preventDefault).toHaveBeenCalledTimes(1)
+  })
+
+  test('toumove top ', () => {
+    const preventDefault = jest.fn()
+    const target = { scrollTop: 10, scrollHeight: 200, clientHeight: 190 }
+    onTouchStart({ touches: [{ clientY: 100 }] } as any)
+    onTouchMove({ touches: [{ clientY: 190 }], preventDefault, target } as any)
+
+    expect(preventDefault).toHaveBeenCalledTimes(0)
+  })
+
+  test('toumove top of 0', () => {
+    const preventDefault = jest.fn()
+    const target = { scrollTop: 0, scrollHeight: 200, clientHeight: 190 }
+    onTouchStart({ touches: [{ clientY: 100 }] } as any)
+    onTouchMove({ touches: [{ clientY: 190 }], preventDefault, target } as any)
+
+    expect(preventDefault).toHaveBeenCalledTimes(1)
+  })
+
+  test('toumove of 0', () => {
+    const preventDefault = jest.fn()
+    const target = {
+      scrollTop: 0,
+      scrollHeight: 200,
+      clientHeight: 200,
+      parentElement: { scrollTop: 10, scrollHeight: 190, clientHeight: 200, }
+    }
+    onTouchStart({ touches: [{ clientY: 100 }] } as any)
+    onTouchMove({ touches: [{ clientY: 90 }], preventDefault, target } as any)
+
+    expect(preventDefault).toHaveBeenCalledTimes(0)
   })
 })

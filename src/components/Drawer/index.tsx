@@ -1,6 +1,7 @@
 import React, { useCallback, useEffect, useMemo, useState } from 'react'
 import classNames from 'classnames'
 import { View } from '@tarojs/components'
+import { ITouchEvent } from '../../types'
 
 type AnimateStatus = 'show' | 'hide' | 'over'
 
@@ -29,6 +30,7 @@ const Drawer: React.FC<DrawerProps> = ({
   children
 }) => {
   const [ status, setStatus ] = useState<AnimateStatus>('over')
+
   const _class = useMemo(() => {
     return classNames(
       'xrk-drawer-body',
@@ -73,6 +75,8 @@ const Drawer: React.FC<DrawerProps> = ({
           className={`xrk-drawer-mask xrk-drawer-mask-${status}`}
           data-testid="mask"
           onClick={onClickMask}
+          onTouchMove={onTouchMove}
+          catchMove
         />
       )}
       <View className={_class} onAnimationEnd={onAnimationEnd} data-testid="body" >
@@ -80,6 +84,10 @@ const Drawer: React.FC<DrawerProps> = ({
       </View>
     </>
   )
+}
+
+export const onTouchMove = (event: ITouchEvent): void => {
+  event.preventDefault()
 }
 
 export default Drawer

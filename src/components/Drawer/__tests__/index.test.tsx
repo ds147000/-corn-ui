@@ -2,7 +2,7 @@
 import React, { useState } from 'react'
 import { fireEvent, render, waitFor, createEvent } from '@testing-library/react'
 import { View, Text } from '@tarojs/components'
-import Drawer from '../index'
+import Drawer, { onTouchMove } from '../index'
 
 describe('Drawer', () => {
 
@@ -213,5 +213,12 @@ describe('Drawer', () => {
       }
     )
     fireEvent.animationEnd(screen.getByTestId('body'), evetn)
+  })
+
+  test('touchmove', () => {
+    const preventDefault = jest.fn()
+    onTouchMove({ preventDefault } as any)
+
+    expect(preventDefault).toHaveBeenCalledTimes(1)
   })
 })

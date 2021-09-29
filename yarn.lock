@@ -1914,14 +1914,15 @@
   dependencies:
     "@tarojs/runtime" "3.2.6"
 
-"@tarojs/components-react@^10.2.33":
-  version "10.2.33"
-  resolved "https://nexus3.xrkmm.com/repository/npm-group/@tarojs/components-react/-/components-react-10.2.33.tgz#2c4e7c3ca804f24208482fbc92c522807679fb61"
-  integrity sha512-Z3Pdb9dBO87CghM5zNBJYaVFbUAq835lcErsEmsbLDI/gTKPK/j743TiwHunapBls5UO4ApjHbUIwz5+N9b0nw==
+"@tarojs/components-react@^10.2.36":
+  version "10.2.36"
+  resolved "https://nexus3.xrkmm.com/repository/npm-group/@tarojs/components-react/-/components-react-10.2.36.tgz#bd7c8bc6002d9691097fb04a112f47452ee957be"
+  integrity sha512-DrEFS9Xqxd4b4OgemWPkfvDsNF1athmi9SckrZzTWD+tyqvjh689V7CsienGeZTLpyNJX0kiF1OKuvIR5yLENw==
   dependencies:
     "@babel/runtime" "^7.13.10"
     "@tarojs/taro" "3.2.6"
     "@tarojs/taro-h5" "3.2.6"
+    "@types/react-dom" "^17.0.9"
     better-scroll "^1.14.1"
     classnames "^2.2.5"
     intersection-observer "^0.7.0"
@@ -2387,6 +2388,13 @@
   version "17.0.6"
   resolved "https://nexus3.xrkmm.com/repository/npm-group/@types/react-dom/-/react-dom-17.0.6.tgz"
   integrity sha1-wVgyXPkbGWJwvA9K9zRj8Unn6v4=
+  dependencies:
+    "@types/react" "*"
+
+"@types/react-dom@^17.0.9":
+  version "17.0.9"
+  resolved "https://nexus3.xrkmm.com/repository/npm-group/@types/react-dom/-/react-dom-17.0.9.tgz#441a981da9d7be117042e1a6fd3dac4b30f55add"
+  integrity sha1-RBqYHanXvhFwQuGm/T2sSzD1Wt0=
   dependencies:
     "@types/react" "*"
 
