@@ -200,7 +200,7 @@ describe('Drawer', () => {
 
     await waitFor(() => expect(screen.container).toMatchSnapshot())
 
-    await waitFor(() => expect(onHide).toHaveBeenCalledTimes(2))
+    await waitFor(() => expect(onHide).toHaveBeenCalledTimes(1))
   })
 
   test('onAnimatedDnd', () => {

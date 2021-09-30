@@ -57,6 +57,7 @@ const renderItem = (type: string, number: string): JSX.Element => {
 
 function App() {
   const checkGroupRef = useRef<CheckboxGroup>()
+  const [time, setTime] = useState(0)
   const [current, setCurrent] = useState(1)
   const [show, setShow] = useState(false)
   const [aShow, setAshow] = useState(false)
@@ -68,6 +69,8 @@ function App() {
   const onChange = (fixed: boolean) => {
     console.log(fixed)
   }
+
+  const onSetTime = () => setTime(1000)
 
   return (
     <div className="App">
@@ -144,10 +147,10 @@ function App() {
       <Link to='/pages/link/index' type="link" >link</Link>
       <Link to='/pages/link/index' type="pop" >pop</Link>
       <Button>
-        <Timer startTime={1500000000} endTime={1500000000 + 240000} />
+        <Timer startTime={0} endTime={time} />
       </Button>
       <Button>
-        <Timer startTime={1500000000} endTime={1500000000 + 240000000} />
+        <Timer startTime={0} endTime={240000000} />
       </Button>
       <Timer startTime={1500000000} endTime={1500000000 + 240000} fill />
       <Timer startTime={1500000000} endTime={1500000000 + 240000000} fill />
@@ -307,7 +310,7 @@ function App() {
         urls: ['https://t7.baidu.com/it/u=2291349828,4144427007&fm=193&f=GIF', 'https://t7.baidu.com/it/u=124476473,2583135375&fm=193&f=GIFF']
       })} >Card</Card>
       <Affix onChange={onChange} position="bottom">
-        <Button size="max" auto>向日葵妈妈UI</Button>
+        <Button size="max" auto onClick={onSetTime} > 向日葵妈妈UI</Button>
       </Affix>
     </div>
   )

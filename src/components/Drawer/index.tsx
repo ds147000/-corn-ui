@@ -1,4 +1,4 @@
-import React, { useCallback, useEffect, useMemo, useState } from 'react'
+import React, { useEffect, useMemo, useState } from 'react'
 import classNames from 'classnames'
 import { View } from '@tarojs/components'
 import { ITouchEvent } from '../../types'
@@ -40,15 +40,18 @@ const Drawer: React.FC<DrawerProps> = ({
   }, [ position, status ])
 
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
-  const onAnimationEnd = useCallback((event: any) => {
+  const onAnimationEnd = (event: any): void => {
     const animationName: string = event.animationName ||
       event.detail?.animationName ||
       event.nativeEvent?.animationName ||
       event.target.className
 
     // eslint-disable-next-line no-magic-numbers
-    if (animationName.toLocaleUpperCase().indexOf('HIDE') !== -1) setStatus('over')
-  }, [])
+    if (animationName.toLocaleUpperCase().indexOf('HIDE') !== -1) {
+      setStatus('over')
+      onHide?.()
+    }
+  }
 
   const onClickMask = (): void => {
     if (maskClosable) onClose?.()
@@ -64,7 +67,6 @@ const Drawer: React.FC<DrawerProps> = ({
   }, [ visible, status ])
 
   if (visible === false && status === 'over') {
-    onHide?.()
     return null
   }
 
