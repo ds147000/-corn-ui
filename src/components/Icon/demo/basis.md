@@ -447,13 +447,13 @@ const Demo: React.FC = () => {
       </div>
 
       <div className="icon-box">
-        <Icon name="wachat-pay" />
-        <h5>wachat-pay</h5>
+        <Icon name="wechat-fill" />
+        <h5>wechat-fill</h5>
       </div>
 
       <div className="icon-box">
-        <Icon name="wechat-fill" />
-        <h5>wechat-fill</h5>
+        <Icon name="wechat-pay" />
+        <h5>wechat-pay</h5>
       </div>
     </div>
   );
