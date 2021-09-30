@@ -17,6 +17,16 @@ const Demo: React.FC = () => {
       </div>
 
       <div className="icon-box">
+        <Icon name="alipay" />
+        <h5>alipay</h5>
+      </div>
+
+      <div className="icon-box">
+        <Icon name="backward" />
+        <h5>backward</h5>
+      </div>
+
+      <div className="icon-box">
         <Icon name="bar" />
         <h5>bar</h5>
       </div>
@@ -44,6 +54,26 @@ const Demo: React.FC = () => {
       <div className="icon-box">
         <Icon name="big-select" />
         <h5>big-select</h5>
+      </div>
+
+      <div className="icon-box">
+        <Icon name="camera-fill" />
+        <h5>camera-fill</h5>
+      </div>
+
+      <div className="icon-box">
+        <Icon name="camera" />
+        <h5>camera</h5>
+      </div>
+
+      <div className="icon-box">
+        <Icon name="card-fill" />
+        <h5>card-fill</h5>
+      </div>
+
+      <div className="icon-box">
+        <Icon name="cart" />
+        <h5>cart</h5>
       </div>
 
       <div className="icon-box">
@@ -77,8 +107,8 @@ const Demo: React.FC = () => {
       </div>
 
       <div className="icon-box">
-        <Icon name="comment2" />
-        <h5>comment2</h5>
+        <Icon name="coupon-draw" />
+        <h5>coupon-draw</h5>
       </div>
 
       <div className="icon-box">
@@ -89,6 +119,11 @@ const Demo: React.FC = () => {
       <div className="icon-box">
         <Icon name="details" />
         <h5>details</h5>
+      </div>
+
+      <div className="icon-box">
+        <Icon name="disk" />
+        <h5>disk</h5>
       </div>
 
       <div className="icon-box">
@@ -137,6 +172,16 @@ const Demo: React.FC = () => {
       </div>
 
       <div className="icon-box">
+        <Icon name="forward" />
+        <h5>forward</h5>
+      </div>
+
+      <div className="icon-box">
+        <Icon name="fullscreen" />
+        <h5>fullscreen</h5>
+      </div>
+
+      <div className="icon-box">
         <Icon name="hide" />
         <h5>hide</h5>
       </div>
@@ -177,6 +222,16 @@ const Demo: React.FC = () => {
       </div>
 
       <div className="icon-box">
+        <Icon name="location-fill" />
+        <h5>location-fill</h5>
+      </div>
+
+      <div className="icon-box">
+        <Icon name="location" />
+        <h5>location</h5>
+      </div>
+
+      <div className="icon-box">
         <Icon name="look" />
         <h5>look</h5>
       </div>
@@ -187,6 +242,11 @@ const Demo: React.FC = () => {
       </div>
 
       <div className="icon-box">
+        <Icon name="media" />
+        <h5>media</h5>
+      </div>
+
+      <div className="icon-box">
         <Icon name="menu" />
         <h5>menu</h5>
       </div>
@@ -194,6 +254,21 @@ const Demo: React.FC = () => {
       <div className="icon-box">
         <Icon name="message" />
         <h5>message</h5>
+      </div>
+
+      <div className="icon-box">
+        <Icon name="mobile-fill" />
+        <h5>mobile-fill</h5>
+      </div>
+
+      <div className="icon-box">
+        <Icon name="mobile" />
+        <h5>mobile</h5>
+      </div>
+
+      <div className="icon-box">
+        <Icon name="money-bag-fill" />
+        <h5>money-bag-fill</h5>
       </div>
 
       <div className="icon-box">
@@ -212,8 +287,28 @@ const Demo: React.FC = () => {
       </div>
 
       <div className="icon-box">
+        <Icon name="notification-fill" />
+        <h5>notification-fill</h5>
+      </div>
+
+      <div className="icon-box">
+        <Icon name="notification-forbid-fill" />
+        <h5>notification-forbid-fill</h5>
+      </div>
+
+      <div className="icon-box">
+        <Icon name="notification" />
+        <h5>notification</h5>
+      </div>
+
+      <div className="icon-box">
         <Icon name="pause" />
         <h5>pause</h5>
+      </div>
+
+      <div className="icon-box">
+        <Icon name="pay" />
+        <h5>pay</h5>
       </div>
 
       <div className="icon-box">
@@ -349,6 +444,16 @@ const Demo: React.FC = () => {
       <div className="icon-box">
         <Icon name="video" />
         <h5>video</h5>
+      </div>
+
+      <div className="icon-box">
+        <Icon name="wachat-pay" />
+        <h5>wachat-pay</h5>
+      </div>
+
+      <div className="icon-box">
+        <Icon name="wechat-fill" />
+        <h5>wechat-fill</h5>
       </div>
     </div>
   );
