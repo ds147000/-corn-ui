@@ -15,7 +15,7 @@
     "dev:doc": "concurrently \" npm run build:doc:watch \" \" npm run pre:doc \"",
     "dev:css": "onchange -i \"src/**/*.scss\" -- npm run build:css",
     "dev:icon": "onchange -i \"src/assets/icons/*.svg\" -- npm run build:icon",
-    "build:all": "npm run lint && npm run test:prod && npm run build:icon &&npm run build:weapp && npm run build:h5 && npm run build:css",
+    "build:all": "npm run lint && npm run test:prod && npm run build:weapp && npm run build:h5 && npm run build:css npm run build:icon &&",
     "build:weapp": "cross-env NODE_ENV=production rollup --config ./build/rollup.config.js",
     "build:h5": "cross-env NODE_ENV=production rollup --config ./build/rollup.config.h5.js",
     "build:doc": "node ./build/build-docs.js",
