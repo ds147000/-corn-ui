@@ -9,6 +9,7 @@
   "private": true,
   "sideEffects": [],
   "scripts": {
+    "init":"npm install && cd docs && npm install",
     "dev": "concurrently \"npm run dev:weapp\" \"npm run dev:h5\"",
     "dev:weapp": "npm run build:h5 && concurrently \"rollup --watch --config ./build/rollup.config.js \" \"npm run dev:css\" \" npm run pre:weapp \" ",
     "dev:h5": "npm run build:h5 && concurrently \"rollup --watch --config ./build/rollup.config.h5.js \" \"npm run dev:css\" \" npm run pre:h5 \"  ",
