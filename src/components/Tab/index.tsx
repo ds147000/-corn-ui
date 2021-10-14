@@ -32,7 +32,7 @@ export namespace TAB {
 
 const Tabs: React.FC<TAB.Props> = ({ options, currenIndex, type = 'default', onChange }) => {
   const El = useRef<HTMLDivElement>()
-  useTabScroll(El, currenIndex)
+  useTabScroll(El as React.MutableRefObject<HTMLDivElement>, currenIndex)
 
   const renderItem = useCallback((item: TAB.Item, active: boolean, _onChange: TAB.Change): JSX.Element => {
     const key = item.id || item.title || item.icon

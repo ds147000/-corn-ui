@@ -7,8 +7,8 @@
  */
 import {
   Button, Toast, Drawer, ActionSheet, showActionSheet,
-  Modal, showModal, Icon, Empty, Image, Tab, Tag, Affix, Timer, Link,
-  Cell, Card, Checkbox, CheckboxGroup, previewImage
+  Modal, showModal, Empty, Image, Tab, Tag, Affix, Timer, Link,
+  Cell, Card, Checkbox, CheckboxGroup, previewImage, Input
 } from '@xrkmm/ui-h5'
 import React, { useRef, useState } from 'react'
 import 'swiper/swiper.scss'
@@ -74,6 +74,10 @@ function App() {
 
   return (
     <div className="App">
+      <div>
+        <Input />
+      </div>
+
       <Checkbox>商品链接</Checkbox>
       <Checkbox check >商品链接</Checkbox>
       <Checkbox check disabled >商品链接</Checkbox>

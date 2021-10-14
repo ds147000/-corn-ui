@@ -8,11 +8,12 @@
 
 import { Component, createRef } from 'react'
 import { View } from '@tarojs/components'
-import { TabItemPorps } from '@xrkmm/ui-taro/components/Tab'
+import { TAB } from '@xrkmm/ui-taro/components/Tab'
 import {
   Button, Toast, Drawer, showActionSheet,
   showModal, Modal, Icon, Image, Tab, Affix,
-  Timer, Link, Card, Checkbox, CheckboxGroup
+  Timer, Link, Card, Checkbox, CheckboxGroup,
+   Input
 } from '@xrkmm/ui-taro'
 import './index.scss'
 
@@ -20,7 +21,7 @@ const asList = [
   '广州',
   '深圳'
 ]
-const TabOption: TabItemPorps[] = [
+const TabOption: TAB.Item[] = [
   { title: '我是选项1' },
   { title: '我是选项2' },
   { title: '我是选项3' },
@@ -75,6 +76,7 @@ export default class Index extends Component {
   render() {
     return (
       <View className='index'>
+        <Input />
         <Tab
           options={TabOption}
           currenIndex={this.state.current}
