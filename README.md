@@ -89,6 +89,7 @@ const App = () => (
 
 构建文档
 ```bash
+yarn build:h5
 yarn pub:doc
 ```
 

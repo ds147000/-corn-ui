@@ -85,7 +85,7 @@ export default Demo
 `
 
     writeFile(resolveApp('src/components/Icon/demo/basis.md'), Prettier.format(MarkContext, { parser: 'markdown' }))
-    res()
+
   }, 1000)
 }
 
