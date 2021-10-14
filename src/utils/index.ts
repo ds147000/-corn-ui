@@ -64,17 +64,10 @@ export function fixNumber(val: number | string, len = 2): string {
   return valString
 }
 
-const ID_MAP = 'qwertyuiopasdfghjklzxcvbnm'
+const ID_MAP = { number: 0 }
 
 export function getRanDomId(): string {
-  let str = ''
-
-  for(let i = 0; i < 8; i++) {
-    const index = Math.floor(Math.random() * ID_MAP.length)
-    str += ID_MAP[index]
-  }
-
-  return str
+  return  '__xrk' + ID_MAP.number++
 }
 
 export function isWatch(): boolean {
