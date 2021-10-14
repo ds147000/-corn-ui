@@ -1,9 +1,8 @@
-import React, { useCallback, useMemo } from 'react'
+import React, { useCallback, useRef } from 'react'
 import { View } from '@tarojs/components'
 import Button from '../Button'
 import { useTabScroll } from './hook'
 import { Item } from './item'
-import { getRanDomId } from '../../utils'
 
 export namespace TAB {
   export type Change = (index?: number) => void
@@ -32,8 +31,8 @@ export namespace TAB {
 
 
 const Tabs: React.FC<TAB.Props> = ({ options, currenIndex, type = 'default', onChange }) => {
-  const id = useMemo(() => getRanDomId(), [])
-  useTabScroll(id, currenIndex)
+  const El = useRef<HTMLDivElement>()
+  useTabScroll(El, currenIndex)
 
   const renderItem = useCallback((item: TAB.Item, active: boolean, _onChange: TAB.Change): JSX.Element => {
     const key = item.id || item.title || item.icon
@@ -62,7 +61,7 @@ const Tabs: React.FC<TAB.Props> = ({ options, currenIndex, type = 'default', onC
   }, [ type ])
 
   return (
-    <View id={id} className={`xrk-tab xrk-f xrk-tab-${type}`} data-testid="tab" >
+    <View ref={El} className={`xrk-tab xrk-f xrk-tab-${type}`} data-testid="tab" >
       {options?.map((item, key) => renderItem(item, currenIndex === key, (): void => onChange?.(key)))}
     </View>
   )
