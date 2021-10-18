@@ -30,7 +30,6 @@ export { default as Cell } from './components/Cell'
 export { default as Card } from './components/Card'
 export { default as Checkbox } from './components/Checkbox/checkbox'
 export { default as CheckboxGroup } from './components/Checkbox/group'
-export { default as Input } from './components/Input'
 
 export const UTILS = {
   transformRem,

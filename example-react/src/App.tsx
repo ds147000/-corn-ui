@@ -141,6 +141,9 @@ function App() {
         <Button onClick={() => checkGroupRef.current?.selectAll()} >全选</Button>
         <Button onClick={() => checkGroupRef.current?.reset()} >取消选中</Button>
       </Card>
+      <Link to='https://baidu.com'>baidu1</Link>
+      <Link to='http://baidu.com'>baidu1</Link>
+      <Link to='//baidu.com'>baidu1</Link>
       <Link to='/pages/link/index'>【Link跳转】</Link>
       <Link to='/pages/link/index' replace >【Link原地跳转】</Link>
       <Link to='/pages/link/index' replace >【替换跳转】</Link>

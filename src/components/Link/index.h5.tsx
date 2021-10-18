@@ -27,13 +27,16 @@ const Link: LINK = ({
   const _onBefor = onBefor || Link.onBefor
 
   const onNavigate = (event: React.MouseEvent<HTMLAnchorElement, MouseEvent> | ITouchEvent): void => {
-    if (_onBefor?.(to) === true || disabled) {
+    if (_onBefor?.(to) || disabled) {
       event.preventDefault()
       return // 终止
     }
 
     onClick?.(event as ITouchEvent)
-    if (checkExtendsDomain(to)) window.location.href = to
+    if (checkExtendsDomain(to)) {
+      event.preventDefault()
+      window.location.href = to
+    }
   }
 
   if (checkOpenMp(to)) { // 打开小程序

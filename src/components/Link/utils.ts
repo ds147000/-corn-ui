@@ -8,7 +8,7 @@ export function checkOpenMp(url: string): boolean {
 }
 
 export function checkExtendsDomain(url: string): boolean {
-  if (url.indexOf('http') !== 0) return false
+  if (/^(http|\/\/)/.test(url)) return true
 
   const { hostname } = parseUrl(url)
   return hostname !== window.location.hostname
