@@ -5,7 +5,7 @@ import Link, { LinkProps } from '../Link'
 
 /** 按钮大小，max: 最大， big: 超大，large：大，middle：中，small：小，mini */
 export type ButtonSize = 'max' | 'big' | 'large' | 'middle' | 'small' | 'mini'
-export type ButtonType = 'primary' | 'warn' | 'error' | 'link' | 'pop' | 'default' | 'light'
+export type ButtonType = 'primary' | 'warn' | 'error' | 'link' | 'pop' | 'default' | 'light' | 'stop'
 
 export interface ButtonProps extends LinkProps {
   /** 按钮大小，max: 最大， big: 超大，large：大，middle：中，small：小，mini */

@@ -8,7 +8,7 @@
 import {
   Button, Toast, Drawer, ActionSheet, showActionSheet,
   Modal, showModal, Empty, Image, Tab, Tag, Affix, Timer, Link,
-  Cell, Card, Checkbox, CheckboxGroup, previewImage, Input
+  Cell, Card, Checkbox, CheckboxGroup, previewImage
 } from '@xrkmm/ui-h5'
 import React, { useRef, useState } from 'react'
 import 'swiper/swiper.scss'
@@ -74,9 +74,6 @@ function App() {
 
   return (
     <div className="App">
-      <div>
-        <Input />
-      </div>
 
       <Checkbox>商品链接</Checkbox>
       <Checkbox check >商品链接</Checkbox>
@@ -216,13 +213,13 @@ function App() {
       <Button type="primary">向日葵妈妈UI</Button>
       <Button type="primary" to="/home">跳转首页</Button>
       <Button type="warn">向日葵妈妈UI</Button>
+      <Button type="stop">stop</Button>
       <Button type="error" disabled>向日葵妈妈UI(disable)</Button>
       <Button type="link" disabled>向日葵妈妈UI（disable）</Button>
       <Button type="pop" disabled>向日葵妈妈UI（disable）</Button>
       <Button type="primary" disabled>向日葵妈妈UI（disable）</Button>
       <Button type="default" disabled>向日葵妈妈UI（disable）</Button>
       <Button type="warn" disabled>向日葵妈妈UI(disable)</Button>
-      <Button icon={<div>我是图标</div>}>向日葵妈妈UI</Button>
       <Button block type="error" >向日葵妈妈UI</Button>
       <Button block type="link" >向日葵妈妈UI</Button>
       <Button block type="pop" >向日葵妈妈UI</Button>
@@ -233,7 +230,7 @@ function App() {
       <Button ghost type="pop" >向日葵妈妈UI</Button>
       <Button ghost type="primary" >向日葵妈妈UI</Button>
       <Button ghost type="warn" >向日葵妈妈UI</Button>
-      <Button onClick={onClick}>向日葵妈妈UI</Button>
+      <Button ghost type="warn" >向日葵妈妈UI</Button>
       <Button onClick={onClick} disabled >向日葵妈妈UI</Button>
       <Button onClick={onClick} type="default" >向日葵妈妈UI</Button>
       <Button onClick={() => Toast.show({ title: '我是toast', icon: 'success' })}>点击出现taost</Button>
