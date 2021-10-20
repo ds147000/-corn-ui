@@ -83,7 +83,7 @@ const ActionSheet: React.FC<ActionSheetProps> = ({
             data-testid="close"
             onClick={onClose}
           >
-            <Icon name="delete" />
+            <Icon name="big-close" />
           </View>
         )}
         <View

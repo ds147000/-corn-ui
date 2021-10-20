@@ -100,7 +100,7 @@ exports[`ActionSheet showHead: false and open close 1`] = `
         data-testid="close"
       >
         <i
-          class="xrk-icon xrk-i-delete"
+          class="xrk-icon xrk-i-big-close"
         />
       </div>
       <div
