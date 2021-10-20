@@ -237,6 +237,10 @@ $prefix: xrk-btn;
       border-color: $disable;
       color: $disable;
     }
+
+    &.#{$prefix}-disabled {
+      opacity: 1;
+    }
   }
 
   &-block {
