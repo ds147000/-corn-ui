@@ -312,6 +312,11 @@ const Demo: React.FC = () => {
       </div>
 
       <div className="icon-box">
+        <Icon name="play-ghots" />
+        <h5>play-ghots</h5>
+      </div>
+
+      <div className="icon-box">
         <Icon name="play" />
         <h5>play</h5>
       </div>
