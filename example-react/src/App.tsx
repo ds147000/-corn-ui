@@ -8,7 +8,7 @@
 import {
   Button, Toast, Drawer, ActionSheet, showActionSheet,
   Modal, showModal, Empty, Image, Tab, Tag, Affix, Timer, Link,
-  Cell, Card, Checkbox, CheckboxGroup, previewImage, Input
+  Cell, Card, Checkbox, CheckboxGroup, previewImage, Input, Form
 } from '@xrkmm/ui-h5'
 import React, { useRef, useState } from 'react'
 import 'swiper/swiper.scss'
@@ -57,6 +57,7 @@ const renderItem = (type: string, number: string): JSX.Element => {
 
 function App() {
   const checkGroupRef = useRef<CheckboxGroup>()
+  const form = useRef<Form>()
   const [time, setTime] = useState(0)
   const [current, setCurrent] = useState(1)
   const [show, setShow] = useState(false)
@@ -70,17 +71,26 @@ function App() {
     console.log(fixed)
   }
 
+  const onChangeInput = () => {
+    form.current?.setValue({ shop1: true, name: '1233' })
+  }
+
   const onSetTime = () => setTime(1000)
 
   return (
-    <div className="App">
-      <Input />
+    <div className="App" >
+      <Form
+        onSubmit={(data) => console.log(data)}
+        ref={form as React.LegacyRef<Form>}
+        defaultValue={{ name: '我是小米', shop1: false }}
+      >
+      <Input name="name" />
 
-      <Checkbox>商品链接</Checkbox>
-      <Checkbox check >商品链接</Checkbox>
-      <Checkbox check disabled >商品链接</Checkbox>
-      <Checkbox disabled >商品链接</Checkbox>
-      <Checkbox type="button" >商品链接</Checkbox>
+      <Checkbox name="shop1">商品链接</Checkbox>
+      <Checkbox check name="shop2" >商品链接</Checkbox>
+      <Checkbox check disabled name="shop3" >商品链接</Checkbox>
+      <Checkbox disabled name="shop4" >商品链接</Checkbox>
+      <Checkbox type="button" name="shop5" >商品链接</Checkbox>
       <Tab
         options={TabOption}
         currenIndex={current}
@@ -98,7 +108,7 @@ function App() {
         type="button"
       />
       <Card>
-        <CheckboxGroup>
+        <CheckboxGroup name="shop6" >
           <Checkbox value="1">联合复选框1</Checkbox>
           <Checkbox value="2">联合复选框4</Checkbox>
           <Checkbox value="3">联合复选框3</Checkbox>
@@ -106,7 +116,7 @@ function App() {
         </CheckboxGroup>
       </Card>
       <Card>
-        <CheckboxGroup radio >
+        <CheckboxGroup name="shop7" radio >
           <Checkbox value="1" >单选模式1</Checkbox>
           <Checkbox value="2" >单选模式2</Checkbox>
           <Checkbox value="3" >单选模式3</Checkbox>
@@ -114,7 +124,7 @@ function App() {
         </CheckboxGroup>
       </Card>
       <Card>
-        <CheckboxGroup radio >
+        <CheckboxGroup name="shop8" radio >
           <Checkbox value="1" type="button" >单选模式1</Checkbox>
           <Checkbox value="2" type="button" >单选模式2</Checkbox>
           <Checkbox value="3" type="button" >单选模式3</Checkbox>
@@ -122,7 +132,7 @@ function App() {
         </CheckboxGroup>
       </Card>
       <Card>
-        <CheckboxGroup radio >
+        <CheckboxGroup name="shop9" radio >
           <Checkbox value="1" type="button" buttonType="error" ghost >单选模式1</Checkbox>
           <Checkbox value="2" type="button" ghost >单选模式2</Checkbox>
           <Checkbox value="3" type="button" ghost >单选模式3</Checkbox>
@@ -130,7 +140,7 @@ function App() {
         </CheckboxGroup>
       </Card>
       <Card>
-        <CheckboxGroup ref={checkGroupRef as React.LegacyRef<CheckboxGroup>} >
+        <CheckboxGroup name="shop10" ref={checkGroupRef as React.LegacyRef<CheckboxGroup>} >
           <Checkbox value="1">单选模式1</Checkbox>
           <Checkbox value="2">单选模式2</Checkbox>
           <Checkbox value="3">单选模式3</Checkbox>
@@ -315,8 +325,12 @@ function App() {
         urls: ['https://t7.baidu.com/it/u=2291349828,4144427007&fm=193&f=GIF', 'https://t7.baidu.com/it/u=124476473,2583135375&fm=193&f=GIFF']
       })} >Card</Card>
       <Affix onChange={onChange} position="bottom">
-        <Button size="max" auto onClick={onSetTime} > 向日葵妈妈UI</Button>
+        <Button  auto onClick={onSetTime} formType="submit" > 提交</Button>
+        <Button type='error' auto onClick={onSetTime} formType="reset" > 重置</Button>
+        <Button type='pop' auto onClick={onChangeInput} > 变更</Button>
+        <Button type='link' auto onClick={() => form.current?.reset()} > 实例重置</Button>
       </Affix>
+      </Form>
     </div>
   )
 }

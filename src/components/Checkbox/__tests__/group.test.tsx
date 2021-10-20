@@ -193,7 +193,7 @@ test('全选', async () => {
   await waitFor(() => expect(ref.current.getValue()).toEqual(['1', '2', '3']))
 })
 
-test('全选', async () => {
+test('全选2', async () => {
   const ref = React.createRef<CheckBoxGroup>()
   render(
     <CheckBoxGroup ref={ref} >

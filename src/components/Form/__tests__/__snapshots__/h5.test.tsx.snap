@@ -1,0 +1,116 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Form 初始化值 1`] = `
+<div>
+  <form>
+    <input
+      class="weui-input xrk-input"
+      data-testid="input"
+      name="name"
+      type="text"
+      value="小明"
+    />
+    <div
+      class="xrk-if xrk-ac xrk-checkbox"
+      data-testid="xrk-checkbox"
+    >
+      <input
+        class="xrk-checkbox-hide"
+        data-testid="check"
+        data-type="boolean"
+        name="sex"
+        readonly=""
+        value="false"
+      />
+      <i
+        class="xrk-icon xrk-i-radio"
+      />
+    </div>
+  </form>
+</div>
+`;
+
+exports[`Form 改变初始化值 1`] = `
+<div>
+  <form>
+    <input
+      class="weui-input xrk-input"
+      data-testid="input"
+      name="name"
+      type="text"
+      value="小明"
+    />
+    <div
+      class="xrk-if xrk-ac xrk-checkbox"
+      data-testid="xrk-checkbox"
+    >
+      <input
+        class="xrk-checkbox-hide"
+        data-testid="check"
+        data-type="boolean"
+        name="sex"
+        readonly=""
+        value="false"
+      />
+      <i
+        class="xrk-icon xrk-i-radio"
+      />
+    </div>
+  </form>
+</div>
+`;
+
+exports[`Form 渲染 1`] = `
+<div>
+  <form>
+    <input
+      class="weui-input xrk-input"
+      data-testid="input"
+      type="text"
+    />
+    <div
+      class="xrk-if xrk-ac xrk-checkbox"
+      data-testid="xrk-checkbox"
+    >
+      <input
+        class="xrk-checkbox-hide"
+        data-testid="check"
+        data-type="boolean"
+        readonly=""
+        value="0"
+      />
+      <i
+        class="xrk-icon xrk-i-radio"
+      />
+    </div>
+  </form>
+</div>
+`;
+
+exports[`Form 自带值 1`] = `
+<div>
+  <form>
+    <input
+      class="weui-input xrk-input"
+      data-testid="input"
+      type="text"
+      value="123"
+    />
+    <div
+      class="xrk-if xrk-ac xrk-checkbox-active xrk-checkbox"
+      data-testid="xrk-checkbox"
+    >
+      <input
+        class="xrk-checkbox-hide"
+        data-testid="check"
+        data-type="boolean"
+        readonly=""
+        value="1"
+      />
+      <i
+        class="xrk-icon xrk-i-fill-select"
+      />
+    </div>
+  </form>
+</div>
+`;

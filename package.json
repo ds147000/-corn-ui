@@ -50,7 +50,7 @@
     "@rollup/plugin-node-resolve": "^13.0.0",
     "@rollup/plugin-replace": "^2.4.2",
     "@tarojs/components": "^3.2.10",
-    "@tarojs/components-react": "^10.2.36",
+    "@tarojs/components-react": "^10.2.37",
     "@tarojs/taro": "^3.2.10",
     "@testing-library/dom": "^8.1.0",
     "@testing-library/react": "^11.2.7",

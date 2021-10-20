@@ -4,12 +4,14 @@ exports[`Checkbox 基础 1`] = `
 <div>
   <div
     class="xrk-if xrk-ac xrk-checkbox"
+    data-testid="xrk-checkbox"
   >
     <input
       class="xrk-checkbox-hide"
       data-testid="check"
+      data-type="boolean"
       readonly=""
-      value="false"
+      value="0"
     />
     <i
       class="xrk-icon xrk-i-radio"
@@ -23,15 +25,18 @@ exports[`Checkbox 基础 按钮类型 1`] = `
 <div>
   <div
     class="xrk-if xrk-ac"
+    data-testid="xrk-checkbox"
   >
     <input
       class="xrk-checkbox-hide"
       data-testid="check"
+      data-type="boolean"
       readonly=""
-      value="false"
+      value="0"
     />
     <button
       class="xrk-btn xrk-if xrk-ac xrk-jc xrk-btn-middle xrk-btn-default"
+      type="button"
     >
       商品链接
     </button>
@@ -43,15 +48,18 @@ exports[`Checkbox 基础 按钮类型 2`] = `
 <div>
   <div
     class="xrk-if xrk-ac"
+    data-testid="xrk-checkbox"
   >
     <input
       class="xrk-checkbox-hide"
       data-testid="check"
+      data-type="boolean"
       readonly=""
-      value="true"
+      value="1"
     />
     <button
       class="xrk-btn xrk-if xrk-ac xrk-jc xrk-btn-middle xrk-btn-primary"
+      type="button"
     >
       商品链接
     </button>
@@ -63,12 +71,14 @@ exports[`Checkbox 选中 1`] = `
 <div>
   <div
     class="xrk-if xrk-ac xrk-checkbox-active xrk-checkbox"
+    data-testid="xrk-checkbox"
   >
     <input
       class="xrk-checkbox-hide"
       data-testid="check"
+      data-type="boolean"
       readonly=""
-      value="true"
+      value="1"
     />
     <i
       class="xrk-icon xrk-i-fill-select"

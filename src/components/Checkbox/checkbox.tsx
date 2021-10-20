@@ -1,4 +1,4 @@
-import React, { useContext, useState } from 'react'
+import React, { useContext, useEffect, useState } from 'react'
 import classNames from 'classnames'
 import {
   View,
@@ -9,6 +9,7 @@ import {
 import Icon from '../Icon'
 import Button, { ButtonSize, ButtonType } from '../Button'
 import { CheckBoxContext } from './context'
+import { FromContext } from '../Form/context'
 
 export interface CheckBoxProps {
   name?: string
@@ -47,12 +48,18 @@ const CheckBox: React.FC<CheckBoxProps> = ({
 }) => {
   const [ internalCheck, setInternalCheck ] = useState(defaultChecked || false)
   const context = useContext(CheckBoxContext)
+  const formContext = useContext(FromContext)
 
   /** 选中值 */
   const controllCheck = getControllValue(check, internalCheck, context.values, value)
-
   /** 是否默认样式 */
   const isDefualtStyle = type === 'default'
+  /** 外部是否存在包裹组 */
+  const isGroup = Boolean(context.onCheck)
+  /** 控制值 */
+  const _value = value || String(Number(controllCheck))
+  /** 控制表单名称 */
+  const _name  = isGroup ? '' : name
 
   const _class = classNames(
     'xrk-if xrk-ac',
@@ -61,28 +68,42 @@ const CheckBox: React.FC<CheckBoxProps> = ({
     isDefualtStyle && disabled && 'xrk-checkbox-disable'
   )
 
+  let input: JSX.Element | null = null
+  // #if _APP === 'weapp'
+  input = <Input className="xrk-checkbox-hide" data-type="boolean" value={_value} name={_name} data-testid="check" />
+  // #else
+  input = (
+  // eslint-disable-next-line react/forbid-elements
+    <input
+      className="xrk-checkbox-hide"
+      value={_value}
+      name={_name}
+      data-testid="check"
+      data-type="boolean"
+      readOnly
+    />
+  )
+  // #endif
+
   const _onChange = (): void => {
     if (disabled) return
 
     const newCheck = !controllCheck
     onChange?.(newCheck)
     context.onCheck?.(newCheck, value)
-
     if (check === undefined && context.values === undefined) setInternalCheck(newCheck)
   }
 
-  const _value = value || String(controllCheck)
+  useEffect(() => {
+    if (!_name) return undefined
 
-  let input: JSX.Element
-  // #if _APP === 'weapp'
-  input = <Input className="xrk-checkbox-hide" value={_value} name={name} data-testid="check" />
-  // #else
-  // eslint-disable-next-line react/forbid-elements
-  input = <input className="xrk-checkbox-hide" value={_value} name={name} data-testid="check" readOnly  />
-  // #endif
+    formContext.add(_name, (val: unknown): void => setInternalCheck(Boolean(val)))
+
+    return (): void => formContext.remove(_name)
+  }, [ formContext, _name ])
 
   return (
-    <View className={_class} onClick={_onChange}>
+    <View className={_class} onClick={_onChange} data-testid="xrk-checkbox" >
       {input}
       {isDefualtStyle ? (
         <>

@@ -88,11 +88,11 @@ describe('Checkbox', () => {
 
     const screen = render(<App />)
     fireEvent.click(screen.getByText('商品链接'))
-    await waitFor(() => expect(screen.getByTestId('check').getAttribute('value')).toBe('false'))
+    await waitFor(() => expect(screen.getByTestId('check').getAttribute('value')).toBe('0'))
     fireEvent.click(screen.getByText('商品链接'))
     fireEvent.click(screen.getByText('商品链接'))
-    await waitFor(() => expect(screen.getByTestId('check').getAttribute('value')).toBe('true'))
-    await waitFor(() => expect(screen.getByTestId('check').getAttribute('value')).toBe('true'))
+    await waitFor(() => expect(screen.getByTestId('check').getAttribute('value')).toBe('1'))
+    await waitFor(() => expect(screen.getByTestId('check').getAttribute('value')).toBe('1'))
   })
 })
 

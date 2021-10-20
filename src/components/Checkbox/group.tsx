@@ -1,9 +1,17 @@
 import React from 'react'
-import { View } from '@tarojs/components'
+import {
+  View,
+  // #if _APP === 'weapp'
+  Input
+  // #endif
+} from '@tarojs/components'
+
 // #if _APP === 'weapp'
 import Taro from '@tarojs/taro'
 // #endif
+
 import { CheckBoxContext, CheckBoxContextValue } from './context'
+import { FromContext } from '../Form/context'
 import { ViewProps } from '../../types/View'
 
 export interface CheckBoxGroupProps extends ViewProps {
@@ -20,6 +28,45 @@ class CheckBoxGroup extends React.Component<CheckBoxGroupProps, CheckBoxContextV
 
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
   ref: any
+
+  /** 重置所有值 */
+  reset = (): void => {
+    this.setState({ values: [] })
+  }
+
+  /**
+   * 设置表单值
+   * @param string
+   */
+  setValue = (val: string[] = []): void => {
+    this.setState({ values: [ ...val ] })
+  }
+
+  /** 全选 */
+  selectAll = (): void => {
+    if (this.props.radio) return // 单选，终止
+
+    // #if _APP === 'weapp'
+    this.selectAllOfWeapp()
+    // #else
+    this.selectAllOfH5()
+    // #endif
+  }
+
+  /** 获取表单值 */
+  getValue(): string[] {
+    return [ ...this.state.values as string[] ]
+  }
+
+  componentDidMount(): void {
+    this.context.add(this.props.name, this.setValue)
+
+    if (this.props.defaultValue) this.setState({ values: [ ...this.props.defaultValue ] })
+  }
+
+  componentWillUnmount(): void {
+    this.context.remove(this.props.name)
+  }
 
   private onChange = (check: boolean, value: string): void => {
     if (!this.props.radio) {
@@ -57,15 +104,11 @@ class CheckBoxGroup extends React.Component<CheckBoxGroupProps, CheckBoxContextV
   // #if _APP === 'h5'
   private selectAllOfH5(): void {
     const ref: HTMLDivElement = this.ref
-    const elements = ref.getElementsByTagName('input')
     const values: string[] = []
-
-    for(let i = 0; i < elements.length; i++) {
-
-      if (values.includes(elements[i].value) === false)
-        values.push(elements[i].value)
-    }
-
+    ref.querySelectorAll('.xrk-checkbox-hide').forEach((item: HTMLInputElement) => {
+      if (values.includes(item.value) === false)
+        values.push(item.value)
+    })
     this.setState({ values }, this.emitChange)
   }
   // #endif
@@ -81,39 +124,6 @@ class CheckBoxGroup extends React.Component<CheckBoxGroupProps, CheckBoxContextV
   }
   // #endif
 
-  /** 重置所有值 */
-  reset = (): void => {
-    this.setState({ values: [] })
-  }
-
-  /**
-   * 设置表单值
-   * @param string
-   */
-  setValue = (val: string[]): void => {
-    this.setState({ values: [ ...val ] })
-  }
-
-  /** 全选 */
-  selectAll = (): void => {
-    if (this.props.radio) return // 单选，终止
-
-    // #if _APP === 'weapp'
-    this.selectAllOfWeapp()
-    // #else
-    this.selectAllOfH5()
-    // #endif
-  }
-
-  /** 获取表单值 */
-  getValue(): string[] {
-    return [ ...this.state.values as string[] ]
-  }
-
-  componentDidMount(): void {
-    if (this.props.defaultValue) this.setState({ values: [ ...this.props.defaultValue ] })
-  }
-
   render(): JSX.Element {
     const ProviderValue: CheckBoxContextValue = {
       values: this.state.values,
@@ -122,8 +132,34 @@ class CheckBoxGroup extends React.Component<CheckBoxGroupProps, CheckBoxContextV
 
     const { children, radio, ...props } = this.props
 
+    let input: JSX.Element
+    // #if _APP === 'weapp'
+    input = (
+      <Input
+        className="xrk-checkbox-group-hide"
+        value={String(this.state.values)}
+        name={props.name}
+        data-testid="check"
+        data-type={radio ? 'radio' : 'checkbox'}
+      />
+    )
+    // #else
+    input = (
+    // eslint-disable-next-line react/forbid-elements
+      <input
+        className="xrk-checkbox-group-hide"
+        value={String(this.state.values)}
+        name={props.name}
+        data-testid="check"
+        data-type={radio ? 'radio' : 'checkbox'}
+        readOnly
+      />
+    )
+    // #endif
+
     return (
       <View ref={(ref): void => this.ref = ref} {...props} >
+        {input}
         <CheckBoxContext.Provider value={ProviderValue}>
           {children}
         </CheckBoxContext.Provider>
@@ -131,5 +167,7 @@ class CheckBoxGroup extends React.Component<CheckBoxGroupProps, CheckBoxContextV
     )
   }
 }
+
+CheckBoxGroup.contextType = FromContext
 
 export default CheckBoxGroup
