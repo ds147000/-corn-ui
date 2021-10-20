@@ -2,19 +2,18 @@
 /* eslint-disable import/first */
 
 import { ViewProps } from '../../types/View'
+import type { ButtonType } from '../Button'
 
 export type LinkTarget = 'View' | 'Text'
 
 /** 跳转前触发，返回true可以阻止默认跳转行为 */
 export type LinkOnBefor = (to: string) => boolean
 
-export type LinkType = 'default' | 'primary' | 'warn' | 'error' | 'link' | 'pop' | 'light'
-
 export interface LinkProps extends ViewProps {
   /** 跳转链接，openmp:// 协议表示跳转指定小程序 */
   to?: string
   /** 链接样式, 默认 normal */
-  type?: LinkType
+  type?: ButtonType
   /** 是否使用替换方式跳转 */
   replace?: boolean
   /** 渲染的标签类型 */

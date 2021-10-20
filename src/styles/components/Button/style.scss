@@ -229,6 +229,20 @@ $prefix: xrk-btn;
     }
   }
 
+  &-stop {
+    background-color: $disable;
+    color: $text1;
+
+    &.#{$prefix}-ghost {
+      border-color: $disable;
+      color: $disable;
+    }
+
+    &.#{$prefix}-disabled {
+      opacity: 1;
+    }
+  }
+
   &-block {
     display: flex !important;
     width: 100% !important;

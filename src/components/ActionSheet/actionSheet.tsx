@@ -4,7 +4,6 @@ import classNames from 'classnames'
 import React, { useMemo } from 'react'
 import { ITouchEvent } from '../../types'
 import Drawer from '../Drawer'
-import Icon from '../Icon/index.h5'
 import { ActionSheetItem } from './item'
 
 
@@ -82,9 +81,7 @@ const ActionSheet: React.FC<ActionSheetProps> = ({
             className="xrk-actionsheet-close"
             data-testid="close"
             onClick={onClose}
-          >
-            <Icon name="delete" />
-          </View>
+          />
         )}
         <View
           className="xrk-actionsheet-body"
