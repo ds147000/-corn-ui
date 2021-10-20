@@ -98,11 +98,7 @@ exports[`ActionSheet showHead: false and open close 1`] = `
       <div
         class="xrk-actionsheet-close"
         data-testid="close"
-      >
-        <i
-          class="xrk-icon xrk-i-big-close"
-        />
-      </div>
+      />
       <div
         class="xrk-actionsheet-body"
       />

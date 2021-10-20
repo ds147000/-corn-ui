@@ -19,7 +19,7 @@
     line-height: 90px;
     font-size: 32px;
     font-weight: 400;
-    color: #818894;
+    color: $text2;
     position: relative;
     flex: 1;
     text-align: center;
@@ -36,7 +36,7 @@
     &-active {
       font-size: 38px;
       font-weight: bold;
-      color: #242629;
+      color: $text1;
       position: relative;
       z-index: 1;
 
@@ -71,7 +71,7 @@
         content: '';
         width: 16px;
         height: 16px;
-        background: #ff4f4f;
+        background: $urgent;
         border-radius: 16px;
         position: absolute;
         right: -20px;
