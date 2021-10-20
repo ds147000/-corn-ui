@@ -142,16 +142,19 @@ exports[`option of button 1`] = `
   >
     <button
       class="xrk-btn xrk-if xrk-ac xrk-jc xrk-btn-middle xrk-btn-light"
+      type="button"
     >
       item1
     </button>
     <button
       class="xrk-btn xrk-if xrk-ac xrk-jc xrk-btn-middle xrk-btn-primary __active"
+      type="button"
     >
       item2
     </button>
     <button
       class="xrk-btn xrk-if xrk-ac xrk-jc xrk-btn-middle xrk-btn-light"
+      type="button"
     >
       item4
     </button>

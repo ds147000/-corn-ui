@@ -32,6 +32,7 @@ exports[`Checkbox 基础 按钮类型 1`] = `
     />
     <button
       class="xrk-btn xrk-if xrk-ac xrk-jc xrk-btn-middle xrk-btn-default"
+      type="button"
     >
       商品链接
     </button>
@@ -52,6 +53,7 @@ exports[`Checkbox 基础 按钮类型 2`] = `
     />
     <button
       class="xrk-btn xrk-if xrk-ac xrk-jc xrk-btn-middle xrk-btn-primary"
+      type="button"
     >
       商品链接
     </button>
