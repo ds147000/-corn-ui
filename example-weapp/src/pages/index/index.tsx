@@ -13,7 +13,7 @@ import {
   Button, Toast, Drawer, showActionSheet,
   showModal, Modal, Icon, Image, Tab, Affix,
   Timer, Link, Card, Checkbox, CheckboxGroup,
-   Input
+   Input, Form
 } from '@xrkmm/ui-taro'
 import './index.scss'
 
@@ -73,17 +73,27 @@ export default class Index extends Component {
     this.setState({ show: false })
   }
 
+  onSubmit(data) {
+    console.log(data)
+  }
+
+  onReset() {
+    console.log('重置')
+  }
+
   render() {
     return (
       <View className='index'>
-        <Input />
+        <Form onSubmit={this.onSubmit} onReset={this.onReset} >
+        <Input name="name" />
+          <Checkbox name="check" >Boolean</Checkbox>
         <Tab
           options={TabOption}
           currenIndex={this.state.current}
           onChange={(index) => this.setState({ current: index })}
         />
         <Card>
-        <CheckboxGroup>
+        <CheckboxGroup name="shop1" >
           <Checkbox value="1">联合复选框1</Checkbox>
           <Checkbox value="2">联合复选框4</Checkbox>
           <Checkbox value="3">联合复选框3</Checkbox>
@@ -91,7 +101,7 @@ export default class Index extends Component {
         </CheckboxGroup>
       </Card>
       <Card>
-        <CheckboxGroup radio >
+        <CheckboxGroup radio name="shop2" >
           <Checkbox value="1" >单选模式1</Checkbox>
           <Checkbox value="2" >单选模式2</Checkbox>
           <Checkbox value="3" >单选模式3</Checkbox>
@@ -99,7 +109,7 @@ export default class Index extends Component {
         </CheckboxGroup>
       </Card>
       <Card>
-        <CheckboxGroup radio >
+        <CheckboxGroup radio name="shop3" >
           <Checkbox value="1" type="button" >单选模式1</Checkbox>
           <Checkbox value="2" type="button" >单选模式2</Checkbox>
           <Checkbox value="3" type="button" >单选模式3</Checkbox>
@@ -107,7 +117,7 @@ export default class Index extends Component {
         </CheckboxGroup>
       </Card>
       <Card>
-        <CheckboxGroup ref={this.checkGroupRef} >
+        <CheckboxGroup ref={this.checkGroupRef} name="shop4" >
           <Checkbox value="1">单选模式1</Checkbox>
           <Checkbox value="2">单选模式2</Checkbox>
           <Checkbox value="3">单选模式3</Checkbox>
@@ -192,7 +202,10 @@ export default class Index extends Component {
         <Image src='https://t7.baidu.com/it/u=1595072465,3644073269&fm=193&f=GIF' lazyLoad />
         <Affix position='bottom'>
           <Button size='max' icon={<Icon name='service' />}>图标按钮</Button>
+          <Button size='max' type="warn" formType="submit" >提交</Button>
+          <Button size='max' type="link" formType="reset" >重置</Button>
         </Affix>
+        </Form>
       </View>
     )
   }

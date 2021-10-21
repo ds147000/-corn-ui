@@ -40,7 +40,7 @@ describe('Checkbox', () => {
     expect(screen.getByTestId('check'))
   })
 
-  test('操作', () => {
+  test('操作2', () => {
     const onChange = jest.fn()
     const screen = render(<Checkbox onChange={onChange} >商品链接</Checkbox>)
     fireEvent.click(screen.getByText('商品链接'))
@@ -48,7 +48,7 @@ describe('Checkbox', () => {
     expect(onChange.mock.calls[0][0]).toBe(true)
   })
 
-  test('操作', () => {
+  test('操作3', () => {
     const onChange = jest.fn()
     const screen = render(<Checkbox onChange={onChange} defaultChecked={true} >商品链接</Checkbox>)
     fireEvent.click(screen.getByText('商品链接'))
@@ -82,17 +82,16 @@ describe('Checkbox', () => {
         num.current += 1
         if (num.current % 2 === 0) setCheck(!check)
       }
-
       return (<Checkbox check={check} onChange={onChange} >商品链接</Checkbox>)
     }
 
     const screen = render(<App />)
     fireEvent.click(screen.getByText('商品链接'))
-    await waitFor(() => expect(screen.getByTestId('check').getAttribute('value')).toBe('0'))
+    await waitFor(() => expect(screen.getByTestId('check').getAttribute('value')).toBe('false'))
     fireEvent.click(screen.getByText('商品链接'))
+    await waitFor(() => expect(screen.getByTestId('check').getAttribute('value')).toBe('true'))
     fireEvent.click(screen.getByText('商品链接'))
-    await waitFor(() => expect(screen.getByTestId('check').getAttribute('value')).toBe('1'))
-    await waitFor(() => expect(screen.getByTestId('check').getAttribute('value')).toBe('1'))
+    await waitFor(() => expect(screen.getByTestId('check').getAttribute('value')).toBe('true'))
   })
 })
 

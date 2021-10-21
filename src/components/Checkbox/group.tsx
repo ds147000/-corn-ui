@@ -1,3 +1,4 @@
+/* eslint-disable no-magic-numbers */
 import React from 'react'
 import {
   View,
@@ -124,6 +125,15 @@ class CheckBoxGroup extends React.Component<CheckBoxGroupProps, CheckBoxContextV
   }
   // #endif
 
+  private geiHideInputValue(): string {
+    if (!this.props.radio)
+      return JSON.stringify(this.state.values)
+    else if (this.state.values?.length)
+      return JSON.stringify(this.state.values[0])
+
+    return ''
+  }
+
   render(): JSX.Element {
     const ProviderValue: CheckBoxContextValue = {
       values: this.state.values,
@@ -133,14 +143,14 @@ class CheckBoxGroup extends React.Component<CheckBoxGroupProps, CheckBoxContextV
     const { children, radio, ...props } = this.props
 
     let input: JSX.Element
+
     // #if _APP === 'weapp'
     input = (
       <Input
         className="xrk-checkbox-group-hide"
-        value={String(this.state.values)}
+        value={this.geiHideInputValue()}
         name={props.name}
         data-testid="check"
-        data-type={radio ? 'radio' : 'checkbox'}
       />
     )
     // #else
@@ -148,10 +158,9 @@ class CheckBoxGroup extends React.Component<CheckBoxGroupProps, CheckBoxContextV
     // eslint-disable-next-line react/forbid-elements
       <input
         className="xrk-checkbox-group-hide"
-        value={String(this.state.values)}
+        value={this.geiHideInputValue()}
         name={props.name}
         data-testid="check"
-        data-type={radio ? 'radio' : 'checkbox'}
         readOnly
       />
     )

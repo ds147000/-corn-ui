@@ -4,6 +4,7 @@ import userEvent from '@testing-library/user-event'
 import Form from '../index.h5'
 import Input from '../../Input'
 import Checkbox from '../../Checkbox/checkbox'
+import CheckboxGroup from '../../Checkbox/group'
 import Button from '../../Button'
 
 describe('Form', () => {
@@ -12,6 +13,7 @@ describe('Form', () => {
       <Form>
         <Input />
         <Checkbox />
+
       </Form>
     )
 
@@ -24,15 +26,24 @@ describe('Form', () => {
     const screen = render(
       <Form>
         <Input value="123" />
-        <Checkbox check />
+        <Checkbox check>男</Checkbox>
+        <CheckboxGroup name="age" >
+          <Checkbox value="1">1</Checkbox>
+          <Checkbox value="2">2</Checkbox>
+          <Checkbox value="3">3</Checkbox>
+        </CheckboxGroup>
+        <CheckboxGroup name="study" radio >
+          <Checkbox value="1">大学</Checkbox>
+          <Checkbox value="2">小学</Checkbox>
+        </CheckboxGroup>
       </Form>
     )
 
     const input = screen.getByTestId('input') as HTMLInputElement
     expect(input.value).toBe("123")
 
-    const check = screen.getByTestId('check') as HTMLInputElement
-    expect(check.value).toBe("1")
+    const check = screen.getByText('男').querySelector('input') as HTMLInputElement
+    expect(check.value).toBe("true")
 
     expect(screen.container).toMatchSnapshot()
   })
@@ -41,15 +52,24 @@ describe('Form', () => {
     const screen = render(
       <Form defaultValue={{ name: '小明', sex: false }} >
         <Input name="name" />
-        <Checkbox name="sex" />
+        <Checkbox name="sex">男</Checkbox>
+        <CheckboxGroup name="age" >
+          <Checkbox value="1">1</Checkbox>
+          <Checkbox value="2">2</Checkbox>
+          <Checkbox value="3">3</Checkbox>
+        </CheckboxGroup>
+        <CheckboxGroup name="study" radio >
+          <Checkbox value="1">大学</Checkbox>
+          <Checkbox value="2">小学</Checkbox>
+        </CheckboxGroup>
       </Form>
     )
 
     const input = screen.getByTestId('input') as HTMLInputElement
     expect(input.value).toBe("小明")
 
-    const check = screen.getByTestId('check') as HTMLInputElement
-    expect(check.value).toBe("0")
+    const check = screen.getByText('男').querySelector('input') as HTMLInputElement
+    expect(check.value).toBe("false")
 
     expect(screen.container).toMatchSnapshot()
   })
@@ -65,7 +85,16 @@ describe('Form', () => {
       return (
         <Form defaultValue={value} >
           <Input name="name" />
-          <Checkbox name="sex" />
+          <Checkbox name="sex">男</Checkbox>
+          <CheckboxGroup name="age" >
+            <Checkbox value="1">1</Checkbox>
+            <Checkbox value="2">2</Checkbox>
+            <Checkbox value="3">3</Checkbox>
+          </CheckboxGroup>
+          <CheckboxGroup name="study" radio >
+            <Checkbox value="1">大学</Checkbox>
+            <Checkbox value="2">小学</Checkbox>
+          </CheckboxGroup>
         </Form>
       )
     }
@@ -77,8 +106,8 @@ describe('Form', () => {
     const input = screen.getByTestId('input') as HTMLInputElement
     expect(input.value).toBe("小明")
 
-    const check = screen.getByTestId('check') as HTMLInputElement
-    expect(check.value).toBe("0")
+    const check = screen.getByText('男').querySelector('input') as HTMLInputElement
+    expect(check.value).toBe("false")
 
     expect(screen.container).toMatchSnapshot()
   })
@@ -90,7 +119,16 @@ describe('Form', () => {
     const screen = render(
       <Form onSubmit={onSubmit} >
         <Input name="name" />
-        <Checkbox name="sex" />
+        <Checkbox name="sex">男</Checkbox>
+        <CheckboxGroup name="age" >
+          <Checkbox value="1">100</Checkbox>
+          <Checkbox value="2">200</Checkbox>
+          <Checkbox value="3">300</Checkbox>
+        </CheckboxGroup>
+        <CheckboxGroup name="study" radio >
+          <Checkbox value="1">大学</Checkbox>
+          <Checkbox value="2">小学</Checkbox>
+        </CheckboxGroup>
         <Button formType="submit" >提交</Button>
       </Form>
     )
@@ -98,10 +136,12 @@ describe('Form', () => {
     const input = screen.getByTestId('input') as HTMLInputElement
     userEvent.type(input, 'hello wrold')
 
-    const check = screen.getByTestId('xrk-checkbox') as HTMLInputElement
+    const check = screen.getByText('男') as HTMLInputElement
     userEvent.click(check)
+    userEvent.click(screen.getByText('100'))
+    userEvent.click(screen.getByText('大学'))
     userEvent.click(screen.getByText('提交'))
-    expect(onSubmit.mock.calls[0][0]).toEqual({ name: 'hello wrold', sex: true })
+    expect(onSubmit.mock.calls[0][0]).toEqual({ name: 'hello wrold', sex: true, age: ['1'], study: '1' })
   })
 
   test('具有初始化值的提交', () => {
@@ -110,7 +150,16 @@ describe('Form', () => {
     const screen = render(
       <Form onSubmit={onSubmit} defaultValue={{ name: '1', sex: false }} >
         <Input name="name" />
-        <Checkbox name="sex" />
+        <Checkbox name="sex">男</Checkbox>
+        <CheckboxGroup name="age" >
+          <Checkbox value="1">100</Checkbox>
+          <Checkbox value="2">200</Checkbox>
+          <Checkbox value="3">300</Checkbox>
+        </CheckboxGroup>
+        <CheckboxGroup name="study" radio >
+          <Checkbox value="1">大学</Checkbox>
+          <Checkbox value="2">小学</Checkbox>
+        </CheckboxGroup>
         <Button formType="submit" >提交</Button>
       </Form>
     )
@@ -118,10 +167,12 @@ describe('Form', () => {
     const input = screen.getByTestId('input') as HTMLInputElement
     userEvent.type(input, 'hello wrold')
 
-    const check = screen.getByTestId('xrk-checkbox') as HTMLInputElement
+    const check = screen.getByText('男') as HTMLInputElement
     userEvent.click(check)
+    userEvent.click(screen.getByText('100'))
+    userEvent.click(screen.getByText('大学'))
     userEvent.click(screen.getByText('提交'))
-    expect(onSubmit.mock.calls[0][0]).toEqual({ name: '1hello wrold', sex: true })
+    expect(onSubmit.mock.calls[0][0]).toEqual({ name: '1hello wrold', sex: true, age: ['1'], study: '1' })
   })
 
 
@@ -131,7 +182,16 @@ describe('Form', () => {
     const screen = render(
       <Form onSubmit={onSubmit} >
         <Input name="name" value="1234567" onInput={() => {}} />
-        <Checkbox name="sex" check={false} />
+        <Checkbox name="sex" check={false} >男</Checkbox>
+        <CheckboxGroup name="age" >
+          <Checkbox value="1">100</Checkbox>
+          <Checkbox value="2">200</Checkbox>
+          <Checkbox value="3">300</Checkbox>
+        </CheckboxGroup>
+        <CheckboxGroup name="study" radio >
+          <Checkbox value="1">大学</Checkbox>
+          <Checkbox value="2">小学</Checkbox>
+        </CheckboxGroup>
         <Button formType="submit" >提交</Button>
       </Form>
     )
@@ -139,10 +199,12 @@ describe('Form', () => {
     const input = screen.getByTestId('input') as HTMLInputElement
     userEvent.type(input, 'hello wrold')
 
-    const check = screen.getByTestId('xrk-checkbox') as HTMLInputElement
+    const check = screen.getByText('男') as HTMLInputElement
     userEvent.click(check)
+    userEvent.click(screen.getByText('200'))
+    userEvent.click(screen.getByText('大学'))
     userEvent.click(screen.getByText('提交'))
-    expect(onSubmit.mock.calls[0][0]).toEqual({ name: '1234567', sex: false })
+    expect(onSubmit.mock.calls[0][0]).toEqual({ name: '1234567', sex: false, age: ['2'], study: '1' })
   })
 
   test('重置', () => {
@@ -151,7 +213,16 @@ describe('Form', () => {
     const screen = render(
       <Form onSubmit={onSubmit} defaultValue={{ name: '1', sex: false }} >
         <Input name="name" />
-        <Checkbox name="sex" />
+        <Checkbox name="sex">男</Checkbox>
+        <CheckboxGroup name="age" >
+          <Checkbox value="1">100</Checkbox>
+          <Checkbox value="2">200</Checkbox>
+          <Checkbox value="3">300</Checkbox>
+        </CheckboxGroup>
+        <CheckboxGroup name="study" radio >
+          <Checkbox value="1">大学</Checkbox>
+          <Checkbox value="2">小学</Checkbox>
+        </CheckboxGroup>
         <Button formType="submit" >提交</Button>
         <Button formType="reset" >重置</Button>
       </Form>
@@ -160,11 +231,13 @@ describe('Form', () => {
     const input = screen.getByTestId('input') as HTMLInputElement
     userEvent.type(input, 'hello wrold')
 
-    const check = screen.getByTestId('xrk-checkbox') as HTMLInputElement
+    const check = screen.getByText('男') as HTMLInputElement
     userEvent.click(check)
+    userEvent.click(screen.getByText('200'))
+    userEvent.click(screen.getByText('大学'))
     userEvent.click(screen.getByText('重置'))
     userEvent.click(screen.getByText('提交'))
-    expect(onSubmit.mock.calls[0][0]).toEqual({ name: '', sex: false })
+    expect(onSubmit.mock.calls[0][0]).toEqual({ name: '', sex: false, age: [], study: '' })
   })
 
   test('实例使用-提交', () => {
@@ -174,17 +247,28 @@ describe('Form', () => {
     const screen = render(
       <Form onSubmit={onSubmit} ref={form} >
         <Input name="name" />
-        <Checkbox name="sex" />
+        <Checkbox name="sex">男</Checkbox>
+        <CheckboxGroup name="age" >
+          <Checkbox value="1">100</Checkbox>
+          <Checkbox value="2">200</Checkbox>
+          <Checkbox value="3">300</Checkbox>
+        </CheckboxGroup>
+        <CheckboxGroup name="study" radio >
+          <Checkbox value="1">大学</Checkbox>
+          <Checkbox value="2">小学</Checkbox>
+        </CheckboxGroup>
       </Form>
     )
 
     const input = screen.getByTestId('input') as HTMLInputElement
     userEvent.type(input, 'hello wrold')
 
-    const check = screen.getByTestId('xrk-checkbox') as HTMLInputElement
+    const check = screen.getByText('男') as HTMLInputElement
     userEvent.click(check)
+    userEvent.click(screen.getByText('200'))
+    userEvent.click(screen.getByText('大学'))
     form.current.submit()
-    expect(onSubmit.mock.calls[0][0]).toEqual({ name: 'hello wrold', sex: true })
+    expect(onSubmit.mock.calls[0][0]).toEqual({ name: 'hello wrold', sex: true, age: ['2'], study: '1' })
   })
 
   test('实例使用-重置', () => {
@@ -194,18 +278,29 @@ describe('Form', () => {
     const screen = render(
       <Form onSubmit={onSubmit} ref={form} >
         <Input name="name" />
-        <Checkbox name="sex" />
+        <Checkbox name="sex">男</Checkbox>
+        <CheckboxGroup name="age" >
+          <Checkbox value="1">100</Checkbox>
+          <Checkbox value="2">200</Checkbox>
+          <Checkbox value="3">300</Checkbox>
+        </CheckboxGroup>
+        <CheckboxGroup name="study" radio >
+          <Checkbox value="1">大学</Checkbox>
+          <Checkbox value="2">小学</Checkbox>
+        </CheckboxGroup>
       </Form>
     )
 
     const input = screen.getByTestId('input') as HTMLInputElement
     userEvent.type(input, 'hello wrold')
 
-    const check = screen.getByTestId('xrk-checkbox') as HTMLInputElement
+    const check = screen.getByText('男') as HTMLInputElement
     userEvent.click(check)
+    userEvent.click(screen.getByText('200'))
+    userEvent.click(screen.getByText('小学'))
     form.current.reset()
     form.current.submit()
-    expect(onSubmit.mock.calls[0][0]).toEqual({ sex: false, name: '' })
+    expect(onSubmit.mock.calls[0][0]).toEqual({ sex: false, name: '', age: [], study: '' })
   })
 
   test('实例使用-获取值', () => {
@@ -215,16 +310,25 @@ describe('Form', () => {
     const screen = render(
       <Form onSubmit={onSubmit} ref={form} >
         <Input name="name" />
-        <Checkbox name="sex" />
+        <Checkbox name="sex">男</Checkbox>
+        <CheckboxGroup name="age" >
+          <Checkbox value="1">100</Checkbox>
+          <Checkbox value="2">200</Checkbox>
+          <Checkbox value="3">300</Checkbox>
+        </CheckboxGroup>
+        <CheckboxGroup name="study" radio >
+          <Checkbox value="1">大学</Checkbox>
+          <Checkbox value="2">小学</Checkbox>
+        </CheckboxGroup>
       </Form>
     )
 
     const input = screen.getByTestId('input') as HTMLInputElement
     userEvent.type(input, 'hello wrold')
 
-    const check = screen.getByTestId('xrk-checkbox') as HTMLInputElement
+    const check = screen.getByText('男') as HTMLInputElement
     userEvent.click(check)
-    expect(form.current.getValue()).toEqual({ name: 'hello wrold', sex: true })
+    expect(form.current.getValue()).toEqual({ name: 'hello wrold', sex: true, age: [], study: '' })
   })
 
   test('实例使用-设置值', () => {
@@ -234,12 +338,21 @@ describe('Form', () => {
     render(
       <Form onSubmit={onSubmit} ref={form} >
         <Input name="name" />
-        <Checkbox name="sex" />
+        <Checkbox name="sex">男</Checkbox>
+        <CheckboxGroup name="age" >
+          <Checkbox value="1">100</Checkbox>
+          <Checkbox value="2">200</Checkbox>
+          <Checkbox value="3">300</Checkbox>
+        </CheckboxGroup>
+        <CheckboxGroup name="study" radio >
+          <Checkbox value="1">大学</Checkbox>
+          <Checkbox value="2">小学</Checkbox>
+        </CheckboxGroup>
       </Form>
     )
-    form.current.setValue({ name: 'hello wrold', sex: true })
+    form.current.setValue({ name: 'hello wrold', sex: true, age: ['2'], study: '1'})
     form.current.submit()
-    expect(onSubmit.mock.calls[0][0]).toEqual({ name: 'hello wrold', sex: true })
+    expect(onSubmit.mock.calls[0][0]).toEqual({ name: 'hello wrold', sex: true, age: ['2'], study: '1' })
   })
 })
 

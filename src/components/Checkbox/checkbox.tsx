@@ -56,8 +56,8 @@ const CheckBox: React.FC<CheckBoxProps> = ({
   const isDefualtStyle = type === 'default'
   /** 外部是否存在包裹组 */
   const isGroup = Boolean(context.onCheck)
-  /** 控制值 */
-  const _value = value || String(Number(controllCheck))
+  /** 表单值 */
+  const _value = value || JSON.stringify(controllCheck)
   /** 控制表单名称 */
   const _name  = isGroup ? '' : name
 
@@ -70,7 +70,7 @@ const CheckBox: React.FC<CheckBoxProps> = ({
 
   let input: JSX.Element | null = null
   // #if _APP === 'weapp'
-  input = <Input className="xrk-checkbox-hide" data-type="boolean" value={_value} name={_name} data-testid="check" />
+  input = <Input className="xrk-checkbox-hide" value={_value} name={_name} data-testid="check" />
   // #else
   input = (
   // eslint-disable-next-line react/forbid-elements
@@ -79,7 +79,6 @@ const CheckBox: React.FC<CheckBoxProps> = ({
       value={_value}
       name={_name}
       data-testid="check"
-      data-type="boolean"
       readOnly
     />
   )

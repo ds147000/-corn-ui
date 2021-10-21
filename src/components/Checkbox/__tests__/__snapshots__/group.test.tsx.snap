@@ -8,9 +8,8 @@ exports[`单选模式 1`] = `
     <input
       class="xrk-checkbox-group-hide"
       data-testid="check"
-      data-type="radio"
       readonly=""
-      value="4"
+      value="\\"4\\""
     />
     <div
       class="xrk-if xrk-ac xrk-checkbox"
@@ -19,7 +18,6 @@ exports[`单选模式 1`] = `
       <input
         class="xrk-checkbox-hide"
         data-testid="check"
-        data-type="boolean"
         name=""
         readonly=""
         value="1"
@@ -36,7 +34,6 @@ exports[`单选模式 1`] = `
       <input
         class="xrk-checkbox-hide"
         data-testid="check"
-        data-type="boolean"
         name=""
         readonly=""
         value="2"
@@ -53,7 +50,6 @@ exports[`单选模式 1`] = `
       <input
         class="xrk-checkbox-hide"
         data-testid="check"
-        data-type="boolean"
         name=""
         readonly=""
         value="3"
@@ -70,7 +66,6 @@ exports[`单选模式 1`] = `
       <input
         class="xrk-checkbox-hide"
         data-testid="check"
-        data-type="boolean"
         name=""
         readonly=""
         value="4"
@@ -92,9 +87,8 @@ exports[`取消选中 1`] = `
     <input
       class="xrk-checkbox-group-hide"
       data-testid="check"
-      data-type="checkbox"
       readonly=""
-      value=""
+      value="[]"
     />
     <div
       class="xrk-if xrk-ac xrk-checkbox"
@@ -103,7 +97,6 @@ exports[`取消选中 1`] = `
       <input
         class="xrk-checkbox-hide"
         data-testid="check"
-        data-type="boolean"
         name=""
         readonly=""
         value="1"
@@ -120,7 +113,6 @@ exports[`取消选中 1`] = `
       <input
         class="xrk-checkbox-hide"
         data-testid="check"
-        data-type="boolean"
         name=""
         readonly=""
         value="2"
@@ -142,9 +134,8 @@ exports[`取消选中 和默认值 1`] = `
     <input
       class="xrk-checkbox-group-hide"
       data-testid="check"
-      data-type="checkbox"
       readonly=""
-      value=""
+      value="[]"
     />
     <div
       class="xrk-if xrk-ac xrk-checkbox"
@@ -153,7 +144,6 @@ exports[`取消选中 和默认值 1`] = `
       <input
         class="xrk-checkbox-hide"
         data-testid="check"
-        data-type="boolean"
         name=""
         readonly=""
         value="1"
@@ -170,7 +160,6 @@ exports[`取消选中 和默认值 1`] = `
       <input
         class="xrk-checkbox-hide"
         data-testid="check"
-        data-type="boolean"
         name=""
         readonly=""
         value="2"
@@ -192,9 +181,8 @@ exports[`基本使用 1`] = `
     <input
       class="xrk-checkbox-group-hide"
       data-testid="check"
-      data-type="checkbox"
       readonly=""
-      value=""
+      value="[]"
     />
     <div
       class="xrk-if xrk-ac xrk-checkbox"
@@ -203,7 +191,6 @@ exports[`基本使用 1`] = `
       <input
         class="xrk-checkbox-hide"
         data-testid="check"
-        data-type="boolean"
         name=""
         readonly=""
         value="1"
@@ -220,7 +207,6 @@ exports[`基本使用 1`] = `
       <input
         class="xrk-checkbox-hide"
         data-testid="check"
-        data-type="boolean"
         name=""
         readonly=""
         value="2"
@@ -242,9 +228,8 @@ exports[`选中 1`] = `
     <input
       class="xrk-checkbox-group-hide"
       data-testid="check"
-      data-type="checkbox"
       readonly=""
-      value="1,2"
+      value="[\\"1\\",\\"2\\"]"
     />
     <div
       class="xrk-if xrk-ac xrk-checkbox-active xrk-checkbox"
@@ -253,7 +238,6 @@ exports[`选中 1`] = `
       <input
         class="xrk-checkbox-hide"
         data-testid="check"
-        data-type="boolean"
         name=""
         readonly=""
         value="1"
@@ -270,7 +254,6 @@ exports[`选中 1`] = `
       <input
         class="xrk-checkbox-hide"
         data-testid="check"
-        data-type="boolean"
         name=""
         readonly=""
         value="2"

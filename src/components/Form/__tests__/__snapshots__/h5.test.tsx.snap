@@ -6,6 +6,7 @@ exports[`Form 初始化值 1`] = `
     <input
       class="weui-input xrk-input"
       data-testid="input"
+      data-type="input"
       name="name"
       type="text"
       value="小明"
@@ -17,7 +18,6 @@ exports[`Form 初始化值 1`] = `
       <input
         class="xrk-checkbox-hide"
         data-testid="check"
-        data-type="boolean"
         name="sex"
         readonly=""
         value="false"
@@ -25,6 +25,111 @@ exports[`Form 初始化值 1`] = `
       <i
         class="xrk-icon xrk-i-radio"
       />
+      男
+    </div>
+    <div
+      class=""
+      name="age"
+    >
+      <input
+        class="xrk-checkbox-group-hide"
+        data-testid="check"
+        name="age"
+        readonly=""
+        value="[]"
+      />
+      <div
+        class="xrk-if xrk-ac xrk-checkbox"
+        data-testid="xrk-checkbox"
+      >
+        <input
+          class="xrk-checkbox-hide"
+          data-testid="check"
+          name=""
+          readonly=""
+          value="1"
+        />
+        <i
+          class="xrk-icon xrk-i-radio"
+        />
+        1
+      </div>
+      <div
+        class="xrk-if xrk-ac xrk-checkbox"
+        data-testid="xrk-checkbox"
+      >
+        <input
+          class="xrk-checkbox-hide"
+          data-testid="check"
+          name=""
+          readonly=""
+          value="2"
+        />
+        <i
+          class="xrk-icon xrk-i-radio"
+        />
+        2
+      </div>
+      <div
+        class="xrk-if xrk-ac xrk-checkbox"
+        data-testid="xrk-checkbox"
+      >
+        <input
+          class="xrk-checkbox-hide"
+          data-testid="check"
+          name=""
+          readonly=""
+          value="3"
+        />
+        <i
+          class="xrk-icon xrk-i-radio"
+        />
+        3
+      </div>
+    </div>
+    <div
+      class=""
+      name="study"
+    >
+      <input
+        class="xrk-checkbox-group-hide"
+        data-testid="check"
+        name="study"
+        readonly=""
+        value=""
+      />
+      <div
+        class="xrk-if xrk-ac xrk-checkbox"
+        data-testid="xrk-checkbox"
+      >
+        <input
+          class="xrk-checkbox-hide"
+          data-testid="check"
+          name=""
+          readonly=""
+          value="1"
+        />
+        <i
+          class="xrk-icon xrk-i-radio"
+        />
+        大学
+      </div>
+      <div
+        class="xrk-if xrk-ac xrk-checkbox"
+        data-testid="xrk-checkbox"
+      >
+        <input
+          class="xrk-checkbox-hide"
+          data-testid="check"
+          name=""
+          readonly=""
+          value="2"
+        />
+        <i
+          class="xrk-icon xrk-i-radio"
+        />
+        小学
+      </div>
     </div>
   </form>
 </div>
@@ -36,6 +141,7 @@ exports[`Form 改变初始化值 1`] = `
     <input
       class="weui-input xrk-input"
       data-testid="input"
+      data-type="input"
       name="name"
       type="text"
       value="小明"
@@ -47,7 +153,6 @@ exports[`Form 改变初始化值 1`] = `
       <input
         class="xrk-checkbox-hide"
         data-testid="check"
-        data-type="boolean"
         name="sex"
         readonly=""
         value="false"
@@ -55,6 +160,111 @@ exports[`Form 改变初始化值 1`] = `
       <i
         class="xrk-icon xrk-i-radio"
       />
+      男
+    </div>
+    <div
+      class=""
+      name="age"
+    >
+      <input
+        class="xrk-checkbox-group-hide"
+        data-testid="check"
+        name="age"
+        readonly=""
+        value="[]"
+      />
+      <div
+        class="xrk-if xrk-ac xrk-checkbox"
+        data-testid="xrk-checkbox"
+      >
+        <input
+          class="xrk-checkbox-hide"
+          data-testid="check"
+          name=""
+          readonly=""
+          value="1"
+        />
+        <i
+          class="xrk-icon xrk-i-radio"
+        />
+        1
+      </div>
+      <div
+        class="xrk-if xrk-ac xrk-checkbox"
+        data-testid="xrk-checkbox"
+      >
+        <input
+          class="xrk-checkbox-hide"
+          data-testid="check"
+          name=""
+          readonly=""
+          value="2"
+        />
+        <i
+          class="xrk-icon xrk-i-radio"
+        />
+        2
+      </div>
+      <div
+        class="xrk-if xrk-ac xrk-checkbox"
+        data-testid="xrk-checkbox"
+      >
+        <input
+          class="xrk-checkbox-hide"
+          data-testid="check"
+          name=""
+          readonly=""
+          value="3"
+        />
+        <i
+          class="xrk-icon xrk-i-radio"
+        />
+        3
+      </div>
+    </div>
+    <div
+      class=""
+      name="study"
+    >
+      <input
+        class="xrk-checkbox-group-hide"
+        data-testid="check"
+        name="study"
+        readonly=""
+        value=""
+      />
+      <div
+        class="xrk-if xrk-ac xrk-checkbox"
+        data-testid="xrk-checkbox"
+      >
+        <input
+          class="xrk-checkbox-hide"
+          data-testid="check"
+          name=""
+          readonly=""
+          value="1"
+        />
+        <i
+          class="xrk-icon xrk-i-radio"
+        />
+        大学
+      </div>
+      <div
+        class="xrk-if xrk-ac xrk-checkbox"
+        data-testid="xrk-checkbox"
+      >
+        <input
+          class="xrk-checkbox-hide"
+          data-testid="check"
+          name=""
+          readonly=""
+          value="2"
+        />
+        <i
+          class="xrk-icon xrk-i-radio"
+        />
+        小学
+      </div>
     </div>
   </form>
 </div>
@@ -66,6 +276,7 @@ exports[`Form 渲染 1`] = `
     <input
       class="weui-input xrk-input"
       data-testid="input"
+      data-type="input"
       type="text"
     />
     <div
@@ -75,9 +286,8 @@ exports[`Form 渲染 1`] = `
       <input
         class="xrk-checkbox-hide"
         data-testid="check"
-        data-type="boolean"
         readonly=""
-        value="0"
+        value="false"
       />
       <i
         class="xrk-icon xrk-i-radio"
@@ -93,6 +303,7 @@ exports[`Form 自带值 1`] = `
     <input
       class="weui-input xrk-input"
       data-testid="input"
+      data-type="input"
       type="text"
       value="123"
     />
@@ -103,13 +314,117 @@ exports[`Form 自带值 1`] = `
       <input
         class="xrk-checkbox-hide"
         data-testid="check"
-        data-type="boolean"
         readonly=""
-        value="1"
+        value="true"
       />
       <i
         class="xrk-icon xrk-i-fill-select"
       />
+      男
+    </div>
+    <div
+      class=""
+      name="age"
+    >
+      <input
+        class="xrk-checkbox-group-hide"
+        data-testid="check"
+        name="age"
+        readonly=""
+        value="[]"
+      />
+      <div
+        class="xrk-if xrk-ac xrk-checkbox"
+        data-testid="xrk-checkbox"
+      >
+        <input
+          class="xrk-checkbox-hide"
+          data-testid="check"
+          name=""
+          readonly=""
+          value="1"
+        />
+        <i
+          class="xrk-icon xrk-i-radio"
+        />
+        1
+      </div>
+      <div
+        class="xrk-if xrk-ac xrk-checkbox"
+        data-testid="xrk-checkbox"
+      >
+        <input
+          class="xrk-checkbox-hide"
+          data-testid="check"
+          name=""
+          readonly=""
+          value="2"
+        />
+        <i
+          class="xrk-icon xrk-i-radio"
+        />
+        2
+      </div>
+      <div
+        class="xrk-if xrk-ac xrk-checkbox"
+        data-testid="xrk-checkbox"
+      >
+        <input
+          class="xrk-checkbox-hide"
+          data-testid="check"
+          name=""
+          readonly=""
+          value="3"
+        />
+        <i
+          class="xrk-icon xrk-i-radio"
+        />
+        3
+      </div>
+    </div>
+    <div
+      class=""
+      name="study"
+    >
+      <input
+        class="xrk-checkbox-group-hide"
+        data-testid="check"
+        name="study"
+        readonly=""
+        value=""
+      />
+      <div
+        class="xrk-if xrk-ac xrk-checkbox"
+        data-testid="xrk-checkbox"
+      >
+        <input
+          class="xrk-checkbox-hide"
+          data-testid="check"
+          name=""
+          readonly=""
+          value="1"
+        />
+        <i
+          class="xrk-icon xrk-i-radio"
+        />
+        大学
+      </div>
+      <div
+        class="xrk-if xrk-ac xrk-checkbox"
+        data-testid="xrk-checkbox"
+      >
+        <input
+          class="xrk-checkbox-hide"
+          data-testid="check"
+          name=""
+          readonly=""
+          value="2"
+        />
+        <i
+          class="xrk-icon xrk-i-radio"
+        />
+        小学
+      </div>
     </div>
   </form>
 </div>

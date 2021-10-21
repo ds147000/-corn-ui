@@ -1,6 +1,7 @@
 import React from 'react'
 import { FromContext, SetValue } from './context'
 import { FromProps } from './typing'
+import { transfromInputValue } from './utils'
 
 class Form extends React.Component<FromProps> {
   private el: HTMLFormElement
@@ -8,10 +9,10 @@ class Form extends React.Component<FromProps> {
 
   getValue = (): Record<string, unknown> => {
     const result: Record<string, unknown> = {}
-    const inputs = this.el.querySelectorAll('input') as unknown as HTMLInputElement[] || []
+    const inputs = this.el.querySelectorAll('input') as unknown as HTMLInputElement[]
 
     inputs.forEach((item) => {
-      if (item.name) result[item.name] = this._transfromInputValue(item)
+      if (item.name) result[item.name] = transfromInputValue(item.value)
     })
 
     return result
@@ -56,22 +57,6 @@ class Form extends React.Component<FromProps> {
     }
 
     this.props.onReset?.()
-  }
-
-  private _transfromInputValue = (input: HTMLInputElement): unknown => {
-    switch(input.dataset.type) {
-      case 'boolean':
-        return Boolean(Number(input.value))
-
-      case 'radio':
-        return input.value
-
-      case 'checkbox':
-        return input.value.split(',')
-
-      default:
-        return input.value
-    }
   }
 
   private _putResetCbList = (name: string, set: SetValue): void => {
