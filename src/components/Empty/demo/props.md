@@ -27,7 +27,7 @@ type: 状态展示
 ## 内置图片
  - `Empty.PRESENTED_IMAGE_DEFAULT`
 
- <img src="https://assets.xrkmm.cn/u/4000002499670412/fec0810a-501e-4875-9a7e-0e152681ae21.png" class="img-box" />
+ <img src="https://assets.xrkmm.cn/u/4000002499670412/7d17be13-fb93-4b73-9027-b50ea6e4c236.png" class="img-box" />
 <br />
 
  - `Empty.PRESENTED_IMAGE_SIMPLE`
@@ -37,9 +37,13 @@ type: 状态展示
 
  - `Empty.PRESENTED_IMAGE_HAPPY`
 
- <img src="https://assets.xrkmm.cn/u/4000002499670412/8bc1ba9b-b71d-4b77-bc86-1fd2a2f7b026.png" class="img-box" />
+ <img src="https://assets.xrkmm.cn/u/4000002499670412/d0c4ce46-2459-4e8e-a6f4-861e842aba43.png" class="img-box" />
 <br />
 
  - `Empty.PRESENTED_IMAGE_ERROR`
 
- <img src="https://assets.xrkmm.cn/u/4000002499670412/99bc2c9f-eba2-4295-8de4-3d8f52862cf6.png" class="img-box" />
+ <img src="https://assets.xrkmm.cn/u/4000002499670412/7d17be13-fb93-4b73-9027-b50ea6e4c236.png" class="img-box" />
+<br />
+
+ - `Empty.PRESENTED_IMAGE_MONEY`
+ <img src="https://assets.xrkmm.cn/u/4000002499670412/42799481-a708-4157-82bc-c32afa46df7f.png" class="img-box" />
