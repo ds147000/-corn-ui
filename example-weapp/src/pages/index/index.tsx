@@ -13,7 +13,7 @@ import {
   Button, Toast, Drawer, showActionSheet,
   showModal, Modal, Icon, Image, Tab, Affix,
   Timer, Link, Card, Checkbox, CheckboxGroup,
-   Input, Form
+   Input, Form, Textarea
 } from '@xrkmm/ui-taro'
 import './index.scss'
 
@@ -91,8 +91,10 @@ export default class Index extends Component {
     return (
       <View className='index'>
         <Form onSubmit={this.onSubmit} onReset={this.onReset} defaultValue={{ name: '1234', check: true, shop1: ['1', '2', '3'], shop2: '3' }} ref={this.form} >
+
+        <Textarea placeholder="请输入姓名" floor={<Button>提交</Button>} name="liuyan" />
         <Input name="name" />
-          <Checkbox name="check" >Boolean</Checkbox>
+        <Checkbox name="check" >Boolean</Checkbox>
         <Tab
           options={TabOption}
           currenIndex={this.state.current}

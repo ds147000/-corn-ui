@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Form 初始化值 1`] = `
+exports[`Fomr 初始化值 1`] = `
 <div>
   <form>
     <input
@@ -130,11 +130,34 @@ exports[`Form 初始化值 1`] = `
         小学
       </div>
     </div>
+    <div
+      class="xrk-textarea"
+    >
+      <textarea
+        class="xrk-textarea-conter"
+        data-testid="textarea"
+        maxlength="300"
+        name="liuyan"
+        placeholder=""
+      >
+        123456
+      </textarea>
+      <div
+        class="xrk-textarea-number"
+      >
+        6
+        /
+        300
+      </div>
+      <div
+        class="xrk-textarea-floor"
+      />
+    </div>
   </form>
 </div>
 `;
 
-exports[`Form 改变初始化值 1`] = `
+exports[`Fomr 改变初始化值 1`] = `
 <div>
   <form>
     <input
@@ -142,10 +165,10 @@ exports[`Form 改变初始化值 1`] = `
       data-testid="input"
       name="name"
       type="text"
-      value="小明"
+      value="123"
     />
     <div
-      class="xrk-if xrk-ac xrk-checkbox"
+      class="xrk-if xrk-ac xrk-checkbox-active xrk-checkbox"
       data-testid="xrk-checkbox"
     >
       <input
@@ -153,10 +176,10 @@ exports[`Form 改变初始化值 1`] = `
         data-testid="check"
         name="sex"
         readonly=""
-        value="false"
+        value="true"
       />
       <i
-        class="xrk-icon xrk-i-radio"
+        class="xrk-icon xrk-i-fill-select"
       />
       男
     </div>
@@ -264,11 +287,34 @@ exports[`Form 改变初始化值 1`] = `
         小学
       </div>
     </div>
+    <div
+      class="xrk-textarea"
+    >
+      <textarea
+        class="xrk-textarea-conter"
+        data-testid="textarea"
+        maxlength="300"
+        name="liuyan"
+        placeholder=""
+      >
+        456
+      </textarea>
+      <div
+        class="xrk-textarea-number"
+      >
+        3
+        /
+        300
+      </div>
+      <div
+        class="xrk-textarea-floor"
+      />
+    </div>
   </form>
 </div>
 `;
 
-exports[`Form 渲染 1`] = `
+exports[`Fomr 渲染 1`] = `
 <div>
   <form>
     <input
@@ -291,11 +337,31 @@ exports[`Form 渲染 1`] = `
         class="xrk-icon xrk-i-radio"
       />
     </div>
+    <div
+      class="xrk-textarea"
+    >
+      <textarea
+        class="xrk-textarea-conter"
+        data-testid="textarea"
+        maxlength="300"
+        placeholder=""
+      />
+      <div
+        class="xrk-textarea-number"
+      >
+        0
+        /
+        300
+      </div>
+      <div
+        class="xrk-textarea-floor"
+      />
+    </div>
   </form>
 </div>
 `;
 
-exports[`Form 自带值 1`] = `
+exports[`Fomr 自带值 1`] = `
 <div>
   <form>
     <input
@@ -422,6 +488,27 @@ exports[`Form 自带值 1`] = `
         />
         小学
       </div>
+    </div>
+    <div
+      class="xrk-textarea"
+    >
+      <textarea
+        class="xrk-textarea-conter"
+        data-testid="textarea"
+        maxlength="300"
+        name="liuyan"
+        placeholder=""
+      />
+      <div
+        class="xrk-textarea-number"
+      >
+        0
+        /
+        300
+      </div>
+      <div
+        class="xrk-textarea-floor"
+      />
     </div>
   </form>
 </div>

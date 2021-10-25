@@ -8,7 +8,8 @@
 import {
   Button, Toast, Drawer, ActionSheet, showActionSheet,
   Modal, showModal, Empty, Image, Tab, Tag, Affix, Timer, Link,
-  Cell, Card, Checkbox, CheckboxGroup, previewImage, Input, Form
+  Cell, Card, Checkbox, CheckboxGroup, previewImage, Input, Form,
+  Textarea
 } from '@xrkmm/ui-h5'
 import React, { useRef, useState } from 'react'
 import 'swiper/swiper.scss'
@@ -72,7 +73,7 @@ function App() {
   }
 
   const onChangeInput = () => {
-    form.current?.setValue({ shop1: true, name: '1233' })
+    form.current?.setValue({ shop1: true, name: '1233', liuyan: '0000' })
   }
 
   const onSetTime = () => setTime(1000)
@@ -85,7 +86,7 @@ function App() {
         defaultValue={{ name: '我是小米', shop1: false }}
       >
       <Input name="name" />
-
+      <Textarea name="liuyan" />
       <Checkbox name="shop1">商品链接</Checkbox>
       <Checkbox check name="shop2" >商品链接</Checkbox>
       <Checkbox check disabled name="shop3" >商品链接</Checkbox>

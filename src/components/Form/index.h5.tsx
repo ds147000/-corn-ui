@@ -3,15 +3,21 @@ import { FromContext, SetValue } from './context'
 import { FormClass, FormProps } from './typing'
 import { transfromInputValue } from './utils'
 
+const INIT_TIMER = 60
+
 class Form extends React.Component<FormProps> implements FormClass {
   private el: HTMLFormElement
   private setMap = new Map<string, SetValue>()
+  private timeId: NodeJS.Timeout
 
   getValue = async (): Promise<Record<string, unknown>> => {
     const result: Record<string, unknown> = {}
-    const inputs = this.el.querySelectorAll('input') as unknown as HTMLInputElement[]
 
-    inputs.forEach((item) => {
+    this.el.querySelectorAll('input').forEach((item) => {
+      if (item.name) result[item.name] = transfromInputValue(item.value)
+    })
+
+    this.el.querySelectorAll('textarea').forEach((item) => {
       if (item.name) result[item.name] = transfromInputValue(item.value)
     })
 
@@ -24,9 +30,6 @@ class Form extends React.Component<FormProps> implements FormClass {
         this.setMap.get(key)?.(data[key])
         return
       }
-
-      const input = this.el.querySelector(`input[name='${key}']`) as HTMLInputElement
-      input?.setAttribute('value', String(data[key]))
     })
   }
 
@@ -50,12 +53,6 @@ class Form extends React.Component<FormProps> implements FormClass {
   private _onReset = (): void => {
     this.setMap.forEach((item) => item())
 
-    if (this.props.defaultValue) {
-      const emptyData = {}
-      Object.keys(this.props.defaultValue).map((item) => emptyData[item] = '')
-      this.setValue(emptyData)
-    }
-
     this.props.onReset?.()
   }
 
@@ -68,7 +65,13 @@ class Form extends React.Component<FormProps> implements FormClass {
   }
 
   componentDidMount(): void {
-    if (this.props.defaultValue) this.setValue(this.props.defaultValue)
+    this.timeId = setTimeout(() => { // 延迟执行，防止子组件未完成渲染
+      if (this.props.defaultValue) this.setValue(this.props.defaultValue)
+    }, INIT_TIMER)
+  }
+
+  componentWillUnmount(): void {
+    clearTimeout(this.timeId)
   }
 
   render(): JSX.Element {

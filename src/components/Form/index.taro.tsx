@@ -38,7 +38,9 @@ class Form extends React.Component<FormProps> implements FormClass {
       const data: Record<string, unknown> = {}
       const id = this.el.current?.uid
       Taro.createSelectorQuery()
-        .selectAll(`#${id} .xrk-checkbox-group-hide, #${id} .xrk-input, #${id} .xrk-checkbox-hide`)
+        .selectAll(
+          `#${id} .xrk-checkbox-group-hide, #${id} .xrk-input, #${id} .xrk-checkbox-hide, #${id} .xrk-textarea-conter`
+        )
         .fields({ properties: [ 'value', 'name' ] }, (res: SelectNodeItem[]) => {
           res
             .filter((item) => Boolean(item.name))

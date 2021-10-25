@@ -1,28 +1,37 @@
 import React, { useEffect, useState } from 'react'
-import { render, waitFor } from '@testing-library/react'
+import { act, render, waitFor } from '@testing-library/react'
 import userEvent from '@testing-library/user-event'
 import Form from '../index.h5'
 import Input from '../../Input'
 import Checkbox from '../../Checkbox/checkbox'
 import CheckboxGroup from '../../Checkbox/group'
 import Button from '../../Button'
+import Textarea from '../../Textarea'
 
-describe('Form', () => {
-  test('渲染', () => {
+beforeAll(() => {
+  jest.useFakeTimers()
+})
+
+afterAll(() => {
+  jest.useRealTimers()
+})
+
+describe('Fomr', () => {
+  test('渲染', async () => {
     const screen = render(
       <Form>
         <Input />
         <Checkbox />
-
+        <Textarea />
       </Form>
     )
 
     expect(screen.container.getElementsByTagName('input').length).toBe(2)
 
-    expect(screen.container).toMatchSnapshot()
+    await waitFor(() => expect(screen.container).toMatchSnapshot())
   })
 
-  test('自带值', () => {
+  test('自带值', async () => {
     const screen = render(
       <Form>
         <Input value="123" />
@@ -36,6 +45,7 @@ describe('Form', () => {
           <Checkbox value="1">大学</Checkbox>
           <Checkbox value="2">小学</Checkbox>
         </CheckboxGroup>
+        <Textarea name="liuyan" />
       </Form>
     )
 
@@ -45,12 +55,12 @@ describe('Form', () => {
     const check = screen.getByText('男').querySelector('input') as HTMLInputElement
     expect(check.value).toBe("true")
 
-    expect(screen.container).toMatchSnapshot()
+    await waitFor(() => expect(screen.container).toMatchSnapshot())
   })
 
-  test('初始化值', () => {
+  test('初始化值', async () => {
     const screen = render(
-      <Form defaultValue={{ name: '小明', sex: false }} >
+      <Form defaultValue={{ name: '小明', sex: false, liuyan: '123456', abc: '122' }} >
         <Input name="name" />
         <Checkbox name="sex">男</Checkbox>
         <CheckboxGroup name="age" >
@@ -62,24 +72,26 @@ describe('Form', () => {
           <Checkbox value="1">大学</Checkbox>
           <Checkbox value="2">小学</Checkbox>
         </CheckboxGroup>
+        <Textarea name="liuyan" />
       </Form>
     )
+    await waitFor(() => expect((screen.getByTestId('input') as HTMLInputElement).value)
+      .toBe("小明"))
+    await waitFor(() => expect((screen.getByText('男').querySelector('input') as HTMLInputElement).value)
+      .toBe("false"))
 
-    const input = screen.getByTestId('input') as HTMLInputElement
-    expect(input.value).toBe("小明")
+    await waitFor(() => expect((screen.getByTestId('textarea') as HTMLTextAreaElement).value)
+      .toBe('123456'))
 
-    const check = screen.getByText('男').querySelector('input') as HTMLInputElement
-    expect(check.value).toBe("false")
-
-    expect(screen.container).toMatchSnapshot()
+    await waitFor(() => expect(screen.container).toMatchSnapshot())
   })
 
   test('改变初始化值', async () => {
     const App = () => {
-      const [value, setValue] = useState({ name: '小明', sex: false })
+      const [value, setValue] = useState({ name: '小明', sex: false, liuyan: "123" })
 
       useEffect(() => {
-        setTimeout(() => setValue({ name: '123', sex: true }))
+        setTimeout(() => setValue({ name: '123', sex: true, liuyan: "456" }))
       },[])
 
       return (
@@ -95,23 +107,23 @@ describe('Form', () => {
             <Checkbox value="1">大学</Checkbox>
             <Checkbox value="2">小学</Checkbox>
           </CheckboxGroup>
+          <Textarea name="liuyan" />
         </Form>
       )
     }
 
-    await new Promise((res) => setTimeout(res, 100))
-
     const screen = render(<App />)
 
     const input = screen.getByTestId('input') as HTMLInputElement
-    expect(input.value).toBe("小明")
+    await waitFor(() => expect(input.value).toBe("123"))
 
     const check = screen.getByText('男').querySelector('input') as HTMLInputElement
-    expect(check.value).toBe("false")
+    await waitFor(() => expect(check.value).toBe("true"))
 
-    expect(screen.container).toMatchSnapshot()
+    const textarea = screen.getByTestId('textarea') as HTMLTextAreaElement
+    await waitFor(() => expect(textarea.value).toBe('456'))
+    await waitFor(() => expect(screen.container).toMatchSnapshot())
   })
-
 
   test('提交', async () => {
     const onSubmit = jest.fn()
@@ -129,6 +141,7 @@ describe('Form', () => {
           <Checkbox value="1">大学</Checkbox>
           <Checkbox value="2">小学</Checkbox>
         </CheckboxGroup>
+        <Textarea name="liuyan" />
         <Button formType="submit" >提交</Button>
       </Form>
     )
@@ -140,15 +153,17 @@ describe('Form', () => {
     userEvent.click(check)
     userEvent.click(screen.getByText('100'))
     userEvent.click(screen.getByText('大学'))
+    userEvent.type(screen.getByTestId('textarea'), '123456')
     userEvent.click(screen.getByText('提交'))
-    await waitFor(() => expect(onSubmit.mock.calls[0][0]).toEqual({ name: 'hello wrold', sex: true, age: ['1'], study: '1' }))
+
+    await waitFor(() => expect(onSubmit.mock.calls[0][0]).toEqual({ name: 'hello wrold', sex: true, age: ['1'], study: '1', liuyan: 123456 }))
   })
 
   test('具有初始化值的提交', async () => {
     const onSubmit = jest.fn()
 
     const screen = render(
-      <Form onSubmit={onSubmit} defaultValue={{ name: '1', sex: false }} >
+      <Form onSubmit={onSubmit} defaultValue={{ name: '1', sex: false, liuyan: '123456' }} >
         <Input name="name" />
         <Checkbox name="sex">男</Checkbox>
         <CheckboxGroup name="age" >
@@ -160,6 +175,7 @@ describe('Form', () => {
           <Checkbox value="1">大学</Checkbox>
           <Checkbox value="2">小学</Checkbox>
         </CheckboxGroup>
+        <Textarea name="liuyan" />
         <Button formType="submit" >提交</Button>
       </Form>
     )
@@ -171,10 +187,11 @@ describe('Form', () => {
     userEvent.click(check)
     userEvent.click(screen.getByText('100'))
     userEvent.click(screen.getByText('大学'))
+    userEvent.type(screen.getByTestId('textarea'), '00000')
     userEvent.click(screen.getByText('提交'))
-    await waitFor(() => expect(onSubmit.mock.calls[0][0]).toEqual({ name: '1hello wrold', sex: true, age: ['1'], study: '1' }))
+    await waitFor(() => expect(onSubmit.mock.calls[0][0])
+      .toEqual({ name: 'hello wrold', sex: true, age: ['1'], study: '1', liuyan: '00000' }))
   })
-
 
   test('自管理提交', async () => {
     const onSubmit = jest.fn()
@@ -192,6 +209,7 @@ describe('Form', () => {
           <Checkbox value="1">大学</Checkbox>
           <Checkbox value="2">小学</Checkbox>
         </CheckboxGroup>
+        <Textarea name="liuyan" />
         <Button formType="submit" >提交</Button>
       </Form>
     )
@@ -203,8 +221,10 @@ describe('Form', () => {
     userEvent.click(check)
     userEvent.click(screen.getByText('200'))
     userEvent.click(screen.getByText('大学'))
+    userEvent.type(screen.getByTestId('textarea'), '我是多行文本')
     userEvent.click(screen.getByText('提交'))
-    await waitFor(() => expect(onSubmit.mock.calls[0][0]).toEqual({ name: 1234567, sex: false, age: ['2'], study: '1' }))
+    await waitFor(() => expect(onSubmit.mock.calls[0][0])
+      .toEqual({ name: 1234567, sex: false, age: ['2'], study: '1', liuyan: '我是多行文本' }))
   })
 
   test('重置', async () => {
@@ -223,6 +243,7 @@ describe('Form', () => {
           <Checkbox value="1">大学</Checkbox>
           <Checkbox value="2">小学</Checkbox>
         </CheckboxGroup>
+        <Textarea name="liuyan" />
         <Button formType="submit" >提交</Button>
         <Button formType="reset" >重置</Button>
       </Form>
@@ -235,9 +256,11 @@ describe('Form', () => {
     userEvent.click(check)
     userEvent.click(screen.getByText('200'))
     userEvent.click(screen.getByText('大学'))
+    userEvent.type(screen.getByTestId('textarea'), '我是多行文本')
     userEvent.click(screen.getByText('重置'))
     userEvent.click(screen.getByText('提交'))
-    await waitFor(() => expect(onSubmit.mock.calls[0][0]).toEqual({ name: '', sex: false, age: [], study: '' }))
+    await waitFor(() => expect(onSubmit.mock.calls[0][0])
+      .toEqual({ name: '', sex: false, age: [], study: '', liuyan: '' }))
   })
 
   test('实例使用-提交', async () => {
@@ -257,6 +280,7 @@ describe('Form', () => {
           <Checkbox value="1">大学</Checkbox>
           <Checkbox value="2">小学</Checkbox>
         </CheckboxGroup>
+        <Textarea name="liuyan" />
       </Form>
     )
 
@@ -267,8 +291,10 @@ describe('Form', () => {
     userEvent.click(check)
     userEvent.click(screen.getByText('200'))
     userEvent.click(screen.getByText('大学'))
+    userEvent.type(screen.getByTestId('textarea'), '我是多行文本')
     form.current.submit()
-    await waitFor(() => expect(onSubmit.mock.calls[0][0]).toEqual({ name: 'hello wrold', sex: true, age: ['2'], study: '1' }))
+    await waitFor(() => expect(onSubmit.mock.calls[0][0])
+      .toEqual({ name: 'hello wrold', sex: true, age: ['2'], study: '1', liuyan: '我是多行文本' }))
   })
 
   test('实例使用-重置', async () => {
@@ -288,6 +314,7 @@ describe('Form', () => {
           <Checkbox value="1">大学</Checkbox>
           <Checkbox value="2">小学</Checkbox>
         </CheckboxGroup>
+        <Textarea name="liuyan" />
       </Form>
     )
 
@@ -298,9 +325,11 @@ describe('Form', () => {
     userEvent.click(check)
     userEvent.click(screen.getByText('200'))
     userEvent.click(screen.getByText('小学'))
+    userEvent.type(screen.getByTestId('textarea'), 'abcd')
     form.current.reset()
     form.current.submit()
-    await waitFor(() => expect(onSubmit.mock.calls[0][0]).toEqual({ sex: false, name: '', age: [], study: '' }))
+    await waitFor(() => expect(onSubmit.mock.calls[0][0])
+      .toEqual({ sex: false, name: '', age: [], study: '', liuyan: '' }))
   })
 
   test('实例使用-获取值', async () => {
@@ -320,6 +349,8 @@ describe('Form', () => {
           <Checkbox value="1">大学</Checkbox>
           <Checkbox value="2">小学</Checkbox>
         </CheckboxGroup>
+        <Textarea name="liuyan" />
+        <Textarea />
       </Form>
     )
 
@@ -328,7 +359,11 @@ describe('Form', () => {
 
     const check = screen.getByText('男') as HTMLInputElement
     userEvent.click(check)
-    expect(await form.current.getValue()).toEqual({ name: 'hello wrold', sex: true, age: [], study: '' })
+    await (await screen.findAllByTestId('textarea')).map((item) => {
+      userEvent.type(item, '1234567')
+    })
+    expect(await form.current.getValue())
+      .toEqual({ name: 'hello wrold', sex: true, age: [], study: '', liuyan: 1234567 })
   })
 
   test('实例使用-设置值', async () => {
@@ -348,11 +383,12 @@ describe('Form', () => {
           <Checkbox value="1">大学</Checkbox>
           <Checkbox value="2">小学</Checkbox>
         </CheckboxGroup>
+        <Textarea name="liuyan" />
       </Form>
     )
-    form.current.setValue({ name: 'hello wrold', sex: true, age: ['2'], study: '1'})
+    form.current.setValue({ name: 'hello wrold', sex: true, age: ['2'], study: '1', liuyan: '我是多行文本'})
     form.current.submit()
-    await waitFor(() => expect(onSubmit.mock.calls[0][0]).toEqual({ name: 'hello wrold', sex: true, age: ['2'], study: '1' }))
+    await waitFor(() => expect(onSubmit.mock.calls[0][0])
+      .toEqual({ name: 'hello wrold', sex: true, age: ['2'], study: '1', liuyan: '我是多行文本' }))
   })
 })
-

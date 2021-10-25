@@ -1,0 +1,55 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Textarea 基础 1`] = `
+<div>
+  <div
+    class="xrk-textarea"
+  >
+    <textarea
+      class="xrk-textarea-conter"
+      data-testid="textarea"
+      maxlength="300"
+      placeholder=""
+    />
+    <div
+      class="xrk-textarea-number"
+    >
+      0
+      /
+      300
+    </div>
+    <div
+      class="xrk-textarea-floor"
+    />
+  </div>
+</div>
+`;
+
+exports[`Textarea 插入底部节点 1`] = `
+<div>
+  <div
+    class="xrk-textarea"
+  >
+    <textarea
+      class="xrk-textarea-conter"
+      data-testid="textarea"
+      maxlength="300"
+      placeholder=""
+    />
+    <div
+      class="xrk-textarea-number"
+    >
+      0
+      /
+      300
+    </div>
+    <div
+      class="xrk-textarea-floor"
+    >
+      <div>
+        我是底部
+      </div>
+    </div>
+  </div>
+</div>
+`;
