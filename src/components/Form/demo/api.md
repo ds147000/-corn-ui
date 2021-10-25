@@ -10,10 +10,10 @@ import { Input, Form, Checkbox, CheckboxGroup, Button } from '@xrkmm/ui-h5'
 
 const Demo: React.FC = () => {
   const [data, setData] = useState({})
-  const form = useRef()
+  const form = useRef<Form>()
 
   useEffect(() => {
-    form.current.setValue({ name: '我是小明', isVip: true, sex: '男' })
+    form.current?.setValue({ name: '我是小明', isVip: true, sex: '男' })
   }, [])
 
   return (
@@ -27,7 +27,7 @@ const Demo: React.FC = () => {
           <Checkbox value="女" >女</Checkbox>
         </CheckboxGroup>
       </Form>
-      <Button onClick={() => form.current.submit()} >点击提交</Button>
+      <Button onClick={() => form.current?.submit()} >点击提交</Button>
     </>
   )
 }

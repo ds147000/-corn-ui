@@ -4,6 +4,7 @@ const Page: React.FC = () => {
       className="scope-page"
       dangerouslySetInnerHTML={{
         __html: `<h2>🔨 Taro使用示例</h2>
+<p>⚠️注意，需要登录公司内部npm才可以拉取安装。</p>
 <pre><code class="hljs language-bash">yarn add @xrkmm/ui-taro
 </code></pre>
 <pre><code class="hljs language-jsx"><span class="hljs-keyword">import</span> { Button } <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@xrkmm/ui-taro&#x27;</span>
