@@ -14,7 +14,8 @@ const Demo: React.FC = () => {
   return (
     <Textarea
       placeholder="请选择问题类型，并填写相关建议，我们将基于你的反馈持续优化~"
-      value={value} onChange={(val) => setValue(val.detail.value)}
+      value={value}
+      onInput={(val) => setValue(val.detail.value)}
     />
   )
 }

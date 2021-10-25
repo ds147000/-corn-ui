@@ -12,7 +12,7 @@ const Demo: React.FC = () => {
   const [value, setValue] = useState('')
 
   return (
-    <Input id="x-input" value={value} onChange={(val) => setValue(val.detail.value)} />
+    <Input id="x-input" value={value} onInput={(val) => setValue(val.detail.value)} />
   )
 }
 

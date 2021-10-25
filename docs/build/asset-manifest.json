@@ -1,20 +1,20 @@
 {
   "files": {
-    "main.css": "/static/css/main.534940a1.chunk.css",
-    "main.js": "/static/js/main.76645ba3.chunk.js",
-    "runtime-main.js": "/static/js/runtime-main.fe0d3071.js",
-    "static/js/2.e3a298b5.chunk.js": "/static/js/2.e3a298b5.chunk.js",
-    "static/js/3.0560befc.chunk.js": "/static/js/3.0560befc.chunk.js",
+    "main.css": "/static/css/main.bcd226ef.chunk.css",
+    "main.js": "/static/js/main.aa9db146.chunk.js",
+    "runtime-main.js": "/static/js/runtime-main.b6361940.js",
+    "static/js/2.c3aeb046.chunk.js": "/static/js/2.c3aeb046.chunk.js",
+    "static/js/3.ce6aec40.chunk.js": "/static/js/3.ce6aec40.chunk.js",
     "index.html": "/index.html",
-    "static/js/2.e3a298b5.chunk.js.LICENSE.txt": "/static/js/2.e3a298b5.chunk.js.LICENSE.txt",
-    "static/js/main.76645ba3.chunk.js.LICENSE.txt": "/static/js/main.76645ba3.chunk.js.LICENSE.txt",
+    "static/js/2.c3aeb046.chunk.js.LICENSE.txt": "/static/js/2.c3aeb046.chunk.js.LICENSE.txt",
+    "static/js/main.aa9db146.chunk.js.LICENSE.txt": "/static/js/main.aa9db146.chunk.js.LICENSE.txt",
     "static/media/style.scss": "/static/media/iframe_iphonex.0956441f.png",
-    "static/media/style.css": "/static/media/xrkIcon.e30d7c0b.eot"
+    "static/media/style.css": "/static/media/xrkIcon.f72de2ff.woff"
   },
   "entrypoints": [
-    "static/js/runtime-main.fe0d3071.js",
-    "static/js/2.e3a298b5.chunk.js",
-    "static/css/main.534940a1.chunk.css",
-    "static/js/main.76645ba3.chunk.js"
+    "static/js/runtime-main.b6361940.js",
+    "static/js/2.c3aeb046.chunk.js",
+    "static/css/main.bcd226ef.chunk.css",
+    "static/js/main.aa9db146.chunk.js"
   ]
 }
