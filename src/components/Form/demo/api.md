@@ -19,7 +19,7 @@ const Demo: React.FC = () => {
   return (
     <>
       {JSON.stringify(data)}
-      <Form ref={form} onSubmit={(e) => setData(e)} >
+      <Form ref={form as React.LegacyRef<Form>} onSubmit={(e) => setData(e)} >
         <Input id="x-input" name="name" />
         <Checkbox name="isVip" >是否会员</Checkbox>
         <CheckboxGroup name="sex" radio >
