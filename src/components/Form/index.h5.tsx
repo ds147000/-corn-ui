@@ -1,13 +1,13 @@
 import React from 'react'
 import { FromContext, SetValue } from './context'
-import { FromProps } from './typing'
+import { FormClass, FormProps } from './typing'
 import { transfromInputValue } from './utils'
 
-class Form extends React.Component<FromProps> {
+class Form extends React.Component<FormProps> implements FormClass {
   private el: HTMLFormElement
   private setMap = new Map<string, SetValue>()
 
-  getValue = (): Record<string, unknown> => {
+  getValue = async (): Promise<Record<string, unknown>> => {
     const result: Record<string, unknown> = {}
     const inputs = this.el.querySelectorAll('input') as unknown as HTMLInputElement[]
 
@@ -16,16 +16,6 @@ class Form extends React.Component<FromProps> {
     })
 
     return result
-  }
-
-  submit = (): void => {
-    this.props.onSubmit?.(this.getValue())
-  }
-
-  reset = (): void => {
-    this.el.querySelectorAll('.xrk-input').forEach((item: HTMLInputElement) => item.value = '')
-
-    this._onReset()
   }
 
   setValue = (data: Record<string, unknown>): void => {
@@ -40,10 +30,20 @@ class Form extends React.Component<FromProps> {
     })
   }
 
-  private _onSubmit = (event: React.FormEvent<HTMLFormElement>): void => {
+  submit = (): void => {
+    this.getValue()
+      .then((res) => this.props.onSubmit?.(res))
+  }
+
+  reset = (): void => {
+    this._onReset()
+  }
+
+
+  private _onSubmit = async (event: React.FormEvent<HTMLFormElement>): Promise<void> => {
     event.preventDefault()
 
-    const data = this.getValue()
+    const data = await this.getValue()
     this.props.onSubmit?.(data)
   }
 

@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react'
-import { render } from '@testing-library/react'
+import { render, waitFor } from '@testing-library/react'
 import userEvent from '@testing-library/user-event'
 import Form from '../index.h5'
 import Input from '../../Input'
@@ -113,7 +113,7 @@ describe('Form', () => {
   })
 
 
-  test('提交', () => {
+  test('提交', async () => {
     const onSubmit = jest.fn()
 
     const screen = render(
@@ -141,10 +141,10 @@ describe('Form', () => {
     userEvent.click(screen.getByText('100'))
     userEvent.click(screen.getByText('大学'))
     userEvent.click(screen.getByText('提交'))
-    expect(onSubmit.mock.calls[0][0]).toEqual({ name: 'hello wrold', sex: true, age: ['1'], study: '1' })
+    await waitFor(() => expect(onSubmit.mock.calls[0][0]).toEqual({ name: 'hello wrold', sex: true, age: ['1'], study: '1' }))
   })
 
-  test('具有初始化值的提交', () => {
+  test('具有初始化值的提交', async () => {
     const onSubmit = jest.fn()
 
     const screen = render(
@@ -172,11 +172,11 @@ describe('Form', () => {
     userEvent.click(screen.getByText('100'))
     userEvent.click(screen.getByText('大学'))
     userEvent.click(screen.getByText('提交'))
-    expect(onSubmit.mock.calls[0][0]).toEqual({ name: '1hello wrold', sex: true, age: ['1'], study: '1' })
+    await waitFor(() => expect(onSubmit.mock.calls[0][0]).toEqual({ name: '1hello wrold', sex: true, age: ['1'], study: '1' }))
   })
 
 
-  test('自管理提交', () => {
+  test('自管理提交', async () => {
     const onSubmit = jest.fn()
 
     const screen = render(
@@ -204,10 +204,10 @@ describe('Form', () => {
     userEvent.click(screen.getByText('200'))
     userEvent.click(screen.getByText('大学'))
     userEvent.click(screen.getByText('提交'))
-    expect(onSubmit.mock.calls[0][0]).toEqual({ name: '1234567', sex: false, age: ['2'], study: '1' })
+    await waitFor(() => expect(onSubmit.mock.calls[0][0]).toEqual({ name: 1234567, sex: false, age: ['2'], study: '1' }))
   })
 
-  test('重置', () => {
+  test('重置', async () => {
     const onSubmit = jest.fn()
 
     const screen = render(
@@ -237,10 +237,10 @@ describe('Form', () => {
     userEvent.click(screen.getByText('大学'))
     userEvent.click(screen.getByText('重置'))
     userEvent.click(screen.getByText('提交'))
-    expect(onSubmit.mock.calls[0][0]).toEqual({ name: '', sex: false, age: [], study: '' })
+    await waitFor(() => expect(onSubmit.mock.calls[0][0]).toEqual({ name: '', sex: false, age: [], study: '' }))
   })
 
-  test('实例使用-提交', () => {
+  test('实例使用-提交', async () => {
     const onSubmit = jest.fn()
     const form = React.createRef<Form>()
 
@@ -268,10 +268,10 @@ describe('Form', () => {
     userEvent.click(screen.getByText('200'))
     userEvent.click(screen.getByText('大学'))
     form.current.submit()
-    expect(onSubmit.mock.calls[0][0]).toEqual({ name: 'hello wrold', sex: true, age: ['2'], study: '1' })
+    await waitFor(() => expect(onSubmit.mock.calls[0][0]).toEqual({ name: 'hello wrold', sex: true, age: ['2'], study: '1' }))
   })
 
-  test('实例使用-重置', () => {
+  test('实例使用-重置', async () => {
     const onSubmit = jest.fn()
     const form = React.createRef<Form>()
 
@@ -300,10 +300,10 @@ describe('Form', () => {
     userEvent.click(screen.getByText('小学'))
     form.current.reset()
     form.current.submit()
-    expect(onSubmit.mock.calls[0][0]).toEqual({ sex: false, name: '', age: [], study: '' })
+    await waitFor(() => expect(onSubmit.mock.calls[0][0]).toEqual({ sex: false, name: '', age: [], study: '' }))
   })
 
-  test('实例使用-获取值', () => {
+  test('实例使用-获取值', async () => {
     const onSubmit = jest.fn()
     const form = React.createRef<Form>()
 
@@ -328,10 +328,10 @@ describe('Form', () => {
 
     const check = screen.getByText('男') as HTMLInputElement
     userEvent.click(check)
-    expect(form.current.getValue()).toEqual({ name: 'hello wrold', sex: true, age: [], study: '' })
+    expect(await form.current.getValue()).toEqual({ name: 'hello wrold', sex: true, age: [], study: '' })
   })
 
-  test('实例使用-设置值', () => {
+  test('实例使用-设置值', async () => {
     const onSubmit = jest.fn()
     const form = React.createRef<Form>()
 
@@ -352,7 +352,7 @@ describe('Form', () => {
     )
     form.current.setValue({ name: 'hello wrold', sex: true, age: ['2'], study: '1'})
     form.current.submit()
-    expect(onSubmit.mock.calls[0][0]).toEqual({ name: 'hello wrold', sex: true, age: ['2'], study: '1' })
+    await waitFor(() => expect(onSubmit.mock.calls[0][0]).toEqual({ name: 'hello wrold', sex: true, age: ['2'], study: '1' }))
   })
 })
 

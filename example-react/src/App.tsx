@@ -10,7 +10,7 @@ import {
   Modal, showModal, Empty, Image, Tab, Tag, Affix, Timer, Link,
   Cell, Card, Checkbox, CheckboxGroup, previewImage, Input, Form
 } from '@xrkmm/ui-h5'
-import React, { useEffect, useRef, useState } from 'react'
+import React, { useRef, useState } from 'react'
 import 'swiper/swiper.scss'
 import { TAB } from '../../package-h5/components/Tab'
 import '../../package-h5/styles/base.css'

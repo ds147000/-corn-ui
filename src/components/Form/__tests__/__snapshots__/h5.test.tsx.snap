@@ -6,7 +6,6 @@ exports[`Form 初始化值 1`] = `
     <input
       class="weui-input xrk-input"
       data-testid="input"
-      data-type="input"
       name="name"
       type="text"
       value="小明"
@@ -141,7 +140,6 @@ exports[`Form 改变初始化值 1`] = `
     <input
       class="weui-input xrk-input"
       data-testid="input"
-      data-type="input"
       name="name"
       type="text"
       value="小明"
@@ -276,8 +274,8 @@ exports[`Form 渲染 1`] = `
     <input
       class="weui-input xrk-input"
       data-testid="input"
-      data-type="input"
       type="text"
+      value=""
     />
     <div
       class="xrk-if xrk-ac xrk-checkbox"
@@ -303,7 +301,6 @@ exports[`Form 自带值 1`] = `
     <input
       class="weui-input xrk-input"
       data-testid="input"
-      data-type="input"
       type="text"
       value="123"
     />

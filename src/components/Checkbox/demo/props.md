@@ -1,5 +1,5 @@
 ---header
-sort: 2
+sort: 4
 type: 表单类型
 ---
 # Checkbox 选择框

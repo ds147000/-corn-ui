@@ -1,13 +1,28 @@
 import React from 'react'
+import Taro from '@tarojs/taro'
 import { BaseEventOrig, Form as TaroForm } from '@tarojs/components'
 import { FormProps as TaroFormProps } from '@tarojs/components/types/Form'
-import { FromProps } from './typing'
+import { FormClass, FormProps } from './typing'
 import { FromContext, SetValue } from './context'
 import { transfromInputValue } from './utils'
 
-class Form extends React.Component<FromProps> {
+type SelectNodeItem = {
+  value: string
+  name: string
+}
+
+class Form extends React.Component<FormProps> implements FormClass {
   private el = React.createRef<{ uid: string }>()
   private setMap = new Map<string, SetValue>()
+
+  submit = (): void => {
+    this.getValue()
+      .then((res) => this.props.onSubmit?.(res))
+  }
+
+  reset = (): void => {
+    this._onReset()
+  }
 
   setValue = (data: Record<string, unknown> = {}): void => {
     Object.keys(data).map((key) => {
@@ -15,15 +30,30 @@ class Form extends React.Component<FromProps> {
         this.setMap.get(key)?.(data[key])
         return
       }
+    })
+  }
 
-      // const input = this.el.querySelector(`input[name='${key}']`) as HTMLInputElement
-      // input?.setAttribute('value', String(data[key]))
+  getValue = async (): Promise<Record<string, unknown>> => {
+    return new Promise((resolve) => {
+      const data: Record<string, unknown> = {}
+      const id = this.el.current?.uid
+      Taro.createSelectorQuery()
+        .selectAll(`#${id} .xrk-checkbox-group-hide, #${id} .xrk-input, #${id} .xrk-checkbox-hide`)
+        .fields({ properties: [ 'value', 'name' ] }, (res: SelectNodeItem[]) => {
+          res
+            .filter((item) => Boolean(item.name))
+            .map((item) => data[item.name] = transfromInputValue(item.value))
 
+          resolve(data)
+        })
+        .exec()
     })
   }
 
   componentDidMount(): void {
-    if (this.props.defaultValue) this.setValue(this.props.defaultValue)
+    Taro.nextTick(() => {
+      if (this.props.defaultValue) this.setValue(this.props.defaultValue)
+    })
   }
 
   private _onSubmit = (event: BaseEventOrig<TaroFormProps.onSubmitEventDetail>): void => {
@@ -35,7 +65,7 @@ class Form extends React.Component<FromProps> {
   }
 
   private _onReset = (): void => {
-    this.setValue()
+    this.setMap.forEach((item) => item())
     this.props.onReset?.()
   }
 
@@ -49,15 +79,15 @@ class Form extends React.Component<FromProps> {
 
   render(): JSX.Element {
     return (
-      <FromContext.Provider value={{ add: this._putResetCbList, remove: this._removeResetCbList }}>
-        <TaroForm
-          onSubmit={this._onSubmit}
-          onReset={this._onReset}
-          ref={this.el}
-        >
+      <TaroForm
+        onSubmit={this._onSubmit}
+        onReset={this._onReset}
+        ref={this.el}
+      >
+        <FromContext.Provider value={{ add: this._putResetCbList, remove: this._removeResetCbList }}>
           {this.props.children}
-        </TaroForm>
-      </FromContext.Provider>
+        </FromContext.Provider>
+      </TaroForm>
     )
   }
 }

@@ -48,6 +48,7 @@ const renderItem = (type: string, number: string): JSX.Element => {
 
 export default class Index extends Component {
   checkGroupRef = createRef<CheckboxGroup>()
+  form = createRef<Form>()
 
   state = {
     show: false,
@@ -81,10 +82,15 @@ export default class Index extends Component {
     console.log('重置')
   }
 
+  getValue = () => {
+    this.form.current?.getValue()
+      .then((res) => console.log(res))
+  }
+
   render() {
     return (
       <View className='index'>
-        <Form onSubmit={this.onSubmit} onReset={this.onReset} >
+        <Form onSubmit={this.onSubmit} onReset={this.onReset} defaultValue={{ name: '1234', check: true, shop1: ['1', '2', '3'], shop2: '3' }} ref={this.form} >
         <Input name="name" />
           <Checkbox name="check" >Boolean</Checkbox>
         <Tab
@@ -204,6 +210,9 @@ export default class Index extends Component {
           <Button size='max' icon={<Icon name='service' />}>图标按钮</Button>
           <Button size='max' type="warn" formType="submit" >提交</Button>
           <Button size='max' type="link" formType="reset" >重置</Button>
+          <Button size='max' type="pop" onClick={this.getValue} >获取值</Button>
+          <Button size='max' onClick={() => this.form.current?.reset()} >实例重置</Button>
+          <Button size='max' onClick={() => this.form.current?.submit()} >实例提交</Button>
         </Affix>
         </Form>
       </View>

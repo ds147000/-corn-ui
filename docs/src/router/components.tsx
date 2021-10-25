@@ -47,7 +47,7 @@ const Routes: RoutesProps[] = [
     component: require('../views/Checkbox').default,
     title: 'Checkbox 选择框',
     type: '表单类型',
-    sort: 2,
+    sort: 4,
   },
   {
     path: '/doc/Drawer',
@@ -64,6 +64,13 @@ const Routes: RoutesProps[] = [
     sort: 10,
   },
   {
+    path: '/doc/Form',
+    component: require('../views/Form').default,
+    title: 'Form 表单',
+    type: '表单类型',
+    sort: 1,
+  },
+  {
     path: '/doc/Icon',
     component: require('../views/Icon').default,
     title: 'Icon 图标',
@@ -76,6 +83,13 @@ const Routes: RoutesProps[] = [
     title: 'Image 图片',
     type: '通用',
     sort: 3,
+  },
+  {
+    path: '/doc/Input',
+    component: require('../views/Input').default,
+    title: 'Input 输入框',
+    type: '表单类型',
+    sort: 2,
   },
   {
     path: '/doc/Link',

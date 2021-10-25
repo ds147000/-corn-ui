@@ -267,6 +267,20 @@ const Routes: RoutesProps[] = [
     sort: 3,
   },
   {
+    path: '/phone/Form/demo/api',
+    component: require('../views/Form/demo/api').default,
+    title: '使用API',
+    type: 'undefined',
+    sort: 2,
+  },
+  {
+    path: '/phone/Form/demo/basis',
+    component: require('../views/Form/demo/basis').default,
+    title: '基本使用',
+    type: 'undefined',
+    sort: 1,
+  },
+  {
     path: '/phone/Icon/demo/basis',
     component: require('../views/Icon/demo/basis').default,
     title: '代码演示',
@@ -314,6 +328,20 @@ const Routes: RoutesProps[] = [
     title: '开启图片预览',
     type: 'undefined',
     sort: 5,
+  },
+  {
+    path: '/phone/Input/demo/basis',
+    component: require('../views/Input/demo/basis').default,
+    title: '基本使用',
+    type: 'undefined',
+    sort: 1,
+  },
+  {
+    path: '/phone/Input/demo/other',
+    component: require('../views/Input/demo/other').default,
+    title: '配合Form表单使用',
+    type: 'undefined',
+    sort: 2,
   },
   {
     path: '/phone/Link/demo/basis',

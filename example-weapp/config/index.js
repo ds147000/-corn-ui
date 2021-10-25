@@ -33,6 +33,7 @@ const config = {
   },
   framework: 'react',
   mini: {
+    baseLevel: 8,
     postcss: {
       pxtransform: {
         enable: true,
