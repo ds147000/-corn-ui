@@ -16,10 +16,10 @@ const Demo: React.FC = () => {
       {JSON.stringify(data)}
       <Input id="x-input" name="name" />
       <Checkbox name="isVip" >是否会员</Checkbox>
-      <CheckboxGroup name="sex" >
+      <CheckboxGroup name="sex" radio >
         <Checkbox value="男" >男</Checkbox>
         <Checkbox value="女" >女</Checkbox>
-      </CheckboxGroup>
+      </CheckboxGroup >
       <Button formType="submit" >提交</Button>
       <Button formType="reset" >重置</Button>
     </Form>
