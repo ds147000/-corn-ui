@@ -477,6 +477,20 @@ const Routes: RoutesProps[] = [
     sort: 1,
   },
   {
+    path: '/phone/Textarea/demo/basis',
+    component: require('../views/Textarea/demo/basis').default,
+    title: '基本使用',
+    type: 'undefined',
+    sort: 1,
+  },
+  {
+    path: '/phone/Textarea/demo/floor',
+    component: require('../views/Textarea/demo/floor').default,
+    title: '插入底部内容',
+    type: 'undefined',
+    sort: 2,
+  },
+  {
     path: '/phone/Timer/demo/basis',
     component: require('../views/Timer/demo/basis').default,
     title: '代码演示',

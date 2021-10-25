@@ -134,6 +134,13 @@ const Routes: RoutesProps[] = [
     sort: 4,
   },
   {
+    path: '/doc/Textarea',
+    component: require('../views/Textarea').default,
+    title: 'Textarea 多行文本',
+    type: '表单类型',
+    sort: 3,
+  },
+  {
     path: '/doc/Timer',
     component: require('../views/Timer').default,
     title: 'Timer 倒计时',

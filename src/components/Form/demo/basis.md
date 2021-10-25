@@ -6,7 +6,7 @@ sort: 1
 
 ```tsx
 import { useState } from 'react'
-import { Input, Form, Checkbox, CheckboxGroup, Button, Toast } from '@xrkmm/ui-h5'
+import { Input, Form, Checkbox, CheckboxGroup, Button, Toast, Textarea } from '@xrkmm/ui-h5'
 
 const Demo: React.FC = () => {
   const [data, setData] = useState({})
@@ -20,6 +20,7 @@ const Demo: React.FC = () => {
         <Checkbox value="男" >男</Checkbox>
         <Checkbox value="女" >女</Checkbox>
       </CheckboxGroup >
+      <Textarea name="text" />
       <Button formType="submit" >提交</Button>
       <Button formType="reset" >重置</Button>
     </Form>
