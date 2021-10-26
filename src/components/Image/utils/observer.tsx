@@ -15,7 +15,7 @@ class Observer {
     })
   }
 
-  add(el: HTMLImageElement, listen: ObserverCallabck): ObserverRemove | void {
+  add(el: HTMLImageElement, listen: ObserverCallabck): ObserverRemove {
     const id = `${performance.now()}-${Math.random()}-xImg`
     this.setId(el, id)
     this.callbacks.set(id, listen)

@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Image basis 1`] = `
+exports[`ImageH5 basis2 1`] = `
 <div>
   <div
     class="taro-img xrk-img"
@@ -13,7 +13,7 @@ exports[`Image basis 1`] = `
 </div>
 `;
 
-exports[`Image preview 1`] = `
+exports[`ImageH5 preview 1`] = `
 Object {
   "asFragment": [Function],
   "baseElement": <body>

@@ -32,15 +32,16 @@ const XImage: React.FC<XImageProps> = ({
   }
 
   useEffect(() => {
-    if (!lazyLoad || !el.current) return
+    if (!lazyLoad || !el.current?.imgRef) return
 
-    const destory = getObserverService().add(el.current.imgRef, () => {
+    const service = getObserverService()
+    const destory = service.add(el.current.imgRef, () => {
       // eslint-disable-next-line @typescript-eslint/no-explicit-any
-      (el.current as any).imgRef.src = _src
+      if (el.current?.imgRef) el.current.imgRef.src = _src
     })
 
     // eslint-disable-next-line consistent-return
-    return destory
+    return (): void => destory()
   }, [ lazyLoad, _src ])
 
   return (
