@@ -1,25 +1,36 @@
 import React from 'react'
-import { render, waitFor } from '@testing-library/react'
-import UserEvent from '@testing-library/user-event'
+import { fireEvent, render, waitFor } from '@testing-library/react'
 import { UploadBase, Upload } from '../base'
 
 describe('UploadBase', () => {
-  test('基础', async () => {
-    const screen = render(<UploadBase handleUpload={jest.fn()} />)
+  test('row', async () => {
+    const screen = render(<UploadBase />)
 
     await waitFor(() => expect(screen.container).toMatchSnapshot())
   })
 
-  test('上传', async () => {
-    const handleUpload = jest.fn((file: File): Promise<Upload.Media> => Promise.resolve({ mediaId: Math.random(), content: file.name }))
-    const files = new File(['hello'], 'hello.png', { type: 'image/png' })
-    const screen = render(<UploadBase handleUpload={handleUpload} />)
+  test('square', async () => {
+    const screen = render(<UploadBase />)
 
-    const uploadBtn = screen.getByTestId('upload-btn')
-    UserEvent.upload(uploadBtn, files)
-
-    await waitFor(async () => expect((await screen.findAllByTestId('upload-item')).length).toBe(1))
-    await waitFor(() => expect(handleUpload.mock).toHaveBeenCalledTimes(1))
-    await waitFor(() => expect(handleUpload.mock.calls[0][0]).toEqual(files))
+    await waitFor(() => expect(screen.container).toMatchSnapshot())
   })
+
+
+  test('自定义按钮', async () => {
+    const onClick = jest.fn()
+    const screen = render(<UploadBase btn={<div onClick={onClick} >上传</div>} />)
+    fireEvent.click(screen.getByText('上传'))
+    await waitFor(() => expect(screen.container).toMatchSnapshot())
+    await waitFor(() => expect(onClick).toHaveBeenCalledTimes(1))
+  })
+
+  test('list', async () => {
+    const list: Upload.Media[] = [
+      {
+        mediaId: 100,
+        content: '100.jpg'
+      }
+    ]
+  })
+
 })

@@ -7,33 +7,29 @@ export declare namespace Upload {
     content: string
   }
 
+  /** 自定义上传，必须返回上传后的结果 */
   type handleUpload = (file: File) => Promise<Media>
 
+  /** 上传完成回调函数 */
   type onChange = (imgs: Media[]) => void
-
-  type renderBtn = (props: btnProps) => JSX.Element
 
   type layout = 'square' | 'row'
 
-  interface btnProps {
-    onClick(): void
-  }
+  type onRemove = (img: Media, index: number) => void
 
   interface props {
     /** 图片项类名 */
     itemClassName?: string
-    /** 上传目录前缀 */
-    pathPrefix?: string
     /** 最多数量 */
     count?: number
     /** 布局类型 */
     layout?: layout
     /** 自定义渲染上传按钮 */
-    renderBtn?: renderBtn
-    /** 自定义上传，必须返回上传后的结果 */
-    handleUpload: handleUpload
-    /** 上传完成回调函数 */
-    onChange?: onChange
+    btn?: React.ReactNode
+    /** 已经上传文件对象 */
+    list?: Media[]
+    /** 上传项删除事件 */
+    onRemove?: onRemove
   }
 }
 
