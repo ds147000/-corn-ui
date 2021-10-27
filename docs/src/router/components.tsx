@@ -120,6 +120,13 @@ const Routes: RoutesProps[] = [
     sort: 6,
   },
   {
+    path: '/doc/Skeleton',
+    component: require('../views/Skeleton').default,
+    title: 'Skeleton 骨架屏',
+    type: '状态展示',
+    sort: 6,
+  },
+  {
     path: '/doc/Tab',
     component: require('../views/Tab').default,
     title: 'Tab 切换栏',
