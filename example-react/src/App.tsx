@@ -9,7 +9,7 @@ import {
   Button, Toast, Drawer, ActionSheet, showActionSheet,
   Modal, showModal, Empty, Image, Tab, Tag, Affix, Timer, Link,
   Cell, Card, Checkbox, CheckboxGroup, previewImage, Input, Form,
-  Textarea
+  Textarea, Skeleton
 } from '@xrkmm/ui-h5'
 import React, { useRef, useState } from 'react'
 import 'swiper/swiper.scss'
@@ -80,6 +80,12 @@ function App() {
 
   return (
     <div className="App" >
+      <Skeleton>
+        <Skeleton.Item height={690} width={690} top={15} bottom={15} left={30} right={300} />
+        <Skeleton.Item height={106} top={15} bottom={15} left={30} right={30} />
+        <Skeleton.Item height={46} top={15} bottom={15} left={30} right={30} />
+        <Skeleton.Item />
+      </Skeleton>
       <Form
         onSubmit={(data) => console.log(data)}
         ref={form as React.LegacyRef<Form>}

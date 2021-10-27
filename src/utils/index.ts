@@ -4,14 +4,11 @@
  * @param {*} val
  * @returns
  */
-const designWidth = 75
-const remLen = 2
-
+const rootValue = 40 * 750 / 640
 export function transformRem(val = 0): string {
   if (!val) return ''
-  if (typeof val !== 'number') val = Number(val)
 
-  return parseFloat((val / designWidth).toFixed(remLen)) + 'rem'
+  return (val / rootValue).toFixed(4) + 'rem'
 }
 
 /**

@@ -33,6 +33,7 @@ export { default as CheckboxGroup } from './components/Checkbox/group'
 export { default as Input } from './components/Input'
 export { default as Form } from './components/Form'
 export { default as Textarea } from './components/Textarea'
+export { default as Skeleton } from './components/Skeleton'
 
 export const UTILS = {
   transformRem,
