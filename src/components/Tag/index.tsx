@@ -24,6 +24,8 @@ const Tag: React.FC<TagProps> = ({ size = 'small', type = 'primary', ghost, chil
       className
     )
   }, [ className, size, type, ghost ])
+  if (!children) return null
+
   return (
     <View className={_class} {...props}>
       <Text>{children}</Text>

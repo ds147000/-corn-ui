@@ -15,6 +15,7 @@ describe('Tag', () => {
         <Tag size="middle">3-9岁</Tag>
         <Tag size="small">3-9岁</Tag>
         <Tag size="mini">3-9岁</Tag>
+        <Tag size="mini"/>
       </>
     )
     expect(screen).toMatchSnapshot()

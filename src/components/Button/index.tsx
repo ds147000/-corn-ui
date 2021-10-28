@@ -2,6 +2,7 @@ import React, { useMemo } from 'react'
 import ClassNames from 'classnames'
 import { Button as TaroButton } from '@tarojs/components'
 import Link, { LinkProps } from '../Link'
+import { ITouchEvent } from '../../types'
 
 /** 按钮大小，max: 最大， big: 超大，large：大，middle：中，small：小，mini */
 export type ButtonSize = 'max' | 'big' | 'large' | 'middle' | 'small' | 'mini'
@@ -27,7 +28,7 @@ export interface ButtonProps extends LinkProps {
   /** 开启固定宽度 */
   auto?: boolean
   /** 点击事件 */
-  onClick?(): void
+  onClick?(e: ITouchEvent): void
 }
 
 const Button: React.FC<ButtonProps> = ({
@@ -66,10 +67,10 @@ const Button: React.FC<ButtonProps> = ({
     )
   }, [ size, type, block, ghost, disabled, className, auto, isIcon, isChildren ])
 
-  const _onClick = (): void => {
+  const _onClick = (e: ITouchEvent): void => {
     if (disabled) return
 
-    onClick?.()
+    onClick?.(e)
   }
 
 

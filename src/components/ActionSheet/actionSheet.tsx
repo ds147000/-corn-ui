@@ -2,7 +2,7 @@
 import { View } from '@tarojs/components'
 import classNames from 'classnames'
 import React, { useMemo } from 'react'
-import { ITouchEvent } from '../../types'
+// import { ITouchEvent } from '../../types'
 import Drawer from '../Drawer'
 import { ActionSheetItem } from './item'
 
@@ -83,14 +83,7 @@ const ActionSheet: React.FC<ActionSheetProps> = ({
             onClick={onClose}
           />
         )}
-        <View
-          className="xrk-actionsheet-body"
-          // #if _APP === 'h5'
-          onTouchStart={onTouchStart}
-          onTouchMove={onTouchMove}
-          // #endif
-          catchMove
-        >
+        <View className="xrk-actionsheet-body">
           {children}
         </View>
         {isShowFloor && (
@@ -104,31 +97,31 @@ const ActionSheet: React.FC<ActionSheetProps> = ({
   )
 }
 
-let TouchStartY = 0
+// let TouchStartY = 0
 
 
-export const onTouchStart = (event: ITouchEvent): void => {
-  TouchStartY = event.touches[0].clientY
-}
+// export const onTouchStart = (event: ITouchEvent): void => {
+//   TouchStartY = event.touches[0].clientY
+// }
 
-export const onTouchMove = (event: ITouchEvent): void => {
-  const clientY = event.touches[0].clientY
-  const align = clientY - TouchStartY < 0 ? 'down' : 'top'
+// export const onTouchMove = (event: ITouchEvent): void => {
+//   const clientY = event.touches[0].clientY
+//   const align = clientY - TouchStartY < 0 ? 'down' : 'top'
 
-  let target: HTMLDivElement | null = event.target as HTMLDivElement
+//   let target: HTMLDivElement | null = event.target as HTMLDivElement
 
-  while(target) {
-    if (align === 'down' && target.scrollTop > 0 && target.scrollHeight === target.scrollTop + target.clientHeight) {
-      event.preventDefault()
-      return
-    } else if (align === 'top' && target.scrollTop === 0 && target.scrollHeight > target.clientHeight) {
-      event.preventDefault()
-      return
-    }
+//   while(target) {
+//     if (align === 'down' && target.scrollTop > 0 && target.scrollHeight === target.scrollTop + target.clientHeight) {
+//       event.preventDefault()
+//       return
+//     } else if (align === 'top' && target.scrollTop === 0 && target.scrollHeight > target.clientHeight) {
+//       event.preventDefault()
+//       return
+//     }
 
-    target = target.parentElement as HTMLDivElement
-  }
-}
+//     target = target.parentElement as HTMLDivElement
+//   }
+// }
 
 
 export default ActionSheet

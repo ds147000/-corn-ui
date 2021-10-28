@@ -18,6 +18,7 @@ export interface DrawerProps {
   onClose?(): void
   /** 完全隐藏回调 */
   onHide?(): void
+  className?: string
 }
 
 const Drawer: React.FC<DrawerProps> = ({
@@ -27,6 +28,7 @@ const Drawer: React.FC<DrawerProps> = ({
   maskClosable = true,
   onClose,
   onHide,
+  className,
   children
 }) => {
   const [ status, setStatus ] = useState<AnimateStatus>('over')
@@ -35,9 +37,10 @@ const Drawer: React.FC<DrawerProps> = ({
     return classNames(
       'xrk-drawer-body',
       status !== 'over' && `xrk-drawer-${position}-${status}`,
-      `xrk-drawer-${position}`
+      `xrk-drawer-${position}`,
+      className
     )
-  }, [ position, status ])
+  }, [ position, status, className ])
 
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
   const onAnimationEnd = (event: any): void => {
