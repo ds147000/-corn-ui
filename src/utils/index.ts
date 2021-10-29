@@ -61,7 +61,7 @@ export function fixNumber(val: number | string, len = 2): string {
   return valString
 }
 
-const ID_MAP = { number: 0 }
+const ID_MAP = { number: 0.1 }
 
 export function getRanDomId(): string {
   return  '__xrk' + ID_MAP.number++
