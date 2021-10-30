@@ -30,6 +30,7 @@ export interface ActionSheetProps {
   okText?: string
   /** 点击蒙层是否允许关闭 */
   maskClosable?: boolean
+  maxHeight?: string | number
   /** 取消或关闭回调 */
   onClose?(): void
   /** 点击确认按钮回调 */
@@ -43,6 +44,7 @@ const ActionSheet: React.FC<ActionSheetProps> = ({
   titleAlign = 'left',
   showHead = true,
   maskClosable = true,
+  maxHeight,
   closable,
   onClose,
   showCancel,
@@ -58,7 +60,6 @@ const ActionSheet: React.FC<ActionSheetProps> = ({
     'xrk-actionsheet-header-center',
     `xrk-actionsheet-${titleAlign}`
   ), [ titleAlign ])
-
 
   return (
     <Drawer
@@ -83,7 +84,7 @@ const ActionSheet: React.FC<ActionSheetProps> = ({
             onClick={onClose}
           />
         )}
-        <View className="xrk-actionsheet-body">
+        <View className="xrk-actionsheet-body" style={{ maxHeight }}>
           {children}
         </View>
         {isShowFloor && (
