@@ -111,6 +111,33 @@ test('onChange of ios', async () => {
   await waitFor(() => expect(screen.getByText('item2').parentElement?.className.indexOf('active')).not.toBe(-1))
 })
 
+test('onChange of button', async () => {
+  const options: TAB.Item[] = [
+    { title: 'item1' },
+    { title: 'item2' },
+    { title: 'item4' }
+  ]
+
+  const App: React.FC<unknown> = () => {
+    const [ current, setCurrent ] = useState(0)
+
+    const onChange = (index: number): void => setCurrent(index)
+    return (
+      <Tab options={options} currenIndex={current} onChange={onChange} type="button" />
+    )
+  }
+
+  const screen = render(<App />)
+  // eslint-disable-next-line @typescript-eslint/no-shadow, @typescript-eslint/no-explicit-any
+  screen.getByTestId('tab').scrollTo = (options: unknown): any => {
+    if (typeof options === 'object') throw 'error'
+    return options
+  }
+  expect(screen.getByText('item1').parentElement?.className.indexOf('active')).not.toBe(-1)
+  fireEvent.click(screen.getByText('item2'))
+  await waitFor(() => expect(screen.getByText('item2').parentElement?.className.indexOf('active')).not.toBe(-1))
+})
+
 test('onChange of error index', async () => {
   const options: TAB.Item[] = [
     { title: 'item1' },

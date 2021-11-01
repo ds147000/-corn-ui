@@ -36,12 +36,13 @@ const Tabs: React.FC<TAB.Props> = ({ options, currenIndex, type = 'default', onC
 
   const renderItem = useCallback((item: TAB.Item, active: boolean, _onChange: TAB.Change): JSX.Element => {
     const key = item.id || item.title || item.icon
+    const onClick = (): void => _onChange()
 
     if (type === 'button') {
       return (
         <Button
           type={active ? 'primary' : 'light'}
-          onClick={_onChange}
+          onClick={onClick}
           key={key}
           className={active ? '__active' : ''}
         >
