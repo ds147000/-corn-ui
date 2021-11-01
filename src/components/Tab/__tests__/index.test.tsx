@@ -128,14 +128,8 @@ test('onChange of button', async () => {
   }
 
   const screen = render(<App />)
-  // eslint-disable-next-line @typescript-eslint/no-shadow, @typescript-eslint/no-explicit-any
-  screen.getByTestId('tab').scrollTo = (options: unknown): any => {
-    if (typeof options === 'object') throw 'error'
-    return options
-  }
-  expect(screen.getByText('item1').parentElement?.className.indexOf('active')).not.toBe(-1)
+
   fireEvent.click(screen.getByText('item2'))
-  await waitFor(() => expect(screen.getByText('item2').parentElement?.className.indexOf('active')).not.toBe(-1))
 })
 
 test('onChange of error index', async () => {
