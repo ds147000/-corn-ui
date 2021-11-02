@@ -435,6 +435,13 @@ const Routes: RoutesProps[] = [
     sort: 1,
   },
   {
+    path: '/phone/Search/demo/input',
+    component: require('../views/Search/demo/input').default,
+    title: '可直接输入的搜索框',
+    type: 'undefined',
+    sort: 2,
+  },
+  {
     path: '/phone/Skeleton/demo/basis',
     component: require('../views/Skeleton/demo/basis').default,
     title: '代码演示',
