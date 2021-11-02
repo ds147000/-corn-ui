@@ -102,9 +102,16 @@ function App() {
         options={TabOption}
         currenIndex={current}
         onChange={(index) => setCurrent(index)}
+        size="large"
       />
       <Tab
         options={TabUrlOption}
+        currenIndex={current}
+        onChange={(index) => setCurrent(index)}
+        size="large"
+      />
+      <Tab
+        options={TabOption}
         currenIndex={current}
         onChange={(index) => setCurrent(index)}
       />

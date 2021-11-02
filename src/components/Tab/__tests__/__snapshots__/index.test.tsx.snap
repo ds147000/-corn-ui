@@ -3,7 +3,7 @@
 exports[`icon 1`] = `
 <div>
   <div
-    class="xrk-tab xrk-f xrk-tab-default"
+    class="xrk-tab xrk-f xrk-tab-default xrk-tab-middle"
     data-testid="tab"
   >
     <div
@@ -50,7 +50,7 @@ exports[`icon 1`] = `
 exports[`not currenIndex 1`] = `
 <div>
   <div
-    class="xrk-tab xrk-f xrk-tab-default"
+    class="xrk-tab xrk-f xrk-tab-default xrk-tab-middle"
     data-testid="tab"
   >
     <div
@@ -97,7 +97,47 @@ exports[`not currenIndex 1`] = `
 exports[`option 1`] = `
 <div>
   <div
-    class="xrk-tab xrk-f xrk-tab-default"
+    class="xrk-tab xrk-f xrk-tab-default xrk-tab-middle"
+    data-testid="tab"
+  >
+    <div
+      class="xrk-tab-item __x-st-exp __x-st-click"
+      data-testid="tab-item"
+    >
+      <div
+        class=""
+      >
+        item1
+      </div>
+    </div>
+    <div
+      class="xrk-tab-item __x-st-exp __x-st-click xrk-tab-item-active __active"
+      data-testid="tab-item"
+    >
+      <div
+        class=""
+      >
+        item2
+      </div>
+    </div>
+    <div
+      class="xrk-tab-item __x-st-exp __x-st-click"
+      data-testid="tab-item"
+    >
+      <div
+        class=""
+      >
+        item4
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`option middle 1`] = `
+<div>
+  <div
+    class="xrk-tab xrk-f xrk-tab-default xrk-tab-middle"
     data-testid="tab"
   >
     <div
@@ -137,7 +177,7 @@ exports[`option 1`] = `
 exports[`option of button 1`] = `
 <div>
   <div
-    class="xrk-tab xrk-f xrk-tab-button"
+    class="xrk-tab xrk-f xrk-tab-button xrk-tab-middle"
     data-testid="tab"
   >
     <button
@@ -165,7 +205,7 @@ exports[`option of button 1`] = `
 exports[`option of id 1`] = `
 <div>
   <div
-    class="xrk-tab xrk-f xrk-tab-default"
+    class="xrk-tab xrk-f xrk-tab-default xrk-tab-middle"
     data-testid="tab"
   >
     <div
