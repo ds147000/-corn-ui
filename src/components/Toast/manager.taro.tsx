@@ -2,7 +2,9 @@ import Taro from '@tarojs/taro'
 import { DEFAULT_DURATION, ToastOption } from './typing'
 
 class ToastManager {
-  show(option: ToastOption | string): void {
+  show(option?: ToastOption | string): void {
+    if (!option) return
+
     const _options: ToastOption = typeof option === 'string' ? { title: option } : option
 
     if (!_options.icon) _options.icon = 'none'
