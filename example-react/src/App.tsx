@@ -9,7 +9,7 @@ import {
   Button, Toast, Drawer, ActionSheet, showActionSheet,
   Modal, showModal, Empty, Image, Tab, Tag, Affix, Timer, Link,
   Cell, Card, Checkbox, CheckboxGroup, previewImage, Input, Form,
-  Textarea, Skeleton
+  Textarea, Skeleton, Search, Icon
 } from '@xrkmm/ui-h5'
 import React, { useRef, useState } from 'react'
 import 'swiper/swiper.scss'
@@ -65,6 +65,7 @@ function App() {
   const [aShow, setAshow] = useState(false)
   const [cShow, setCshow] = useState(false)
   const [mShow, setMshow] = useState(false)
+  const [search, setSearch] = useState('')
 
   const onClick = () => alert(1)
 
@@ -80,6 +81,24 @@ function App() {
 
   return (
     <div className="App" >
+      <Search />
+      <Search back onBack={() => console.log('返回')} />
+      <Search back onBack={() => console.log('返回')} onClick={() => console.log('点击搜索')} />
+      <Search back onBack={() => console.log('返回')} openInput onSearch={(e) => console.log(e)} />
+      <Search back onBack={() => console.log('返回')} placeholder={['向日葵妈妈', '常青藤爸爸', '小熊', '二逼']} openInput onSearch={(e) => console.log(e)} suffix={<Icon name="camera" />} />
+      <Search type="light" />
+      <Search back type="light" placeholder="输入关键词" />
+      <Search back openInput type="light" placeholder={['向日葵妈妈', '常青藤爸爸', '小熊', '二逼']} onSearch={(e) => console.log(e)} />
+      <Search
+        back
+        placeholder={['向日葵妈妈', '常青藤爸爸', '小熊', '二逼']}
+        type="light"
+        onBack={() => console.log('返回')}
+        openInput
+        onSearch={(e) => console.log(e)}
+        value={search}
+        onChange={(e) => setSearch(e)}
+      />
       <Skeleton>
         <Skeleton.Item height={690} width={690} top={15} bottom={15} left={30} right={300} />
         <Skeleton.Item height={106} top={15} bottom={15} left={30} right={30} />

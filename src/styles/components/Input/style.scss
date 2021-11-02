@@ -1,7 +1,7 @@
 .xrk-input {
   height: 45px;
   display: block;
-  background-color: rgba($color: #000 , $alpha: 0);
+  background-color: rgba($color: #000 , $alpha: 0) !important;
   text-overflow: clip;
   white-space: nowrap;
   outline: 0;
@@ -9,3 +9,5 @@
   padding: 0;
   margin: 0;
 }
+
+
