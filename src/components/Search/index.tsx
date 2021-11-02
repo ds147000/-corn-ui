@@ -14,9 +14,9 @@ export interface SearchProps {
   type?: 'default' | 'light'
   /** 启用返回按钮 */
   back?: boolean
-  /** 可以点击清除图标删除内容, 默认开启 */
+  /** 尾部插入的节点内容 */
   suffix?: React.ReactNode
-  /** 是否开启 */
+  /** 可以点击清除图标删除内容,是否开启 */
   allowClear?: boolean
   /** 可输入 */
   openInput?: boolean
@@ -53,7 +53,7 @@ const Search: React.FC<SearchProps> = ({
   const _class = useMemo(() => classNames('xrk-search xrk-f xrk-ac', `xrk-search-${type}`), [ type ])
 
   const _onInput = (event: BaseEventOrig<InputType.inputEventDetail>): void => {
-    onChange?.(event.detail.value || '')
+    onChange?.(event.detail.value)
     if (allowClear) setIsClear(true)
   }
 
@@ -78,7 +78,12 @@ const Search: React.FC<SearchProps> = ({
     <Form onSubmit={_onSubmit} ref={searchForm as React.LegacyRef<Form>} >
       <View className={_class} >
         {back && <Icon className="xrk-search-back" name="left" data-testid="back" onClick={onBack} />}
-        <View className="xrk-search-input-box" onClick={onClick} >
+
+        <View
+          className="xrk-search-input-box"
+          data-testid="search-box"
+          onClick={onClick}
+        >
           <Icon name="search" className="xrk-search-icon" />
           {!isFouce && Boolean(value) === false && <SearchPlaceholder data={placeholder} />}
 
@@ -90,7 +95,7 @@ const Search: React.FC<SearchProps> = ({
               onInput={_onInput}
               onFocus={_onFouce}
               onBlur={_onBlur}
-              autocomplete="off"
+              autoComplete="off"
             />
           ) : (
             <View className="xrk-search-input" />

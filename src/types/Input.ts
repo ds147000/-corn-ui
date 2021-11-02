@@ -156,7 +156,7 @@ export interface InputProps extends StandardProps, FormItemProps {
    * @supported weapp
    */
   onKeyboardHeightChange?: CommonEventFunction<Input.onKeyboardHeightChangeEventDetail>
-  autocomplete?: "off"
+  autoComplete?: "off"
 }
 
 export declare namespace Input {

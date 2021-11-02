@@ -3,7 +3,7 @@
   width: 100vw;
   max-width: 750px;
   box-sizing: border-box;
-  padding: 24px 24px 12px 24px;
+  padding: 24px 24px 12px;
 
   &-back {
     font-size: 12px;
@@ -27,11 +27,13 @@
     color: $icon2;
     top: 19px;
     left: 24px;
+    line-height: 24px;
   }
 
   &-clear {
     position: absolute;
     font-size: 24px;
+    line-height: 24px;
     color: $icon2;
     top: 19px;
     right: 146px;
@@ -48,8 +50,8 @@
 
   &-btn {
     position: absolute;
-    top: 0px;
-    right: 0px;
+    top: 0;
+    right: 0;
     height: 62px;
     font-weight: 400;
     width: 116px;
@@ -59,9 +61,8 @@
     padding-left: 34px;
   }
 
-
   &-light {
-    background-color: rgba($color: #fff, $alpha: 1.0);
+    background-color: rgba($color: #fff , $alpha: 1);
 
     .xrk-search-input-box {
       background-color: $searchLightColor;
@@ -84,8 +85,8 @@
 
     &-list {
       position: absolute;
-      top: 0px;
-      left: 0px;
+      top: 0;
+      left: 0;
       width: 100%;
       transition: top 0.5s;
     }

@@ -38,7 +38,7 @@ const SearchPlaceholderList: React.FC<SearchPlaceholderListProps> = ({ data }) =
     animtedMove()
 
     return (): void => {
-      if (time.current) clearTimeout(time.current)
+      clearTimeout(time.current as NodeJS.Timeout)
     }
   }, [ data.length ])
 

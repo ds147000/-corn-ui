@@ -10,6 +10,8 @@ exports[`SearchPlaceholder 1`] = `
 </div>
 `;
 
+exports[`SearchPlaceholder empty 1`] = `<div />`;
+
 exports[`SearchPlaceholder more 1`] = `
 <div>
   <div
@@ -43,6 +45,42 @@ exports[`SearchPlaceholder more 1`] = `
 </div>
 `;
 
+exports[`SearchPlaceholder more run time 1`] = `
+<div>
+  <div
+    class="xrk-search-placeholder"
+  >
+    <div
+      class="xrk-search-placeholder-list"
+      style="top: -0.6400rem;"
+    >
+      <div
+        class="xrk-search-placeholder-item xrk-f xrk-ac"
+      >
+        输入关键词
+      </div>
+      <div
+        class="xrk-search-placeholder-item xrk-f xrk-ac"
+      >
+        小熊宝宝
+      </div>
+      <div
+        class="xrk-search-placeholder-item xrk-f xrk-ac"
+      >
+        常青藤爸爸
+      </div>
+      <div
+        class="xrk-search-placeholder-item xrk-f xrk-ac"
+      >
+        向日葵妈妈
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
 exports[`SearchPlaceholder more unmount 1`] = `<div />`;
+
+exports[`SearchPlaceholder object 1`] = `<div />`;
 
 exports[`SearchPlaceholder unmount 1`] = `<div />`;
