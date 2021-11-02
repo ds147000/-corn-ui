@@ -12,7 +12,7 @@ const Demo: React.FC = () => {
     <Search
       back
       openInput
-      placeholder={['向日葵妈妈', '常青藤爸爸', '小熊', '二逼']}
+      placeholder="输入关键词"
       onBack={() => Toast.show('返回')}
       onSearch={(e) => Toast.show('搜索内容：' + e)}
       suffix={<Icon name="camera" />}
