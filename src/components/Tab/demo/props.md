@@ -16,6 +16,7 @@ type: 状态展示
 ## Props
 | 属性 | 必填 | 说明 | 类型 | 默认值 |
 | --- | --- | --- | --- | --- |
+| size | 否 | Tab组件尺寸 | `large` `middle` | `middle` |
 | options | 是 | 选项数组 | `options[]` |  |
 | currenIndex | 是 |  当前激活项的索引 | `number` |  |
 | type | 否 |  tab切换栏风格 | `button``default` | `default` |

@@ -80,4 +80,13 @@
       }
     }
   }
+
+  &.xrk-tab-middle .xrk-tab-item {
+    font-size: 30px;
+    font-weight: 400;
+
+    &-active {
+      font-weight: bolder;
+    }
+  }
 }

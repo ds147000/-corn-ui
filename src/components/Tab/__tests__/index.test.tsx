@@ -24,6 +24,18 @@ test('option', () => {
   expect(screen.container).toMatchSnapshot()
 })
 
+test('option middle', () => {
+  const options: TAB.Item[] = [
+    { title: 'item1' },
+    { title: 'item2' },
+    { title: 'item4' }
+  ]
+
+  const screen = render(<Tab options={options} currenIndex={1} size="middle" />)
+  options.map((item) => screen.getByText(item.title as string))
+  expect(screen.container).toMatchSnapshot()
+})
+
 
 test('option of id', () => {
   const options: TAB.Item[] = [
