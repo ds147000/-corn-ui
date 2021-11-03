@@ -120,6 +120,20 @@ const Routes: RoutesProps[] = [
     sort: 6,
   },
   {
+    path: '/doc/Search',
+    component: require('../views/Search').default,
+    title: 'Search 搜索框',
+    type: '表单类型',
+    sort: 6,
+  },
+  {
+    path: '/doc/Skeleton',
+    component: require('../views/Skeleton').default,
+    title: 'Skeleton 骨架屏',
+    type: '状态展示',
+    sort: 6,
+  },
+  {
     path: '/doc/Tab',
     component: require('../views/Tab').default,
     title: 'Tab 切换栏',

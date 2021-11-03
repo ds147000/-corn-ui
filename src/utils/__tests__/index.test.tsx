@@ -4,13 +4,13 @@
 import { transformRem, formatMoney, getRanDomId, DateToTimestamp, fixNumber, isWatch } from '../index'
 
 describe.each([
-  [ 100, '1.33rem' ],
+  [ 100, '2.1333rem' ],
   [ 0, '' ],
   [ null, '' ],
-  [ '100', '1.33rem' ],
-  [ true, '0.01rem' ],
+  [ '100', '2.1333rem' ],
+  [ true, '0.0213rem' ],
   [ false, '' ],
-  [ 750, '10rem' ]
+  [ 750, '16.0000rem' ]
 // eslint-disable-next-line @typescript-eslint/no-explicit-any
 ])('transformRem', (value: any, expected) => {
   test(`${value} => ${expected}`, () => {

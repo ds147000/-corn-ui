@@ -128,19 +128,19 @@ export interface InputProps extends StandardProps, FormItemProps {
   /** 当键盘输入时，触发input事件，event.detail = {value, cursor, keyCode}，处理函数可以直接 return 一个字符串，将替换输入框的内容。
    * @supported weapp, h5, rn
    */
-  onInput?: CommonEventFunction<InputProps.inputEventDetail>
+  onInput?: CommonEventFunction<Input.inputEventDetail>
 
   /** 输入框聚焦时触发，event.detail = { value, height }，height 为键盘高度
    * @supported weapp, h5, rn
    */
-  onFocus?: CommonEventFunction<InputProps.inputForceEventDetail>
+  onFocus?: CommonEventFunction<Input.inputForceEventDetail>
 
   /** 输入框失去焦点时触发
    *
    * event.detail = {value: value}
    * @supported weapp, h5, rn
    */
-  onBlur?: CommonEventFunction<InputProps.inputValueEventDetail>
+  onBlur?: CommonEventFunction<Input.inputValueEventDetail>
 
   /** 点击完成按钮时触发
    *
@@ -148,17 +148,18 @@ export interface InputProps extends StandardProps, FormItemProps {
    * @supported weapp, rn
    * @h5 借用[Form 组件](form.html)的`onSubmit`事件来替代
    */
-  onConfirm?: CommonEventFunction<InputProps.inputValueEventDetail>
+  onConfirm?: CommonEventFunction<Input.inputValueEventDetail>
 
   /** 键盘高度发生变化的时候触发此事件
    *
    * event.detail = {height: height, duration: duration}
    * @supported weapp
    */
-  onKeyboardHeightChange?: CommonEventFunction<InputProps.onKeyboardHeightChangeEventDetail>
+  onKeyboardHeightChange?: CommonEventFunction<Input.onKeyboardHeightChangeEventDetail>
+  autoComplete?: "off"
 }
 
-declare namespace InputProps {
+export declare namespace Input {
   interface inputEventDetail {
     /** 输入值 */
     value: string

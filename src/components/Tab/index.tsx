@@ -1,5 +1,6 @@
-import React, { useCallback, useRef } from 'react'
+import React, { useCallback, useMemo, useRef } from 'react'
 import { View } from '@tarojs/components'
+import classNames from 'classnames'
 import Button from '../Button'
 import { useTabScroll } from './hook'
 import { Item } from './item'
@@ -14,6 +15,8 @@ export namespace TAB {
     currenIndex: number
     /** 风格 */
     type?: 'button' | 'default'
+    /** 尺寸大小, 只在类型为 default 情况下生效 */
+    size?: 'large' | 'middle'
     /** 索引发生改变回调 */
     onChange?(index: number): void
   }
@@ -30,18 +33,25 @@ export namespace TAB {
 }
 
 
-const Tabs: React.FC<TAB.Props> = ({ options, currenIndex, type = 'default', onChange }) => {
+const Tabs: React.FC<TAB.Props> = ({ options, currenIndex, size = 'middle', type = 'default', onChange }) => {
   const El = useRef<HTMLDivElement>()
+  const _class = useMemo(() => classNames(
+    'xrk-tab xrk-f',
+    `xrk-tab-${type}`,
+    `xrk-tab-${size}`,
+  ), [ type, size ])
+
   useTabScroll(El as React.MutableRefObject<HTMLDivElement>, currenIndex)
 
   const renderItem = useCallback((item: TAB.Item, active: boolean, _onChange: TAB.Change): JSX.Element => {
     const key = item.id || item.title || item.icon
+    const onClick = (): void => _onChange()
 
     if (type === 'button') {
       return (
         <Button
           type={active ? 'primary' : 'light'}
-          onClick={_onChange}
+          onClick={onClick}
           key={key}
           className={active ? '__active' : ''}
         >
@@ -61,7 +71,7 @@ const Tabs: React.FC<TAB.Props> = ({ options, currenIndex, type = 'default', onC
   }, [ type ])
 
   return (
-    <View ref={El} className={`xrk-tab xrk-f xrk-tab-${type}`} data-testid="tab" >
+    <View ref={El} className={_class} data-testid="tab" >
       {options?.map((item, key) => renderItem(item, currenIndex === key, (): void => onChange?.(key)))}
     </View>
   )

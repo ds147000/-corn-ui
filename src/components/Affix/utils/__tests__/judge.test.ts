@@ -21,3 +21,23 @@ describe.each([
     expect(judge(rect, rootBounds, position, offset)).toBe(expected)
   })
 })
+
+describe.each([
+  [ { top: 0 }, 'top', 1, false ],
+  [ { bottom: 667 }, 'bottom', 1, false ],
+  [ { left: 0 }, 'left', 1, false ],
+  [ { right: 375 }, 'right', 1, false ],
+  [ { top: -40 }, 'top', 0, false ],
+  [ { bottom: 700 }, 'bottom', 0, false ],
+  [ { right: 400 }, 'right', 0, false ],
+  [ { left: -40 }, 'left', 0, false ],
+  [ { left: 100 }, 'left', 0, false ],
+  [ { top: 100 }, 'top', 0, false ],
+  [ { bottom: 100 }, 'bottom', 0, false ],
+  [ { right: 100 }, 'right', 0, false ],
+  [ null, 'top', 0, false ]
+])('judge', (rect: any, position, offset, expected) => {
+  test(`${JSON.stringify(rect)}, ${position} ${expected}`, () => {
+    expect(judge(rect, null, position, offset)).toBe(expected)
+  })
+})

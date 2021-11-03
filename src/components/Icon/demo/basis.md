@@ -422,6 +422,11 @@ const Demo: React.FC = () => {
       </div>
 
       <div className="icon-box">
+        <Icon name="step" />
+        <h5>step</h5>
+      </div>
+
+      <div className="icon-box">
         <Icon name="subscribe" />
         <h5>subscribe</h5>
       </div>

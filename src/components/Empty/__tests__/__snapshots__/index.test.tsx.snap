@@ -424,7 +424,7 @@ Object {
       <div
         class="xrk-empty xrk-empty-middle"
         data-testid="empty"
-        style="padding-bottom: 1.33rem;"
+        style="padding-bottom: 2.1333rem;"
       >
         <div
           class=""
@@ -445,7 +445,7 @@ Object {
     <div
       class="xrk-empty xrk-empty-middle"
       data-testid="empty"
-      style="padding-bottom: 1.33rem;"
+      style="padding-bottom: 2.1333rem;"
     >
       <div
         class=""
@@ -622,7 +622,7 @@ Object {
       <div
         class="xrk-empty xrk-empty-middle"
         data-testid="empty"
-        style="padding-top: 1.33rem;"
+        style="padding-top: 2.1333rem;"
       >
         <div
           class=""
@@ -643,7 +643,7 @@ Object {
     <div
       class="xrk-empty xrk-empty-middle"
       data-testid="empty"
-      style="padding-top: 1.33rem;"
+      style="padding-top: 2.1333rem;"
     >
       <div
         class=""

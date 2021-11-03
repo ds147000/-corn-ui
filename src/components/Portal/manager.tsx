@@ -12,8 +12,8 @@ class HostManager {
   private async _init(): Promise<void> {
     if (this.status) return Promise.resolve()
 
-    const root = document.createElement('div')
-    document.body.append(root)
+    const root = window.document.createElement('div')
+    window.document.body.appendChild(root)
 
     return new Promise((res) => {
       this.status = true

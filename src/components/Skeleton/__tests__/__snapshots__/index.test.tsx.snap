@@ -1,0 +1,46 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Skeleton 快照 1`] = `
+<div>
+  <div
+    class="xrk-skeleton"
+  >
+    <div
+      class=""
+      style="padding: 0.1600rem 0.3200rem 0.1600rem 0.3200rem;"
+    >
+      <div
+        class="xrk-skeleton-item"
+        style="width: 7.3600rem; height: 7.3600rem; border-radius: 0.3200rem;"
+      />
+    </div>
+    <div
+      class=""
+      style="padding: 0.1600rem 0.3200rem 0.1600rem 0.3200rem;"
+    >
+      <div
+        class="xrk-skeleton-item"
+        style="width: 14.7200rem; height: 1.2373rem; border-radius: 0.3200rem;"
+      />
+    </div>
+    <div
+      class=""
+      style="padding: 0.1600rem 0.3200rem 0.1600rem 0.3200rem;"
+    >
+      <div
+        class="xrk-skeleton-item"
+        style="width: 14.7200rem; height: 0.4907rem; border-radius: 0.1707rem;"
+      />
+    </div>
+    <div
+      class=""
+      style="padding: 0.3200rem 0.6400rem 0.3200rem 0.6400rem;"
+    >
+      <div
+        class="xrk-skeleton-item"
+        style="width: 14.7200rem; height: 0.9813rem; border-radius: 0.1707rem;"
+      />
+    </div>
+  </div>
+</div>
+`;

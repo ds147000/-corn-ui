@@ -1,3 +1,4 @@
+import { getRanDomId } from '../../../utils'
 
 type ObserverCallabck = () => void
 
@@ -16,7 +17,7 @@ class Observer {
   }
 
   add(el: HTMLImageElement, listen: ObserverCallabck): ObserverRemove {
-    const id = `${performance.now()}-${Math.random()}-xImg`
+    const id = getRanDomId()
     this.setId(el, id)
     this.callbacks.set(id, listen)
     this.ins.observe(el)

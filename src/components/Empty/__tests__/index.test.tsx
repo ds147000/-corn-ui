@@ -33,7 +33,7 @@ describe('Empty', () => {
 
   test('wrapperTop', () => {
     const screen = render(<Empty wrapperTop={100} />)
-    expect(screen.getByTestId('empty').style.paddingTop).toBe('1.33rem')
+    expect(screen.getByTestId('empty').style.paddingTop).toBe('2.1333rem')
     expect(screen).toMatchSnapshot()
   })
 
@@ -45,7 +45,7 @@ describe('Empty', () => {
 
   test('wrapperBottom', () => {
     const screen = render(<Empty wrapperBottom={100} />)
-    expect(screen.getByTestId('empty').style.paddingBottom).toBe('1.33rem')
+    expect(screen.getByTestId('empty').style.paddingBottom).toBe('2.1333rem')
     expect(screen).toMatchSnapshot()
   })
 

@@ -9,7 +9,7 @@ import {
   Button, Toast, Drawer, ActionSheet, showActionSheet,
   Modal, showModal, Empty, Image, Tab, Tag, Affix, Timer, Link,
   Cell, Card, Checkbox, CheckboxGroup, previewImage, Input, Form,
-  Textarea
+  Textarea, Skeleton, Search, Icon
 } from '@xrkmm/ui-h5'
 import React, { useRef, useState } from 'react'
 import 'swiper/swiper.scss'
@@ -65,6 +65,7 @@ function App() {
   const [aShow, setAshow] = useState(false)
   const [cShow, setCshow] = useState(false)
   const [mShow, setMshow] = useState(false)
+  const [search, setSearch] = useState('')
 
   const onClick = () => alert(1)
 
@@ -80,6 +81,30 @@ function App() {
 
   return (
     <div className="App" >
+      <Search />
+      <Search back onBack={() => console.log('返回')} />
+      <Search back onBack={() => console.log('返回')} onClick={() => console.log('点击搜索')} />
+      <Search back onBack={() => console.log('返回')} openInput onSearch={(e) => console.log(e)} />
+      <Search back onBack={() => console.log('返回')} placeholder={['向日葵妈妈', '常青藤爸爸', '小熊', '二逼']} openInput onSearch={(e) => console.log(e)} suffix={<Icon name="camera" />} />
+      <Search type="light" />
+      <Search back type="light" placeholder="输入关键词" />
+      <Search back openInput type="light" placeholder={['向日葵妈妈', '常青藤爸爸', '小熊', '二逼']} onSearch={(e) => console.log(e)} />
+      <Search
+        back
+        placeholder={['向日葵妈妈', '常青藤爸爸', '小熊', '二逼']}
+        type="light"
+        onBack={() => console.log('返回')}
+        openInput
+        onSearch={(e) => console.log(e)}
+        value={search}
+        onChange={(e) => setSearch(e)}
+      />
+      <Skeleton>
+        <Skeleton.Item height={690} width={690} top={15} bottom={15} left={30} right={300} />
+        <Skeleton.Item height={106} top={15} bottom={15} left={30} right={30} />
+        <Skeleton.Item height={46} top={15} bottom={15} left={30} right={30} />
+        <Skeleton.Item />
+      </Skeleton>
       <Form
         onSubmit={(data) => console.log(data)}
         ref={form as React.LegacyRef<Form>}
@@ -92,13 +117,26 @@ function App() {
       <Checkbox check disabled name="shop3" >商品链接</Checkbox>
       <Checkbox disabled name="shop4" >商品链接</Checkbox>
       <Checkbox type="button" name="shop5" >商品链接</Checkbox>
+      <Affix onChange={onChange} position="top">
+        <Button  auto onClick={onSetTime} formType="submit" > 提交</Button>
+        <Button type='error' auto onClick={onSetTime} formType="reset" > 重置</Button>
+        <Button type='pop' auto onClick={onChangeInput} > 变更</Button>
+        <Button type='link' auto onClick={() => form.current?.reset()} > 实例重置</Button>
+      </Affix>
       <Tab
         options={TabOption}
         currenIndex={current}
         onChange={(index) => setCurrent(index)}
+        size="large"
       />
       <Tab
         options={TabUrlOption}
+        currenIndex={current}
+        onChange={(index) => setCurrent(index)}
+        size="large"
+      />
+      <Tab
+        options={TabOption}
         currenIndex={current}
         onChange={(index) => setCurrent(index)}
       />
@@ -195,7 +233,7 @@ function App() {
       <Cell label="限时奖励" placeholder="请选择奖励类型" value="葵花籽" suffix="重选" arrow />
       <Cell label="限时奖励" placeholder="请选择奖励类型" value="前往兑换" to="/home" suffix="重选" arrow />
       <Cell label="限时奖励" placeholder="请选择奖励类型" value="无效兑换" to="/home" suffix="重选" arrow disabled />
-      <Cell label="限时奖励" placeholder="请选择奖励类型" value="前往兑换" suffix="重选" arrow onClick={() => Toast.show('骗你的')} />
+      <Cell label="限时奖励" placeholder="请选择奖励类型" value="前往兑换前往兑换前往兑换前往兑换前往兑换前往兑换前往兑换前往兑换前往兑换前往兑换前往兑换" suffix="重选" arrow onClick={() => Toast.show('骗你的')} />
       <br />
       <Cell.List line>
         <Cell label="限时奖励" placeholder="请选择奖励类型" value="葵花籽" suffix="重选" arrow />
@@ -325,12 +363,11 @@ function App() {
         current: 'https://t7.baidu.com/it/u=2291349828,4144427007&fm=193&f=GIF',
         urls: ['https://t7.baidu.com/it/u=2291349828,4144427007&fm=193&f=GIF', 'https://t7.baidu.com/it/u=124476473,2583135375&fm=193&f=GIFF']
       })} >Card</Card>
-      <Affix onChange={onChange} position="bottom">
-        <Button  auto onClick={onSetTime} formType="submit" > 提交</Button>
-        <Button type='error' auto onClick={onSetTime} formType="reset" > 重置</Button>
-        <Button type='pop' auto onClick={onChangeInput} > 变更</Button>
-        <Button type='link' auto onClick={() => form.current?.reset()} > 实例重置</Button>
-      </Affix>
+
+        <Card onClick={() => previewImage({
+          current: 'https://t7.baidu.com/it/u=2291349828,4144427007&fm=193&f=GIF',
+          urls: ['https://t7.baidu.com/it/u=2291349828,4144427007&fm=193&f=GIF', 'https://t7.baidu.com/it/u=124476473,2583135375&fm=193&f=GIFF']
+        })} >Card</Card>
       </Form>
     </div>
   )

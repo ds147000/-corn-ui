@@ -1,0 +1,36 @@
+.xrk-skeleton {
+  width: 100%;
+  background-color: #fff;
+  position: relative;
+  overflow: hidden;
+
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -400px;
+    width: 400px;
+    height: 100%;
+    z-index: 1;
+    background: linear-gradient(to right , rgba(255 , 255 , 255 , 0) , rgba(255 , 255 , 255 , 1) , rgba(255 , 255 , 255 , 0));
+    animation: xrkSkeletonMove 2s infinite;
+  }
+
+  &-item {
+    background-color: #ebeef6;
+  }
+}
+
+@keyframes xrkSkeletonMove {
+  0% {
+    transform: translate3d(-400px , 0 , 0);
+  }
+
+  10% {
+    transform: translate3d(-400px , 0 , 0);
+  }
+
+  100% {
+    transform: translate3d(1150px , 0 , 0);
+  }
+}

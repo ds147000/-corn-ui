@@ -24,6 +24,18 @@ test('option', () => {
   expect(screen.container).toMatchSnapshot()
 })
 
+test('option middle', () => {
+  const options: TAB.Item[] = [
+    { title: 'item1' },
+    { title: 'item2' },
+    { title: 'item4' }
+  ]
+
+  const screen = render(<Tab options={options} currenIndex={1} size="middle" />)
+  options.map((item) => screen.getByText(item.title as string))
+  expect(screen.container).toMatchSnapshot()
+})
+
 
 test('option of id', () => {
   const options: TAB.Item[] = [
@@ -109,6 +121,27 @@ test('onChange of ios', async () => {
   expect(screen.getByText('item1').parentElement?.className.indexOf('active')).not.toBe(-1)
   fireEvent.click(screen.getByText('item2'))
   await waitFor(() => expect(screen.getByText('item2').parentElement?.className.indexOf('active')).not.toBe(-1))
+})
+
+test('onChange of button', async () => {
+  const options: TAB.Item[] = [
+    { title: 'item1' },
+    { title: 'item2' },
+    { title: 'item4' }
+  ]
+
+  const App: React.FC<unknown> = () => {
+    const [ current, setCurrent ] = useState(0)
+
+    const onChange = (index: number): void => setCurrent(index)
+    return (
+      <Tab options={options} currenIndex={current} onChange={onChange} type="button" />
+    )
+  }
+
+  const screen = render(<App />)
+
+  fireEvent.click(screen.getByText('item2'))
 })
 
 test('onChange of error index', async () => {

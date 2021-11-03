@@ -25,6 +25,12 @@ const Demo: React.FC = () => {
         options={TabOption}
         currenIndex={current}
         onChange={(index) => setCurrent(index)}
+        size="large"
+      />
+      <Tab
+        options={TabOption}
+        currenIndex={current}
+        onChange={(index) => setCurrent(index)}
       />
       <Tab
         options={TabOption}

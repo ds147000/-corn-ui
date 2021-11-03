@@ -4,7 +4,7 @@ export const judge = (
   position: string,
   offset: number
 ): boolean => {
-  if (!rect) return false
+  if (!rect || !rootRect) return false
 
   switch(position) {
     case 'top':

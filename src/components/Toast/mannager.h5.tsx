@@ -18,8 +18,9 @@ class ToastManager {
     })
   }
 
-  async show(option: ToastOption | string): Promise<void> {
+  async show(option?: ToastOption | string): Promise<void> {
     await this._init()
+    if (!option) return
 
     const _options: ToastOption = typeof option === 'string' ? { title: option } : option
 
