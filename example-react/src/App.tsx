@@ -117,6 +117,12 @@ function App() {
       <Checkbox check disabled name="shop3" >商品链接</Checkbox>
       <Checkbox disabled name="shop4" >商品链接</Checkbox>
       <Checkbox type="button" name="shop5" >商品链接</Checkbox>
+      <Affix onChange={onChange} position="top">
+        <Button  auto onClick={onSetTime} formType="submit" > 提交</Button>
+        <Button type='error' auto onClick={onSetTime} formType="reset" > 重置</Button>
+        <Button type='pop' auto onClick={onChangeInput} > 变更</Button>
+        <Button type='link' auto onClick={() => form.current?.reset()} > 实例重置</Button>
+      </Affix>
       <Tab
         options={TabOption}
         currenIndex={current}
@@ -357,12 +363,11 @@ function App() {
         current: 'https://t7.baidu.com/it/u=2291349828,4144427007&fm=193&f=GIF',
         urls: ['https://t7.baidu.com/it/u=2291349828,4144427007&fm=193&f=GIF', 'https://t7.baidu.com/it/u=124476473,2583135375&fm=193&f=GIFF']
       })} >Card</Card>
-      <Affix onChange={onChange} position="bottom">
-        <Button  auto onClick={onSetTime} formType="submit" > 提交</Button>
-        <Button type='error' auto onClick={onSetTime} formType="reset" > 重置</Button>
-        <Button type='pop' auto onClick={onChangeInput} > 变更</Button>
-        <Button type='link' auto onClick={() => form.current?.reset()} > 实例重置</Button>
-      </Affix>
+
+        <Card onClick={() => previewImage({
+          current: 'https://t7.baidu.com/it/u=2291349828,4144427007&fm=193&f=GIF',
+          urls: ['https://t7.baidu.com/it/u=2291349828,4144427007&fm=193&f=GIF', 'https://t7.baidu.com/it/u=124476473,2583135375&fm=193&f=GIFF']
+        })} >Card</Card>
       </Form>
     </div>
   )

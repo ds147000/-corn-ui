@@ -14,8 +14,6 @@ export interface AffixProps extends ViewProps {
   onChange?(fixed: boolean): void
 }
 
-const threshold = [ 0.01, 0.1, 0.9, 0.99 ]
-
 const Affix: React.FC<AffixProps> = ({ children, position = 'top', onChange, className, ...props }) => {
   const [ fixed, setFixed ] = useState(false)
   const [ boxStyle, setBoxStyle ] = useState<React.CSSProperties>({})
@@ -35,9 +33,9 @@ const Affix: React.FC<AffixProps> = ({ children, position = 'top', onChange, cla
   }, [])
 
   useEffect(() => {
-    let isInit = true
-
     // #if _APP === 'weapp'
+    let isInit = true
+    const threshold = [ 0.01, 0.1, 0.9, 0.99 ]
     const node = ref.current
     let WeappIntersection: Taro.IntersectionObserver | null = null
 
@@ -78,28 +76,28 @@ const Affix: React.FC<AffixProps> = ({ children, position = 'top', onChange, cla
     // #else
     // eslint-disable-next-line no-unreachable
     const el: HTMLDivElement = ref.current
+    const rootBounds = {
+      x: 0,
+      y: 0,
+      width: window.innerWidth,
+      height: window.innerHeight,
+      top: 0,
+      left: 0,
+      bottom: window.innerHeight,
+      right: window.innerWidth
+    } as DOMRectReadOnly
+
     setBoxStyle({ height: el.offsetHeight, width: el.offsetWidth })
 
-    const Intersection = new IntersectionObserver(
-      (res) => {
-        const item = res[0]
-        const result = judge(
-          item.boundingClientRect,
-          item.rootBounds as DOMRectReadOnly,
-          position,
-          isInit ? 1 : 0
-        )
-        isInit = false
-        // eslint-disable-next-line no-console
-        changeFixed(result)
-      },
-      { threshold: threshold, root: null, rootMargin: '0px' }
-    )
-
-    Intersection.observe(el)
-
+    function handleScroll(): void {
+      const item = el.getBoundingClientRect()
+      const result = judge(item, rootBounds, position, 0)
+      changeFixed(result)
+    }
+    handleScroll()
+    window.addEventListener('scroll', handleScroll)
     return (): void => {
-      Intersection.unobserve(el)
+      window.removeEventListener('scroll', handleScroll)
     }
     // #endif
   }, [ position, changeFixed ])
