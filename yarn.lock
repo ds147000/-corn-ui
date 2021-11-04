@@ -4670,10 +4670,10 @@ eslint-plugin-react@^7.24.0:
     resolve "^2.0.0-next.3"
     string.prototype.matchall "^4.0.5"
 
-eslint-plugin-xrkmm@^1.0.5:
-  version "1.0.5"
-  resolved "https://nexus3.xrkmm.com/repository/npm-group/eslint-plugin-xrkmm/-/eslint-plugin-xrkmm-1.0.5.tgz"
-  integrity sha512-3K38JAtYWzmCCNYre7+mbPKLR2clddeDkTcvg+EUa3yZ8pwIc2fn951Gxwq2JDkg92kwg1wADMuh/MClvXUIDw==
+eslint-plugin-xrkmm@^1.0.7:
+  version "1.0.7"
+  resolved "https://nexus3.xrkmm.com/repository/npm-group/eslint-plugin-xrkmm/-/eslint-plugin-xrkmm-1.0.7.tgz#ece6c14e51701e66af0873251864826b2882c5c0"
+  integrity sha512-1+7NFk+TRXca33gzxCgfkf12NamSf18cKrn0conDGbHtzKt1pfKWww5fXJlpGoFsDIZianBDrTyTCpkhmWEY0g==
   dependencies:
     deepmerge "^4.2.2"
 

@@ -1,0 +1,29 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`UploadBase row 1`] = `
+<div>
+  <div
+    class="xrk-upload xrk-upload-row"
+  />
+</div>
+`;
+
+exports[`UploadBase square 1`] = `
+<div>
+  <div
+    class="xrk-upload xrk-upload-row"
+  />
+</div>
+`;
+
+exports[`UploadBase 自定义按钮 1`] = `
+<div>
+  <div
+    class="xrk-upload xrk-upload-row"
+  >
+    <div>
+      上传
+    </div>
+  </div>
+</div>
+`;

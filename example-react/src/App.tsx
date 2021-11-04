@@ -9,7 +9,7 @@ import {
   Button, Toast, Drawer, ActionSheet, showActionSheet,
   Modal, showModal, Empty, Image, Tab, Tag, Affix, Timer, Link,
   Cell, Card, Checkbox, CheckboxGroup, previewImage, Input, Form,
-  Textarea, Skeleton, Search, Icon
+  Textarea, Skeleton, Search, Icon, Upload
 } from '@xrkmm/ui-h5'
 import React, { useRef, useState } from 'react'
 import 'swiper/swiper.scss'
@@ -81,6 +81,12 @@ function App() {
 
   return (
     <div className="App" >
+      <Card>
+        <Upload />
+      </Card>
+      <Card>
+        <Upload layout="square" />
+      </Card>
       <Search />
       <Search back onBack={() => console.log('返回')} />
       <Search back onBack={() => console.log('返回')} onClick={() => console.log('点击搜索')} />

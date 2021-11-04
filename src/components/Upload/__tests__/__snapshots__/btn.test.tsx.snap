@@ -1,0 +1,21 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`UploadDefaultBtn 1`] = `
+<div>
+  <div
+    class="xrk-upload-btn xrk-f xrk-ac xrk-jc"
+    data-testid="upload-btn"
+  >
+    <input
+      accept="video/*,image/*"
+      class="xrk-upload-mask"
+      data-testid="uplaod-btn"
+      multiple=""
+      type="file"
+    />
+    <i
+      class="xrk-icon xrk-i-img"
+    />
+  </div>
+</div>
+`;

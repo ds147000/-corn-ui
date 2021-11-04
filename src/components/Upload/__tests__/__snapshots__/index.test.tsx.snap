@@ -1,0 +1,37 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Uplaod.h5 快照 1`] = `
+<div>
+  <div
+    class="xrk-upload xrk-upload-row"
+  >
+    <div
+      class="xrk-upload-btn xrk-f xrk-ac xrk-jc"
+      data-testid="upload-btn"
+    >
+      <input
+        accept="video/*,image/*"
+        class="xrk-upload-mask"
+        data-testid="uplaod-btn"
+        multiple=""
+        type="file"
+      />
+      <i
+        class="xrk-icon xrk-i-img"
+      />
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Uplaod.h5 渲染自定义按钮 1`] = `
+<div>
+  <div
+    class="xrk-upload xrk-upload-row"
+  >
+    <div>
+      upload
+    </div>
+  </div>
+</div>
+`;
