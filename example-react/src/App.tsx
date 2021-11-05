@@ -81,15 +81,6 @@ function App() {
 
   return (
     <div className="App" >
-      <Card>
-        <Upload count={2} />
-      </Card>
-      <Card>
-        <Upload handelUpload={() => Promise.reject(new Error('上传失败'))} />
-      </Card>
-      <Card>
-        <Upload layout="square" />
-      </Card>
       <Search />
       <Search back onBack={() => console.log('返回')} />
       <Search back onBack={() => console.log('返回')} onClick={() => console.log('点击搜索')} />
@@ -119,218 +110,125 @@ function App() {
         ref={form as React.LegacyRef<Form>}
         defaultValue={{ name: '我是小米', shop1: false }}
       >
-      <Input name="name" />
-      <Textarea name="liuyan" />
-      <Checkbox name="shop1">商品链接</Checkbox>
-      <Checkbox check name="shop2" >商品链接</Checkbox>
-      <Checkbox check disabled name="shop3" >商品链接</Checkbox>
-      <Checkbox disabled name="shop4" >商品链接</Checkbox>
-      <Checkbox type="button" name="shop5" >商品链接</Checkbox>
-      <Affix onChange={onChange} position="top">
-        <Button  auto onClick={onSetTime} formType="submit" > 提交</Button>
-        <Button type='error' auto onClick={onSetTime} formType="reset" > 重置</Button>
-        <Button type='pop' auto onClick={onChangeInput} > 变更</Button>
-        <Button type='link' auto onClick={() => form.current?.reset()} > 实例重置</Button>
-      </Affix>
-      <Tab
-        options={TabOption}
-        currenIndex={current}
-        onChange={(index) => setCurrent(index)}
-        size="large"
-      />
-      <Tab
-        options={TabUrlOption}
-        currenIndex={current}
-        onChange={(index) => setCurrent(index)}
-        size="large"
-      />
-      <Tab
-        options={TabOption}
-        currenIndex={current}
-        onChange={(index) => setCurrent(index)}
-      />
-      <Tab
-        options={TabOption}
-        currenIndex={current}
-        onChange={(index) => setCurrent(index)}
-        type="button"
-      />
-      <Card>
-        <CheckboxGroup name="shop6" >
-          <Checkbox value="1">联合复选框1</Checkbox>
-          <Checkbox value="2">联合复选框4</Checkbox>
-          <Checkbox value="3">联合复选框3</Checkbox>
-          <Checkbox value="4">联合复选框2</Checkbox>
-        </CheckboxGroup>
-      </Card>
-      <Card>
-        <CheckboxGroup name="shop7" radio >
-          <Checkbox value="1" >单选模式1</Checkbox>
-          <Checkbox value="2" >单选模式2</Checkbox>
-          <Checkbox value="3" >单选模式3</Checkbox>
-          <Checkbox value="4" >单选模式4</Checkbox>
-        </CheckboxGroup>
-      </Card>
-      <Card>
-        <CheckboxGroup name="shop8" radio >
-          <Checkbox value="1" type="button" >单选模式1</Checkbox>
-          <Checkbox value="2" type="button" >单选模式2</Checkbox>
-          <Checkbox value="3" type="button" >单选模式3</Checkbox>
-          <Checkbox value="4" type="button" >单选模式4</Checkbox>
-        </CheckboxGroup>
-      </Card>
-      <Card>
-        <CheckboxGroup name="shop9" radio >
-          <Checkbox value="1" type="button" buttonType="error" ghost >单选模式1</Checkbox>
-          <Checkbox value="2" type="button" ghost >单选模式2</Checkbox>
-          <Checkbox value="3" type="button" ghost >单选模式3</Checkbox>
-          <Checkbox value="4" type="button" ghost >单选模式4</Checkbox>
-        </CheckboxGroup>
-      </Card>
-      <Card>
-        <CheckboxGroup name="shop10" ref={checkGroupRef as React.LegacyRef<CheckboxGroup>} >
-          <Checkbox value="1">单选模式1</Checkbox>
-          <Checkbox value="2">单选模式2</Checkbox>
-          <Checkbox value="3">单选模式3</Checkbox>
-          <Checkbox value="4">单选模式4</Checkbox>
-        </CheckboxGroup>
-        <Button onClick={() => checkGroupRef.current?.selectAll()} >全选</Button>
-        <Button onClick={() => checkGroupRef.current?.reset()} >取消选中</Button>
-      </Card>
-      <Link to='https://baidu.com'>baidu1</Link>
-      <Link to='http://baidu.com'>baidu1</Link>
-      <Link to='//baidu.com'>baidu1</Link>
-      <Link to='/pages/link/index'>【Link跳转】</Link>
-      <Link to='/pages/link/index' replace >【Link原地跳转】</Link>
-      <Link to='/pages/link/index' replace >【替换跳转】</Link>
-      <Link to='openmp:///pages/link/index'  >【打开小程序】</Link>
-      <Link to='/pages/link/index' type="primary" >primary</Link>
-      <Link to='/pages/link/index' type="warn" >warn</Link>
-      <Link to='/pages/link/index' type="error" >error</Link>
-      <Link to='/pages/link/index' type="link" >link</Link>
-      <Link to='/pages/link/index' type="pop" >pop</Link>
-      <Button>
-        <Timer startTime={0} endTime={time} />
-      </Button>
-      <Button>
-        <Timer startTime={0} endTime={240000000} />
-      </Button>
-      <Timer startTime={1500000000} endTime={1500000000 + 240000} fill />
-      <Timer startTime={1500000000} endTime={1500000000 + 240000000} fill />
-      <Timer startTime={1500000000} endTime={1500000000 + 240000000} renderItem={renderItem} />
-      <Tag size="large">3-9岁</Tag>
-      <Tag size="middle">3-9岁</Tag>
-      <Tag size="small">3-9岁</Tag>
-      <Tag type="error">3-9岁</Tag>
-      <Tag type="link">3-9岁</Tag>
-      <Tag type="pop">3-9岁</Tag>
-      <Tag type="primary">3-9岁</Tag>
-      <Tag type="warn">3-9岁</Tag>
-      <Tag type="urgent">3-9岁</Tag>
-      <Tag type="error" ghost>3-9岁</Tag>
-      <Tag type="link" ghost>3-9岁</Tag>
-      <Tag type="pop" ghost>3-9岁</Tag>
-      <Tag type="primary" ghost>3-9岁</Tag>
-      <Tag type="warn" ghost>3-9岁</Tag>
-      <Tag type="warn" ghost>3-9岁</Tag>
-      <Tag type="urgent" ghost >3-9岁</Tag>
-      <Tag type="activity" ghost >3-9岁</Tag>
-      <Cell label="限时奖励" />
-      <Cell label="限时奖励" placeholder="请选择奖励类型" />
-      <Cell label="限时奖励" placeholder="请选择奖励类型" value="葵花籽" />
-      <Cell label="限时奖励" placeholder="请选择奖励类型" value="葵花籽" arrow />
-      <Cell label="限时奖励" placeholder="请选择奖励类型" value="葵花籽" suffix="重选" arrow />
-      <Cell label="限时奖励" placeholder="请选择奖励类型" value="前往兑换" to="/home" suffix="重选" arrow />
-      <Cell label="限时奖励" placeholder="请选择奖励类型" value="无效兑换" to="/home" suffix="重选" arrow disabled />
-      <Cell label="限时奖励" placeholder="请选择奖励类型" value="前往兑换前往兑换前往兑换前往兑换前往兑换前往兑换前往兑换前往兑换前往兑换前往兑换前往兑换" suffix="重选" arrow onClick={() => Toast.show('骗你的')} />
-      <br />
-      <Cell.List line>
-        <Cell label="限时奖励" placeholder="请选择奖励类型" value="葵花籽" suffix="重选" arrow />
-        <Cell label="限时奖励" placeholder="请选择奖励类型" value="无效兑换" to="/home" suffix="重选" arrow disabled />
-        <Cell label="限时奖励" placeholder="请选择奖励类型" value="立即兑换" suffix="重选" arrow onClick={() => Toast.show('骗你的')} />
-      </Cell.List>
-      <Cell label="限时奖励" >
-        <Empty />
-      </Cell>
-      <br />
-      <Button size="max">向日葵妈妈UI</Button>
-      <Button size="big">向日葵妈妈UI</Button>
-      <Button size="large" to="/123" >向日葵妈妈UI</Button>
-      <Button size="large" >向日葵妈妈UI</Button>
-      <Button size="middle">向日葵妈妈UI</Button>
-      <Button size="small">向日葵妈妈UI</Button>
-      <Button size="mini">向日葵妈妈UI</Button>
-      <Button size="max" auto>向日葵妈妈UI</Button>
-      <Button size="big" auto>向日葵妈妈UI</Button>
-      <Button size="large" auto >向日葵妈妈UI</Button>
-      <Button size="middle" auto >向日葵妈妈UI</Button>
-      <Button size="small" auto>向日葵妈妈UI</Button>
-      <Button size="mini" auto>向日葵妈妈UI</Button>
-      <Button type="error">向日葵妈妈UI</Button>
-      <Button type="link">向日葵妈妈UI</Button>
-      <Button type="pop">向日葵妈妈UI</Button>
-      <Button type="primary">向日葵妈妈UI</Button>
-      <Button type="primary" to="/home">跳转首页</Button>
-      <Button type="warn">向日葵妈妈UI</Button>
-      <Button type="stop">stop</Button>
-      <Button type="error" disabled>向日葵妈妈UI(disable)</Button>
-      <Button type="link" disabled>向日葵妈妈UI（disable）</Button>
-      <Button type="pop" disabled>向日葵妈妈UI（disable）</Button>
-      <Button type="primary" disabled>向日葵妈妈UI（disable）</Button>
-      <Button type="default" disabled>向日葵妈妈UI（disable）</Button>
-      <Button type="warn" disabled>向日葵妈妈UI(disable)</Button>
-      <Button block type="error" >向日葵妈妈UI</Button>
-      <Button block type="link" >向日葵妈妈UI</Button>
-      <Button block type="pop" >向日葵妈妈UI</Button>
-      <Button block type="primary" >向日葵妈妈UI</Button>
-      <Button block type="warn" >向日葵妈妈UI</Button>
-      <Button ghost type="error" >向日葵妈妈UI</Button>
-      <Button ghost type="link" >向日葵妈妈UI</Button>
-      <Button ghost type="pop" >向日葵妈妈UI</Button>
-      <Button ghost type="primary" >向日葵妈妈UI</Button>
-      <Button ghost type="warn" >向日葵妈妈UI</Button>
-      <Button ghost type="warn" >向日葵妈妈UI</Button>
-      <Button onClick={onClick} disabled >向日葵妈妈UI</Button>
-      <Button onClick={onClick} type="default" >向日葵妈妈UI</Button>
-      <Button onClick={() => Toast.show({ title: '我是toast', icon: 'success' })}>点击出现taost</Button>
-      <Button onClick={() => setShow(true)}>抽屉</Button>
-      <Button onClick={() => setAshow(true)}>ActionSheet</Button>
-      <Button onClick={() => setCshow(true)}>自定义ActionSheet</Button>
-      <Button onClick={() => {
-        showActionSheet({ list: asList })
-          .then(console.log)
-          .catch(console.error)
-      }}>
-        API 唤起 Actionsheet
-      </Button>
-      <Button onClick={() => setMshow(true)} type="pop">自定义Modal</Button>
-      <Button onClick={() => {
-        showModal({ title: 'API 唤起 Modal' })
-          .then(console.log)
-          .catch(console.error)
-      }}>
-        API 唤起 Modal
-      </Button>
-
-      <Drawer visible={show} onClose={() => setShow(false)}>
-        <div className="si-button"></div>
-      </Drawer>
-      <ActionSheet
-        closable
-        visible={aShow}
-        title="我是大标题"
-        subTitle="我是副标题"
-        onClose={() => setAshow(false)}
-        showCancel={true}
-        showOk={true}
-        titleAlign="center"
-      />
-
-      <ActionSheet
-        visible={cShow}
-        title="我是大标题"
-        onClose={() => setCshow(false)}
-      >
+        <Card>
+          <Upload name="img" count={2} />
+        </Card>
+        <Card>
+          <Upload name="img2" handelUpload={() => Promise.reject(new Error('上传失败'))} />
+        </Card>
+        <Card>
+          <Upload layout="square" name="img3" />
+        </Card>
+        <Input name="name" />
+        <Textarea name="liuyan" />
+        <Checkbox name="shop1">商品链接</Checkbox>
+        <Checkbox check name="shop2" >商品链接</Checkbox>
+        <Checkbox check disabled name="shop3" >商品链接</Checkbox>
+        <Checkbox disabled name="shop4" >商品链接</Checkbox>
+        <Checkbox type="button" name="shop5" >商品链接</Checkbox>
+        <Tab
+          options={TabOption}
+          currenIndex={current}
+          onChange={(index) => setCurrent(index)}
+          size="large"
+        />
+        <Tab
+          options={TabUrlOption}
+          currenIndex={current}
+          onChange={(index) => setCurrent(index)}
+          size="large"
+        />
+        <Tab
+          options={TabOption}
+          currenIndex={current}
+          onChange={(index) => setCurrent(index)}
+        />
+        <Tab
+          options={TabOption}
+          currenIndex={current}
+          onChange={(index) => setCurrent(index)}
+          type="button"
+        />
+        <Card>
+          <CheckboxGroup name="shop6" >
+            <Checkbox value="1">联合复选框1</Checkbox>
+            <Checkbox value="2">联合复选框4</Checkbox>
+            <Checkbox value="3">联合复选框3</Checkbox>
+            <Checkbox value="4">联合复选框2</Checkbox>
+          </CheckboxGroup>
+        </Card>
+        <Card>
+          <CheckboxGroup name="shop7" radio >
+            <Checkbox value="1" >单选模式1</Checkbox>
+            <Checkbox value="2" >单选模式2</Checkbox>
+            <Checkbox value="3" >单选模式3</Checkbox>
+            <Checkbox value="4" >单选模式4</Checkbox>
+          </CheckboxGroup>
+        </Card>
+        <Card>
+          <CheckboxGroup name="shop8" radio >
+            <Checkbox value="1" type="button" >单选模式1</Checkbox>
+            <Checkbox value="2" type="button" >单选模式2</Checkbox>
+            <Checkbox value="3" type="button" >单选模式3</Checkbox>
+            <Checkbox value="4" type="button" >单选模式4</Checkbox>
+          </CheckboxGroup>
+        </Card>
+        <Card>
+          <CheckboxGroup name="shop9" radio >
+            <Checkbox value="1" type="button" buttonType="error" ghost >单选模式1</Checkbox>
+            <Checkbox value="2" type="button" ghost >单选模式2</Checkbox>
+            <Checkbox value="3" type="button" ghost >单选模式3</Checkbox>
+            <Checkbox value="4" type="button" ghost >单选模式4</Checkbox>
+          </CheckboxGroup>
+        </Card>
+        <Card>
+          <CheckboxGroup name="shop10" ref={checkGroupRef as React.LegacyRef<CheckboxGroup>} >
+            <Checkbox value="1">单选模式1</Checkbox>
+            <Checkbox value="2">单选模式2</Checkbox>
+            <Checkbox value="3">单选模式3</Checkbox>
+            <Checkbox value="4">单选模式4</Checkbox>
+          </CheckboxGroup>
+          <Button onClick={() => checkGroupRef.current?.selectAll()} >全选</Button>
+          <Button onClick={() => checkGroupRef.current?.reset()} >取消选中</Button>
+        </Card>
+        <Link to='https://baidu.com'>baidu1</Link>
+        <Link to='http://baidu.com'>baidu1</Link>
+        <Link to='//baidu.com'>baidu1</Link>
+        <Link to='/pages/link/index'>【Link跳转】</Link>
+        <Link to='/pages/link/index' replace >【Link原地跳转】</Link>
+        <Link to='/pages/link/index' replace >【替换跳转】</Link>
+        <Link to='openmp:///pages/link/index'  >【打开小程序】</Link>
+        <Link to='/pages/link/index' type="primary" >primary</Link>
+        <Link to='/pages/link/index' type="warn" >warn</Link>
+        <Link to='/pages/link/index' type="error" >error</Link>
+        <Link to='/pages/link/index' type="link" >link</Link>
+        <Link to='/pages/link/index' type="pop" >pop</Link>
+        <Button>
+          <Timer startTime={0} endTime={time} />
+        </Button>
+        <Button>
+          <Timer startTime={0} endTime={240000000} />
+        </Button>
+        <Timer startTime={1500000000} endTime={1500000000 + 240000} fill />
+        <Timer startTime={1500000000} endTime={1500000000 + 240000000} fill />
+        <Timer startTime={1500000000} endTime={1500000000 + 240000000} renderItem={renderItem} />
+        <Tag size="large">3-9岁</Tag>
+        <Tag size="middle">3-9岁</Tag>
+        <Tag size="small">3-9岁</Tag>
+        <Tag type="error">3-9岁</Tag>
+        <Tag type="link">3-9岁</Tag>
+        <Tag type="pop">3-9岁</Tag>
+        <Tag type="primary">3-9岁</Tag>
+        <Tag type="warn">3-9岁</Tag>
+        <Tag type="urgent">3-9岁</Tag>
+        <Tag type="error" ghost>3-9岁</Tag>
+        <Tag type="link" ghost>3-9岁</Tag>
+        <Tag type="pop" ghost>3-9岁</Tag>
+        <Tag type="primary" ghost>3-9岁</Tag>
+        <Tag type="warn" ghost>3-9岁</Tag>
+        <Tag type="warn" ghost>3-9岁</Tag>
+        <Tag type="urgent" ghost >3-9岁</Tag>
+        <Tag type="activity" ghost >3-9岁</Tag>
         <Cell label="限时奖励" />
         <Cell label="限时奖励" placeholder="请选择奖励类型" />
         <Cell label="限时奖励" placeholder="请选择奖励类型" value="葵花籽" />
@@ -338,40 +236,141 @@ function App() {
         <Cell label="限时奖励" placeholder="请选择奖励类型" value="葵花籽" suffix="重选" arrow />
         <Cell label="限时奖励" placeholder="请选择奖励类型" value="前往兑换" to="/home" suffix="重选" arrow />
         <Cell label="限时奖励" placeholder="请选择奖励类型" value="无效兑换" to="/home" suffix="重选" arrow disabled />
-        <Cell label="限时奖励" placeholder="请选择奖励类型" value="前往兑换" suffix="重选" arrow onClick={() => Toast.show('骗你的')} />
-        <Cell label="限时奖励" />
-        <Cell label="限时奖励" placeholder="请选择奖励类型" />
-        <Cell label="限时奖励" placeholder="请选择奖励类型" value="葵花籽" />
-        <Cell label="限时奖励" placeholder="请选择奖励类型" value="葵花籽" arrow />
-        <Cell label="限时奖励" placeholder="请选择奖励类型" value="葵花籽" suffix="重选" arrow />
-        <Cell label="限时奖励" placeholder="请选择奖励类型" value="前往兑换" to="/home" suffix="重选" arrow />
-        <Cell label="限时奖励" placeholder="请选择奖励类型" value="无效兑换" to="/home" suffix="重选" arrow disabled />
-        <Cell label="限时奖励" placeholder="请选择奖励类型" value="前往兑换" suffix="重选" arrow onClick={() => Toast.show('骗你的')} />
-      </ActionSheet>
+        <Cell label="限时奖励" placeholder="请选择奖励类型" value="前往兑换前往兑换前往兑换前往兑换前往兑换前往兑换前往兑换前往兑换前往兑换前往兑换前往兑换" suffix="重选" arrow onClick={() => Toast.show('骗你的')} />
+        <br />
+        <Cell.List line>
+          <Cell label="限时奖励" placeholder="请选择奖励类型" value="葵花籽" suffix="重选" arrow />
+          <Cell label="限时奖励" placeholder="请选择奖励类型" value="无效兑换" to="/home" suffix="重选" arrow disabled />
+          <Cell label="限时奖励" placeholder="请选择奖励类型" value="立即兑换" suffix="重选" arrow onClick={() => Toast.show('骗你的')} />
+        </Cell.List>
+        <Cell label="限时奖励" >
+          <Empty />
+        </Cell>
+        <br />
+        <Button size="max">向日葵妈妈UI</Button>
+        <Button size="big">向日葵妈妈UI</Button>
+        <Button size="large" to="/123" >向日葵妈妈UI</Button>
+        <Button size="large" >向日葵妈妈UI</Button>
+        <Button size="middle">向日葵妈妈UI</Button>
+        <Button size="small">向日葵妈妈UI</Button>
+        <Button size="mini">向日葵妈妈UI</Button>
+        <Button size="max" auto>向日葵妈妈UI</Button>
+        <Button size="big" auto>向日葵妈妈UI</Button>
+        <Button size="large" auto >向日葵妈妈UI</Button>
+        <Button size="middle" auto >向日葵妈妈UI</Button>
+        <Button size="small" auto>向日葵妈妈UI</Button>
+        <Button size="mini" auto>向日葵妈妈UI</Button>
+        <Button type="error">向日葵妈妈UI</Button>
+        <Button type="link">向日葵妈妈UI</Button>
+        <Button type="pop">向日葵妈妈UI</Button>
+        <Button type="primary">向日葵妈妈UI</Button>
+        <Button type="primary" to="/home">跳转首页</Button>
+        <Button type="warn">向日葵妈妈UI</Button>
+        <Button type="stop">stop</Button>
+        <Button type="error" disabled>向日葵妈妈UI(disable)</Button>
+        <Button type="link" disabled>向日葵妈妈UI（disable）</Button>
+        <Button type="pop" disabled>向日葵妈妈UI（disable）</Button>
+        <Button type="primary" disabled>向日葵妈妈UI（disable）</Button>
+        <Button type="default" disabled>向日葵妈妈UI（disable）</Button>
+        <Button type="warn" disabled>向日葵妈妈UI(disable)</Button>
+        <Button block type="error" >向日葵妈妈UI</Button>
+        <Button block type="link" >向日葵妈妈UI</Button>
+        <Button block type="pop" >向日葵妈妈UI</Button>
+        <Button block type="primary" >向日葵妈妈UI</Button>
+        <Button block type="warn" >向日葵妈妈UI</Button>
+        <Button ghost type="error" >向日葵妈妈UI</Button>
+        <Button ghost type="link" >向日葵妈妈UI</Button>
+        <Button ghost type="pop" >向日葵妈妈UI</Button>
+        <Button ghost type="primary" >向日葵妈妈UI</Button>
+        <Button ghost type="warn" >向日葵妈妈UI</Button>
+        <Button ghost type="warn" >向日葵妈妈UI</Button>
+        <Button onClick={onClick} disabled >向日葵妈妈UI</Button>
+        <Button onClick={onClick} type="default" >向日葵妈妈UI</Button>
+        <Button onClick={() => Toast.show({ title: '我是toast', icon: 'success' })}>点击出现taost</Button>
+        <Button onClick={() => setShow(true)}>抽屉</Button>
+        <Button onClick={() => setAshow(true)}>ActionSheet</Button>
+        <Button onClick={() => setCshow(true)}>自定义ActionSheet</Button>
+        <Button onClick={() => {
+          showActionSheet({ list: asList })
+            .then(console.log)
+            .catch(console.error)
+        }}>
+          API 唤起 Actionsheet
+        </Button>
+        <Button onClick={() => setMshow(true)} type="pop">自定义Modal</Button>
+        <Button onClick={() => {
+          showModal({ title: 'API 唤起 Modal' })
+            .then(console.log)
+            .catch(console.error)
+        }}>
+          API 唤起 Modal
+        </Button>
 
-      <Modal
-        visible={mShow}
-        title="这是标题"
-        content="这是文案这是文案这是文案这是文案"
-        button={[
-          { text: '取消', style: 'cancel' },
-          { text: '继续看' },
-          { text: '确定' }
-        ]}
-        onButtonClick={() => setMshow(false)}
-      />
-      <Empty text="暂无内容哦" size="large" />
-      <Empty text="暂无内容哦" >
-        <Button>返回首页</Button>
-      </Empty>
+        <Drawer visible={show} onClose={() => setShow(false)}>
+          <div className="si-button"></div>
+        </Drawer>
+        <ActionSheet
+          closable
+          visible={aShow}
+          title="我是大标题"
+          subTitle="我是副标题"
+          onClose={() => setAshow(false)}
+          showCancel={true}
+          showOk={true}
+          titleAlign="center"
+        />
+        <Affix onChange={onChange} position="bottom">
+          <Button auto onClick={onSetTime} formType="submit" > 提交</Button>
+          <Button type='error' auto onClick={onSetTime} formType="reset" > 重置</Button>
+          <Button type='pop' auto onClick={onChangeInput} > 变更</Button>
+          <Button type='link' auto onClick={() => form.current?.reset()} > 实例重置</Button>
+        </Affix>
+        <ActionSheet
+          visible={cShow}
+          title="我是大标题"
+          onClose={() => setCshow(false)}
+        >
+          <Cell label="限时奖励" />
+          <Cell label="限时奖励" placeholder="请选择奖励类型" />
+          <Cell label="限时奖励" placeholder="请选择奖励类型" value="葵花籽" />
+          <Cell label="限时奖励" placeholder="请选择奖励类型" value="葵花籽" arrow />
+          <Cell label="限时奖励" placeholder="请选择奖励类型" value="葵花籽" suffix="重选" arrow />
+          <Cell label="限时奖励" placeholder="请选择奖励类型" value="前往兑换" to="/home" suffix="重选" arrow />
+          <Cell label="限时奖励" placeholder="请选择奖励类型" value="无效兑换" to="/home" suffix="重选" arrow disabled />
+          <Cell label="限时奖励" placeholder="请选择奖励类型" value="前往兑换" suffix="重选" arrow onClick={() => Toast.show('骗你的')} />
+          <Cell label="限时奖励" />
+          <Cell label="限时奖励" placeholder="请选择奖励类型" />
+          <Cell label="限时奖励" placeholder="请选择奖励类型" value="葵花籽" />
+          <Cell label="限时奖励" placeholder="请选择奖励类型" value="葵花籽" arrow />
+          <Cell label="限时奖励" placeholder="请选择奖励类型" value="葵花籽" suffix="重选" arrow />
+          <Cell label="限时奖励" placeholder="请选择奖励类型" value="前往兑换" to="/home" suffix="重选" arrow />
+          <Cell label="限时奖励" placeholder="请选择奖励类型" value="无效兑换" to="/home" suffix="重选" arrow disabled />
+          <Cell label="限时奖励" placeholder="请选择奖励类型" value="前往兑换" suffix="重选" arrow onClick={() => Toast.show('骗你的')} />
+        </ActionSheet>
 
-      <Empty text="暂无内容哦" size="small" />
-      <Image src="https://t7.baidu.com/it/u=124476473,2583135375&fm=193&f=GIFF" previewImage />
-      <Image src="https://t7.baidu.com/it/u=1595072465,3644073269&fm=193&f=GIF" lazyLoad />
-      <Card onClick={() => previewImage({
-        current: 'https://t7.baidu.com/it/u=2291349828,4144427007&fm=193&f=GIF',
-        urls: ['https://t7.baidu.com/it/u=2291349828,4144427007&fm=193&f=GIF', 'https://t7.baidu.com/it/u=124476473,2583135375&fm=193&f=GIFF']
-      })} >Card</Card>
+        <Modal
+          visible={mShow}
+          title="这是标题"
+          content="这是文案这是文案这是文案这是文案"
+          button={[
+            { text: '取消', style: 'cancel' },
+            { text: '继续看' },
+            { text: '确定' }
+          ]}
+          onButtonClick={() => setMshow(false)}
+        />
+        <Empty text="暂无内容哦" size="large" />
+        <Empty text="暂无内容哦" >
+          <Button>返回首页</Button>
+        </Empty>
+
+        <Empty text="暂无内容哦" size="small" />
+        <Image src="https://t7.baidu.com/it/u=124476473,2583135375&fm=193&f=GIFF" previewImage />
+        <Image src="https://t7.baidu.com/it/u=1595072465,3644073269&fm=193&f=GIF" lazyLoad />
+        <Card onClick={() => previewImage({
+          current: 'https://t7.baidu.com/it/u=2291349828,4144427007&fm=193&f=GIF',
+          urls: ['https://t7.baidu.com/it/u=2291349828,4144427007&fm=193&f=GIF', 'https://t7.baidu.com/it/u=124476473,2583135375&fm=193&f=GIFF']
+        })} >Card</Card>
 
         <Card onClick={() => previewImage({
           current: 'https://t7.baidu.com/it/u=2291349828,4144427007&fm=193&f=GIF',

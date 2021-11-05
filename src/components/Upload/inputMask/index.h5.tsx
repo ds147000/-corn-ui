@@ -3,7 +3,7 @@ import Toast from '../../Toast'
 import { InputMaskProps } from './typeing'
 import { checkFileType, getFileSuffix } from './utils/suffix'
 
-export const InputMask: React.FC<InputMaskProps> = ({ name, type, onChange }) => {
+export const InputMask: React.FC<InputMaskProps> = ({ type, onChange }) => {
   const _onChange = (event: React.ChangeEvent<HTMLInputElement>): void => {
 
     if (checkFileType(event.target.files as FileList, type)) {
@@ -19,7 +19,6 @@ export const InputMask: React.FC<InputMaskProps> = ({ name, type, onChange }) =>
       className="xrk-upload-mask"
       data-testid="uplaod-btn"
       type="file"
-      name={name}
       accept={getFileSuffix(type)}
       onChange={_onChange}
       multiple

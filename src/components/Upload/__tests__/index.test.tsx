@@ -1,8 +1,7 @@
-import { fireEvent, render, waitFor } from '@testing-library/react'
+import { render, waitFor } from '@testing-library/react'
 import React from 'react'
 import Upload from '../index'
 import UserEvent from '@testing-library/user-event'
-import { wait } from '@testing-library/user-event/dist/utils'
 
 jest.mock('../inputMask')
 jest.mock('../../PreviewImage')
@@ -16,7 +15,7 @@ describe('Uplaod.h5', () => {
   })
 
   test('渲染自定义按钮', async () => {
-    const screen = render(<Upload btn={() => <div>upload</div>} />)
+    const screen = render(<Upload list={[]} btn={() => <div>upload</div>} />)
     screen.getByText('upload')
     await waitFor(() => expect(screen.container).toMatchSnapshot())
   })

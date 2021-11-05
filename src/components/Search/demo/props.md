@@ -1,5 +1,5 @@
 ---header
-sort: 6
+sort: 5
 type: 表单类型
 ---
 # Search 搜索框

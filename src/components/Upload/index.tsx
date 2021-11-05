@@ -39,6 +39,10 @@ class UploadComps extends React.Component<UploadProps, UploadState> {
     previewList: []
   }
 
+  componentDidMount(): void {
+    this.setState({ list: this.props.list || [] })
+  }
+
   onChangeOfH5 = async (file: FileList): Promise<void> => {
     if (this.props.beforUpload?.(file, this.state.list)) return
     if (this.checkListLen(file)) return
@@ -107,7 +111,6 @@ class UploadComps extends React.Component<UploadProps, UploadState> {
       type: this.fileType,
       onChange: this.onChangeOfH5,
       onMpChange: this.onChangeOfMp,
-      name: this.props.name,
       multiple: this.isMultiple
     }
 
