@@ -129,6 +129,7 @@ class CutromLocation extends URL {
 
 }
 window.location = new CutromLocation('http://localhost:3000/')
+URL.createObjectURL = jest.fn(() => '')
 
 jest.mock('../src/components/Image')
 jest.mock('../src/components/Link')

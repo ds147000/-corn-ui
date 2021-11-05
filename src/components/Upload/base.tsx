@@ -7,6 +7,7 @@ import Icon from '../Icon'
 
 export declare namespace Upload {
   type Media = {
+    status: 'done' | 'loading' | 'error'
     mediaId: number
     content: string
   }
@@ -19,7 +20,7 @@ export declare namespace Upload {
 
   type layout = 'square' | 'row'
 
-  type onRemove = (img: Media, index: number) => void
+  type onRemove = (img: Media) => void
 
   interface props {
     /** 图片项类名 */
@@ -40,11 +41,11 @@ export declare namespace Upload {
 export const DEFAULT_COUNT = 9
 
 export const UploadBase: React.FC<Upload.props> = ({
-  itemClassName,
   count = DEFAULT_COUNT,
   layout = 'row',
   btn,
   list,
+  itemClassName,
   onRemove
 }) => {
   const El = useRef<HTMLDivElement>()
@@ -55,16 +56,13 @@ export const UploadBase: React.FC<Upload.props> = ({
     'xrk-upload-' + layout
   ), [ layout ])
 
-  const _itemClass = useMemo(() => classNames(
-    'xrk-upload-item',
-    itemClassName
-  ), [ itemClassName ])
 
-  const onPreview = (index: number): void => {
+
+  const onPreview = (item: Upload.Media): void => {
     const _list = list as Upload.Media[]
     previewImage({
-      current: _list[index].content,
-      urls: _list?.map((item) => item.content)
+      current: item.content,
+      urls: _list?.map((i) => i.content)
     })
   }
 
@@ -74,35 +72,83 @@ export const UploadBase: React.FC<Upload.props> = ({
     // #if _APP === 'weapp'
 
     // #else
-    try {
-      El.current?.scrollTo?.({ left: El.current.scrollWidth, top: 0, behavior: 'smooth' })
-    } catch (error) {
-      El.current?.scrollTo?.(El.current.scrollWidth, 0)
-    }
+    El.current?.scrollTo?.({ left: El.current.scrollWidth, top: 0, behavior: 'smooth' })
     // #endif
   }, [ list?.length, layout ])
 
   return (
     <View className={_class} ref={El} >
-      {list?.map((item, key) => (
-        <View key={item.mediaId + item.content} className={_itemClass} >
-          <View
-            data-testid="upload-item"
-            className="xrk-upload-remove xrk-f xrk-ac xrk-jc"
-            onClick={(): void => onRemove?.(item, key)}
-          >
-            <Icon name="delete" data-testid="upload-remove" />
-          </View>
-          <Image
-            className="xrk-upload-img"
-            src={item.content}
-            onClick={(): void => onPreview(key)}
-            lazyLoad
-            mode="aspectFill"
-          />
-        </View>
+      {list?.map((item) => (
+        <UploadItem
+          key={item.mediaId + item.content}
+          onPreview={onPreview}
+          onRemove={onRemove}
+          className={itemClassName}
+          item={item}
+        />
       ))}
       {isShowBtn && btn}
+    </View>
+  )
+}
+
+interface UploadItemProps {
+  onPreview(item: Upload.Media): void
+  onRemove?: Upload.onRemove
+  /** 图片项类名 */
+  className?: string
+  item: Upload.Media
+}
+
+const UploadItem: React.FC<UploadItemProps> = ({
+  onPreview,
+  onRemove,
+  className,
+  item
+}) => {
+  const _itemClass = useMemo(() => classNames(
+    'xrk-upload-item',
+    className
+  ), [ className ])
+
+  const status = useMemo(() => {
+    switch(item.status) {
+      case 'loading':
+        return <View className="xrk-upload-loading" />
+
+      case 'error':
+        return <View className="xrk-upload-error xrk-f xrk-ac xrk-jc" >上传失败</View>
+
+      default:
+        return null
+    }
+  }, [ item.status ])
+
+  const _onRemove = (): void => {
+    onRemove?.(item)
+  }
+
+  const _onPreview = (): void => {
+    onPreview(item)
+  }
+
+  return (
+    <View className={_itemClass} data-testid="upload-item" >
+      <View
+        className="xrk-upload-remove xrk-f xrk-ac xrk-jc"
+        onClick={_onRemove}
+        data-testid="upload-remove"
+      >
+        <Icon name="delete"  />
+      </View>
+      <Image
+        className="xrk-upload-img"
+        src={item.content}
+        onClick={_onPreview}
+        lazyLoad
+        mode="aspectFill"
+      />
+      {status}
     </View>
   )
 }

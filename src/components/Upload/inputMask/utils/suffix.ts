@@ -13,12 +13,10 @@ export function getFileSuffix(type: 'video' | 'image' | 'all'): string {
 }
 
 export function checkFileType(files: FileList, type: 'video' | 'image' | 'all'): boolean {
-  if (!files) return true
-  const isFileList = typeof files === 'object' && typeof files.item === 'function'
-  if (!isFileList) return true
+  if (!files || !files?.length) return true
 
   for(let i = 0; i < files.length; i++) {
-    const file = files.item(i)
+    const file = files[i]
     if (!file) return true
 
     const fileType = file.type.toLocaleLowerCase()

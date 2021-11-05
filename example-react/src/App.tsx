@@ -82,7 +82,10 @@ function App() {
   return (
     <div className="App" >
       <Card>
-        <Upload />
+        <Upload count={2} />
+      </Card>
+      <Card>
+        <Upload handelUpload={() => Promise.reject(new Error('上传失败'))} />
       </Card>
       <Card>
         <Upload layout="square" />

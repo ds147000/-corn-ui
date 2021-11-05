@@ -32,14 +32,17 @@ describe('UploadBase', () => {
       {
         mediaId: 100,
         content: '100.jpg',
+        status: 'done'
       },
       {
         mediaId: 101,
-        content: '101.jpg'
+        content: '101.jpg',
+        status: 'done'
       },
       {
         mediaId: 102,
-        content: '102.jpg'
+        content: '102.jpg',
+        status: 'done'
       }
     ]
 
@@ -55,14 +58,17 @@ describe('UploadBase', () => {
       {
         mediaId: 100,
         content: '100.jpg',
+        status: 'done'
       },
       {
         mediaId: 101,
-        content: '101.jpg'
+        content: '101.jpg',
+        status: 'done'
       },
       {
         mediaId: 102,
-        content: '102.jpg'
+        content: '102.jpg',
+        status: 'done'
       }
     ]
 
@@ -79,14 +85,17 @@ describe('UploadBase', () => {
       {
         mediaId: 100,
         content: '100.jpg',
+        status: 'done'
       },
       {
         mediaId: 101,
-        content: '101.jpg'
+        content: '101.jpg',
+        status: 'done'
       },
       {
         mediaId: 102,
-        content: '102.jpg'
+        content: '102.jpg',
+        status: 'done'
       }
     ]
 
@@ -101,23 +110,25 @@ describe('UploadBase', () => {
       {
         mediaId: 100,
         content: '100.jpg',
+        status: 'done'
       },
       {
         mediaId: 101,
-        content: '101.jpg'
+        content: '101.jpg',
+        status: 'done'
       },
       {
         mediaId: 102,
-        content: '102.jpg'
+        content: '102.jpg',
+        status: 'done'
       }
     ]
 
-    const screen = render(<UploadBase onRemove={onRemove} list={list} btn={<div>上传</div>} />)
+    const screen = render(<UploadBase layout="square" onRemove={onRemove} list={list} btn={<div>上传</div>} />)
     const items = await screen.queryAllByTestId('upload-remove')
     fireEvent.click(items[0])
     expect(onRemove).toHaveBeenCalledTimes(1)
     expect(onRemove.mock.calls[0][0]).toEqual(list[0])
-    expect(onRemove.mock.calls[0][1]).toBe(0)
   })
 
   test('onPreview', () => {
@@ -125,14 +136,17 @@ describe('UploadBase', () => {
       {
         mediaId: 100,
         content: '100.jpg',
+        status: 'done'
       },
       {
         mediaId: 101,
-        content: '101.jpg'
+        content: '101.jpg',
+        status: 'loading'
       },
       {
         mediaId: 102,
-        content: '102.jpg'
+        content: '102.jpg',
+        status: 'error'
       }
     ]
 

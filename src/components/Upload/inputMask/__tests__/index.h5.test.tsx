@@ -1,5 +1,5 @@
 import React from 'react'
-import { render, waitFor } from '@testing-library/react'
+import { fireEvent, render, waitFor } from '@testing-library/react'
 import UserEvent from '@testing-library/user-event'
 import { InputMask } from '../index.h5'
 
@@ -16,7 +16,7 @@ describe('inputMask', () => {
   test('选择文件', async () => {
     const onChange = jest.fn()
     const screen = render(<InputMask type="all" onChange={onChange} multiple />)
-    const file = new File(['hello'], 'hello.png')
+    const file = new File(['hello'], 'hello.png', { type: 'image/png' })
     UserEvent.upload(screen.getByTestId('uplaod-btn'), file)
     await waitFor(() => expect(onChange).toHaveBeenCalledTimes(1))
     await waitFor(() => expect(onChange.mock.calls[0][0][0]).toEqual(file))
@@ -25,7 +25,7 @@ describe('inputMask', () => {
   test('选择错误类型文件', async () => {
     const onChange = jest.fn()
     const screen = render(<InputMask type="all" onChange={onChange} multiple />)
-    const file = new File(['hello'], 'hello.go')
+    const file = new File(['hello'], 'hello.go', { type: 'text/go' })
     UserEvent.upload(screen.getByTestId('uplaod-btn'), file)
     await waitFor(() => expect(onChange).toHaveBeenCalledTimes(0))
   })
@@ -34,7 +34,7 @@ describe('inputMask', () => {
   test('指定选择的图片类型', async () => {
     const onChange = jest.fn()
     const screen = render(<InputMask type="image" onChange={onChange} multiple />)
-    const file = new File(['hello'], 'hello.jpg')
+    const file = new File(['hello'], 'hello.jpg', { type: 'image/jpg' })
     UserEvent.upload(screen.getByTestId('uplaod-btn'), file)
     await waitFor(() => expect(onChange).toHaveBeenCalledTimes(1))
     await waitFor(() => expect(onChange.mock.calls[0][0][0]).toEqual(file))
@@ -43,9 +43,9 @@ describe('inputMask', () => {
   test('指定选择的图片类型，选择错误类型', async () => {
     const onChange = jest.fn()
     const screen = render(<InputMask type="image" onChange={onChange} multiple />)
-    const file = new File(['hello'], 'hello.jpg')
-    const file2 = new File(['hello'], 'hello.mp4')
-    const file3 = new File(['hello'], 'hello.png')
+    const file = new File(['hello'], 'hello.jpg', { type: 'image/png' })
+    const file2 = new File(['hello'], 'hello.mp4', { type: 'video/mp4' })
+    const file3 = new File(['hello'], 'hello.png', { type: 'image/png' })
     UserEvent.upload(screen.getByTestId('uplaod-btn'), file)
     UserEvent.upload(screen.getByTestId('uplaod-btn'), file2)
     UserEvent.upload(screen.getByTestId('uplaod-btn'), file3)
@@ -57,11 +57,11 @@ describe('inputMask', () => {
   test('指定选择的图片类型，全图片类型测试', async () => {
     const onChange = jest.fn()
     const screen = render(<InputMask type="image" onChange={onChange} multiple />)
-    const jpg = new File(['hello'], 'hello.jpg')
-    const jpeg = new File(['hello'], 'hello.jpeg')
-    const png = new File(['hello'], 'hello.png')
-    const gif = new File(['hello'], 'hello.gif')
-    const bmp = new File(['hello'], 'hello.bmp')
+    const jpg = new File(['hello'], 'hello.jpg', { type: 'image/jpg' })
+    const jpeg = new File(['hello'], 'hello.jpeg', { type: 'image/jpeg' })
+    const png = new File(['hello'], 'hello.png', { type: 'image/png' })
+    const gif = new File(['hello'], 'hello.gif', { type: 'image/gif' })
+    const bmp = new File(['hello'], 'hello.bmp', { type: 'image/bmp' })
     UserEvent.upload(screen.getByTestId('uplaod-btn'), jpg)
     UserEvent.upload(screen.getByTestId('uplaod-btn'), jpeg)
     UserEvent.upload(screen.getByTestId('uplaod-btn'), png)
@@ -78,7 +78,7 @@ describe('inputMask', () => {
   test('指定选择的图片类型，恶意文件', async () => {
     const onChange = jest.fn()
     const screen = render(<InputMask type="image" onChange={onChange} multiple />)
-    const jpg = new File(['hello'], 'hello.jpg')
+    const jpg = new File(['hello'], 'hello.jpg', { type: 'text' })
     UserEvent.upload(screen.getByTestId('uplaod-btn'), jpg)
 
     await waitFor(() => expect(onChange).toHaveBeenCalledTimes(0))
@@ -87,7 +87,7 @@ describe('inputMask', () => {
   test('指定选择的视频类型', async () => {
     const onChange = jest.fn()
     const screen = render(<InputMask type="video" onChange={onChange} multiple />)
-    const file = new File(['hello'], 'hello.mp4')
+    const file = new File(['hello'], 'hello.mp4', { type: 'video/mp4' })
     UserEvent.upload(screen.getByTestId('uplaod-btn'), file)
     await waitFor(() => expect(onChange).toHaveBeenCalledTimes(1))
     await waitFor(() => expect(onChange.mock.calls[0][0][0]).toEqual(file))
@@ -96,8 +96,8 @@ describe('inputMask', () => {
   test('指定选择的视频类型， 全视频类型测试', async () => {
     const onChange = jest.fn()
     const screen = render(<InputMask type="video" onChange={onChange} multiple />)
-    const mp4 = new File(['hello'], 'hello.mp4')
-    const mp3 = new File(['hello'], 'hello.mp3')
+    const mp4 = new File(['hello'], 'hello.mp4', { type: 'video/mp4' })
+    const mp3 = new File(['hello'], 'hello.mp3', { type: 'audio/mp3' })
     UserEvent.upload(screen.getByTestId('uplaod-btn'), mp4)
     UserEvent.upload(screen.getByTestId('uplaod-btn'), mp3)
     await waitFor(() => expect(onChange).toHaveBeenCalledTimes(1))
@@ -108,7 +108,7 @@ describe('inputMask', () => {
   test('指定选择的视频类型，恶意文件', async () => {
     const onChange = jest.fn()
     const screen = render(<InputMask type="image" onChange={onChange} multiple />)
-    const mp4 = new File(['hello'], 'hello.mp4')
+    const mp4 = new File(['hello'], 'hello.mp4', { type: 'video/mp4' })
     UserEvent.upload(screen.getByTestId('uplaod-btn'), mp4)
 
     await waitFor(() => expect(onChange).toHaveBeenCalledTimes(0))

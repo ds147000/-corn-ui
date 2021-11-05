@@ -5,13 +5,12 @@ import { checkFileType, getFileSuffix } from './utils/suffix'
 
 export const InputMask: React.FC<InputMaskProps> = ({ name, type, onChange }) => {
   const _onChange = (event: React.ChangeEvent<HTMLInputElement>): void => {
-    if (!event.target.files) return
 
-    if (checkFileType(event.target.files, type)) {
+    if (checkFileType(event.target.files as FileList, type)) {
       Toast.show('文件类型错误，请重新选择')
       return
     }
-    onChange?.(event.target.files)
+    onChange?.(event.target.files as FileList)
   }
 
   return (
