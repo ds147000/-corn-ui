@@ -75,7 +75,8 @@ jest.mock('@tarojs/taro', () => {
     usePullDownRefresh: jest.fn(),
     useResize: jest.fn(),
     useReachBottom: jest.fn(),
-    usePageScroll: jest.fn()
+    usePageScroll: jest.fn(),
+    pxTransform: jest.fn((val) => val)
   }
 })
 

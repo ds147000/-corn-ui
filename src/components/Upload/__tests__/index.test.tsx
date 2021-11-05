@@ -47,7 +47,7 @@ describe('Uplaod.h5', () => {
   test('上传失败', async () => {
     const handelUpload = (file: FileList) => Promise.reject(new Error('上传失败'))
 
-    const screen = render(<Upload handelUpload={handelUpload} />)
+    const screen = render(<Upload handelUpload={handelUpload as any} />)
     const file = new File([], '123.jpg', { type: 'image/jpg' })
     UserEvent.upload(screen.getByTestId('uplaod-btn'), file)
   })
@@ -120,5 +120,29 @@ describe('Uplaod.h5', () => {
     UserEvent.upload(screen.getByTestId('uplaod-btn'), [file3, file2, file])
     const btn = await screen.queryAllByTestId('upload-item')
     await waitFor(() => expect(btn.length).toBe(0))
+  })
+
+  test('小程序端上传', async () => {
+    const uploadEl = React.createRef<Upload>()
+    const screen = render(<Upload ref={uploadEl} />)
+    uploadEl.current.onChangeOfMp(['123.jpg', '456.jpg'])
+    await waitFor(async () => expect(await screen.queryAllByTestId('upload-item').length).toBe(2))
+  })
+
+  test('小程序端上传 超出限制', async () => {
+
+    const uploadEl = React.createRef<Upload>()
+    const screen = render(<Upload ref={uploadEl} count={1} />)
+    uploadEl.current.onChangeOfMp(['123.jpg', '456.jpg'])
+    await waitFor(async () => expect(await screen.queryAllByTestId('upload-item').length).toBe(0))
+  })
+
+
+  test('小程序端上传 拦截上传', async () => {
+
+    const uploadEl = React.createRef<Upload>()
+    const screen = render(<Upload ref={uploadEl} beforUpload={() => true} />)
+    uploadEl.current.onChangeOfMp(['123.jpg', '456.jpg'])
+    await waitFor(async () => expect(await screen.queryAllByTestId('upload-item').length).toBe(0))
   })
 })

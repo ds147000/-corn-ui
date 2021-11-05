@@ -39,29 +39,37 @@ class UploadComps extends React.Component<UploadProps, UploadState> {
     previewList: []
   }
 
-  // eslint-disable-next-line @typescript-eslint/no-explicit-any, @typescript-eslint/explicit-module-boundary-types
-  onChange = (file: any): void => {
+  onChangeOfH5 = async (file: FileList): Promise<void> => {
     if (this.props.beforUpload?.(file, this.state.list)) return
     if (this.checkListLen(file)) return
 
-    // #if _APP === 'weapp'
-
-    // #else
-    this.onChangeOfH5(file)
-    // #endif
-  }
-
-  onChangeOfH5 = async (file: FileList): Promise<void> => {
     const previewList = this.getPreviewUrl(file)
     this.setState({ previewList: previewList })
 
-    try {
+    this.onHandleUpload(file)
+  }
 
+  onChangeOfMp = async (file: string[]): Promise<void> => {
+    if (this.props.beforUpload?.(file, this.state.list)) return
+    if (this.checkListLen(file)) return
+
+    const previewList: Upload.Media[] = file.map((item) => ({
+      mediaId: Math.random(),
+      content: item,
+      status: 'loading'
+    }))
+    this.setState({ previewList: previewList })
+
+    this.onHandleUpload(file)
+  }
+
+  onHandleUpload = async (file: string[] | FileList): Promise<void> => {
+    try {
       const list = await this.handelUpload(file)
       this.setState({ list: [ ...this.state.list, ...list ], previewList: [] })
     } catch (error) {
 
-      const errorPreview = previewList.map((item) => {
+      const errorPreview = this.state.previewList.map((item) => {
         item.status = 'error'
         return item
       })
@@ -76,7 +84,7 @@ class UploadComps extends React.Component<UploadProps, UploadState> {
     })
   }
 
-  private checkListLen = (file: FileList): boolean => {
+  private checkListLen = (file: FileList | string[]): boolean => {
     const len = this.state.list.length + file.length
     if (len > this.count) {
       Toast.show('数量超出限制，请重新选择')
@@ -97,7 +105,8 @@ class UploadComps extends React.Component<UploadProps, UploadState> {
   render(): JSX.Element {
     const btnProps: InputMaskProps = {
       type: this.fileType,
-      onChange: this.onChange,
+      onChange: this.onChangeOfH5,
+      onMpChange: this.onChangeOfMp,
       name: this.props.name,
       multiple: this.isMultiple
     }

@@ -13,7 +13,7 @@ import {
   Button, Toast, Drawer, showActionSheet,
   showModal, Modal, Icon, Image, Tab, Affix,
   Timer, Link, Card, Checkbox, CheckboxGroup,
-   Input, Form, Textarea
+   Input, Form, Textarea, Upload
 } from '@xrkmm/ui-taro'
 import './index.scss'
 
@@ -90,6 +90,15 @@ export default class Index extends Component {
   render() {
     return (
       <View className='index'>
+        <Card>
+          <Upload count={2} />
+        </Card>
+        <Card>
+          <Upload handelUpload={() => Promise.reject(new Error('上传失败'))} />
+        </Card>
+        <Card>
+          <Upload layout="square" />
+        </Card>
         <Form onSubmit={this.onSubmit} onReset={this.onReset} defaultValue={{ name: '1234', check: true, shop1: ['1', '2', '3'], shop2: '3' }} ref={this.form} >
 
         <Textarea placeholder="请输入姓名" floor={<Button>提交</Button>} name="liuyan" />

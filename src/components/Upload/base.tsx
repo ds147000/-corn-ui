@@ -1,4 +1,7 @@
 import React, { useEffect, useMemo, useRef } from 'react'
+// #if _APP === 'weapp'
+import Taro from '@tarojs/taro'
+// #endif
 import { View } from '@tarojs/components'
 import classNames from 'classnames'
 import Image from '../Image'
@@ -147,6 +150,10 @@ const UploadItem: React.FC<UploadItemProps> = ({
         onClick={_onPreview}
         lazyLoad
         mode="aspectFill"
+        // #if _APP === 'weapp'
+        // eslint-disable-next-line no-magic-numbers
+        style={{ width: Taro.pxTransform(160), height: Taro.pxTransform(160) }}
+        // #endif
       />
       {status}
     </View>
