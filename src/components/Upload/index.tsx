@@ -5,6 +5,7 @@ import { UploadDefaultBtn } from './btn'
 import { HandelUpload, UploadProps } from './typeng'
 import Toast from '../Toast'
 import { InputMaskProps } from './inputMask/typeing'
+import { FromContext } from '../Form/context'
 
 interface UploadState {
   list: Upload.Media[]
@@ -15,6 +16,8 @@ const OPEN_MUTIPLE_COUNT = 2
 
 class UploadComps extends React.Component<UploadProps, UploadState> {
   static handelUpload: HandelUpload
+  static contextType = FromContext
+
   /** 获取处理上传方法 */
   get handelUpload(): HandelUpload {
     return this.props.handelUpload || UploadComps.handelUpload
@@ -41,6 +44,13 @@ class UploadComps extends React.Component<UploadProps, UploadState> {
 
   componentDidMount(): void {
     this.setState({ list: this.props.list || [] })
+    if (!this.props.name) return
+
+    this.context.add(this.props.name, (newList: Upload.Media[]) => this.setState({ list: newList || []}))
+  }
+
+  componentWillUnmount(): void {
+    if (this.props.name) this.context.remove(this.props.name)
   }
 
   onChangeOfH5 = async (file: FileList): Promise<void> => {

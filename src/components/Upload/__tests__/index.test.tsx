@@ -2,6 +2,8 @@ import { render, waitFor } from '@testing-library/react'
 import React from 'react'
 import Upload from '../index'
 import UserEvent from '@testing-library/user-event'
+import Form from '../../Form/index.h5'
+import Button from '../../Button'
 
 jest.mock('../inputMask')
 jest.mock('../../PreviewImage')
@@ -143,5 +145,28 @@ describe('Uplaod.h5', () => {
     const screen = render(<Upload ref={uploadEl} beforUpload={() => true} />)
     uploadEl.current.onChangeOfMp(['123.jpg', '456.jpg'])
     await waitFor(async () => expect(await screen.queryAllByTestId('upload-item').length).toBe(0))
+  })
+
+  test('配合表单使用', async () => {
+    const onSubmit = jest.fn()
+
+    const screen = render(
+      <Form onSubmit={onSubmit} >
+        <Upload name="1234" />
+        <Button formType="submit" >提交</Button>
+        <Button formType="reset" >重置</Button>
+      </Form>
+    )
+    const file = new File([], '123.jpg', { type: 'image/jpg' })
+    const file2 = new File([], '123.jpg', { type: 'image/jpg' })
+    UserEvent.upload(screen.getByTestId('uplaod-btn'), [file2])
+    UserEvent.upload(screen.getByTestId('uplaod-btn'), [file])
+    await new Promise(res => setTimeout(res, 500))
+    UserEvent.click(screen.getByText('提交'))
+    await new Promise(res => setTimeout(res, 500))
+    expect(onSubmit).toHaveBeenCalledTimes(1)
+    UserEvent.click(screen.getByText('重置'))
+    await waitFor(async () => expect(await screen.queryAllByTestId('upload-item').length).toBe(0))
+    screen.unmount()
   })
 })

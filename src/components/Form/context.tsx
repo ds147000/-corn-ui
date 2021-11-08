@@ -3,7 +3,12 @@ import { createContext } from 'react'
 
 export type SetValue = (value?: unknown) => void
 
-const formContextValue = {
+export type FormContextValue = {
+  add(name: string, cb: SetValue): void
+  remove(name: string): void
+}
+
+const formContextValue: FormContextValue = {
   add(_name: string, _resCb: SetValue): void {
   },
   remove(_name): void {

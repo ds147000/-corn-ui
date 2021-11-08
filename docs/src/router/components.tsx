@@ -124,7 +124,7 @@ const Routes: RoutesProps[] = [
     component: require('../views/Search').default,
     title: 'Search 搜索框',
     type: '表单类型',
-    sort: 6,
+    sort: 5,
   },
   {
     path: '/doc/Skeleton',
@@ -167,6 +167,13 @@ const Routes: RoutesProps[] = [
     title: 'Toast 轻提示',
     type: '反馈',
     sort: 4,
+  },
+  {
+    path: '/doc/Upload',
+    component: require('../views/Upload').default,
+    title: 'Upload 上传组件',
+    type: '表单类型',
+    sort: 6,
   },
   {
     path: '/doc/utils',

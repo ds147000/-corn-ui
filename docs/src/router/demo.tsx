@@ -582,6 +582,20 @@ const Routes: RoutesProps[] = [
     sort: 6,
   },
   {
+    path: '/phone/Upload/demo/basis',
+    component: require('../views/Upload/demo/basis').default,
+    title: '基本使用',
+    type: 'undefined',
+    sort: 1,
+  },
+  {
+    path: '/phone/Upload/demo/form',
+    component: require('../views/Upload/demo/form').default,
+    title: '配合Form表单使用',
+    type: 'undefined',
+    sort: 1,
+  },
+  {
     path: '/phone/utils/demo/dateToTimestamp',
     component: require('../views/utils/demo/dateToTimestamp').default,
     title:
