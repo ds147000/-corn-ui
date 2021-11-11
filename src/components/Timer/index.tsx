@@ -1,22 +1,11 @@
 /* eslint-disable no-magic-numbers */
-import React, { useCallback, useEffect, useMemo, useState } from 'react'
+import React from 'react'
 import { View } from '@tarojs/components'
-import ClassNames  from 'classnames'
+import ClassNames from 'classnames'
 import type { ViewProps } from '../../types/View'
 import { DateToTimestamp, fixNumber } from '../../utils'
 import { SecondSchedulerDestotry, MinuteSchedulerApp, SecondSchedulerApp } from './SecondScheduler'
 import { DefualtRenderItem } from './render'
-
-const DAY_TIMESTAMP = 86400000
-const MIN_TIMESTAMP = 60000
-const HOUS_TIMESTAMP = 3600000
-
-type TimeValue = {
-  d: string
-  h: string
-  m: string
-  s: string
-}
 
 export type TimeRenderItem = (timeType: 'day' | 'hous' | 'min' | 'sec', value: string, last?: boolean) => JSX.Element
 
@@ -33,35 +22,42 @@ export interface TimerProps extends ViewProps {
   renderItem?: TimeRenderItem
 }
 
+interface TimerState {
+  timeValue: { d: string, h: string, m: string, s: string }
+}
 
-const Timer: React.FC<TimerProps> = ({ startTime, endTime, onChange, renderItem, fill, className }) => {
-  const [ timeValue, setTimeValue ] = useState<TimeValue>({ d: '', h: '', m: '', s: '' })
+const DAY_TIMESTAMP = 86400000
+const MIN_TIMESTAMP = 60000
+const HOUS_TIMESTAMP = 3600000
 
-  const _class = useMemo(() => ClassNames(
-    'xrk-timer xrk-if xrk-ac xrk-jc',
-    fill && 'xrk-timer-fill',
-    className
-  ), [ fill, className ])
 
-  const getTimeLeft = useCallback((): number => {
-    if (endTime === startTime)
+class Timer extends React.Component<TimerProps, TimerState> {
+  state = {
+    timeValue: { d: '', h: '', m: '', s: '' }
+  }
+
+  // eslint-disable-next-line no-empty-function, @typescript-eslint/no-empty-function
+  stopTime(): void { }
+
+  getTimeLeft = (): number => {
+    if (this.props.endTime === this.props.startTime)
       return 0
 
-    const start = DateToTimestamp(startTime)
-    const end = DateToTimestamp(endTime)
+    const start = DateToTimestamp(this.props.startTime)
+    const end = DateToTimestamp(this.props.endTime)
 
     return end - start
-  }, [ endTime, startTime ])
+  }
 
-  useEffect(() => {
-    let _time = getTimeLeft()
+  componentDidMount = (): void => {
+    let _time = this.getTimeLeft()
 
     if (_time <= 0) {
-      setTimeValue({ s: '0', m: '0', h: '0', d: '' })
+      this.setState({ timeValue: { s: '0', m: '0', h: '0', d: '' } })
       return
     }
 
-    let minDestory: SecondSchedulerDestotry, secDestory : SecondSchedulerDestotry
+    let minDestory: SecondSchedulerDestotry, secDestory: SecondSchedulerDestotry
 
     // 销毁函数
     function runMinDestroyed(): void {
@@ -70,26 +66,27 @@ const Timer: React.FC<TimerProps> = ({ startTime, endTime, onChange, renderItem,
     function runSecDestroyed(): void {
       if (secDestory) secDestory()
     }
-    function destory(): void {
+
+    this.stopTime = function(): void {
       runSecDestroyed()
       runMinDestroyed()
     }
 
     // 计算时间
-    function runTime(interval: number): void {
+    const runTime = (interval: number): void => {
       _time -= interval
-      if (interval) onChange?.(_time)
+      if (interval) this.props.onChange?.(_time)
 
       const s = fixNumber((_time % MIN_TIMESTAMP / 1000) | 0, 2)
       const m = fixNumber((_time % HOUS_TIMESTAMP / MIN_TIMESTAMP) | 0, 2)
       const h = fixNumber((_time % DAY_TIMESTAMP / HOUS_TIMESTAMP) | 0, 2)
       const d = (_time / DAY_TIMESTAMP) | 0
       const data = { s, m, h, d: d ? d + '' : '' }
-      setTimeValue(data)
+      this.setState({ timeValue: data })
 
       // 倒计时结束销毁
       if (_time <= 0) {
-        destory()
+        this.stopTime()
         return
       }
 
@@ -106,21 +103,30 @@ const Timer: React.FC<TimerProps> = ({ startTime, endTime, onChange, renderItem,
     }
 
     runTime(0)
+  }
 
-    // eslint-disable-next-line consistent-return
-    return destory
-  }, [ getTimeLeft, onChange ])
+  componentWillUnmount(): void {
+    this.stopTime()
+  }
 
-  const _renderItem = renderItem || DefualtRenderItem
-  return (
-    <View className={_class}>
-      {Boolean(timeValue.d) && (_renderItem('day', timeValue.d))}
-      {_renderItem('hous', timeValue.h)}
-      {_renderItem('min', timeValue.m, timeValue.d !== '')}
-      {!timeValue.d && (_renderItem('sec', timeValue.s, timeValue.d === ''))}
-    </View>
-  )
+  render(): JSX.Element {
+    const _class = ClassNames(
+      'xrk-timer xrk-if xrk-ac xrk-jc',
+      this.props.fill && 'xrk-timer-fill',
+      this.props.className
+    )
+
+    const _renderItem = this.props.renderItem || DefualtRenderItem
+
+    return (
+      <View className={_class}>
+        {Boolean(this.state.timeValue.d) && (_renderItem('day', this.state.timeValue.d))}
+        {_renderItem('hous', this.state.timeValue.h)}
+        {_renderItem('min', this.state.timeValue.m, this.state.timeValue.d !== '')}
+        {!this.state.timeValue.d && (_renderItem('sec', this.state.timeValue.s, this.state.timeValue.d === ''))}
+      </View>
+    )
+  }
 }
-
 
 export default Timer
