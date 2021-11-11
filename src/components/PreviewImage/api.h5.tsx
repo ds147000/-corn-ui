@@ -31,7 +31,7 @@ const Container: React.FC<ContainerProps> = ({ onDestory, urls, activeIndex }) =
         loop={false}
         initialSlide={activeIndex}
         className="xrk-preview-swiper"
-        onChange={onChange}
+        onSlideChange={onChange}
         autoHeight
       >
         {urls.map((item) => (

@@ -247,6 +247,14 @@ function App() {
           <Empty />
         </Cell>
         <br />
+        <Button size="max" onClick={() => previewImage({
+          current: 'https://t7.baidu.com/it/u=3713375227,571533122&fm=193&f=GIF',
+          urls: [
+            'https://t7.baidu.com/it/u=3713375227,571533122&fm=193&f=GIF',
+            'https://t7.baidu.com/it/u=2235903830,1856743055&fm=193&f=GIF',
+            'https://t7.baidu.com/it/u=1635608122,693552335&fm=193&f=GIF'
+          ]
+        })} >预览图片</Button>
         <Button size="max">向日葵妈妈UI</Button>
         <Button size="big">向日葵妈妈UI</Button>
         <Button size="large" to="/123" >向日葵妈妈UI</Button>
