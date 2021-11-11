@@ -8,7 +8,7 @@ yarn add @xrkmm/ui-taro
 
 ```jsx
 import { Button } from '@xrkmm/ui-taro'
-import '@xrkmm/ui-taro/dist/styles/index.scss'
+import '@xrkmm/ui-taro/styles/index.scss'
 
 const App = () => (
   <Button />
