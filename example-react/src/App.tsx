@@ -66,6 +66,7 @@ function App() {
   const [cShow, setCshow] = useState(false)
   const [mShow, setMshow] = useState(false)
   const [search, setSearch] = useState('')
+  const [obj, setObj] = useState({ a: '1' })
 
   const onClick = () => alert(1)
 
@@ -79,8 +80,14 @@ function App() {
 
   const onSetTime = () => setTime(1000)
 
+  const onChangeTime = () => {
+    if (obj.a === '100') return
+    setObj({...obj, a: '100'})
+  }
+
   return (
     <div className="App" >
+      <Timer startTime={0} endTime={60000} onChange={onChangeTime} />
       <Search />
       <Search back onBack={() => console.log('返回')} />
       <Search back onBack={() => console.log('返回')} onClick={() => console.log('点击搜索')} />
