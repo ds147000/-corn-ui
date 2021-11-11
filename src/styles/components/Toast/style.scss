@@ -10,6 +10,7 @@
   justify-content: center;
   z-index: $ToastIndex;
   flex-direction: column;
+  transform: translateZ(1px);
 
   &-actions {
     pointer-events: auto;
