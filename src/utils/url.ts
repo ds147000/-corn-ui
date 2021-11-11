@@ -100,7 +100,7 @@ export function formatImg(url: string, options?: formatImgOption): string {
 
   if (url.indexOf('data:') === 0) return url
 
-  if (url.indexOf('//assets.xrkmm.cn') === -1 && url.indexOf('//xrk-') === -1)
+  if (url.indexOf('//assets.xrkmm.cn') === -1 && url.indexOf('//assets-test.xrkmm.com') === -1 )
     return url
 
   if (options) {
