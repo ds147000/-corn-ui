@@ -9,7 +9,7 @@ import { useState } from 'react'
 import { Upload, Card, Form, Button } from '@xrkmm/ui-h5'
 
 // 全局配置处理上传方法
-Upload.handelUpload = (file: FileList) => {
+Upload.handelUpload = async (file: FileList) => {
   const list = []
     for (let i = 0; i < file.length; i++) {
       list.push({ mediaId: Math.random(), content: URL.createObjectURL(file[i]), status: 'done' })
