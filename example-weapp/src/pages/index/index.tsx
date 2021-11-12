@@ -125,6 +125,14 @@ export default class Index extends Component {
           <Checkbox value="4" >单选模式4</Checkbox>
         </CheckboxGroup>
       </Card>
+      <Affix position='top'>
+          <Button size='max' icon={<Icon name='service' />}>图标按钮</Button>
+          <Button size='max' type="warn" formType="submit" >提交</Button>
+          <Button size='max' type="link" formType="reset" >重置</Button>
+          <Button size='max' type="pop" onClick={this.getValue} >获取值</Button>
+          <Button size='max' onClick={() => this.form.current?.reset()} >实例重置</Button>
+          <Button size='max' onClick={() => this.form.current?.submit()} >实例提交</Button>
+        </Affix>
       <Card>
         <CheckboxGroup radio name="shop3" >
           <Checkbox value="1" type="button" >单选模式1</Checkbox>
@@ -217,14 +225,7 @@ export default class Index extends Component {
         />
         <Image src='https://t7.baidu.com/it/u=1951548898,3927145&fm=193&f=GIF' />
         <Image src='https://t7.baidu.com/it/u=1595072465,3644073269&fm=193&f=GIF' lazyLoad />
-        <Affix position='bottom'>
-          <Button size='max' icon={<Icon name='service' />}>图标按钮</Button>
-          <Button size='max' type="warn" formType="submit" >提交</Button>
-          <Button size='max' type="link" formType="reset" >重置</Button>
-          <Button size='max' type="pop" onClick={this.getValue} >获取值</Button>
-          <Button size='max' onClick={() => this.form.current?.reset()} >实例重置</Button>
-          <Button size='max' onClick={() => this.form.current?.submit()} >实例提交</Button>
-        </Affix>
+
         </Form>
       </View>
     )

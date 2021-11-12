@@ -210,6 +210,12 @@ function App() {
         <Link to='/pages/link/index' type="error" >error</Link>
         <Link to='/pages/link/index' type="link" >link</Link>
         <Link to='/pages/link/index' type="pop" >pop</Link>
+        <Affix onChange={onChange} position="top">
+          <Button auto onClick={onSetTime} formType="submit" > 提交</Button>
+          <Button type='error' auto onClick={onSetTime} formType="reset" > 重置</Button>
+          <Button type='pop' auto onClick={onChangeInput} > 变更</Button>
+          <Button type='link' auto onClick={() => form.current?.reset()} > 实例重置</Button>
+        </Affix>
         <Button>
           <Timer startTime={0} endTime={time} />
         </Button>
@@ -334,12 +340,7 @@ function App() {
           showOk={true}
           titleAlign="center"
         />
-        <Affix onChange={onChange} position="bottom">
-          <Button auto onClick={onSetTime} formType="submit" > 提交</Button>
-          <Button type='error' auto onClick={onSetTime} formType="reset" > 重置</Button>
-          <Button type='pop' auto onClick={onChangeInput} > 变更</Button>
-          <Button type='link' auto onClick={() => form.current?.reset()} > 实例重置</Button>
-        </Affix>
+
         <ActionSheet
           visible={cShow}
           title="我是大标题"
@@ -375,6 +376,7 @@ function App() {
           onButtonClick={() => setMshow(false)}
         />
         <Empty text="暂无内容哦" size="large" />
+        <Empty text="暂无内容哦" direction="快去已经购买的商品写下您的实测评价吧~" size="large" />
         <Empty text="暂无内容哦" >
           <Button>返回首页</Button>
         </Empty>

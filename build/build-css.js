@@ -4,6 +4,7 @@ const sass = require('sass')
 const autoprefixer = require('autoprefixer')
 const postcss = require('postcss')
 const pxtransform = require('postcss-pxtransform')
+const glob = require('glob')
 
 const RollupPxtransform = pxtransform({
   platform: 'h5',
@@ -43,6 +44,20 @@ async function build(packageName) {
   // 编译mini.css
   const miniCss = await BuildStyle('src/styles/index.scss')
   writeFile(resolveApp(packageName + '/styles/index.mini.css'), miniCss)
+
+  // 编译375设计图
+  await fsExtra.copy(resolveApp('src/styles'), resolveApp(packageName + '/styles-375'))
+  const fileList = glob.sync(resolveApp(packageName + '/styles-375/**/*.scss'))
+  fileList.map((item) => {
+    const fileContent = fsExtra.readFileSync(item).toString()
+    const newfileContent = fileContent.replace(/\d+(\.?)\d*px/ig, function(match) {
+      const value = parseFloat(match)
+      if (value === 750) return '100vw'
+      const newValue = String(Number(value) * 0.5) + 'px'
+      return newValue
+    })
+    fsExtra.writeFileSync(item, newfileContent)
+  })
 }
 
 // 编译Icon
@@ -55,3 +70,5 @@ if (checkFiles(resolveApp('package-h5')).isDirectory()) {
 if (checkFiles(resolveApp('package-taro')).isDirectory()) {
   build('package-taro')
 }
+
+

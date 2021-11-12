@@ -1,7 +1,7 @@
 /* eslint-disable no-unreachable */
 /* eslint-disable no-magic-numbers */
 // #if _APP === 'weapp'
-import Taro from '@tarojs/taro'
+import Taro, { usePageScroll } from '@tarojs/taro'
 // #endif
 import React, { useCallback, useEffect, useMemo, useRef, useState } from 'react'
 import { View } from '@tarojs/components'
@@ -19,6 +19,7 @@ const Affix: React.FC<AffixProps> = ({ children, position = 'top', onChange, cla
   const [ boxStyle, setBoxStyle ] = useState<React.CSSProperties>({})
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
   const ref = useRef<any>()
+
   const oldFixed = useRef<boolean>(false)
 
   const _class = useMemo(() => {
@@ -32,48 +33,45 @@ const Affix: React.FC<AffixProps> = ({ children, position = 'top', onChange, cla
     })
   }, [])
 
-  useEffect(() => {
-    // #if _APP === 'weapp'
-    let isInit = true
-    const threshold = [ 0.01, 0.1, 0.9, 0.99 ]
+  // #if _APP === 'weapp'
+  const system = useRef(Taro.getSystemInfoSync())
+  const timer = useRef<NodeJS.Timeout>()
+
+  const checkFlexd = (): void => {
     const node = ref.current
-    let WeappIntersection: Taro.IntersectionObserver | null = null
 
+    const rootRect = {
+      top: 0,
+      left: 0,
+      bottom: system.current.windowHeight,
+      right: system.current.windowWidth
+    } as DOMRectReadOnly
 
-    Taro.nextTick(() => {
-      const system = Taro.getSystemInfoSync()
-      const rootRect = { top: 0, left: 0, bottom: system.windowHeight, right: system.windowWidth } as DOMRectReadOnly
+    Taro.createSelectorQuery()
+      .select('#' + node.uid)
+      .fields({ size: true, rect: true }, (res) => {
+        if (!res) return
 
-      Taro.createSelectorQuery()
-        .select('#' + node.uid)
-        .fields({ size: true, rect: true }, (res) => {
-          if (!res) return
-
-          setBoxStyle({ height: res?.height, width: res?.width })
-          const result = judge( res as unknown as DOMRect, rootRect, position, 0)
-          changeFixed(result)
-        })
-        .exec()
-
-      const page = Taro.getCurrentInstance().page
-      WeappIntersection = Taro.createIntersectionObserver( page as Taro.General.IAnyObject, {
-        thresholds: threshold, observeAll: true
+        setBoxStyle({ height: res?.height, width: res?.width })
+        const result = judge(res as unknown as DOMRect, rootRect, position, 0)
+        changeFixed(result)
       })
+      .exec()
+  }
 
-      WeappIntersection
-        .relativeToViewport({ top: 0, left: 0, bottom: 0, right: 0 })
-        .observe('#' + node.uid, (res): void => {
-          const result = judge( res.boundingClientRect as DOMRect, rootRect, position, isInit ? 1 : 0)
-          isInit = false
-          changeFixed(result)
-        })
-    })
+  usePageScroll(() => {
+    if (timer.current) clearTimeout(timer.current)
+    timer.current = setTimeout(() => checkFlexd(), 10)
+  })
 
+  useEffect(() => {
     return (): void => {
-      WeappIntersection?.disconnect()
+      if (timer.current) clearTimeout(timer.current)
     }
+  }, [])
 
-    // #else
+  // #else
+  useEffect(() => {
     // eslint-disable-next-line no-unreachable
     const el: HTMLDivElement = ref.current
     const rootBounds = {
@@ -99,8 +97,8 @@ const Affix: React.FC<AffixProps> = ({ children, position = 'top', onChange, cla
     return (): void => {
       window.removeEventListener('scroll', handleScroll)
     }
-    // #endif
   }, [ position, changeFixed ])
+  // #endif
 
   useEffect(() => {
     if (oldFixed.current !== fixed) {

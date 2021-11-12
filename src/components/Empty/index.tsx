@@ -13,6 +13,7 @@ export interface EmptyProps {
   src?: string
   size?: 'large' | 'middle' | 'small'
   text?: string
+  direction?: string
   wrapperTop?: number | string
   wrapperBottom?: number | string
 }
@@ -29,6 +30,7 @@ const Empty: EmptyComponents = ({
   src = PRESENTED_IMAGE_DEFAULT,
   size = 'middle',
   text,
+  direction,
   wrapperTop,
   wrapperBottom,
   children
@@ -47,6 +49,9 @@ const Empty: EmptyComponents = ({
       </View>
       {Boolean(text) && (
         <Text className="xrk-empty-text">{text}</Text>
+      )}
+      {Boolean(direction) && (
+        <Text className="xrk-empty-direction" >{direction}</Text>
       )}
       {Boolean(children) && (
         <View className="xrk-empty-children">{children}</View>

@@ -54,4 +54,10 @@ describe('Empty', () => {
     expect(screen.getByTestId('empty').style.paddingBottom).toBe('100px')
     expect(screen).toMatchSnapshot()
   })
+
+  test('direction', () => {
+    const screen = render(<Empty direction="1234" />)
+    screen.getByText('1234')
+    expect(screen).toMatchSnapshot()
+  })
 })
