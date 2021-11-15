@@ -142,6 +142,11 @@ const Demo: React.FC = () => {
       </div>
 
       <div className="icon-box">
+        <Icon name="errro" />
+        <h5>errro</h5>
+      </div>
+
+      <div className="icon-box">
         <Icon name="fill-right" />
         <h5>fill-right</h5>
       </div>
@@ -184,6 +189,11 @@ const Demo: React.FC = () => {
       <div className="icon-box">
         <Icon name="hide" />
         <h5>hide</h5>
+      </div>
+
+      <div className="icon-box">
+        <Icon name="history" />
+        <h5>history</h5>
       </div>
 
       <div className="icon-box">
