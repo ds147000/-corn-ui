@@ -142,8 +142,8 @@ const Demo: React.FC = () => {
       </div>
 
       <div className="icon-box">
-        <Icon name="errro" />
-        <h5>errro</h5>
+        <Icon name="error" />
+        <h5>error</h5>
       </div>
 
       <div className="icon-box">

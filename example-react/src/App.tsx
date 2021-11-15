@@ -9,7 +9,7 @@ import {
   Button, Toast, Drawer, ActionSheet, showActionSheet,
   Modal, showModal, Empty, Image, Tab, Tag, Affix, Timer, Link,
   Cell, Card, Checkbox, CheckboxGroup, previewImage, Input, Form,
-  Textarea, Skeleton, Search, Icon, Upload
+  Textarea, Skeleton, Search, Icon, Upload, Alert
 } from '@xrkmm/ui-h5'
 import React, { useRef, useState } from 'react'
 import 'swiper/swiper.scss'
@@ -87,6 +87,9 @@ function App() {
 
   return (
     <div className="App" >
+      <Alert>
+        您发表的【商品名称】内容审核不通过，具体原因如下：文案文字，这里有可能有很多文字，允许多行显示
+      </Alert>
       <Timer startTime={0} endTime={60000} onChange={onChangeTime} />
       <Search />
       <Search back onBack={() => console.log('返回')} />
