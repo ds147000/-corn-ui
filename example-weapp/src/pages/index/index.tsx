@@ -13,7 +13,7 @@ import {
   Button, Toast, Drawer, showActionSheet,
   showModal, Modal, Icon, Image, Tab, Affix,
   Timer, Link, Card, Checkbox, CheckboxGroup,
-   Input, Form, Textarea, Upload
+   Input, Form, Textarea, Upload, Popover
 } from '@xrkmm/ui-taro'
 import './index.scss'
 
@@ -90,6 +90,20 @@ export default class Index extends Component {
   render() {
     return (
       <View className='index'>
+        <Popover
+          content={(rect) => (
+            <View style={{ backgroundColor: '#fff', borderRadius: 10, width: 200 }} >
+              <CheckboxGroup name="shop100" radio >
+                <Checkbox value="1" >单选模式1</Checkbox>
+                <Checkbox value="2" >单选模式2</Checkbox>
+                <Checkbox value="3" >单选模式3</Checkbox>
+                <Checkbox value="4" >单选模式4</Checkbox>
+              </CheckboxGroup>
+            </View>
+          )}
+        >
+          <Button>选择类型</Button>
+        </Popover>
         <Card>
           <Upload count={2} />
         </Card>

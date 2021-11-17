@@ -17,6 +17,7 @@ export interface ElementRect {
 
 // eslint-disable-next-line @typescript-eslint/no-explicit-any, @typescript-eslint/explicit-module-boundary-types
 export async function getElementRect(el: any): Promise<ElementRect> {
+  // #if _APP !== 'weapp'
   const result: ElementRect = {
     width: 0,
     height: 0,
@@ -27,7 +28,6 @@ export async function getElementRect(el: any): Promise<ElementRect> {
     offsetLeft: 0,
     offsetTop: 0
   }
-  // #if _APP !== 'weapp'
   const _el = el as HTMLDivElement
   const clientRect = _el.getBoundingClientRect()
   result.bottom = clientRect.bottom
@@ -47,6 +47,7 @@ export async function getElementRect(el: any): Promise<ElementRect> {
       .fields({ size: true, properties: [ 'offsetLeft', 'offsetTop' ] }, (response) => {
         res(response as ElementRect)
       })
+      .exec()
   })
   // #endif
 }
