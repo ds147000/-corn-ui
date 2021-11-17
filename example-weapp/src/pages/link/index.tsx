@@ -20,7 +20,9 @@ const LinkPgae: React.FC = () => {
         <Cell label="限时奖励" placeholder="请选择奖励类型" value="立即兑换"suffix="重选" arrow onClick={() => Toast.show('骗你的')} />
       </Cell.List>
       <Card>Card</Card>
-
+      <View className="cs" >
+        <View className="cs-cs" />
+      </View>
     </View>
   )
 }

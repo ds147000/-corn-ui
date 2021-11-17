@@ -1,0 +1,26 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Popover 基础快照 1`] = `
+<div>
+  <div
+    class="xrk-popover-plane"
+    data-testid="mask"
+  >
+    <div
+      class="xrk-popover-show"
+      data-testid="centent"
+    >
+      <div>
+        气泡标题
+      </div>
+    </div>
+  </div>
+  <div
+    class="xrk-popover "
+  >
+    <div>
+      气泡按钮
+    </div>
+  </div>
+</div>
+`;

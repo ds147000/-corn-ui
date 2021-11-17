@@ -37,6 +37,7 @@ export { default as Skeleton } from './components/Skeleton'
 export { default as Search } from './components/Search'
 export { default as Upload } from './components/Upload'
 export { default as Alert } from './components/Alert'
+export { default as Popover } from './components/Popover'
 
 export const UTILS = {
   transformRem,

@@ -9,7 +9,7 @@ import {
   Button, Toast, Drawer, ActionSheet, showActionSheet,
   Modal, showModal, Empty, Image, Tab, Tag, Affix, Timer, Link,
   Cell, Card, Checkbox, CheckboxGroup, previewImage, Input, Form,
-  Textarea, Skeleton, Search, Icon, Upload, Alert
+  Textarea, Skeleton, Search, Icon, Upload, Alert, Popover
 } from '@xrkmm/ui-h5'
 import React, { useRef, useState } from 'react'
 import 'swiper/swiper.scss'
@@ -90,6 +90,20 @@ function App() {
       <Alert>
         您发表的【商品名称】内容审核不通过，具体原因如下：文案文字，这里有可能有很多文字，允许多行显示
       </Alert>
+      <Popover
+        content={(rect) => (
+          <div style={{ backgroundColor: '#fff', borderRadius: 10, width: 200 }} >
+            <CheckboxGroup name="shop100" radio >
+              <Checkbox value="1" >单选模式1</Checkbox>
+              <Checkbox value="2" >单选模式2</Checkbox>
+              <Checkbox value="3" >单选模式3</Checkbox>
+              <Checkbox value="4" >单选模式4</Checkbox>
+            </CheckboxGroup>
+          </div>
+        )}
+      >
+        <Button>选择类型</Button>
+      </Popover>
       <Timer startTime={0} endTime={60000} onChange={onChangeTime} />
       <Search />
       <Search back onBack={() => console.log('返回')} />

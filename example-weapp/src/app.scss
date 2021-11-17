@@ -4,3 +4,22 @@
 .index, page {
   background-color: #F9FAFD;
 }
+
+.cs {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 200px;
+  height: 200px;
+  background-color: #3333;
+}
+
+.cs-cs {
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  width: 100vw;
+  height: 100vw;
+  background-color: #000;
+}

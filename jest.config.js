@@ -38,7 +38,8 @@ module.exports = {
     '/node_modules/',
     '<rootDir>/src/components/Checkbox/group.tsx',
     '<rootDir>/src/components/PreviewImage',
-    '<rootDir>/src/components/Link/index.h5.tsx'
+    '<rootDir>/src/components/Link/index.h5.tsx',
+    '<rootDir>/src/components/Popover/utils.ts'
   ],
   coverageThreshold: {
     global: {
