@@ -113,6 +113,13 @@ const Routes: RoutesProps[] = [
     sort: 3,
   },
   {
+    path: '/doc/Popover',
+    component: require('../views/Popover').default,
+    title: 'Popover 气泡层',
+    type: '反馈',
+    sort: 6,
+  },
+  {
     path: '/doc/PreviewImage',
     component: require('../views/PreviewImage').default,
     title: 'previewImage 预览图片',

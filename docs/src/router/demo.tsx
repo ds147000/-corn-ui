@@ -421,6 +421,13 @@ const Routes: RoutesProps[] = [
     sort: 2,
   },
   {
+    path: '/phone/Popover/demo/basis',
+    component: require('../views/Popover/demo/basis').default,
+    title: '基本使用',
+    type: 'undefined',
+    sort: 1,
+  },
+  {
     path: '/phone/PreviewImage/demo/basis',
     component: require('../views/PreviewImage/demo/basis').default,
     title: '代码实例',

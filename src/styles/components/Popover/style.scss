@@ -16,36 +16,26 @@
 
   &-hide {
     opacity: 0;
-    transform: scale(0.3);
-    transform-origin: center;
     animation: XrkPopoverHide 0.2s;
   }
 }
 
 @keyframes XrkPopoverShow {
   0% {
-    transform: scale(0.7);
-    opacity: 0.7;
-    transform-origin: center;
+    opacity: 0.3;
   }
 
   100% {
-    transform: scale(1);
     opacity: 1;
-    transform-origin: center;
   }
 }
 
 @keyframes XrkPopoverHide {
   0% {
-    transform: scale(1);
     opacity: 1;
-    transform-origin: center;
   }
 
   100% {
-    transform: scale(0.3);
     opacity: 0;
-    transform-origin: center;
   }
 }
