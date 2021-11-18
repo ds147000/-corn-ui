@@ -12,4 +12,8 @@ describe('Tootips', () => {
 
     expect(screen).toMatchSnapshot()
   })
+
+  test('open', () => {
+
+  })
 })
