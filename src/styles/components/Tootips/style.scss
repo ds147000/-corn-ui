@@ -1,0 +1,59 @@
+.xrk-tooltip {
+  background: $white;
+  box-shadow: 0 0 50px 0 #f3f5fa;
+  text-align: center;
+  border-radius: 15px;
+  width: 180px;
+  position: absolute;
+  z-index: $portalIndex + 1;
+
+  &-top {
+    transform: translate(0 , -100%);
+  }
+
+  &-arrow {
+    display: block;
+    border-style: solid;
+    position: absolute;
+    z-index: 1;
+
+    &-bottom {
+      border-top-width: 6px;
+      border-left-width: 10px;
+      border-right-width: 10px;
+      border-bottom-width: 6px;
+      border-top-color: rgba($color: $white , $alpha: 0);
+      border-right-color: rgba($color: $white , $alpha: 0);
+      border-left-color: rgba($color: $white , $alpha: 0);
+      border-bottom-color: rgba($color: $white , $alpha: 1);
+    }
+
+    &-top {
+      border-top-width: 6px;
+      border-left-width: 10px;
+      border-right-width: 10px;
+      border-bottom-width: 6px;
+      border-top-color: rgba($color: $white , $alpha: 1);
+      border-right-color: rgba($color: $white , $alpha: 0);
+      border-left-color: rgba($color: $white , $alpha: 0);
+      border-bottom-color: rgba($color: $white , $alpha: 0);
+    }
+  }
+
+  &-item {
+    width: 180px;
+    height: 92px;
+    font-size: 30px;
+    font-weight: 400;
+    color: $text1;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+  }
+
+  &-active {
+    font-size: 30px;
+    font-weight: bolder;
+    color: $error;
+  }
+}

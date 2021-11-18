@@ -11,10 +11,12 @@
   }
 
   &-show {
+    display: inline-block;
     animation: XrkPopoverShow 0.2s;
   }
 
   &-hide {
+    display: inline-block;
     opacity: 0;
     animation: XrkPopoverHide 0.2s;
   }

@@ -5,14 +5,13 @@ exports[`Popover 基础快照 1`] = `
   <div
     class="xrk-popover-plane"
     data-testid="mask"
+  />
+  <div
+    class="xrk-popover-show"
+    data-testid="centent"
   >
-    <div
-      class="xrk-popover-show"
-      data-testid="centent"
-    >
-      <div>
-        气泡标题
-      </div>
+    <div>
+      气泡标题
     </div>
   </div>
   <div

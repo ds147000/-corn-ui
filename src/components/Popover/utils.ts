@@ -42,12 +42,17 @@ export async function getElementRect(el: any): Promise<ElementRect> {
 
   // #else
   return new Promise((res) => {
-    Taro.createSelectorQuery()
-      .select(`#${el.uid}`)
-      .fields({ size: true, properties: [ 'offsetLeft', 'offsetTop' ] }, (response) => {
-        res(response as ElementRect)
+    const query = Taro.createSelectorQuery()
+
+    query.select(`#${el.uid}`).boundingClientRect()
+    query.selectViewport().scrollOffset()
+    query.exec((response) => {
+      res({
+        ...response[0],
+        offsetTop: response[0].top + response[1].scrollTop,
+        offsetLeft: response[0].left + response[1].scrollLeft
       })
-      .exec()
+    })
   })
   // #endif
 }

@@ -8,8 +8,7 @@
  * @LastEditors: zhoulong.yang
  * @LastEditTime: 2021-06-02 14:32:31
  */
-import Taro, { RouterInfo } from '@tarojs/taro'
-
+import type Taro from '@tarojs/taro'
 
 jest.mock('@tarojs/taro', () => {
   const login = jest.fn(async (): Promise<{ code: string; errMsg: string }> => {
@@ -61,7 +60,7 @@ jest.mock('@tarojs/taro', () => {
     useDidShow: jest.requireActual('react').useLayoutEffect,
     useDidHide: jest.requireActual('react').useLayoutEffect,
     useReady: jest.requireActual('react').useLayoutEffect,
-    useRouter: (): RouterInfo => {
+    useRouter: (): Taro.RouterInfo => {
       return {
         params: {},
         path: '/',
@@ -131,7 +130,8 @@ class CutromLocation extends URL {
 }
 window.location = new CutromLocation('http://localhost:3000/')
 URL.createObjectURL = jest.fn(() => '')
-
 jest.mock('../src/components/Image')
 jest.mock('../src/components/Link')
 jest.mock('../src/components/Icon')
+jest.mock('../src/components/Tooltip/utils')
+

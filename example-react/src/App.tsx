@@ -9,7 +9,7 @@ import {
   Button, Toast, Drawer, ActionSheet, showActionSheet,
   Modal, showModal, Empty, Image, Tab, Tag, Affix, Timer, Link,
   Cell, Card, Checkbox, CheckboxGroup, previewImage, Input, Form,
-  Textarea, Skeleton, Search, Icon, Upload, Alert, Popover
+  Textarea, Skeleton, Search, Icon, Upload, Alert, Popover, Tooltip
 } from '@xrkmm/ui-h5'
 import React, { useRef, useState } from 'react'
 import 'swiper/swiper.scss'
@@ -90,6 +90,7 @@ function App() {
       <Alert>
         您发表的【商品名称】内容审核不通过，具体原因如下：文案文字，这里有可能有很多文字，允许多行显示
       </Alert>
+
       <Popover
         content={(rect) => (
           <div style={{ backgroundColor: '#fff', borderRadius: 10, width: 200 }} >
@@ -123,6 +124,18 @@ function App() {
         value={search}
         onChange={(e) => setSearch(e)}
       />
+      <Tooltip
+        align="top"
+        list={[
+          { text: 'VIP妈妈', type: 'active' },
+          { text: '明星妈妈' },
+          { text: '平民' },
+          { text: '新人' }
+        ]}
+        onClick={(item) => Toast.show(item.text)}
+      >
+        <Button>会员等级</Button>
+      </Tooltip>
       <Skeleton>
         <Skeleton.Item height={690} width={690} top={15} bottom={15} left={30} right={300} />
         <Skeleton.Item height={106} top={15} bottom={15} left={30} right={30} />
