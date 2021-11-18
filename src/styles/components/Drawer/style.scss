@@ -8,6 +8,7 @@
     z-index: $maskIndex;
     background-color: $mask;
     opacity: 0;
+    transform: translateZ(1px);
 
     &-show {
       opacity: 1;
@@ -111,12 +112,10 @@
 @keyframes XrkDrawerMaskShow {
   0% {
     opacity: 0;
-    transform: translateZ(0);
   }
 
   100% {
     opacity: 1;
-    transform: translateZ(0);
   }
 }
 

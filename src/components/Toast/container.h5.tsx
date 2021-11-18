@@ -1,9 +1,12 @@
 import React, { useCallback, useEffect, useRef, useState } from 'react'
 import { View } from '@tarojs/components'
+import classNames from 'classnames'
 import { TOAST_ADD } from '../../config/event'
 import Sub from '../../utils/sub'
 import { ToastOption } from './typing'
 import { ToastView } from './toast.h5'
+
+const MAX_SHOW_TOAST = 3
 
 interface ContainerProps {
   onShow?(): void
@@ -31,7 +34,7 @@ export const Container: React.FC<ContainerProps> = ({ onDestory, onShow, onHide 
 
   useEffect(() => {
     const remove = Sub.add(TOAST_ADD, (toast: ToastOption) => {
-      setToastList((s) => [ ...s, toast ])
+      setToastList((s) => [ ...s, toast ].slice(-MAX_SHOW_TOAST))
     })
     onShow?.()
 
@@ -39,9 +42,9 @@ export const Container: React.FC<ContainerProps> = ({ onDestory, onShow, onHide 
   }, [ onShow ])
 
   return (
-    <View className={`xrk-toast ${isMask && 'xrk-toast-actions'}`}>
-      {toastList.map((item, key) => (
-        <ToastView {...item} onClose={onItemClose} key={String(key)} />
+    <View className={classNames('xrk-toast', isMask && 'xrk-toast-actions')}>
+      {toastList.map((item) => (
+        <ToastView {...item} onClose={onItemClose} key={String(item.title)} />
       ))}
     </View>
   )
