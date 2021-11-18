@@ -3,7 +3,7 @@ import React from 'react'
 
 
 
-export declare namespace Tootips {
+export declare namespace TOOTIPS {
   type Align = 'top' | 'bottom' | 'left' | 'right'
 
   type Item = { text: string; type: 'active' | 'defualt' }
@@ -17,7 +17,7 @@ export declare namespace Tootips {
 }
 
 
-const TootipsCmps: React.FC<Tootips.Props> = () => {
+const TootipsCmps: React.FC<TOOTIPS.Props> = () => {
   return (
     <View />
   )
