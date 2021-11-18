@@ -184,18 +184,11 @@ describe('Drawer', () => {
     fireEvent.click(screen.getByText('显示'))
 
     await new Promise((res) => setTimeout(res, 1000))
-
+    fireEvent.animationEnd(screen.getByTestId('body'), { animationName: 'Show' })
     screen.getByText('抽屉')
 
     fireEvent.click(screen.getByTestId('mask'))
-    const evetn = createEvent('animationEnd', screen.getByTestId('body'),
-      { animationName: 'Hide' },
-      {
-        EventType: 'AnimationEvent',
-        defaultInit: { bubbles: true, cancelable: false }
-      }
-    )
-    fireEvent.animationEnd(screen.getByTestId('body'), evetn)
+    fireEvent.animationEnd(screen.getByTestId('body'), { animationName: 'Hide' })
     await new Promise((res) => setTimeout(res, 1000))
 
     await waitFor(() => expect(screen.container).toMatchSnapshot())

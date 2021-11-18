@@ -324,7 +324,7 @@ function App() {
         <Button ghost type="warn" >向日葵妈妈UI</Button>
         <Button onClick={onClick} disabled >向日葵妈妈UI</Button>
         <Button onClick={onClick} type="default" >向日葵妈妈UI</Button>
-        <Button onClick={() => Toast.show({ title: '我是toast', icon: 'success' })}>点击出现taost</Button>
+        <Button onClick={() => Toast.show({ title: '我是toast' + Math.random(), icon: 'success' })}>点击出现taost</Button>
         <Button onClick={() => setShow(true)}>抽屉</Button>
         <Button onClick={() => setAshow(true)}>ActionSheet</Button>
         <Button onClick={() => setCshow(true)}>自定义ActionSheet</Button>
@@ -363,7 +363,7 @@ function App() {
           title="我是大标题"
           onClose={() => setCshow(false)}
         >
-          <Cell label="限时奖励" />
+          <Cell label="限时奖励" onClick={() => setMshow(true)} />
           <Cell label="限时奖励" placeholder="请选择奖励类型" />
           <Cell label="限时奖励" placeholder="请选择奖励类型" value="葵花籽" />
           <Cell label="限时奖励" placeholder="请选择奖励类型" value="葵花籽" arrow />

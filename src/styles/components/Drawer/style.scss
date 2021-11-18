@@ -8,6 +8,7 @@
     z-index: $maskIndex;
     background-color: $mask;
     opacity: 0;
+    transform: translateZ(1px);
 
     &-show {
       opacity: 1;
@@ -111,12 +112,10 @@
 @keyframes XrkDrawerMaskShow {
   0% {
     opacity: 0;
-    transform: translateZ(0);
   }
 
   100% {
     opacity: 1;
-    transform: translateZ(0);
   }
 }
 
@@ -132,7 +131,12 @@
 
 @keyframes XrkDrawerBottomShow {
   0% {
+    opacity: 0;
+  }
+
+  2% {
     transform: translate3d(0 , 100% , 1px);
+    opacity: 1;
   }
 
   100% {
@@ -152,6 +156,11 @@
 
 @keyframes XrkDrawerTopShow {
   0% {
+    opacity: 0;
+  }
+
+  2% {
+    opacity: 1;
     transform: translate3d(0 , -100% , 1px);
   }
 
@@ -172,6 +181,11 @@
 
 @keyframes XrkDrawerLeftShow {
   0% {
+    opacity: 0;
+  }
+
+  2% {
+    opacity: 1;
     transform: translate3d(-100% , 0 , 1px);
   }
 
@@ -192,6 +206,11 @@
 
 @keyframes XrkDrawerRightShow {
   0% {
+    opacity: 0;
+  }
+
+  2% {
+    opacity: 1;
     transform: translate3d(100% , 0 , 1px);
   }
 
@@ -212,6 +231,11 @@
 
 @keyframes XrkDrawerCenterShow {
   0% {
+    opacity: 0;
+  }
+
+  2% {
+    opacity: 1;
     transform: translate(-50% , -50%) translateZ(1px)  scale(1.7 , 1.7);
   }
 
@@ -222,6 +246,11 @@
 
 @keyframes XrkDrawerCenterHide {
   0% {
+    opacity: 0;
+  }
+
+  2% {
+    opacity: 1;
     transform: translate(-50% , -50%) translateZ(1px)  scale(1 , 1);
   }
 

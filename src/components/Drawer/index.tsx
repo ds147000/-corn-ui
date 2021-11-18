@@ -1,9 +1,7 @@
-import React, { useEffect, useMemo, useState } from 'react'
+import React, { useMemo, useState } from 'react'
 import classNames from 'classnames'
 import { View } from '@tarojs/components'
 import { ITouchEvent } from '../../types'
-
-type AnimateStatus = 'show' | 'hide' | 'over'
 
 export interface DrawerProps {
   /** 是否显示 */
@@ -31,16 +29,20 @@ const Drawer: React.FC<DrawerProps> = ({
   className,
   children
 }) => {
-  const [ status, setStatus ] = useState<AnimateStatus>('over')
+  const [ isEXC, setIsEXC ] = useState<boolean>(true)
 
   const _class = useMemo(() => {
     return classNames(
       'xrk-drawer-body',
-      status !== 'over' && `xrk-drawer-${position}-${status}`,
+      `xrk-drawer-${position}-${visible ? 'show' : 'hide'}`,
       `xrk-drawer-${position}`,
       className
     )
-  }, [ position, status, className ])
+  }, [ position, visible, className ])
+
+  const _maskClass = useMemo(() => {
+    return classNames('xrk-drawer-mask', `xrk-drawer-mask-${visible ? 'show' : 'hide'}`)
+  }, [ visible ])
 
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
   const onAnimationEnd = (event: any): void => {
@@ -51,8 +53,10 @@ const Drawer: React.FC<DrawerProps> = ({
 
     // eslint-disable-next-line no-magic-numbers
     if (animationName.toLocaleUpperCase().indexOf('HIDE') !== -1) {
-      setStatus('over')
+      setIsEXC(true)
       onHide?.()
+    } else {
+      setIsEXC(false)
     }
   }
 
@@ -60,16 +64,16 @@ const Drawer: React.FC<DrawerProps> = ({
     if (maskClosable) onClose?.()
   }
 
-  useEffect(() => {
-    if (visible === true && status !== 'show')
-      setStatus('show')
+  // useEffect(() => {
+  //   if (visible === true && status !== 'show')
+  //     setStatus('show')
 
-    else if (visible === false && status === 'show')
-      setStatus('hide')
+  //   else if (visible === false && status === 'show')
+  //     setStatus('hide')
 
-  }, [ visible, status ])
+  // }, [ visible ])
 
-  if (visible === false && status === 'over') {
+  if (visible === false && isEXC) {
     return null
   }
 
@@ -77,7 +81,7 @@ const Drawer: React.FC<DrawerProps> = ({
     <>
       {mask && (
         <View
-          className={`xrk-drawer-mask xrk-drawer-mask-${status}`}
+          className={_maskClass}
           data-testid="mask"
           onClick={onClickMask}
           onTouchMove={onTouchMove}
