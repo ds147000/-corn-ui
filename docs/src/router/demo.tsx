@@ -589,6 +589,13 @@ const Routes: RoutesProps[] = [
     sort: 6,
   },
   {
+    path: '/phone/Tooltip/demo/basis',
+    component: require('../views/Tooltip/demo/basis').default,
+    title: '基本使用',
+    type: 'undefined',
+    sort: 1,
+  },
+  {
     path: '/phone/Upload/demo/basis',
     component: require('../views/Upload/demo/basis').default,
     title: '基本使用',

@@ -117,7 +117,7 @@ const Routes: RoutesProps[] = [
     component: require('../views/Popover').default,
     title: 'Popover 气泡层',
     type: '反馈',
-    sort: 6,
+    sort: 7,
   },
   {
     path: '/doc/PreviewImage',
@@ -174,6 +174,13 @@ const Routes: RoutesProps[] = [
     title: 'Toast 轻提示',
     type: '反馈',
     sort: 4,
+  },
+  {
+    path: '/doc/Tooltip',
+    component: require('../views/Tooltip').default,
+    title: 'Tooltip 气泡操作版',
+    type: '反馈',
+    sort: 8,
   },
   {
     path: '/doc/Upload',

@@ -34,7 +34,7 @@ const TooltipList: React.FC<TooltipListProps> = ({ list, onClick, align = 'botto
       {/* 列表 */}
       <View
         className={_listClass}
-        style={{ top: listPosition.top + moveX, left: listPosition.left + moveY }}
+        style={{ top: listPosition.top + moveY, left: listPosition.left + moveX }}
       >
         {list.map((item, key) => (
           <View
