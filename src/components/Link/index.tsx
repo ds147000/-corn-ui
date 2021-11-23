@@ -33,10 +33,9 @@ export type LINK = React.FC<LinkProps> & {
 
 // #if _APP === 'weapp'
 import Link from './index.taro'
-
-export default Link
 // #else
 import Link from './index.h5'
+// #endif
+
 
 export default Link
-// #endif
