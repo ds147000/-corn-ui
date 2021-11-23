@@ -9,7 +9,8 @@ import {
   Button, Toast, Drawer, ActionSheet, showActionSheet,
   Modal, showModal, Empty, Image, Tab, Tag, Affix, Timer, Link,
   Cell, Card, Checkbox, CheckboxGroup, previewImage, Input, Form,
-  Textarea, Skeleton, Search, Icon, Upload, Alert, Popover, Tooltip
+  Textarea, Skeleton, Search, Icon, Upload, Alert, Popover, Tooltip,
+  XiaoKuiModal
 } from '@xrkmm/ui-h5'
 import React, { useRef, useState } from 'react'
 import 'swiper/swiper.scss'
@@ -90,7 +91,17 @@ function App() {
       <Alert>
         您发表的【商品名称】内容审核不通过，具体原因如下：文案文字，这里有可能有很多文字，允许多行显示
       </Alert>
-
+      <XiaoKuiModal
+        type="upadte"
+        visible btn={[
+          { text: '炫耀一下' },
+          { text: '解锁更多打卡', ghost: true, type: 'error' }
+        ]}
+      >
+        <div>
+          打卡成功
+        </div>
+      </XiaoKuiModal>
       <Popover
         content={(rect) => (
           <div style={{ backgroundColor: '#fff', borderRadius: 10, width: 200 }} >

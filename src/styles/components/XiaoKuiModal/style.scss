@@ -1,0 +1,47 @@
+.xrk-xiaokui-modal {
+  position: relative;
+  width: 582px;
+  background: #fff;
+  border-radius: 30px;
+  padding-top: 268px;
+  box-sizing: border-box;
+
+  &-head {
+    position: absolute;
+    top: -60px;
+    left: 0;
+    width: 582px;
+    height: 328px;
+  }
+
+  &-body {
+    padding: 44px;
+  }
+
+  &-content {
+    min-height: 15px;
+  }
+
+  &-btns {
+    padding-top: 40px;
+  }
+
+  &-btn {
+    margin-bottom: 24px;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  &-close {
+    position: absolute;
+    width: 62px;
+    height: 62px;
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    background-image: url('../../../assets/img/close.png');
+    bottom: -85px;
+    left: 260px;
+  }
+}

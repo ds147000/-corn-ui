@@ -39,6 +39,8 @@ export { default as Upload } from './components/Upload'
 export { default as Alert } from './components/Alert'
 export { default as Popover } from './components/Popover'
 export { default as Tooltip } from './components/Tooltip'
+export { default as XiaoKuiModal } from './components/XiaoKuiModal'
+
 
 export const UTILS = {
   transformRem,

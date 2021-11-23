@@ -1,0 +1,215 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`XiaokuiModal 快照 1`] = `
+<div>
+  <div
+    class="xrk-drawer-mask xrk-drawer-mask-show"
+    data-testid="mask"
+  />
+  <div
+    class="xrk-drawer-body xrk-drawer-center-show xrk-drawer-center"
+    data-testid="body"
+  >
+    <div
+      class="xrk-xiaokui-modal"
+    >
+      <div
+        class="taro-img xrk-xiaokui-modal-head"
+      >
+        <img
+          class="taro-img__mode-scaletofill"
+          src="https://assets.xrkmm.cn/u/4000002499670412/661d0be5-8f27-4478-978c-7f59b87ee877.png"
+        />
+      </div>
+      <div
+        class="xrk-xiaokui-modal-body"
+      >
+        <div
+          class="xrk-xiaokui-modal-content"
+        />
+        <div
+          class="xrk-xiaokui-modal-btns"
+        />
+      </div>
+      <div
+        class="xrk-xiaokui-modal-close"
+      />
+    </div>
+  </div>
+</div>
+`;
+
+exports[`XiaokuiModal 类型快照 1`] = `
+<div>
+  <div
+    class="xrk-drawer-mask xrk-drawer-mask-show"
+    data-testid="mask"
+  />
+  <div
+    class="xrk-drawer-body xrk-drawer-center-show xrk-drawer-center"
+    data-testid="body"
+  >
+    <div
+      class="xrk-xiaokui-modal"
+    >
+      <div
+        class="taro-img xrk-xiaokui-modal-head"
+      >
+        <img
+          class="taro-img__mode-scaletofill"
+          src="https://assets.xrkmm.cn/u/4000002499670412/c0ba2f4a-4638-4101-8676-5681de2b1e5d.png"
+        />
+      </div>
+      <div
+        class="xrk-xiaokui-modal-body"
+      >
+        <div
+          class="xrk-xiaokui-modal-content"
+        />
+        <div
+          class="xrk-xiaokui-modal-btns"
+        />
+      </div>
+      <div
+        class="xrk-xiaokui-modal-close"
+      />
+    </div>
+  </div>
+  <div
+    class="xrk-drawer-mask xrk-drawer-mask-show"
+    data-testid="mask"
+  />
+  <div
+    class="xrk-drawer-body xrk-drawer-center-show xrk-drawer-center"
+    data-testid="body"
+  >
+    <div
+      class="xrk-xiaokui-modal"
+    >
+      <div
+        class="taro-img xrk-xiaokui-modal-head"
+      >
+        <img
+          class="taro-img__mode-scaletofill"
+          src="https://assets.xrkmm.cn/u/4000002499670412/661d0be5-8f27-4478-978c-7f59b87ee877.png"
+        />
+      </div>
+      <div
+        class="xrk-xiaokui-modal-body"
+      >
+        <div
+          class="xrk-xiaokui-modal-content"
+        />
+        <div
+          class="xrk-xiaokui-modal-btns"
+        />
+      </div>
+      <div
+        class="xrk-xiaokui-modal-close"
+      />
+    </div>
+  </div>
+  <div
+    class="xrk-drawer-mask xrk-drawer-mask-show"
+    data-testid="mask"
+  />
+  <div
+    class="xrk-drawer-body xrk-drawer-center-show xrk-drawer-center"
+    data-testid="body"
+  >
+    <div
+      class="xrk-xiaokui-modal"
+    >
+      <div
+        class="taro-img xrk-xiaokui-modal-head"
+      >
+        <img
+          class="taro-img__mode-scaletofill"
+          src="https://assets.xrkmm.cn/u/4000002499670412/50447be8-8b75-4613-b39c-8675ec0e2133.png"
+        />
+      </div>
+      <div
+        class="xrk-xiaokui-modal-body"
+      >
+        <div
+          class="xrk-xiaokui-modal-content"
+        />
+        <div
+          class="xrk-xiaokui-modal-btns"
+        />
+      </div>
+      <div
+        class="xrk-xiaokui-modal-close"
+      />
+    </div>
+  </div>
+  <div
+    class="xrk-drawer-mask xrk-drawer-mask-show"
+    data-testid="mask"
+  />
+  <div
+    class="xrk-drawer-body xrk-drawer-center-show xrk-drawer-center"
+    data-testid="body"
+  >
+    <div
+      class="xrk-xiaokui-modal"
+    >
+      <div
+        class="taro-img xrk-xiaokui-modal-head"
+      >
+        <img
+          class="taro-img__mode-scaletofill"
+          src="https://assets.xrkmm.cn/u/4000002499670412/db56b91e-fb14-4824-9141-63a85a306a3f.png"
+        />
+      </div>
+      <div
+        class="xrk-xiaokui-modal-body"
+      >
+        <div
+          class="xrk-xiaokui-modal-content"
+        />
+        <div
+          class="xrk-xiaokui-modal-btns"
+        />
+      </div>
+      <div
+        class="xrk-xiaokui-modal-close"
+      />
+    </div>
+  </div>
+  <div
+    class="xrk-drawer-mask xrk-drawer-mask-show"
+    data-testid="mask"
+  />
+  <div
+    class="xrk-drawer-body xrk-drawer-center-show xrk-drawer-center"
+    data-testid="body"
+  >
+    <div
+      class="xrk-xiaokui-modal"
+    >
+      <div
+        class="taro-img xrk-xiaokui-modal-head"
+      >
+        <img
+          class="taro-img__mode-scaletofill"
+          src="https://assets.xrkmm.cn/u/4000002499670412/333ab89b-95e9-48ae-88fe-f2b0e79e42cc.png"
+        />
+      </div>
+      <div
+        class="xrk-xiaokui-modal-body"
+      >
+        <div
+          class="xrk-xiaokui-modal-content"
+        />
+        <div
+          class="xrk-xiaokui-modal-btns"
+        />
+      </div>
+      <div
+        class="xrk-xiaokui-modal-close"
+      />
+    </div>
+  </div>
+</div>
+`;
