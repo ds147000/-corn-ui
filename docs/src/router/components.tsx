@@ -190,6 +190,13 @@ const Routes: RoutesProps[] = [
     sort: 6,
   },
   {
+    path: '/doc/XiaoKuiModal',
+    component: require('../views/XiaoKuiModal').default,
+    title: 'XiaoKuiModal 小葵弹窗',
+    type: '反馈',
+    sort: 0,
+  },
+  {
     path: '/doc/utils',
     component: require('../views/utils').default,
     title: 'UITIS 工具集合',

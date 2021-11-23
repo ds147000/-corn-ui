@@ -214,4 +214,28 @@ describe('Drawer', () => {
 
     expect(preventDefault).toHaveBeenCalledTimes(1)
   })
+
+  test('click Children', () => {
+    const onClose = jest.fn()
+    const screen = render(
+      <Drawer visible onClose={onClose} position="center" >
+        <div>123</div>
+      </Drawer>
+    )
+
+    fireEvent.click(screen.getByTestId('body'))
+    expect(onClose).toHaveBeenCalledTimes(1)
+  })
+
+  test('click Children  bottom', () => {
+    const onClose = jest.fn()
+    const screen = render(
+      <Drawer visible onClose={onClose} >
+        <div>123</div>
+      </Drawer>
+    )
+
+    fireEvent.click(screen.getByTestId('body'))
+    expect(onClose).toHaveBeenCalledTimes(0)
+  })
 })

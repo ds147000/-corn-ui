@@ -64,14 +64,15 @@ const Drawer: React.FC<DrawerProps> = ({
     if (maskClosable) onClose?.()
   }
 
-  // useEffect(() => {
-  //   if (visible === true && status !== 'show')
-  //     setStatus('show')
+  const onClickBody = (event: ITouchEvent): void => {
+    const target = event.target as HTMLDivElement
 
-  //   else if (visible === false && status === 'show')
-  //     setStatus('hide')
+    if (target.className.indexOf('xrk-drawer-body') !== -1 && position === 'center') {
+      onClickMask()
+      return
+    }
+  }
 
-  // }, [ visible ])
 
   if (visible === false && isEXC) {
     return null
@@ -88,7 +89,12 @@ const Drawer: React.FC<DrawerProps> = ({
           catchMove
         />
       )}
-      <View className={_class} onAnimationEnd={onAnimationEnd} data-testid="body" >
+      <View
+        className={_class}
+        onAnimationEnd={onAnimationEnd}
+        onClick={onClickBody}
+        data-testid="body"
+      >
         {children}
       </View>
     </>

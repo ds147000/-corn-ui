@@ -55,6 +55,15 @@ const showModal = async (option: ModalOption): Promise<SuccessCallbackResult> =>
           })
         }
 
+        const onClose = (): void => {
+          setShow(false)
+          res({
+            confirm: false,
+            cancel: true,
+            errMsg: 'ok'
+          })
+        }
+
 
         return (
           <Modal
@@ -62,6 +71,7 @@ const showModal = async (option: ModalOption): Promise<SuccessCallbackResult> =>
             content={option.content}
             visible={show}
             onButtonClick={onButtonClick}
+            onClose={onClose}
             button={button}
             onHide={onDestory}
           />

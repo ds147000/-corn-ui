@@ -27,9 +27,6 @@ exports[`XiaokuiModal 快照 1`] = `
         <div
           class="xrk-xiaokui-modal-content"
         />
-        <div
-          class="xrk-xiaokui-modal-btns"
-        />
       </div>
       <div
         class="xrk-xiaokui-modal-close"
@@ -66,9 +63,6 @@ exports[`XiaokuiModal 类型快照 1`] = `
         <div
           class="xrk-xiaokui-modal-content"
         />
-        <div
-          class="xrk-xiaokui-modal-btns"
-        />
       </div>
       <div
         class="xrk-xiaokui-modal-close"
@@ -99,9 +93,6 @@ exports[`XiaokuiModal 类型快照 1`] = `
       >
         <div
           class="xrk-xiaokui-modal-content"
-        />
-        <div
-          class="xrk-xiaokui-modal-btns"
         />
       </div>
       <div
@@ -134,9 +125,6 @@ exports[`XiaokuiModal 类型快照 1`] = `
         <div
           class="xrk-xiaokui-modal-content"
         />
-        <div
-          class="xrk-xiaokui-modal-btns"
-        />
       </div>
       <div
         class="xrk-xiaokui-modal-close"
@@ -168,9 +156,6 @@ exports[`XiaokuiModal 类型快照 1`] = `
         <div
           class="xrk-xiaokui-modal-content"
         />
-        <div
-          class="xrk-xiaokui-modal-btns"
-        />
       </div>
       <div
         class="xrk-xiaokui-modal-close"
@@ -201,9 +186,6 @@ exports[`XiaokuiModal 类型快照 1`] = `
       >
         <div
           class="xrk-xiaokui-modal-content"
-        />
-        <div
-          class="xrk-xiaokui-modal-btns"
         />
       </div>
       <div

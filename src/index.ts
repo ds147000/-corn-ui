@@ -40,7 +40,7 @@ export { default as Alert } from './components/Alert'
 export { default as Popover } from './components/Popover'
 export { default as Tooltip } from './components/Tooltip'
 export { default as XiaoKuiModal } from './components/XiaoKuiModal'
-
+export { default as showXiaokuiModal } from './components/XiaoKuiModal/mananger'
 
 export const UTILS = {
   transformRem,

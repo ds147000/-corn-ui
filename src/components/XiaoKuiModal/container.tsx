@@ -12,7 +12,7 @@ export declare namespace XIAO_KUI_MODAL {
 
   interface BaseProps {
     /** 按钮数组 */
-    btn: Btn[]
+    btn?: Btn[]
     /** 是否显示遮罩层 */
     mask?: boolean
     /** 点击蒙层是否允许关闭 */
@@ -51,32 +51,34 @@ const HEAD_IMG_MAP = {
 }
 
 const XiaokuiModal: React.FC<XIAO_KUI_MODAL.Props & DrawerProps> = ({
-  type = 'default', onClick, children, btn, content, ...props
+  type = 'default', onClick, children, btn, content, onClose, ...props
 }) => {
 
   return (
-    <Drawer {...props} position="center" >
+    <Drawer {...props} onClose={onClose} position="center" >
       <View className="xrk-xiaokui-modal" >
         <Image className="xrk-xiaokui-modal-head" src={HEAD_IMG_MAP[type]} />
         <View className="xrk-xiaokui-modal-body" >
           <View className="xrk-xiaokui-modal-content" >{content || children}</View>
-          <View className="xrk-xiaokui-modal-btns" >
-            {btn.map((item, key) => (
-              <Button
-                ghost={item.ghost}
-                type={item.type}
-                key={item.text}
-                onClick={(): void => onClick?.(item, key)}
-                size="big"
-                block
-                className="xrk-xiaokui-modal-btn"
-              >
-                {item.text}
-              </Button>
-            ))}
-          </View>
+          {Boolean(btn?.length) && (
+            <View className="xrk-xiaokui-modal-btns" >
+              {btn?.map((item, key) => (
+                <Button
+                  ghost={item.ghost}
+                  type={item.type}
+                  key={item.text}
+                  onClick={(): void => onClick?.(item, key)}
+                  size="big"
+                  block
+                  className="xrk-xiaokui-modal-btn"
+                >
+                  {item.text}
+                </Button>
+              ))}
+            </View>
+          )}
         </View>
-        <View className="xrk-xiaokui-modal-close" />
+        <View className="xrk-xiaokui-modal-close" onClick={onClose} />
       </View>
     </Drawer>
   )

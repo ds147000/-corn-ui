@@ -610,6 +610,20 @@ const Routes: RoutesProps[] = [
     sort: 1,
   },
   {
+    path: '/phone/XiaoKuiModal/demo/api',
+    component: require('../views/XiaoKuiModal/demo/api').default,
+    title: 'API方式调用',
+    type: 'undefined',
+    sort: 2,
+  },
+  {
+    path: '/phone/XiaoKuiModal/demo/basis',
+    component: require('../views/XiaoKuiModal/demo/basis').default,
+    title: 'API方式调用',
+    type: 'undefined',
+    sort: 1,
+  },
+  {
     path: '/phone/utils/demo/dateToTimestamp',
     component: require('../views/utils/demo/dateToTimestamp').default,
     title:
