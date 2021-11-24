@@ -27,6 +27,7 @@ type: 反馈
 | content | 是 |  内容 | `React.ReactNode` |  |
 | mask | 否 | 是否显示遮罩层 | `boolean` | `true` |
 | maskClosable | 否 |  点击蒙层是否允许关闭 | `boolean` | `true` |
+| closable | 否 |  是否显示关闭按钮 | `boolean` | `true` |
 | type | 否 |  风格 | `'default' | 'notify' | 'upadte' | 'guide' | 'active'` | `default` |
 | btn | 否 | 按钮数组 | `Btn[]` |  |
 

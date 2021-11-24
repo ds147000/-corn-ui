@@ -8,6 +8,17 @@ describe('XiaokuiModal', () => {
     await waitFor(() => expect(screen.container).toMatchSnapshot())
   })
 
+  test('关闭按钮', async () => {
+    const screen = render(<XiaokuiModal visible btn={[]} />)
+    expect(screen.queryByTestId('close')).not.toBeNull()
+  })
+
+
+  test('取消关闭按钮', async () => {
+    const screen = render(<XiaokuiModal visible btn={[]} closable={false} />)
+    expect(screen.queryByTestId('close')).toBeNull()
+  })
+
   test('类型快照', async () => {
     const screen = render(
       <>

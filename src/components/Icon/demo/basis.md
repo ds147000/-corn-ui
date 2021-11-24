@@ -22,6 +22,11 @@ const Demo: React.FC = () => {
       </div>
 
       <div className="icon-box">
+        <Icon name="article" />
+        <h5>article</h5>
+      </div>
+
+      <div className="icon-box">
         <Icon name="backward" />
         <h5>backward</h5>
       </div>
@@ -222,6 +227,11 @@ const Demo: React.FC = () => {
       </div>
 
       <div className="icon-box">
+        <Icon name="link" />
+        <h5>link</h5>
+      </div>
+
+      <div className="icon-box">
         <Icon name="live" />
         <h5>live</h5>
       </div>
@@ -282,6 +292,11 @@ const Demo: React.FC = () => {
       </div>
 
       <div className="icon-box">
+        <Icon name="money" />
+        <h5>money</h5>
+      </div>
+
+      <div className="icon-box">
         <Icon name="more-check" />
         <h5>more-check</h5>
       </div>
@@ -329,6 +344,11 @@ const Demo: React.FC = () => {
       <div className="icon-box">
         <Icon name="play" />
         <h5>play</h5>
+      </div>
+
+      <div className="icon-box">
+        <Icon name="poster" />
+        <h5>poster</h5>
       </div>
 
       <div className="icon-box">
@@ -474,6 +494,11 @@ const Demo: React.FC = () => {
       <div className="icon-box">
         <Icon name="wechat-pay" />
         <h5>wechat-pay</h5>
+      </div>
+
+      <div className="icon-box">
+        <Icon name="wran" />
+        <h5>wran</h5>
       </div>
     </div>
   );

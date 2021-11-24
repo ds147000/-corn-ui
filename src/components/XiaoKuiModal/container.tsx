@@ -21,6 +21,8 @@ export declare namespace XIAO_KUI_MODAL {
     type?: 'default' | 'notify' | 'upadte' | 'guide' | 'active'
     /** 内容 */
     content?: React.ReactNode
+    /** 是否显示关闭按钮 */
+    closable?: boolean
   }
 
   interface Props extends BaseProps {
@@ -51,7 +53,7 @@ const HEAD_IMG_MAP = {
 }
 
 const XiaokuiModal: React.FC<XIAO_KUI_MODAL.Props & DrawerProps> = ({
-  type = 'default', onClick, children, btn, content, onClose, ...props
+  type = 'default', onClick, children, btn, content, onClose, closable = true, ...props
 }) => {
 
   return (
@@ -78,7 +80,7 @@ const XiaokuiModal: React.FC<XIAO_KUI_MODAL.Props & DrawerProps> = ({
             </View>
           )}
         </View>
-        <View className="xrk-xiaokui-modal-close" onClick={onClose} />
+        {closable &&  <View className="xrk-xiaokui-modal-close" data-testid="close" onClick={onClose} />}
       </View>
     </Drawer>
   )
