@@ -4477,6 +4477,14 @@ end-of-stream@^1.1.0:
   dependencies:
     once "^1.4.0"
 
+enhanced-resolve@^5.0.0:
+  version "5.8.3"
+  resolved "https://nexus3.xrkmm.com/repository/npm-group/enhanced-resolve/-/enhanced-resolve-5.8.3.tgz#6d552d465cce0423f5b3d718511ea53826a7b2f0"
+  integrity sha1-bVUtRlzOBCP1s9cYUR6lOCansvA=
+  dependencies:
+    graceful-fs "^4.2.4"
+    tapable "^2.2.0"
+
 enquirer@^2.3.5:
   version "2.3.6"
   resolved "https://nexus3.xrkmm.com/repository/npm-group/enquirer/-/enquirer-2.3.6.tgz"
@@ -7557,7 +7565,7 @@ micromatch@^3.1.10, micromatch@^3.1.4:
     snapdragon "^0.8.1"
     to-regex "^3.0.2"
 
-micromatch@^4.0.2, micromatch@^4.0.4:
+micromatch@^4.0.0, micromatch@^4.0.2, micromatch@^4.0.4:
   version "4.0.4"
   resolved "https://nexus3.xrkmm.com/repository/npm-group/micromatch/-/micromatch-4.0.4.tgz"
   integrity sha1-iW1Rnf6dsl/OlM63pQCRm/iB6/k=
@@ -10511,6 +10519,11 @@ table@^6.0.9, table@^6.6.0:
     string-width "^4.2.0"
     strip-ansi "^6.0.0"
 
+tapable@^2.2.0:
+  version "2.2.1"
+  resolved "https://nexus3.xrkmm.com/repository/npm-group/tapable/-/tapable-2.2.1.tgz#1967a73ef4060a82f12ab96af86d52fdb76eeca0"
+  integrity sha1-GWenPvQGCoLxKrlq+G1S/bdu7KA=
+
 tar@^6.0.2, tar@^6.1.0:
   version "6.1.7"
   resolved "https://nexus3.xrkmm.com/repository/npm-group/tar/-/tar-6.1.7.tgz#c566d1107d38b09e92983a68db5534fc7f6cab42"
@@ -10681,6 +10694,16 @@ ts-jest@^27.0.3:
     mkdirp "1.x"
     semver "7.x"
     yargs-parser "20.x"
+
+ts-loader@^9.2.6:
+  version "9.2.6"
+  resolved "https://nexus3.xrkmm.com/repository/npm-group/ts-loader/-/ts-loader-9.2.6.tgz#9937c4dd0a1e3dbbb5e433f8102a6601c6615d74"
+  integrity sha1-mTfE3QoePbu15DP4ECpmAcZhXXQ=
+  dependencies:
+    chalk "^4.1.0"
+    enhanced-resolve "^5.0.0"
+    micromatch "^4.0.0"
+    semver "^7.3.4"
 
 tsconfig-paths@^3.9.0:
   version "3.9.0"
