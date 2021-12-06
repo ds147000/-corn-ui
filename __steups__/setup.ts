@@ -134,4 +134,4 @@ jest.mock('../src/components/Image')
 jest.mock('../src/components/Link')
 jest.mock('../src/components/Icon')
 jest.mock('../src/components/Tooltip/utils')
-
+jest.mock('../src/utils/transform')

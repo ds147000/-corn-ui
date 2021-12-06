@@ -101,6 +101,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    transform: translateZ(1px);
 
     &-show {
       animation: XrkDrawerCenterShow 0.2s;

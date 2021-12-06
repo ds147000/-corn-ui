@@ -25,7 +25,7 @@ function BuildStyle(path) {
     RollupPxtransform
   ])
   .process(result.css, { from: resolveApp(path) })
-  .then(res => res.css.toString().replace(/\.\.\/\.\.\//ig, ''))
+  .then(res => res.css.toString().replace(/\.\.\/\.\.\//ig, '').replace(/0\.02133rem/ig, '1px'))
 }
 
 

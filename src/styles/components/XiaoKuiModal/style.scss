@@ -23,11 +23,12 @@
   }
 
   &-btns {
-    padding-top: 40px;
+    padding-top: 57px 50px 40px;
   }
 
   &-btn {
     margin-bottom: 24px;
+    margin-top: 40px;
     font-weight: 400;
 
     &:last-child {
@@ -41,7 +42,7 @@
     height: 62px;
     background-size: 100% 100%;
     background-repeat: no-repeat;
-    background-image: url('../../../assets/img/close.png');
+    background-image: url('https://assets.xrkmm.cn/u/4000002499670412/5888dd72-f8ea-421a-b12f-ee1053e0d8e1.png');
     bottom: -85px;
     left: 260px;
   }

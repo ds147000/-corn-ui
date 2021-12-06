@@ -1,16 +1,7 @@
 /* eslint-disable no-magic-numbers */
-/**
- * px单位转rem
- * @param {*} val
- * @returns
- */
-const rootValue = 40 * 750 / 640
-export function transformRem(val = 0): string {
-  if (!val) return ''
+import transformRem from './transform'
 
-  return (val / rootValue).toFixed(4) + 'rem'
-}
-
+export { transformRem }
 /**
  * 格式化金额
  * @param value
