@@ -13,7 +13,7 @@ import {
   Button, Toast, Drawer, showActionSheet,
   showModal, Modal, Icon, Image, Tab, Affix,
   Timer, Link, Card, Checkbox, CheckboxGroup,
-   Input, Form, Textarea, Upload, Popover
+   Input, Form, Textarea, Upload, Popover, Search
 } from '@xrkmm/ui-taro'
 import './index.scss'
 
@@ -90,6 +90,7 @@ export default class Index extends Component {
   render() {
     return (
       <View className='index'>
+        <Search openInput onSearch={console.log} />
         <Popover
           content={(rect) => (
             <View style={{ backgroundColor: '#fff', borderRadius: 10, width: 200 }} >

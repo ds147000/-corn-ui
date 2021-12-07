@@ -9,8 +9,6 @@ const XImage: React.FC<XImageProps> = ({
   src,
   light,
   lazyImg,
-  lazyLoad,
-  className,
   onClick,
   previewImage,
   m, w, h, l, s, limit, format,

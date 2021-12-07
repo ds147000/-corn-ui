@@ -63,6 +63,7 @@ const Search: React.FC<SearchProps> = ({
   }
 
   const _onClear = (): void => {
+    console.log('情况')
     searchForm.current?.reset()
     setIsClear(false)
     setIsFouce(false)
