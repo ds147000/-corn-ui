@@ -65,12 +65,13 @@ const Drawer: React.FC<DrawerProps> = ({
   }
 
   const onClickBody = (event: ITouchEvent): void => {
+    if (position !== 'center') return
+
     const target = event.target as HTMLDivElement
 
-    if (target.className.indexOf('xrk-drawer-body') !== -1 && position === 'center') {
-      onClickMask()
-      return
-    }
+    if (target?.className?.indexOf?.('xrk-drawer-body') === -1) return
+
+    onClickMask()
   }
 
 
