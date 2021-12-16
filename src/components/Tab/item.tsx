@@ -14,7 +14,7 @@ export const Item: React.FC<TAB.Item> = ({ icon, active, title, onClick, message
 
   const content = (
     <View className={message ? 'xrk-tab-item-message' : ''}>
-      {icon ? <Image src={icon} className="xrk-tab-item-icon" mode="scaleToFill" imgProps={{ alt: title }} /> : title}
+      {icon ? <Image src={icon} className="xrk-tab-item-icon" mode="heightFix" imgProps={{ alt: title }} /> : title}
     </View>
   )
 

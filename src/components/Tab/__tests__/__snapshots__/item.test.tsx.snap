@@ -28,7 +28,7 @@ exports[`comps/Tab/item icon 1`] = `
         class="taro-img xrk-img xrk-tab-item-icon"
       >
         <img
-          class="taro-img__mode-scaletofill"
+          class="taro-img__mode-heightfix"
           src="https://t7.baidu.com/it/u=1951548898,3927145&fm=193&f=GIF"
         />
       </div>
