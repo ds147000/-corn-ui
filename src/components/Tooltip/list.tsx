@@ -62,27 +62,27 @@ const BOTTOM_MOVE = 10
 export function getArrowPosition(rect: ElementRect, align: TOOTIPS.Align): Position {
   if (align === 'bottom') {
     return {
-      top: rect.offsetTop + rect.height,
-      left: rect.offsetLeft + (rect.width / 2)
+      top: rect.top + rect.height,
+      left: rect.left + (rect.width / 2)
     }
   }
 
   return {
-    top: rect.offsetTop,
-    left: rect.offsetLeft + (rect.width / 2)
+    top: rect.top,
+    left: rect.left + (rect.width / 2)
   }
 }
 
 export function getListPosition(rect: ElementRect, align: TOOTIPS.Align): Position {
   if (align === 'bottom') {
     return {
-      top: rect.offsetTop + rect.height + getScale(BOTTOM_MOVE),
-      left: rect.offsetLeft + (rect.width / 2) - getScale(LIST_WIDTH)
+      top: rect.top + rect.height + getScale(BOTTOM_MOVE),
+      left: rect.left + (rect.width / 2) - getScale(LIST_WIDTH)
     }
   }
   return {
-    top: rect.offsetTop,
-    left: rect.offsetLeft + (rect.width / 2) - getScale(LIST_WIDTH)
+    top: rect.top,
+    left: rect.left + (rect.width / 2) - getScale(LIST_WIDTH)
   }
 }
 

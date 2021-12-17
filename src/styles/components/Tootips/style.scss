@@ -4,7 +4,7 @@
   text-align: center;
   border-radius: 15px;
   width: 180px;
-  position: absolute;
+  position: fixed;
   z-index: $portalIndex + 1;
 
   &-top {
@@ -14,7 +14,7 @@
   &-arrow {
     display: block;
     border-style: solid;
-    position: absolute;
+    position: fixed;
     z-index: 1;
 
     &-bottom {

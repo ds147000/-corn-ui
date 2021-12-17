@@ -86,6 +86,8 @@ function App() {
     setObj({...obj, a: '100'})
   }
 
+  const cs = 'h5'
+
   return (
     <div className="App" >
       <Alert onClick={() => showXiaokuiModal({
@@ -97,7 +99,7 @@ function App() {
       }).then((res) => console.log(res))} >
         您发表的【商品名称】内容审核不通过，具体原因如下：文案文字，这里有可能有很多文字，允许多行显示
       </Alert>
-
+      {cs && <div>{cs}</div>}
       <Popover
         content={(rect) => (
           <div style={{ backgroundColor: '#fff', borderRadius: 10, width: 200 }} >
