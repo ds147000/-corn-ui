@@ -12,9 +12,14 @@ exports[`Checkbox 基础 1`] = `
       readonly=""
       value="false"
     />
-    <i
-      class="xrk-icon xrk-i-radio"
-    />
+    <div
+      class="taro-img xrk-img xrk-checkbox-icon"
+    >
+      <img
+        class="taro-img__mode-scaletofill"
+        src="https://assets.xrkmm.cn/u/2000001252935290/dc949eed-eb8c-4ea5-bea4-c45a870cf0e7.png"
+      />
+    </div>
     商品链接
   </div>
 </div>
@@ -67,7 +72,7 @@ exports[`Checkbox 基础 按钮类型 2`] = `
 exports[`Checkbox 选中 1`] = `
 <div>
   <div
-    class="xrk-if xrk-ac xrk-checkbox-active xrk-checkbox"
+    class="xrk-if xrk-ac xrk-checkbox"
     data-testid="xrk-checkbox"
   >
     <input
@@ -76,9 +81,14 @@ exports[`Checkbox 选中 1`] = `
       readonly=""
       value="true"
     />
-    <i
-      class="xrk-icon xrk-i-fill-select"
-    />
+    <div
+      class="taro-img xrk-img xrk-checkbox-icon"
+    >
+      <img
+        class="taro-img__mode-scaletofill"
+        src="https://assets.xrkmm.cn/u/2000001252935290/97f184d7-4fda-43f1-bd56-8313ee8a2b94.png"
+      />
+    </div>
     商品链接
   </div>
 </div>

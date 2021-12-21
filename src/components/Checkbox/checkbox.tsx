@@ -6,10 +6,13 @@ import {
   Input
   // #endif
 } from '@tarojs/components'
-import Icon from '../Icon'
 import Button, { ButtonSize, ButtonType } from '../Button'
 import { CheckBoxContext } from './context'
 import { FromContext } from '../Form/context'
+import Image from '../Image'
+
+const DEFAULT_ICON = 'https://assets.xrkmm.cn/u/2000001252935290/dc949eed-eb8c-4ea5-bea4-c45a870cf0e7.png'
+const SELECT_ICON = 'https://assets.xrkmm.cn/u/2000001252935290/97f184d7-4fda-43f1-bd56-8313ee8a2b94.png'
 
 export interface CheckBoxProps {
   name?: string
@@ -63,7 +66,6 @@ const CheckBox: React.FC<CheckBoxProps> = ({
 
   const _class = classNames(
     'xrk-if xrk-ac',
-    controllCheck && isDefualtStyle && 'xrk-checkbox-active',
     isDefualtStyle && 'xrk-checkbox',
     isDefualtStyle && disabled && 'xrk-checkbox-disable'
   )
@@ -106,7 +108,11 @@ const CheckBox: React.FC<CheckBoxProps> = ({
       {input}
       {isDefualtStyle ? (
         <>
-          <Icon name={controllCheck ? 'fill-select' : 'radio'} />
+          <Image
+            mode="scaleToFill"
+            className="xrk-checkbox-icon"
+            src={controllCheck ? SELECT_ICON : DEFAULT_ICON}
+          />
           {children}
         </>
       ) : (

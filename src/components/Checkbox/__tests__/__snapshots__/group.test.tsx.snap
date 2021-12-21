@@ -22,9 +22,14 @@ exports[`单选模式 1`] = `
         readonly=""
         value="1"
       />
-      <i
-        class="xrk-icon xrk-i-radio"
-      />
+      <div
+        class="taro-img xrk-img xrk-checkbox-icon"
+      >
+        <img
+          class="taro-img__mode-scaletofill"
+          src="https://assets.xrkmm.cn/u/2000001252935290/dc949eed-eb8c-4ea5-bea4-c45a870cf0e7.png"
+        />
+      </div>
       选项1
     </div>
     <div
@@ -38,9 +43,14 @@ exports[`单选模式 1`] = `
         readonly=""
         value="2"
       />
-      <i
-        class="xrk-icon xrk-i-radio"
-      />
+      <div
+        class="taro-img xrk-img xrk-checkbox-icon"
+      >
+        <img
+          class="taro-img__mode-scaletofill"
+          src="https://assets.xrkmm.cn/u/2000001252935290/dc949eed-eb8c-4ea5-bea4-c45a870cf0e7.png"
+        />
+      </div>
       选项2
     </div>
     <div
@@ -54,13 +64,18 @@ exports[`单选模式 1`] = `
         readonly=""
         value="3"
       />
-      <i
-        class="xrk-icon xrk-i-radio"
-      />
+      <div
+        class="taro-img xrk-img xrk-checkbox-icon"
+      >
+        <img
+          class="taro-img__mode-scaletofill"
+          src="https://assets.xrkmm.cn/u/2000001252935290/dc949eed-eb8c-4ea5-bea4-c45a870cf0e7.png"
+        />
+      </div>
       选项3
     </div>
     <div
-      class="xrk-if xrk-ac xrk-checkbox-active xrk-checkbox"
+      class="xrk-if xrk-ac xrk-checkbox"
       data-testid="xrk-checkbox"
     >
       <input
@@ -70,9 +85,14 @@ exports[`单选模式 1`] = `
         readonly=""
         value="4"
       />
-      <i
-        class="xrk-icon xrk-i-fill-select"
-      />
+      <div
+        class="taro-img xrk-img xrk-checkbox-icon"
+      >
+        <img
+          class="taro-img__mode-scaletofill"
+          src="https://assets.xrkmm.cn/u/2000001252935290/97f184d7-4fda-43f1-bd56-8313ee8a2b94.png"
+        />
+      </div>
       选项4
     </div>
   </div>
@@ -101,9 +121,14 @@ exports[`取消选中 1`] = `
         readonly=""
         value="1"
       />
-      <i
-        class="xrk-icon xrk-i-radio"
-      />
+      <div
+        class="taro-img xrk-img xrk-checkbox-icon"
+      >
+        <img
+          class="taro-img__mode-scaletofill"
+          src="https://assets.xrkmm.cn/u/2000001252935290/dc949eed-eb8c-4ea5-bea4-c45a870cf0e7.png"
+        />
+      </div>
       选项1
     </div>
     <div
@@ -117,9 +142,14 @@ exports[`取消选中 1`] = `
         readonly=""
         value="2"
       />
-      <i
-        class="xrk-icon xrk-i-radio"
-      />
+      <div
+        class="taro-img xrk-img xrk-checkbox-icon"
+      >
+        <img
+          class="taro-img__mode-scaletofill"
+          src="https://assets.xrkmm.cn/u/2000001252935290/dc949eed-eb8c-4ea5-bea4-c45a870cf0e7.png"
+        />
+      </div>
       选项2
     </div>
   </div>
@@ -148,9 +178,14 @@ exports[`取消选中 和默认值 1`] = `
         readonly=""
         value="1"
       />
-      <i
-        class="xrk-icon xrk-i-radio"
-      />
+      <div
+        class="taro-img xrk-img xrk-checkbox-icon"
+      >
+        <img
+          class="taro-img__mode-scaletofill"
+          src="https://assets.xrkmm.cn/u/2000001252935290/dc949eed-eb8c-4ea5-bea4-c45a870cf0e7.png"
+        />
+      </div>
       选项1
     </div>
     <div
@@ -164,9 +199,14 @@ exports[`取消选中 和默认值 1`] = `
         readonly=""
         value="2"
       />
-      <i
-        class="xrk-icon xrk-i-radio"
-      />
+      <div
+        class="taro-img xrk-img xrk-checkbox-icon"
+      >
+        <img
+          class="taro-img__mode-scaletofill"
+          src="https://assets.xrkmm.cn/u/2000001252935290/dc949eed-eb8c-4ea5-bea4-c45a870cf0e7.png"
+        />
+      </div>
       选项2
     </div>
   </div>
@@ -195,9 +235,14 @@ exports[`基本使用 1`] = `
         readonly=""
         value="1"
       />
-      <i
-        class="xrk-icon xrk-i-radio"
-      />
+      <div
+        class="taro-img xrk-img xrk-checkbox-icon"
+      >
+        <img
+          class="taro-img__mode-scaletofill"
+          src="https://assets.xrkmm.cn/u/2000001252935290/dc949eed-eb8c-4ea5-bea4-c45a870cf0e7.png"
+        />
+      </div>
       选项1
     </div>
     <div
@@ -211,9 +256,14 @@ exports[`基本使用 1`] = `
         readonly=""
         value="2"
       />
-      <i
-        class="xrk-icon xrk-i-radio"
-      />
+      <div
+        class="taro-img xrk-img xrk-checkbox-icon"
+      >
+        <img
+          class="taro-img__mode-scaletofill"
+          src="https://assets.xrkmm.cn/u/2000001252935290/dc949eed-eb8c-4ea5-bea4-c45a870cf0e7.png"
+        />
+      </div>
       选项2
     </div>
   </div>
@@ -232,7 +282,7 @@ exports[`选中 1`] = `
       value="[\\"1\\",\\"2\\"]"
     />
     <div
-      class="xrk-if xrk-ac xrk-checkbox-active xrk-checkbox"
+      class="xrk-if xrk-ac xrk-checkbox"
       data-testid="xrk-checkbox"
     >
       <input
@@ -242,13 +292,18 @@ exports[`选中 1`] = `
         readonly=""
         value="1"
       />
-      <i
-        class="xrk-icon xrk-i-fill-select"
-      />
+      <div
+        class="taro-img xrk-img xrk-checkbox-icon"
+      >
+        <img
+          class="taro-img__mode-scaletofill"
+          src="https://assets.xrkmm.cn/u/2000001252935290/97f184d7-4fda-43f1-bd56-8313ee8a2b94.png"
+        />
+      </div>
       选项1
     </div>
     <div
-      class="xrk-if xrk-ac xrk-checkbox-active xrk-checkbox"
+      class="xrk-if xrk-ac xrk-checkbox"
       data-testid="xrk-checkbox"
     >
       <input
@@ -258,9 +313,14 @@ exports[`选中 1`] = `
         readonly=""
         value="2"
       />
-      <i
-        class="xrk-icon xrk-i-fill-select"
-      />
+      <div
+        class="taro-img xrk-img xrk-checkbox-icon"
+      >
+        <img
+          class="taro-img__mode-scaletofill"
+          src="https://assets.xrkmm.cn/u/2000001252935290/97f184d7-4fda-43f1-bd56-8313ee8a2b94.png"
+        />
+      </div>
       选项2
     </div>
   </div>

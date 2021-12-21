@@ -21,9 +21,14 @@ exports[`Fomr 初始化值 1`] = `
         readonly=""
         value="false"
       />
-      <i
-        class="xrk-icon xrk-i-radio"
-      />
+      <div
+        class="taro-img xrk-img xrk-checkbox-icon"
+      >
+        <img
+          class="taro-img__mode-scaletofill"
+          src="https://assets.xrkmm.cn/u/2000001252935290/dc949eed-eb8c-4ea5-bea4-c45a870cf0e7.png"
+        />
+      </div>
       男
     </div>
     <div
@@ -48,9 +53,14 @@ exports[`Fomr 初始化值 1`] = `
           readonly=""
           value="1"
         />
-        <i
-          class="xrk-icon xrk-i-radio"
-        />
+        <div
+          class="taro-img xrk-img xrk-checkbox-icon"
+        >
+          <img
+            class="taro-img__mode-scaletofill"
+            src="https://assets.xrkmm.cn/u/2000001252935290/dc949eed-eb8c-4ea5-bea4-c45a870cf0e7.png"
+          />
+        </div>
         1
       </div>
       <div
@@ -64,9 +74,14 @@ exports[`Fomr 初始化值 1`] = `
           readonly=""
           value="2"
         />
-        <i
-          class="xrk-icon xrk-i-radio"
-        />
+        <div
+          class="taro-img xrk-img xrk-checkbox-icon"
+        >
+          <img
+            class="taro-img__mode-scaletofill"
+            src="https://assets.xrkmm.cn/u/2000001252935290/dc949eed-eb8c-4ea5-bea4-c45a870cf0e7.png"
+          />
+        </div>
         2
       </div>
       <div
@@ -80,9 +95,14 @@ exports[`Fomr 初始化值 1`] = `
           readonly=""
           value="3"
         />
-        <i
-          class="xrk-icon xrk-i-radio"
-        />
+        <div
+          class="taro-img xrk-img xrk-checkbox-icon"
+        >
+          <img
+            class="taro-img__mode-scaletofill"
+            src="https://assets.xrkmm.cn/u/2000001252935290/dc949eed-eb8c-4ea5-bea4-c45a870cf0e7.png"
+          />
+        </div>
         3
       </div>
     </div>
@@ -108,9 +128,14 @@ exports[`Fomr 初始化值 1`] = `
           readonly=""
           value="1"
         />
-        <i
-          class="xrk-icon xrk-i-radio"
-        />
+        <div
+          class="taro-img xrk-img xrk-checkbox-icon"
+        >
+          <img
+            class="taro-img__mode-scaletofill"
+            src="https://assets.xrkmm.cn/u/2000001252935290/dc949eed-eb8c-4ea5-bea4-c45a870cf0e7.png"
+          />
+        </div>
         大学
       </div>
       <div
@@ -124,9 +149,14 @@ exports[`Fomr 初始化值 1`] = `
           readonly=""
           value="2"
         />
-        <i
-          class="xrk-icon xrk-i-radio"
-        />
+        <div
+          class="taro-img xrk-img xrk-checkbox-icon"
+        >
+          <img
+            class="taro-img__mode-scaletofill"
+            src="https://assets.xrkmm.cn/u/2000001252935290/dc949eed-eb8c-4ea5-bea4-c45a870cf0e7.png"
+          />
+        </div>
         小学
       </div>
     </div>
@@ -168,7 +198,7 @@ exports[`Fomr 改变初始化值 1`] = `
       value="123"
     />
     <div
-      class="xrk-if xrk-ac xrk-checkbox-active xrk-checkbox"
+      class="xrk-if xrk-ac xrk-checkbox"
       data-testid="xrk-checkbox"
     >
       <input
@@ -178,9 +208,14 @@ exports[`Fomr 改变初始化值 1`] = `
         readonly=""
         value="true"
       />
-      <i
-        class="xrk-icon xrk-i-fill-select"
-      />
+      <div
+        class="taro-img xrk-img xrk-checkbox-icon"
+      >
+        <img
+          class="taro-img__mode-scaletofill"
+          src="https://assets.xrkmm.cn/u/2000001252935290/97f184d7-4fda-43f1-bd56-8313ee8a2b94.png"
+        />
+      </div>
       男
     </div>
     <div
@@ -205,9 +240,14 @@ exports[`Fomr 改变初始化值 1`] = `
           readonly=""
           value="1"
         />
-        <i
-          class="xrk-icon xrk-i-radio"
-        />
+        <div
+          class="taro-img xrk-img xrk-checkbox-icon"
+        >
+          <img
+            class="taro-img__mode-scaletofill"
+            src="https://assets.xrkmm.cn/u/2000001252935290/dc949eed-eb8c-4ea5-bea4-c45a870cf0e7.png"
+          />
+        </div>
         1
       </div>
       <div
@@ -221,9 +261,14 @@ exports[`Fomr 改变初始化值 1`] = `
           readonly=""
           value="2"
         />
-        <i
-          class="xrk-icon xrk-i-radio"
-        />
+        <div
+          class="taro-img xrk-img xrk-checkbox-icon"
+        >
+          <img
+            class="taro-img__mode-scaletofill"
+            src="https://assets.xrkmm.cn/u/2000001252935290/dc949eed-eb8c-4ea5-bea4-c45a870cf0e7.png"
+          />
+        </div>
         2
       </div>
       <div
@@ -237,9 +282,14 @@ exports[`Fomr 改变初始化值 1`] = `
           readonly=""
           value="3"
         />
-        <i
-          class="xrk-icon xrk-i-radio"
-        />
+        <div
+          class="taro-img xrk-img xrk-checkbox-icon"
+        >
+          <img
+            class="taro-img__mode-scaletofill"
+            src="https://assets.xrkmm.cn/u/2000001252935290/dc949eed-eb8c-4ea5-bea4-c45a870cf0e7.png"
+          />
+        </div>
         3
       </div>
     </div>
@@ -265,9 +315,14 @@ exports[`Fomr 改变初始化值 1`] = `
           readonly=""
           value="1"
         />
-        <i
-          class="xrk-icon xrk-i-radio"
-        />
+        <div
+          class="taro-img xrk-img xrk-checkbox-icon"
+        >
+          <img
+            class="taro-img__mode-scaletofill"
+            src="https://assets.xrkmm.cn/u/2000001252935290/dc949eed-eb8c-4ea5-bea4-c45a870cf0e7.png"
+          />
+        </div>
         大学
       </div>
       <div
@@ -281,9 +336,14 @@ exports[`Fomr 改变初始化值 1`] = `
           readonly=""
           value="2"
         />
-        <i
-          class="xrk-icon xrk-i-radio"
-        />
+        <div
+          class="taro-img xrk-img xrk-checkbox-icon"
+        >
+          <img
+            class="taro-img__mode-scaletofill"
+            src="https://assets.xrkmm.cn/u/2000001252935290/dc949eed-eb8c-4ea5-bea4-c45a870cf0e7.png"
+          />
+        </div>
         小学
       </div>
     </div>
@@ -333,9 +393,14 @@ exports[`Fomr 渲染 1`] = `
         readonly=""
         value="false"
       />
-      <i
-        class="xrk-icon xrk-i-radio"
-      />
+      <div
+        class="taro-img xrk-img xrk-checkbox-icon"
+      >
+        <img
+          class="taro-img__mode-scaletofill"
+          src="https://assets.xrkmm.cn/u/2000001252935290/dc949eed-eb8c-4ea5-bea4-c45a870cf0e7.png"
+        />
+      </div>
     </div>
     <div
       class="xrk-textarea"
@@ -371,7 +436,7 @@ exports[`Fomr 自带值 1`] = `
       value="123"
     />
     <div
-      class="xrk-if xrk-ac xrk-checkbox-active xrk-checkbox"
+      class="xrk-if xrk-ac xrk-checkbox"
       data-testid="xrk-checkbox"
     >
       <input
@@ -380,9 +445,14 @@ exports[`Fomr 自带值 1`] = `
         readonly=""
         value="true"
       />
-      <i
-        class="xrk-icon xrk-i-fill-select"
-      />
+      <div
+        class="taro-img xrk-img xrk-checkbox-icon"
+      >
+        <img
+          class="taro-img__mode-scaletofill"
+          src="https://assets.xrkmm.cn/u/2000001252935290/97f184d7-4fda-43f1-bd56-8313ee8a2b94.png"
+        />
+      </div>
       男
     </div>
     <div
@@ -407,9 +477,14 @@ exports[`Fomr 自带值 1`] = `
           readonly=""
           value="1"
         />
-        <i
-          class="xrk-icon xrk-i-radio"
-        />
+        <div
+          class="taro-img xrk-img xrk-checkbox-icon"
+        >
+          <img
+            class="taro-img__mode-scaletofill"
+            src="https://assets.xrkmm.cn/u/2000001252935290/dc949eed-eb8c-4ea5-bea4-c45a870cf0e7.png"
+          />
+        </div>
         1
       </div>
       <div
@@ -423,9 +498,14 @@ exports[`Fomr 自带值 1`] = `
           readonly=""
           value="2"
         />
-        <i
-          class="xrk-icon xrk-i-radio"
-        />
+        <div
+          class="taro-img xrk-img xrk-checkbox-icon"
+        >
+          <img
+            class="taro-img__mode-scaletofill"
+            src="https://assets.xrkmm.cn/u/2000001252935290/dc949eed-eb8c-4ea5-bea4-c45a870cf0e7.png"
+          />
+        </div>
         2
       </div>
       <div
@@ -439,9 +519,14 @@ exports[`Fomr 自带值 1`] = `
           readonly=""
           value="3"
         />
-        <i
-          class="xrk-icon xrk-i-radio"
-        />
+        <div
+          class="taro-img xrk-img xrk-checkbox-icon"
+        >
+          <img
+            class="taro-img__mode-scaletofill"
+            src="https://assets.xrkmm.cn/u/2000001252935290/dc949eed-eb8c-4ea5-bea4-c45a870cf0e7.png"
+          />
+        </div>
         3
       </div>
     </div>
@@ -467,9 +552,14 @@ exports[`Fomr 自带值 1`] = `
           readonly=""
           value="1"
         />
-        <i
-          class="xrk-icon xrk-i-radio"
-        />
+        <div
+          class="taro-img xrk-img xrk-checkbox-icon"
+        >
+          <img
+            class="taro-img__mode-scaletofill"
+            src="https://assets.xrkmm.cn/u/2000001252935290/dc949eed-eb8c-4ea5-bea4-c45a870cf0e7.png"
+          />
+        </div>
         大学
       </div>
       <div
@@ -483,9 +573,14 @@ exports[`Fomr 自带值 1`] = `
           readonly=""
           value="2"
         />
-        <i
-          class="xrk-icon xrk-i-radio"
-        />
+        <div
+          class="taro-img xrk-img xrk-checkbox-icon"
+        >
+          <img
+            class="taro-img__mode-scaletofill"
+            src="https://assets.xrkmm.cn/u/2000001252935290/dc949eed-eb8c-4ea5-bea4-c45a870cf0e7.png"
+          />
+        </div>
         小学
       </div>
     </div>
