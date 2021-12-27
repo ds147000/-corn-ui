@@ -413,7 +413,10 @@ function App() {
             { text: '确定' }
           ]}
           onButtonClick={() => setMshow(false)}
-        />
+          onClose={() => setMshow(false)}
+        >
+          <Empty text="暂无内容哦" size="large" />
+        </Modal>
         <Empty text="暂无内容哦" size="large" />
         <Empty text="暂无内容哦" direction="快去已经购买的商品写下您的实测评价吧~" size="large" />
         <Empty text="暂无内容哦" >

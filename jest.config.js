@@ -40,7 +40,8 @@ module.exports = {
     '<rootDir>/src/components/PreviewImage',
     '<rootDir>/src/components/Link/index.h5.tsx',
     '<rootDir>/src/components/Popover/utils.ts',
-    '<rootDir>/src/components/Tootips/utils.ts'
+    '<rootDir>/src/components/Tootips/utils.ts',
+    '<rootDir>/src/components/Drawer/index.tsx'
   ],
   coverageThreshold: {
     global: {

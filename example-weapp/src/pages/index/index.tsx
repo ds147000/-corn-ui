@@ -230,15 +230,18 @@ export default class Index extends Component {
         <Modal
           visible={this.state.mShow}
           title='这是标题'
-          content='这是文案这是文案这是文案这是文案'
           button={[
             { text: '取消', style: 'cancel' },
             { text: '继续看' },
             { text: '确定' }
           ]}
+          onClose={() => this.setState({ mShow: false })}
           onButtonClick={() => this.setState({ mShow: false })}
-        />
-        <Image src='https://t7.baidu.com/it/u=1951548898,3927145&fm=193&f=GIF' />
+        >
+          <View>2121321</View>
+        </Modal>
+
+        <Image src='https://t7.baidu.com/it/u=1951548898,3927145&fm=193&f=GIF' onClick={() => this.setState({ mShow: true })} />
         <Image src='https://t7.baidu.com/it/u=1595072465,3644073269&fm=193&f=GIF' lazyLoad />
 
         </Form>

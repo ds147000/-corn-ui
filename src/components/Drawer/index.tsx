@@ -1,4 +1,4 @@
-import React, { useMemo, useState } from 'react'
+import React, { useMemo, useRef, useState } from 'react'
 import classNames from 'classnames'
 import { View } from '@tarojs/components'
 import { ITouchEvent } from '../../types'
@@ -30,6 +30,7 @@ const Drawer: React.FC<DrawerProps> = ({
   children
 }) => {
   const [ isEXC, setIsEXC ] = useState<boolean>(true)
+  const Body = useRef<{ uid: string }>()
 
   const _class = useMemo(() => {
     return classNames(
@@ -68,8 +69,8 @@ const Drawer: React.FC<DrawerProps> = ({
     if (position !== 'center') return
 
     const target = event.target as HTMLDivElement
-
     if (target?.className?.indexOf?.('xrk-drawer-body') === -1) return
+    if (target.id !== Body.current?.uid && Body.current?.uid !== undefined) return
 
     onClickMask()
   }
@@ -95,6 +96,7 @@ const Drawer: React.FC<DrawerProps> = ({
         onAnimationEnd={onAnimationEnd}
         onClick={onClickBody}
         data-testid="body"
+        ref={Body}
       >
         {children}
       </View>
