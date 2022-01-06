@@ -48,13 +48,14 @@ const Search: React.FC<SearchProps> = ({
   onClick
 }) => {
   const [ isFouce, setIsFouce ] = useState(false)
-  const [ isClear, setIsClear ] = useState(false)
   const searchForm = useRef<Form>()
+  const valueLen = String(value || '').length
+
   const _class = useMemo(() => classNames('xrk-search xrk-f xrk-ac', `xrk-search-${type}`), [ type ])
 
   const _onInput = (event: BaseEventOrig<InputType.inputEventDetail>): void => {
     onChange?.(event.detail.value)
-    if (allowClear) setIsClear(true)
+    setIsFouce(event.detail.value.length > 0)
   }
 
   const _onSubmit = (event: Record<string, unknown>): void => {
@@ -64,7 +65,6 @@ const Search: React.FC<SearchProps> = ({
 
   const _onClear = (): void => {
     searchForm.current?.reset()
-    setIsClear(false)
     setIsFouce(false)
     onChange?.('')
   }
@@ -73,6 +73,8 @@ const Search: React.FC<SearchProps> = ({
   const _onBlur = useCallback((event: BaseEventOrig<InputType.inputValueEventDetail>) => {
     if (!event.detail.value) setIsFouce(false)
   }, [])
+
+  const isShowClear = (allowClear && valueLen > 0) || (allowClear && isFouce)
 
   return (
     <Form onSubmit={_onSubmit} ref={searchForm as React.LegacyRef<Form>} >
@@ -85,7 +87,7 @@ const Search: React.FC<SearchProps> = ({
           onClick={onClick}
         >
           <Icon name="search" className="xrk-search-icon" />
-          {!isFouce && Boolean(value) === false && <SearchPlaceholder data={placeholder} />}
+          {!isFouce && valueLen === 0 && <SearchPlaceholder data={placeholder} />}
 
           {openInput ? (
             <Input
@@ -101,7 +103,7 @@ const Search: React.FC<SearchProps> = ({
             <View className="xrk-search-input" />
           )}
 
-          {allowClear && isClear && <Icon name="clear" className="xrk-search-clear" onClick={_onClear} />}
+          {isShowClear && <Icon name="clear" className="xrk-search-clear" onClick={_onClear} />}
 
           <Button
             size="middle"
