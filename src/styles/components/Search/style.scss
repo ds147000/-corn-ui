@@ -11,13 +11,24 @@
 
   &-input-box {
     flex: 1;
-    position: relative;
     height: 62px;
     border-radius: 31px;
     box-sizing: border-box;
+    position: relative;
     // padding: 17px 24px 17px 64px;
     overflow: hidden;
     background-color: $searchDefualtColor;
+  }
+
+  &-input {
+    display: block;
+    padding-left: 80px;
+    height: 62px;
+    font-size: 28px;
+    font-weight: 400;
+    color: $text1;
+    line-height: 62px;
+    flex: 1;
   }
 
   &-icon {
@@ -30,33 +41,20 @@
   }
 
   &-clear {
-    position: absolute;
     font-size: 24px;
     line-height: 24px;
     color: $icon2;
-    top: 19px;
-    right: 146px;
-    z-index: 10;
-  }
-
-  &-input {
-    display: block;
-    margin-right: 116px;
-    padding-left: 80px;
     height: 62px;
-    font-size: 28px;
-    font-weight: 400;
-    color: $text1;
-    line-height: 62px;
+    width: 62px;
+    z-index: 10;
+    padding-right: 10px;
   }
 
   &-btn {
-    position: absolute;
-    top: 0;
-    right: 0;
     height: 62px;
     font-weight: 400;
     width: 116px;
+    margin-left: 0;
   }
 
   &-suffix {

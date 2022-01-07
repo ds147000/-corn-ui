@@ -7,7 +7,7 @@ exports[`Search 基础快照 1`] = `
       class="xrk-search xrk-f xrk-ac xrk-search-undefined"
     >
       <div
-        class="xrk-search-input-box"
+        class="xrk-search-input-box xrk-f xrk-ac"
         data-testid="search-box"
       >
         <i
@@ -36,7 +36,7 @@ exports[`Search 基础快照 light 1`] = `
       class="xrk-search xrk-f xrk-ac xrk-search-light"
     >
       <div
-        class="xrk-search-input-box"
+        class="xrk-search-input-box xrk-f xrk-ac"
         data-testid="search-box"
       >
         <i
@@ -65,7 +65,7 @@ exports[`Search 插入尾部内容 1`] = `
       class="xrk-search xrk-f xrk-ac xrk-search-undefined"
     >
       <div
-        class="xrk-search-input-box"
+        class="xrk-search-input-box xrk-f xrk-ac"
         data-testid="search-box"
       >
         <i
@@ -101,7 +101,7 @@ exports[`Search 设置提示语列表 1`] = `
       class="xrk-search xrk-f xrk-ac xrk-search-undefined"
     >
       <div
-        class="xrk-search-input-box"
+        class="xrk-search-input-box xrk-f xrk-ac"
         data-testid="search-box"
       >
         <i
@@ -133,9 +133,10 @@ exports[`Search 设置提示语列表 1`] = `
         <input
           autocomplete="off"
           class="weui-input xrk-search-input xrk-input"
+          confirmtype="search"
           data-testid="input"
           name="value"
-          type="text"
+          type="search"
           value=""
         />
         <button

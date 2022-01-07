@@ -1,6 +1,6 @@
 {
   "name": "@xrkmm/ui",
-  "version": "1.7.37",
+  "version": "1.7.39",
   "description": "向日葵妈妈移动UI库，支持H5、小程序端使用。具有自适应屏幕，主题变量化等特性",
   "main": "package-taro/index.js",
   "module": "package-taro/index.esm.js",

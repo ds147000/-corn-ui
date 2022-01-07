@@ -1,5 +1,5 @@
 import React from 'react'
-import { fireEvent, render, waitFor } from '@testing-library/react'
+import { fireEvent, render, waitFor, createEvent } from '@testing-library/react'
 import UserEvent from '@testing-library/user-event'
 import Search from '../index'
 import { act } from 'react-dom/test-utils'
@@ -217,5 +217,4 @@ describe('Search', () => {
     expect(onBack).toHaveBeenCalledTimes(0)
     expect(onSearch).toHaveBeenCalledTimes(0)
   })
-
 })

@@ -63,7 +63,10 @@ const Search: React.FC<SearchProps> = ({
     onSearch?.(searchValue)
   }
 
-  const _onClear = (): void => {
+  const _onClear = (event: ITouchEvent): void => {
+    event.stopPropagation()
+    event.preventDefault()
+
     searchForm.current?.reset()
     setIsFouce(false)
     onChange?.('')
@@ -82,7 +85,7 @@ const Search: React.FC<SearchProps> = ({
         {back && <Icon className="xrk-search-back" name="left" data-testid="back" onClick={onBack} />}
 
         <View
-          className="xrk-search-input-box"
+          className="xrk-search-input-box xrk-f xrk-ac"
           data-testid="search-box"
           onClick={onClick}
         >
@@ -97,13 +100,17 @@ const Search: React.FC<SearchProps> = ({
               onInput={_onInput}
               onFocus={_onFouce}
               onBlur={_onBlur}
+              // #if _APP === 'weapp'
+              onConfirm={(): void => searchForm.current?.submit()}
+              // #endif
               autoComplete="off"
+              confirmType="search"
             />
           ) : (
             <View className="xrk-search-input" />
           )}
 
-          {isShowClear && <Icon name="clear" className="xrk-search-clear" onClick={_onClear} />}
+          {isShowClear && <Icon name="clear" className="xrk-search-clear xrk-f xrk-ac xrk-jc" onClick={_onClear} />}
 
           <Button
             size="middle"
