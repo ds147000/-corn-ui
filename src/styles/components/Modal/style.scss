@@ -30,7 +30,29 @@ $modalBorderColor: #f3f5fa;
     line-height: 42px;
   }
 
-  &-button {
+  &-floor-multi {
+    width: 100%;
+    box-sizing: border-box;
+    border-top: 1px solid $modalBorderColor;
+
+    .xrk-modal-button {
+      border-bottom: 1px solid $modalBorderColor;
+    }
+  }
+
+  &-floor-line {
+    width: 100%;
+    box-sizing: border-box;
+    border-top: 1px solid $modalBorderColor;
+    display: flex;
+
+    .xrk-modal-button {
+      flex: 1;
+      border-right: 1px solid $modalBorderColor;
+    }
+  }
+
+  .xrk-modal-button {
     font-size: 32px;
     font-weight: 400;
     color: $link;
@@ -53,30 +75,8 @@ $modalBorderColor: #f3f5fa;
     }
 
     &:last-child {
-      border-bottom: none !important;
-      border-right: none !important;
-    }
-  }
-
-  &-floor-multi {
-    width: 100%;
-    box-sizing: border-box;
-    border-top: 1px solid $modalBorderColor;
-
-    .xrk-modal-button {
-      border-bottom: 1px solid $modalBorderColor;
-    }
-  }
-
-  &-floor-line {
-    width: 100%;
-    box-sizing: border-box;
-    border-top: 1px solid $modalBorderColor;
-    display: flex;
-
-    .xrk-modal-button {
-      flex: 1;
-      border-right: 1px solid $modalBorderColor;
+      border-bottom: none;
+      border-right: none;
     }
   }
 }

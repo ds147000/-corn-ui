@@ -1,5 +1,12 @@
 $prefix: xrk-btn;
 
+@mixin btnBlock {
+  display: flex;
+  width: 100%;
+  flex: 1;
+  padding: 0;
+}
+
 .#{$prefix} {
   display: inline-flex;
   align-items: center;
@@ -43,6 +50,10 @@ $prefix: xrk-btn;
     &.#{$prefix}-auto {
       width: 100px;
     }
+
+    &.#{$prefix}-block {
+      @include btnBlock;
+    }
   }
 
   &-small {
@@ -58,6 +69,10 @@ $prefix: xrk-btn;
 
     &.#{$prefix}-auto {
       width: 120px;
+    }
+
+    &.#{$prefix}-block {
+      @include btnBlock;
     }
   }
 
@@ -76,6 +91,10 @@ $prefix: xrk-btn;
     &.#{$prefix}-auto {
       width: 270px;
     }
+
+    &.#{$prefix}-block {
+      @include btnBlock;
+    }
   }
 
   &-large {
@@ -92,6 +111,10 @@ $prefix: xrk-btn;
 
     &.#{$prefix}-auto {
       width: 418px;
+    }
+
+    &.#{$prefix}-block {
+      @include btnBlock;
     }
   }
 
@@ -110,6 +133,10 @@ $prefix: xrk-btn;
     &.#{$prefix}-auto {
       width: 690px;
     }
+
+    &.#{$prefix}-block {
+      @include btnBlock;
+    }
   }
 
   &-max {
@@ -126,6 +153,10 @@ $prefix: xrk-btn;
 
     &.#{$prefix}-auto {
       width: 690px;
+    }
+
+    &.#{$prefix}-block {
+      @include btnBlock;
     }
   }
 
@@ -242,13 +273,6 @@ $prefix: xrk-btn;
     &.#{$prefix}-disabled {
       opacity: 1;
     }
-  }
-
-  &-block {
-    display: flex !important;
-    width: 100% !important;
-    flex: 1;
-    padding: 0;
   }
 
   &-disabled {
