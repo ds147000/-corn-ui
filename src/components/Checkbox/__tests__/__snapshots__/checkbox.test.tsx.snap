@@ -28,7 +28,7 @@ exports[`Checkbox 基础 1`] = `
 exports[`Checkbox 基础 按钮类型 1`] = `
 <div>
   <div
-    class="xrk-if xrk-ac"
+    class="xrk-if xrk-ac xrk-checkbox-btn"
     data-testid="xrk-checkbox"
   >
     <input
@@ -50,7 +50,7 @@ exports[`Checkbox 基础 按钮类型 1`] = `
 exports[`Checkbox 基础 按钮类型 2`] = `
 <div>
   <div
-    class="xrk-if xrk-ac"
+    class="xrk-if xrk-ac xrk-checkbox-btn"
     data-testid="xrk-checkbox"
   >
     <input

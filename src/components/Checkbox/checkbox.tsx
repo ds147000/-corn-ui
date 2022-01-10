@@ -66,7 +66,7 @@ const CheckBox: React.FC<CheckBoxProps> = ({
 
   const _class = classNames(
     'xrk-if xrk-ac',
-    isDefualtStyle && 'xrk-checkbox',
+    isDefualtStyle ? 'xrk-checkbox' : 'xrk-checkbox-btn',
     isDefualtStyle && disabled && 'xrk-checkbox-disable'
   )
 
