@@ -17,7 +17,7 @@ import { ViewProps } from '../../types/View'
 
 export interface CheckBoxGroupProps extends ViewProps {
   name?: string
-  defaultValue?: string[]
+  defaultValue?: string[] | string
   onChange?(value: string[]): void
   radio?: boolean
 }
@@ -39,8 +39,13 @@ class CheckBoxGroup extends React.Component<CheckBoxGroupProps, CheckBoxContextV
    * 设置表单值
    * @param string
    */
-  setValue = (val: string[] = []): void => {
-    this.setState({ values: [ ...val ] })
+  setValue = (val: string[] | string = []): void => {
+    if (Array.isArray(val)) {
+      this.setState({ values: [ ...val ] })
+      return
+    }
+
+    this.setState({ values: [ val ] })
   }
 
   /** 全选 */
@@ -62,7 +67,7 @@ class CheckBoxGroup extends React.Component<CheckBoxGroupProps, CheckBoxContextV
   componentDidMount(): void {
     this.context.add(this.props.name, this.setValue)
 
-    if (this.props.defaultValue) this.setState({ values: [ ...this.props.defaultValue ] })
+    if (this.props.defaultValue) this.setValue(this.props.defaultValue)
   }
 
   componentWillUnmount(): void {

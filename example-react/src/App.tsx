@@ -220,7 +220,7 @@ function App() {
           </CheckboxGroup>
         </Card>
         <Card>
-          <CheckboxGroup name="shop9" radio >
+          <CheckboxGroup name="shop9" radio defaultValue="2" >
             <Checkbox value="1" type="button" buttonType="error" ghost >单选模式1</Checkbox>
             <Checkbox value="2" type="button" ghost >单选模式2</Checkbox>
             <Checkbox value="3" type="button" ghost >单选模式3</Checkbox>

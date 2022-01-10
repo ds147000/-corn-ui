@@ -32,6 +32,8 @@ export interface SearchProps {
   onBack?(): void
   /** 搜索事件 */
   onSearch?(value: string): void
+  /** 清空事件 */
+  onClear?(): void
 }
 
 const Search: React.FC<SearchProps> = ({
@@ -45,7 +47,8 @@ const Search: React.FC<SearchProps> = ({
   onChange,
   onSearch,
   onBack,
-  onClick
+  onClick,
+  onClear
 }) => {
   const [ isFouce, setIsFouce ] = useState(false)
   const searchForm = useRef<Form>()
@@ -70,6 +73,7 @@ const Search: React.FC<SearchProps> = ({
     searchForm.current?.reset()
     setIsFouce(false)
     onChange?.('')
+    onClear?.()
   }
 
   const _onFouce = useCallback(() => setIsFouce(true), [])

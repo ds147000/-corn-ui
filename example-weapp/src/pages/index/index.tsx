@@ -185,7 +185,7 @@ export default class Index extends Component {
         </CheckboxGroup>
       </Card>
       <Card>
-        <CheckboxGroup radio name="shop2" >
+        <CheckboxGroup radio name="shop2">
           <Checkbox value="1" >单选模式1</Checkbox>
           <Checkbox value="2" >单选模式2</Checkbox>
           <Checkbox value="3" >单选模式3</Checkbox>

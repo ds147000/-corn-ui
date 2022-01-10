@@ -100,6 +100,19 @@ test('获取值 和 默认值', () => {
   expect(ref.current.getValue()).toEqual(['1', '2'])
 })
 
+
+test('获取值 和 默认值 单选模式', () => {
+  const ref = React.createRef<CheckBoxGroup>()
+  render(
+    <CheckBoxGroup radio ref={ref} defaultValue="2" >
+      <Checck value="1">选项1</Checck>
+      <Checck value="2">选项2</Checck>
+    </CheckBoxGroup>
+  )
+
+  expect(ref.current.getValue()).toEqual(["2"])
+})
+
 test('操作后获取值', async () => {
   const ref = React.createRef<CheckBoxGroup>()
   const screen = render(

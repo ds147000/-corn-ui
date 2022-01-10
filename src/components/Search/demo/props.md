@@ -26,5 +26,6 @@ type: 表单类型
 | onChange | 输入发生改变事件 | `value: string` |
 | onSearch | 提交搜索事件 | `value: string` |
 | onBack | 点击返回事件 | `null` |
+| onClear | 点击清空事件 | `null` |
 
 
