@@ -155,7 +155,7 @@ export default class Index extends Component {
           <Card></Card>
           <Card></Card>
         </ScrollView>
-        <Search openInput value={this.state.value} onChange={(value) => this.setState({ value })} onSearch={console.log} />
+        <Search openInput focus value={this.state.value} onChange={(value) => this.setState({ value })} onSearch={console.log} />
 
         <Card>
           <Upload count={2} />

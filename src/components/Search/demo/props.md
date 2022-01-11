@@ -18,6 +18,7 @@ type: 表单类型
 | openInput | 否 | 是否直接可输入 | `boolean` | `false` |
 | placeholder | 否 | 提示占位语, 可以字符串和数组字符串。如果是传入字符串数组将启用滚动提示语动画 | `string` `string[]` | `middle` |
 | value | 否 | 搜索表单值,建议不要传，让程序自控制 | `string` |  |
+| focus | 否 | 是否自动聚焦 | `boolean` | `false` |
 
 # Event
 | 事件名称 | 说明 | 参数 |
@@ -27,5 +28,8 @@ type: 表单类型
 | onSearch | 提交搜索事件 | `value: string` |
 | onBack | 点击返回事件 | `null` |
 | onClear | 点击清空事件 | `null` |
+| onFocus | 聚焦事件 | `null` |
+| onBlur | 离焦事件 | `null` |
+
 
 

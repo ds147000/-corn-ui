@@ -1,4 +1,4 @@
-import React, { useCallback, useMemo, useRef, useState } from 'react'
+import React, { useMemo, useRef, useState } from 'react'
 import { View } from '@tarojs/components'
 import classNames from 'classnames'
 import Icon from '../Icon'
@@ -24,6 +24,8 @@ export interface SearchProps {
   placeholder?: string | string[]
   /** 搜索值 */
   value?: string
+  /** 是否自动聚焦 */
+  focus?: boolean
   /** 点击输入框事件 */
   onClick?(event: ITouchEvent): void
   /** 输入发生改变事件 */
@@ -34,6 +36,10 @@ export interface SearchProps {
   onSearch?(value: string): void
   /** 清空事件 */
   onClear?(): void
+  /** 聚焦事件 */
+  onFocus?(): void
+  /** 离焦事件 */
+  onBlur?(): void
 }
 
 const Search: React.FC<SearchProps> = ({
@@ -48,7 +54,10 @@ const Search: React.FC<SearchProps> = ({
   onSearch,
   onBack,
   onClick,
-  onClear
+  onClear,
+  onFocus,
+  onBlur,
+  focus
 }) => {
   const [ isFouce, setIsFouce ] = useState(false)
   const searchForm = useRef<Form>()
@@ -76,10 +85,14 @@ const Search: React.FC<SearchProps> = ({
     onClear?.()
   }
 
-  const _onFouce = useCallback(() => setIsFouce(true), [])
-  const _onBlur = useCallback((event: BaseEventOrig<InputType.inputValueEventDetail>) => {
+  const _onFocus = (): void => {
+    setIsFouce(true)
+    onFocus?.()
+  }
+  const _onBlur = (event: BaseEventOrig<InputType.inputValueEventDetail>): void => {
     if (!event.detail.value) setIsFouce(false)
-  }, [])
+    onBlur?.()
+  }
 
   const isShowClear = (allowClear && valueLen > 0) || (allowClear && isFouce)
 
@@ -102,13 +115,14 @@ const Search: React.FC<SearchProps> = ({
               className="xrk-search-input"
               value={value}
               onInput={_onInput}
-              onFocus={_onFouce}
+              onFocus={_onFocus}
               onBlur={_onBlur}
               // #if _APP === 'weapp'
               onConfirm={(): void => searchForm.current?.submit()}
               // #endif
               autoComplete="off"
               confirmType="search"
+              focus={focus}
             />
           ) : (
             <View className="xrk-search-input" />
