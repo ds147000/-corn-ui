@@ -41,6 +41,8 @@ export const Container: React.FC<ContainerProps> = ({ onDestory, onShow, onHide 
     return remove
   }, [ onShow ])
 
+
+
   return (
     <View className={classNames('xrk-toast', isMask && 'xrk-toast-actions')}>
       {toastList.map((item) => (

@@ -23,7 +23,7 @@ class HostManager {
 
   async add(Comps: React.FC<{ onDestory?(): void }>, props: Record<string, unknown> = {}): Promise<void> {
     await this._init()
-    const id = this.id + 1
+    const id = this.id += 1
     const onDestory = (): void => {
       this.remove(id)
     }

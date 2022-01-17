@@ -360,7 +360,9 @@ function App() {
         <Button onClick={() => setMshow(true)} type="pop">自定义Modal</Button>
         <Button onClick={() => {
           showModal({ title: 'API 唤起 Modal' })
-            .then(console.log)
+            .then(() => {
+              Toast.show('111111')
+            })
             .catch(console.error)
         }}>
           API 唤起 Modal

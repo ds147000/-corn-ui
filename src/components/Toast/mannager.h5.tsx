@@ -14,7 +14,11 @@ class ToastManager {
 
     // 因为是桢调用，所有需要延迟
     return new Promise((res) => {
-      Protal.add(Container, { onShow: res, onHide: () => this.status = false })
+      Protal.add(Container, {
+        onShow: res,
+        onHide: () => {
+          this.status = false
+        } })
     })
   }
 
