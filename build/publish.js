@@ -74,10 +74,10 @@ IconsPackage.dependencies = {}
 writeFile(IconsPackagePath, Prettier.format(JSON.stringify(IconsPackage), PerttierConfig))
 
 shell.cd(resolveApp('package-taro'))
-shell.exec('npm pub --registry=https://nexus3.xrkmm.com/repository/npm-hosted/')
+shell.exec('npm pub --registry=https://packages.aliyun.com/616f9574ea46a7508ba92f5f/npm/npm-registry/')
 
 shell.cd(resolveApp('package-h5'))
-shell.exec('npm pub --registry=https://nexus3.xrkmm.com/repository/npm-hosted/')
+shell.exec('npm pub --registry=https://packages.aliyun.com/616f9574ea46a7508ba92f5f/npm/npm-registry/')
 
 shell.cd(resolveApp('package-icons'))
-shell.exec('npm pub --registry=https://nexus3.xrkmm.com/repository/npm-hosted/')
+shell.exec('npm pub --registry=https://packages.aliyun.com/616f9574ea46a7508ba92f5f/npm/npm-registry/')
