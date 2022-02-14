@@ -3,7 +3,7 @@ import { View } from '@tarojs/components'
 
 export interface ActionSheetItemProps {
   align?: 'left' | 'center' | 'right'
-  text?: string
+  text?: React.ReactNode | string
   suffix?: React.ReactNode | string
   onClick?(): void
 }

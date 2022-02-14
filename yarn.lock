@@ -1530,10 +1530,10 @@
     "@babel/runtime" "^7.14.5"
     "@tarojs/runtime" "3.4.1"
 
-"@tarojs/components-react@^10.2.39":
-  version "10.3.40"
-  resolved "https://packages.aliyun.com/616f9574ea46a7508ba92f5f/npm/npm-registry/@tarojs/components-react/-/@tarojs/components-react-10.3.40.tgz#71a0b56a1dd0b7b6bf81bbb7f7df7df2c0605fbd"
-  integrity sha512-sW88u9Xfw0fF/crea2YR/aZEpQmAa4xpBJDtTfCRXIPC4g9P6iLAL9TzZyxSbsJgLiQtT43zyxNIu4YfiQ1hPA==
+"@tarojs/components-react@^10.2.41":
+  version "10.3.41"
+  resolved "https://packages.aliyun.com/616f9574ea46a7508ba92f5f/npm/npm-registry/@tarojs/components-react/-/@tarojs/components-react-10.3.41.tgz#e204616984376ff1f6bfa1307563acd7fe944815"
+  integrity sha512-Lf7XFK1TeE3aVGSP7vXzosOhMxTKe+MBiwj22e8hGiHI+kjIieEbzukQb89oTh0230NfPBEtdzzLLoAcxLfMXA==
   dependencies:
     "@babel/runtime" "^7.13.10"
     "@tarojs/taro" "3.2.6"
