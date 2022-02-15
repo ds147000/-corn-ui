@@ -96,7 +96,7 @@ styles
 <br />
 <br />
 
-## 🔨 使用条件代码
+## 🔨 使用条件编译代码
 因为UI库会同时编译成`Taro`端、`React`端两端代码，所以部分API需要做环境兼容处理，我们可以通过注释方式来做条件编译。
 
 ```js
@@ -118,7 +118,7 @@ styles
 
 ## PR标准
  - 🚗 单元测试覆盖率必须 100%
- - 🕹 必须满足`eslint`，`stylelint`检测
+ - 🕹 必须满足`eslint`，`stylelint`检测，`lint`规则来自于 [eslint-plugin-xrkmm](https://codeup.aliyun.com/xrkmm/xrk-front/xrkmm/tree/master/packages/eslint) 和 [stylelint-plugin-xrkmm](https://codeup.aliyun.com/xrkmm/xrk-front/xrkmm/tree/master/packages/stylelint)
  - 🏍 所有组件必须存在`md使用说明文件`和`props`注释说明。
 
 <br />
