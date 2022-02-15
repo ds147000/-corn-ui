@@ -76,6 +76,10 @@ export default {
       babelHelpers: 'runtime',
       plugins: [
         '@babel/plugin-transform-runtime',
+        /**
+        * 使用 babel-plugin-transform-imports 插件修改 import @tarojs/components 的引入为 @tarojs/components-react
+        * 来降低React端组件包的体积，因为 @tarojs/components 会把 taro 的其他依赖打包到组件内，导致体积非常大
+        */
         [
           'transform-imports', {
             '@tarojs/components': {

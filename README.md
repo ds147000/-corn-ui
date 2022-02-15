@@ -82,6 +82,13 @@ const App = () => (
 )
 ```
 
+## 使用375单位规范的UI组件
+```css
+/** @import '~@xrkmm/ui-taro/styles/index'; */
+/** 替换引入 */
+@import '~@xrkmm/ui-taro/styles-375/index'
+```
+
 
 ### 🌈 定制主题和按需加载样式
 
