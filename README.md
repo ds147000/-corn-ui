@@ -37,15 +37,23 @@
 | IE11, Edge | last 2 versions | last 2 versions | last 2 versions | last 2 versions |
 
 
-## 🔨 Taro使用示例
+## 🔨 Taro项目使用示例
+
+安装依赖
 
 ```bash
-yarn add @xrkmm/ui-taro
+yarn add @xrkmm/ui-taro @xrkmm/icons
 ```
 
+再入口scss文件中，引用样式
+```css
+@import '~@xrkmm/ui-taro/styles/index';
+@import '~@xrkmm/icons/style';
+```
+
+使用组件
 ```jsx
 import { Button } from '@xrkmm/ui-taro'
-import '@xrkmm/ui-taro/dist/styles/index.css';
 
 const App = () => (
   <Button />
@@ -53,13 +61,17 @@ const App = () => (
 ```
 
 <br />
+<br />
+<br />
 
-## 🔨 单纯React项目中使用示例
+## 🔨 React项目中使用示例
 
+安装依赖
 ```bash
-yarn add @xrkmm/ui-h5
+yarn add @xrkmm/ui-h5 @xrkmm/icons
 ```
 
+使用组件
 ```jsx
 import { Button } from '@xrkmm/ui-h5'
 import '@xrkmm/ui-h5/dist/styles/base.css'
@@ -73,27 +85,14 @@ const App = () => (
 
 ### 🌈 定制主题和按需加载样式
 
-参考 [定制主题](/customize) 文档。
-
-
-
-## 🔗 链接
+参考 [定制主题](http://ui.mamakt.cn/basis/Customize) 文档。
 
 
 
 ## 🤝 参与共建 [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat-square)](http://makeapullrequest.com)
 
-请参考[贡献指南](/Publish.md).
+请参考[贡献指南](./Publish.md).
 
-## 在线文档CI部署
-
-构建文档
-```bash
-yarn build:h5
-yarn pub:doc
-```
-
-文档站点构建结果
-```tsx
-docs/build
-```
+## 🔗 案例链接
+[向日葵妈妈](https://m.xrkmm.com/)
+向日葵妈妈学院plus 小程序

@@ -19,7 +19,7 @@ const Page: React.FC = () => {
 <li>配置<code><span class="hljs-attribute">webpack</span></code></li>
 </ol>
 <pre><code class="hljs language-js">    {
-      <span class="hljs-attr">loader</span>: <span class="hljs-built_in">require</span>.resolve(<span class="hljs-string">&#x27;postcss-loader&#x27;</span>),
+      <span class="hljs-attr">loader</span>: <span class="hljs-built_in">require</span>.<span class="hljs-title function_">resolve</span>(<span class="hljs-string">&#x27;postcss-loader&#x27;</span>),
       <span class="hljs-attr">options</span>: {
         <span class="hljs-attr">ident</span>: <span class="hljs-string">&#x27;postcss&#x27;</span>,
         <span class="hljs-attr">plugins</span>: <span class="hljs-function">() =&gt;</span> [

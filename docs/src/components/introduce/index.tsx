@@ -45,6 +45,12 @@ const Page: React.FC = () => {
 </tr>
 </tbody>
 </table>
+<h2>🤝 参与共建 <a href="http://makeapullrequest.com"><img src="https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat-square" alt="PRs Welcome"></a></h2>
+<p>请参考<a href="/basis/Publish">贡献指南</a>.</p>
+<h2>🔗 案例链接</h2>
+<p><a href="https://m.xrkmm.com/">向日葵妈妈</a>
+<br />
+向日葵妈妈学院plus 小程序</p>
 `,
       }}
     />
