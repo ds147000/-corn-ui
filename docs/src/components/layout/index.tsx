@@ -55,6 +55,17 @@ const View: React.FC = ({ children }) => {
               ))}
             </Menu.ItemGroup>
             <Menu.Divider />
+            <Menu.ItemGroup title="其他">
+              {OtherRoutes.map((item) => (
+                <Menu.Item
+                  key={item.path as string}
+                  onClick={() => onClick(item.path as string)}
+                >
+                  {item.title}
+                </Menu.Item>
+              ))}
+            </Menu.ItemGroup>
+            <Menu.Divider />
             {Object.keys(ShowCompsRoutes).map((key) => (
               <Menu.ItemGroup title={key + '组件'} key={key}>
                 {ShowCompsRoutes[key].map((item) => (
@@ -67,17 +78,7 @@ const View: React.FC = ({ children }) => {
                 ))}
               </Menu.ItemGroup>
             ))}
-            <Menu.ItemGroup title="其他">
-              <Menu.Divider />
-              {OtherRoutes.map((item) => (
-                <Menu.Item
-                  key={item.path as string}
-                  onClick={() => onClick(item.path as string)}
-                >
-                  {item.title}
-                </Menu.Item>
-              ))}
-            </Menu.ItemGroup>
+
           </Menu>
         </Sider>
 

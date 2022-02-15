@@ -75,7 +75,7 @@ npm run pub
 <h2>📖 组件开发规范</h2>
 <ul>
 <li>每个文件中只能存在一个组件（包括状态和无状态）</li>
-<li>组件目录必须存在<code><span class="hljs-attribute">demo</span></code>文件夹，存放组件说明的<code><span class="hljs-built_in">md</span></code>文件。<a href="./md">组件md文件编写规范</a>。用于生产UI在线说明文档。</li>
+<li>组件目录必须存在<code><span class="hljs-attribute">demo</span></code>文件夹，存放组件说明的<code><span class="hljs-built_in">md</span></code>文件。<a href="./COMPONENT.md">组件md文件编写规范</a>。用于生产UI在线说明文档。</li>
 </ul>
 <pre><code class="hljs language-tsx"><span class="hljs-comment">// 组件目录说明</span>
 <span class="hljs-title class_">Card</span>

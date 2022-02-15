@@ -8,7 +8,7 @@ const Page: React.FC = () => {
 <p>必须是英文开头，小驼峰。使用markdown语法</p>
 <h3>系统命名</h3>
 <ul>
-<li><a href="http://props.md">props.md</a> 组件的属性说明文件，如果组件存在演示例子，<a href="http://props.md">props.md</a> 内容中需要使用 <code><span class="hljs-section">&lt;demo/&gt;</span></code>插入演示内容。</li>
+<li><a href="http://props.md">props.md</a> 组件的属性说明文件，如果组件存在演示例子，在 <a href="http://props.md">props.md</a> 内容中需要使用 <code><span class="hljs-section">&lt;demo/&gt;</span></code>插入演示内容。</li>
 </ul>
 <h3>例子</h3>
 <pre><code class="hljs language-tsx"><span class="hljs-comment">// 目录</span>
