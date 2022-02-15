@@ -73,11 +73,12 @@ IconsPackage.dependencies = {}
 // 写入package
 writeFile(IconsPackagePath, Prettier.format(JSON.stringify(IconsPackage), PerttierConfig))
 
+// 发布
 shell.cd(resolveApp('package-taro'))
-shell.exec('npm pub --registry=https://packages.aliyun.com/616f9574ea46a7508ba92f5f/npm/npm-registry/')
+shell.exec('npm pub')
 
 shell.cd(resolveApp('package-h5'))
-shell.exec('npm pub --registry=https://packages.aliyun.com/616f9574ea46a7508ba92f5f/npm/npm-registry/')
+shell.exec('npm pub')
 
 shell.cd(resolveApp('package-icons'))
-shell.exec('npm pub --registry=https://packages.aliyun.com/616f9574ea46a7508ba92f5f/npm/npm-registry/')
+shell.exec('npm pub')
