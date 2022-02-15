@@ -56,11 +56,16 @@ import './custom.scss'
 
 ```scss
 // variables.scss
-// 页面边距
+// 按钮边距
 $btnMargin: 7.5px;
 
+// 公共边距
+$pad: 30px;
+
 // 品牌色
-$primary: #000;
+$primary: #ffe400;
+
+$primaryBack: #fffbdd;
 
 // 橙色标签底色
 $warn: #fff0e5;
@@ -73,8 +78,17 @@ $white: #fff;
 // 背景色
 $bg: #f9fafd;
 
+// 默认色
+$defualt: #f6f7fb;
+
 // 禁用色
 $disable: #dde0e4;
+
+// 紧急色
+$urgent: #ff4f4f;
+
+// 紧急背景颜色
+$urgentBack: #ffeff1;
 
 // 占位图图标色值（灰底）
 $placeholder: #ebeef6;
@@ -85,8 +99,8 @@ $link: #00a9ff;
 // 提醒我按钮底色
 $pop: #00ce73;
 
-// 背景颜色
-$bg: #f6f7fb;
+// 倒计时填充颜色
+$timeBg: #fa4545;
 
 // 一级文字色值，重要基础icon色值
 $text1: #242629;
@@ -113,12 +127,46 @@ $toastBg: rgba(0 , 0 , 0 , 0.7);
 $mask: rgba(0 , 0 , 0 , 0.7);
 
 // 层级
-$portalIndex: 900;
-$maskIndex: 900;
-$SlidInIndex: 901;
+$portalIndex: 700;
+$maskIndex: 700;
+$SlidInIndex: 700;
+$ToastIndex: 9999999999999999;
+$AffixIndex: 100;
 
 // 角度
-$radius: 15px;
+$radius: 30px;
+
+// cell 的高度
+$cellHeight: 74px;
+
+// cell label的宽度
+$cellWidth: 144px;
+
+// cell 的字体大小
+$cellSize: 26px;
+
+// cell 的箭头颜色
+$cellIconColor: #99a3ad;
+
+// 活动标签颜色
+$activity: linear-gradient(270deg , #fe142a 0% , #fd2f5e 100%);
+
+// textarea可输入区域最小高度
+$textareaMinHeight: 286px;
+
+// textarea字体大小
+$textareaFontSize: 28px;
+$textareaLineHeight: 42px;
+
+// 搜索颜色值
+$searchDefualtColor: #eaedf6;
+
+// 搜索高亮颜色值
+$searchLightColor: #f3f5fa;
+
+// 上传按钮背景颜色
+$uploadColor: #f3f5fa;
+
 ```
 
 ## 按需引入样式
