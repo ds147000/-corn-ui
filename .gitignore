@@ -2,6 +2,7 @@ docs/src/views/*
 node_modules/
 package-lock.json
 yarn-error.log
+yarn.lock
 package-h5/
 package-taro/
 package-icons/
