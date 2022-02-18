@@ -29,8 +29,6 @@ yarn buidl:all
 
 一键发布组件库
 ```bash
-yarn pub
-# or
 npm run pub
 ```
 

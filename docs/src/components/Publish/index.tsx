@@ -91,7 +91,7 @@ styles
 </code></pre>
 <br />
 <br />
-<h2>🔨 使用条件代码</h2>
+<h2>🔨 使用条件编译代码</h2>
 <p>因为UI库会同时编译成<code><span class="hljs-attribute">Taro</span></code>端、<code><span class="hljs-attribute">React</span></code>端两端代码，所以部分API需要做环境兼容处理，我们可以通过注释方式来做条件编译。</p>
 <pre><code class="hljs language-js">  <span class="hljs-comment">// #if _APP === &#x27;weapp&#x27;</span>
   <span class="hljs-variable language_">console</span>.<span class="hljs-title function_">log</span>(<span class="hljs-string">&#x27;只会打包在Taro端代码包中&#x27;</span>)
@@ -108,7 +108,7 @@ styles
 <h2>PR标准</h2>
 <ul>
 <li>🚗 单元测试覆盖率必须 100%</li>
-<li>🕹 必须满足<code><span class="hljs-attribute">eslint</span></code>，<code><span class="hljs-attribute">stylelint</span></code>检测</li>
+<li>🕹 必须满足<code><span class="hljs-attribute">eslint</span></code>，<code><span class="hljs-attribute">stylelint</span></code>检测，<code><span class="hljs-attribute">lint</span></code>规则来自于 <a href="https://codeup.aliyun.com/xrkmm/xrk-front/xrkmm/tree/master/packages/eslint">eslint-plugin-xrkmm</a> 和 <a href="https://codeup.aliyun.com/xrkmm/xrk-front/xrkmm/tree/master/packages/stylelint">stylelint-plugin-xrkmm</a></li>
 <li>🏍 所有组件必须存在<code><span class="hljs-built_in">md</span>使用说明文件</code>和<code><span class="hljs-attribute">props</span></code>注释说明。</li>
 </ul>
 <br />

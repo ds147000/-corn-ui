@@ -34,6 +34,11 @@ const Page: React.FC = () => {
   <span class="language-xml"><span class="hljs-tag">&lt;<span class="hljs-name">Button</span> /&gt;</span></span>
 )
 </code></pre>
+<h2>使用375单位规范的UI组件</h2>
+<pre><code class="hljs language-css"><span class="hljs-comment">/** @import &#x27;~@xrkmm/ui-taro/styles/index&#x27;; */</span>
+<span class="hljs-comment">/** 替换引入 */</span>
+<span class="hljs-keyword">@import</span> <span class="hljs-string">&#x27;~@xrkmm/ui-taro/styles-375/index&#x27;</span>
+</code></pre>
 `,
       }}
     />
