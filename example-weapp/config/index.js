@@ -30,6 +30,7 @@ const config = {
   alias: {
     'react': resolve(__dirname, '../node_modules/react'),
     '@tarojs/taro': resolve(__dirname, '../node_modules/@tarojs/taro'),
+    '@tarojs/components': resolve(__dirname, '../node_modules/@tarojs/components'),
     '@xrkmm/ui-taro': resolve(__dirname, '../../package-taro')
   },
   framework: 'react',
