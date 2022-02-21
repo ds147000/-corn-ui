@@ -9,7 +9,7 @@ yarn dev:h5
 
 Taro预览开发模式
 ```bash
-yarn dev:taro
+yarn dev:weapp
 ```
 
 编译Icon库
