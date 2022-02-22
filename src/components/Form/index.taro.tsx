@@ -79,7 +79,7 @@ class Form extends React.Component<FormProps> implements FormClass {
     this.setMap.delete(name)
   }
 
-  render(): JSX.Element {
+  render(): React.ReactNode {
     return (
       <TaroForm
         onSubmit={this._onSubmit}

@@ -1,5 +1,5 @@
 import React, { useMemo, useRef, useState } from 'react'
-import { View } from '@tarojs/components'
+import { Block, View } from '@tarojs/components'
 import classNames from 'classnames'
 import Icon from '../Icon'
 import Form from '../Form'
@@ -107,7 +107,6 @@ const Search: React.FC<SearchProps> = ({
           onClick={onClick}
         >
           <Icon name="search" className="xrk-search-icon" />
-          {!isFouce && valueLen === 0 && <SearchPlaceholder data={placeholder} />}
 
           {openInput ? (
             <Input
@@ -128,7 +127,17 @@ const Search: React.FC<SearchProps> = ({
             <View className="xrk-search-input" />
           )}
 
-          {isShowClear && <Icon name="clear" className="xrk-search-clear xrk-f xrk-ac xrk-jc" onClick={_onClear} />}
+          <Block>
+            {!isFouce && valueLen === 0 && <SearchPlaceholder data={placeholder} />}
+          </Block>
+
+          <Block>
+            {isShowClear && (
+              <View className="xrk-search-clear xrk-f xrk-ac xrk-jc" onClick={_onClear}>
+                <Icon name="clear" />
+              </View>
+            )}
+          </Block>
 
           <Button
             size="middle"
@@ -139,6 +148,7 @@ const Search: React.FC<SearchProps> = ({
             搜索
           </Button>
         </View>
+
         {Boolean(suffix) && <View className="xrk-search-suffix xrk-f xkr-ac" >{suffix}</View>}
       </View>
     </Form>

@@ -16,6 +16,8 @@ exports[`Search 基础快照 1`] = `
         <div
           class="xrk-search-input"
         />
+        <div />
+        <div />
         <button
           class="xrk-btn xrk-if xrk-ac xrk-jc xrk-btn-middle xrk-btn-primary xrk-search-btn"
           data-testid="search-btn"
@@ -45,6 +47,8 @@ exports[`Search 基础快照 light 1`] = `
         <div
           class="xrk-search-input"
         />
+        <div />
+        <div />
         <button
           class="xrk-btn xrk-if xrk-ac xrk-jc xrk-btn-middle xrk-btn-primary xrk-search-btn"
           data-testid="search-btn"
@@ -74,6 +78,8 @@ exports[`Search 插入尾部内容 1`] = `
         <div
           class="xrk-search-input"
         />
+        <div />
+        <div />
         <button
           class="xrk-btn xrk-if xrk-ac xrk-jc xrk-btn-middle xrk-btn-primary xrk-search-btn"
           data-testid="search-btn"
@@ -107,29 +113,6 @@ exports[`Search 设置提示语列表 1`] = `
         <i
           class="xrk-search-icon xrk-icon xrk-i-search"
         />
-        <div
-          class="xrk-search-placeholder"
-        >
-          <div
-            class="xrk-search-placeholder-list"
-          >
-            <div
-              class="xrk-search-placeholder-item xrk-f xrk-ac"
-            >
-              常青藤爸爸
-            </div>
-            <div
-              class="xrk-search-placeholder-item xrk-f xrk-ac"
-            >
-              向日葵妈妈
-            </div>
-            <div
-              class="xrk-search-placeholder-item xrk-f xrk-ac"
-            >
-              请输入关键字搜索
-            </div>
-          </div>
-        </div>
         <input
           autocomplete="off"
           class="weui-input xrk-search-input xrk-input"
@@ -139,6 +122,32 @@ exports[`Search 设置提示语列表 1`] = `
           type="search"
           value=""
         />
+        <div>
+          <div
+            class="xrk-search-placeholder"
+          >
+            <div
+              class="xrk-search-placeholder-list"
+            >
+              <div
+                class="xrk-search-placeholder-item xrk-f xrk-ac"
+              >
+                常青藤爸爸
+              </div>
+              <div
+                class="xrk-search-placeholder-item xrk-f xrk-ac"
+              >
+                向日葵妈妈
+              </div>
+              <div
+                class="xrk-search-placeholder-item xrk-f xrk-ac"
+              >
+                请输入关键字搜索
+              </div>
+            </div>
+          </div>
+        </div>
+        <div />
         <button
           class="xrk-btn xrk-if xrk-ac xrk-jc xrk-btn-middle xrk-btn-primary xrk-search-btn"
           data-testid="search-btn"
