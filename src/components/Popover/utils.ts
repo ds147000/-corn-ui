@@ -47,10 +47,13 @@ export async function getElementRect(el: any): Promise<ElementRect> {
     query.select(`#${el.uid}`).boundingClientRect()
     query.selectViewport().scrollOffset()
     query.exec((response) => {
+      const elRect = response[0] || {}
+      const top = elRect.top || 0
+      const left = elRect.left || 0
       res({
-        ...response[0],
-        offsetTop: response[0].top + response[1].scrollTop,
-        offsetLeft: response[0].left + response[1].scrollLeft
+        ...elRect,
+        offsetTop: top + response[1].scrollTop,
+        offsetLeft: left + response[1].scrollLeft
       })
     })
   })
