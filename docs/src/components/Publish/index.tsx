@@ -9,7 +9,7 @@ const Page: React.FC = () => {
 <pre><code class="hljs language-bash">yarn dev:h5
 </code></pre>
 <p>Taro预览开发模式</p>
-<pre><code class="hljs language-bash">yarn dev:taro
+<pre><code class="hljs language-bash">yarn dev:weapp
 </code></pre>
 <p>编译Icon库</p>
 <pre><code class="hljs language-bash">yarn dev:icon
@@ -21,9 +21,7 @@ const Page: React.FC = () => {
 <pre><code class="hljs language-bash">yarn buidl:all
 </code></pre>
 <p>一键发布组件库</p>
-<pre><code class="hljs language-bash">yarn pub
-<span class="hljs-comment"># or</span>
-npm run pub
+<pre><code class="hljs language-bash">npm run pub
 </code></pre>
 <br />
 <br />

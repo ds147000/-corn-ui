@@ -40,7 +40,7 @@ demo
 
 \\\`\`\`<span class="language-javascript">tsx
 <span class="hljs-keyword">import</span> { useState } <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;react&#x27;</span>
-<span class="hljs-keyword">import</span> { <span class="hljs-title class_">Card</span> } <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;corn/ui&#x27;</span>
+<span class="hljs-keyword">import</span> { <span class="hljs-title class_">Card</span> } <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;corn-h5&#x27;</span>
 
 <span class="hljs-keyword">const</span> <span class="hljs-title class_">CardDemo</span>: <span class="hljs-title class_">React</span>.<span class="hljs-property">FC</span> = <span class="hljs-function">() =&gt;</span> {
   <span class="hljs-keyword">const</span> [title, setTitle] = <span class="hljs-title function_">useState</span>(<span class="hljs-string">&#x27;我是卡片&#x27;</span>)
