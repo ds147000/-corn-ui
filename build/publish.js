@@ -30,7 +30,7 @@ commonPackage.scripts = {}
 
 // 微信包配置
 const WeappPackage = JSON.parse(JSON.stringify(commonPackage))
-WeappPackage.name += '-taro'
+WeappPackage.name = 'corn-taro'
 WeappPackage.main = 'index.js'
 WeappPackage.module = 'index.esm.js'
 WeappPackage.private = false
@@ -44,7 +44,7 @@ writeFile(WeappPackagePath, Prettier.format(JSON.stringify(WeappPackage), Pertti
 
 // H5包配置
 const H5Package = JSON.parse(JSON.stringify(commonPackage))
-H5Package.name += '-h5'
+H5Package.name = 'corn-h5'
 H5Package.main = 'index.js'
 H5Package.module = 'index.esm.js'
 H5Package.private = false
