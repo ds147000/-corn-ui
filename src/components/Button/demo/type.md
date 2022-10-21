@@ -5,20 +5,20 @@ sort: 1
 ### 7种状态
 
 ```tsx
-import { Button } from '@xrkmm/ui-h5'
+import { Button } from 'corn-h5'
 
 const Demo: React.FC = () => {
 
   return (
     <>
-      <Button type="primary">向日葵妈妈UI</Button>
-      <Button type="warn">向日葵妈妈UI</Button>
-      <Button type="error">向日葵妈妈UI</Button>
-      <Button type="link">向日葵妈妈UI</Button>
-      <Button type="pop">向日葵妈妈UI</Button>
-      <Button type="light">向日葵妈妈UI</Button>
-      <Button type="default">向日葵妈妈UI</Button>
-      <Button type="stop">向日葵妈妈UI</Button>
+      <Button type="primary">@CornUI</Button>
+      <Button type="warn">@CornUI</Button>
+      <Button type="error">@CornUI</Button>
+      <Button type="link">@CornUI</Button>
+      <Button type="pop">@CornUI</Button>
+      <Button type="light">@CornUI</Button>
+      <Button type="default">@CornUI</Button>
+      <Button type="stop">@CornUI</Button>
     </>
   )
 }

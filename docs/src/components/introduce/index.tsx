@@ -8,7 +8,7 @@ const Page: React.FC = () => {
     <img width="200" src="https://assets.xrkmm.cn/u/3202028/f7ae6e50-7336-4233-aa44-ee9f2d2e83dc.png">
   </a>
 </p>
-<h1 align="center">向日葵妈妈 UI</h1>
+<h1 align="center">@Corn UI</h1>
 <div align="center">
 <p>一套企业级 UI 和 支持React、Taro小程序的组件库。</p>
 </div>
@@ -48,9 +48,9 @@ const Page: React.FC = () => {
 <h2>🤝 参与共建 <a href="http://makeapullrequest.com"><img src="https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat-square" alt="PRs Welcome"></a></h2>
 <p>请参考<a href="/basis/Publish">贡献指南</a>.</p>
 <h2>🔗 案例链接</h2>
-<p><a href="https://m.xrkmm.com/">向日葵妈妈</a>
+<p><a href="https://m.xrkmm.com/">@Corn</a>
 <br />
-向日葵妈妈学院plus 小程序</p>
+@Corn学院plus 小程序</p>
 `,
       }}
     />

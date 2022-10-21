@@ -59,7 +59,7 @@ writeFile(H5PackagePath, Prettier.format(JSON.stringify(H5Package), PerttierConf
 
 // 图标包配置
 const IconsPackage = JSON.parse(JSON.stringify(commonPackage))
-IconsPackage.name = '@xrkmm/icons'
+IconsPackage.name = 'corn-cons'
 IconsPackage.main = 'style.css'
 IconsPackage.private = false
 IconsPackage.files = ['fonts', 'style.css']

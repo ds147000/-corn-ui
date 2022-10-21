@@ -5,7 +5,7 @@ sort: 2
 ### 两种大小
 
 ```tsx
-import { Tag } from '@xrkmm/ui-h5'
+import { Tag } from 'corn-h5'
 
 const Demo: React.FC = () => {
 

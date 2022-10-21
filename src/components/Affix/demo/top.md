@@ -5,7 +5,7 @@ sort: 1
 ### 代码演示
 
 ```tsx
-import { Affix, Button } from '@xrkmm/ui-h5'
+import { Affix, Button } from 'corn-h5'
 
 const Demo: React.FC = () => {
 

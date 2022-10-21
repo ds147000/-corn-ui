@@ -4,7 +4,7 @@ sort: 3
 ### 具有图标的toast
 
 ```tsx
-import { Button, Toast } from '@xrkmm/ui-h5'
+import { Button, Toast } from 'corn-h5'
 
 const Demo: React.FC = () => {
   const onClick = () => {

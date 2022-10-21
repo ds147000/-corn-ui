@@ -5,7 +5,7 @@ sort: 2
 ### 替换跳转
 
 ```tsx
-import { Link } from '@xrkmm/ui-h5'
+import { Link } from 'corn-h5'
 
 const Demo: React.FC = () => {
 

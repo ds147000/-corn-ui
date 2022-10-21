@@ -5,7 +5,7 @@ sort: 4
 ### 单元列表 Cell.List
 
 ```tsx
-import { Cell, Toast } from "@xrkmm/ui-h5";
+import { Cell, Toast } from "corn-h5";
 
 const Demo: React.FC = () => {
   return (

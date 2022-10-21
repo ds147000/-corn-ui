@@ -5,7 +5,7 @@ sort: 1
 ### 基本使用
 
 ```tsx
-import { Tooltip, Button, Toast } from "@xrkmm/ui-h5";
+import { Tooltip, Button, Toast } from "corn-h5";
 
 const Demo: React.FC = () => {
   return (

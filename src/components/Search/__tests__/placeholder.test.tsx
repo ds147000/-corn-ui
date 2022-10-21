@@ -26,12 +26,12 @@ test('SearchPlaceholder more', async () => {
     '输入关键词',
     '小熊宝宝',
     '常青藤爸爸',
-    '向日葵妈妈'
+    '@Corn'
   ]} />)
   screen.getByText('输入关键词')
   screen.getByText('小熊宝宝')
   screen.getByText('常青藤爸爸')
-  screen.getByText('向日葵妈妈')
+  screen.getByText('@Corn')
   await waitFor(() => expect(screen.container).toMatchSnapshot())
 })
 
@@ -42,12 +42,12 @@ test('SearchPlaceholder more run time', async () => {
     '输入关键词',
     '小熊宝宝',
     '常青藤爸爸',
-    '向日葵妈妈'
+    '@Corn'
   ]} />)
   screen.getByText('输入关键词')
   screen.getByText('小熊宝宝')
   screen.getByText('常青藤爸爸')
-  screen.getByText('向日葵妈妈')
+  screen.getByText('@Corn')
   act(() => {
     jest.runOnlyPendingTimers()
   })
@@ -98,12 +98,12 @@ test('SearchPlaceholder more unmount', async () => {
     '输入关键词',
     '小熊宝宝',
     '常青藤爸爸',
-    '向日葵妈妈'
+    '@Corn'
   ]} />)
   screen.getByText('输入关键词')
   screen.getByText('小熊宝宝')
   screen.getByText('常青藤爸爸')
-  screen.getByText('向日葵妈妈')
+  screen.getByText('@Corn')
   screen.unmount()
   await waitFor(() => expect(screen.container).toMatchSnapshot())
 })

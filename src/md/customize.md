@@ -50,7 +50,7 @@ import './custom.scss'
 
 ```scss
 // custrom.scss
-@import '@xrkmm/ui-h5/styles/index.scss';
+@import 'corn-h5/styles/index.scss';
 @import './variables.scss'
 ```
 
@@ -171,5 +171,5 @@ $uploadColor: #f3f5fa;
 
 ## 按需引入样式
 ```tsx
-import '@xrkmm/ui-h5/styles/components/Button.scss'
+import 'corn-h5/styles/components/Button.scss'
 ```

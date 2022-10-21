@@ -5,7 +5,7 @@ sort: 1
 ### `transformRem(px: number): string` PX单位转Rem
 
 ```tsx
-import { UTILS } from '@xrkmm/ui-h5'
+import { UTILS } from 'corn-h5'
 
 const Demo: React.FC = () => {
   return (

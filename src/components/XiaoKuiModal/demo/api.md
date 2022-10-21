@@ -6,7 +6,7 @@ sort: 2
 
 ```tsx
 import { useState } from 'react'
-import { showXiaokuiModal, Button } from '@xrkmm/ui-h5'
+import { showXiaokuiModal, Button } from 'corn-h5'
 
 
 const Demo: React.FC = () => {

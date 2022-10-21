@@ -151,11 +151,11 @@ describe('Search', () => {
   test('设置提示语列表', async () => {
     const screen = render(<Search openInput placeholder={[
       '常青藤爸爸',
-      '向日葵妈妈',
+      '@Corn',
       '请输入关键字搜索'
     ]} />)
     screen.getByText('常青藤爸爸')
-    screen.getByText('向日葵妈妈')
+    screen.getByText('@Corn')
     screen.getByText('请输入关键字搜索')
     await waitFor(() => expect(screen.container).toMatchSnapshot())
   })
@@ -163,36 +163,36 @@ describe('Search', () => {
   test('设置提示列表 输入内容', async () => {
     const screen = render(<Search openInput placeholder={[
       '常青藤爸爸',
-      '向日葵妈妈',
+      '@Corn',
       '请输入关键字搜索'
     ]} />)
     screen.getByText('常青藤爸爸')
-    screen.getByText('向日葵妈妈')
+    screen.getByText('@Corn')
     screen.getByText('请输入关键字搜索')
     const input = screen.getByTestId('input')
     UserEvent.type(input, '喜马拉雅山')
     await waitFor(() => expect(screen.queryByText('常青藤爸爸')).toBeNull())
-    await waitFor(() => expect(screen.queryByText('向日葵妈妈')).toBeNull())
+    await waitFor(() => expect(screen.queryByText('@Corn')).toBeNull())
     await waitFor(() => expect(screen.queryByText('请输入关键字搜索')).toBeNull())
   })
 
   test('设置提示列表 失去焦', async () => {
     const screen = render(<Search openInput placeholder={[
       '常青藤爸爸',
-      '向日葵妈妈',
+      '@Corn',
       '请输入关键字搜索'
     ]} />)
     screen.getByText('常青藤爸爸')
-    screen.getByText('向日葵妈妈')
+    screen.getByText('@Corn')
     screen.getByText('请输入关键字搜索')
     const input = screen.getByTestId('input')
     fireEvent.focus(input)
     await waitFor(() => expect(screen.queryByText('常青藤爸爸')).toBeNull())
-    await waitFor(() => expect(screen.queryByText('向日葵妈妈')).toBeNull())
+    await waitFor(() => expect(screen.queryByText('@Corn')).toBeNull())
     await waitFor(() => expect(screen.queryByText('请输入关键字搜索')).toBeNull())
     fireEvent.blur(input)
     await waitFor(() => expect(screen.queryByText('常青藤爸爸')).not.toBeNull())
-    await waitFor(() => expect(screen.queryByText('向日葵妈妈')).not.toBeNull())
+    await waitFor(() => expect(screen.queryByText('@Corn')).not.toBeNull())
     await waitFor(() => expect(screen.queryByText('请输入关键字搜索')).not.toBeNull())
   })
 

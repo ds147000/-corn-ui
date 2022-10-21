@@ -101,7 +101,7 @@ styles
 </code></pre>
 <br />
 <br />
-<h2>🐼 @xrkmm/icons 图标库开发</h2>
+<h2>🐼 corn-cons 图标库开发</h2>
 <p>新增图标只有放入 <code>src<span class="hljs-regexp">/assets/i</span>cons</code> 文件夹中即可，编译命令<code>yarn <span class="hljs-keyword">build</span>:<span class="hljs-keyword">all</span></code> 会自动生成icons库</p>
 <br />
 <br />
@@ -115,9 +115,9 @@ styles
 <br />
 <h2>编译结果说明</h2>
 <pre><code class="hljs language-bash">XRKMM_UI
-├── package-h5      <span class="hljs-comment"># @xrkmm/ui-h5 编译结果</span>
-├── package-weapp   <span class="hljs-comment"># @xrkmm/ui-taro 编译结果</span>
-├── package-icons   <span class="hljs-comment"># @xrkmm/icons 编译结果</span>
+├── package-h5      <span class="hljs-comment"># corn-h5 编译结果</span>
+├── package-weapp   <span class="hljs-comment"># corn-taro 编译结果</span>
+├── package-icons   <span class="hljs-comment"># corn-cons 编译结果</span>
 └── docs/build      <span class="hljs-comment"># 在线文档编译结果</span>
 </code></pre>
 `,

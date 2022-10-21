@@ -107,7 +107,7 @@ styles
 <br />
 <br />
 
-## 🐼 @xrkmm/icons 图标库开发
+## 🐼 corn-cons 图标库开发
 新增图标只有放入 `src/assets/icons` 文件夹中即可，编译命令`yarn build:all` 会自动生成icons库
 
 <br />
@@ -125,9 +125,9 @@ styles
 ## 编译结果说明
 ``` bash
 XRKMM_UI
-├── package-h5      # @xrkmm/ui-h5 编译结果
-├── package-weapp   # @xrkmm/ui-taro 编译结果
-├── package-icons   # @xrkmm/icons 编译结果
+├── package-h5      # corn-h5 编译结果
+├── package-weapp   # corn-taro 编译结果
+├── package-icons   # corn-cons 编译结果
 └── docs/build      # 在线文档编译结果
 ```
 

@@ -4,7 +4,7 @@ sort: 6
 ### `DateToTimestamp(value: Date | number | string ): number` 日期字符串转时间戳
 
 ```tsx
-import { UTILS } from '@xrkmm/ui-h5'
+import { UTILS } from 'corn-h5'
 
 const Demo: React.FC = () => {
   return (

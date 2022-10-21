@@ -5,7 +5,7 @@ sort: 4
 ### 自定义子节点
 
 ```tsx
-import { Empty, Button } from '@xrkmm/ui-h5'
+import { Empty, Button } from 'corn-h5'
 
 const Demo: React.FC = () => {
   return (

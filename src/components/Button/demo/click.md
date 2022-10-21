@@ -6,7 +6,7 @@ sort: 3
 点击事件和禁用按钮
 
 ```tsx
-import { Button } from '@xrkmm/ui-h5'
+import { Button } from 'corn-h5'
 
 const Demo: React.FC = () => {
 

@@ -5,7 +5,7 @@ sort: 3
 ### 镂空风格
 
 ```tsx
-import { Tag } from '@xrkmm/ui-h5'
+import { Tag } from 'corn-h5'
 
 const Demo: React.FC = () => {
 

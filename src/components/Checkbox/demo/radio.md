@@ -5,7 +5,7 @@ sort: 4
 ### 单选模式
 
 ```tsx
-import { Checkbox, Card, CheckboxGroup } from '@xrkmm/ui-h5'
+import { Checkbox, Card, CheckboxGroup } from 'corn-h5'
 
 const Demo: React.FC = () => {
 

@@ -6,7 +6,7 @@ sort: 2
 
 ```tsx
 import { useState } from 'react'
-import { Input, Form } from '@xrkmm/ui-h5'
+import { Input, Form } from 'corn-h5'
 
 const Demo: React.FC = () => {
   return (

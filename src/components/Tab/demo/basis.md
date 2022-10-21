@@ -6,7 +6,7 @@ sort: 1
 
 ```tsx
 import { useState } from 'react'
-import { Tab } from '@xrkmm/ui-h5'
+import { Tab } from 'corn-h5'
 
 const TabOption = [
   { title: '我是选项1' },

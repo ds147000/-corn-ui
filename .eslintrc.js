@@ -15,6 +15,7 @@ module.exports = {
   ],
   plugins: [ 'xrkmm' ],
   rules: {
-    '@typescript-eslint/no-namespace': 0
+    '@typescript-eslint/no-namespace': 0,
+    "react/jsx-key": 0,
   }
 }

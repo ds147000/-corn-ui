@@ -5,7 +5,7 @@ sort: 1
 ### 代码演示
 
 ```tsx
-import { Timer } from '@xrkmm/ui-h5'
+import { Timer } from 'corn-h5'
 
 const Demo: React.FC = () => {
   return (

@@ -5,7 +5,7 @@ sort: 10
 ### 三种大小
 
 ```tsx
-import { Empty } from '@xrkmm/ui-h5'
+import { Empty } from 'corn-h5'
 
 const Demo: React.FC = () => {
   return (

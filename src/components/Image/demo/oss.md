@@ -5,7 +5,7 @@ sort: 4
 ### 通过oss裁剪图片体积
 
 ```tsx
-import { Image } from '@xrkmm/ui-h5'
+import { Image } from 'corn-h5'
 
 const Demo: React.FC = () => {
   return (

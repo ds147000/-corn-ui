@@ -48,7 +48,7 @@ const Page: React.FC = () => {
 <span class="hljs-keyword">import</span> <span class="hljs-string">&#x27;./custom.scss&#x27;</span>
 </code></pre>
 <pre><code class="hljs language-scss"><span class="hljs-comment">// custrom.scss</span>
-<span class="hljs-keyword">@import</span> <span class="hljs-string">&#x27;@xrkmm/ui-h5/styles/index.scss&#x27;</span>;
+<span class="hljs-keyword">@import</span> <span class="hljs-string">&#x27;corn-h5/styles/index.scss&#x27;</span>;
 <span class="hljs-keyword">@import</span> <span class="hljs-string">&#x27;./variables.scss&#x27;</span>
 </code></pre>
 <pre><code class="hljs language-scss"><span class="hljs-comment">// variables.scss</span>
@@ -165,7 +165,7 @@ const Page: React.FC = () => {
 
 </code></pre>
 <h2>按需引入样式</h2>
-<pre><code class="hljs language-tsx"><span class="hljs-keyword">import</span> <span class="hljs-string">&#x27;@xrkmm/ui-h5/styles/components/Button.scss&#x27;</span>
+<pre><code class="hljs language-tsx"><span class="hljs-keyword">import</span> <span class="hljs-string">&#x27;corn-h5/styles/components/Button.scss&#x27;</span>
 </code></pre>
 `,
       }}

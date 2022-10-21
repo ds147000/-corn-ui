@@ -6,7 +6,7 @@ sort: 1
 
 ```tsx
 import { useState } from 'react'
-import { Drawer, Button } from '@xrkmm/ui-h5'
+import { Drawer, Button } from 'corn-h5'
 
 const Demo: React.FC = () => {
   const [ show, setShow ] = useState(false)
@@ -18,7 +18,7 @@ const Demo: React.FC = () => {
       <Button onClick={onChange}>底部出现的抽屉</Button>
       <Drawer visible={show} onClose={onChange} >
         <div style={{ width: '100%', height: 300, backgroundColor: '#fff', fontSize: 40, textAlign: 'center' }}>
-          向日葵妈妈
+          @Corn
         </div>
       </Drawer>
     </>

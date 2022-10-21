@@ -5,7 +5,7 @@ sort: 2
 ### 不同的缩放模式
 
 ```tsx
-import { Image } from '@xrkmm/ui-h5'
+import { Image } from 'corn-h5'
 
 const Demo: React.FC = () => {
   return (

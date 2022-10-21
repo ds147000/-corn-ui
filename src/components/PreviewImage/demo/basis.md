@@ -4,7 +4,7 @@ sort: 1
 ### 代码实例
 
 ```tsx
-import { previewImage, Button } from "@xrkmm/ui-h5"
+import { previewImage, Button } from "corn-h5"
 
 const Demo: React.FC = () => {
 

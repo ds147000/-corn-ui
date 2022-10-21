@@ -5,7 +5,7 @@ sort: 3
 ### 懒加载
 
 ```tsx
-import { Image } from '@xrkmm/ui-h5'
+import { Image } from 'corn-h5'
 
 const Demo: React.FC = () => {
   return (

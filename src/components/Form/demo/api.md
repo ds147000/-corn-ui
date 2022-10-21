@@ -6,7 +6,7 @@ sort: 2
 
 ```tsx
 import { useState, useRef, useEffect } from 'react'
-import { Input, Form, Checkbox, CheckboxGroup, Button } from '@xrkmm/ui-h5'
+import { Input, Form, Checkbox, CheckboxGroup, Button } from 'corn-h5'
 
 const Demo: React.FC = () => {
   const [data, setData] = useState({})

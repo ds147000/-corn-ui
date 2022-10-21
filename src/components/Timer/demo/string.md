@@ -5,7 +5,7 @@ sort: 2
 ### 使用日期字符串
 
 ```tsx
-import { Timer } from '@xrkmm/ui-h5'
+import { Timer } from 'corn-h5'
 
 const Demo: React.FC = () => {
   return (

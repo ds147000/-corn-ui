@@ -6,7 +6,7 @@ sort: 1
 
 ```tsx
 import { useState } from 'react'
-import { Upload, Card, Form, Button } from '@xrkmm/ui-h5'
+import { Upload, Card, Form, Button } from 'corn-h5'
 
 // 全局配置处理上传方法
 Upload.handelUpload = async (file: FileList) => {

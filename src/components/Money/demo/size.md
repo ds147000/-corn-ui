@@ -5,7 +5,7 @@ sort: 2
 ### 不同的大小风格
 
 ```tsx
-import { Money } from '@xrkmm/ui-h5'
+import { Money } from 'corn-h5'
 
 const Demo: React.FC = () => {
   return (

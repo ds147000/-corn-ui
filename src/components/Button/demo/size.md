@@ -5,7 +5,7 @@ sort: 2
 ### 多达6种的按钮大小
 
 ```tsx
-import { Button } from '@xrkmm/ui-h5'
+import { Button } from 'corn-h5'
 
 const Demo: React.FC = () => {
 

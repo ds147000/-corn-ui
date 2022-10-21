@@ -60,6 +60,7 @@ const Modal: React.FC<ModalProps> = ({
             {(button as ModalButton[]).map((item, key) => (
               <View
                 className={`xrk-modal-button ${item.style}`}
+                // eslint-disable-next-line react/no-array-index-key
                 key={String(key)}
                 onClick={(): void => {
                   onButtonClick?.(key)

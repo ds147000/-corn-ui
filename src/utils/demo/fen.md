@@ -5,7 +5,7 @@ sort: 3
 ### `formatMoney(value: number | string, isReverse: boolean): number` 元转分
 
 ```tsx
-import { UTILS } from '@xrkmm/ui-h5'
+import { UTILS } from 'corn-h5'
 
 const Demo: React.FC = () => {
   return (

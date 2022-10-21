@@ -11,9 +11,9 @@ describe('<Button />', () => {
     expect(screen.container).toMatchSnapshot()
   })
 
-  test('标题：向日葵妈妈UI', () => {
-    const screen = render(<Button>向日葵妈妈UI</Button>)
-    screen.getByText('向日葵妈妈UI')
+  test('标题：@CornUI', () => {
+    const screen = render(<Button>@CornUI</Button>)
+    screen.getByText('@CornUI')
     expect(screen.container).toMatchSnapshot()
   })
 
@@ -23,37 +23,37 @@ describe('<Button />', () => {
         <View>
           <Text>我是图标</Text>
         </View>
-        <Text>向日葵妈妈UI</Text>
+        <Text>@CornUI</Text>
       </Button>
     )
-    screen.getByText('向日葵妈妈UI')
+    screen.getByText('@CornUI')
     screen.getByText('我是图标')
     expect(screen.container).toMatchSnapshot()
   })
 
   test('点击事件', () => {
     const onClick = jest.fn()
-    const screen = render(<Button onClick={onClick}>向日葵妈妈UI</Button>)
-    fireEvent.click(screen.getByText('向日葵妈妈UI'))
+    const screen = render(<Button onClick={onClick}>@CornUI</Button>)
+    fireEvent.click(screen.getByText('@CornUI'))
     expect(onClick).toHaveBeenCalledTimes(1)
   })
 
   test('禁用', () => {
     const onClick = jest.fn()
-    const screen = render(<Button onClick={onClick} disabled >向日葵妈妈UI</Button>)
-    fireEvent.click(screen.getByText('向日葵妈妈UI'))
+    const screen = render(<Button onClick={onClick} disabled >@CornUI</Button>)
+    fireEvent.click(screen.getByText('@CornUI'))
     expect(onClick).toHaveBeenCalledTimes(0)
   })
 
   test('size', () => {
     const screen = render(
       <View>
-        <Button size="max">向日葵妈妈UI</Button>
-        <Button size="big">向日葵妈妈UI</Button>
-        <Button size="large">向日葵妈妈UI</Button>
-        <Button size="middle">向日葵妈妈UI</Button>
-        <Button size="small">向日葵妈妈UI</Button>
-        <Button size="mini">向日葵妈妈UI</Button>
+        <Button size="max">@CornUI</Button>
+        <Button size="big">@CornUI</Button>
+        <Button size="large">@CornUI</Button>
+        <Button size="middle">@CornUI</Button>
+        <Button size="small">@CornUI</Button>
+        <Button size="mini">@CornUI</Button>
       </View>
     )
     expect(screen.container).toMatchSnapshot()
@@ -62,32 +62,32 @@ describe('<Button />', () => {
   test('type', () => {
     const screen = render(
       <View>
-        <Button type="error">向日葵妈妈UI</Button>
-        <Button type="link">向日葵妈妈UI</Button>
-        <Button type="pop">向日葵妈妈UI</Button>
-        <Button type="primary">向日葵妈妈UI</Button>
-        <Button type="warn">向日葵妈妈UI</Button>
+        <Button type="error">@CornUI</Button>
+        <Button type="link">@CornUI</Button>
+        <Button type="pop">@CornUI</Button>
+        <Button type="primary">@CornUI</Button>
+        <Button type="warn">@CornUI</Button>
       </View>
     )
     expect(screen.container).toMatchSnapshot()
   })
 
   test('icon', () => {
-    const screen = render(<Button icon={<View>我是图标</View>}>向日葵妈妈UI</Button>)
+    const screen = render(<Button icon={<View>我是图标</View>}>@CornUI</Button>)
     screen.getByText('我是图标')
     expect(screen.container).toMatchSnapshot()
   })
 
   test('block', () => {
-    const BlockScreen = render(<Button block >向日葵妈妈UI</Button>).container.innerHTML.toString()
-    const DefualtScreen = render(<Button block={false} >向日葵妈妈UI</Button>).container.innerHTML.toString()
+    const BlockScreen = render(<Button block >@CornUI</Button>).container.innerHTML.toString()
+    const DefualtScreen = render(<Button block={false} >@CornUI</Button>).container.innerHTML.toString()
 
     expect(BlockScreen).not.toBe(DefualtScreen)
   })
 
   test('ghost', () => {
-    const BlockScreen = render(<Button ghost >向日葵妈妈UI</Button>).container.innerHTML.toString()
-    const DefualtScreen = render(<Button ghost={false} >向日葵妈妈UI</Button>).container.innerHTML.toString()
+    const BlockScreen = render(<Button ghost >@CornUI</Button>).container.innerHTML.toString()
+    const DefualtScreen = render(<Button ghost={false} >@CornUI</Button>).container.innerHTML.toString()
 
     expect(BlockScreen).not.toBe(DefualtScreen)
   })
@@ -97,7 +97,7 @@ describe('<Button />', () => {
       <BrowserRouter>
         <Switch>
           <Route>
-            <Button to="/home" >向日葵妈妈UI</Button>
+            <Button to="/home" >@CornUI</Button>
           </Route>
         </Switch>
       </BrowserRouter>

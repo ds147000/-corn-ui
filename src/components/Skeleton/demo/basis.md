@@ -5,7 +5,7 @@ sort: 1
 ### 代码演示
 
 ```tsx
-import { Skeleton } from "@xrkmm/ui-h5";
+import { Skeleton } from "corn-h5";
 
 const Demo: React.FC = () => {
   return (

@@ -38,7 +38,7 @@ exports[`SearchPlaceholder more 1`] = `
       <div
         class="xrk-search-placeholder-item xrk-f xrk-ac"
       >
-        向日葵妈妈
+        @Corn
       </div>
     </div>
   </div>
@@ -72,7 +72,7 @@ exports[`SearchPlaceholder more run time 1`] = `
       <div
         class="xrk-search-placeholder-item xrk-f xrk-ac"
       >
-        向日葵妈妈
+        @Corn
       </div>
     </div>
   </div>

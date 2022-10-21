@@ -6,7 +6,7 @@ sort: 5
 
 ```tsx
 import { useRef } from 'react'
-import { Checkbox, Card, CheckboxGroup, Button } from "@xrkmm/ui-h5"
+import { Checkbox, Card, CheckboxGroup, Button } from "corn-h5"
 
 const Demo: React.FC = () => {
   const checkGroupRef = useRef<CheckboxGroup>()

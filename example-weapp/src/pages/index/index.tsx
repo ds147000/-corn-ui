@@ -8,13 +8,13 @@
 
 import { Component, createRef } from 'react'
 import { ScrollView, View } from '@tarojs/components'
-import { TAB } from '@xrkmm/ui-taro/components/Tab'
+import { TAB } from 'corn-taro/components/Tab'
 import {
   Button, Toast, Drawer, showActionSheet,
   showModal, Modal, Icon, Image, Tab, Affix,
   Timer, Link, Card, Checkbox, CheckboxGroup,
    Input, Form, Textarea, Upload, Popover, Search, Tooltip
-} from '@xrkmm/ui-taro'
+} from 'corn-taro'
 import './index.scss'
 
 const asList = [
@@ -235,28 +235,28 @@ export default class Index extends Component {
         <Timer startTime={1500000000} endTime={1500000000 + 240000000} fill />
         <Timer startTime={1500000000} endTime={1500000000 + 240000000} renderItem={renderItem} />
         <Button size='max' icon={<Icon name='service' />}>图标按钮</Button>
-        <Button size='big'>向日葵妈妈UI</Button>
-        <Button size='large'>向日葵妈妈UI</Button>
-        <Button size='middle'>向日葵妈妈UI</Button>
-        <Button size='small'>向日葵妈妈UI</Button>
-        <Button size='mini'>向日葵妈妈UI</Button>
-        <Button type='error'>向日葵妈妈UI</Button>
-        <Button type='link'>向日葵妈妈UI</Button>
-        <Button type='pop'>向日葵妈妈UI</Button>
-        <Button type='primary'>向日葵妈妈UI</Button>
-        <Button type='warn'>向日葵妈妈UI</Button>
-        <Button block type='error' >向日葵妈妈UI</Button>
-        <Button block type='link' >向日葵妈妈UI</Button>
-        <Button block type='pop' >向日葵妈妈UI</Button>
-        <Button block type='primary' >向日葵妈妈UI</Button>
-        <Button block type='warn' >向日葵妈妈UI</Button>
-        <Button ghost type='error' >向日葵妈妈UI</Button>
-        <Button ghost type='link' >向日葵妈妈UI</Button>
-        <Button ghost type='pop' >向日葵妈妈UI</Button>
-        <Button ghost type='primary' >向日葵妈妈UI</Button>
-        <Button ghost type='warn' >向日葵妈妈UI</Button>
-        <Button onClick={this.onClick}>向日葵妈妈UI</Button>
-        <Button onClick={this.onClick} disabled >向日葵妈妈UI</Button>
+        <Button size='big'>@CornUI</Button>
+        <Button size='large'>@CornUI</Button>
+        <Button size='middle'>@CornUI</Button>
+        <Button size='small'>@CornUI</Button>
+        <Button size='mini'>@CornUI</Button>
+        <Button type='error'>@CornUI</Button>
+        <Button type='link'>@CornUI</Button>
+        <Button type='pop'>@CornUI</Button>
+        <Button type='primary'>@CornUI</Button>
+        <Button type='warn'>@CornUI</Button>
+        <Button block type='error' >@CornUI</Button>
+        <Button block type='link' >@CornUI</Button>
+        <Button block type='pop' >@CornUI</Button>
+        <Button block type='primary' >@CornUI</Button>
+        <Button block type='warn' >@CornUI</Button>
+        <Button ghost type='error' >@CornUI</Button>
+        <Button ghost type='link' >@CornUI</Button>
+        <Button ghost type='pop' >@CornUI</Button>
+        <Button ghost type='primary' >@CornUI</Button>
+        <Button ghost type='warn' >@CornUI</Button>
+        <Button onClick={this.onClick}>@CornUI</Button>
+        <Button onClick={this.onClick} disabled >@CornUI</Button>
         <Drawer visible={this.state.show} onClose={this.onClose}>
           <View className='si-button'></View>
         </Drawer>

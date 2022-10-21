@@ -5,11 +5,11 @@ sort: 3
 ### 将按钮宽度调整为其父宽度
 
 ```tsx
-import { Button } from '@xrkmm/ui-h5'
+import { Button } from 'corn-h5'
 
 const Demo: React.FC = () => {
 
-  return (<Button block >向日葵妈妈UI</Button>)
+  return (<Button block >@CornUI</Button>)
 }
 
 export default Demo

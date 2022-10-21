@@ -6,7 +6,7 @@ sort: 9
 
 ```tsx
 import { useState } from 'react'
-import { ActionSheet, Button } from '@xrkmm/ui-h5'
+import { ActionSheet, Button } from 'corn-h5'
 
 const Demo: React.FC = () => {
   const [city, setCity] = useState('')

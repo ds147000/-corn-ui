@@ -5,7 +5,7 @@ sort: 1
 ### 基本使用
 
 ```tsx
-import { Popover, Button } from "@xrkmm/ui-h5";
+import { Popover, Button } from "corn-h5";
 
 const Demo: React.FC = () => {
   return (

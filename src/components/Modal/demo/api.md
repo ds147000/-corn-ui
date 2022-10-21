@@ -4,7 +4,7 @@ sort: 1
 ### API 方式调用
 
 ```tsx
-import { showModal, Button } from "@xrkmm/ui-h5";
+import { showModal, Button } from "corn-h5";
 
 const Demo: React.FC = () => {
   return (

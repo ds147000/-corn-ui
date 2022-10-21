@@ -5,7 +5,7 @@ sort: 1
 ### 基本使用
 
 ```tsx
-import { Link } from '@xrkmm/ui-h5'
+import { Link } from 'corn-h5'
 
 const Demo: React.FC = () => {
 

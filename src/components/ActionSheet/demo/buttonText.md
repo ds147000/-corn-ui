@@ -6,7 +6,7 @@ sort: 8
 
 ```tsx
 import { useState } from 'react'
-import { ActionSheet, ActionSheetItem, Button } from '@xrkmm/ui-h5'
+import { ActionSheet, ActionSheetItem, Button } from 'corn-h5'
 
 const list = ['广州', '深圳']
 

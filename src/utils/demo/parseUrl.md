@@ -5,7 +5,7 @@ sort: 4
 ### `parseUrl(url: string): Object` 解析链接信息
 
 ```tsx
-import { UTILS } from '@xrkmm/ui-h5'
+import { UTILS } from 'corn-h5'
 
 const Demo: React.FC = () => {
   return (

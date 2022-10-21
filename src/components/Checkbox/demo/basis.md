@@ -5,7 +5,7 @@ sort: 1
 ### 基本使用
 
 ```tsx
-import { Checkbox, Toast } from '@xrkmm/ui-h5'
+import { Checkbox, Toast } from 'corn-h5'
 
 const Demo: React.FC = () => {
   const onChange = (check:boolean) => Toast.show(String(check))

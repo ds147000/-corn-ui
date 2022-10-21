@@ -4,7 +4,7 @@ sort: 7
 ### `fixNumber(val: number | string, len = 2): string` 补全数字长度
 
 ```tsx
-import { UTILS } from '@xrkmm/ui-h5'
+import { UTILS } from 'corn-h5'
 
 const Demo: React.FC = () => {
   return (

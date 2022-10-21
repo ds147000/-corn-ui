@@ -6,7 +6,7 @@ sort: 2
 
 ```tsx
 import { useState } from 'react'
-import { Checkbox, Toast } from '@xrkmm/ui-h5'
+import { Checkbox, Toast } from 'corn-h5'
 
 const Demo: React.FC = () => {
   const [check, setCheck] = useState(false)

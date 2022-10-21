@@ -9,7 +9,7 @@ Object {
         class="xrk-link xrk-link-default xrk-btn xrk-if xrk-ac xrk-jc xrk-btn-middle xrk-btn-primary"
         href="/home"
       >
-        向日葵妈妈UI
+        @CornUI
       </a>
     </div>
   </body>,
@@ -18,7 +18,7 @@ Object {
       class="xrk-link xrk-link-default xrk-btn xrk-if xrk-ac xrk-jc xrk-btn-middle xrk-btn-primary"
       href="/home"
     >
-      向日葵妈妈UI
+      @CornUI
     </a>
   </div>,
   "debug": [Function],
@@ -81,7 +81,7 @@ exports[`<Button /> icon 1`] = `
     class="xrk-btn xrk-if xrk-ac xrk-jc xrk-btn-middle xrk-btn-primary xrk-btn-child-icon"
     type="button"
   >
-    向日葵妈妈UI
+    @CornUI
     <div
       class=""
     >
@@ -100,37 +100,37 @@ exports[`<Button /> size 1`] = `
       class="xrk-btn xrk-if xrk-ac xrk-jc xrk-btn-max xrk-btn-primary"
       type="button"
     >
-      向日葵妈妈UI
+      @CornUI
     </button>
     <button
       class="xrk-btn xrk-if xrk-ac xrk-jc xrk-btn-big xrk-btn-primary"
       type="button"
     >
-      向日葵妈妈UI
+      @CornUI
     </button>
     <button
       class="xrk-btn xrk-if xrk-ac xrk-jc xrk-btn-large xrk-btn-primary"
       type="button"
     >
-      向日葵妈妈UI
+      @CornUI
     </button>
     <button
       class="xrk-btn xrk-if xrk-ac xrk-jc xrk-btn-middle xrk-btn-primary"
       type="button"
     >
-      向日葵妈妈UI
+      @CornUI
     </button>
     <button
       class="xrk-btn xrk-if xrk-ac xrk-jc xrk-btn-small xrk-btn-primary"
       type="button"
     >
-      向日葵妈妈UI
+      @CornUI
     </button>
     <button
       class="xrk-btn xrk-if xrk-ac xrk-jc xrk-btn-mini xrk-btn-primary"
       type="button"
     >
-      向日葵妈妈UI
+      @CornUI
     </button>
   </div>
 </div>
@@ -145,31 +145,31 @@ exports[`<Button /> type 1`] = `
       class="xrk-btn xrk-if xrk-ac xrk-jc xrk-btn-middle xrk-btn-error"
       type="button"
     >
-      向日葵妈妈UI
+      @CornUI
     </button>
     <button
       class="xrk-btn xrk-if xrk-ac xrk-jc xrk-btn-middle xrk-btn-link"
       type="button"
     >
-      向日葵妈妈UI
+      @CornUI
     </button>
     <button
       class="xrk-btn xrk-if xrk-ac xrk-jc xrk-btn-middle xrk-btn-pop"
       type="button"
     >
-      向日葵妈妈UI
+      @CornUI
     </button>
     <button
       class="xrk-btn xrk-if xrk-ac xrk-jc xrk-btn-middle xrk-btn-primary"
       type="button"
     >
-      向日葵妈妈UI
+      @CornUI
     </button>
     <button
       class="xrk-btn xrk-if xrk-ac xrk-jc xrk-btn-middle xrk-btn-warn"
       type="button"
     >
-      向日葵妈妈UI
+      @CornUI
     </button>
   </div>
 </div>
@@ -211,19 +211,19 @@ exports[`<Button /> 复杂标题：节点+文字 1`] = `
     <span
       class="taro-text"
     >
-      向日葵妈妈UI
+      @CornUI
     </span>
   </button>
 </div>
 `;
 
-exports[`<Button /> 标题：向日葵妈妈UI 1`] = `
+exports[`<Button /> 标题：@CornUI 1`] = `
 <div>
   <button
     class="xrk-btn xrk-if xrk-ac xrk-jc xrk-btn-middle xrk-btn-primary"
     type="button"
   >
-    向日葵妈妈UI
+    @CornUI
   </button>
 </div>
 `;

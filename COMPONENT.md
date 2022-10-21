@@ -42,7 +42,7 @@ basis.md
 
 \\```tsx
 import { useState } from 'react'
-import { Card } from '@xrkmm/ui'
+import { Card } from 'corn-h5'
 
 const CardDemo: React.FC = () => {
   const [title, setTitle] = useState('我是卡片')

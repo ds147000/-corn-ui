@@ -4,7 +4,7 @@ sort: 2
 ### 通过Options唤起
 
 ```tsx
-import { Button, Toast } from '@xrkmm/ui-h5'
+import { Button, Toast } from 'corn-h5'
 
 const Demo: React.FC = () => {
   const onClick = () => {

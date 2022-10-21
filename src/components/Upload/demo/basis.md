@@ -5,7 +5,7 @@ sort: 1
 ### 基本使用
 
 ```tsx
-import { Upload, Card } from '@xrkmm/ui-h5'
+import { Upload, Card } from 'corn-h5'
 
 const Demo: React.FC = () => {
   return (

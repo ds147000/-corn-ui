@@ -5,7 +5,7 @@ sort: 5
 ### `deckUrl(url: string, params?: object, hash: object): string` 合并链接的Params和hash
 
 ```tsx
-import { UTILS } from '@xrkmm/ui-h5'
+import { UTILS } from 'corn-h5'
 
 const Demo: React.FC = () => {
   return (

@@ -4,7 +4,7 @@ sort: 6
 ### 通过API关闭taost
 
 ```tsx
-import { Button, Toast } from '@xrkmm/ui-h5'
+import { Button, Toast } from 'corn-h5'
 
 const Demo: React.FC = () => {
 

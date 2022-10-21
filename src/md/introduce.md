@@ -4,7 +4,7 @@
   </a>
 </p>
 
-<h1 align="center">向日葵妈妈 UI</h1>
+<h1 align="center">@Corn UI</h1>
 
 <div align="center">
 
@@ -35,7 +35,7 @@
 请参考[贡献指南](/basis/Publish).
 
 ## 🔗 案例链接
-[向日葵妈妈](https://m.xrkmm.com/)
+[@Corn](https://m.xrkmm.com/)
 <br />
-向日葵妈妈学院plus 小程序
+@Corn学院plus 小程序
 

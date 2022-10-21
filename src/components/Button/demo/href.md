@@ -5,12 +5,12 @@ sort: 6
 ### 配置跳转链接
 
 ```tsx
-import { Button } from '@xrkmm/ui-h5'
+import { Button } from 'corn-h5'
 
 const Demo: React.FC = () => {
 
   return (
-    <Button to="/home">向日葵妈妈UI</Button>
+    <Button to="/home">@CornUI</Button>
   )
 }
 

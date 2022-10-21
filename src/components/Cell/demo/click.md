@@ -5,7 +5,7 @@ sort: 3
 ### 事件和禁用
 
 ```tsx
-import { Cell, Toast } from '@xrkmm/ui-h5'
+import { Cell, Toast } from 'corn-h5'
 
 const Demo: React.FC = () => {
   return (

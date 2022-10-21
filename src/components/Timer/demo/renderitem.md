@@ -5,7 +5,7 @@ sort: 4
 ### 自定义渲染项
 
 ```tsx
-import { Timer } from '@xrkmm/ui-h5'
+import { Timer } from 'corn-h5'
 
 const Demo: React.FC = () => {
   const renderItem = (type: string, number: string): JSX.Element => {

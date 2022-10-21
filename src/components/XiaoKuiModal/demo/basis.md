@@ -5,7 +5,7 @@ sort: 1
 ### API方式调用
 
 ```tsx
-import { XiaoKuiModal, Button } from '@xrkmm/ui-h5'
+import { XiaoKuiModal, Button } from 'corn-h5'
 import { useState } from 'react'
 
 const Demo: React.FC = () => {

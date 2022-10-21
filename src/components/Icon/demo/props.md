@@ -4,10 +4,10 @@ type: 通用
 ---
 # Icon 图标
 使用图标组件，你需要在引入一个全局的样式文件：
-`yarn add @xrkmm/icons`
+`yarn add corn-cons`
 
 
-`import '@xrkmm/icons/style.css'`
+`import 'corn-cons/style.css'`
 
 <demo>
 

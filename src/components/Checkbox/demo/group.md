@@ -5,7 +5,7 @@ sort: 3
 ### checkBox组
 
 ```tsx
-import { Checkbox, Toast, Card, CheckboxGroup } from '@xrkmm/ui-h5'
+import { Checkbox, Toast, Card, CheckboxGroup } from 'corn-h5'
 
 const Demo: React.FC = () => {
   const onChange = (check:string[]) => Toast.show(check.join(','))

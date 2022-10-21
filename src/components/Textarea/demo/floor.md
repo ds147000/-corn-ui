@@ -6,7 +6,7 @@ sort: 2
 
 ```tsx
 import { useState } from 'react'
-import { Textarea, Button } from '@xrkmm/ui-h5'
+import { Textarea, Button } from 'corn-h5'
 
 const Demo: React.FC = () => {
   const [value, setValue] = useState('')

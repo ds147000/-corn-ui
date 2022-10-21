@@ -5,7 +5,7 @@ sort: 2
 ### 设置固定方向
 
 ```tsx
-import { Affix, Button } from '@xrkmm/ui-h5'
+import { Affix, Button } from 'corn-h5'
 
 const Demo: React.FC = () => {
 

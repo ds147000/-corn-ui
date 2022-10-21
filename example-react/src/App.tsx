@@ -11,7 +11,7 @@ import {
   Cell, Card, Checkbox, CheckboxGroup, previewImage, Input, Form,
   Textarea, Skeleton, Search, Icon, Upload, Alert, Popover, Tooltip,
   showXiaokuiModal
-} from '@xrkmm/ui-h5'
+} from 'corn-h5'
 import React, { useRef, useState } from 'react'
 import 'swiper/swiper.scss'
 import { TAB } from '../../package-h5/components/Tab'
@@ -119,13 +119,13 @@ function App() {
       <Search back onBack={() => console.log('返回')} />
       <Search back onBack={() => console.log('返回')} onClick={() => console.log('点击搜索')} />
       <Search back onBack={() => console.log('返回')} openInput onSearch={(e) => console.log(e)} />
-      <Search back onBack={() => console.log('返回')} placeholder={['向日葵妈妈', '常青藤爸爸', '小熊', '二逼']} openInput onSearch={(e) => console.log(e)} suffix={<Icon name="camera" />} />
+      <Search back onBack={() => console.log('返回')} placeholder={['@Corn', '常青藤爸爸', '小熊', '二逼']} openInput onSearch={(e) => console.log(e)} suffix={<Icon name="camera" />} />
       <Search type="light" />
       <Search back type="light" placeholder="输入关键词" />
-      <Search back openInput type="light" placeholder={['向日葵妈妈', '常青藤爸爸', '小熊', '二逼']} onSearch={(e) => console.log(e)} />
+      <Search back openInput type="light" placeholder={['@Corn', '常青藤爸爸', '小熊', '二逼']} onSearch={(e) => console.log(e)} />
       <Search
         back
-        placeholder={['向日葵妈妈', '常青藤爸爸', '小熊', '二逼']}
+        placeholder={['@Corn', '常青藤爸爸', '小熊', '二逼']}
         type="light"
         onBack={() => console.log('返回')}
         openInput
@@ -307,45 +307,45 @@ function App() {
             'https://t7.baidu.com/it/u=1635608122,693552335&fm=193&f=GIF'
           ]
         })} >预览图片</Button>
-        <Button size="max">向日葵妈妈UI</Button>
-        <Button size="big">向日葵妈妈UI</Button>
-        <Button size="large" to="/123" >向日葵妈妈UI</Button>
-        <Button size="large" >向日葵妈妈UI</Button>
-        <Button size="middle">向日葵妈妈UI</Button>
-        <Button size="small">向日葵妈妈UI</Button>
-        <Button size="mini">向日葵妈妈UI</Button>
-        <Button size="max" auto>向日葵妈妈UI</Button>
-        <Button size="big" auto>向日葵妈妈UI</Button>
-        <Button size="large" auto >向日葵妈妈UI</Button>
-        <Button size="middle" auto >向日葵妈妈UI</Button>
-        <Button size="small" auto>向日葵妈妈UI</Button>
-        <Button size="mini" auto>向日葵妈妈UI</Button>
-        <Button type="error">向日葵妈妈UI</Button>
-        <Button type="link">向日葵妈妈UI</Button>
-        <Button type="pop">向日葵妈妈UI</Button>
-        <Button type="primary">向日葵妈妈UI</Button>
+        <Button size="max">@CornUI</Button>
+        <Button size="big">@CornUI</Button>
+        <Button size="large" to="/123" >@CornUI</Button>
+        <Button size="large" >@CornUI</Button>
+        <Button size="middle">@CornUI</Button>
+        <Button size="small">@CornUI</Button>
+        <Button size="mini">@CornUI</Button>
+        <Button size="max" auto>@CornUI</Button>
+        <Button size="big" auto>@CornUI</Button>
+        <Button size="large" auto >@CornUI</Button>
+        <Button size="middle" auto >@CornUI</Button>
+        <Button size="small" auto>@CornUI</Button>
+        <Button size="mini" auto>@CornUI</Button>
+        <Button type="error">@CornUI</Button>
+        <Button type="link">@CornUI</Button>
+        <Button type="pop">@CornUI</Button>
+        <Button type="primary">@CornUI</Button>
         <Button type="primary" to="/home">跳转首页</Button>
-        <Button type="warn">向日葵妈妈UI</Button>
+        <Button type="warn">@CornUI</Button>
         <Button type="stop">stop</Button>
-        <Button type="error" disabled>向日葵妈妈UI(disable)</Button>
-        <Button type="link" disabled>向日葵妈妈UI（disable）</Button>
-        <Button type="pop" disabled>向日葵妈妈UI（disable）</Button>
-        <Button type="primary" disabled>向日葵妈妈UI（disable）</Button>
-        <Button type="default" disabled>向日葵妈妈UI（disable）</Button>
-        <Button type="warn" disabled>向日葵妈妈UI(disable)</Button>
-        <Button block type="error" >向日葵妈妈UI</Button>
-        <Button block type="link" >向日葵妈妈UI</Button>
-        <Button block type="pop" >向日葵妈妈UI</Button>
-        <Button block type="primary" >向日葵妈妈UI</Button>
-        <Button block type="warn" >向日葵妈妈UI</Button>
-        <Button ghost type="error" >向日葵妈妈UI</Button>
-        <Button ghost type="link" >向日葵妈妈UI</Button>
-        <Button ghost type="pop" >向日葵妈妈UI</Button>
-        <Button ghost type="primary" >向日葵妈妈UI</Button>
-        <Button ghost type="warn" >向日葵妈妈UI</Button>
-        <Button ghost type="warn" >向日葵妈妈UI</Button>
-        <Button onClick={onClick} disabled >向日葵妈妈UI</Button>
-        <Button onClick={onClick} type="default" >向日葵妈妈UI</Button>
+        <Button type="error" disabled>@CornUI(disable)</Button>
+        <Button type="link" disabled>@CornUI（disable）</Button>
+        <Button type="pop" disabled>@CornUI（disable）</Button>
+        <Button type="primary" disabled>@CornUI（disable）</Button>
+        <Button type="default" disabled>@CornUI（disable）</Button>
+        <Button type="warn" disabled>@CornUI(disable)</Button>
+        <Button block type="error" >@CornUI</Button>
+        <Button block type="link" >@CornUI</Button>
+        <Button block type="pop" >@CornUI</Button>
+        <Button block type="primary" >@CornUI</Button>
+        <Button block type="warn" >@CornUI</Button>
+        <Button ghost type="error" >@CornUI</Button>
+        <Button ghost type="link" >@CornUI</Button>
+        <Button ghost type="pop" >@CornUI</Button>
+        <Button ghost type="primary" >@CornUI</Button>
+        <Button ghost type="warn" >@CornUI</Button>
+        <Button ghost type="warn" >@CornUI</Button>
+        <Button onClick={onClick} disabled >@CornUI</Button>
+        <Button onClick={onClick} type="default" >@CornUI</Button>
         <Button onClick={() => Toast.show({ title: '我是toast' + Math.random(), icon: 'success' })}>点击出现taost</Button>
         <Button onClick={() => setShow(true)}>抽屉</Button>
         <Button onClick={() => setAshow(true)}>ActionSheet</Button>

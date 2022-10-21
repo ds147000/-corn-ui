@@ -37,7 +37,7 @@ const View: React.FC = ({ children }) => {
     <Layout className="layout">
       <Header className="site-layout-background header" >
         <img className="logo" src="https://assets.xrkmm.cn/u/4000002499670412/9ec97723-bf4b-47c4-887b-b8d57805b7ab.jpeg" alt="logo" />
-        <h1>@xrkmm/ui</h1>
+        <h1>corn/ui</h1>
       </Header>
 
       <Layout className="site-layout">
@@ -89,7 +89,7 @@ const View: React.FC = ({ children }) => {
             </div>
             {location.pathname.indexOf('/doc/') !== -1 && (<Iphone />)}
           </IphoneContext.Provider>
-          <Footer className="floor" >XRKMM-UI ©2021 Created by 向日葵妈妈</Footer>
+          <Footer className="floor" >XRKMM-UI ©2021 Created by @Corn</Footer>
         </Content>
       </Layout>
     </Layout>

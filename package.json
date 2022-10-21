@@ -1,7 +1,7 @@
 {
-  "name": "@xrkmm/ui",
+  "name": "@corn/ui",
   "version": "1.8.6",
-  "description": "向日葵妈妈移动UI库，支持H5、小程序端使用。具有自适应屏幕，主题变量化等特性",
+  "description": "移动UI库，支持H5、小程序端使用。具有自适应屏幕，主题变量化等特性",
   "main": "package-taro/index.js",
   "module": "package-taro/index.esm.js",
   "main:h5": "package-h5/index.js",
@@ -36,9 +36,9 @@
     "pub:doc": "npm run build:doc && cd docs && npm run build"
   },
   "keywords": [
-    "向日葵妈妈，UI库，小程序，taro"
+    "CornUI库，小程序，taro"
   ],
-  "author": "zhoulong.yang@xrkmm.com",
+  "author": "yangzhoulong@icloud.com",
   "license": "ISC",
   "devDependencies": {
     "@babel/core": "^7.14.5",

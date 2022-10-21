@@ -1,5 +1,5 @@
 import { View } from '@tarojs/components'
-import { Link, Cell, Toast, Card, Tooltip, Button } from '@xrkmm/ui-taro'
+import { Link, Cell, Toast, Card, Tooltip, Button } from 'corn-taro'
 
 const LinkPgae: React.FC = () => {
   return (

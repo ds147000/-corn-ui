@@ -6,7 +6,7 @@ sort: 5
 图标按钮
 
 ```tsx
-import { Button, Icon } from '@xrkmm/ui-h5'
+import { Button, Icon } from 'corn-h5'
 
 const Demo: React.FC = () => {
 

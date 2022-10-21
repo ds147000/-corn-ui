@@ -6,7 +6,7 @@ sort: 2
 
 ```tsx
 import { useState } from 'react'
-import { Tab } from '@xrkmm/ui-h5'
+import { Tab } from 'corn-h5'
 
 const TabOption = [
   { icon: 'https://assets.xrkmm.cn/u/4000002499670412/9ec97723-bf4b-47c4-887b-b8d57805b7ab.jpeg' },

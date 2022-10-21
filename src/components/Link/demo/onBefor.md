@@ -5,7 +5,7 @@ sort: 4
 ### 监听或者跳转
 
 ```tsx
-import { Link, Toast } from '@xrkmm/ui-h5'
+import { Link, Toast } from 'corn-h5'
 
 Link.onBefor = (): boolean => {
   Toast.show('修改全局的toast')

@@ -6,7 +6,7 @@ sort: 4
 镂空的幽灵风格按钮
 
 ```tsx
-import { Button } from '@xrkmm/ui-h5'
+import { Button } from 'corn-h5'
 
 const Demo: React.FC = () => {
 

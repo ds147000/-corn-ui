@@ -6,7 +6,7 @@ style: block
 ### 代码演示
 
 ```tsx
-import { Icon } from "@xrkmm/ui-h5";
+import { Icon } from "corn-h5";
 
 const Demo: React.FC = () => {
   return (

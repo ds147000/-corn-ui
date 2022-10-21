@@ -5,7 +5,7 @@ sort: 1
 ### 5种状态基础使用
 
 ```tsx
-import { Tag } from '@xrkmm/ui-h5'
+import { Tag } from 'corn-h5'
 
 const Demo: React.FC = () => {
 

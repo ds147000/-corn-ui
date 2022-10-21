@@ -5,7 +5,7 @@ sort: 3
 ### 指定Link渲染的标签类型
 
 ```tsx
-import { Link } from '@xrkmm/ui-h5'
+import { Link } from 'corn-h5'
 
 const Demo: React.FC = () => {
 

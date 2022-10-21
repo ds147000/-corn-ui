@@ -6,7 +6,7 @@ sort: 2
 
 ```tsx
 import { useState } from 'react'
-import { Drawer, Button } from '@xrkmm/ui-h5'
+import { Drawer, Button } from 'corn-h5'
 
 const Demo: React.FC = () => {
   const [ show, setShow ] = useState(false)

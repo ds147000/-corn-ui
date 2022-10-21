@@ -4,7 +4,7 @@ sort: 5
 ### 不可操作toast
 
 ```tsx
-import { Button, Toast } from '@xrkmm/ui-h5'
+import { Button, Toast } from 'corn-h5'
 
 const Demo: React.FC = () => {
   const onClick = () => {

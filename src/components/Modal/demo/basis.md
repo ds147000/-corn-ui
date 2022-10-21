@@ -5,7 +5,7 @@ sort: 2
 
 ```tsx
 import { useState } from "react";
-import { Modal, Button } from "@xrkmm/ui-h5";
+import { Modal, Button } from "corn-h5";
 
 const Demo: React.FC = () => {
   const [show, setShow] = useState(false)

@@ -5,7 +5,7 @@ sort: 2
 ### 可直接输入的搜索框
 
 ```tsx
-import { Search, Toast, Icon } from '@xrkmm/ui-h5'
+import { Search, Toast, Icon } from 'corn-h5'
 
 const Demo: React.FC = () => {
   return (
