@@ -1,4 +1,4 @@
-$prefix: xrk-btn;
+$prefix: corn-btn;
 
 @mixin btnBlock {
   display: flex;
@@ -290,7 +290,7 @@ $prefix: xrk-btn;
     padding: 0 16px;
   }
 
-  &-child-icon .xrk-icon {
+  &-child-icon .corn-icon {
     padding-left: 16px;
   }
 }

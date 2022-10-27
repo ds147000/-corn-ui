@@ -92,7 +92,7 @@ describe('Popover', () => {
     fireEvent.click(screen.getByText('气泡按钮'))
     await waitFor(() => screen.getByText('气泡标题'))
     fireEvent.click(screen.getByText('气泡标题'))
-    fireEvent.animationEnd(screen.container.querySelector('.xrk-popover-hide'), { detail: { animationName: 'HIDE' } })
+    fireEvent.animationEnd(screen.container.querySelector('.corn-popover-hide'), { detail: { animationName: 'HIDE' } })
     await waitFor(() => expect(screen.queryByText('气泡标题')).toBeNull())
   })
 

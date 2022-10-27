@@ -20,7 +20,7 @@ const XImage: React.FC<XImageProps> = ({
   ...props
 }) => {
   const el = useRef<{ imgRef: HTMLImageElement }>()
-  const _class = useMemo(() => ClassNames('xrk-img', className), [ className ])
+  const _class = useMemo(() => ClassNames('corn-img', className), [ className ])
   // 缓冲的图片url
   const _src = useMemo(() => formatImg(src, { m, w, h, l, s, limit, format }), [ m, w, h, l, s, limit, format, src ])
   // 占位图

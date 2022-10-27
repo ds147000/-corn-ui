@@ -3,7 +3,7 @@
 exports[`UploadBase row 1`] = `
 <div>
   <div
-    class="xrk-upload xrk-upload-row"
+    class="corn-upload corn-upload-row"
   />
 </div>
 `;
@@ -11,7 +11,7 @@ exports[`UploadBase row 1`] = `
 exports[`UploadBase square 1`] = `
 <div>
   <div
-    class="xrk-upload xrk-upload-row"
+    class="corn-upload corn-upload-row"
   />
 </div>
 `;
@@ -19,7 +19,7 @@ exports[`UploadBase square 1`] = `
 exports[`UploadBase 自定义按钮 1`] = `
 <div>
   <div
-    class="xrk-upload xrk-upload-row"
+    class="corn-upload corn-upload-row"
   >
     <div>
       上传

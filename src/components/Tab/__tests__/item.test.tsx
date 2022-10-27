@@ -28,7 +28,7 @@ describe('comps/Tab/item', () => {
   test('message', () => {
     const screen = render(<Item title="item" message />)
     // eslint-disable-next-line no-magic-numbers
-    expect(screen.getByText('item').className.indexOf('xrk-tab-item-message')).not.toBe(-1)
+    expect(screen.getByText('item').className.indexOf('corn-tab-item-message')).not.toBe(-1)
     expect(screen.container).toMatchSnapshot()
   })
 

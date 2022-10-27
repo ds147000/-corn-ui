@@ -12,7 +12,7 @@ const Input: React.FC<InputProps> = ({ className, value, onInput, ...props }) =>
       {...props}
       value={_value}
       onInput={_onInput}
-      className={classNames(className, 'xrk-input')}
+      className={classNames(className, 'corn-input')}
       data-testid="input"
     />
   )

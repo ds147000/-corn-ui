@@ -6,10 +6,10 @@ Object {
   "baseElement": <body>
     <div>
       <div
-        class="xrk-alert xrk-f"
+        class="corn-alert corn-f"
       >
         <i
-          class="icon xrk-icon xrk-i-error"
+          class="icon corn-icon corn-i-error"
         />
         您发表的【商品名称】内容审核不通过，具体原因如下：文案文字，这里有可能有很多文字，允许多行显示
       </div>
@@ -17,10 +17,10 @@ Object {
   </body>,
   "container": <div>
     <div
-      class="xrk-alert xrk-f"
+      class="corn-alert corn-f"
     >
       <i
-        class="icon xrk-icon xrk-i-error"
+        class="icon corn-icon corn-i-error"
       />
       您发表的【商品名称】内容审核不通过，具体原因如下：文案文字，这里有可能有很多文字，允许多行显示
     </div>
@@ -85,10 +85,10 @@ Object {
   "baseElement": <body>
     <div>
       <div
-        class="xrk-alert xrk-f"
+        class="corn-alert corn-f"
       >
         <i
-          class="icon xrk-icon xrk-i-error"
+          class="icon corn-icon corn-i-error"
         />
         您发表的【商品名称】内容审核不通过，具体原因如下：文案文字，这里有可能有很多文字，允许多行显示
       </div>
@@ -96,10 +96,10 @@ Object {
   </body>,
   "container": <div>
     <div
-      class="xrk-alert xrk-f"
+      class="corn-alert corn-f"
     >
       <i
-        class="icon xrk-icon xrk-i-error"
+        class="icon corn-icon corn-i-error"
       />
       您发表的【商品名称】内容审核不通过，具体原因如下：文案文字，这里有可能有很多文字，允许多行显示
     </div>

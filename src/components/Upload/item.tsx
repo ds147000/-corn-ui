@@ -24,17 +24,17 @@ export const UploadItem: React.FC<UploadItemProps> = ({
   item
 }) => {
   const _itemClass = useMemo(() => classNames(
-    'xrk-upload-item',
+    'corn-upload-item',
     className
   ), [ className ])
 
   const status = useMemo(() => {
     switch(item.status) {
       case 'loading':
-        return <View className="xrk-upload-loading" />
+        return <View className="corn-upload-loading" />
 
       case 'error':
-        return <View className="xrk-upload-error xrk-f xrk-ac xrk-jc" >上传失败</View>
+        return <View className="corn-upload-error corn-f corn-ac corn-jc" >上传失败</View>
 
       default:
         return null
@@ -52,14 +52,14 @@ export const UploadItem: React.FC<UploadItemProps> = ({
   return (
     <View className={_itemClass} data-testid="upload-item" >
       <View
-        className="xrk-upload-remove xrk-f xrk-ac xrk-jc"
+        className="corn-upload-remove corn-f corn-ac corn-jc"
         onClick={_onRemove}
         data-testid="upload-remove"
       >
         <Icon name="delete"  />
       </View>
       <Image
-        className="xrk-upload-img"
+        className="corn-upload-img"
         src={item.content}
         onClick={_onPreview}
         lazyLoad

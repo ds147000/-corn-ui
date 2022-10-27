@@ -7,7 +7,7 @@ Object {
     <div>
       <input
         accept="video/*,image/*"
-        class="xrk-upload-mask"
+        class="corn-upload-mask"
         data-testid="uplaod-btn"
         multiple=""
         type="file"
@@ -17,7 +17,7 @@ Object {
   "container": <div>
     <input
       accept="video/*,image/*"
-      class="xrk-upload-mask"
+      class="corn-upload-mask"
       data-testid="uplaod-btn"
       multiple=""
       type="file"

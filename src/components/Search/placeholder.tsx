@@ -43,10 +43,10 @@ const SearchPlaceholderList: React.FC<SearchPlaceholderListProps> = ({ data }) =
   }, [ data.length ])
 
   return (
-    <View className="xrk-search-placeholder" >
-      <View className="xrk-search-placeholder-list" style={{ top: transformRem(move * MOVE_SEEPD) }} >
+    <View className="corn-search-placeholder" >
+      <View className="corn-search-placeholder-list" style={{ top: transformRem(move * MOVE_SEEPD) }} >
         {data.map((item, key) => (
-          <View key={item + String(key)} className="xrk-search-placeholder-item xrk-f xrk-ac" >{item}</View>
+          <View key={item + String(key)} className="corn-search-placeholder-item corn-f corn-ac" >{item}</View>
         ))}
       </View>
     </View>
@@ -64,7 +64,7 @@ export const SearchPlaceholder: React.FC<SearchPlaceholderProps> = ({ data }) =>
 
   if (typeof data === 'string' || typeof data === 'number') {
     return (
-      <View className="xrk-search-placeholder">
+      <View className="corn-search-placeholder">
         {data}
       </View>
     )

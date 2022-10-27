@@ -58,12 +58,12 @@ const XiaokuiModal: React.FC<XIAO_KUI_MODAL.Props & DrawerProps> = ({
 
   return (
     <Drawer {...props} onClose={onClose} position="center" >
-      <View className="xrk-xiaokui-modal" >
-        <Image className="xrk-xiaokui-modal-head" src={HEAD_IMG_MAP[type]} />
-        <View className="xrk-xiaokui-modal-body" >
-          <View className="xrk-xiaokui-modal-content" >{content || children}</View>
+      <View className="corn-xiaokui-modal" >
+        <Image className="corn-xiaokui-modal-head" src={HEAD_IMG_MAP[type]} />
+        <View className="corn-xiaokui-modal-body" >
+          <View className="corn-xiaokui-modal-content" >{content || children}</View>
           {Boolean(btn?.length) && (
-            <View className="xrk-xiaokui-modal-btns" >
+            <View className="corn-xiaokui-modal-btns" >
               {btn?.map((item, key) => (
                 <Button
                   ghost={item.ghost}
@@ -72,7 +72,7 @@ const XiaokuiModal: React.FC<XIAO_KUI_MODAL.Props & DrawerProps> = ({
                   onClick={(): void => onClick?.(item, key)}
                   size="big"
                   block
-                  className="xrk-xiaokui-modal-btn"
+                  className="corn-xiaokui-modal-btn"
                 >
                   {item.text}
                 </Button>
@@ -80,7 +80,7 @@ const XiaokuiModal: React.FC<XIAO_KUI_MODAL.Props & DrawerProps> = ({
             </View>
           )}
         </View>
-        {closable &&  <View className="xrk-xiaokui-modal-close" data-testid="close" onClick={onClose} />}
+        {closable &&  <View className="corn-xiaokui-modal-close" data-testid="close" onClick={onClose} />}
       </View>
     </Drawer>
   )

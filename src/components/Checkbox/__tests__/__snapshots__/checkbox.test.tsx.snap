@@ -3,17 +3,17 @@
 exports[`Checkbox 基础 1`] = `
 <div>
   <div
-    class="xrk-if xrk-ac xrk-checkbox"
-    data-testid="xrk-checkbox"
+    class="corn-if corn-ac corn-checkbox"
+    data-testid="corn-checkbox"
   >
     <input
-      class="xrk-checkbox-hide"
+      class="corn-checkbox-hide"
       data-testid="check"
       readonly=""
       value="false"
     />
     <div
-      class="taro-img xrk-img xrk-checkbox-icon"
+      class="taro-img corn-img corn-checkbox-icon"
     >
       <img
         class="taro-img__mode-scaletofill"
@@ -28,17 +28,17 @@ exports[`Checkbox 基础 1`] = `
 exports[`Checkbox 基础 按钮类型 1`] = `
 <div>
   <div
-    class="xrk-if xrk-ac xrk-checkbox-btn"
-    data-testid="xrk-checkbox"
+    class="corn-if corn-ac corn-checkbox-btn"
+    data-testid="corn-checkbox"
   >
     <input
-      class="xrk-checkbox-hide"
+      class="corn-checkbox-hide"
       data-testid="check"
       readonly=""
       value="false"
     />
     <button
-      class="xrk-btn xrk-if xrk-ac xrk-jc xrk-btn-middle xrk-btn-default"
+      class="corn-btn corn-if corn-ac corn-jc corn-btn-middle corn-btn-default"
       type="button"
     >
       商品链接
@@ -50,17 +50,17 @@ exports[`Checkbox 基础 按钮类型 1`] = `
 exports[`Checkbox 基础 按钮类型 2`] = `
 <div>
   <div
-    class="xrk-if xrk-ac xrk-checkbox-btn"
-    data-testid="xrk-checkbox"
+    class="corn-if corn-ac corn-checkbox-btn"
+    data-testid="corn-checkbox"
   >
     <input
-      class="xrk-checkbox-hide"
+      class="corn-checkbox-hide"
       data-testid="check"
       readonly=""
       value="true"
     />
     <button
-      class="xrk-btn xrk-if xrk-ac xrk-jc xrk-btn-middle xrk-btn-primary"
+      class="corn-btn corn-if corn-ac corn-jc corn-btn-middle corn-btn-primary"
       type="button"
     >
       商品链接
@@ -72,17 +72,17 @@ exports[`Checkbox 基础 按钮类型 2`] = `
 exports[`Checkbox 选中 1`] = `
 <div>
   <div
-    class="xrk-if xrk-ac xrk-checkbox"
-    data-testid="xrk-checkbox"
+    class="corn-if corn-ac corn-checkbox"
+    data-testid="corn-checkbox"
   >
     <input
-      class="xrk-checkbox-hide"
+      class="corn-checkbox-hide"
       data-testid="check"
       readonly=""
       value="true"
     />
     <div
-      class="taro-img xrk-img xrk-checkbox-icon"
+      class="taro-img corn-img corn-checkbox-icon"
     >
       <img
         class="taro-img__mode-scaletofill"

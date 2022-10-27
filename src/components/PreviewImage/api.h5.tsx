@@ -22,15 +22,15 @@ const Container: React.FC<ContainerProps> = ({ onDestory, urls, activeIndex }) =
   return (
     <View
       data-testid="previewImage"
-      className="xrk-preview"
+      className="corn-preview"
       onClick={onDestory}
       key="previewImage"
     >
-      <Text className="xrk-preview-dot">{index + START_INDEX}/{urls.length}</Text>
+      <Text className="corn-preview-dot">{index + START_INDEX}/{urls.length}</Text>
       <Swiper
         loop={false}
         initialSlide={activeIndex}
-        className="xrk-preview-swiper"
+        className="corn-preview-swiper"
         onSlideChange={onChange}
         autoHeight
       >
@@ -39,7 +39,7 @@ const Container: React.FC<ContainerProps> = ({ onDestory, urls, activeIndex }) =
             <Image
               lazyLoad={false}
               src={item}
-              className="xrk-preview-img"
+              className="corn-preview-img"
             />
           </SwiperSlide>
         ))}

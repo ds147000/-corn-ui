@@ -35,20 +35,20 @@ const Modal: React.FC<ModalProps> = ({
   const isButton = Boolean(button?.length)
   const _centent = children || content
   const floorClass = (isButton && (button as ModalButton[]).length >= MULTI_NUM) ?
-    'xrk-modal-floor-multi' :
-    'xrk-modal-floor-line'
+    'corn-modal-floor-multi' :
+    'corn-modal-floor-line'
 
   return (
     <Drawer
       {...props}
       position="center"
     >
-      <View className="xrk-modal" data-testid="modal" >
-        <View className="xrk-modal-top">
-          {Boolean(title) && <View className="xrk-modal-title">{title}</View>}
+      <View className="corn-modal" data-testid="modal" >
+        <View className="corn-modal-top">
+          {Boolean(title) && <View className="corn-modal-title">{title}</View>}
 
           {Boolean(_centent) && (
-            <View className="xrk-modal-content">
+            <View className="corn-modal-content">
               {_centent}
             </View>
           )}
@@ -59,7 +59,7 @@ const Modal: React.FC<ModalProps> = ({
           <View className={floorClass}>
             {(button as ModalButton[]).map((item, key) => (
               <View
-                className={`xrk-modal-button ${item.style}`}
+                className={`corn-modal-button ${item.style}`}
                 // eslint-disable-next-line react/no-array-index-key
                 key={String(key)}
                 onClick={(): void => {

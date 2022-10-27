@@ -17,10 +17,10 @@ export interface TagProps extends ViewProps {
 const Tag: React.FC<TagProps> = ({ size = 'small', type = 'primary', ghost, children, className, ...props }) => {
   const _class = useMemo(() => {
     return ClassNames(
-      'xrk-tag xrk-if xrk-ac',
-      'xrk-tag-' + size,
-      'xrk-tag-' + type,
-      ghost && 'xrk-tag-ghost',
+      'corn-tag corn-if corn-ac',
+      'corn-tag-' + size,
+      'corn-tag-' + type,
+      ghost && 'corn-tag-ghost',
       className
     )
   }, [ className, size, type, ghost ])

@@ -3,36 +3,36 @@
 exports[`Modal basis 1`] = `
 <div>
   <div
-    class="xrk-drawer-mask xrk-drawer-mask-show"
+    class="corn-drawer-mask corn-drawer-mask-show"
     data-testid="mask"
   />
   <div
-    class="xrk-drawer-body xrk-drawer-center-show xrk-drawer-center"
+    class="corn-drawer-body corn-drawer-center-show corn-drawer-center"
     data-testid="body"
   >
     <div
-      class="xrk-modal"
+      class="corn-modal"
       data-testid="modal"
     >
       <div
-        class="xrk-modal-top"
+        class="corn-modal-top"
       >
         <div
-          class="xrk-modal-title"
+          class="corn-modal-title"
         >
           弹窗
         </div>
       </div>
       <div
-        class="xrk-modal-floor-line"
+        class="corn-modal-floor-line"
       >
         <div
-          class="xrk-modal-button cancel"
+          class="corn-modal-button cancel"
         >
           取消
         </div>
         <div
-          class="xrk-modal-button undefined"
+          class="corn-modal-button undefined"
         >
           确定
         </div>
@@ -45,41 +45,41 @@ exports[`Modal basis 1`] = `
 exports[`Modal button 1`] = `
 <div>
   <div
-    class="xrk-drawer-mask xrk-drawer-mask-show"
+    class="corn-drawer-mask corn-drawer-mask-show"
     data-testid="mask"
   />
   <div
-    class="xrk-drawer-body xrk-drawer-center-show xrk-drawer-center"
+    class="corn-drawer-body corn-drawer-center-show corn-drawer-center"
     data-testid="body"
   >
     <div
-      class="xrk-modal"
+      class="corn-modal"
       data-testid="modal"
     >
       <div
-        class="xrk-modal-top"
+        class="corn-modal-top"
       >
         <div
-          class="xrk-modal-title"
+          class="corn-modal-title"
         >
           弹窗
         </div>
         <div
-          class="xrk-modal-content"
+          class="corn-modal-content"
         >
           我是弹窗
         </div>
       </div>
       <div
-        class="xrk-modal-floor-line"
+        class="corn-modal-floor-line"
       >
         <div
-          class="xrk-modal-button cancel"
+          class="corn-modal-button cancel"
         >
           取消
         </div>
         <div
-          class="xrk-modal-button undefined"
+          class="corn-modal-button undefined"
         >
           确定
         </div>
@@ -92,46 +92,46 @@ exports[`Modal button 1`] = `
 exports[`Modal button multi 1`] = `
 <div>
   <div
-    class="xrk-drawer-mask xrk-drawer-mask-show"
+    class="corn-drawer-mask corn-drawer-mask-show"
     data-testid="mask"
   />
   <div
-    class="xrk-drawer-body xrk-drawer-center-show xrk-drawer-center"
+    class="corn-drawer-body corn-drawer-center-show corn-drawer-center"
     data-testid="body"
   >
     <div
-      class="xrk-modal"
+      class="corn-modal"
       data-testid="modal"
     >
       <div
-        class="xrk-modal-top"
+        class="corn-modal-top"
       >
         <div
-          class="xrk-modal-title"
+          class="corn-modal-title"
         >
           弹窗
         </div>
         <div
-          class="xrk-modal-content"
+          class="corn-modal-content"
         >
           我是弹窗
         </div>
       </div>
       <div
-        class="xrk-modal-floor-multi"
+        class="corn-modal-floor-multi"
       >
         <div
-          class="xrk-modal-button cancel"
+          class="corn-modal-button cancel"
         >
           取消
         </div>
         <div
-          class="xrk-modal-button undefined"
+          class="corn-modal-button undefined"
         >
           自定义样式
         </div>
         <div
-          class="xrk-modal-button undefined"
+          class="corn-modal-button undefined"
         >
           确定
         </div>
@@ -144,27 +144,27 @@ exports[`Modal button multi 1`] = `
 exports[`Modal children 1`] = `
 <div>
   <div
-    class="xrk-drawer-mask xrk-drawer-mask-show"
+    class="corn-drawer-mask corn-drawer-mask-show"
     data-testid="mask"
   />
   <div
-    class="xrk-drawer-body xrk-drawer-center-show xrk-drawer-center"
+    class="corn-drawer-body corn-drawer-center-show corn-drawer-center"
     data-testid="body"
   >
     <div
-      class="xrk-modal"
+      class="corn-modal"
       data-testid="modal"
     >
       <div
-        class="xrk-modal-top"
+        class="corn-modal-top"
       >
         <div
-          class="xrk-modal-title"
+          class="corn-modal-title"
         >
           弹窗
         </div>
         <div
-          class="xrk-modal-content"
+          class="corn-modal-content"
         >
           <div
             class=""
@@ -174,15 +174,15 @@ exports[`Modal children 1`] = `
         </div>
       </div>
       <div
-        class="xrk-modal-floor-line"
+        class="corn-modal-floor-line"
       >
         <div
-          class="xrk-modal-button cancel"
+          class="corn-modal-button cancel"
         >
           取消
         </div>
         <div
-          class="xrk-modal-button undefined"
+          class="corn-modal-button undefined"
         >
           确定
         </div>
@@ -195,41 +195,41 @@ exports[`Modal children 1`] = `
 exports[`Modal content 1`] = `
 <div>
   <div
-    class="xrk-drawer-mask xrk-drawer-mask-show"
+    class="corn-drawer-mask corn-drawer-mask-show"
     data-testid="mask"
   />
   <div
-    class="xrk-drawer-body xrk-drawer-center-show xrk-drawer-center"
+    class="corn-drawer-body corn-drawer-center-show corn-drawer-center"
     data-testid="body"
   >
     <div
-      class="xrk-modal"
+      class="corn-modal"
       data-testid="modal"
     >
       <div
-        class="xrk-modal-top"
+        class="corn-modal-top"
       >
         <div
-          class="xrk-modal-title"
+          class="corn-modal-title"
         >
           弹窗
         </div>
         <div
-          class="xrk-modal-content"
+          class="corn-modal-content"
         >
           我是弹窗
         </div>
       </div>
       <div
-        class="xrk-modal-floor-line"
+        class="corn-modal-floor-line"
       >
         <div
-          class="xrk-modal-button cancel"
+          class="corn-modal-button cancel"
         >
           取消
         </div>
         <div
-          class="xrk-modal-button undefined"
+          class="corn-modal-button undefined"
         >
           确定
         </div>
@@ -242,19 +242,19 @@ exports[`Modal content 1`] = `
 exports[`Modal not button 1`] = `
 <div>
   <div
-    class="xrk-drawer-mask xrk-drawer-mask-show"
+    class="corn-drawer-mask corn-drawer-mask-show"
     data-testid="mask"
   />
   <div
-    class="xrk-drawer-body xrk-drawer-center-show xrk-drawer-center"
+    class="corn-drawer-body corn-drawer-center-show corn-drawer-center"
     data-testid="body"
   >
     <div
-      class="xrk-modal"
+      class="corn-modal"
       data-testid="modal"
     >
       <div
-        class="xrk-modal-top"
+        class="corn-modal-top"
       />
     </div>
   </div>

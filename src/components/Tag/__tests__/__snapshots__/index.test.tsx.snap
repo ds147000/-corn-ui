@@ -6,7 +6,7 @@ Object {
   "baseElement": <body>
     <div>
       <div
-        class="xrk-tag xrk-if xrk-ac xrk-tag-small xrk-tag-primary"
+        class="corn-tag corn-if corn-ac corn-tag-small corn-tag-primary"
       >
         <span
           class="taro-text"
@@ -18,7 +18,7 @@ Object {
   </body>,
   "container": <div>
     <div
-      class="xrk-tag xrk-if xrk-ac xrk-tag-small xrk-tag-primary"
+      class="corn-tag corn-if corn-ac corn-tag-small corn-tag-primary"
     >
       <span
         class="taro-text"
@@ -87,7 +87,7 @@ Object {
   "baseElement": <body>
     <div>
       <div
-        class="xrk-tag xrk-if xrk-ac xrk-tag-large xrk-tag-primary"
+        class="corn-tag corn-if corn-ac corn-tag-large corn-tag-primary"
       >
         <span
           class="taro-text"
@@ -96,7 +96,7 @@ Object {
         </span>
       </div>
       <div
-        class="xrk-tag xrk-if xrk-ac xrk-tag-middle xrk-tag-primary"
+        class="corn-tag corn-if corn-ac corn-tag-middle corn-tag-primary"
       >
         <span
           class="taro-text"
@@ -105,7 +105,7 @@ Object {
         </span>
       </div>
       <div
-        class="xrk-tag xrk-if xrk-ac xrk-tag-small xrk-tag-primary"
+        class="corn-tag corn-if corn-ac corn-tag-small corn-tag-primary"
       >
         <span
           class="taro-text"
@@ -114,7 +114,7 @@ Object {
         </span>
       </div>
       <div
-        class="xrk-tag xrk-if xrk-ac xrk-tag-mini xrk-tag-primary"
+        class="corn-tag corn-if corn-ac corn-tag-mini corn-tag-primary"
       >
         <span
           class="taro-text"
@@ -126,7 +126,7 @@ Object {
   </body>,
   "container": <div>
     <div
-      class="xrk-tag xrk-if xrk-ac xrk-tag-large xrk-tag-primary"
+      class="corn-tag corn-if corn-ac corn-tag-large corn-tag-primary"
     >
       <span
         class="taro-text"
@@ -135,7 +135,7 @@ Object {
       </span>
     </div>
     <div
-      class="xrk-tag xrk-if xrk-ac xrk-tag-middle xrk-tag-primary"
+      class="corn-tag corn-if corn-ac corn-tag-middle corn-tag-primary"
     >
       <span
         class="taro-text"
@@ -144,7 +144,7 @@ Object {
       </span>
     </div>
     <div
-      class="xrk-tag xrk-if xrk-ac xrk-tag-small xrk-tag-primary"
+      class="corn-tag corn-if corn-ac corn-tag-small corn-tag-primary"
     >
       <span
         class="taro-text"
@@ -153,7 +153,7 @@ Object {
       </span>
     </div>
     <div
-      class="xrk-tag xrk-if xrk-ac xrk-tag-mini xrk-tag-primary"
+      class="corn-tag corn-if corn-ac corn-tag-mini corn-tag-primary"
     >
       <span
         class="taro-text"
@@ -222,7 +222,7 @@ Object {
   "baseElement": <body>
     <div>
       <div
-        class="xrk-tag xrk-if xrk-ac xrk-tag-small xrk-tag-error"
+        class="corn-tag corn-if corn-ac corn-tag-small corn-tag-error"
       >
         <span
           class="taro-text"
@@ -231,7 +231,7 @@ Object {
         </span>
       </div>
       <div
-        class="xrk-tag xrk-if xrk-ac xrk-tag-small xrk-tag-link"
+        class="corn-tag corn-if corn-ac corn-tag-small corn-tag-link"
       >
         <span
           class="taro-text"
@@ -240,7 +240,7 @@ Object {
         </span>
       </div>
       <div
-        class="xrk-tag xrk-if xrk-ac xrk-tag-small xrk-tag-pop"
+        class="corn-tag corn-if corn-ac corn-tag-small corn-tag-pop"
       >
         <span
           class="taro-text"
@@ -249,7 +249,7 @@ Object {
         </span>
       </div>
       <div
-        class="xrk-tag xrk-if xrk-ac xrk-tag-small xrk-tag-primary"
+        class="corn-tag corn-if corn-ac corn-tag-small corn-tag-primary"
       >
         <span
           class="taro-text"
@@ -258,7 +258,7 @@ Object {
         </span>
       </div>
       <div
-        class="xrk-tag xrk-if xrk-ac xrk-tag-small xrk-tag-warn"
+        class="corn-tag corn-if corn-ac corn-tag-small corn-tag-warn"
       >
         <span
           class="taro-text"
@@ -267,7 +267,7 @@ Object {
         </span>
       </div>
       <div
-        class="xrk-tag xrk-if xrk-ac xrk-tag-small xrk-tag-urgent"
+        class="corn-tag corn-if corn-ac corn-tag-small corn-tag-urgent"
       >
         <span
           class="taro-text"
@@ -276,7 +276,7 @@ Object {
         </span>
       </div>
       <div
-        class="xrk-tag xrk-if xrk-ac xrk-tag-small xrk-tag-activity"
+        class="corn-tag corn-if corn-ac corn-tag-small corn-tag-activity"
       >
         <span
           class="taro-text"
@@ -288,7 +288,7 @@ Object {
   </body>,
   "container": <div>
     <div
-      class="xrk-tag xrk-if xrk-ac xrk-tag-small xrk-tag-error"
+      class="corn-tag corn-if corn-ac corn-tag-small corn-tag-error"
     >
       <span
         class="taro-text"
@@ -297,7 +297,7 @@ Object {
       </span>
     </div>
     <div
-      class="xrk-tag xrk-if xrk-ac xrk-tag-small xrk-tag-link"
+      class="corn-tag corn-if corn-ac corn-tag-small corn-tag-link"
     >
       <span
         class="taro-text"
@@ -306,7 +306,7 @@ Object {
       </span>
     </div>
     <div
-      class="xrk-tag xrk-if xrk-ac xrk-tag-small xrk-tag-pop"
+      class="corn-tag corn-if corn-ac corn-tag-small corn-tag-pop"
     >
       <span
         class="taro-text"
@@ -315,7 +315,7 @@ Object {
       </span>
     </div>
     <div
-      class="xrk-tag xrk-if xrk-ac xrk-tag-small xrk-tag-primary"
+      class="corn-tag corn-if corn-ac corn-tag-small corn-tag-primary"
     >
       <span
         class="taro-text"
@@ -324,7 +324,7 @@ Object {
       </span>
     </div>
     <div
-      class="xrk-tag xrk-if xrk-ac xrk-tag-small xrk-tag-warn"
+      class="corn-tag corn-if corn-ac corn-tag-small corn-tag-warn"
     >
       <span
         class="taro-text"
@@ -333,7 +333,7 @@ Object {
       </span>
     </div>
     <div
-      class="xrk-tag xrk-if xrk-ac xrk-tag-small xrk-tag-urgent"
+      class="corn-tag corn-if corn-ac corn-tag-small corn-tag-urgent"
     >
       <span
         class="taro-text"
@@ -342,7 +342,7 @@ Object {
       </span>
     </div>
     <div
-      class="xrk-tag xrk-if xrk-ac xrk-tag-small xrk-tag-activity"
+      class="corn-tag corn-if corn-ac corn-tag-small corn-tag-activity"
     >
       <span
         class="taro-text"
@@ -411,7 +411,7 @@ Object {
   "baseElement": <body>
     <div>
       <div
-        class="xrk-tag xrk-if xrk-ac xrk-tag-small xrk-tag-error xrk-tag-ghost"
+        class="corn-tag corn-if corn-ac corn-tag-small corn-tag-error corn-tag-ghost"
       >
         <span
           class="taro-text"
@@ -420,7 +420,7 @@ Object {
         </span>
       </div>
       <div
-        class="xrk-tag xrk-if xrk-ac xrk-tag-small xrk-tag-link xrk-tag-ghost"
+        class="corn-tag corn-if corn-ac corn-tag-small corn-tag-link corn-tag-ghost"
       >
         <span
           class="taro-text"
@@ -429,7 +429,7 @@ Object {
         </span>
       </div>
       <div
-        class="xrk-tag xrk-if xrk-ac xrk-tag-small xrk-tag-pop xrk-tag-ghost"
+        class="corn-tag corn-if corn-ac corn-tag-small corn-tag-pop corn-tag-ghost"
       >
         <span
           class="taro-text"
@@ -438,7 +438,7 @@ Object {
         </span>
       </div>
       <div
-        class="xrk-tag xrk-if xrk-ac xrk-tag-small xrk-tag-primary xrk-tag-ghost"
+        class="corn-tag corn-if corn-ac corn-tag-small corn-tag-primary corn-tag-ghost"
       >
         <span
           class="taro-text"
@@ -447,7 +447,7 @@ Object {
         </span>
       </div>
       <div
-        class="xrk-tag xrk-if xrk-ac xrk-tag-small xrk-tag-warn xrk-tag-ghost"
+        class="corn-tag corn-if corn-ac corn-tag-small corn-tag-warn corn-tag-ghost"
       >
         <span
           class="taro-text"
@@ -456,7 +456,7 @@ Object {
         </span>
       </div>
       <div
-        class="xrk-tag xrk-if xrk-ac xrk-tag-small xrk-tag-urgent xrk-tag-ghost"
+        class="corn-tag corn-if corn-ac corn-tag-small corn-tag-urgent corn-tag-ghost"
       >
         <span
           class="taro-text"
@@ -468,7 +468,7 @@ Object {
   </body>,
   "container": <div>
     <div
-      class="xrk-tag xrk-if xrk-ac xrk-tag-small xrk-tag-error xrk-tag-ghost"
+      class="corn-tag corn-if corn-ac corn-tag-small corn-tag-error corn-tag-ghost"
     >
       <span
         class="taro-text"
@@ -477,7 +477,7 @@ Object {
       </span>
     </div>
     <div
-      class="xrk-tag xrk-if xrk-ac xrk-tag-small xrk-tag-link xrk-tag-ghost"
+      class="corn-tag corn-if corn-ac corn-tag-small corn-tag-link corn-tag-ghost"
     >
       <span
         class="taro-text"
@@ -486,7 +486,7 @@ Object {
       </span>
     </div>
     <div
-      class="xrk-tag xrk-if xrk-ac xrk-tag-small xrk-tag-pop xrk-tag-ghost"
+      class="corn-tag corn-if corn-ac corn-tag-small corn-tag-pop corn-tag-ghost"
     >
       <span
         class="taro-text"
@@ -495,7 +495,7 @@ Object {
       </span>
     </div>
     <div
-      class="xrk-tag xrk-if xrk-ac xrk-tag-small xrk-tag-primary xrk-tag-ghost"
+      class="corn-tag corn-if corn-ac corn-tag-small corn-tag-primary corn-tag-ghost"
     >
       <span
         class="taro-text"
@@ -504,7 +504,7 @@ Object {
       </span>
     </div>
     <div
-      class="xrk-tag xrk-if xrk-ac xrk-tag-small xrk-tag-warn xrk-tag-ghost"
+      class="corn-tag corn-if corn-ac corn-tag-small corn-tag-warn corn-tag-ghost"
     >
       <span
         class="taro-text"
@@ -513,7 +513,7 @@ Object {
       </span>
     </div>
     <div
-      class="xrk-tag xrk-if xrk-ac xrk-tag-small xrk-tag-urgent xrk-tag-ghost"
+      class="corn-tag corn-if corn-ac corn-tag-small corn-tag-urgent corn-tag-ghost"
     >
       <span
         class="taro-text"

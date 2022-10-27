@@ -111,7 +111,7 @@ class CheckBoxGroup extends React.Component<CheckBoxGroupProps, CheckBoxContextV
   private selectAllOfH5(): void {
     const ref: HTMLDivElement = this.ref
     const values: string[] = []
-    ref.querySelectorAll('.xrk-checkbox-hide').forEach((item: HTMLInputElement) => {
+    ref.querySelectorAll('.corn-checkbox-hide').forEach((item: HTMLInputElement) => {
       if (values.includes(item.value) === false)
         values.push(item.value)
     })
@@ -122,7 +122,7 @@ class CheckBoxGroup extends React.Component<CheckBoxGroupProps, CheckBoxContextV
   // #if _APP === 'weapp'
   private selectAllOfWeapp(): void {
     Taro.createSelectorQuery()
-      .selectAll(`#${this.ref.uid} .xrk-checkbox-hide`)
+      .selectAll(`#${this.ref.uid} .corn-checkbox-hide`)
       .fields({ properties: [ 'value' ] }, (list): void => {
         const values: string[] = list?.map((item) => item.value)
         this.setState({ values }, this.emitChange)
@@ -152,7 +152,7 @@ class CheckBoxGroup extends React.Component<CheckBoxGroupProps, CheckBoxContextV
     // #if _APP === 'weapp'
     input = (
       <Input
-        className="xrk-checkbox-group-hide"
+        className="corn-checkbox-group-hide"
         value={this.geiHideInputValue()}
         name={props.name}
         data-testid="check"
@@ -162,7 +162,7 @@ class CheckBoxGroup extends React.Component<CheckBoxGroupProps, CheckBoxContextV
     input = (
     // eslint-disable-next-line react/forbid-elements
       <input
-        className="xrk-checkbox-group-hide"
+        className="corn-checkbox-group-hide"
         value={this.geiHideInputValue()}
         name={props.name}
         data-testid="check"

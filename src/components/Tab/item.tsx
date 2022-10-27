@@ -8,13 +8,13 @@ import type { TAB } from './index'
 export const Item: React.FC<TAB.Item> = ({ icon, active, title, onClick, message, url }) => {
 
   const _class = useMemo(() => ClassNames(
-    'xrk-tab-item __x-st-exp __x-st-click',
-    active && 'xrk-tab-item-active __active'
+    'corn-tab-item __x-st-exp __x-st-click',
+    active && 'corn-tab-item-active __active'
   ), [ active ])
 
   const content = (
-    <View className={message ? 'xrk-tab-item-message' : ''}>
-      {icon ? <Image src={icon} className="xrk-tab-item-icon" mode="heightFix" imgProps={{ alt: title }} /> : title}
+    <View className={message ? 'corn-tab-item-message' : ''}>
+      {icon ? <Image src={icon} className="corn-tab-item-icon" mode="heightFix" imgProps={{ alt: title }} /> : title}
     </View>
   )
 

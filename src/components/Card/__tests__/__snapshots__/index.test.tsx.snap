@@ -6,13 +6,13 @@ Object {
   "baseElement": <body>
     <div>
       <div
-        class="xrk-card"
+        class="corn-card"
       />
     </div>
   </body>,
   "container": <div>
     <div
-      class="xrk-card"
+      class="corn-card"
     />
   </div>,
   "debug": [Function],
@@ -75,7 +75,7 @@ Object {
   "baseElement": <body>
     <div>
       <div
-        class="xrk-card"
+        class="corn-card"
       >
         卡片
       </div>
@@ -83,7 +83,7 @@ Object {
   </body>,
   "container": <div>
     <div
-      class="xrk-card"
+      class="corn-card"
     >
       卡片
     </div>

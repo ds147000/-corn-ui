@@ -14,9 +14,9 @@ const Textarea: React.FC<TextareaProps> = ({ floor, maxlength = DEFAULT_MAX_LEN,
   const [ _value, _onInput ] = useInput(value, props.name, onInput)
 
   return (
-    <View className="xrk-textarea" >
+    <View className="corn-textarea" >
       <TaroTextarea
-        className="xrk-textarea-conter"
+        className="corn-textarea-conter"
         value={_value}
         onInput={_onInput}
         maxlength={maxlength}
@@ -24,9 +24,9 @@ const Textarea: React.FC<TextareaProps> = ({ floor, maxlength = DEFAULT_MAX_LEN,
         data-testid="textarea"
       />
       {maxlength !== CLOSE_MAX_LEN && (
-        <View className="xrk-textarea-number" >{(_value || '').length}/{maxlength}</View>
+        <View className="corn-textarea-number" >{(_value || '').length}/{maxlength}</View>
       )}
-      <View className="xrk-textarea-floor" >
+      <View className="corn-textarea-floor" >
         {floor}
       </View>
     </View>

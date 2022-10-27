@@ -39,7 +39,7 @@ class Form extends React.Component<FormProps> implements FormClass {
       const id = this.el.current?.uid
       Taro.createSelectorQuery()
         .selectAll(
-          `#${id} .xrk-checkbox-group-hide, #${id} .xrk-input, #${id} .xrk-checkbox-hide, #${id} .xrk-textarea-conter`
+          `#${id} .corn-checkbox-group-hide, #${id} .corn-input, #${id} .corn-checkbox-hide, #${id} .corn-textarea-conter`
         )
         .fields({ properties: [ 'value', 'name' ] }, (res: SelectNodeItem[]) => {
           res

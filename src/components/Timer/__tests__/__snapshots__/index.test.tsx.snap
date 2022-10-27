@@ -3,32 +3,32 @@
 exports[`comps/Timer 1秒后过期 1`] = `
 <div>
   <div
-    class="xrk-timer xrk-if xrk-ac xrk-jc"
+    class="corn-timer corn-if corn-ac corn-jc"
   >
     <div
-      class="xrk-timer-item xrk-f xrk-ac xrk-jc"
+      class="corn-timer-item corn-f corn-ac corn-jc"
       data-testid="hous"
     >
       00
     </div>
     <div
-      class="xrk-timer-symbol"
+      class="corn-timer-symbol"
     >
       :
     </div>
     <div
-      class="xrk-timer-item xrk-f xrk-ac xrk-jc"
+      class="corn-timer-item corn-f corn-ac corn-jc"
       data-testid="min"
     >
       00
     </div>
     <div
-      class="xrk-timer-symbol"
+      class="corn-timer-symbol"
     >
       :
     </div>
     <div
-      class="xrk-timer-item xrk-f xrk-ac xrk-jc"
+      class="corn-timer-item corn-f corn-ac corn-jc"
       data-testid="sec"
     >
       00
@@ -40,32 +40,32 @@ exports[`comps/Timer 1秒后过期 1`] = `
 exports[`comps/Timer Date对象 1`] = `
 <div>
   <div
-    class="xrk-timer xrk-if xrk-ac xrk-jc"
+    class="corn-timer corn-if corn-ac corn-jc"
   >
     <div
-      class="xrk-timer-item xrk-f xrk-ac xrk-jc"
+      class="corn-timer-item corn-f corn-ac corn-jc"
       data-testid="hous"
     >
       00
     </div>
     <div
-      class="xrk-timer-symbol"
+      class="corn-timer-symbol"
     >
       :
     </div>
     <div
-      class="xrk-timer-item xrk-f xrk-ac xrk-jc"
+      class="corn-timer-item corn-f corn-ac corn-jc"
       data-testid="min"
     >
       01
     </div>
     <div
-      class="xrk-timer-symbol"
+      class="corn-timer-symbol"
     >
       :
     </div>
     <div
-      class="xrk-timer-item xrk-f xrk-ac xrk-jc"
+      class="corn-timer-item corn-f corn-ac corn-jc"
       data-testid="sec"
     >
       00
@@ -77,32 +77,32 @@ exports[`comps/Timer Date对象 1`] = `
 exports[`comps/Timer 基本使用 => fill 1`] = `
 <div>
   <div
-    class="xrk-timer xrk-if xrk-ac xrk-jc xrk-timer-fill"
+    class="corn-timer corn-if corn-ac corn-jc corn-timer-fill"
   >
     <div
-      class="xrk-timer-item xrk-f xrk-ac xrk-jc"
+      class="corn-timer-item corn-f corn-ac corn-jc"
       data-testid="hous"
     >
       00
     </div>
     <div
-      class="xrk-timer-symbol"
+      class="corn-timer-symbol"
     >
       :
     </div>
     <div
-      class="xrk-timer-item xrk-f xrk-ac xrk-jc"
+      class="corn-timer-item corn-f corn-ac corn-jc"
       data-testid="min"
     >
       01
     </div>
     <div
-      class="xrk-timer-symbol"
+      class="corn-timer-symbol"
     >
       :
     </div>
     <div
-      class="xrk-timer-item xrk-f xrk-ac xrk-jc"
+      class="corn-timer-item corn-f corn-ac corn-jc"
       data-testid="sec"
     >
       00
@@ -114,32 +114,32 @@ exports[`comps/Timer 基本使用 => fill 1`] = `
 exports[`comps/Timer 基本使用 1`] = `
 <div>
   <div
-    class="xrk-timer xrk-if xrk-ac xrk-jc"
+    class="corn-timer corn-if corn-ac corn-jc"
   >
     <div
-      class="xrk-timer-item xrk-f xrk-ac xrk-jc"
+      class="corn-timer-item corn-f corn-ac corn-jc"
       data-testid="hous"
     >
       00
     </div>
     <div
-      class="xrk-timer-symbol"
+      class="corn-timer-symbol"
     >
       :
     </div>
     <div
-      class="xrk-timer-item xrk-f xrk-ac xrk-jc"
+      class="corn-timer-item corn-f corn-ac corn-jc"
       data-testid="min"
     >
       01
     </div>
     <div
-      class="xrk-timer-symbol"
+      class="corn-timer-symbol"
     >
       :
     </div>
     <div
-      class="xrk-timer-item xrk-f xrk-ac xrk-jc"
+      class="corn-timer-item corn-f corn-ac corn-jc"
       data-testid="sec"
     >
       00
@@ -151,28 +151,28 @@ exports[`comps/Timer 基本使用 1`] = `
 exports[`comps/Timer 基本使用 天 1`] = `
 <div>
   <div
-    class="xrk-timer xrk-if xrk-ac xrk-jc"
+    class="corn-timer corn-if corn-ac corn-jc"
   >
     <div
-      class="xrk-f xrk-ac xrk-jc xrk-timer-day"
+      class="corn-f corn-ac corn-jc corn-timer-day"
       data-testid="day"
     >
       1
       天
     </div>
     <div
-      class="xrk-timer-item xrk-f xrk-ac xrk-jc"
+      class="corn-timer-item corn-f corn-ac corn-jc"
       data-testid="hous"
     >
       00
     </div>
     <div
-      class="xrk-timer-symbol"
+      class="corn-timer-symbol"
     >
       :
     </div>
     <div
-      class="xrk-timer-item xrk-f xrk-ac xrk-jc"
+      class="corn-timer-item corn-f corn-ac corn-jc"
       data-testid="min"
     >
       00
@@ -184,32 +184,32 @@ exports[`comps/Timer 基本使用 天 1`] = `
 exports[`comps/Timer 基本使用 小时 1`] = `
 <div>
   <div
-    class="xrk-timer xrk-if xrk-ac xrk-jc"
+    class="corn-timer corn-if corn-ac corn-jc"
   >
     <div
-      class="xrk-timer-item xrk-f xrk-ac xrk-jc"
+      class="corn-timer-item corn-f corn-ac corn-jc"
       data-testid="hous"
     >
       01
     </div>
     <div
-      class="xrk-timer-symbol"
+      class="corn-timer-symbol"
     >
       :
     </div>
     <div
-      class="xrk-timer-item xrk-f xrk-ac xrk-jc"
+      class="corn-timer-item corn-f corn-ac corn-jc"
       data-testid="min"
     >
       00
     </div>
     <div
-      class="xrk-timer-symbol"
+      class="corn-timer-symbol"
     >
       :
     </div>
     <div
-      class="xrk-timer-item xrk-f xrk-ac xrk-jc"
+      class="corn-timer-item corn-f corn-ac corn-jc"
       data-testid="sec"
     >
       00
@@ -221,32 +221,32 @@ exports[`comps/Timer 基本使用 小时 1`] = `
 exports[`comps/Timer 基本使用 秒 1`] = `
 <div>
   <div
-    class="xrk-timer xrk-if xrk-ac xrk-jc"
+    class="corn-timer corn-if corn-ac corn-jc"
   >
     <div
-      class="xrk-timer-item xrk-f xrk-ac xrk-jc"
+      class="corn-timer-item corn-f corn-ac corn-jc"
       data-testid="hous"
     >
       00
     </div>
     <div
-      class="xrk-timer-symbol"
+      class="corn-timer-symbol"
     >
       :
     </div>
     <div
-      class="xrk-timer-item xrk-f xrk-ac xrk-jc"
+      class="corn-timer-item corn-f corn-ac corn-jc"
       data-testid="min"
     >
       00
     </div>
     <div
-      class="xrk-timer-symbol"
+      class="corn-timer-symbol"
     >
       :
     </div>
     <div
-      class="xrk-timer-item xrk-f xrk-ac xrk-jc"
+      class="corn-timer-item corn-f corn-ac corn-jc"
       data-testid="sec"
     >
       03
@@ -258,32 +258,32 @@ exports[`comps/Timer 基本使用 秒 1`] = `
 exports[`comps/Timer 日期字符串 1`] = `
 <div>
   <div
-    class="xrk-timer xrk-if xrk-ac xrk-jc"
+    class="corn-timer corn-if corn-ac corn-jc"
   >
     <div
-      class="xrk-timer-item xrk-f xrk-ac xrk-jc"
+      class="corn-timer-item corn-f corn-ac corn-jc"
       data-testid="hous"
     >
       00
     </div>
     <div
-      class="xrk-timer-symbol"
+      class="corn-timer-symbol"
     >
       :
     </div>
     <div
-      class="xrk-timer-item xrk-f xrk-ac xrk-jc"
+      class="corn-timer-item corn-f corn-ac corn-jc"
       data-testid="min"
     >
       01
     </div>
     <div
-      class="xrk-timer-symbol"
+      class="corn-timer-symbol"
     >
       :
     </div>
     <div
-      class="xrk-timer-item xrk-f xrk-ac xrk-jc"
+      class="corn-timer-item corn-f corn-ac corn-jc"
       data-testid="sec"
     >
       00
@@ -295,7 +295,7 @@ exports[`comps/Timer 日期字符串 1`] = `
 exports[`comps/Timer 自定义渲染像 1`] = `
 <div>
   <div
-    class="xrk-timer xrk-if xrk-ac xrk-jc"
+    class="corn-timer corn-if corn-ac corn-jc"
   >
     <div
       class=""
@@ -325,32 +325,32 @@ exports[`comps/Timer 自定义渲染像 1`] = `
 exports[`comps/Timer 过期 1`] = `
 <div>
   <div
-    class="xrk-timer xrk-if xrk-ac xrk-jc"
+    class="corn-timer corn-if corn-ac corn-jc"
   >
     <div
-      class="xrk-timer-item xrk-f xrk-ac xrk-jc"
+      class="corn-timer-item corn-f corn-ac corn-jc"
       data-testid="hous"
     >
       0
     </div>
     <div
-      class="xrk-timer-symbol"
+      class="corn-timer-symbol"
     >
       :
     </div>
     <div
-      class="xrk-timer-item xrk-f xrk-ac xrk-jc"
+      class="corn-timer-item corn-f corn-ac corn-jc"
       data-testid="min"
     >
       0
     </div>
     <div
-      class="xrk-timer-symbol"
+      class="corn-timer-symbol"
     >
       :
     </div>
     <div
-      class="xrk-timer-item xrk-f xrk-ac xrk-jc"
+      class="corn-timer-item corn-f corn-ac corn-jc"
       data-testid="sec"
     >
       0

@@ -41,15 +41,15 @@ export const OpenMpLink: React.FC<OpenMpLinkProps> = ({ target, appId, path, onC
 
   const content = (
     <>
-      <View className="xrk-link-mask" ref={el} />
+      <View className="corn-link-mask" ref={el} />
       {children}
     </>
   )
 
   if (target === 'View')
-    return <View {...props} className="xrk-link-mp" data-testid="openmp" >{content}</View>
+    return <View {...props} className="corn-link-mp" data-testid="openmp" >{content}</View>
 
-  return <Text {...props} className="xrk-link-mp" data-testid="openmp">{content}</Text>
+  return <Text {...props} className="corn-link-mp" data-testid="openmp">{content}</Text>
 }
 
 /** 获取模板字符串 */

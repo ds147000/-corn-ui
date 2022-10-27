@@ -152,7 +152,7 @@ describe('UploadBase', () => {
 
     act(() => {
       const screen = render(<UploadBase list={list} btn={<div>上传</div>} />)
-      fireEvent.click(screen.container.querySelector('.xrk-upload-img'))
+      fireEvent.click(screen.container.querySelector('.corn-upload-img'))
     })
   })
 

@@ -6,41 +6,41 @@ exports[`Cell.List basis 1`] = `
     class=""
   >
     <div
-      class="xrk-cell xrk-f xrk-ac"
+      class="corn-cell corn-f corn-ac"
     >
       <div
-        class="xrk-cell-label"
+        class="corn-cell-label"
       >
         限时奖励
       </div>
       <div
-        class="xrk-cell-value"
+        class="corn-cell-value"
       >
         <span
-          class="taro-text xrk-cell-placeholder"
+          class="taro-text corn-cell-placeholder"
         />
       </div>
       <div
-        class="xrk-cell-suffix xrk-f xrk-ac"
+        class="corn-cell-suffix corn-f corn-ac"
       />
     </div>
     <div
-      class="xrk-cell xrk-f xrk-ac"
+      class="corn-cell corn-f corn-ac"
     >
       <div
-        class="xrk-cell-label"
+        class="corn-cell-label"
       >
         送葵花籽
       </div>
       <div
-        class="xrk-cell-value"
+        class="corn-cell-value"
       >
         <span
-          class="taro-text xrk-cell-placeholder"
+          class="taro-text corn-cell-placeholder"
         />
       </div>
       <div
-        class="xrk-cell-suffix xrk-f xrk-ac"
+        class="corn-cell-suffix corn-f corn-ac"
       />
     </div>
   </div>
@@ -50,44 +50,44 @@ exports[`Cell.List basis 1`] = `
 exports[`Cell.List line 1`] = `
 <div>
   <div
-    class="xrk-cell-list-line"
+    class="corn-cell-list-line"
   >
     <div
-      class="xrk-cell xrk-f xrk-ac"
+      class="corn-cell corn-f corn-ac"
     >
       <div
-        class="xrk-cell-label"
+        class="corn-cell-label"
       >
         限时奖励
       </div>
       <div
-        class="xrk-cell-value"
+        class="corn-cell-value"
       >
         <span
-          class="taro-text xrk-cell-placeholder"
+          class="taro-text corn-cell-placeholder"
         />
       </div>
       <div
-        class="xrk-cell-suffix xrk-f xrk-ac"
+        class="corn-cell-suffix corn-f corn-ac"
       />
     </div>
     <div
-      class="xrk-cell xrk-f xrk-ac"
+      class="corn-cell corn-f corn-ac"
     >
       <div
-        class="xrk-cell-label"
+        class="corn-cell-label"
       >
         送葵花籽
       </div>
       <div
-        class="xrk-cell-value"
+        class="corn-cell-value"
       >
         <span
-          class="taro-text xrk-cell-placeholder"
+          class="taro-text corn-cell-placeholder"
         />
       </div>
       <div
-        class="xrk-cell-suffix xrk-f xrk-ac"
+        class="corn-cell-suffix corn-f corn-ac"
       />
     </div>
   </div>

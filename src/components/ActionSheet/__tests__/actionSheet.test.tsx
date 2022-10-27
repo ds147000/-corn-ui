@@ -86,7 +86,7 @@ describe('ActionSheet', () => {
   test('closable: false', async () => {
     const onClose = jest.fn()
     const screen = render(<ActionSheet visible title="大标题居右" onClose={onClose} />)
-    const closeButton = screen.container.querySelector('xrk-actionsheet-close')
+    const closeButton = screen.container.querySelector('corn-actionsheet-close')
     expect(closeButton).toBe(null)
   })
 

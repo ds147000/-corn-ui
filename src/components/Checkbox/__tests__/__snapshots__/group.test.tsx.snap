@@ -6,24 +6,24 @@ exports[`单选模式 1`] = `
     class=""
   >
     <input
-      class="xrk-checkbox-group-hide"
+      class="corn-checkbox-group-hide"
       data-testid="check"
       readonly=""
       value="\\"4\\""
     />
     <div
-      class="xrk-if xrk-ac xrk-checkbox"
-      data-testid="xrk-checkbox"
+      class="corn-if corn-ac corn-checkbox"
+      data-testid="corn-checkbox"
     >
       <input
-        class="xrk-checkbox-hide"
+        class="corn-checkbox-hide"
         data-testid="check"
         name=""
         readonly=""
         value="1"
       />
       <div
-        class="taro-img xrk-img xrk-checkbox-icon"
+        class="taro-img corn-img corn-checkbox-icon"
       >
         <img
           class="taro-img__mode-scaletofill"
@@ -33,18 +33,18 @@ exports[`单选模式 1`] = `
       选项1
     </div>
     <div
-      class="xrk-if xrk-ac xrk-checkbox"
-      data-testid="xrk-checkbox"
+      class="corn-if corn-ac corn-checkbox"
+      data-testid="corn-checkbox"
     >
       <input
-        class="xrk-checkbox-hide"
+        class="corn-checkbox-hide"
         data-testid="check"
         name=""
         readonly=""
         value="2"
       />
       <div
-        class="taro-img xrk-img xrk-checkbox-icon"
+        class="taro-img corn-img corn-checkbox-icon"
       >
         <img
           class="taro-img__mode-scaletofill"
@@ -54,18 +54,18 @@ exports[`单选模式 1`] = `
       选项2
     </div>
     <div
-      class="xrk-if xrk-ac xrk-checkbox"
-      data-testid="xrk-checkbox"
+      class="corn-if corn-ac corn-checkbox"
+      data-testid="corn-checkbox"
     >
       <input
-        class="xrk-checkbox-hide"
+        class="corn-checkbox-hide"
         data-testid="check"
         name=""
         readonly=""
         value="3"
       />
       <div
-        class="taro-img xrk-img xrk-checkbox-icon"
+        class="taro-img corn-img corn-checkbox-icon"
       >
         <img
           class="taro-img__mode-scaletofill"
@@ -75,18 +75,18 @@ exports[`单选模式 1`] = `
       选项3
     </div>
     <div
-      class="xrk-if xrk-ac xrk-checkbox"
-      data-testid="xrk-checkbox"
+      class="corn-if corn-ac corn-checkbox"
+      data-testid="corn-checkbox"
     >
       <input
-        class="xrk-checkbox-hide"
+        class="corn-checkbox-hide"
         data-testid="check"
         name=""
         readonly=""
         value="4"
       />
       <div
-        class="taro-img xrk-img xrk-checkbox-icon"
+        class="taro-img corn-img corn-checkbox-icon"
       >
         <img
           class="taro-img__mode-scaletofill"
@@ -105,24 +105,24 @@ exports[`取消选中 1`] = `
     class=""
   >
     <input
-      class="xrk-checkbox-group-hide"
+      class="corn-checkbox-group-hide"
       data-testid="check"
       readonly=""
       value="[]"
     />
     <div
-      class="xrk-if xrk-ac xrk-checkbox"
-      data-testid="xrk-checkbox"
+      class="corn-if corn-ac corn-checkbox"
+      data-testid="corn-checkbox"
     >
       <input
-        class="xrk-checkbox-hide"
+        class="corn-checkbox-hide"
         data-testid="check"
         name=""
         readonly=""
         value="1"
       />
       <div
-        class="taro-img xrk-img xrk-checkbox-icon"
+        class="taro-img corn-img corn-checkbox-icon"
       >
         <img
           class="taro-img__mode-scaletofill"
@@ -132,18 +132,18 @@ exports[`取消选中 1`] = `
       选项1
     </div>
     <div
-      class="xrk-if xrk-ac xrk-checkbox"
-      data-testid="xrk-checkbox"
+      class="corn-if corn-ac corn-checkbox"
+      data-testid="corn-checkbox"
     >
       <input
-        class="xrk-checkbox-hide"
+        class="corn-checkbox-hide"
         data-testid="check"
         name=""
         readonly=""
         value="2"
       />
       <div
-        class="taro-img xrk-img xrk-checkbox-icon"
+        class="taro-img corn-img corn-checkbox-icon"
       >
         <img
           class="taro-img__mode-scaletofill"
@@ -162,24 +162,24 @@ exports[`取消选中 和默认值 1`] = `
     class=""
   >
     <input
-      class="xrk-checkbox-group-hide"
+      class="corn-checkbox-group-hide"
       data-testid="check"
       readonly=""
       value="[]"
     />
     <div
-      class="xrk-if xrk-ac xrk-checkbox"
-      data-testid="xrk-checkbox"
+      class="corn-if corn-ac corn-checkbox"
+      data-testid="corn-checkbox"
     >
       <input
-        class="xrk-checkbox-hide"
+        class="corn-checkbox-hide"
         data-testid="check"
         name=""
         readonly=""
         value="1"
       />
       <div
-        class="taro-img xrk-img xrk-checkbox-icon"
+        class="taro-img corn-img corn-checkbox-icon"
       >
         <img
           class="taro-img__mode-scaletofill"
@@ -189,18 +189,18 @@ exports[`取消选中 和默认值 1`] = `
       选项1
     </div>
     <div
-      class="xrk-if xrk-ac xrk-checkbox"
-      data-testid="xrk-checkbox"
+      class="corn-if corn-ac corn-checkbox"
+      data-testid="corn-checkbox"
     >
       <input
-        class="xrk-checkbox-hide"
+        class="corn-checkbox-hide"
         data-testid="check"
         name=""
         readonly=""
         value="2"
       />
       <div
-        class="taro-img xrk-img xrk-checkbox-icon"
+        class="taro-img corn-img corn-checkbox-icon"
       >
         <img
           class="taro-img__mode-scaletofill"
@@ -219,24 +219,24 @@ exports[`基本使用 1`] = `
     class=""
   >
     <input
-      class="xrk-checkbox-group-hide"
+      class="corn-checkbox-group-hide"
       data-testid="check"
       readonly=""
       value="[]"
     />
     <div
-      class="xrk-if xrk-ac xrk-checkbox"
-      data-testid="xrk-checkbox"
+      class="corn-if corn-ac corn-checkbox"
+      data-testid="corn-checkbox"
     >
       <input
-        class="xrk-checkbox-hide"
+        class="corn-checkbox-hide"
         data-testid="check"
         name=""
         readonly=""
         value="1"
       />
       <div
-        class="taro-img xrk-img xrk-checkbox-icon"
+        class="taro-img corn-img corn-checkbox-icon"
       >
         <img
           class="taro-img__mode-scaletofill"
@@ -246,18 +246,18 @@ exports[`基本使用 1`] = `
       选项1
     </div>
     <div
-      class="xrk-if xrk-ac xrk-checkbox"
-      data-testid="xrk-checkbox"
+      class="corn-if corn-ac corn-checkbox"
+      data-testid="corn-checkbox"
     >
       <input
-        class="xrk-checkbox-hide"
+        class="corn-checkbox-hide"
         data-testid="check"
         name=""
         readonly=""
         value="2"
       />
       <div
-        class="taro-img xrk-img xrk-checkbox-icon"
+        class="taro-img corn-img corn-checkbox-icon"
       >
         <img
           class="taro-img__mode-scaletofill"
@@ -276,24 +276,24 @@ exports[`选中 1`] = `
     class=""
   >
     <input
-      class="xrk-checkbox-group-hide"
+      class="corn-checkbox-group-hide"
       data-testid="check"
       readonly=""
       value="[\\"1\\",\\"2\\"]"
     />
     <div
-      class="xrk-if xrk-ac xrk-checkbox"
-      data-testid="xrk-checkbox"
+      class="corn-if corn-ac corn-checkbox"
+      data-testid="corn-checkbox"
     >
       <input
-        class="xrk-checkbox-hide"
+        class="corn-checkbox-hide"
         data-testid="check"
         name=""
         readonly=""
         value="1"
       />
       <div
-        class="taro-img xrk-img xrk-checkbox-icon"
+        class="taro-img corn-img corn-checkbox-icon"
       >
         <img
           class="taro-img__mode-scaletofill"
@@ -303,18 +303,18 @@ exports[`选中 1`] = `
       选项1
     </div>
     <div
-      class="xrk-if xrk-ac xrk-checkbox"
-      data-testid="xrk-checkbox"
+      class="corn-if corn-ac corn-checkbox"
+      data-testid="corn-checkbox"
     >
       <input
-        class="xrk-checkbox-hide"
+        class="corn-checkbox-hide"
         data-testid="check"
         name=""
         readonly=""
         value="2"
       />
       <div
-        class="taro-img xrk-img xrk-checkbox-icon"
+        class="taro-img corn-img corn-checkbox-icon"
       >
         <img
           class="taro-img__mode-scaletofill"

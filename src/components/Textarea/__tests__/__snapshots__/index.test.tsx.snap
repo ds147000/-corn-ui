@@ -3,23 +3,23 @@
 exports[`Textarea 基础 1`] = `
 <div>
   <div
-    class="xrk-textarea"
+    class="corn-textarea"
   >
     <textarea
-      class="xrk-textarea-conter"
+      class="corn-textarea-conter"
       data-testid="textarea"
       maxlength="300"
       placeholder=""
     />
     <div
-      class="xrk-textarea-number"
+      class="corn-textarea-number"
     >
       0
       /
       300
     </div>
     <div
-      class="xrk-textarea-floor"
+      class="corn-textarea-floor"
     />
   </div>
 </div>
@@ -28,23 +28,23 @@ exports[`Textarea 基础 1`] = `
 exports[`Textarea 插入底部节点 1`] = `
 <div>
   <div
-    class="xrk-textarea"
+    class="corn-textarea"
   >
     <textarea
-      class="xrk-textarea-conter"
+      class="corn-textarea-conter"
       data-testid="textarea"
       maxlength="300"
       placeholder=""
     />
     <div
-      class="xrk-textarea-number"
+      class="corn-textarea-number"
     >
       0
       /
       300
     </div>
     <div
-      class="xrk-textarea-floor"
+      class="corn-textarea-floor"
     >
       <div>
         我是底部

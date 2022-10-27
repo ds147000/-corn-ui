@@ -6,7 +6,7 @@ Object {
   "baseElement": <body>
     <div>
       <a
-        class="xrk-link xrk-link-default xrk-btn xrk-if xrk-ac xrk-jc xrk-btn-middle xrk-btn-primary"
+        class="corn-link corn-link-default corn-btn corn-if corn-ac corn-jc corn-btn-middle corn-btn-primary"
         href="/home"
       >
         @CornUI
@@ -15,7 +15,7 @@ Object {
   </body>,
   "container": <div>
     <a
-      class="xrk-link xrk-link-default xrk-btn xrk-if xrk-ac xrk-jc xrk-btn-middle xrk-btn-primary"
+      class="corn-link corn-link-default corn-btn corn-if corn-ac corn-jc corn-btn-middle corn-btn-primary"
       href="/home"
     >
       @CornUI
@@ -78,7 +78,7 @@ Object {
 exports[`<Button /> icon 1`] = `
 <div>
   <button
-    class="xrk-btn xrk-if xrk-ac xrk-jc xrk-btn-middle xrk-btn-primary xrk-btn-child-icon"
+    class="corn-btn corn-if corn-ac corn-jc corn-btn-middle corn-btn-primary corn-btn-child-icon"
     type="button"
   >
     @CornUI
@@ -97,37 +97,37 @@ exports[`<Button /> size 1`] = `
     class=""
   >
     <button
-      class="xrk-btn xrk-if xrk-ac xrk-jc xrk-btn-max xrk-btn-primary"
+      class="corn-btn corn-if corn-ac corn-jc corn-btn-max corn-btn-primary"
       type="button"
     >
       @CornUI
     </button>
     <button
-      class="xrk-btn xrk-if xrk-ac xrk-jc xrk-btn-big xrk-btn-primary"
+      class="corn-btn corn-if corn-ac corn-jc corn-btn-big corn-btn-primary"
       type="button"
     >
       @CornUI
     </button>
     <button
-      class="xrk-btn xrk-if xrk-ac xrk-jc xrk-btn-large xrk-btn-primary"
+      class="corn-btn corn-if corn-ac corn-jc corn-btn-large corn-btn-primary"
       type="button"
     >
       @CornUI
     </button>
     <button
-      class="xrk-btn xrk-if xrk-ac xrk-jc xrk-btn-middle xrk-btn-primary"
+      class="corn-btn corn-if corn-ac corn-jc corn-btn-middle corn-btn-primary"
       type="button"
     >
       @CornUI
     </button>
     <button
-      class="xrk-btn xrk-if xrk-ac xrk-jc xrk-btn-small xrk-btn-primary"
+      class="corn-btn corn-if corn-ac corn-jc corn-btn-small corn-btn-primary"
       type="button"
     >
       @CornUI
     </button>
     <button
-      class="xrk-btn xrk-if xrk-ac xrk-jc xrk-btn-mini xrk-btn-primary"
+      class="corn-btn corn-if corn-ac corn-jc corn-btn-mini corn-btn-primary"
       type="button"
     >
       @CornUI
@@ -142,31 +142,31 @@ exports[`<Button /> type 1`] = `
     class=""
   >
     <button
-      class="xrk-btn xrk-if xrk-ac xrk-jc xrk-btn-middle xrk-btn-error"
+      class="corn-btn corn-if corn-ac corn-jc corn-btn-middle corn-btn-error"
       type="button"
     >
       @CornUI
     </button>
     <button
-      class="xrk-btn xrk-if xrk-ac xrk-jc xrk-btn-middle xrk-btn-link"
+      class="corn-btn corn-if corn-ac corn-jc corn-btn-middle corn-btn-link"
       type="button"
     >
       @CornUI
     </button>
     <button
-      class="xrk-btn xrk-if xrk-ac xrk-jc xrk-btn-middle xrk-btn-pop"
+      class="corn-btn corn-if corn-ac corn-jc corn-btn-middle corn-btn-pop"
       type="button"
     >
       @CornUI
     </button>
     <button
-      class="xrk-btn xrk-if xrk-ac xrk-jc xrk-btn-middle xrk-btn-primary"
+      class="corn-btn corn-if corn-ac corn-jc corn-btn-middle corn-btn-primary"
       type="button"
     >
       @CornUI
     </button>
     <button
-      class="xrk-btn xrk-if xrk-ac xrk-jc xrk-btn-middle xrk-btn-warn"
+      class="corn-btn corn-if corn-ac corn-jc corn-btn-middle corn-btn-warn"
       type="button"
     >
       @CornUI
@@ -178,7 +178,7 @@ exports[`<Button /> type 1`] = `
 exports[`<Button /> 固定宽带 1`] = `
 <div>
   <button
-    class="xrk-btn xrk-if xrk-ac xrk-jc xrk-btn-middle xrk-btn-primary xrk-btn-auto"
+    class="corn-btn corn-if corn-ac corn-jc corn-btn-middle corn-btn-primary corn-btn-auto"
     type="button"
   />
 </div>
@@ -187,7 +187,7 @@ exports[`<Button /> 固定宽带 1`] = `
 exports[`<Button /> 基本使用 1`] = `
 <div>
   <button
-    class="xrk-btn xrk-if xrk-ac xrk-jc xrk-btn-middle xrk-btn-primary"
+    class="corn-btn corn-if corn-ac corn-jc corn-btn-middle corn-btn-primary"
     type="button"
   />
 </div>
@@ -196,7 +196,7 @@ exports[`<Button /> 基本使用 1`] = `
 exports[`<Button /> 复杂标题：节点+文字 1`] = `
 <div>
   <button
-    class="xrk-btn xrk-if xrk-ac xrk-jc xrk-btn-middle xrk-btn-primary"
+    class="corn-btn corn-if corn-ac corn-jc corn-btn-middle corn-btn-primary"
     type="button"
   >
     <div
@@ -220,7 +220,7 @@ exports[`<Button /> 复杂标题：节点+文字 1`] = `
 exports[`<Button /> 标题：@CornUI 1`] = `
 <div>
   <button
-    class="xrk-btn xrk-if xrk-ac xrk-jc xrk-btn-middle xrk-btn-primary"
+    class="corn-btn corn-if corn-ac corn-jc corn-btn-middle corn-btn-primary"
     type="button"
   >
     @CornUI

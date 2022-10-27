@@ -94,7 +94,7 @@ describe('Modal', () => {
         ]}
       />
     )
-    await waitFor(() => expect(screen.container.querySelector('.xrk-modal-floor-multi')).not.toBe(null))
+    await waitFor(() => expect(screen.container.querySelector('.corn-modal-floor-multi')).not.toBe(null))
     await waitFor(() => screen.getByText('取消'))
     await waitFor(() => screen.getByText('确定'))
     await waitFor(() => screen.getByText('自定义样式'))

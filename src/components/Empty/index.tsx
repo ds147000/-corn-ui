@@ -38,7 +38,7 @@ const Empty: EmptyComponents = ({
   wrapperBottom,
   children
 }) => {
-  const _class = classNames('xrk-empty', `xrk-empty-${size}`)
+  const _class = classNames('corn-empty', `corn-empty-${size}`)
 
   const _style: React.CSSProperties = {
     paddingTop: typeof wrapperTop === 'string' ? wrapperTop : transformRem(wrapperTop),
@@ -48,16 +48,16 @@ const Empty: EmptyComponents = ({
   return (
     <View className={_class} style={_style} data-testid="empty" >
       <View key="0">
-        <Image key="1" src={src} className="xrk-empty-img" mode="aspectFit" />
+        <Image key="1" src={src} className="corn-empty-img" mode="aspectFit" />
       </View>
       {Boolean(text) && (
-        <Text className="xrk-empty-text">{text}</Text>
+        <Text className="corn-empty-text">{text}</Text>
       )}
       {Boolean(direction) && (
-        <Text className="xrk-empty-direction" >{direction}</Text>
+        <Text className="corn-empty-direction" >{direction}</Text>
       )}
       {Boolean(children) && (
-        <View className="xrk-empty-children">{children}</View>
+        <View className="corn-empty-children">{children}</View>
       )}
     </View>
   )

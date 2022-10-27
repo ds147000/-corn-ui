@@ -10,8 +10,8 @@ export interface ActionSheetItemProps {
 
 export const ActionSheetItem: React.FC<ActionSheetItemProps> = ({ text, align, onClick, suffix }) => {
   return (
-    <View className="xrk-actionsheet-item" onClick={onClick}>
-      <View className={`xrk-as-text xrk-actionsheet-${align}`}>
+    <View className="corn-actionsheet-item" onClick={onClick}>
+      <View className={`corn-as-text corn-actionsheet-${align}`}>
         {text}
       </View>
       {suffix}

@@ -16,7 +16,7 @@ export const InputMask: React.FC<InputMaskProps> = ({ type, onChange }) => {
   return (
     // eslint-disable-next-line react/forbid-elements
     <input
-      className="xrk-upload-mask"
+      className="corn-upload-mask"
       data-testid="uplaod-btn"
       type="file"
       accept={getFileSuffix(type)}

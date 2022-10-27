@@ -50,6 +50,6 @@ export const InputMask: React.FC<InputMaskProps> = ({ type, onMpChange, onChange
   }
 
   return (
-    <View className="xrk-upload-mask" onClick={_onClick} />
+    <View className="corn-upload-mask" onClick={_onClick} />
   )
 }

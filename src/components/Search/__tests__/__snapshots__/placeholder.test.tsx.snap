@@ -3,7 +3,7 @@
 exports[`SearchPlaceholder 1`] = `
 <div>
   <div
-    class="xrk-search-placeholder"
+    class="corn-search-placeholder"
   >
     输入关键词
   </div>
@@ -15,28 +15,28 @@ exports[`SearchPlaceholder empty 1`] = `<div />`;
 exports[`SearchPlaceholder more 1`] = `
 <div>
   <div
-    class="xrk-search-placeholder"
+    class="corn-search-placeholder"
   >
     <div
-      class="xrk-search-placeholder-list"
+      class="corn-search-placeholder-list"
     >
       <div
-        class="xrk-search-placeholder-item xrk-f xrk-ac"
+        class="corn-search-placeholder-item corn-f corn-ac"
       >
         输入关键词
       </div>
       <div
-        class="xrk-search-placeholder-item xrk-f xrk-ac"
+        class="corn-search-placeholder-item corn-f corn-ac"
       >
         小熊宝宝
       </div>
       <div
-        class="xrk-search-placeholder-item xrk-f xrk-ac"
+        class="corn-search-placeholder-item corn-f corn-ac"
       >
         常青藤爸爸
       </div>
       <div
-        class="xrk-search-placeholder-item xrk-f xrk-ac"
+        class="corn-search-placeholder-item corn-f corn-ac"
       >
         @Corn
       </div>
@@ -48,29 +48,29 @@ exports[`SearchPlaceholder more 1`] = `
 exports[`SearchPlaceholder more run time 1`] = `
 <div>
   <div
-    class="xrk-search-placeholder"
+    class="corn-search-placeholder"
   >
     <div
-      class="xrk-search-placeholder-list"
+      class="corn-search-placeholder-list"
       style="top: -0.6400rem;"
     >
       <div
-        class="xrk-search-placeholder-item xrk-f xrk-ac"
+        class="corn-search-placeholder-item corn-f corn-ac"
       >
         输入关键词
       </div>
       <div
-        class="xrk-search-placeholder-item xrk-f xrk-ac"
+        class="corn-search-placeholder-item corn-f corn-ac"
       >
         小熊宝宝
       </div>
       <div
-        class="xrk-search-placeholder-item xrk-f xrk-ac"
+        class="corn-search-placeholder-item corn-f corn-ac"
       >
         常青藤爸爸
       </div>
       <div
-        class="xrk-search-placeholder-item xrk-f xrk-ac"
+        class="corn-search-placeholder-item corn-f corn-ac"
       >
         @Corn
       </div>

@@ -8,7 +8,7 @@ sort: 2
 const Demo: React.FC = () => {
 
   return (
-    <i className="xrk-i-service" style={{ fontSize: 40 }} />
+    <i className="corn-i-service" style={{ fontSize: 40 }} />
   )
 }
 

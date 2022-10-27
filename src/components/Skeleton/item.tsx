@@ -36,7 +36,7 @@ export const SkeletonItem: React.FC<SkeletonItemProps> = ({
 
   return (
     <View style={{ paddingTop: _top, paddingBottom: _bottom, paddingLeft: _left, paddingRight: _right }} >
-      <View className="xrk-skeleton-item" style={{ width: _width, height: _height, borderRadius: _borderRadius }} />
+      <View className="corn-skeleton-item" style={{ width: _width, height: _height, borderRadius: _borderRadius }} />
     </View>
   )
 }

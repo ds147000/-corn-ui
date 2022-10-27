@@ -51,17 +51,17 @@ const Button: React.FC<ButtonProps> = ({
 
   const _class = useMemo(() => {
     return ClassNames(
-      'xrk-btn',
-      'xrk-if xrk-ac xrk-jc',
-      `xrk-btn-${size}`,
-      `xrk-btn-${type}`,
+      'corn-btn',
+      'corn-if corn-ac corn-jc',
+      `corn-btn-${size}`,
+      `corn-btn-${type}`,
       {
-        'xrk-btn-block': block,
-        'xrk-btn-ghost': ghost,
-        'xrk-btn-icon': isIcon && !isChildren,
-        'xrk-btn-child-icon': isIcon && isChildren,
-        'xrk-btn-disabled': disabled,
-        'xrk-btn-auto': auto
+        'corn-btn-block': block,
+        'corn-btn-ghost': ghost,
+        'corn-btn-icon': isIcon && !isChildren,
+        'corn-btn-child-icon': isIcon && isChildren,
+        'corn-btn-disabled': disabled,
+        'corn-btn-auto': auto
       },
       className
     )

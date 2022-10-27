@@ -23,7 +23,7 @@ const Affix: React.FC<AffixProps> = ({ children, position = 'top', onChange, cla
   const oldFixed = useRef<boolean>(false)
 
   const _class = useMemo(() => {
-    return ClassNames('xrk-affix', fixed && `xrk-affix-${position}`, className)
+    return ClassNames('corn-affix', fixed && `corn-affix-${position}`, className)
   }, [ fixed, position, className ])
 
   const changeFixed = useCallback((value: boolean): void => {

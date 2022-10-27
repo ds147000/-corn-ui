@@ -3,18 +3,18 @@
 exports[`XiaokuiModal 快照 1`] = `
 <div>
   <div
-    class="xrk-drawer-mask xrk-drawer-mask-show"
+    class="corn-drawer-mask corn-drawer-mask-show"
     data-testid="mask"
   />
   <div
-    class="xrk-drawer-body xrk-drawer-center-show xrk-drawer-center"
+    class="corn-drawer-body corn-drawer-center-show corn-drawer-center"
     data-testid="body"
   >
     <div
-      class="xrk-xiaokui-modal"
+      class="corn-xiaokui-modal"
     >
       <div
-        class="taro-img xrk-xiaokui-modal-head"
+        class="taro-img corn-xiaokui-modal-head"
       >
         <img
           class="taro-img__mode-scaletofill"
@@ -22,14 +22,14 @@ exports[`XiaokuiModal 快照 1`] = `
         />
       </div>
       <div
-        class="xrk-xiaokui-modal-body"
+        class="corn-xiaokui-modal-body"
       >
         <div
-          class="xrk-xiaokui-modal-content"
+          class="corn-xiaokui-modal-content"
         />
       </div>
       <div
-        class="xrk-xiaokui-modal-close"
+        class="corn-xiaokui-modal-close"
         data-testid="close"
       />
     </div>
@@ -40,18 +40,18 @@ exports[`XiaokuiModal 快照 1`] = `
 exports[`XiaokuiModal 类型快照 1`] = `
 <div>
   <div
-    class="xrk-drawer-mask xrk-drawer-mask-show"
+    class="corn-drawer-mask corn-drawer-mask-show"
     data-testid="mask"
   />
   <div
-    class="xrk-drawer-body xrk-drawer-center-show xrk-drawer-center"
+    class="corn-drawer-body corn-drawer-center-show corn-drawer-center"
     data-testid="body"
   >
     <div
-      class="xrk-xiaokui-modal"
+      class="corn-xiaokui-modal"
     >
       <div
-        class="taro-img xrk-xiaokui-modal-head"
+        class="taro-img corn-xiaokui-modal-head"
       >
         <img
           class="taro-img__mode-scaletofill"
@@ -59,31 +59,31 @@ exports[`XiaokuiModal 类型快照 1`] = `
         />
       </div>
       <div
-        class="xrk-xiaokui-modal-body"
+        class="corn-xiaokui-modal-body"
       >
         <div
-          class="xrk-xiaokui-modal-content"
+          class="corn-xiaokui-modal-content"
         />
       </div>
       <div
-        class="xrk-xiaokui-modal-close"
+        class="corn-xiaokui-modal-close"
         data-testid="close"
       />
     </div>
   </div>
   <div
-    class="xrk-drawer-mask xrk-drawer-mask-show"
+    class="corn-drawer-mask corn-drawer-mask-show"
     data-testid="mask"
   />
   <div
-    class="xrk-drawer-body xrk-drawer-center-show xrk-drawer-center"
+    class="corn-drawer-body corn-drawer-center-show corn-drawer-center"
     data-testid="body"
   >
     <div
-      class="xrk-xiaokui-modal"
+      class="corn-xiaokui-modal"
     >
       <div
-        class="taro-img xrk-xiaokui-modal-head"
+        class="taro-img corn-xiaokui-modal-head"
       >
         <img
           class="taro-img__mode-scaletofill"
@@ -91,31 +91,31 @@ exports[`XiaokuiModal 类型快照 1`] = `
         />
       </div>
       <div
-        class="xrk-xiaokui-modal-body"
+        class="corn-xiaokui-modal-body"
       >
         <div
-          class="xrk-xiaokui-modal-content"
+          class="corn-xiaokui-modal-content"
         />
       </div>
       <div
-        class="xrk-xiaokui-modal-close"
+        class="corn-xiaokui-modal-close"
         data-testid="close"
       />
     </div>
   </div>
   <div
-    class="xrk-drawer-mask xrk-drawer-mask-show"
+    class="corn-drawer-mask corn-drawer-mask-show"
     data-testid="mask"
   />
   <div
-    class="xrk-drawer-body xrk-drawer-center-show xrk-drawer-center"
+    class="corn-drawer-body corn-drawer-center-show corn-drawer-center"
     data-testid="body"
   >
     <div
-      class="xrk-xiaokui-modal"
+      class="corn-xiaokui-modal"
     >
       <div
-        class="taro-img xrk-xiaokui-modal-head"
+        class="taro-img corn-xiaokui-modal-head"
       >
         <img
           class="taro-img__mode-scaletofill"
@@ -123,31 +123,31 @@ exports[`XiaokuiModal 类型快照 1`] = `
         />
       </div>
       <div
-        class="xrk-xiaokui-modal-body"
+        class="corn-xiaokui-modal-body"
       >
         <div
-          class="xrk-xiaokui-modal-content"
+          class="corn-xiaokui-modal-content"
         />
       </div>
       <div
-        class="xrk-xiaokui-modal-close"
+        class="corn-xiaokui-modal-close"
         data-testid="close"
       />
     </div>
   </div>
   <div
-    class="xrk-drawer-mask xrk-drawer-mask-show"
+    class="corn-drawer-mask corn-drawer-mask-show"
     data-testid="mask"
   />
   <div
-    class="xrk-drawer-body xrk-drawer-center-show xrk-drawer-center"
+    class="corn-drawer-body corn-drawer-center-show corn-drawer-center"
     data-testid="body"
   >
     <div
-      class="xrk-xiaokui-modal"
+      class="corn-xiaokui-modal"
     >
       <div
-        class="taro-img xrk-xiaokui-modal-head"
+        class="taro-img corn-xiaokui-modal-head"
       >
         <img
           class="taro-img__mode-scaletofill"
@@ -155,31 +155,31 @@ exports[`XiaokuiModal 类型快照 1`] = `
         />
       </div>
       <div
-        class="xrk-xiaokui-modal-body"
+        class="corn-xiaokui-modal-body"
       >
         <div
-          class="xrk-xiaokui-modal-content"
+          class="corn-xiaokui-modal-content"
         />
       </div>
       <div
-        class="xrk-xiaokui-modal-close"
+        class="corn-xiaokui-modal-close"
         data-testid="close"
       />
     </div>
   </div>
   <div
-    class="xrk-drawer-mask xrk-drawer-mask-show"
+    class="corn-drawer-mask corn-drawer-mask-show"
     data-testid="mask"
   />
   <div
-    class="xrk-drawer-body xrk-drawer-center-show xrk-drawer-center"
+    class="corn-drawer-body corn-drawer-center-show corn-drawer-center"
     data-testid="body"
   >
     <div
-      class="xrk-xiaokui-modal"
+      class="corn-xiaokui-modal"
     >
       <div
-        class="taro-img xrk-xiaokui-modal-head"
+        class="taro-img corn-xiaokui-modal-head"
       >
         <img
           class="taro-img__mode-scaletofill"
@@ -187,14 +187,14 @@ exports[`XiaokuiModal 类型快照 1`] = `
         />
       </div>
       <div
-        class="xrk-xiaokui-modal-body"
+        class="corn-xiaokui-modal-body"
       >
         <div
-          class="xrk-xiaokui-modal-content"
+          class="corn-xiaokui-modal-content"
         />
       </div>
       <div
-        class="xrk-xiaokui-modal-close"
+        class="corn-xiaokui-modal-close"
         data-testid="close"
       />
     </div>

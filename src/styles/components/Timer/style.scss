@@ -1,4 +1,4 @@
-.xrk-timer {
+.corn-timer {
   font-size: 22px;
   line-height: 22px;
   color: $text2;
@@ -16,7 +16,7 @@
   &-fill {
     color: $timeBg;
 
-    .xrk-timer-item {
+    .corn-timer-item {
       height: 32px;
       width: 32px;
       border-radius: 8px;
@@ -24,7 +24,7 @@
       color: $white;
     }
 
-    .xrk-timer-symbol {
+    .corn-timer-symbol {
       padding: 0 4px;
     }
   }

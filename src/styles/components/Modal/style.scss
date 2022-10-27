@@ -1,6 +1,6 @@
 $modalBorderColor: #f3f5fa;
 
-.xrk-modal {
+.corn-modal {
   background-color: $white;
   border-radius: $radius;
   width: 530px;
@@ -35,7 +35,7 @@ $modalBorderColor: #f3f5fa;
     box-sizing: border-box;
     border-top: 1px solid $modalBorderColor;
 
-    .xrk-modal-button {
+    .corn-modal-button {
       border-bottom: 1px solid $modalBorderColor;
     }
   }
@@ -46,13 +46,13 @@ $modalBorderColor: #f3f5fa;
     border-top: 1px solid $modalBorderColor;
     display: flex;
 
-    .xrk-modal-button {
+    .corn-modal-button {
       flex: 1;
       border-right: 1px solid $modalBorderColor;
     }
   }
 
-  .xrk-modal-button {
+  .corn-modal-button {
     font-size: 32px;
     font-weight: 400;
     color: $link;

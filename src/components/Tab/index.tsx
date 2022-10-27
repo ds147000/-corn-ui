@@ -36,9 +36,9 @@ export namespace TAB {
 const Tabs: React.FC<TAB.Props> = ({ options, currenIndex, size = 'middle', type = 'default', onChange }) => {
   const El = useRef<HTMLDivElement>()
   const _class = useMemo(() => classNames(
-    'xrk-tab xrk-f',
-    `xrk-tab-${type}`,
-    `xrk-tab-${size}`,
+    'corn-tab corn-f',
+    `corn-tab-${type}`,
+    `corn-tab-${size}`,
   ), [ type, size ])
 
   useTabScroll(El as React.MutableRefObject<HTMLDivElement>, currenIndex)

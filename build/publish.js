@@ -75,10 +75,10 @@ writeFile(IconsPackagePath, Prettier.format(JSON.stringify(IconsPackage), Pertti
 
 // 发布
 shell.cd(resolveApp('package-taro'))
-shell.exec('npm pub')
+shell.exec('npm pub --registry=https://registry.npmjs.org')
 
 shell.cd(resolveApp('package-h5'))
-shell.exec('npm pub')
+shell.exec('npm pub --registry=https://registry.npmjs.org')
 
 shell.cd(resolveApp('package-icons'))
-shell.exec('npm pub')
+shell.exec('npm pub --registry=https://registry.npmjs.org')

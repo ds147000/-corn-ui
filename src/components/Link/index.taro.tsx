@@ -20,7 +20,7 @@ const Link: LINK = ({
   className,
   ...props
 }) => {
-  const _class = ClassName(className, 'xrk-link', `xrk-link-${type}`)
+  const _class = ClassName(className, 'corn-link', `corn-link-${type}`)
 
   const _onBefor = onBefor || Link.onBefor
 

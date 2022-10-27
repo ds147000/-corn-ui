@@ -6,7 +6,7 @@ import { IconProps } from './typing'
 
 
 const Icon: React.FC<IconProps> = ({ name, className, ...props }) => {
-  return <Text className={classNames(className, `xrk-icon xrk-i-${name}`)} {...props} />
+  return <Text className={classNames(className, `corn-icon corn-i-${name}`)} {...props} />
 }
 
 export default Icon

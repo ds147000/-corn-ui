@@ -17,9 +17,9 @@ export interface TooltipListProps extends TOOTIPS.Props {
 
 const TooltipList: React.FC<TooltipListProps> = ({ list, onClick, align = 'bottom', rect, moveX = 0, moveY = 0 }) => {
   const _listClass = useMemo(() => {
-    return classNames('xrk-tooltip', 'xrk-tooltip-' + align)
+    return classNames('corn-tooltip', 'corn-tooltip-' + align)
   }, [ align ])
-  const _arrowClass = useMemo(() => classNames('xrk-tooltip-arrow', 'xrk-tooltip-arrow-' + align), [ align ])
+  const _arrowClass = useMemo(() => classNames('corn-tooltip-arrow', 'corn-tooltip-arrow-' + align), [ align ])
 
   const arrowPosition = getArrowPosition(rect, align)
   const listPosition = getListPosition(rect, align)
@@ -39,9 +39,9 @@ const TooltipList: React.FC<TooltipListProps> = ({ list, onClick, align = 'botto
         {list.map((item, key) => (
           <View
             className={classNames(
-              'xrk-tooltip-item',
-              'xrk-f xrk-ac xrk-jc',
-              item.type === 'active' && 'xrk-tooltip-active'
+              'corn-tooltip-item',
+              'corn-f corn-ac corn-jc',
+              item.type === 'active' && 'corn-tooltip-active'
             )}
             key={item.text + String(key)}
             onClick={(): void => onClick?.(item, key)}

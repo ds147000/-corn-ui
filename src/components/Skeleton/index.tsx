@@ -10,7 +10,7 @@ type SkeletonComponents = React.FC & { Item: typeof SkeletonItem }
 
 const Skeleton: SkeletonComponents = ({ children }) => {
   return (
-    <View className="xrk-skeleton" >
+    <View className="corn-skeleton" >
       {children}
     </View>
   )

@@ -54,8 +54,8 @@ export const UploadBase: React.FC<Upload.props> = ({
   const isShowBtn = !list || list.length < count
 
   const _class = useMemo(() => classNames(
-    'xrk-upload',
-    'xrk-upload-' + layout
+    'corn-upload',
+    'corn-upload-' + layout
   ), [ layout ])
 
 
@@ -83,7 +83,7 @@ export const UploadBase: React.FC<Upload.props> = ({
     <View className={_class} ref={El} >
       {Boolean(name) && (
         <Input
-          className="xrk-checkbox-hide"
+          className="corn-checkbox-hide"
           name={name}
           value={JSON.stringify(successList)}
         />

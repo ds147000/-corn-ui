@@ -88,7 +88,7 @@ test('SearchPlaceholder change', async () => {
     return <SearchPlaceholder data={list} />
   }
   const screen = render(<App />)
-  await waitFor(() => expect(screen.container.querySelector('.xrk-search-placeholder-item')).toBeNull())
+  await waitFor(() => expect(screen.container.querySelector('.corn-search-placeholder-item')).toBeNull())
   screen.unmount()
 })
 

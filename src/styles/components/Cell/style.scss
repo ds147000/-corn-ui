@@ -1,4 +1,4 @@
-.xrk-cell {
+.corn-cell {
   width: 100%;
   min-height: $cellHeight;
   background-color: $white;
@@ -7,13 +7,12 @@
   font-size: $cellSize;
   line-height: $cellSize;
   transition: opacity 0.1s;
-  white-space: nowrap;
 
   &:active {
     opacity: 0.7;
   }
 
-  &.xrk-cell-disable {
+  &.corn-cell-disable {
     background-color: $disable;
     opacity: 0.3;
 
@@ -40,14 +39,14 @@
   &-suffix {
     color: $text2;
 
-    .xrk-icon {
+    .corn-icon {
       color: $cellIconColor;
     }
   }
 }
 
-.xrk-cell-list-line {
-  >.xrk-cell {
+.corn-cell-list-line {
+  >.corn-cell {
     border-bottom: 2px solid $bg;
 
     &:last-child {

@@ -21,7 +21,7 @@ const Link: LINK = ({
 }) => {
 
   const _class = useMemo(() => {
-    return ClassName('xrk-link', `xrk-link-${type}`, target === 'View' && 'xrk-link-view', className)
+    return ClassName('corn-link', `corn-link-${type}`, target === 'View' && 'corn-link-view', className)
   }, [ className, type, target ])
 
   const _onBefor = onBefor || Link.onBefor

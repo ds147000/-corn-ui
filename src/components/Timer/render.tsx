@@ -6,7 +6,7 @@ export const DefualtRenderItem: TimeRenderItem = (type, value, last): JSX.Elemen
   if (type === 'day') {
     return (
       <>
-        <View className="xrk-f xrk-ac xrk-jc xrk-timer-day" data-testid={type} >
+        <View className="corn-f corn-ac corn-jc corn-timer-day" data-testid={type} >
           {value}天
         </View>
       </>
@@ -15,7 +15,7 @@ export const DefualtRenderItem: TimeRenderItem = (type, value, last): JSX.Elemen
 
   if (last) {
     return (
-      <View className="xrk-timer-item xrk-f xrk-ac xrk-jc" data-testid={type} >
+      <View className="corn-timer-item corn-f corn-ac corn-jc" data-testid={type} >
         {value}
       </View>
     )
@@ -23,10 +23,10 @@ export const DefualtRenderItem: TimeRenderItem = (type, value, last): JSX.Elemen
 
   return (
     <>
-      <View className="xrk-timer-item xrk-f xrk-ac xrk-jc" data-testid={type} >
+      <View className="corn-timer-item corn-f corn-ac corn-jc" data-testid={type} >
         {value}
       </View>
-      <View className="xrk-timer-symbol">:</View>
+      <View className="corn-timer-symbol">:</View>
     </>
   )
 }

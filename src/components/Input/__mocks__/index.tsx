@@ -13,7 +13,7 @@ const Input: React.FC<InputProps> = ({ className, value, onInput, onConfirm, con
       value={_value}
       onInput={_onInput}
       onClick={onConfirm}
-      className={classNames(className, 'xrk-input')}
+      className={classNames(className, 'corn-input')}
       data-testid="input"
     />
   )

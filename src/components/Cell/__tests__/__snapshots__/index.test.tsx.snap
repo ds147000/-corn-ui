@@ -3,23 +3,23 @@
 exports[`Cell basis 1`] = `
 <div>
   <div
-    class="xrk-cell xrk-f xrk-ac"
+    class="corn-cell corn-f corn-ac"
   >
     <div
-      class="xrk-cell-label"
+      class="corn-cell-label"
     >
       限时奖励
     </div>
     <div
-      class="xrk-cell-value"
+      class="corn-cell-value"
     >
       六月阶梯奖励活动
     </div>
     <div
-      class="xrk-cell-suffix xrk-f xrk-ac"
+      class="corn-cell-suffix corn-f corn-ac"
     >
       <i
-        class="xrk-icon xrk-i-big-right"
+        class="corn-icon corn-i-big-right"
         data-testid="arrow"
       />
     </div>
@@ -30,15 +30,15 @@ exports[`Cell basis 1`] = `
 exports[`Cell children 1`] = `
 <div>
   <div
-    class="xrk-cell xrk-f xrk-ac"
+    class="corn-cell corn-f corn-ac"
   >
     <div
-      class="xrk-cell-label"
+      class="corn-cell-label"
     >
       限时奖励
     </div>
     <div
-      class="xrk-cell-value"
+      class="corn-cell-value"
     >
       <span
         class="taro-text"
@@ -47,10 +47,10 @@ exports[`Cell children 1`] = `
       </span>
     </div>
     <div
-      class="xrk-cell-suffix xrk-f xrk-ac"
+      class="corn-cell-suffix corn-f corn-ac"
     >
       <i
-        class="xrk-icon xrk-i-big-right"
+        class="corn-icon corn-i-big-right"
         data-testid="arrow"
       />
     </div>
@@ -61,15 +61,15 @@ exports[`Cell children 1`] = `
 exports[`Cell hide arrow 1`] = `
 <div>
   <div
-    class="xrk-cell xrk-f xrk-ac"
+    class="corn-cell corn-f corn-ac"
   >
     <div
-      class="xrk-cell-label"
+      class="corn-cell-label"
     >
       限时奖励
     </div>
     <div
-      class="xrk-cell-value"
+      class="corn-cell-value"
     >
       <span
         class="taro-text"
@@ -78,7 +78,7 @@ exports[`Cell hide arrow 1`] = `
       </span>
     </div>
     <div
-      class="xrk-cell-suffix xrk-f xrk-ac"
+      class="corn-cell-suffix corn-f corn-ac"
     />
   </div>
 </div>
@@ -87,24 +87,24 @@ exports[`Cell hide arrow 1`] = `
 exports[`Cell href 1`] = `
 <div>
   <a
-    class="xrk-link xrk-link-normal xrk-link-view xrk-cell xrk-f xrk-ac"
+    class="corn-link corn-link-normal corn-link-view corn-cell corn-f corn-ac"
     href="/home"
   >
     <div
-      class="xrk-cell-label"
+      class="corn-cell-label"
     >
       限时奖励
     </div>
     <div
-      class="xrk-cell-value"
+      class="corn-cell-value"
     >
       前往查看
     </div>
     <div
-      class="xrk-cell-suffix xrk-f xrk-ac"
+      class="corn-cell-suffix corn-f corn-ac"
     >
       <i
-        class="xrk-icon xrk-i-big-right"
+        class="corn-icon corn-i-big-right"
         data-testid="arrow"
       />
     </div>
@@ -115,21 +115,21 @@ exports[`Cell href 1`] = `
 exports[`Cell href and hide arrow 1`] = `
 <div>
   <a
-    class="xrk-link xrk-link-normal xrk-link-view xrk-cell xrk-f xrk-ac"
+    class="corn-link corn-link-normal corn-link-view corn-cell corn-f corn-ac"
     href="/home"
   >
     <div
-      class="xrk-cell-label"
+      class="corn-cell-label"
     >
       限时奖励
     </div>
     <div
-      class="xrk-cell-value"
+      class="corn-cell-value"
     >
       前往查看
     </div>
     <div
-      class="xrk-cell-suffix xrk-f xrk-ac"
+      class="corn-cell-suffix corn-f corn-ac"
     />
   </a>
 </div>
@@ -138,10 +138,10 @@ exports[`Cell href and hide arrow 1`] = `
 exports[`Cell label = ReactNode 1`] = `
 <div>
   <div
-    class="xrk-cell xrk-f xrk-ac"
+    class="corn-cell corn-f corn-ac"
   >
     <div
-      class="xrk-cell-label"
+      class="corn-cell-label"
     >
       <span
         class="taro-text"
@@ -150,16 +150,16 @@ exports[`Cell label = ReactNode 1`] = `
       </span>
     </div>
     <div
-      class="xrk-cell-value"
+      class="corn-cell-value"
     >
       六月阶梯奖励活动
     </div>
     <div
-      class="xrk-cell-suffix xrk-f xrk-ac"
+      class="corn-cell-suffix corn-f corn-ac"
     >
       重选
       <i
-        class="xrk-icon xrk-i-big-right"
+        class="corn-icon corn-i-big-right"
         data-testid="arrow"
       />
     </div>
@@ -170,28 +170,28 @@ exports[`Cell label = ReactNode 1`] = `
 exports[`Cell placeholder 1`] = `
 <div>
   <div
-    class="xrk-cell xrk-f xrk-ac"
+    class="corn-cell corn-f corn-ac"
   >
     <div
-      class="xrk-cell-label"
+      class="corn-cell-label"
     >
       限时奖励
     </div>
     <div
-      class="xrk-cell-value"
+      class="corn-cell-value"
     >
       
       <span
-        class="taro-text xrk-cell-placeholder"
+        class="taro-text corn-cell-placeholder"
       >
         请选择奖励类型
       </span>
     </div>
     <div
-      class="xrk-cell-suffix xrk-f xrk-ac"
+      class="corn-cell-suffix corn-f corn-ac"
     >
       <i
-        class="xrk-icon xrk-i-big-right"
+        class="corn-icon corn-i-big-right"
         data-testid="arrow"
       />
     </div>
@@ -202,23 +202,23 @@ exports[`Cell placeholder 1`] = `
 exports[`Cell placeholder And Value 1`] = `
 <div>
   <div
-    class="xrk-cell xrk-f xrk-ac"
+    class="corn-cell corn-f corn-ac"
   >
     <div
-      class="xrk-cell-label"
+      class="corn-cell-label"
     >
       限时奖励
     </div>
     <div
-      class="xrk-cell-value"
+      class="corn-cell-value"
     >
       123
     </div>
     <div
-      class="xrk-cell-suffix xrk-f xrk-ac"
+      class="corn-cell-suffix corn-f corn-ac"
     >
       <i
-        class="xrk-icon xrk-i-big-right"
+        class="corn-icon corn-i-big-right"
         data-testid="arrow"
       />
     </div>
@@ -229,20 +229,20 @@ exports[`Cell placeholder And Value 1`] = `
 exports[`Cell suffix = ReactNode 1`] = `
 <div>
   <div
-    class="xrk-cell xrk-f xrk-ac"
+    class="corn-cell corn-f corn-ac"
   >
     <div
-      class="xrk-cell-label"
+      class="corn-cell-label"
     >
       限时奖励
     </div>
     <div
-      class="xrk-cell-value"
+      class="corn-cell-value"
     >
       六月阶梯奖励活动
     </div>
     <div
-      class="xrk-cell-suffix xrk-f xrk-ac"
+      class="corn-cell-suffix corn-f corn-ac"
     >
       <span
         class="taro-text"
@@ -257,24 +257,24 @@ exports[`Cell suffix = ReactNode 1`] = `
 exports[`Cell suffix 1`] = `
 <div>
   <div
-    class="xrk-cell xrk-f xrk-ac"
+    class="corn-cell corn-f corn-ac"
   >
     <div
-      class="xrk-cell-label"
+      class="corn-cell-label"
     >
       限时奖励
     </div>
     <div
-      class="xrk-cell-value"
+      class="corn-cell-value"
     >
       六月阶梯奖励活动
     </div>
     <div
-      class="xrk-cell-suffix xrk-f xrk-ac"
+      class="corn-cell-suffix corn-f corn-ac"
     >
       重选
       <i
-        class="xrk-icon xrk-i-big-right"
+        class="corn-icon corn-i-big-right"
         data-testid="arrow"
       />
     </div>
@@ -285,15 +285,15 @@ exports[`Cell suffix 1`] = `
 exports[`Cell value = ReactNode 1`] = `
 <div>
   <div
-    class="xrk-cell xrk-f xrk-ac"
+    class="corn-cell corn-f corn-ac"
   >
     <div
-      class="xrk-cell-label"
+      class="corn-cell-label"
     >
       限时奖励
     </div>
     <div
-      class="xrk-cell-value"
+      class="corn-cell-value"
     >
       <span
         class="taro-text"
@@ -302,10 +302,10 @@ exports[`Cell value = ReactNode 1`] = `
       </span>
     </div>
     <div
-      class="xrk-cell-suffix xrk-f xrk-ac"
+      class="corn-cell-suffix corn-f corn-ac"
     >
       <i
-        class="xrk-icon xrk-i-big-right"
+        class="corn-icon corn-i-big-right"
         data-testid="arrow"
       />
     </div>

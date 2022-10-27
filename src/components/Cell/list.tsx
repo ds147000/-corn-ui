@@ -10,7 +10,7 @@ export interface CellListProps extends ViewProps {
 
 const CellList: React.FC<CellListProps> = ({ children, line, className, ...props }) => {
   const _class = useMemo(() => {
-    return ClassNames(line && 'xrk-cell-list-line', className)
+    return ClassNames(line && 'corn-cell-list-line', className)
   }, [ line, className ])
 
   return (

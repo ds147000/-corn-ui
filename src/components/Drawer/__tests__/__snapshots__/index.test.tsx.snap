@@ -15,11 +15,11 @@ exports[`Drawer hide 1`] = `<div />`;
 exports[`Drawer show 1`] = `
 <div>
   <div
-    class="xrk-drawer-mask xrk-drawer-mask-show"
+    class="corn-drawer-mask corn-drawer-mask-show"
     data-testid="mask"
   />
   <div
-    class="xrk-drawer-body xrk-drawer-bottom-show xrk-drawer-bottom"
+    class="corn-drawer-body corn-drawer-bottom-show corn-drawer-bottom"
     data-testid="body"
   >
     <div
@@ -38,11 +38,11 @@ exports[`Drawer show 1`] = `
 exports[`Drawer show of Bottom 1`] = `
 <div>
   <div
-    class="xrk-drawer-mask xrk-drawer-mask-show"
+    class="corn-drawer-mask corn-drawer-mask-show"
     data-testid="mask"
   />
   <div
-    class="xrk-drawer-body xrk-drawer-bottom-show xrk-drawer-bottom"
+    class="corn-drawer-body corn-drawer-bottom-show corn-drawer-bottom"
     data-testid="body"
   >
     <div
@@ -61,11 +61,11 @@ exports[`Drawer show of Bottom 1`] = `
 exports[`Drawer show of Center 1`] = `
 <div>
   <div
-    class="xrk-drawer-mask xrk-drawer-mask-show"
+    class="corn-drawer-mask corn-drawer-mask-show"
     data-testid="mask"
   />
   <div
-    class="xrk-drawer-body xrk-drawer-center-show xrk-drawer-center"
+    class="corn-drawer-body corn-drawer-center-show corn-drawer-center"
     data-testid="body"
   >
     <div
@@ -84,11 +84,11 @@ exports[`Drawer show of Center 1`] = `
 exports[`Drawer show of Left 1`] = `
 <div>
   <div
-    class="xrk-drawer-mask xrk-drawer-mask-show"
+    class="corn-drawer-mask corn-drawer-mask-show"
     data-testid="mask"
   />
   <div
-    class="xrk-drawer-body xrk-drawer-left-show xrk-drawer-left"
+    class="corn-drawer-body corn-drawer-left-show corn-drawer-left"
     data-testid="body"
   >
     <div
@@ -107,11 +107,11 @@ exports[`Drawer show of Left 1`] = `
 exports[`Drawer show of Right 1`] = `
 <div>
   <div
-    class="xrk-drawer-mask xrk-drawer-mask-show"
+    class="corn-drawer-mask corn-drawer-mask-show"
     data-testid="mask"
   />
   <div
-    class="xrk-drawer-body xrk-drawer-right-show xrk-drawer-right"
+    class="corn-drawer-body corn-drawer-right-show corn-drawer-right"
     data-testid="body"
   >
     <div
@@ -130,11 +130,11 @@ exports[`Drawer show of Right 1`] = `
 exports[`Drawer show of Top 1`] = `
 <div>
   <div
-    class="xrk-drawer-mask xrk-drawer-mask-show"
+    class="corn-drawer-mask corn-drawer-mask-show"
     data-testid="mask"
   />
   <div
-    class="xrk-drawer-body xrk-drawer-top-show xrk-drawer-top"
+    class="corn-drawer-body corn-drawer-top-show corn-drawer-top"
     data-testid="body"
   >
     <div

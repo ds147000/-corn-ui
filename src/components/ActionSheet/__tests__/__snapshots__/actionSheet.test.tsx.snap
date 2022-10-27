@@ -3,21 +3,21 @@
 exports[`ActionSheet showButton 1`] = `
 <div>
   <div
-    class="xrk-drawer-mask xrk-drawer-mask-show"
+    class="corn-drawer-mask corn-drawer-mask-show"
     data-testid="mask"
   />
   <div
-    class="xrk-drawer-body xrk-drawer-bottom-show xrk-drawer-bottom"
+    class="corn-drawer-body corn-drawer-bottom-show corn-drawer-bottom"
     data-testid="body"
   >
     <div
-      class="xrk-actionsheet"
+      class="corn-actionsheet"
     >
       <div
-        class="xrk-actionsheet-header"
+        class="corn-actionsheet-header"
       >
         <div
-          class="xrk-actionsheet-header-center xrk-actionsheet-left"
+          class="corn-actionsheet-header-center corn-actionsheet-left"
         >
           <div
             class="title"
@@ -32,25 +32,25 @@ exports[`ActionSheet showButton 1`] = `
         </div>
       </div>
       <div
-        class="xrk-actionsheet-body"
+        class="corn-actionsheet-body"
       />
       <div
-        class="xrk-actionsheet-floor"
+        class="corn-actionsheet-floor"
       >
         <div
-          class="xrk-actionsheet-item"
+          class="corn-actionsheet-item"
         >
           <div
-            class="xrk-as-text xrk-actionsheet-left"
+            class="corn-as-text corn-actionsheet-left"
           >
             关闭
           </div>
         </div>
         <div
-          class="xrk-actionsheet-item"
+          class="corn-actionsheet-item"
         >
           <div
-            class="xrk-as-text xrk-actionsheet-left"
+            class="corn-as-text corn-actionsheet-left"
           >
             确定
           </div>
@@ -64,18 +64,18 @@ exports[`ActionSheet showButton 1`] = `
 exports[`ActionSheet showHead: false 1`] = `
 <div>
   <div
-    class="xrk-drawer-mask xrk-drawer-mask-show"
+    class="corn-drawer-mask corn-drawer-mask-show"
     data-testid="mask"
   />
   <div
-    class="xrk-drawer-body xrk-drawer-bottom-show xrk-drawer-bottom"
+    class="corn-drawer-body corn-drawer-bottom-show corn-drawer-bottom"
     data-testid="body"
   >
     <div
-      class="xrk-actionsheet"
+      class="corn-actionsheet"
     >
       <div
-        class="xrk-actionsheet-body"
+        class="corn-actionsheet-body"
       />
     </div>
   </div>
@@ -85,22 +85,22 @@ exports[`ActionSheet showHead: false 1`] = `
 exports[`ActionSheet showHead: false and open close 1`] = `
 <div>
   <div
-    class="xrk-drawer-mask xrk-drawer-mask-show"
+    class="corn-drawer-mask corn-drawer-mask-show"
     data-testid="mask"
   />
   <div
-    class="xrk-drawer-body xrk-drawer-bottom-show xrk-drawer-bottom"
+    class="corn-drawer-body corn-drawer-bottom-show corn-drawer-bottom"
     data-testid="body"
   >
     <div
-      class="xrk-actionsheet"
+      class="corn-actionsheet"
     >
       <div
-        class="xrk-actionsheet-close"
+        class="corn-actionsheet-close"
         data-testid="close"
       />
       <div
-        class="xrk-actionsheet-body"
+        class="corn-actionsheet-body"
       />
     </div>
   </div>
@@ -110,21 +110,21 @@ exports[`ActionSheet showHead: false and open close 1`] = `
 exports[`ActionSheet subTitle 1`] = `
 <div>
   <div
-    class="xrk-drawer-mask xrk-drawer-mask-show"
+    class="corn-drawer-mask corn-drawer-mask-show"
     data-testid="mask"
   />
   <div
-    class="xrk-drawer-body xrk-drawer-bottom-show xrk-drawer-bottom"
+    class="corn-drawer-body corn-drawer-bottom-show corn-drawer-bottom"
     data-testid="body"
   >
     <div
-      class="xrk-actionsheet"
+      class="corn-actionsheet"
     >
       <div
-        class="xrk-actionsheet-header"
+        class="corn-actionsheet-header"
       >
         <div
-          class="xrk-actionsheet-header-center xrk-actionsheet-left"
+          class="corn-actionsheet-header-center corn-actionsheet-left"
         >
           <div
             class="title"
@@ -139,7 +139,7 @@ exports[`ActionSheet subTitle 1`] = `
         </div>
       </div>
       <div
-        class="xrk-actionsheet-body"
+        class="corn-actionsheet-body"
       />
     </div>
   </div>
@@ -151,21 +151,21 @@ exports[`ActionSheet subTitle of hide 1`] = `<div />`;
 exports[`ActionSheet title 1`] = `
 <div>
   <div
-    class="xrk-drawer-mask xrk-drawer-mask-show"
+    class="corn-drawer-mask corn-drawer-mask-show"
     data-testid="mask"
   />
   <div
-    class="xrk-drawer-body xrk-drawer-bottom-show xrk-drawer-bottom"
+    class="corn-drawer-body corn-drawer-bottom-show corn-drawer-bottom"
     data-testid="body"
   >
     <div
-      class="xrk-actionsheet"
+      class="corn-actionsheet"
     >
       <div
-        class="xrk-actionsheet-header"
+        class="corn-actionsheet-header"
       >
         <div
-          class="xrk-actionsheet-header-center xrk-actionsheet-left"
+          class="corn-actionsheet-header-center corn-actionsheet-left"
         >
           <div
             class="title"
@@ -175,7 +175,7 @@ exports[`ActionSheet title 1`] = `
         </div>
       </div>
       <div
-        class="xrk-actionsheet-body"
+        class="corn-actionsheet-body"
       />
     </div>
   </div>
@@ -185,21 +185,21 @@ exports[`ActionSheet title 1`] = `
 exports[`ActionSheet titleAlign: center 1`] = `
 <div>
   <div
-    class="xrk-drawer-mask xrk-drawer-mask-show"
+    class="corn-drawer-mask corn-drawer-mask-show"
     data-testid="mask"
   />
   <div
-    class="xrk-drawer-body xrk-drawer-bottom-show xrk-drawer-bottom"
+    class="corn-drawer-body corn-drawer-bottom-show corn-drawer-bottom"
     data-testid="body"
   >
     <div
-      class="xrk-actionsheet"
+      class="corn-actionsheet"
     >
       <div
-        class="xrk-actionsheet-header"
+        class="corn-actionsheet-header"
       >
         <div
-          class="xrk-actionsheet-header-center xrk-actionsheet-center"
+          class="corn-actionsheet-header-center corn-actionsheet-center"
         >
           <div
             class="title"
@@ -209,7 +209,7 @@ exports[`ActionSheet titleAlign: center 1`] = `
         </div>
       </div>
       <div
-        class="xrk-actionsheet-body"
+        class="corn-actionsheet-body"
       />
     </div>
   </div>
@@ -219,21 +219,21 @@ exports[`ActionSheet titleAlign: center 1`] = `
 exports[`ActionSheet titleAlign: left 1`] = `
 <div>
   <div
-    class="xrk-drawer-mask xrk-drawer-mask-show"
+    class="corn-drawer-mask corn-drawer-mask-show"
     data-testid="mask"
   />
   <div
-    class="xrk-drawer-body xrk-drawer-bottom-show xrk-drawer-bottom"
+    class="corn-drawer-body corn-drawer-bottom-show corn-drawer-bottom"
     data-testid="body"
   >
     <div
-      class="xrk-actionsheet"
+      class="corn-actionsheet"
     >
       <div
-        class="xrk-actionsheet-header"
+        class="corn-actionsheet-header"
       >
         <div
-          class="xrk-actionsheet-header-center xrk-actionsheet-left"
+          class="corn-actionsheet-header-center corn-actionsheet-left"
         >
           <div
             class="title"
@@ -243,7 +243,7 @@ exports[`ActionSheet titleAlign: left 1`] = `
         </div>
       </div>
       <div
-        class="xrk-actionsheet-body"
+        class="corn-actionsheet-body"
       />
     </div>
   </div>
@@ -253,21 +253,21 @@ exports[`ActionSheet titleAlign: left 1`] = `
 exports[`ActionSheet titleAlign: right 1`] = `
 <div>
   <div
-    class="xrk-drawer-mask xrk-drawer-mask-show"
+    class="corn-drawer-mask corn-drawer-mask-show"
     data-testid="mask"
   />
   <div
-    class="xrk-drawer-body xrk-drawer-bottom-show xrk-drawer-bottom"
+    class="corn-drawer-body corn-drawer-bottom-show corn-drawer-bottom"
     data-testid="body"
   >
     <div
-      class="xrk-actionsheet"
+      class="corn-actionsheet"
     >
       <div
-        class="xrk-actionsheet-header"
+        class="corn-actionsheet-header"
       >
         <div
-          class="xrk-actionsheet-header-center xrk-actionsheet-right"
+          class="corn-actionsheet-header-center corn-actionsheet-right"
         >
           <div
             class="title"
@@ -277,7 +277,7 @@ exports[`ActionSheet titleAlign: right 1`] = `
         </div>
       </div>
       <div
-        class="xrk-actionsheet-body"
+        class="corn-actionsheet-body"
       />
     </div>
   </div>
@@ -287,25 +287,25 @@ exports[`ActionSheet titleAlign: right 1`] = `
 exports[`ActionSheet 显示 1`] = `
 <div>
   <div
-    class="xrk-drawer-mask xrk-drawer-mask-show"
+    class="corn-drawer-mask corn-drawer-mask-show"
     data-testid="mask"
   />
   <div
-    class="xrk-drawer-body xrk-drawer-bottom-show xrk-drawer-bottom"
+    class="corn-drawer-body corn-drawer-bottom-show corn-drawer-bottom"
     data-testid="body"
   >
     <div
-      class="xrk-actionsheet"
+      class="corn-actionsheet"
     >
       <div
-        class="xrk-actionsheet-header"
+        class="corn-actionsheet-header"
       >
         <div
-          class="xrk-actionsheet-header-center xrk-actionsheet-left"
+          class="corn-actionsheet-header-center corn-actionsheet-left"
         />
       </div>
       <div
-        class="xrk-actionsheet-body"
+        class="corn-actionsheet-body"
       />
     </div>
   </div>
@@ -315,21 +315,21 @@ exports[`ActionSheet 显示 1`] = `
 exports[`ActionSheet 自定义文字 1`] = `
 <div>
   <div
-    class="xrk-drawer-mask xrk-drawer-mask-show"
+    class="corn-drawer-mask corn-drawer-mask-show"
     data-testid="mask"
   />
   <div
-    class="xrk-drawer-body xrk-drawer-bottom-show xrk-drawer-bottom"
+    class="corn-drawer-body corn-drawer-bottom-show corn-drawer-bottom"
     data-testid="body"
   >
     <div
-      class="xrk-actionsheet"
+      class="corn-actionsheet"
     >
       <div
-        class="xrk-actionsheet-header"
+        class="corn-actionsheet-header"
       >
         <div
-          class="xrk-actionsheet-header-center xrk-actionsheet-left"
+          class="corn-actionsheet-header-center corn-actionsheet-left"
         >
           <div
             class="title"
@@ -344,25 +344,25 @@ exports[`ActionSheet 自定义文字 1`] = `
         </div>
       </div>
       <div
-        class="xrk-actionsheet-body"
+        class="corn-actionsheet-body"
       />
       <div
-        class="xrk-actionsheet-floor"
+        class="corn-actionsheet-floor"
       >
         <div
-          class="xrk-actionsheet-item"
+          class="corn-actionsheet-item"
         >
           <div
-            class="xrk-as-text xrk-actionsheet-left"
+            class="corn-as-text corn-actionsheet-left"
           >
             cancel
           </div>
         </div>
         <div
-          class="xrk-actionsheet-item"
+          class="corn-actionsheet-item"
         >
           <div
-            class="xrk-as-text xrk-actionsheet-left"
+            class="corn-as-text corn-actionsheet-left"
           >
             ok
           </div>

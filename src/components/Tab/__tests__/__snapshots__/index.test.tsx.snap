@@ -3,11 +3,11 @@
 exports[`icon 1`] = `
 <div>
   <div
-    class="xrk-tab xrk-f xrk-tab-default xrk-tab-middle"
+    class="corn-tab corn-f corn-tab-default corn-tab-middle"
     data-testid="tab"
   >
     <div
-      class="xrk-tab-item __x-st-exp __x-st-click"
+      class="corn-tab-item __x-st-exp __x-st-click"
       data-testid="tab-item"
     >
       <div
@@ -17,7 +17,7 @@ exports[`icon 1`] = `
       </div>
     </div>
     <div
-      class="xrk-tab-item __x-st-exp __x-st-click xrk-tab-item-active __active"
+      class="corn-tab-item __x-st-exp __x-st-click corn-tab-item-active __active"
       data-testid="tab-item"
     >
       <div
@@ -27,14 +27,14 @@ exports[`icon 1`] = `
       </div>
     </div>
     <div
-      class="xrk-tab-item __x-st-exp __x-st-click"
+      class="corn-tab-item __x-st-exp __x-st-click"
       data-testid="tab-item"
     >
       <div
         class=""
       >
         <div
-          class="taro-img xrk-img xrk-tab-item-icon"
+          class="taro-img corn-img corn-tab-item-icon"
         >
           <img
             class="taro-img__mode-heightfix"
@@ -50,11 +50,11 @@ exports[`icon 1`] = `
 exports[`not currenIndex 1`] = `
 <div>
   <div
-    class="xrk-tab xrk-f xrk-tab-default xrk-tab-middle"
+    class="corn-tab corn-f corn-tab-default corn-tab-middle"
     data-testid="tab"
   >
     <div
-      class="xrk-tab-item __x-st-exp __x-st-click"
+      class="corn-tab-item __x-st-exp __x-st-click"
       data-testid="tab-item"
     >
       <div
@@ -64,7 +64,7 @@ exports[`not currenIndex 1`] = `
       </div>
     </div>
     <div
-      class="xrk-tab-item __x-st-exp __x-st-click"
+      class="corn-tab-item __x-st-exp __x-st-click"
       data-testid="tab-item"
     >
       <div
@@ -74,14 +74,14 @@ exports[`not currenIndex 1`] = `
       </div>
     </div>
     <div
-      class="xrk-tab-item __x-st-exp __x-st-click"
+      class="corn-tab-item __x-st-exp __x-st-click"
       data-testid="tab-item"
     >
       <div
         class=""
       >
         <div
-          class="taro-img xrk-img xrk-tab-item-icon"
+          class="taro-img corn-img corn-tab-item-icon"
         >
           <img
             class="taro-img__mode-heightfix"
@@ -97,11 +97,11 @@ exports[`not currenIndex 1`] = `
 exports[`option 1`] = `
 <div>
   <div
-    class="xrk-tab xrk-f xrk-tab-default xrk-tab-middle"
+    class="corn-tab corn-f corn-tab-default corn-tab-middle"
     data-testid="tab"
   >
     <div
-      class="xrk-tab-item __x-st-exp __x-st-click"
+      class="corn-tab-item __x-st-exp __x-st-click"
       data-testid="tab-item"
     >
       <div
@@ -111,7 +111,7 @@ exports[`option 1`] = `
       </div>
     </div>
     <div
-      class="xrk-tab-item __x-st-exp __x-st-click xrk-tab-item-active __active"
+      class="corn-tab-item __x-st-exp __x-st-click corn-tab-item-active __active"
       data-testid="tab-item"
     >
       <div
@@ -121,7 +121,7 @@ exports[`option 1`] = `
       </div>
     </div>
     <div
-      class="xrk-tab-item __x-st-exp __x-st-click"
+      class="corn-tab-item __x-st-exp __x-st-click"
       data-testid="tab-item"
     >
       <div
@@ -137,11 +137,11 @@ exports[`option 1`] = `
 exports[`option middle 1`] = `
 <div>
   <div
-    class="xrk-tab xrk-f xrk-tab-default xrk-tab-middle"
+    class="corn-tab corn-f corn-tab-default corn-tab-middle"
     data-testid="tab"
   >
     <div
-      class="xrk-tab-item __x-st-exp __x-st-click"
+      class="corn-tab-item __x-st-exp __x-st-click"
       data-testid="tab-item"
     >
       <div
@@ -151,7 +151,7 @@ exports[`option middle 1`] = `
       </div>
     </div>
     <div
-      class="xrk-tab-item __x-st-exp __x-st-click xrk-tab-item-active __active"
+      class="corn-tab-item __x-st-exp __x-st-click corn-tab-item-active __active"
       data-testid="tab-item"
     >
       <div
@@ -161,7 +161,7 @@ exports[`option middle 1`] = `
       </div>
     </div>
     <div
-      class="xrk-tab-item __x-st-exp __x-st-click"
+      class="corn-tab-item __x-st-exp __x-st-click"
       data-testid="tab-item"
     >
       <div
@@ -177,23 +177,23 @@ exports[`option middle 1`] = `
 exports[`option of button 1`] = `
 <div>
   <div
-    class="xrk-tab xrk-f xrk-tab-button xrk-tab-middle"
+    class="corn-tab corn-f corn-tab-button corn-tab-middle"
     data-testid="tab"
   >
     <button
-      class="xrk-btn xrk-if xrk-ac xrk-jc xrk-btn-middle xrk-btn-light"
+      class="corn-btn corn-if corn-ac corn-jc corn-btn-middle corn-btn-light"
       type="button"
     >
       item1
     </button>
     <button
-      class="xrk-btn xrk-if xrk-ac xrk-jc xrk-btn-middle xrk-btn-primary __active"
+      class="corn-btn corn-if corn-ac corn-jc corn-btn-middle corn-btn-primary __active"
       type="button"
     >
       item2
     </button>
     <button
-      class="xrk-btn xrk-if xrk-ac xrk-jc xrk-btn-middle xrk-btn-light"
+      class="corn-btn corn-if corn-ac corn-jc corn-btn-middle corn-btn-light"
       type="button"
     >
       item4
@@ -205,11 +205,11 @@ exports[`option of button 1`] = `
 exports[`option of id 1`] = `
 <div>
   <div
-    class="xrk-tab xrk-f xrk-tab-default xrk-tab-middle"
+    class="corn-tab corn-f corn-tab-default corn-tab-middle"
     data-testid="tab"
   >
     <div
-      class="xrk-tab-item __x-st-exp __x-st-click"
+      class="corn-tab-item __x-st-exp __x-st-click"
       data-testid="tab-item"
     >
       <div
@@ -219,7 +219,7 @@ exports[`option of id 1`] = `
       </div>
     </div>
     <div
-      class="xrk-tab-item __x-st-exp __x-st-click xrk-tab-item-active __active"
+      class="corn-tab-item __x-st-exp __x-st-click corn-tab-item-active __active"
       data-testid="tab-item"
     >
       <div
@@ -229,7 +229,7 @@ exports[`option of id 1`] = `
       </div>
     </div>
     <div
-      class="xrk-tab-item __x-st-exp __x-st-click"
+      class="corn-tab-item __x-st-exp __x-st-click"
       data-testid="tab-item"
     >
       <div
@@ -239,7 +239,7 @@ exports[`option of id 1`] = `
       </div>
     </div>
     <div
-      class="xrk-tab-item __x-st-exp __x-st-click"
+      class="corn-tab-item __x-st-exp __x-st-click"
       data-testid="tab-item"
     >
       <div

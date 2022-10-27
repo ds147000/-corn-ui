@@ -6,13 +6,13 @@ Object {
   "baseElement": <body>
     <div>
       <i
-        class="xrk-icon xrk-i-banji"
+        class="corn-icon corn-i-banji"
       />
     </div>
   </body>,
   "container": <div>
     <i
-      class="xrk-icon xrk-i-banji"
+      class="corn-icon corn-i-banji"
     />
   </div>,
   "debug": [Function],

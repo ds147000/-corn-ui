@@ -3,7 +3,7 @@
 exports[`comps/Tab/item active 1`] = `
 <div>
   <div
-    class="xrk-tab-item __x-st-exp __x-st-click xrk-tab-item-active __active"
+    class="corn-tab-item __x-st-exp __x-st-click corn-tab-item-active __active"
     data-testid="tab-item"
   >
     <div
@@ -18,14 +18,14 @@ exports[`comps/Tab/item active 1`] = `
 exports[`comps/Tab/item icon 1`] = `
 <div>
   <div
-    class="xrk-tab-item __x-st-exp __x-st-click"
+    class="corn-tab-item __x-st-exp __x-st-click"
     data-testid="tab-item"
   >
     <div
       class=""
     >
       <div
-        class="taro-img xrk-img xrk-tab-item-icon"
+        class="taro-img corn-img corn-tab-item-icon"
       >
         <img
           class="taro-img__mode-heightfix"
@@ -40,11 +40,11 @@ exports[`comps/Tab/item icon 1`] = `
 exports[`comps/Tab/item message 1`] = `
 <div>
   <div
-    class="xrk-tab-item __x-st-exp __x-st-click"
+    class="corn-tab-item __x-st-exp __x-st-click"
     data-testid="tab-item"
   >
     <div
-      class="xrk-tab-item-message"
+      class="corn-tab-item-message"
     >
       item
     </div>
@@ -55,7 +55,7 @@ exports[`comps/Tab/item message 1`] = `
 exports[`comps/Tab/item title 1`] = `
 <div>
   <div
-    class="xrk-tab-item __x-st-exp __x-st-click"
+    class="corn-tab-item __x-st-exp __x-st-click"
     data-testid="tab-item"
   >
     <div

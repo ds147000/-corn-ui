@@ -39,7 +39,7 @@ const Cell: React.FC<CellProps> & CellView = ({
   }, [ onClick, disabled ])
 
   const _props: ViewProps = {
-    className: ClassNames('xrk-cell xrk-f xrk-ac', disabled && 'xrk-cell-disable', className),
+    className: ClassNames('corn-cell corn-f corn-ac', disabled && 'corn-cell-disable', className),
     onClick: _onClick,
     ...props
   }
@@ -49,12 +49,12 @@ const Cell: React.FC<CellProps> & CellView = ({
 
   const content = (
     <>
-      <View className="xrk-cell-label">{label}</View>
-      <View className="xrk-cell-value">
+      <View className="corn-cell-label">{label}</View>
+      <View className="corn-cell-value">
         {value}{children}
-        {showPlaceholder && <Text className="xrk-cell-placeholder">{placeholder}</Text>}
+        {showPlaceholder && <Text className="corn-cell-placeholder">{placeholder}</Text>}
       </View>
-      <View className="xrk-cell-suffix xrk-f xrk-ac">
+      <View className="corn-cell-suffix corn-f corn-ac">
         {suffix}
         {showArrow && <Icon name="big-right" data-testid="arrow" />}
       </View>

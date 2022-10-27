@@ -8,13 +8,13 @@ export const ToastView: React.FC<ToastProps> = ({ title, onClose, success, icon,
   const [ isHideAnimated, setIsHideAnimated ] = useState<0 | 1 | 2>(0)
 
   const iconEl = useMemo((): JSX.Element | null => {
-    if (image) return <Image src={image} className="xrk-toast-icon" mode="aspectFill" />
+    if (image) return <Image src={image} className="corn-toast-icon" mode="aspectFill" />
 
     switch(icon) {
       case 'success':
         return (
           <Image
-            className="xrk-toast-icon"
+            className="corn-toast-icon"
             mode="aspectFill"
             src="https://assets.xrkmm.cn/u/4000002499670412/065dca5c-f5f5-4708-9acd-d1bd513dcb2b.png"
           />
@@ -49,7 +49,7 @@ export const ToastView: React.FC<ToastProps> = ({ title, onClose, success, icon,
   if (isHideAnimated === 2) return null
 
   return (
-    <View className={`xrk-toast-item ${isHideAnimated ? 'hide' : 'show'}`} onAnimationEnd={onAnimationEnd} >
+    <View className={`corn-toast-item ${isHideAnimated ? 'hide' : 'show'}`} onAnimationEnd={onAnimationEnd} >
       {iconEl}
       <Text>{title}</Text>
     </View>

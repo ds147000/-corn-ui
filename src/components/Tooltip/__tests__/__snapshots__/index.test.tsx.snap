@@ -6,35 +6,35 @@ Object {
   "baseElement": <body>
     <div>
       <div
-        class="xrk-popover-plane"
+        class="corn-popover-plane"
         data-testid="mask"
       />
       <div
-        class="xrk-popover-show"
+        class="corn-popover-show"
         data-testid="centent"
       >
         <div
-          class="xrk-tooltip-arrow xrk-tooltip-arrow-bottom"
+          class="corn-tooltip-arrow corn-tooltip-arrow-bottom"
           style="top: 0px; left: 0px;"
         />
         <div
-          class="xrk-tooltip xrk-tooltip-bottom"
+          class="corn-tooltip corn-tooltip-bottom"
           style="top: 8.533333333333333px; left: -76.80000000000001px;"
         >
           <div
-            class="xrk-tooltip-item xrk-f xrk-ac xrk-jc"
+            class="corn-tooltip-item corn-f corn-ac corn-jc"
           >
             金币
           </div>
           <div
-            class="xrk-tooltip-item xrk-f xrk-ac xrk-jc xrk-tooltip-active"
+            class="corn-tooltip-item corn-f corn-ac corn-jc corn-tooltip-active"
           >
             人鱼
           </div>
         </div>
       </div>
       <div
-        class="xrk-popover "
+        class="corn-popover "
       >
         更多
       </div>
@@ -42,35 +42,35 @@ Object {
   </body>,
   "container": <div>
     <div
-      class="xrk-popover-plane"
+      class="corn-popover-plane"
       data-testid="mask"
     />
     <div
-      class="xrk-popover-show"
+      class="corn-popover-show"
       data-testid="centent"
     >
       <div
-        class="xrk-tooltip-arrow xrk-tooltip-arrow-bottom"
+        class="corn-tooltip-arrow corn-tooltip-arrow-bottom"
         style="top: 0px; left: 0px;"
       />
       <div
-        class="xrk-tooltip xrk-tooltip-bottom"
+        class="corn-tooltip corn-tooltip-bottom"
         style="top: 8.533333333333333px; left: -76.80000000000001px;"
       >
         <div
-          class="xrk-tooltip-item xrk-f xrk-ac xrk-jc"
+          class="corn-tooltip-item corn-f corn-ac corn-jc"
         >
           金币
         </div>
         <div
-          class="xrk-tooltip-item xrk-f xrk-ac xrk-jc xrk-tooltip-active"
+          class="corn-tooltip-item corn-f corn-ac corn-jc corn-tooltip-active"
         >
           人鱼
         </div>
       </div>
     </div>
     <div
-      class="xrk-popover "
+      class="corn-popover "
     >
       更多
     </div>
@@ -135,35 +135,35 @@ Object {
   "baseElement": <body>
     <div>
       <div
-        class="xrk-popover-plane"
+        class="corn-popover-plane"
         data-testid="mask"
       />
       <div
-        class="xrk-popover-show"
+        class="corn-popover-show"
         data-testid="centent"
       >
         <div
-          class="xrk-tooltip-arrow xrk-tooltip-arrow-bottom"
+          class="corn-tooltip-arrow corn-tooltip-arrow-bottom"
           style="top: 0px; left: 0px;"
         />
         <div
-          class="xrk-tooltip xrk-tooltip-bottom"
+          class="corn-tooltip corn-tooltip-bottom"
           style="top: 58.53333333333333px; left: -66.80000000000001px;"
         >
           <div
-            class="xrk-tooltip-item xrk-f xrk-ac xrk-jc"
+            class="corn-tooltip-item corn-f corn-ac corn-jc"
           >
             金币
           </div>
           <div
-            class="xrk-tooltip-item xrk-f xrk-ac xrk-jc xrk-tooltip-active"
+            class="corn-tooltip-item corn-f corn-ac corn-jc corn-tooltip-active"
           >
             人鱼
           </div>
         </div>
       </div>
       <div
-        class="xrk-popover "
+        class="corn-popover "
       >
         更多
       </div>
@@ -171,35 +171,35 @@ Object {
   </body>,
   "container": <div>
     <div
-      class="xrk-popover-plane"
+      class="corn-popover-plane"
       data-testid="mask"
     />
     <div
-      class="xrk-popover-show"
+      class="corn-popover-show"
       data-testid="centent"
     >
       <div
-        class="xrk-tooltip-arrow xrk-tooltip-arrow-bottom"
+        class="corn-tooltip-arrow corn-tooltip-arrow-bottom"
         style="top: 0px; left: 0px;"
       />
       <div
-        class="xrk-tooltip xrk-tooltip-bottom"
+        class="corn-tooltip corn-tooltip-bottom"
         style="top: 58.53333333333333px; left: -66.80000000000001px;"
       >
         <div
-          class="xrk-tooltip-item xrk-f xrk-ac xrk-jc"
+          class="corn-tooltip-item corn-f corn-ac corn-jc"
         >
           金币
         </div>
         <div
-          class="xrk-tooltip-item xrk-f xrk-ac xrk-jc xrk-tooltip-active"
+          class="corn-tooltip-item corn-f corn-ac corn-jc corn-tooltip-active"
         >
           人鱼
         </div>
       </div>
     </div>
     <div
-      class="xrk-popover "
+      class="corn-popover "
     >
       更多
     </div>
@@ -264,7 +264,7 @@ Object {
   "baseElement": <body>
     <div>
       <div
-        class="xrk-popover "
+        class="corn-popover "
       >
         更多
       </div>
@@ -272,7 +272,7 @@ Object {
   </body>,
   "container": <div>
     <div
-      class="xrk-popover "
+      class="corn-popover "
     >
       更多
     </div>

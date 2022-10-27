@@ -1,4 +1,4 @@
-.xrk-tag {
+.corn-tag {
   box-sizing: border-box;
   white-space: nowrap;
 
@@ -50,7 +50,7 @@
     background-color: $primary;
     color: $text1;
 
-    &.xrk-tag-ghost {
+    &.corn-tag-ghost {
       border: 1px solid rgba($color: $primary , $alpha: 1);
       background-color: rgba($color: $white , $alpha: 0);
       color: $primary;
@@ -61,7 +61,7 @@
     background-color: $warn;
     color: $error;
 
-    &.xrk-tag-ghost {
+    &.corn-tag-ghost {
       border: 1px solid rgba($color: $warn , $alpha: 1);
       background-color: rgba($color: $white , $alpha: 0);
       color: $warn;
@@ -72,7 +72,7 @@
     background-color: $error;
     color: $white;
 
-    &.xrk-tag-ghost {
+    &.corn-tag-ghost {
       border: 1px solid rgba($color: $error , $alpha: 1);
       background-color: rgba($color: $white , $alpha: 0);
       color: $error;
@@ -83,7 +83,7 @@
     background-color: $link;
     color: $white;
 
-    &.xrk-tag-ghost {
+    &.corn-tag-ghost {
       border: 1px solid rgba($color: $link , $alpha: 1);
       background-color: rgba($color: $white , $alpha: 0);
       color: $link;
@@ -94,7 +94,7 @@
     background-color: $pop;
     color: $white;
 
-    &.xrk-tag-ghost {
+    &.corn-tag-ghost {
       border: 1px solid rgba($color: $pop , $alpha: 1);
       background-color: rgba($color: $white , $alpha: 0);
       color: $pop;
@@ -105,7 +105,7 @@
     background-color: $defualt;
     color: $white;
 
-    &.xrk-tag-ghost {
+    &.corn-tag-ghost {
       border: 1px solid rgba($color: $defualt , $alpha: 1);
       background-color: rgba($color: $white , $alpha: 0);
       color: $defualt;
@@ -116,7 +116,7 @@
     background-color: $urgentBack;
     color: $urgent;
 
-    &.xrk-tag-ghost {
+    &.corn-tag-ghost {
       border: 1px solid rgba($color: $urgent , $alpha: 1);
       background-color: rgba($color: $white , $alpha: 0);
       color: $urgent;

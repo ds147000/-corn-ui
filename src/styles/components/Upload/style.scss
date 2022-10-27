@@ -1,4 +1,4 @@
-.xrk-upload {
+.corn-upload {
   display: flex;
   align-items: center;
 
@@ -22,7 +22,7 @@
     border-radius: 30px;
     position: relative;
 
-    .xrk-upload-mask {
+    .corn-upload-mask {
       position: absolute;
       width: 100%;
       height: 100%;
@@ -31,7 +31,7 @@
       outline: none;
     }
 
-    .xrk-icon {
+    .corn-icon {
       font-size: 48px;
       color: $icon1;
     }
@@ -46,8 +46,8 @@
     flex-wrap: wrap;
     min-height: 160px;
 
-    .xrk-upload-item,
-    .xrk-upload-btn {
+    .corn-upload-item,
+    .corn-upload-btn {
       margin-bottom: 18px;
     }
   }
@@ -71,7 +71,7 @@
     z-index: 5;
     color: #fff;
 
-    .xrk-icon {
+    .corn-icon {
       font-size: 25px;
     }
   }

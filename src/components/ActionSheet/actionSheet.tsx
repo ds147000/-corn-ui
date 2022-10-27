@@ -57,8 +57,8 @@ const ActionSheet: React.FC<ActionSheetProps> = ({
 }) => {
   const isShowFloor = showCancel || showOk
   const titleClass = useMemo(() => classNames(
-    'xrk-actionsheet-header-center',
-    `xrk-actionsheet-${titleAlign}`
+    'corn-actionsheet-header-center',
+    `corn-actionsheet-${titleAlign}`
   ), [ titleAlign ])
 
   return (
@@ -68,9 +68,9 @@ const ActionSheet: React.FC<ActionSheetProps> = ({
       onClose={onClose}
       position="bottom" mask
     >
-      <View className="xrk-actionsheet">
+      <View className="corn-actionsheet">
         {showHead && (
-          <View className="xrk-actionsheet-header">
+          <View className="corn-actionsheet-header">
             <View className={titleClass}>
               {Boolean(title) && <View className="title">{title}</View>}
               {Boolean(subTitle) && <View className="sub-title">{subTitle}</View>}
@@ -79,16 +79,16 @@ const ActionSheet: React.FC<ActionSheetProps> = ({
         )}
         {closable && (
           <View
-            className="xrk-actionsheet-close"
+            className="corn-actionsheet-close"
             data-testid="close"
             onClick={onClose}
           />
         )}
-        <View className="xrk-actionsheet-body" style={{ maxHeight }}>
+        <View className="corn-actionsheet-body" style={{ maxHeight }}>
           {children}
         </View>
         {isShowFloor && (
-          <View className="xrk-actionsheet-floor">
+          <View className="corn-actionsheet-floor">
             {showCancel && (<ActionSheetItem align={titleAlign} text={cancelText} onClick={onClose} />)}
             {showOk && (<ActionSheetItem align={titleAlign} text={okText} onClick={onOk} />)}
           </View>

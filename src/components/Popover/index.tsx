@@ -55,13 +55,13 @@ const Popover: React.FC<PopoverProps> = ({ children, className, style, content }
       {isHide && (
         <>
           <View
-            className="xrk-popover-plane"
+            className="corn-popover-plane"
             onClick={onClose}
             onTouchStart={onClose}
             data-testid="mask"
           />
           <View
-            className={visibility ? 'xrk-popover-show' : 'xrk-popover-hide'}
+            className={visibility ? 'corn-popover-show' : 'corn-popover-hide'}
             onAnimationEnd={onAnimatedEnd}
             onClick={onClose}
             data-testid="centent"
@@ -70,7 +70,7 @@ const Popover: React.FC<PopoverProps> = ({ children, className, style, content }
           </View>
         </>
       )}
-      <View className={`xrk-popover ${className || ''}`} style={style} onClick={onChange} ref={El} >
+      <View className={`corn-popover ${className || ''}`} style={style} onClick={onChange} ref={El} >
         {children}
       </View>
     </>

@@ -3,7 +3,7 @@
 exports[`ImageH5 basis2 1`] = `
 <div>
   <div
-    class="taro-img xrk-img"
+    class="taro-img corn-img"
   >
     <img
       class="taro-img__mode-scaletofill"
@@ -19,7 +19,7 @@ Object {
   "baseElement": <body>
     <div>
       <div
-        class="taro-img xrk-img"
+        class="taro-img corn-img"
       >
         <img
           class="taro-img__mode-scaletofill"
@@ -31,7 +31,7 @@ Object {
   </body>,
   "container": <div>
     <div
-      class="taro-img xrk-img"
+      class="taro-img corn-img"
     >
       <img
         class="taro-img__mode-scaletofill"

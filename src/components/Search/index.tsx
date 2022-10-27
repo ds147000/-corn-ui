@@ -63,7 +63,7 @@ const Search: React.FC<SearchProps> = ({
   const searchForm = useRef<Form>()
   const valueLen = String(value || '').length
 
-  const _class = useMemo(() => classNames('xrk-search xrk-f xrk-ac', `xrk-search-${type}`), [ type ])
+  const _class = useMemo(() => classNames('corn-search corn-f corn-ac', `corn-search-${type}`), [ type ])
 
   const _onInput = (event: BaseEventOrig<InputType.inputEventDetail>): void => {
     onChange?.(event.detail.value)
@@ -99,19 +99,19 @@ const Search: React.FC<SearchProps> = ({
   return (
     <Form onSubmit={_onSubmit} ref={searchForm as React.LegacyRef<Form>} >
       <View className={_class} >
-        {back && <Icon className="xrk-search-back" name="left" data-testid="back" onClick={onBack} />}
+        {back && <Icon className="corn-search-back" name="left" data-testid="back" onClick={onBack} />}
 
         <View
-          className="xrk-search-input-box xrk-f xrk-ac"
+          className="corn-search-input-box corn-f corn-ac"
           data-testid="search-box"
           onClick={onClick}
         >
-          <Icon name="search" className="xrk-search-icon" />
+          <Icon name="search" className="corn-search-icon" />
 
           {openInput ? (
             <Input
               name="value"
-              className="xrk-search-input"
+              className="corn-search-input"
               value={value}
               onInput={_onInput}
               onFocus={_onFocus}
@@ -124,7 +124,7 @@ const Search: React.FC<SearchProps> = ({
               focus={focus}
             />
           ) : (
-            <View className="xrk-search-input" />
+            <View className="corn-search-input" />
           )}
 
           <Block>
@@ -133,7 +133,7 @@ const Search: React.FC<SearchProps> = ({
 
           <Block>
             {isShowClear && (
-              <View className="xrk-search-clear xrk-f xrk-ac xrk-jc" onClick={_onClear}>
+              <View className="corn-search-clear corn-f corn-ac corn-jc" onClick={_onClear}>
                 <Icon name="clear" />
               </View>
             )}
@@ -141,7 +141,7 @@ const Search: React.FC<SearchProps> = ({
 
           <Button
             size="middle"
-            className="xrk-search-btn"
+            className="corn-search-btn"
             data-testid="search-btn"
             formType="submit"
           >
@@ -149,7 +149,7 @@ const Search: React.FC<SearchProps> = ({
           </Button>
         </View>
 
-        {Boolean(suffix) && <View className="xrk-search-suffix xrk-f xkr-ac" >{suffix}</View>}
+        {Boolean(suffix) && <View className="corn-search-suffix corn-f xkr-ac" >{suffix}</View>}
       </View>
     </Form>
   )

@@ -25,7 +25,7 @@ const Money: React.FC<MoneyProps> = ({
   className,
   ...props
 }) => {
-  const cln = useMemo(() => classNames('xrk-money xrk-money-' + size, className), [ size, className ])
+  const cln = useMemo(() => classNames('corn-money corn-money-' + size, className), [ size, className ])
 
   const value = useMemo(() => {
     if (amountString) return amountString
@@ -40,7 +40,7 @@ const Money: React.FC<MoneyProps> = ({
     <Text {...props} className={cln}>
       {type !== 'gold' && (
         <Text
-          className="xrk-money-mark"
+          className="corn-money-mark"
           data-testid="money-mark"
         >
           {type === 'coin' ? 'K' : '￥'}

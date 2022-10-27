@@ -34,15 +34,15 @@ const Drawer: React.FC<DrawerProps> = ({
 
   const _class = useMemo(() => {
     return classNames(
-      'xrk-drawer-body',
-      `xrk-drawer-${position}-${visible ? 'show' : 'hide'}`,
-      `xrk-drawer-${position}`,
+      'corn-drawer-body',
+      `corn-drawer-${position}-${visible ? 'show' : 'hide'}`,
+      `corn-drawer-${position}`,
       className
     )
   }, [ position, visible, className ])
 
   const _maskClass = useMemo(() => {
-    return classNames('xrk-drawer-mask', `xrk-drawer-mask-${visible ? 'show' : 'hide'}`)
+    return classNames('corn-drawer-mask', `corn-drawer-mask-${visible ? 'show' : 'hide'}`)
   }, [ visible ])
 
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
@@ -69,7 +69,7 @@ const Drawer: React.FC<DrawerProps> = ({
     if (position !== 'center') return
 
     const target = event.target as HTMLDivElement
-    if (target?.className?.indexOf?.('xrk-drawer-body') === -1) return
+    if (target?.className?.indexOf?.('corn-drawer-body') === -1) return
     if (target.id !== Body.current?.uid && Body.current?.uid !== undefined) return
 
     onClickMask()

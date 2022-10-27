@@ -1,4 +1,4 @@
-.xrk-toast {
+.corn-toast {
   position: fixed;
   top: 0;
   left: 0;
@@ -16,7 +16,7 @@
     pointer-events: auto;
   }
 
-  .xrk-toast-item {
+  .corn-toast-item {
     display: inline-flex;
     background-color: $toastBg;
     color: $white;
@@ -38,7 +38,7 @@
     }
   }
 
-  .xrk-toast-icon {
+  .corn-toast-icon {
     width: 34px;
     height: 34px;
     margin-right: 16px;

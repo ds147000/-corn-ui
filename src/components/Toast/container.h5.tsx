@@ -44,7 +44,7 @@ export const Container: React.FC<ContainerProps> = ({ onDestory, onShow, onHide 
 
 
   return (
-    <View className={classNames('xrk-toast', isMask && 'xrk-toast-actions')}>
+    <View className={classNames('corn-toast', isMask && 'corn-toast-actions')}>
       {toastList.map((item) => (
         <ToastView {...item} onClose={onItemClose} key={String(item.title)} />
       ))}

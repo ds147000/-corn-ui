@@ -65,19 +65,19 @@ const CheckBox: React.FC<CheckBoxProps> = ({
   const _name  = isGroup ? '' : name
 
   const _class = classNames(
-    'xrk-if xrk-ac',
-    isDefualtStyle ? 'xrk-checkbox' : 'xrk-checkbox-btn',
-    isDefualtStyle && disabled && 'xrk-checkbox-disable'
+    'corn-if corn-ac',
+    isDefualtStyle ? 'corn-checkbox' : 'corn-checkbox-btn',
+    isDefualtStyle && disabled && 'corn-checkbox-disable'
   )
 
   let input: JSX.Element | null = null
   // #if _APP === 'weapp'
-  input = <Input className="xrk-checkbox-hide" value={_value} name={_name} data-testid="check" />
+  input = <Input className="corn-checkbox-hide" value={_value} name={_name} data-testid="check" />
   // #else
   input = (
   // eslint-disable-next-line react/forbid-elements
     <input
-      className="xrk-checkbox-hide"
+      className="corn-checkbox-hide"
       value={_value}
       name={_name}
       data-testid="check"
@@ -104,13 +104,13 @@ const CheckBox: React.FC<CheckBoxProps> = ({
   }, [ formContext, _name ])
 
   return (
-    <View className={_class} onClick={_onChange} data-testid="xrk-checkbox" >
+    <View className={_class} onClick={_onChange} data-testid="corn-checkbox" >
       {input}
       {isDefualtStyle ? (
         <>
           <Image
             mode="scaleToFill"
-            className="xrk-checkbox-icon"
+            className="corn-checkbox-icon"
             src={controllCheck ? SELECT_ICON : DEFAULT_ICON}
           />
           {children}

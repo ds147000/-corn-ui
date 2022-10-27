@@ -1,4 +1,4 @@
-.xrk-empty {
+.corn-empty {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -30,16 +30,16 @@
   &-large {
     padding: 100px 0;
 
-    .xrk-empty-text {
+    .corn-empty-text {
       font-size: 36px;
     }
 
-    .xrk-empty-img {
+    .corn-empty-img {
       max-width: 360px;
       max-height: 360px;
     }
 
-    .xrk-empty-children {
+    .corn-empty-children {
       padding-top: 100px;
     }
   }
@@ -47,16 +47,16 @@
   &-middle {
     padding: 60px 0;
 
-    .xrk-empty-text {
+    .corn-empty-text {
       font-size: 28px;
     }
 
-    .xrk-empty-img {
+    .corn-empty-img {
       max-width: 300px;
       max-height: 300px;
     }
 
-    .xrk-empty-children {
+    .corn-empty-children {
       padding-top: 60px;
     }
   }
@@ -64,16 +64,16 @@
   &-small {
     padding: $pad 0;
 
-    .xrk-empty-text {
+    .corn-empty-text {
       font-size: 22px;
     }
 
-    .xrk-empty-img {
+    .corn-empty-img {
       max-width: 240px;
       max-height: 240px;
     }
 
-    .xrk-empty-children {
+    .corn-empty-children {
       padding-top: $pad;
     }
   }

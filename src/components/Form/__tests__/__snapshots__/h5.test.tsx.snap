@@ -4,25 +4,25 @@ exports[`Fomr 初始化值 1`] = `
 <div>
   <form>
     <input
-      class="weui-input xrk-input"
+      class="weui-input corn-input"
       data-testid="input"
       name="name"
       type="text"
       value="小明"
     />
     <div
-      class="xrk-if xrk-ac xrk-checkbox"
-      data-testid="xrk-checkbox"
+      class="corn-if corn-ac corn-checkbox"
+      data-testid="corn-checkbox"
     >
       <input
-        class="xrk-checkbox-hide"
+        class="corn-checkbox-hide"
         data-testid="check"
         name="sex"
         readonly=""
         value="false"
       />
       <div
-        class="taro-img xrk-img xrk-checkbox-icon"
+        class="taro-img corn-img corn-checkbox-icon"
       >
         <img
           class="taro-img__mode-scaletofill"
@@ -36,25 +36,25 @@ exports[`Fomr 初始化值 1`] = `
       name="age"
     >
       <input
-        class="xrk-checkbox-group-hide"
+        class="corn-checkbox-group-hide"
         data-testid="check"
         name="age"
         readonly=""
         value="[]"
       />
       <div
-        class="xrk-if xrk-ac xrk-checkbox"
-        data-testid="xrk-checkbox"
+        class="corn-if corn-ac corn-checkbox"
+        data-testid="corn-checkbox"
       >
         <input
-          class="xrk-checkbox-hide"
+          class="corn-checkbox-hide"
           data-testid="check"
           name=""
           readonly=""
           value="1"
         />
         <div
-          class="taro-img xrk-img xrk-checkbox-icon"
+          class="taro-img corn-img corn-checkbox-icon"
         >
           <img
             class="taro-img__mode-scaletofill"
@@ -64,18 +64,18 @@ exports[`Fomr 初始化值 1`] = `
         1
       </div>
       <div
-        class="xrk-if xrk-ac xrk-checkbox"
-        data-testid="xrk-checkbox"
+        class="corn-if corn-ac corn-checkbox"
+        data-testid="corn-checkbox"
       >
         <input
-          class="xrk-checkbox-hide"
+          class="corn-checkbox-hide"
           data-testid="check"
           name=""
           readonly=""
           value="2"
         />
         <div
-          class="taro-img xrk-img xrk-checkbox-icon"
+          class="taro-img corn-img corn-checkbox-icon"
         >
           <img
             class="taro-img__mode-scaletofill"
@@ -85,18 +85,18 @@ exports[`Fomr 初始化值 1`] = `
         2
       </div>
       <div
-        class="xrk-if xrk-ac xrk-checkbox"
-        data-testid="xrk-checkbox"
+        class="corn-if corn-ac corn-checkbox"
+        data-testid="corn-checkbox"
       >
         <input
-          class="xrk-checkbox-hide"
+          class="corn-checkbox-hide"
           data-testid="check"
           name=""
           readonly=""
           value="3"
         />
         <div
-          class="taro-img xrk-img xrk-checkbox-icon"
+          class="taro-img corn-img corn-checkbox-icon"
         >
           <img
             class="taro-img__mode-scaletofill"
@@ -111,25 +111,25 @@ exports[`Fomr 初始化值 1`] = `
       name="study"
     >
       <input
-        class="xrk-checkbox-group-hide"
+        class="corn-checkbox-group-hide"
         data-testid="check"
         name="study"
         readonly=""
         value=""
       />
       <div
-        class="xrk-if xrk-ac xrk-checkbox"
-        data-testid="xrk-checkbox"
+        class="corn-if corn-ac corn-checkbox"
+        data-testid="corn-checkbox"
       >
         <input
-          class="xrk-checkbox-hide"
+          class="corn-checkbox-hide"
           data-testid="check"
           name=""
           readonly=""
           value="1"
         />
         <div
-          class="taro-img xrk-img xrk-checkbox-icon"
+          class="taro-img corn-img corn-checkbox-icon"
         >
           <img
             class="taro-img__mode-scaletofill"
@@ -139,18 +139,18 @@ exports[`Fomr 初始化值 1`] = `
         大学
       </div>
       <div
-        class="xrk-if xrk-ac xrk-checkbox"
-        data-testid="xrk-checkbox"
+        class="corn-if corn-ac corn-checkbox"
+        data-testid="corn-checkbox"
       >
         <input
-          class="xrk-checkbox-hide"
+          class="corn-checkbox-hide"
           data-testid="check"
           name=""
           readonly=""
           value="2"
         />
         <div
-          class="taro-img xrk-img xrk-checkbox-icon"
+          class="taro-img corn-img corn-checkbox-icon"
         >
           <img
             class="taro-img__mode-scaletofill"
@@ -161,10 +161,10 @@ exports[`Fomr 初始化值 1`] = `
       </div>
     </div>
     <div
-      class="xrk-textarea"
+      class="corn-textarea"
     >
       <textarea
-        class="xrk-textarea-conter"
+        class="corn-textarea-conter"
         data-testid="textarea"
         maxlength="300"
         name="liuyan"
@@ -173,14 +173,14 @@ exports[`Fomr 初始化值 1`] = `
         123456
       </textarea>
       <div
-        class="xrk-textarea-number"
+        class="corn-textarea-number"
       >
         6
         /
         300
       </div>
       <div
-        class="xrk-textarea-floor"
+        class="corn-textarea-floor"
       />
     </div>
   </form>
@@ -191,25 +191,25 @@ exports[`Fomr 改变初始化值 1`] = `
 <div>
   <form>
     <input
-      class="weui-input xrk-input"
+      class="weui-input corn-input"
       data-testid="input"
       name="name"
       type="text"
       value="123"
     />
     <div
-      class="xrk-if xrk-ac xrk-checkbox"
-      data-testid="xrk-checkbox"
+      class="corn-if corn-ac corn-checkbox"
+      data-testid="corn-checkbox"
     >
       <input
-        class="xrk-checkbox-hide"
+        class="corn-checkbox-hide"
         data-testid="check"
         name="sex"
         readonly=""
         value="true"
       />
       <div
-        class="taro-img xrk-img xrk-checkbox-icon"
+        class="taro-img corn-img corn-checkbox-icon"
       >
         <img
           class="taro-img__mode-scaletofill"
@@ -223,25 +223,25 @@ exports[`Fomr 改变初始化值 1`] = `
       name="age"
     >
       <input
-        class="xrk-checkbox-group-hide"
+        class="corn-checkbox-group-hide"
         data-testid="check"
         name="age"
         readonly=""
         value="[]"
       />
       <div
-        class="xrk-if xrk-ac xrk-checkbox"
-        data-testid="xrk-checkbox"
+        class="corn-if corn-ac corn-checkbox"
+        data-testid="corn-checkbox"
       >
         <input
-          class="xrk-checkbox-hide"
+          class="corn-checkbox-hide"
           data-testid="check"
           name=""
           readonly=""
           value="1"
         />
         <div
-          class="taro-img xrk-img xrk-checkbox-icon"
+          class="taro-img corn-img corn-checkbox-icon"
         >
           <img
             class="taro-img__mode-scaletofill"
@@ -251,18 +251,18 @@ exports[`Fomr 改变初始化值 1`] = `
         1
       </div>
       <div
-        class="xrk-if xrk-ac xrk-checkbox"
-        data-testid="xrk-checkbox"
+        class="corn-if corn-ac corn-checkbox"
+        data-testid="corn-checkbox"
       >
         <input
-          class="xrk-checkbox-hide"
+          class="corn-checkbox-hide"
           data-testid="check"
           name=""
           readonly=""
           value="2"
         />
         <div
-          class="taro-img xrk-img xrk-checkbox-icon"
+          class="taro-img corn-img corn-checkbox-icon"
         >
           <img
             class="taro-img__mode-scaletofill"
@@ -272,18 +272,18 @@ exports[`Fomr 改变初始化值 1`] = `
         2
       </div>
       <div
-        class="xrk-if xrk-ac xrk-checkbox"
-        data-testid="xrk-checkbox"
+        class="corn-if corn-ac corn-checkbox"
+        data-testid="corn-checkbox"
       >
         <input
-          class="xrk-checkbox-hide"
+          class="corn-checkbox-hide"
           data-testid="check"
           name=""
           readonly=""
           value="3"
         />
         <div
-          class="taro-img xrk-img xrk-checkbox-icon"
+          class="taro-img corn-img corn-checkbox-icon"
         >
           <img
             class="taro-img__mode-scaletofill"
@@ -298,25 +298,25 @@ exports[`Fomr 改变初始化值 1`] = `
       name="study"
     >
       <input
-        class="xrk-checkbox-group-hide"
+        class="corn-checkbox-group-hide"
         data-testid="check"
         name="study"
         readonly=""
         value=""
       />
       <div
-        class="xrk-if xrk-ac xrk-checkbox"
-        data-testid="xrk-checkbox"
+        class="corn-if corn-ac corn-checkbox"
+        data-testid="corn-checkbox"
       >
         <input
-          class="xrk-checkbox-hide"
+          class="corn-checkbox-hide"
           data-testid="check"
           name=""
           readonly=""
           value="1"
         />
         <div
-          class="taro-img xrk-img xrk-checkbox-icon"
+          class="taro-img corn-img corn-checkbox-icon"
         >
           <img
             class="taro-img__mode-scaletofill"
@@ -326,18 +326,18 @@ exports[`Fomr 改变初始化值 1`] = `
         大学
       </div>
       <div
-        class="xrk-if xrk-ac xrk-checkbox"
-        data-testid="xrk-checkbox"
+        class="corn-if corn-ac corn-checkbox"
+        data-testid="corn-checkbox"
       >
         <input
-          class="xrk-checkbox-hide"
+          class="corn-checkbox-hide"
           data-testid="check"
           name=""
           readonly=""
           value="2"
         />
         <div
-          class="taro-img xrk-img xrk-checkbox-icon"
+          class="taro-img corn-img corn-checkbox-icon"
         >
           <img
             class="taro-img__mode-scaletofill"
@@ -348,10 +348,10 @@ exports[`Fomr 改变初始化值 1`] = `
       </div>
     </div>
     <div
-      class="xrk-textarea"
+      class="corn-textarea"
     >
       <textarea
-        class="xrk-textarea-conter"
+        class="corn-textarea-conter"
         data-testid="textarea"
         maxlength="300"
         name="liuyan"
@@ -360,14 +360,14 @@ exports[`Fomr 改变初始化值 1`] = `
         456
       </textarea>
       <div
-        class="xrk-textarea-number"
+        class="corn-textarea-number"
       >
         3
         /
         300
       </div>
       <div
-        class="xrk-textarea-floor"
+        class="corn-textarea-floor"
       />
     </div>
   </form>
@@ -378,23 +378,23 @@ exports[`Fomr 渲染 1`] = `
 <div>
   <form>
     <input
-      class="weui-input xrk-input"
+      class="weui-input corn-input"
       data-testid="input"
       type="text"
       value=""
     />
     <div
-      class="xrk-if xrk-ac xrk-checkbox"
-      data-testid="xrk-checkbox"
+      class="corn-if corn-ac corn-checkbox"
+      data-testid="corn-checkbox"
     >
       <input
-        class="xrk-checkbox-hide"
+        class="corn-checkbox-hide"
         data-testid="check"
         readonly=""
         value="false"
       />
       <div
-        class="taro-img xrk-img xrk-checkbox-icon"
+        class="taro-img corn-img corn-checkbox-icon"
       >
         <img
           class="taro-img__mode-scaletofill"
@@ -403,23 +403,23 @@ exports[`Fomr 渲染 1`] = `
       </div>
     </div>
     <div
-      class="xrk-textarea"
+      class="corn-textarea"
     >
       <textarea
-        class="xrk-textarea-conter"
+        class="corn-textarea-conter"
         data-testid="textarea"
         maxlength="300"
         placeholder=""
       />
       <div
-        class="xrk-textarea-number"
+        class="corn-textarea-number"
       >
         0
         /
         300
       </div>
       <div
-        class="xrk-textarea-floor"
+        class="corn-textarea-floor"
       />
     </div>
   </form>
@@ -430,23 +430,23 @@ exports[`Fomr 自带值 1`] = `
 <div>
   <form>
     <input
-      class="weui-input xrk-input"
+      class="weui-input corn-input"
       data-testid="input"
       type="text"
       value="123"
     />
     <div
-      class="xrk-if xrk-ac xrk-checkbox"
-      data-testid="xrk-checkbox"
+      class="corn-if corn-ac corn-checkbox"
+      data-testid="corn-checkbox"
     >
       <input
-        class="xrk-checkbox-hide"
+        class="corn-checkbox-hide"
         data-testid="check"
         readonly=""
         value="true"
       />
       <div
-        class="taro-img xrk-img xrk-checkbox-icon"
+        class="taro-img corn-img corn-checkbox-icon"
       >
         <img
           class="taro-img__mode-scaletofill"
@@ -460,25 +460,25 @@ exports[`Fomr 自带值 1`] = `
       name="age"
     >
       <input
-        class="xrk-checkbox-group-hide"
+        class="corn-checkbox-group-hide"
         data-testid="check"
         name="age"
         readonly=""
         value="[]"
       />
       <div
-        class="xrk-if xrk-ac xrk-checkbox"
-        data-testid="xrk-checkbox"
+        class="corn-if corn-ac corn-checkbox"
+        data-testid="corn-checkbox"
       >
         <input
-          class="xrk-checkbox-hide"
+          class="corn-checkbox-hide"
           data-testid="check"
           name=""
           readonly=""
           value="1"
         />
         <div
-          class="taro-img xrk-img xrk-checkbox-icon"
+          class="taro-img corn-img corn-checkbox-icon"
         >
           <img
             class="taro-img__mode-scaletofill"
@@ -488,18 +488,18 @@ exports[`Fomr 自带值 1`] = `
         1
       </div>
       <div
-        class="xrk-if xrk-ac xrk-checkbox"
-        data-testid="xrk-checkbox"
+        class="corn-if corn-ac corn-checkbox"
+        data-testid="corn-checkbox"
       >
         <input
-          class="xrk-checkbox-hide"
+          class="corn-checkbox-hide"
           data-testid="check"
           name=""
           readonly=""
           value="2"
         />
         <div
-          class="taro-img xrk-img xrk-checkbox-icon"
+          class="taro-img corn-img corn-checkbox-icon"
         >
           <img
             class="taro-img__mode-scaletofill"
@@ -509,18 +509,18 @@ exports[`Fomr 自带值 1`] = `
         2
       </div>
       <div
-        class="xrk-if xrk-ac xrk-checkbox"
-        data-testid="xrk-checkbox"
+        class="corn-if corn-ac corn-checkbox"
+        data-testid="corn-checkbox"
       >
         <input
-          class="xrk-checkbox-hide"
+          class="corn-checkbox-hide"
           data-testid="check"
           name=""
           readonly=""
           value="3"
         />
         <div
-          class="taro-img xrk-img xrk-checkbox-icon"
+          class="taro-img corn-img corn-checkbox-icon"
         >
           <img
             class="taro-img__mode-scaletofill"
@@ -535,25 +535,25 @@ exports[`Fomr 自带值 1`] = `
       name="study"
     >
       <input
-        class="xrk-checkbox-group-hide"
+        class="corn-checkbox-group-hide"
         data-testid="check"
         name="study"
         readonly=""
         value=""
       />
       <div
-        class="xrk-if xrk-ac xrk-checkbox"
-        data-testid="xrk-checkbox"
+        class="corn-if corn-ac corn-checkbox"
+        data-testid="corn-checkbox"
       >
         <input
-          class="xrk-checkbox-hide"
+          class="corn-checkbox-hide"
           data-testid="check"
           name=""
           readonly=""
           value="1"
         />
         <div
-          class="taro-img xrk-img xrk-checkbox-icon"
+          class="taro-img corn-img corn-checkbox-icon"
         >
           <img
             class="taro-img__mode-scaletofill"
@@ -563,18 +563,18 @@ exports[`Fomr 自带值 1`] = `
         大学
       </div>
       <div
-        class="xrk-if xrk-ac xrk-checkbox"
-        data-testid="xrk-checkbox"
+        class="corn-if corn-ac corn-checkbox"
+        data-testid="corn-checkbox"
       >
         <input
-          class="xrk-checkbox-hide"
+          class="corn-checkbox-hide"
           data-testid="check"
           name=""
           readonly=""
           value="2"
         />
         <div
-          class="taro-img xrk-img xrk-checkbox-icon"
+          class="taro-img corn-img corn-checkbox-icon"
         >
           <img
             class="taro-img__mode-scaletofill"
@@ -585,24 +585,24 @@ exports[`Fomr 自带值 1`] = `
       </div>
     </div>
     <div
-      class="xrk-textarea"
+      class="corn-textarea"
     >
       <textarea
-        class="xrk-textarea-conter"
+        class="corn-textarea-conter"
         data-testid="textarea"
         maxlength="300"
         name="liuyan"
         placeholder=""
       />
       <div
-        class="xrk-textarea-number"
+        class="corn-textarea-number"
       >
         0
         /
         300
       </div>
       <div
-        class="xrk-textarea-floor"
+        class="corn-textarea-floor"
       />
     </div>
   </form>

@@ -4,7 +4,7 @@ import React, { useMemo } from 'react'
 import { ViewProps } from '../../types/View'
 
 const Card: React.FC<ViewProps> = ({ className, ...props }) => {
-  const _class = useMemo(() =>ClassNames('xrk-card', className), [ className ])
+  const _class = useMemo(() =>ClassNames('corn-card', className), [ className ])
 
   return (
     <View className={_class} {...props} />

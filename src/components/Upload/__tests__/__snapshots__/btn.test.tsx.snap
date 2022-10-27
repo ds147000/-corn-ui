@@ -3,18 +3,18 @@
 exports[`UploadDefaultBtn 1`] = `
 <div>
   <div
-    class="xrk-upload-btn xrk-f xrk-ac xrk-jc"
+    class="corn-upload-btn corn-f corn-ac corn-jc"
     data-testid="upload-btn"
   >
     <input
       accept="video/*,image/*"
-      class="xrk-upload-mask"
+      class="corn-upload-mask"
       data-testid="uplaod-btn"
       multiple=""
       type="file"
     />
     <i
-      class="xrk-icon xrk-i-img"
+      class="corn-icon corn-i-img"
     />
   </div>
 </div>

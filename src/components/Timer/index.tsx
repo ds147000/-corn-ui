@@ -111,8 +111,8 @@ class Timer extends React.Component<TimerProps, TimerState> {
 
   render(): JSX.Element {
     const _class = ClassNames(
-      'xrk-timer xrk-if xrk-ac xrk-jc',
-      this.props.fill && 'xrk-timer-fill',
+      'corn-timer corn-if corn-ac corn-jc',
+      this.props.fill && 'corn-timer-fill',
       this.props.className
     )
 

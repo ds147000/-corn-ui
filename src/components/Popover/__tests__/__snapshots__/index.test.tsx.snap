@@ -3,11 +3,11 @@
 exports[`Popover 基础快照 1`] = `
 <div>
   <div
-    class="xrk-popover-plane"
+    class="corn-popover-plane"
     data-testid="mask"
   />
   <div
-    class="xrk-popover-show"
+    class="corn-popover-show"
     data-testid="centent"
   >
     <div>
@@ -15,7 +15,7 @@ exports[`Popover 基础快照 1`] = `
     </div>
   </div>
   <div
-    class="xrk-popover "
+    class="corn-popover "
   >
     <div>
       气泡按钮
