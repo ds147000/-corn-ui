@@ -125,7 +125,7 @@ class Timer extends React.Component<TimerProps, TimerState> {
         {Boolean(this.state.timeValue.d) && (_renderItem('day', this.state.timeValue.d))}
         {_renderItem('hous', this.state.timeValue.h)}
         {_renderItem('min', this.state.timeValue.m, this.state.timeValue.d !== '')}
-        {!this.state.timeValue.d && !this.props.showSec && (_renderItem('sec', this.state.timeValue.s, this.state.timeValue.d === ''))}
+        {(!this.state.timeValue.d || this.props.showSec) && (_renderItem('sec', this.state.timeValue.s, this.state.timeValue.d === ''))}
       </View>
     )
   }

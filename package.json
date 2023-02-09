@@ -1,6 +1,6 @@
 {
   "name": "@corn/ui",
-  "version": "2.1.1",
+  "version": "2.1.2",
   "description": "移动UI库，支持H5、小程序端使用。具有自适应屏幕，主题变量化等特性",
   "main": "package-taro/index.js",
   "module": "package-taro/index.esm.js",
