@@ -5,9 +5,8 @@ import Icon from '../Icon'
 import Form from '../Form'
 import Input from '../Input'
 import Button from '../Button'
-import { BaseEventOrig, ITouchEvent } from '../../types'
-import { Input as InputType } from '../../types/Input'
 import { SearchPlaceholder } from './placeholder'
+import { ITouchEvent } from '../../types'
 
 export interface SearchProps {
   /** 风格类型*/
@@ -26,6 +25,7 @@ export interface SearchProps {
   value?: string
   /** 是否自动聚焦 */
   focus?: boolean
+  searchText?: string;
   /** 点击输入框事件 */
   onClick?(event: ITouchEvent): void
   /** 输入发生改变事件 */
@@ -50,6 +50,7 @@ const Search: React.FC<SearchProps> = ({
   value,
   placeholder,
   allowClear = true,
+  searchText = '搜索',
   onChange,
   onSearch,
   onBack,
@@ -65,9 +66,9 @@ const Search: React.FC<SearchProps> = ({
 
   const _class = useMemo(() => classNames('corn-search corn-f corn-ac', `corn-search-${type}`), [ type ])
 
-  const _onInput = (event: BaseEventOrig<InputType.inputEventDetail>): void => {
-    onChange?.(event.detail.value)
-    setIsFouce(event.detail.value.length > 0)
+  const _onInput = (event: React.ChangeEvent<HTMLInputElement>): void => {
+    onChange?.(event.target.value)
+    setIsFouce(event.target.value.length > 0)
   }
 
   const _onSubmit = (event: Record<string, unknown>): void => {
@@ -75,7 +76,7 @@ const Search: React.FC<SearchProps> = ({
     onSearch?.(searchValue)
   }
 
-  const _onClear = (event: ITouchEvent): void => {
+  const _onClear = (event): void => {
     event.stopPropagation()
     event.preventDefault()
 
@@ -89,7 +90,7 @@ const Search: React.FC<SearchProps> = ({
     setIsFouce(true)
     onFocus?.()
   }
-  const _onBlur = (event: BaseEventOrig<InputType.inputValueEventDetail>): void => {
+  const _onBlur = (event): void => {
     if (!event.detail.value) setIsFouce(false)
     onBlur?.()
   }
@@ -116,12 +117,12 @@ const Search: React.FC<SearchProps> = ({
               onInput={_onInput}
               onFocus={_onFocus}
               onBlur={_onBlur}
-              // #if _APP === 'weapp'
-              onConfirm={(): void => searchForm.current?.submit()}
-              // #endif
+              // // #if _APP === 'weapp'
+              // onConfirm={(): void => searchForm.current?.submit()}
+              // // #endif
               autoComplete="off"
-              confirmType="search"
-              focus={focus}
+              // confirmType="search"
+              autoFocus={focus}
             />
           ) : (
             <View className="corn-search-input" />
@@ -145,7 +146,7 @@ const Search: React.FC<SearchProps> = ({
             data-testid="search-btn"
             formType="submit"
           >
-            搜索
+            {searchText}
           </Button>
         </View>
 

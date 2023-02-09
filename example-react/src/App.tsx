@@ -165,6 +165,7 @@ function App() {
         <Card>
           <Upload layout="square" name="img3" />
         </Card>
+        
         <Input name="name" />
         <Textarea name="liuyan" />
         <Checkbox name="shop1">商品链接</Checkbox>
@@ -281,6 +282,7 @@ function App() {
         <Tag type="warn" ghost>3-9岁</Tag>
         <Tag type="urgent" ghost >3-9岁</Tag>
         <Tag type="activity" ghost >3-9岁</Tag>
+        <Input placeholder="shur1" name="test" />
         <Cell label="限时奖励" />
         <Cell label="限时奖励" placeholder="请选择奖励类型" />
         <Cell label="限时奖励" placeholder="请选择奖励类型" value="葵花籽" />

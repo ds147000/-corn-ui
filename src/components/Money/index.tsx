@@ -33,7 +33,7 @@ const Money: React.FC<MoneyProps> = ({
     if (type === 'coin') return children
 
     const _value = formatMoney(children || '0', undefined)
-    return type === 'gold' ? `${_value}葵币` : _value
+    return _value
   }, [ amountString, children, type ])
 
   return (
@@ -43,7 +43,7 @@ const Money: React.FC<MoneyProps> = ({
           className="corn-money-mark"
           data-testid="money-mark"
         >
-          {type === 'coin' ? 'K' : '￥'}
+          $
         </Text>
       )}
       <Text className={lineThrough ? 'line-through' : ''} data-testid="money" >{value}</Text>

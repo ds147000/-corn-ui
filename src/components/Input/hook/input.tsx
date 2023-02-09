@@ -1,8 +1,7 @@
-import { BaseEventOrig } from '@tarojs/components'
 import { useContext, useEffect, useState } from 'react'
 import { FromContext } from '../../../components/Form/context'
 
-type OnInput = (e: BaseEventOrig) => void
+type OnInput = (e: React.ChangeEvent<HTMLInputElement>) => void
 
 type UseInputResult = [ string, OnInput ]
 
@@ -11,8 +10,8 @@ export const useInput = (value?: string, name?:string, onInput?: OnInput): UseIn
   const formContext = useContext(FromContext)
   const _value = value ?? internalValue
 
-  const _onInput = (e: BaseEventOrig): void => {
-    if (value === undefined) setInternalValue(e.detail.value)
+  const _onInput = (e: React.ChangeEvent<HTMLInputElement>): void => {
+    setInternalValue(e.target.value)
     onInput?.(e)
   }
   useEffect(() => {

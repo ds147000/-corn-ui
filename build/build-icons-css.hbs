@@ -4,7 +4,7 @@
 }
 
 
-[class*=xrk-i-] {
+[class*=corn-i-] {
 	font-family: "{{fontName}}";
 		-webkit-font-smoothing: antialiased;
 		-moz-osx-font-smoothing: grayscale;
@@ -17,7 +17,7 @@
 }
 
 {{#each codepoints}}
-	.xrk-i-{{@key}}::before {
+	.corn-i-{{@key}}::before {
     content: "\\{{this}}";
   }
 {{/each}}

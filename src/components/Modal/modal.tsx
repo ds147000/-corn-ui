@@ -20,6 +20,7 @@ export interface ModalProps extends DrawerProps {
   content?: string | React.ReactNode
   /** 弹出按钮列表 */
   button?: ModalButton[]
+  footer?: React.ReactNode;
   /** 点击按钮事件 */
   onButtonClick?(index: number): void
 }
@@ -30,6 +31,7 @@ const Modal: React.FC<ModalProps> = ({
   title,
   button,
   onButtonClick,
+  footer,
   ...props
 }) => {
   const isButton = Boolean(button?.length)
@@ -72,6 +74,7 @@ const Modal: React.FC<ModalProps> = ({
             ))}
           </View>
         )}
+        {footer}
       </View>
     </Drawer>
   )

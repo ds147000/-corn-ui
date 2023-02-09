@@ -16,6 +16,8 @@ export interface TimerProps extends ViewProps {
   endTime: number | string | Date
   /** 是否使用填充风格 */
   fill?: boolean
+  /** 显示秒 */
+  showSec?: number
   /** 当剩余时间发现改变 */
   onChange?(TimeLeft: number): void
   /** 自定义返回时间项的渲染函数 */
@@ -92,7 +94,7 @@ class Timer extends React.Component<TimerProps, TimerState> {
 
 
       // 大于一天半个小时，分钟调度
-      if (_time > DAY_TIMESTAMP + (HOUS_TIMESTAMP / 2)) {
+      if (!this.props.showSec && _time > DAY_TIMESTAMP + (HOUS_TIMESTAMP / 2)) {
         runSecDestroyed() // 取消调度
         minDestory = MinuteSchedulerApp.add(runTime)
         return
@@ -123,7 +125,7 @@ class Timer extends React.Component<TimerProps, TimerState> {
         {Boolean(this.state.timeValue.d) && (_renderItem('day', this.state.timeValue.d))}
         {_renderItem('hous', this.state.timeValue.h)}
         {_renderItem('min', this.state.timeValue.m, this.state.timeValue.d !== '')}
-        {!this.state.timeValue.d && (_renderItem('sec', this.state.timeValue.s, this.state.timeValue.d === ''))}
+        {!this.state.timeValue.d && !this.props.showSec && (_renderItem('sec', this.state.timeValue.s, this.state.timeValue.d === ''))}
       </View>
     )
   }
