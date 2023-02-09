@@ -17,7 +17,7 @@ export interface TimerProps extends ViewProps {
   /** 是否使用填充风格 */
   fill?: boolean
   /** 显示秒 */
-  showSec?: number
+  showSec?: boolean
   /** 当剩余时间发现改变 */
   onChange?(TimeLeft: number): void
   /** 自定义返回时间项的渲染函数 */
